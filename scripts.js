@@ -34,6 +34,13 @@ const projects = [
 const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
 
+// Initial Mouse Offset
+let initialOffsetX = 0.5; // Initial X offset
+let initialOffsetY = 0.5; // Initial Y offset
+
+// Decay rate for the offset normalization
+const offsetDecayRate = 0.02;
+
 // SetupCube Function
 function SetupCube(project, index) {
   const cube = new THREE.Mesh(geometry, material);
@@ -76,7 +83,7 @@ window.addEventListener("mousemove", (event) => {
   const mouseX = (event.clientX / window.innerWidth) * 2 - 1;
   const mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
 
-  // Inverse camera rotation based on mouse position
+  // Update target rotation values based on mouse position
   rotationX = -mouseY * 0.2; // Inverse Y-axis rotation
   rotationY = -mouseX * 0.2; // Inverse X-axis rotation
 });
@@ -91,9 +98,18 @@ function animate() {
     cube.rotation.y += 0.01;
   });
 
+  // Normalize initial offset toward zero
+  if (Math.abs(initialOffsetX) > 0.01 || Math.abs(initialOffsetY) > 0.01) {
+    initialOffsetX *= 1 - offsetDecayRate; // Slowly reduce offset
+    initialOffsetY *= 1 - offsetDecayRate; // Slowly reduce offset
+  } else {
+    initialOffsetX = 0; // Snap to zero when small enough
+    initialOffsetY = 0; // Snap to zero when small enough
+  }
+
   // Smoothly update camera rotation
-  //   camera.rotation.x += (rotationX - camera.rotation.x) * 0.025; // Smooth transition for X-axis
-  camera.rotation.y += (rotationY - camera.rotation.y) * 0.025; // Smooth transition for Y-axis
+  camera.rotation.x += (rotationX + initialOffsetY - camera.rotation.x) * 0.1; // X-axis with offset
+  camera.rotation.y += (rotationY + initialOffsetX - camera.rotation.y) * 0.1; // Y-axis with offset
 
   renderer.render(scene, camera);
 }
