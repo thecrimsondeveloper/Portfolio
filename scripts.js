@@ -12,41 +12,60 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById("threejs-scene").appendChild(renderer.domElement);
 
-// Cube
+// Cube setup
 const geometry = new THREE.BoxGeometry();
 const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-const cube = new THREE.Mesh(geometry, material);
-scene.add(cube);
+const cubes = [];
+
+const projects = [{ name: "Pillow", url: "pillow.html" }];
+
+// Raycaster and Mouse
+const raycaster = new THREE.Raycaster();
+const mouse = new THREE.Vector2();
+
+// SetupCube Function
+function SetupCube(project, index) {
+  const cube = new THREE.Mesh(geometry, material);
+  cube.position.x = index * 2; // Space cubes out
+  scene.add(cube);
+  cubes.push(cube);
+
+  // Add click event listener for the cube
+  window.addEventListener("click", (event) => {
+    // Calculate mouse position in normalized device coordinates
+    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+    mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+    // Update raycaster with camera and mouse position
+    raycaster.setFromCamera(mouse, camera);
+
+    // Check if this cube is clicked
+    const intersects = raycaster.intersectObject(cube);
+    if (intersects.length > 0) {
+      // Redirect to project URL
+      window.location.href = "projects/" + project.url;
+    }
+  });
+}
+
+// Initialize all cubes for projects
+projects.forEach((project, index) => {
+  SetupCube(project, index);
+});
 
 // Camera Position
 camera.position.z = 5;
 
-// Raycaster for detecting clicks
-const raycaster = new THREE.Raycaster();
-const mouse = new THREE.Vector2();
-
-// Event Listener for Mouse Click
-window.addEventListener("click", (event) => {
-  // Calculate mouse position in normalized device coordinates
-  mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-  mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
-
-  // Update raycaster with camera and mouse position
-  raycaster.setFromCamera(mouse, camera);
-
-  // Check if the cube is clicked
-  const intersects = raycaster.intersectObject(cube);
-  if (intersects.length > 0) {
-    // Redirect to pillow.html
-    window.location.href = "pillow.html";
-  }
-});
-
 // Animation Loop
 function animate() {
   requestAnimationFrame(animate);
-  cube.rotation.x += 0.01;
-  cube.rotation.y += 0.01;
+
+  // Rotate each cube
+  cubes.forEach((cube) => {
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
+  });
+
   renderer.render(scene, camera);
 }
 animate();
