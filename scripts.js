@@ -92,10 +92,12 @@ window.addEventListener("mousemove", (event) => {
 function animate() {
   requestAnimationFrame(animate);
 
-  // Rotate each cube
-  cubes.forEach((cube) => {
+  // Rotate each cube and animate on a sin wave up and down
+  const time = Date.now() * 0.001; // Get current time in seconds
+  cubes.forEach((cube, index) => {
     cube.rotation.x += 0.01;
     cube.rotation.y += 0.01;
+    cube.position.y = Math.sin(time + index) * 0.5; // Animate up and down
   });
 
   // Normalize initial offset toward zero
