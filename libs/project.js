@@ -23,7 +23,10 @@ export function SetupProjectScene(scene, camera, renderer) {
 
   projects.forEach((project, index) => {
     const cube = new THREE.Mesh(geometry, material);
-    cube.position.x = index * 2;
+
+    let xOffset = projects.length / 2;
+
+    cube.position.x = index * 2 - xOffset;
     cube.position.z = -2;
     scene.add(cube);
     cubes.push(cube);
