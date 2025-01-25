@@ -1,3 +1,5 @@
+import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.module.js";
+
 export const projects = [
   { name: "Pillow", url: "pillow.html" },
   { name: "Cyber Slingers", url: "cyberslingers.html" },
