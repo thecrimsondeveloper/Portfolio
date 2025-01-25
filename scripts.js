@@ -1,6 +1,6 @@
 import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.module.js";
 
-const cameraPanSpeed = 0.1; // Camera panning speed
+const cameraPanSpeed = 0.05; // Camera panning speed
 
 // Scene, Camera, Renderer
 const scene = new THREE.Scene();
