@@ -17,25 +17,16 @@ const geometry = new THREE.BoxGeometry();
 const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
 const cubes = [];
 
-const projects = [
-  {
-    name: "Pillow",
-    url: "pillow.html",
-  },
-  {
-    name: "Cyber Slingers",
-    url: "cyberslingers.html",
-  },
-];
+const projects = [{ name: "Pillow", url: "pillow.html" }];
 
 // Raycaster and Mouse
 const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
 
 // SetupCube Function
-function SetupCube(project, index, offset) {
+function SetupCube(project, index) {
   const cube = new THREE.Mesh(geometry, material);
-  cube.position.x = index * 2 - offset; // Space cubes out, centered
+  cube.position.x = index * 2; // Space cubes out
   scene.add(cube);
   cubes.push(cube);
 
@@ -57,20 +48,26 @@ function SetupCube(project, index, offset) {
   });
 }
 
-// Calculate the offset to center cubes
-const offset = projects.length > 1 ? projects.length - 1 : 0;
-
 // Initialize all cubes for projects
 projects.forEach((project, index) => {
-  SetupCube(project, index, offset);
+  SetupCube(project, index);
 });
 
 // Camera Position
 camera.position.z = 5;
 
-// Camera look animation variables
-let cameraLookAngle = 0;
-let lookDirection = 1; // 1 for right, -1 for left
+// Mouse Movement Handler for Camera Rotation
+let rotationX = 0;
+let rotationY = 0;
+
+window.addEventListener("mousemove", (event) => {
+  const mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+  const mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+
+  // Adjust camera rotation based on mouse position
+  rotationX = mouseY * 0.5; // Scale mouse Y movement
+  rotationY = mouseX * 0.5; // Scale mouse X movement
+});
 
 // Animation Loop
 function animate() {
@@ -82,12 +79,9 @@ function animate() {
     cube.rotation.y += 0.01;
   });
 
-  // Subtle camera look left and right
-  cameraLookAngle += 0.005 * lookDirection; // Adjust speed if necessary
-  if (cameraLookAngle > 0.1 || cameraLookAngle < -0.1) {
-    lookDirection *= -1; // Reverse direction at boundaries
-  }
-  camera.rotation.y = cameraLookAngle; // Update camera rotation
+  // Smoothly update camera rotation
+  camera.rotation.x += (rotationX - camera.rotation.x) * 0.1; // Smooth transition
+  camera.rotation.y += (rotationY - camera.rotation.y) * 0.1; // Smooth transition
 
   renderer.render(scene, camera);
 }
