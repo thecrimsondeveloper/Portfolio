@@ -1,6 +1,5 @@
 import * as THREE from "./libs/three.module.js";
 
-// Scene, Camera, Renderer
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
   75,
@@ -22,66 +21,59 @@ scene.add(directionalLight);
 
 // Project Data
 const projects = [
-  { name: "Pillow", link: "projects/pillow.html", color: 0xffff00 },
-  // Add more projects here if needed
+  { name: "Project 1", link: "projects/project1.html", color: 0xff0000 },
+  { name: "Project 2", link: "projects/project2.html", color: 0x00ff00 },
+  { name: "Project 3", link: "projects/project3.html", color: 0x0000ff },
 ];
 
-// Generate cubes dynamically for each project
-const projectCubes = []; // Array to store generated cubes
-
+// Create and position cubes for each project
+const projectCubes = [];
 projects.forEach((project, index) => {
   const geometry = new THREE.BoxGeometry();
   const material = new THREE.MeshBasicMaterial({ color: project.color });
   const cube = new THREE.Mesh(geometry, material);
 
-  // Position cubes dynamically in a row
-  cube.position.set(index * 3, 0, 0); // Spread cubes along the X-axis
-  cube.userData = { link: project.link }; // Store project link in cube metadata
+  // Position cubes in a row
+  cube.position.set(index * 3, 0, 0);
+  cube.userData = { link: project.link }; // Store project link
 
-  scene.add(cube); // Add the cube to the scene
-  projectCubes.push(cube); // Add the cube to the array
+  scene.add(cube);
+  projectCubes.push(cube);
 });
 
-// Animation loop
+// Animation Loop
 function animate() {
   requestAnimationFrame(animate);
-
-  // Rotate all cubes
   projectCubes.forEach((cube) => {
     cube.rotation.x += 0.01;
     cube.rotation.y += 0.01;
   });
-
   renderer.render(scene, camera);
 }
 animate();
 
-// Handle mouse clicks on cubes
+// Handle Click Events
 const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
 
-function onMouseClick(event) {
+window.addEventListener("click", (event) => {
   // Convert mouse position to normalized device coordinates
   mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
   mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
 
-  // Raycast to detect intersected objects
+  // Detect intersected objects
   raycaster.setFromCamera(mouse, camera);
   const intersects = raycaster.intersectObjects(projectCubes);
 
   if (intersects.length > 0) {
     const clickedObject = intersects[0].object;
-
-    // Check if the clicked object has a link
     if (clickedObject.userData && clickedObject.userData.link) {
-      window.location.href = clickedObject.userData.link; // Navigate to the link
+      window.location.href = clickedObject.userData.link; // Navigate to the project
     }
   }
-}
+});
 
-window.addEventListener("click", onMouseClick);
-
-// Handle window resizing
+// Adjust to Window Resize
 window.addEventListener("resize", () => {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
