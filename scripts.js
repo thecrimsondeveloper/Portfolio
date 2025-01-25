@@ -114,3 +114,11 @@ function animate() {
   renderer.render(scene, camera);
 }
 animate();
+
+//add ground plane
+const groundGeometry = new THREE.PlaneGeometry(100, 100);
+const groundMaterial = new THREE.ShadowMaterial({ opacity: 0.5 });
+const ground = new THREE.Mesh(groundGeometry, groundMaterial);
+ground.position.y = -2;
+ground.rotation.x = -Math.PI / 2;
+scene.add(ground);
