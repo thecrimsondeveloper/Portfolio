@@ -1,4 +1,5 @@
 import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.module.js";
+import { GLTFLoader } from "https://cdn.jsdelivr.net/npm/three@0.132.2/examples/jsm/loaders/GLTFLoader.js";
 
 export const projects = [
   { name: "Pillow", url: "pillow.html" },
@@ -18,46 +19,53 @@ export function SetupProjectScene(scene, camera, renderer) {
   const raycaster = new THREE.Raycaster();
   const mouse = new THREE.Vector2();
 
-  // Cube setup
-  const geometry = new THREE.BoxGeometry();
-  const material = new THREE.MeshStandardMaterial({ color: 0x00ff00 });
-  const cubes = [];
+  // GLTFLoader setup
+  const loader = new GLTFLoader();
+  const models = [];
 
   projects.forEach((project, index) => {
-    const cube = new THREE.Mesh(geometry, material);
+    loader.load(
+      "./models/BeveledCube.glb", // Path to your .glb model
+      (gltf) => {
+        const model = gltf.scene;
 
-    let xOffset = projects.length / 2;
+        // Calculate offset and position
+        const xOffset = projects.length / 2;
+        model.position.x = index * 2 - xOffset;
+        model.position.z = -2;
 
-    cube.position.x = index * 2 - xOffset;
-    cube.position.z = -2;
-    scene.add(cube);
-    cubes.push(cube);
+        // Add model to scene
+        scene.add(model);
+        models.push({ model, project });
 
-    // Add click event listener
-    window.addEventListener("click", (event) => {
-      mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-      mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+        // Add click event listener
+        window.addEventListener("click", (event) => {
+          mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+          mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
 
-      raycaster.setFromCamera(mouse, camera);
-      const intersects = raycaster.intersectObject(cube);
-      if (intersects.length > 0) {
-        window.location.href = "projects/" + project.url;
+          raycaster.setFromCamera(mouse, camera);
+          const intersects = raycaster.intersectObject(model, true); // Use `true` to check child meshes
+          if (intersects.length > 0) {
+            window.location.href = "projects/" + project.url;
+          }
+        });
+      },
+      undefined,
+      (error) => {
+        console.error("Error loading model:", error);
       }
-    });
+    );
   });
 
-  // Animate cubes
-  function animateCubes() {
+  // Animate models
+  function animateModels() {
     const time = Date.now() * 0.001;
-    cubes.forEach((cube, index) => {
-      cube.position.y = Math.sin(time + index) * 0.1;
-      //make the cube look at the camera
-      cube.lookAt(camera.position);
+    models.forEach(({ model }) => {
+      model.position.y = Math.sin(time) * 0.1;
+      model.lookAt(camera.position); // Ensure models always look at the camera
     });
 
-    //make the cube look at the camera
-
-    requestAnimationFrame(animateCubes);
+    requestAnimationFrame(animateModels);
   }
-  animateCubes();
+  animateModels();
 }
