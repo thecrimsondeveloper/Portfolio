@@ -92,8 +92,8 @@ function animate() {
   });
 
   // Smoothly update camera rotation
-  camera.rotation.x += (rotationX - camera.rotation.x) * 0.1; // Smooth transition for X-axis
-  camera.rotation.y += (rotationY - camera.rotation.y) * 0.1; // Smooth transition for Y-axis
+  //   camera.rotation.x += (rotationX - camera.rotation.x) * 0.025; // Smooth transition for X-axis
+  camera.rotation.y += (rotationY - camera.rotation.y) * 0.025; // Smooth transition for Y-axis
 
   renderer.render(scene, camera);
 }
