@@ -3,8 +3,6 @@ import { SetupProjectScene } from "./libs/projects.js";
 
 // Scene, Camera, Renderer
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0x808080); // Set background color to grey
-
 const camera = new THREE.PerspectiveCamera(
   75,
   window.innerWidth / window.innerHeight,
@@ -15,10 +13,13 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById("threejs-scene").appendChild(renderer.domElement);
 
-// Call the function after setup
+// Camera Position
+camera.position.z = 5;
+
+// Call the setup function from projects.js
 SetupProjectScene(scene, camera, renderer);
 
-// Animation Loop
+// Animation loop
 function animate() {
   requestAnimationFrame(animate);
   renderer.render(scene, camera);
