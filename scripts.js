@@ -12,9 +12,17 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById("threejs-scene").appendChild(renderer.domElement);
 
+// Lighting
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.5); // Soft light
+scene.add(ambientLight);
+
+const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+directionalLight.position.set(5, 5, 5); // Position the light
+scene.add(directionalLight);
+
 // Cube setup
 const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+const material = new THREE.MeshStandardMaterial({ color: 0x00ff00 });
 const cubes = [];
 
 const projects = [
@@ -30,6 +38,7 @@ const mouse = new THREE.Vector2();
 function SetupCube(project, index) {
   const cube = new THREE.Mesh(geometry, material);
   cube.position.x = index * 2; // Space cubes out
+  cube.position.z = -2; // Start slightly farther back
   scene.add(cube);
   cubes.push(cube);
 
@@ -59,32 +68,26 @@ projects.forEach((project, index) => {
 // Camera Position
 camera.position.z = 5;
 
-// Mouse Movement Handler for Camera Rotation
-let rotationX = 0;
-let rotationY = 0;
-
+// Mouse Movement Handler for Object Attraction
 window.addEventListener("mousemove", (event) => {
-  const mouseX = (event.clientX / window.innerWidth) * 2 - 1;
-  const mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
-
-  // Adjust camera rotation based on mouse position
-  rotationX = mouseY * 0.5; // Scale mouse Y movement
-  rotationY = mouseX * 0.5; // Scale mouse X movement
+  // Calculate mouse position in normalized device coordinates
+  mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+  mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
 });
 
 // Animation Loop
 function animate() {
   requestAnimationFrame(animate);
 
-  // Rotate each cube
+  // Move cubes toward the mouse position
   cubes.forEach((cube) => {
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
+    // Calculate movement toward the mouse position
+    cube.position.x += (mouse.x * 5 - cube.position.x) * 0.05; // Smoothly move on X-axis
+    cube.position.y += (mouse.y * 5 - cube.position.y) * 0.05; // Smoothly move on Y-axis
   });
 
-  // Smoothly update camera rotation
-  camera.rotation.x += (rotationX - camera.rotation.x) * 0.1; // Smooth transition
-  camera.rotation.y += (rotationY - camera.rotation.y) * 0.1; // Smooth transition
+  // Keep camera rotation on X-axis only
+  camera.rotation.x += (mouse.y * 0.5 - camera.rotation.x) * 0.1; // Smooth transition
 
   renderer.render(scene, camera);
 }
