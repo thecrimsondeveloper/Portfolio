@@ -12,64 +12,43 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById("threejs-scene").appendChild(renderer.domElement);
 
-// Lighting
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
-scene.add(ambientLight);
+// Cube
+const geometry = new THREE.BoxGeometry();
+const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+const cube = new THREE.Mesh(geometry, material);
+scene.add(cube);
 
-const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
-directionalLight.position.set(10, 10, 10);
-scene.add(directionalLight);
+// Position Camera
+camera.position.z = 5;
 
-// Project Data (Only Pillow)
-const projects = [
-  { name: "Pillow", link: "projects/pillow.html", color: 0xffff00 },
-];
-
-// Generate a cube for Pillow
-const projectCubes = []; // Store project cubes
-
-projects.forEach((project, index) => {
-  const geometry = new THREE.BoxGeometry();
-  const material = new THREE.MeshBasicMaterial({ color: project.color });
-  const cube = new THREE.Mesh(geometry, material);
-
-  // Position the cube in the center
-  cube.position.set(index * 3, 0, 0);
-  cube.userData = { link: project.link }; // Link to Pillow project
-
-  scene.add(cube);
-  projectCubes.push(cube);
-});
+// Raycaster and Mouse Vector
+const raycaster = new THREE.Raycaster();
+const mouse = new THREE.Vector2();
 
 // Animation Loop
 function animate() {
   requestAnimationFrame(animate);
-  projectCubes.forEach((cube) => {
-    cube.rotation.x += 0.01; // Rotate along X-axis
-    cube.rotation.y += 0.01; // Rotate along Y-axis
-  });
+  cube.rotation.x += 0.01;
+  cube.rotation.y += 0.01;
   renderer.render(scene, camera);
 }
 animate();
 
-// Handle Click Events
-const raycaster = new THREE.Raycaster();
-const mouse = new THREE.Vector2();
-
+// Event Listener for Clicks
 window.addEventListener("click", (event) => {
   // Convert mouse position to normalized device coordinates
   mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
   mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
 
-  // Detect intersected objects
+  // Update the raycaster with the camera and mouse position
   raycaster.setFromCamera(mouse, camera);
-  const intersects = raycaster.intersectObjects(projectCubes);
+
+  // Check for intersections with objects in the scene
+  const intersects = raycaster.intersectObjects([cube]);
 
   if (intersects.length > 0) {
-    const clickedObject = intersects[0].object;
-    if (clickedObject.userData && clickedObject.userData.link) {
-      window.location.href = clickedObject.userData.link; // Navigate to Pillow
-    }
+    // Cube was clicked
+    alert("Cube clicked!");
   }
 });
 
