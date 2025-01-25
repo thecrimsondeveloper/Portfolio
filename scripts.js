@@ -38,7 +38,7 @@ const mouse = new THREE.Vector2();
 function SetupCube(project, index) {
   const cube = new THREE.Mesh(geometry, material);
   cube.position.x = index * 2; // Space cubes out
-  cube.position.z = -2; // Start slightly farther back
+  cube.position.z = -2; // Fixed Z position
   scene.add(cube);
   cubes.push(cube);
 
@@ -68,26 +68,32 @@ projects.forEach((project, index) => {
 // Camera Position
 camera.position.z = 5;
 
-// Mouse Movement Handler for Object Attraction
+// Mouse Movement Handler for Inverse Camera Rotation
+let rotationX = 0;
+let rotationY = 0;
+
 window.addEventListener("mousemove", (event) => {
-  // Calculate mouse position in normalized device coordinates
-  mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-  mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+  const mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+  const mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+
+  // Inverse camera rotation based on mouse position
+  rotationX = -mouseY * 0.2; // Inverse Y-axis rotation
+  rotationY = -mouseX * 0.2; // Inverse X-axis rotation
 });
 
 // Animation Loop
 function animate() {
   requestAnimationFrame(animate);
 
-  // Move cubes toward the mouse position
+  // Rotate each cube
   cubes.forEach((cube) => {
-    // Calculate movement toward the mouse position
-    cube.position.x += (mouse.x * 5 - cube.position.x) * 0.05; // Smoothly move on X-axis
-    cube.position.y += (mouse.y * 5 - cube.position.y) * 0.05; // Smoothly move on Y-axis
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
   });
 
-  // Keep camera rotation on X-axis only
-  camera.rotation.x += (mouse.y * 0.5 - camera.rotation.x) * 0.1; // Smooth transition
+  // Smoothly update camera rotation
+  camera.rotation.x += (rotationX - camera.rotation.x) * 0.1; // Smooth transition for X-axis
+  camera.rotation.y += (rotationY - camera.rotation.y) * 0.1; // Smooth transition for Y-axis
 
   renderer.render(scene, camera);
 }
