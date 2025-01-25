@@ -1,5 +1,7 @@
 import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.module.js";
 
+const cameraPanSpeed = 0.1; // Camera panning speed
+
 // Scene, Camera, Renderer
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
@@ -35,8 +37,8 @@ const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
 
 // Initial Mouse Offset
-let initialOffsetX = 0.5; // Initial X offset
-let initialOffsetY = 0.5; // Initial Y offset
+let initialOffsetX = mouse.x; // Initial X offset
+let initialOffsetY = mouse.y; // Initial Y offset
 
 // Decay rate for the offset normalization
 const offsetDecayRate = 0.02;
@@ -76,16 +78,14 @@ projects.forEach((project, index) => {
 camera.position.z = 5;
 
 // Mouse Movement Handler for Inverse Camera Rotation
-let rotationX = 0;
-let rotationY = 0;
+let currentCameraRotationY = 0;
 
 window.addEventListener("mousemove", (event) => {
   const mouseX = (event.clientX / window.innerWidth) * 2 - 1;
   const mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
 
   // Update target rotation values based on mouse position
-  rotationX = -mouseY * 0.2; // Inverse Y-axis rotation
-  rotationY = -mouseX * 0.2; // Inverse X-axis rotation
+  currentCameraRotationY = -mouseX * 0.2; // Inverse X-axis rotation
 });
 
 // Animation Loop
@@ -107,9 +107,9 @@ function animate() {
     initialOffsetY = 0; // Snap to zero when small enough
   }
 
-  // Smoothly update camera rotation
-  camera.rotation.x += (rotationX + initialOffsetY - camera.rotation.x) * 0.1; // X-axis with offset
-  camera.rotation.y += (rotationY + initialOffsetX - camera.rotation.y) * 0.1; // Y-axis with offset
+  camera.rotation.y +=
+    (currentCameraRotationY + initialOffsetX - camera.rotation.y) *
+    cameraPanSpeed;
 
   renderer.render(scene, camera);
 }
