@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>3D Portfolio</title>
+    <!-- Link to CSS -->
     <link rel="stylesheet" href="style.css" />
+    <!-- Link to Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <header>
@@ -18,12 +21,50 @@
       </nav>
     </header>
 
+    <!-- Three.js Scene -->
     <div id="threejs-scene"></div>
+
+    <main>
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          Welcome to my portfolio! I am a developer passionate about creating
+          immersive 3D experiences. Explore my projects below!
+        </p>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <p>
+          Interact with the 3D cubes to explore the projects or use the links
+          below:
+        </p>
+        <ul>
+          <li><a href="projects/project1.html">Project 1</a></li>
+          <li><a href="projects/project2.html">Project 2</a></li>
+          <li><a href="projects/project3.html">Project 3</a></li>
+        </ul>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <form id="contact-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
 
     <footer>
       <p>&copy; 2023 My Portfolio</p>
     </footer>
 
+    <!-- Link to JavaScript -->
     <script type="module" src="scripts.js"></script>
   </body>
 </html>

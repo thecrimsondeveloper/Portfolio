@@ -1,4 +1,5 @@
-import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.module.js";
+// import * as THREE from "./libs/three.module.js"; // Ensure three.module.js is in a "libs" folder
+import * as THREE from "./libs/three.module.js";
 
 // Scene, Camera, Renderer
 const scene = new THREE.Scene();
@@ -20,7 +21,7 @@ const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
 directionalLight.position.set(10, 10, 10);
 scene.add(directionalLight);
 
-// Create a rotating cube for visibility
+// Add a rotating cube for visibility
 const geometry = new THREE.BoxGeometry();
 const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
 const cube = new THREE.Mesh(geometry, material);
@@ -37,7 +38,7 @@ function animate() {
 }
 animate();
 
-// Resize listener
+// Handle window resizing
 window.addEventListener("resize", () => {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
