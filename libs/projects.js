@@ -50,10 +50,13 @@ export function SetupProjectScene(scene, camera, renderer) {
   function animateCubes() {
     const time = Date.now() * 0.001;
     cubes.forEach((cube, index) => {
-      cube.rotation.x += 0.01;
-      cube.rotation.y += 0.01;
       cube.position.y = Math.sin(time + index) * 0.5;
+      //make the cube look at the camera
+      cube.lookAt(camera.position);
     });
+
+    //make the cube look at the camera
+
     requestAnimationFrame(animateCubes);
   }
   animateCubes();
