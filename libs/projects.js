@@ -21,7 +21,8 @@ export function SetupProjectScene(scene, camera, renderer) {
 
   // GLTFLoader setup
   const loader = new GLTFLoader();
-  const models = [];
+  const clickableMeshes = []; // Collect meshes for raycasting
+  const models = []; // Store models for animation
 
   projects.forEach((project, index) => {
     loader.load(
@@ -34,27 +35,42 @@ export function SetupProjectScene(scene, camera, renderer) {
         model.position.x = index * 2 - xOffset;
         model.position.z = -2;
 
-        // Add model to scene
-        scene.add(model);
-        models.push({ model, project });
-
-        // Add click event listener
-        window.addEventListener("click", (event) => {
-          mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-          mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
-
-          raycaster.setFromCamera(mouse, camera);
-          const intersects = raycaster.intersectObject(model, true); // Use `true` to check child meshes
-          if (intersects.length > 0) {
-            window.location.href = "projects/" + project.url;
+        // Traverse the model to extract child meshes
+        model.traverse((child) => {
+          if (child.isMesh) {
+            clickableMeshes.push(child); // Add child meshes for raycasting
           }
         });
+
+        // Add model to the scene
+        scene.add(model);
+        models.push({ model, project });
       },
       undefined,
       (error) => {
         console.error("Error loading model:", error);
       }
     );
+  });
+
+  // Add click event listener
+  window.addEventListener("click", (event) => {
+    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+    mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+    // Update raycaster with camera and mouse position
+    raycaster.setFromCamera(mouse, camera);
+    const intersects = raycaster.intersectObjects(clickableMeshes, true); // Intersect all clickable meshes
+    if (intersects.length > 0) {
+      const clickedMesh = intersects[0].object; // The first intersected mesh
+      const clickedProject = models.find(({ model }) =>
+        model.children.includes(clickedMesh)
+      )?.project;
+
+      if (clickedProject) {
+        window.location.href = "projects/" + clickedProject.url;
+      }
+    }
   });
 
   // Animate models
