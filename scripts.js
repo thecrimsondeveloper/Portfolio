@@ -17,16 +17,25 @@ const geometry = new THREE.BoxGeometry();
 const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
 const cubes = [];
 
-const projects = [{ name: "Pillow", url: "pillow.html" }];
+const projects = [
+  {
+    name: "Pillow",
+    url: "pillow.html",
+  },
+  {
+    name: "Cyber Slingers",
+    url: "cyberslingers.html",
+  },
+];
 
 // Raycaster and Mouse
 const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
 
 // SetupCube Function
-function SetupCube(project, index) {
+function SetupCube(project, index, offset) {
   const cube = new THREE.Mesh(geometry, material);
-  cube.position.x = index * 2; // Space cubes out
+  cube.position.x = index * 2 - offset; // Space cubes out, centered
   scene.add(cube);
   cubes.push(cube);
 
@@ -48,13 +57,20 @@ function SetupCube(project, index) {
   });
 }
 
+// Calculate the offset to center cubes
+const offset = projects.length > 1 ? projects.length - 1 : 0;
+
 // Initialize all cubes for projects
 projects.forEach((project, index) => {
-  SetupCube(project, index);
+  SetupCube(project, index, offset);
 });
 
 // Camera Position
 camera.position.z = 5;
+
+// Camera look animation variables
+let cameraLookAngle = 0;
+let lookDirection = 1; // 1 for right, -1 for left
 
 // Animation Loop
 function animate() {
@@ -65,6 +81,13 @@ function animate() {
     cube.rotation.x += 0.01;
     cube.rotation.y += 0.01;
   });
+
+  // Subtle camera look left and right
+  cameraLookAngle += 0.005 * lookDirection; // Adjust speed if necessary
+  if (cameraLookAngle > 0.1 || cameraLookAngle < -0.1) {
+    lookDirection *= -1; // Reverse direction at boundaries
+  }
+  camera.rotation.y = cameraLookAngle; // Update camera rotation
 
   renderer.render(scene, camera);
 }
