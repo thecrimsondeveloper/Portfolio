@@ -17,7 +17,10 @@ const geometry = new THREE.BoxGeometry();
 const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
 const cubes = [];
 
-const projects = [{ name: "Pillow", url: "pillow.html" }];
+const projects = [
+  { name: "Pillow", url: "pillow.html" },
+  { name: "Cyber Slingers", url: "cyberslingers.html" },
+];
 
 // Raycaster and Mouse
 const raycaster = new THREE.Raycaster();
