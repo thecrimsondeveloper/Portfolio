@@ -21,9 +21,7 @@ scene.add(directionalLight);
 
 // Project Data
 const projects = [
-  { name: "Project 1", link: "projects/project1.html", color: 0xff0000 },
-  { name: "Project 2", link: "projects/project2.html", color: 0x00ff00 },
-  { name: "Project 3", link: "projects/project3.html", color: 0x0000ff },
+  { name: "Project 1", link: "projects/pillow.html", color: 0xff0000 },
 ];
 
 // Create and position cubes for each project
