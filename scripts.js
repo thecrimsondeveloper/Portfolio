@@ -3,6 +3,8 @@ import { SetupProjectScene } from "./libs/projects.js";
 
 // Scene, Camera, Renderer
 const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x808080); // Set background color to grey
+
 const camera = new THREE.PerspectiveCamera(
   75,
   window.innerWidth / window.innerHeight,
