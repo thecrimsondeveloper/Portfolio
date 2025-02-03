@@ -61,17 +61,17 @@ projectLinks.forEach((link) => {
   progressBar.style.width = "0%";
   progressBar.style.height = "100%";
   progressBar.style.backgroundColor = "rgba(255, 102, 0, 0.5)";
-  progressBar.style.transition = "width 2s linear";
+  progressBar.style.transition = "width 5s linear"; // Transition for 5 seconds
   progressBar.style.borderRadius = "5px";
   link.appendChild(progressBar);
 
-  let hoverTimeout= 5
+  let hoverTimeout;
 
   link.addEventListener("mouseenter", () => {
     progressBar.style.width = "100%";
     hoverTimeout = setTimeout(() => {
       window.location.href = link.href;
-    }, 2000); // Wait for animation to complete
+    }, 5000); // Wait for 5 seconds before navigation
   });
 
   link.addEventListener("mouseleave", () => {
