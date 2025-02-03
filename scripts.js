@@ -1,4 +1,4 @@
-import * as THREE from "three";
+import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.module.js";
 
 // Create Scene, Camera, and Renderer
 const scene = new THREE.Scene();
@@ -10,9 +10,36 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById("threejs-scene").appendChild(renderer.domElement);
 
 // Set Camera Position
-camera.position.z = 10;
+camera.position.z = 20;
 
-// Parallax effect variables
+// Create Boxes
+const boxes = [];
+const boxGeometry = new THREE.BoxGeometry(2, 2, 2);
+const boxMaterial = new THREE.MeshStandardMaterial({
+  color: 0xff6600,
+  metalness: 0.6,
+  roughness: 0.4,
+});
+
+const numBoxes = 5; // Number of boxes
+for (let i = 0; i < numBoxes; i++) {
+  const box = new THREE.Mesh(boxGeometry, boxMaterial);
+  box.position.x = (Math.random() - 0.5) * 20;
+  box.position.y = (Math.random() - 0.5) * 10;
+  box.position.z = (Math.random() - 0.5) * 5;
+  scene.add(box);
+  boxes.push(box);
+}
+
+// Add Light
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
+scene.add(ambientLight);
+
+const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
+directionalLight.position.set(10, 10, 10);
+scene.add(directionalLight);
+
+// Mouse Movement Variables
 let mouseX = 0;
 let mouseY = 0;
 document.addEventListener("mousemove", (event) => {
@@ -20,47 +47,24 @@ document.addEventListener("mousemove", (event) => {
   mouseY = (event.clientY / window.innerHeight - 0.5) * 2;
 });
 
-// Create Floating Text
-const fontLoader = new THREE.FontLoader();
-fontLoader.load("https://threejs.org/examples/fonts/helvetiker_regular.typeface.json", (font) => {
-  const projectNames = [
-    { name: "Pillow", url: "projects/pillow.html" },
-    { name: "Cyber Slingers", url: "projects/cyberslingers.html" }
-  ];
-
-  projectNames.forEach((project, index) => {
-    const textGeometry = new THREE.TextGeometry(project.name, {
-      font: font,
-      size: 2,
-      height: 0.1,
-      curveSegments: 12,
-    });
-
-    textGeometry.computeBoundingBox();
-    const textMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
-    const textMesh = new THREE.Mesh(textGeometry, textMaterial);
-
-    // Position text dynamically
-    textMesh.position.x = index * 6 - ((projectNames.length - 1) * 3);
-    textMesh.position.y = 0;
-    textMesh.position.z = 0;
-
-    scene.add(textMesh);
-  });
-
-  animate();
-});
-
-// Animate the scene
+// Animate
 function animate() {
   requestAnimationFrame(animate);
 
-  // Smooth camera parallax effect
-  camera.position.x += (mouseX * 2 - camera.position.x) * 0.05;
-  camera.position.y += (-mouseY * 2 - camera.position.y) * 0.05;
-  
+  // Rotate and float the boxes
+  boxes.forEach((box, index) => {
+    box.rotation.x += 0.01 + index * 0.001;
+    box.rotation.y += 0.01 + index * 0.001;
+    box.position.y += Math.sin(Date.now() * 0.001 + index) * 0.01;
+  });
+
+  // Parallax camera effect
+  camera.position.x += (mouseX * 5 - camera.position.x) * 0.05;
+  camera.position.y += (-mouseY * 5 - camera.position.y) * 0.05;
+
   renderer.render(scene, camera);
 }
+animate();
 
 // Handle Window Resize
 window.addEventListener("resize", () => {
