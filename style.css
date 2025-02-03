@@ -39,45 +39,57 @@ header {
 }
 
 .project-link {
-  display: block;
-  font-size: 2em;
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 1.5em;
   font-weight: bold;
   color: white;
   text-decoration: none;
-  margin: 20px 0;
-  position: relative;
+  text-align: center;
   border: 2px solid white;
   border-radius: 5px;
-  padding: 10px 20px;
-  transition: color 0.3s ease;
+  background-color: transparent;
+  overflow: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.project-link::after {
+/* Background hover effect */
+.project-link:hover {
+  background-color: rgba(255, 102, 0, 0.5);
+  color: #ff6600;
+}
+
+/* Border animation container (for progress effect) */
+.project-link::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 0%;
   height: 100%;
-  border: 3px solid #ff6600;
+  border: 3px solid orange;
   border-radius: 5px;
+  box-sizing: border-box;
   pointer-events: none;
-  transition: width 0.3s linear;
+  transition: width 2s linear; /* Smooth animation over 2 seconds */
 }
 
-.project-link:hover {
-  color: #ff6600;
+.project-link:hover::before {
+  width: 100%;
 }
 
-.project-link.progressing::after {
+.project-link.progressing::before {
   animation: progressOutline var(--progress-duration, 2s) linear forwards;
 }
 
-.project-link.clicked::after {
+.project-link.clicked::before {
   width: 100%;
   border-color: #00ff00;
 }
 
+/* Progress animation keyframes */
 @keyframes progressOutline {
   0% {
     width: 0%;
