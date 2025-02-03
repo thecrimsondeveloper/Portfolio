@@ -12,6 +12,23 @@ document.getElementById("threejs-scene").appendChild(renderer.domElement);
 // Set Camera Position
 camera.position.z = 20;
 
+// Create Starfield
+const starGeometry = new THREE.BufferGeometry();
+const starCount = 5000;
+const starPositions = new Float32Array(starCount * 3);
+for (let i = 0; i < starCount * 3; i++) {
+  starPositions[i] = (Math.random() - 0.5) * 1000; // Spread stars across a large space
+}
+starGeometry.setAttribute("position", new THREE.BufferAttribute(starPositions, 3));
+
+const starMaterial = new THREE.PointsMaterial({
+  color: 0xffffff,
+  size: 0.5,
+});
+
+const starField = new THREE.Points(starGeometry, starMaterial);
+scene.add(starField);
+
 // Create Boxes
 const boxes = [];
 const boxGeometry = new THREE.BoxGeometry(2, 2, 2);
@@ -57,6 +74,9 @@ function animate() {
     box.rotation.y += 0.01 + index * 0.001;
     box.position.y += Math.sin(Date.now() * 0.001 + index) * 0.01;
   });
+
+  // Rotate the starfield slightly
+  starField.rotation.y += 0.0005;
 
   // Parallax camera effect
   camera.position.x += (mouseX * 5 - camera.position.x) * 0.05;
