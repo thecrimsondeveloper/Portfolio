@@ -1,80 +1,51 @@
 // libs/projects.js
 import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.module.js";
-import { GLTFLoader } from "https://cdn.jsdelivr.net/npm/three@0.132.2/examples/jsm/loaders/GLTFLoader.js?module";
-
-export const projects = [
-  { name: "Pillow", url: "pillow.html" },
-  { name: "Cyber Slingers", url: "cyberslingers.html" },
-];
 
 export function SetupProjectScene(scene, camera, renderer) {
-  // Lighting
+  // Create a starfield for a galactic feel
+  const starGeometry = new THREE.BufferGeometry();
+  const starCount = 10000;
+  const starPositions = new Float32Array(starCount * 3);
+
+  for (let i = 0; i < starCount * 3; i++) {
+    // Spread stars across a large volume
+    starPositions[i] = (Math.random() - 0.5) * 2000;
+  }
+  starGeometry.setAttribute("position", new THREE.BufferAttribute(starPositions, 3));
+
+  const starMaterial = new THREE.PointsMaterial({
+    color: 0xffffff,
+    size: 1.5,
+    sizeAttenuation: true,
+  });
+
+  const stars = new THREE.Points(starGeometry, starMaterial);
+  scene.add(stars);
+
+  // Add subtle ambient lighting
   const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
   scene.add(ambientLight);
 
-  const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-  directionalLight.position.set(5, 5, 5);
-  scene.add(directionalLight);
+  // Parallax effect: shift the camera slightly based on mouse movement
+  let mouseX = 0;
+  let mouseY = 0;
+  const windowHalfX = window.innerWidth / 2;
+  const windowHalfY = window.innerHeight / 2;
 
-  // Raycaster and Mouse
-  const raycaster = new THREE.Raycaster();
-  const mouse = new THREE.Vector2();
-
-  // GLTFLoader setup
-  const loader = new GLTFLoader();
-  const clickableMeshes = []; // For raycasting
-  const models = []; // For animation
-
-  projects.forEach((project, index) => {
-    loader.load(
-      "./models/BeveledCube.glb", // Ensure this path is correct
-      (gltf) => {
-        const model = gltf.scene;
-        const xOffset = projects.length / 2;
-        model.position.x = index * 2 - xOffset;
-        model.position.z = -2;
-
-        model.traverse((child) => {
-          if (child.isMesh) {
-            clickableMeshes.push(child);
-          }
-        });
-
-        scene.add(model);
-        models.push({ model, project });
-      },
-      undefined,
-      (error) => {
-        console.error("Error loading model:", error);
-      }
-    );
+  document.addEventListener("mousemove", (event) => {
+    mouseX = event.clientX - windowHalfX;
+    mouseY = event.clientY - windowHalfY;
   });
 
-  window.addEventListener("click", (event) => {
-    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-    mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+  function animateGalactic() {
+    // Smoothly adjust camera position based on mouse movement
+    camera.position.x += (mouseX * 0.001 - camera.position.x) * 0.05;
+    camera.position.y += (-mouseY * 0.001 - camera.position.y) * 0.05;
 
-    raycaster.setFromCamera(mouse, camera);
-    const intersects = raycaster.intersectObjects(clickableMeshes, true);
-    if (intersects.length > 0) {
-      const clickedMesh = intersects[0].object;
-      const clickedProject = models.find(({ model }) =>
-        model.children.includes(clickedMesh)
-      )?.project;
+    // Slowly rotate the starfield for a dynamic space-travel feel
+    stars.rotation.y += 0.0005;
 
-      if (clickedProject) {
-        window.location.href = "projects/" + clickedProject.url;
-      }
-    }
-  });
-
-  function animateModels() {
-    const time = Date.now() * 0.001;
-    models.forEach(({ model }) => {
-      model.position.y = Math.sin(time) * 0.1;
-      model.lookAt(camera.position);
-    });
-    requestAnimationFrame(animateModels);
+    requestAnimationFrame(animateGalactic);
   }
-  animateModels();
+  animateGalactic();
 }
