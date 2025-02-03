@@ -61,29 +61,35 @@ projectLinks.forEach((link) => {
   progressBar.style.width = "0%";
   progressBar.style.height = "100%";
   progressBar.style.backgroundColor = "rgba(255, 102, 0, 0.5)";
-  progressBar.style.transition = "width 5s linear"; // Transition for 5 seconds
+  progressBar.style.transition = "width 5s linear"; // Matches the 5-second delay
   progressBar.style.borderRadius = "5px";
   link.appendChild(progressBar);
 
-  let hoverTimeout;
+  let hoverTimeout = null; // Ensure the timeout reference is accessible
 
   link.addEventListener("mouseenter", () => {
-    progressBar.style.width = "100%"; // Start filling the progress bar
-    hoverTimeout = setTimeout(() => {
-      window.location.href = link.href; // Navigate after 5 seconds
-    }, 5000); // 5-second delay
+    // Prevent multiple triggers
+    if (!hoverTimeout) {
+      progressBar.style.width = "100%"; // Start progress bar animation
+      hoverTimeout = setTimeout(() => {
+        window.location.href = link.href; // Navigate after 5 seconds
+      }, 5000); // 5 seconds
+    }
   });
 
   link.addEventListener("mouseleave", () => {
-    progressBar.style.width = "0%"; // Reset the progress bar
-    clearTimeout(hoverTimeout); // Cancel the navigation timeout
+    // Reset progress bar and clear timeout
+    progressBar.style.width = "0%";
+    clearTimeout(hoverTimeout);
+    hoverTimeout = null; // Reset timeout reference
   });
 
   link.addEventListener("click", (event) => {
     event.preventDefault(); // Prevent immediate navigation
-    window.location.href = link.href; // Navigate immediately on click
+    window.location.href = link.href; // Navigate on click
   });
 });
+
 
 // Handle window resize
 window.addEventListener("resize", () => {
