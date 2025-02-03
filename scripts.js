@@ -2,7 +2,7 @@ import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.m
 
 // Get all project links from the HTML
 const projectLinks = document.querySelectorAll(".project-link");
-const numBoxes = projectLinks.length; // Match number of boxes to project links
+const numBoxes = projectLinks.length;
 
 // Create Scene, Camera, and Renderer
 const scene = new THREE.Scene();
@@ -24,7 +24,7 @@ const starGeometry = new THREE.BufferGeometry();
 const starCount = 5000;
 const starPositions = new Float32Array(starCount * 3);
 for (let i = 0; i < starCount * 3; i++) {
-  starPositions[i] = (Math.random() - 0.5) * 1000; // Spread stars across a large space
+  starPositions[i] = (Math.random() - 0.5) * 1000;
 }
 starGeometry.setAttribute("position", new THREE.BufferAttribute(starPositions, 3));
 const starMaterial = new THREE.PointsMaterial({
@@ -33,24 +33,6 @@ const starMaterial = new THREE.PointsMaterial({
 });
 const starField = new THREE.Points(starGeometry, starMaterial);
 scene.add(starField);
-
-// Create Boxes and Map to A Hrefs
-const boxes = [];
-const boxGeometry = new THREE.BoxGeometry(2, 2, 2);
-
-projectLinks.forEach((link, index) => {
-  const boxMaterial = new THREE.MeshStandardMaterial({
-    color: Math.random() * 0xffffff, // Random color for each box
-    metalness: 0.6,
-    roughness: 0.4,
-  });
-  const box = new THREE.Mesh(boxGeometry, boxMaterial);
-  box.position.x = (Math.random() - 0.5) * 20;
-  box.position.y = (Math.random() - 0.5) * 10;
-  box.position.z = (Math.random() - 0.5) * 5;
-  scene.add(box);
-  boxes.push({ mesh: box, link });
-});
 
 // Add Light
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
@@ -76,42 +58,32 @@ document.addEventListener("mousemove", (event) => {
   mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
 });
 
-// Handle Click Event on Boxes
-document.addEventListener("click", () => {
-  raycaster.setFromCamera(mouse, camera);
-  const intersects = raycaster.intersectObjects(boxes.map(b => b.mesh));
+// Handle Button Animation and Click
+projectLinks.forEach((link) => {
+  link.addEventListener("mouseover", () => {
+    link.classList.add("progressing");
+    const animationDuration = parseFloat(getComputedStyle(link).getPropertyValue("--progress-duration")) * 1000;
+    setTimeout(() => {
+      if (link.classList.contains("progressing")) {
+        window.location.href = link.href; // Navigate after animation
+      }
+    }, animationDuration);
+  });
 
-  if (intersects.length > 0) {
-    const clickedBox = intersects[0].object;
-    const matchedBox = boxes.find(b => b.mesh === clickedBox);
-    if (matchedBox) {
-      window.location.href = matchedBox.link.href; // Navigate to the corresponding project
-    }
-  }
+  link.addEventListener("mouseout", () => {
+    link.classList.remove("progressing");
+  });
+
+  link.addEventListener("click", (event) => {
+    event.preventDefault(); // Prevent default navigation
+    link.classList.add("clicked");
+    window.location.href = link.href; // Navigate on click
+  });
 });
 
-// Animate
+// Animate Scene
 function animate() {
   requestAnimationFrame(animate);
-
-  // Rotate and float the boxes
-  boxes.forEach(({ mesh }, index) => {
-    mesh.rotation.x += 0.01 + index * 0.001;
-    mesh.rotation.y += 0.01 + index * 0.001;
-    mesh.position.y += Math.sin(Date.now() * 0.001 + index) * 0.01;
-  });
-
-  // Highlight boxes on hover
-  raycaster.setFromCamera(mouse, camera);
-  const intersects = raycaster.intersectObjects(boxes.map(b => b.mesh));
-
-  boxes.forEach(({ mesh }) => {
-    mesh.material.color.set(0xff6600); // Reset color
-  });
-
-  if (intersects.length > 0) {
-    intersects[0].object.material.color.set(0x00ff00); // Highlight hovered box
-  }
 
   // Rotate the starfield slightly
   starField.rotation.y += 0.0005;
@@ -131,16 +103,3 @@ window.addEventListener("resize", () => {
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
 });
-
-// Add Interaction Instructions
-const instructions = document.createElement("div");
-instructions.style.position = "absolute";
-instructions.style.top = "20px";
-instructions.style.left = "50%";
-instructions.style.transform = "translateX(-50%)";
-instructions.style.color = "white";
-instructions.style.fontFamily = "Arial, sans-serif";
-instructions.style.fontSize = "1.2em";
-instructions.style.textAlign = "center";
-instructions.textContent = "Click on a box to explore the project!";
-document.body.appendChild(instructions);

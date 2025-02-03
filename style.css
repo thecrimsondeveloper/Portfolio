@@ -13,7 +13,7 @@ body, html {
 
 header {
   position: absolute;
-  top: 10px;
+  top: 20px;
   width: 100%;
   text-align: center;
   font-size: 2em;
@@ -45,10 +45,44 @@ header {
   color: white;
   text-decoration: none;
   margin: 20px 0;
-  transition: transform 0.3s ease, color 0.3s ease;
+  position: relative;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  transition: color 0.3s ease;
+}
+
+.project-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border: 3px solid #ff6600;
+  border-radius: 5px;
+  pointer-events: none;
+  transition: width 0.3s linear;
 }
 
 .project-link:hover {
-  transform: scale(1.2);
   color: #ff6600;
+}
+
+.project-link.progressing::after {
+  animation: progressOutline var(--progress-duration, 2s) linear forwards;
+}
+
+.project-link.clicked::after {
+  width: 100%;
+  border-color: #00ff00;
+}
+
+@keyframes progressOutline {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }
