@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>3D Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.module.js"
+        }
+      }
+    </script>
   </head>
   <body>
     <header>
@@ -19,14 +26,12 @@
     </header>
 
     <div id="threejs-scene"></div>
-    <!-- This is for the 3D environment -->
 
     <main>
       <section id="about">
         <h2>About Me</h2>
         <p>
-          Welcome to my portfolio! I am a developer passionate about creating
-          immersive 3D experiences. Explore my Pillow project below!
+          Welcome to my portfolio! I am a developer passionate about creating immersive 3D experiences. Explore my Pillow project below!
         </p>
       </section>
 
@@ -42,7 +47,6 @@
       <p>&copy; 2023 My Portfolio</p>
     </footer>
 
-    <!-- Link to JavaScript -->
     <script type="module" src="scripts.js"></script>
   </body>
 </html>
