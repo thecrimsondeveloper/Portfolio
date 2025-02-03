@@ -1,105 +1,92 @@
-import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.module.js";
+// Create Starfield in the Background
+const starContainer = document.getElementById("threejs-scene");
 
-// Get all project links from the HTML
-const projectLinks = document.querySelectorAll(".project-link");
-const numBoxes = projectLinks.length;
+// Set up canvas
+const canvas = document.createElement("canvas");
+const ctx = canvas.getContext("2d");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+starContainer.appendChild(canvas);
 
-// Create Scene, Camera, and Renderer
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(
-  75,
-  window.innerWidth / window.innerHeight,
-  0.1,
-  1000
-);
-const renderer = new THREE.WebGLRenderer({ alpha: true });
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.getElementById("threejs-scene").appendChild(renderer.domElement);
-
-// Set Camera Position
-camera.position.z = 20;
-
-// Create Starfield
-const starGeometry = new THREE.BufferGeometry();
-const starCount = 5000;
-const starPositions = new Float32Array(starCount * 3);
-for (let i = 0; i < starCount * 3; i++) {
-  starPositions[i] = (Math.random() - 0.5) * 1000;
+// Create stars
+const stars = [];
+const starCount = 500; // Number of stars
+for (let i = 0; i < starCount; i++) {
+  stars.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    radius: Math.random() * 2,
+    speed: Math.random() * 0.5,
+  });
 }
-starGeometry.setAttribute("position", new THREE.BufferAttribute(starPositions, 3));
-const starMaterial = new THREE.PointsMaterial({
-  color: 0xffffff,
-  size: 0.5,
-});
-const starField = new THREE.Points(starGeometry, starMaterial);
-scene.add(starField);
 
-// Add Light
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
-scene.add(ambientLight);
+// Animate stars
+function drawStars() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "white";
 
-const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
-directionalLight.position.set(10, 10, 10);
-scene.add(directionalLight);
-
-// Mouse Movement Variables
-let mouseX = 0;
-let mouseY = 0;
-document.addEventListener("mousemove", (event) => {
-  mouseX = (event.clientX / window.innerWidth - 0.5) * 2;
-  mouseY = (event.clientY / window.innerHeight - 0.5) * 2;
-});
-
-// Raycaster for Box Hover Effects
-const raycaster = new THREE.Raycaster();
-const mouse = new THREE.Vector2();
-document.addEventListener("mousemove", (event) => {
-  mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-  mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
-});
-
-// Handle Button Animation and Click
-projectLinks.forEach((link) => {
-  link.addEventListener("mouseover", () => {
-    link.classList.add("progressing");
-    const animationDuration = parseFloat(getComputedStyle(link).getPropertyValue("--progress-duration")) * 1000;
-    setTimeout(() => {
-      if (link.classList.contains("progressing")) {
-        window.location.href = link.href; // Navigate after animation
-      }
-    }, animationDuration);
+  stars.forEach((star) => {
+    star.y += star.speed;
+    if (star.y > canvas.height) {
+      star.y = 0;
+      star.x = Math.random() * canvas.width;
+    }
+    ctx.beginPath();
+    ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+    ctx.fill();
   });
 
-  link.addEventListener("mouseout", () => {
-    link.classList.remove("progressing");
+  requestAnimationFrame(drawStars);
+}
+drawStars();
+
+// Add hover animations to project links
+const projectLinks = document.querySelectorAll(".project-link");
+
+projectLinks.forEach((link) => {
+  link.style.position = "relative";
+  link.style.display = "inline-block";
+  link.style.padding = "10px 20px";
+  link.style.margin = "10px";
+  link.style.border = "2px solid white";
+  link.style.borderRadius = "5px";
+  link.style.color = "white";
+  link.style.textDecoration = "none";
+  link.style.transition = "all 0.3s ease-in-out";
+
+  const progressBar = document.createElement("div");
+  progressBar.style.position = "absolute";
+  progressBar.style.top = "0";
+  progressBar.style.left = "0";
+  progressBar.style.width = "0%";
+  progressBar.style.height = "100%";
+  progressBar.style.backgroundColor = "rgba(255, 102, 0, 0.5)";
+  progressBar.style.transition = "width 2s linear";
+  progressBar.style.borderRadius = "5px";
+  link.appendChild(progressBar);
+
+  let hoverTimeout= 5
+
+  link.addEventListener("mouseenter", () => {
+    progressBar.style.width = "100%";
+    hoverTimeout = setTimeout(() => {
+      window.location.href = link.href;
+    }, 2000); // Wait for animation to complete
+  });
+
+  link.addEventListener("mouseleave", () => {
+    progressBar.style.width = "0%";
+    clearTimeout(hoverTimeout);
   });
 
   link.addEventListener("click", (event) => {
-    event.preventDefault(); // Prevent default navigation
-    link.classList.add("clicked");
-    window.location.href = link.href; // Navigate on click
+    event.preventDefault(); // Prevent immediate navigation
+    window.location.href = link.href;
   });
 });
 
-// Animate Scene
-function animate() {
-  requestAnimationFrame(animate);
-
-  // Rotate the starfield slightly
-  starField.rotation.y += 0.0005;
-
-  // Parallax camera effect
-  const easeFactor = 0.05;
-  camera.position.x += (mouseX * 5 - camera.position.x) * easeFactor;
-  camera.position.y += (-mouseY * 5 - camera.position.y) * easeFactor;
-
-  renderer.render(scene, camera);
-}
-animate();
-
-// Handle Window Resize
+// Handle window resize
 window.addEventListener("resize", () => {
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 });
