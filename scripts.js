@@ -1,5 +1,9 @@
 import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.module.js";
 
+// Get all project links from the HTML
+const projectLinks = document.querySelectorAll(".project-link");
+const numBoxes = projectLinks.length; // Match number of boxes to project links
+
 // Create Scene, Camera, and Renderer
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
@@ -30,11 +34,11 @@ const starMaterial = new THREE.PointsMaterial({
 const starField = new THREE.Points(starGeometry, starMaterial);
 scene.add(starField);
 
-// Create Boxes with Random Colors
+// Create Boxes and Map to A Hrefs
 const boxes = [];
 const boxGeometry = new THREE.BoxGeometry(2, 2, 2);
-const numBoxes = 5; // Number of boxes
-for (let i = 0; i < numBoxes; i++) {
+
+projectLinks.forEach((link, index) => {
   const boxMaterial = new THREE.MeshStandardMaterial({
     color: Math.random() * 0xffffff, // Random color for each box
     metalness: 0.6,
@@ -45,8 +49,8 @@ for (let i = 0; i < numBoxes; i++) {
   box.position.y = (Math.random() - 0.5) * 10;
   box.position.z = (Math.random() - 0.5) * 5;
   scene.add(box);
-  boxes.push(box);
-}
+  boxes.push({ mesh: box, link });
+});
 
 // Add Light
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
@@ -72,23 +76,39 @@ document.addEventListener("mousemove", (event) => {
   mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
 });
 
+// Handle Click Event on Boxes
+document.addEventListener("click", () => {
+  raycaster.setFromCamera(mouse, camera);
+  const intersects = raycaster.intersectObjects(boxes.map(b => b.mesh));
+
+  if (intersects.length > 0) {
+    const clickedBox = intersects[0].object;
+    const matchedBox = boxes.find(b => b.mesh === clickedBox);
+    if (matchedBox) {
+      window.location.href = matchedBox.link.href; // Navigate to the corresponding project
+    }
+  }
+});
+
 // Animate
 function animate() {
   requestAnimationFrame(animate);
 
   // Rotate and float the boxes
-  boxes.forEach((box, index) => {
-    box.rotation.x += 0.01 + index * 0.001;
-    box.rotation.y += 0.01 + index * 0.001;
-    box.position.y += Math.sin(Date.now() * 0.001 + index) * 0.01;
+  boxes.forEach(({ mesh }, index) => {
+    mesh.rotation.x += 0.01 + index * 0.001;
+    mesh.rotation.y += 0.01 + index * 0.001;
+    mesh.position.y += Math.sin(Date.now() * 0.001 + index) * 0.01;
   });
 
   // Highlight boxes on hover
   raycaster.setFromCamera(mouse, camera);
-  const intersects = raycaster.intersectObjects(boxes);
-  boxes.forEach((box) => {
-    box.material.color.set(0xff6600); // Reset color
+  const intersects = raycaster.intersectObjects(boxes.map(b => b.mesh));
+
+  boxes.forEach(({ mesh }) => {
+    mesh.material.color.set(0xff6600); // Reset color
   });
+
   if (intersects.length > 0) {
     intersects[0].object.material.color.set(0x00ff00); // Highlight hovered box
   }
@@ -122,5 +142,5 @@ instructions.style.color = "white";
 instructions.style.fontFamily = "Arial, sans-serif";
 instructions.style.fontSize = "1.2em";
 instructions.style.textAlign = "center";
-instructions.textContent = "Move your mouse to interact with the floating boxes!";
+instructions.textContent = "Click on a box to explore the project!";
 document.body.appendChild(instructions);
