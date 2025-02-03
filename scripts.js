@@ -54,34 +54,39 @@ projectLinks.forEach((link) => {
   link.style.textDecoration = "none";
   link.style.transition = "all 0.3s ease-in-out";
 
-  const progressBar = document.createElement("div");
-  progressBar.style.position = "absolute";
-  progressBar.style.top = "0";
-  progressBar.style.left = "0";
-  progressBar.style.width = "0%";
-  progressBar.style.height = "100%";
-  progressBar.style.backgroundColor = "rgba(255, 102, 0, 0.5)";
-  progressBar.style.transition = "width 5s linear"; // Matches the 5-second delay
-  progressBar.style.borderRadius = "5px";
-  link.appendChild(progressBar);
+  // Add a border animation container
+  const borderAnimation = document.createElement("div");
+  borderAnimation.style.position = "absolute";
+  borderAnimation.style.top = "0";
+  borderAnimation.style.left = "0";
+  borderAnimation.style.width = "100%";
+  borderAnimation.style.height = "100%";
+  borderAnimation.style.border = "2px solid orange";
+  borderAnimation.style.borderRadius = "5px";
+  borderAnimation.style.boxSizing = "border-box";
+  borderAnimation.style.clipPath = "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"; // Start at 0%
+  borderAnimation.style.transition = "clip-path 5s linear"; // 5 seconds for full animation
+  link.appendChild(borderAnimation);
 
-  let hoverTimeout = null; // Ensure the timeout reference is accessible
+  let hoverTimeout = null;
 
   link.addEventListener("mouseenter", () => {
-    // Prevent multiple triggers
+    // Trigger the border animation
+    borderAnimation.style.clipPath = "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"; // Full outline
     if (!hoverTimeout) {
-      progressBar.style.width = "100%"; // Start progress bar animation
       hoverTimeout = setTimeout(() => {
-        window.location.href = link.href; // Navigate after 5 seconds
+        window.location.href = link.href; // Navigate after animation
       }, 5000); // 5 seconds
     }
   });
 
   link.addEventListener("mouseleave", () => {
-    // Reset progress bar and clear timeout
-    progressBar.style.width = "0%";
-    clearTimeout(hoverTimeout);
-    hoverTimeout = null; // Reset timeout reference
+    // Reset the border animation
+    borderAnimation.style.clipPath = "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)";
+    if (hoverTimeout) {
+      clearTimeout(hoverTimeout);
+      hoverTimeout = null;
+    }
   });
 
   link.addEventListener("click", (event) => {
