@@ -1,5 +1,6 @@
+// libs/projects.js
 import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.module.js";
-import { GLTFLoader } from "https://cdn.jsdelivr.net/npm/three@0.132.2/examples/jsm/loaders/GLTFLoader.js";
+import { GLTFLoader } from "https://cdn.jsdelivr.net/npm/three@0.132.2/examples/jsm/loaders/GLTFLoader.js?module";
 
 export const projects = [
   { name: "Pillow", url: "pillow.html" },
@@ -21,28 +22,24 @@ export function SetupProjectScene(scene, camera, renderer) {
 
   // GLTFLoader setup
   const loader = new GLTFLoader();
-  const clickableMeshes = []; // Collect meshes for raycasting
-  const models = []; // Store models for animation
+  const clickableMeshes = []; // For raycasting
+  const models = []; // For animation
 
   projects.forEach((project, index) => {
     loader.load(
-      "./models/BeveledCube.glb", // Path to your .glb model
+      "./models/BeveledCube.glb", // Ensure this path is correct
       (gltf) => {
         const model = gltf.scene;
-
-        // Calculate offset and position
         const xOffset = projects.length / 2;
         model.position.x = index * 2 - xOffset;
         model.position.z = -2;
 
-        // Traverse the model to extract child meshes
         model.traverse((child) => {
           if (child.isMesh) {
-            clickableMeshes.push(child); // Add child meshes for raycasting
+            clickableMeshes.push(child);
           }
         });
 
-        // Add model to the scene
         scene.add(model);
         models.push({ model, project });
       },
@@ -53,16 +50,14 @@ export function SetupProjectScene(scene, camera, renderer) {
     );
   });
 
-  // Add click event listener
   window.addEventListener("click", (event) => {
     mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
     mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
 
-    // Update raycaster with camera and mouse position
     raycaster.setFromCamera(mouse, camera);
-    const intersects = raycaster.intersectObjects(clickableMeshes, true); // Intersect all clickable meshes
+    const intersects = raycaster.intersectObjects(clickableMeshes, true);
     if (intersects.length > 0) {
-      const clickedMesh = intersects[0].object; // The first intersected mesh
+      const clickedMesh = intersects[0].object;
       const clickedProject = models.find(({ model }) =>
         model.children.includes(clickedMesh)
       )?.project;
@@ -73,14 +68,12 @@ export function SetupProjectScene(scene, camera, renderer) {
     }
   });
 
-  // Animate models
   function animateModels() {
     const time = Date.now() * 0.001;
     models.forEach(({ model }) => {
       model.position.y = Math.sin(time) * 0.1;
-      model.lookAt(camera.position); // Ensure models always look at the camera
+      model.lookAt(camera.position);
     });
-
     requestAnimationFrame(animateModels);
   }
   animateModels();
