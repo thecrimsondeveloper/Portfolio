@@ -68,20 +68,20 @@ projectLinks.forEach((link) => {
   let hoverTimeout;
 
   link.addEventListener("mouseenter", () => {
-    progressBar.style.width = "100%";
+    progressBar.style.width = "100%"; // Start filling the progress bar
     hoverTimeout = setTimeout(() => {
-      window.location.href = link.href;
-    }, 5000); // Wait for 5 seconds before navigation
+      window.location.href = link.href; // Navigate after 5 seconds
+    }, 5000); // 5-second delay
   });
 
   link.addEventListener("mouseleave", () => {
-    progressBar.style.width = "0%";
-    clearTimeout(hoverTimeout);
+    progressBar.style.width = "0%"; // Reset the progress bar
+    clearTimeout(hoverTimeout); // Cancel the navigation timeout
   });
 
   link.addEventListener("click", (event) => {
     event.preventDefault(); // Prevent immediate navigation
-    window.location.href = link.href;
+    window.location.href = link.href; // Navigate immediately on click
   });
 });
 
