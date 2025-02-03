@@ -1,5 +1,7 @@
 // libs/projects.js
 import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.module.js";
+import { FontLoader } from "https://cdn.jsdelivr.net/npm/three@0.132.2/examples/jsm/loaders/FontLoader.js";
+import { TextGeometry } from "https://cdn.jsdelivr.net/npm/three@0.132.2/examples/jsm/geometries/TextGeometry.js";
 
 export const projects = [
   { name: "Pillow", url: "pillow.html" },
@@ -44,37 +46,42 @@ export function SetupProjectScene(scene, camera, renderer) {
   }
   animateGalactic();
 
-  // Create particle text for each project menu option
-  const fontLoader = new THREE.FontLoader();
-  // Using the helvetiker font from Three.js examples
+  // Load font for text particles
+  const fontLoader = new FontLoader();
   fontLoader.load("https://threejs.org/examples/fonts/helvetiker_regular.typeface.json", (font) => {
     const textParticleSystems = [];
     projects.forEach((project, index) => {
       // Create text geometry from the project name
-      const textGeometry = new THREE.TextGeometry(project.name, {
+      const textGeometry = new TextGeometry(project.name, {
         font: font,
-        size: 2,
-        height: 0.2,
-        curveSegments: 12,
+        size: 1, // Adjusted size for better visibility
+        height: 0.1,
+        curveSegments: 10,
         bevelEnabled: false,
       });
-      // Center the geometry
+
+      // Center the text
       textGeometry.computeBoundingBox();
       if (textGeometry.boundingBox) {
         const centerOffset = -0.5 * (textGeometry.boundingBox.max.x - textGeometry.boundingBox.min.x);
         textGeometry.translate(centerOffset, 0, 0);
       }
-      // The TextGeometry in newer Three.js is already a BufferGeometry.
-      // Create a Points material to render it as particles.
+
+      // Create a Points material to render it as glowing particles
       const pointsMaterial = new THREE.PointsMaterial({
         color: 0x00ff00,
-        size: 0.1,
+        size: 0.05, // Adjusted for better visibility
+        transparent: true,
+        opacity: 0.9,
       });
+
       const textPoints = new THREE.Points(textGeometry, pointsMaterial);
-      // Position each text particle system along the x-axis (spread out) and a fixed z-depth.
+
+      // Position the text dynamically
       textPoints.position.x = index * 5 - ((projects.length - 1) * 2.5);
-      textPoints.position.y = 0;
-      textPoints.position.z = -10;
+      textPoints.position.y = -1; // Lowered slightly for visibility
+      textPoints.position.z = -5; // Adjusted so it appears in front of the stars
+
       scene.add(textPoints);
       textParticleSystems.push(textPoints);
     });
@@ -89,16 +96,14 @@ export function SetupProjectScene(scene, camera, renderer) {
 
     function animateText() {
       raycaster.setFromCamera(mouse, camera);
-      // Check for intersections with any text particle systems
       const intersects = raycaster.intersectObjects(textParticleSystems, true);
       textParticleSystems.forEach((points) => {
-        // If the raycaster is over this Points object, enlarge particles and change color
         if (intersects.find(intersect => intersect.object === points)) {
           points.material.color.set(0xff0000);
-          points.material.size = 0.2;
+          points.material.size = 0.1; // Enlarged when hovered
         } else {
           points.material.color.set(0x00ff00);
-          points.material.size = 0.1;
+          points.material.size = 0.05;
         }
       });
       requestAnimationFrame(animateText);
