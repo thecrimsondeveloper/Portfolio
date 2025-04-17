@@ -1,33 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Interactive 3D Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <script type="importmap">
-      {
-        "imports": {
-          "three": "https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.module.js"
-        }
-      }
-    </script>
-</head>
-<body>
+    <title>Dynamic Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header>
-        <h1>Interactive 3D Portfolio</h1>
+      <h1>Crimson Wheeler</h1>
+      <h3>Systems Architect | Gameplay Engineer | Unity Developer</h3>
     </header>
-    
-    <div id="threejs-scene" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></div>
-<main>
-  <section id="projects">
-    <a href="projects/pillow.html" class="project-link">Pillow</a>
-    <a href="projects/cyberslingers.html" class="project-link">Cyber Slingers</a>
-    <a href="projects/watson.html" class="project-link">Watson</a>
-  </section>
-</main>
 
+    <section class="portfolio-grid" id="portfolio-container"></section>
 
-    <script type="module" src="./scripts.js"></script>
-</body>
+    <div class="project-modal" id="project-modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <img id="modal-image" alt="Project Image" />
+        <h2 id="modal-title"></h2>
+        <p id="modal-description"></p>
+        <div id="modal-content"></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
 </html>
