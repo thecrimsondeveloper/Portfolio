@@ -1,29 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dynamic Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
+    
+    <style>
+        /* Basic Tab Styling to match a dark portfolio theme */
+        .tab-navigation {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #444;
+            padding-bottom: 10px;
+        }
+
+        .tab-link {
+            text-decoration: none;
+            color: #ccc;
+            padding: 8px 16px;
+            border: 1px solid #444;
+            border-radius: 4px 4px 0 0;
+            background-color: #1e1e1e;
+            transition: background-color 0.3s, color 0.3s;
+            font-family: sans-serif;
+        }
+
+        .tab-link:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Style for the active tab (current page) */
+        .tab-link.active {
+            background-color: #007acc; /* VS Code Blue-ish accent */
+            color: white;
+            border-color: #007acc;
+        }
+    </style>
+</head>
+<body>
     <header>
-      <h1>Crimson Wheeler</h1>
-      <h3>Systems Architect | Gameplay Engineer | Unity Developer</h3>
+        <h1>Crimson Wheeler</h1>
+        <h3>Systems Architect | Gameplay Engineer | Unity Developer</h3>
+
+        <nav class="tab-navigation">
+            <a href="index.html" class="tab-link active">Home</a>
+            
+            <a href="Pages/dragon.html" class="tab-link">Dragon Project</a>
+            <a href="Pages/watson.html" class="tab-link">Watson Project</a>
+        </nav>
+
     </header>
 
     <section class="portfolio-grid" id="portfolio-container"></section>
 
     <div class="project-modal" id="project-modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <img id="modal-image" alt="Project Image" />
-        <h2 id="modal-title"></h2>
-        <p id="modal-description"></p>
-        <div id="modal-content"></div>
-      </div>
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modal-image" alt="Project Image" />
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <div id="modal-content"></div>
+        </div>
     </div>
 
     <script src="app.js"></script>
-  </body>
+</body>
 </html>
