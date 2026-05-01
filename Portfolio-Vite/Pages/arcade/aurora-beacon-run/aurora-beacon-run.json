@@ -14,10 +14,15 @@
     "startAction": "Launch Run"
   },
   "content": {
-    "lanes": [-2.4, 0, 2.4],
+    "lanes": [
+      -2.4,
+      0,
+      2.4
+    ],
     "gateInterval": 1.4,
     "bonusStageTime": 18,
     "specialGateChance": 0.25,
     "pressureWaveTime": 28
-  }
+  },
+  "image": "/images/arcade/screenshots-2026-05-01/aurora-beacon-run.png"
 }

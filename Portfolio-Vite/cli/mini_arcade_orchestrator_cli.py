@@ -25,7 +25,7 @@ DEFAULT_BATCH_PROMPT = (
 )
 ORCHESTRATOR_MEMORY_PATH = arcade.CLI_ROOT / "arcade_orchestrator_memory.md"
 ORCHESTRATOR_SYSTEM_PROMPT_PATH = arcade.CLI_ROOT / "arcade_orchestrator_system_prompt.md"
-AUTO_REPORT_PATH = arcade.CLI_ROOT / "arcade_auto_report.json"
+AUTO_REPORT_PATH = arcade.STATE_DIR / "arcade_auto_report.json"
 REQUIRED_AUTO_FLAGS = ("idea", "theme", "mechanic", "content")
 
 
@@ -279,7 +279,7 @@ def port_open(port: int) -> bool:
 def ensure_portfolio_vite_server() -> subprocess.Popen | None:
     if port_open(5174):
         return None
-    vite_root = arcade.ROOT / "Portfolio-Vite"
+    vite_root = arcade.PORTFOLIO_APP
     if not vite_root.exists():
         return None
     process = subprocess.Popen(
@@ -325,10 +325,10 @@ def preflight_auto_build(args: argparse.Namespace) -> list[str]:
         blockers.append("missing /opt/homebrew/bin/copilot")
     required_paths = [
         arcade.STEPS_PATH,
-        arcade.ROOT / "Portfolio-Vite",
-        arcade.ROOT / "Portfolio-Vite" / "Pages" / "arcade-runtime.js",
-        arcade.ROOT / "Portfolio-Vite" / "Pages" / "arcade-bootstrap.js",
-        arcade.ROOT / "Portfolio-Vite" / "Pages" / "arcade-assets.json",
+        arcade.PORTFOLIO_APP,
+        arcade.PORTFOLIO_APP / "Pages" / "arcade-runtime.js",
+        arcade.PORTFOLIO_APP / "Pages" / "arcade-bootstrap.js",
+        arcade.PORTFOLIO_APP / "Pages" / "arcade-assets.json",
         arcade.CLI_ROOT / "schemas",
         arcade.CLI_ROOT / "templates",
         ORCHESTRATOR_MEMORY_PATH,
@@ -340,8 +340,8 @@ def preflight_auto_build(args: argparse.Namespace) -> list[str]:
     node = shutil.which("node")
     if node:
         for path in (
-            arcade.ROOT / "Portfolio-Vite" / "Pages" / "arcade-runtime.js",
-            arcade.ROOT / "Portfolio-Vite" / "Pages" / "arcade-bootstrap.js",
+            arcade.PORTFOLIO_APP / "Pages" / "arcade-runtime.js",
+            arcade.PORTFOLIO_APP / "Pages" / "arcade-bootstrap.js",
         ):
             result = subprocess.run([node, "--check", str(path)], text=True, capture_output=True)
             if result.returncode != 0:
@@ -353,9 +353,9 @@ def preflight_auto_build(args: argparse.Namespace) -> list[str]:
 
 
 def proof_for_slug(slug: str) -> dict:
-    page = arcade.ROOT / "Portfolio-Vite" / "Pages" / f"{slug}.html"
-    game = arcade.ROOT / "Portfolio-Vite" / "Pages" / "games" / f"{slug}.json"
-    portfolio_data = arcade.ROOT / "Portfolio-Vite" / "src" / "data" / "portfolio.js"
+    page = arcade.PORTFOLIO_APP / "Pages" / f"{slug}.html"
+    game = arcade.PORTFOLIO_APP / "Pages" / "games" / f"{slug}.json"
+    portfolio_data = arcade.PORTFOLIO_APP / "src" / "data" / "portfolio" / "projects.js"
     portfolio_text = portfolio_data.read_text(encoding="utf-8") if portfolio_data.exists() else ""
     return {
         "slug": slug,

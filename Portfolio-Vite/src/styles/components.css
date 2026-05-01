@@ -221,7 +221,7 @@
 .project-grid {
   display: grid;
   grid-template-columns: repeat(var(--project-grid-columns), minmax(0, 1fr));
-  gap: clamp(0.85rem, 1.8vw, 1.2rem);
+  gap: clamp(1rem, 2vw, 1.45rem);
 }
 
 .project-grid--stacked {
@@ -232,9 +232,10 @@
 
 .project-card {
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-columns: minmax(168px, 0.34fr) minmax(0, 1fr);
+  grid-template-rows: 1fr auto;
   min-height: 100%;
-  width: min(100%, 56rem);
+  width: min(100%, 52rem);
   margin-inline: auto;
   border-radius: var(--content-shell-radius-lg);
   overflow: hidden;
@@ -244,7 +245,9 @@
 }
 
 .project-card-media {
-  aspect-ratio: 16 / 10;
+  grid-row: 1 / span 2;
+  aspect-ratio: 4 / 5;
+  min-height: 100%;
   background:
     radial-gradient(circle at top right, rgba(255, 255, 255, 0.1), transparent 30%),
     linear-gradient(
@@ -253,7 +256,7 @@
       color-mix(in srgb, var(--secondary) 16%, transparent)
     ),
     linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.012));
-  border-bottom: 1px solid rgba(255, 255, 255, 0.065);
+  border-right: 1px solid rgba(255, 255, 255, 0.065);
 }
 
 .project-card-media img {
@@ -263,10 +266,11 @@
 }
 
 .project-card-accent {
+  grid-row: 1 / span 2;
   display: grid;
   place-items: end start;
   padding: 0.85rem;
-  min-height: 9.5rem;
+  min-height: 13rem;
   background:
     radial-gradient(circle at top right, rgba(255, 255, 255, 0.18), transparent 28%),
     linear-gradient(
@@ -276,7 +280,7 @@
     ),
     linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.012));
   color: var(--content-shell-ink);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.065);
+  border-right: 1px solid rgba(255, 255, 255, 0.065);
 }
 
 .project-card-kind {
@@ -295,7 +299,7 @@
 .project-card-body {
   display: grid;
   gap: 0.55rem;
-  padding: 0.76rem 0.82rem 0.72rem;
+  padding: 0.9rem 0.95rem 0.72rem;
 }
 
 .project-card-body h3 {
@@ -313,7 +317,7 @@
 
 .project-card-footer {
   border-top: 1px solid rgba(255, 255, 255, 0.052);
-  padding: 0 0.82rem 0.78rem;
+  padding: 0 0.95rem 0.9rem;
 }
 
 .project-card-links,
@@ -531,6 +535,23 @@
 }
 
 @media (max-width: 720px) {
+  .project-card {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+  }
+
+  .project-card-media,
+  .project-card-accent {
+    grid-row: auto;
+    min-height: 0;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.065);
+  }
+
+  .project-card-media {
+    aspect-ratio: 4 / 3;
+  }
+
   .project-card-links,
   .project-actions,
   .utility-links {

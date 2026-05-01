@@ -625,6 +625,7 @@ const modes = {
     },
     draw(state) {
       const { ctx } = state.dom;
+      const content = state.config.content;
       ctx.clearRect(0, 0, state.width, state.height);
       drawVerticalGradient(state);
       drawRunnerTrack(state);

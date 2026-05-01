@@ -93,7 +93,7 @@
       "Press the start button on the overlay to launch the run.",
       "Watch the first handoff stage and choose the bonus lane for extra score."
     ],
-    "firstGoal": "Complete the handoff stage and survive the sprint." 
+    "firstGoal": "Complete the handoff stage and survive the sprint."
   },
   "meta": {
     "summary": "A courier training run that blends auto-fill route branches, lane bonuses, and retro harbor dispatch logs.",
@@ -116,17 +116,58 @@
       0.82
     ],
     "patterns": [
-      { "lanes": [0] },
-      { "lanes": [1] },
-      { "lanes": [2] },
-      { "lanes": [3] },
-      { "lanes": [0, 2] },
-      { "lanes": [1, 3] },
-      { "lanes": [0, 1, 3] },
-      { "lanes": [1, 2] }
+      {
+        "lanes": [
+          0
+        ]
+      },
+      {
+        "lanes": [
+          1
+        ]
+      },
+      {
+        "lanes": [
+          2
+        ]
+      },
+      {
+        "lanes": [
+          3
+        ]
+      },
+      {
+        "lanes": [
+          0,
+          2
+        ]
+      },
+      {
+        "lanes": [
+          1,
+          3
+        ]
+      },
+      {
+        "lanes": [
+          0,
+          1,
+          3
+        ]
+      },
+      {
+        "lanes": [
+          1,
+          2
+        ]
+      }
     ],
     "checkpointInterval": 280,
-    "checkpointLanes": [0, 2, 3],
+    "checkpointLanes": [
+      0,
+      2,
+      3
+    ],
     "checkpointReward": 24,
     "bonusLane": 2,
     "bonusHoldTime": 1.15,
@@ -135,17 +176,51 @@
     "comboReward": 22,
     "burstInterval": 5.8,
     "burstPatterns": [
-      { "lanes": [0, 3] },
-      { "lanes": [1, 2] },
-      { "lanes": [0, 1, 3] },
-      { "lanes": [1, 2, 3] }
+      {
+        "lanes": [
+          0,
+          3
+        ]
+      },
+      {
+        "lanes": [
+          1,
+          2
+        ]
+      },
+      {
+        "lanes": [
+          0,
+          1,
+          3
+        ]
+      },
+      {
+        "lanes": [
+          1,
+          2,
+          3
+        ]
+      }
     ],
     "hiddenObstacleRate": 0.12,
     "stageSequence": [
-      { "name": "handoff", "duration": 10 },
-      { "name": "recovery", "duration": 12 },
-      { "name": "rush", "duration": 10 },
-      { "name": "sprint", "duration": 14 }
+      {
+        "name": "handoff",
+        "duration": 10
+      },
+      {
+        "name": "recovery",
+        "duration": 12
+      },
+      {
+        "name": "rush",
+        "duration": 10
+      },
+      {
+        "name": "sprint",
+        "duration": 14
+      }
     ],
     "expertRecoveryUnlockScore": 280,
     "skinUnlockScore": 320,
@@ -155,5 +230,6 @@
       "Dispatch: rush window open. Brace for sudden lane bursts.",
       "Dispatch: sprint final stage. Stay smooth to maximize combo."
     ]
-  }
+  },
+  "image": "/images/arcade/screenshots-2026-05-01/harbor-auto-sprint.png"
 }

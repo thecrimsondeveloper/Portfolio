@@ -1,36 +1,33 @@
 # Repo Shape
-Portfolio is a two-track workspace: `Portfolio-CLI` for deterministic prototype generation and `Portfolio-Vite` for the live site, with Arcade using shared shells, per-game JSON-driven flow definitions, `arcade_builder_cli.py` as the deterministic packet/build owner, `mini_arcade_orchestrator_cli.py` as the GPT-5 Mini batch/single-run orchestrator, and `Portfolio-CLI/MiniArcadeControl` as the local horizontal queue website with one prompt, Go, optional idea loop, and color-state cards.
+Portfolio is a Vite-first portfolio workspace: `Portfolio-Vite` is the canonical public app, `Portfolio-Vite/Pages` is the stable Kongregate-style Arcade wing, `Portfolio-Vite/cli` owns deterministic generation/orchestration tooling, `legacy/old-root-site` archives the old root site, and root-level docs explain architecture, arcade boundaries, tooling, and small-model edit lanes.
 
 ## #SELF REMINDERS
 - Keep replies short, direct, and action-oriented.
-- Root `.gitignore` now ignores local agent/runtime state, env files, Python/Node build outputs, and non-public screenshot captures.
-- Ignored proof checked with `git check-ignore -v` for `.copilot-local`, `.playwright-mcp`, `.codex-screens`, `.nexus-link`, Vite `node_modules/dist/.env`, and root screenshots.
-- Tracked `.DS_Store` still appears modified because ignore does not untrack already tracked files; remove from index before push if user approves cleanup.
-- Next: decide whether to stage `.gitignore` only or also remove tracked `.DS_Store` and resolve deleted `Pages/dragon.html`.
+- Main goals: preserve Vite visual identity, keep Arcade folder URLs stable, and keep CLI/tooling available but separated from generated run state.
+- Nav rule now in effect: visible header tabs end with `Arcade Library` then `Arcade`; `Settings` stays separate as the floating button.
+- Image overhaul request is active: audit every tab image, replace weak placeholders with stronger art, and shift cards toward thinner, more vertical media with more whitespace.
+- Source issue found during audit: `pages['full-stack'].featuredProjectSlugs` includes `a-tiny-rhythm-meter-prototype`, but that slug is missing from `src/data/portfolio/projects.js`.
+- Current image truth: section tabs use `projects.js` images; dedicated arcade metadata JSONs still have 0 `image` values across 10 entries, so the arcade player/library metadata surfaces still fall back to text shells.
+- Next: if implementing the overhaul, fix the missing slug first, then replace weak SVG project art and tighten card media aspect ratios in section, detail, and arcade card CSS.
 
 ## #SELF REMINDERS
 - Keep replies short, direct, and action-oriented.
-- Current git-tracked repo is still legacy root site only: `.github/workflows/static.yml`, `index.html`, `styles.css`, `app.js`, `.DS_Store`, and `Pages/dragon.html`.
-- `Portfolio-Vite/` is the real current app shape but is untracked; clean push needs explicit include/ignore decisions before staging.
-- Cleanup priority before push: ignore/remove local state folders, `.DS_Store`, `.env`, build outputs, screenshots, and decide whether deleted `Pages/dragon.html` is intentional.
-- Next: if user says clean it, add root `.gitignore`, preserve `Portfolio-Vite` source/public/Pages/cli/workflows, exclude runtime/generated folders, then show a staged diff.
+- Main goals: preserve Vite visual identity, keep Arcade folder URLs stable, and keep CLI/tooling available but separated from generated run state.
+- Current local run state: `Portfolio-Vite` dev server is running at `http://127.0.0.1:4174/` via `npm run start -- --host 127.0.0.1 --port 4174`.
+- Validation for run command: local HTTP probe returned `200 OK`, so the refactored app is serving correctly from the canonical Vite root.
+- Next: if the user asks for browser review or screenshots, use the live Vite URL instead of legacy root files.
 
 ## #SELF REMINDERS
 - Keep replies short, direct, and action-oriented.
-- `Portfolio-Vite/src/data/portfolio.js` uses `project.image` for list cards, detail art, and arcade/prototype card image surfaces.
-- Generated card art lives in `Portfolio-Vite/public/images/projects`; rerun `node Portfolio-Vite/scripts/generate-project-card-images.mjs` after adding projects with empty images.
-- Build proof for image pass: `npm run build` passes; only existing Vite large chunk warning remains.
-- Next: if user wants richer art, replace the generated SVGs with custom bitmap renders while preserving the same `/images/projects/<slug>.*` paths.
+- Main goals: preserve Vite visual identity, keep Arcade folder URLs stable, and keep CLI/tooling available but separated from generated run state.
+- Current state: refactor pass is implemented with docs, deploy workflow, split data modules, CLI path cleanup, ignored generated state, and legacy root archive.
+- Validation proof remains: Vite build, Python compile, arcade JS syntax checks, image generator, arcade manifest path check, and Playwright page sweep passed after fixing `arcade-runtime.js`.
+- Next: if staging/pushing, stage intentional generated-state deletions separately from source changes so the cleanup is easy to review.
 
 ## #SELF REMINDERS
 - Keep replies short, direct, and action-oriented.
-- Verify the live preview before answering a run request.
-- Preserve the explicit-intent gate when small replies leave action unclear.
-- Next: keep `127.0.0.1:4173` ready and restart only if the listener drops.
-
-## #SELF REMINDERS
-- Keep replies short, direct, and action-oriented.
-- Preserve the explicit-intent gate and ask first when small replies leave action unclear.
-- Gemini metallic-water shader port implemented in `star-fishing-scene.js`: render-target refraction, chromatic distortion, FBM normals, Fresnel/specular, click ripples, and star light uniforms.
-- Underwater mesh stars are hidden behind water and refracted; surfaced/above stars remain final-pass clear; CDP caught 1 surfaced star after shader port.
-- Next: if user wants less intensity, tune shader exposure/specular rather than reverting to simple water.
+- Vite refactor implemented: root legacy site archived to `legacy/old-root-site`, GitHub Pages now builds `Portfolio-Vite/dist`, and `Portfolio-Vite/src/data/portfolio/` owns split profile/design/nav/pages/projects modules.
+- Arcade remains a Kongregate-style wing under `Portfolio-Vite/Pages`; do not move game folders, only harden manifests/runtime/docs around stable paths.
+- CLI is self-contained under `Portfolio-Vite/cli`; tracked source stays in command files/schemas/templates/state `arcade_steps.json`, while generated session/report/queue/runs are ignored.
+- Validation proof: `npm run build`, Python `py_compile`, `node --check` arcade runtime/bootstrap, image generator, manifest path check, and Playwright page sweep all passed; fixed `content` reference bug in `arcade-runtime.js`.
+- Next: if staging/pushing, expect many staged deletions for previously tracked generated CLI packets plus `.DS_Store`; this is intentional cleanup.

@@ -14,7 +14,14 @@
     "startAction": "Begin Drift"
   },
   "content": {
-    "pattern": [0, 2, 3, 1, 0, 3],
+    "pattern": [
+      0,
+      2,
+      3,
+      1,
+      0,
+      3
+    ],
     "inputMap": {
       "q": 0,
       "w": 1,
@@ -25,7 +32,13 @@
       "arrowdown": 2,
       "arrowright": 3
     },
-    "padColors": ["#7bf1a8", "#63c6ff", "#ffd873", "#ff5e6c"],
+    "padColors": [
+      "#7bf1a8",
+      "#63c6ff",
+      "#ffd873",
+      "#ff5e6c"
+    ],
     "revealEvery": 0.9
-  }
+  },
+  "image": "/images/arcade/screenshots-2026-05-01/glow-drift.png"
 }

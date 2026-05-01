@@ -28,3 +28,12 @@ dist/
 *.jpeg
 *.webp
 !Portfolio-Vite/public/**
+
+# Generated CLI run output
+Portfolio-Vite/cli/runs/
+Portfolio-Vite/cli/state/arcade_session.json
+Portfolio-Vite/cli/state/arcade_run.md
+Portfolio-Vite/cli/state/arcade_auto_report.json
+Portfolio-Vite/cli/state/arcade_run.lock
+Portfolio-Vite/cli/state/*.tmp
+Portfolio-Vite/cli/MiniArcadeControl/data/*.json

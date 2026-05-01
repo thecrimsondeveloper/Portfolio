@@ -18,5 +18,6 @@
     "shardCount": 3,
     "waveSpeed": 140,
     "arenaRadius": 0.42
-  }
+  },
+  "image": "/images/arcade/screenshots-2026-05-01/tideforge-arena.png"
 }

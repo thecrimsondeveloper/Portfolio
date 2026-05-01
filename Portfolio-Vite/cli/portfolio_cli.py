@@ -9,12 +9,13 @@ from pathlib import Path
 from typing import Any
 
 
-ROOT = Path(__file__).resolve().parents[1]
-CLI_ROOT = ROOT / "Portfolio-CLI"
+CLI_ROOT = Path(__file__).resolve().parent
+PORTFOLIO_APP = CLI_ROOT.parent
+ROOT = PORTFOLIO_APP.parent
 SCHEMAS_DIR = CLI_ROOT / "schemas"
 TEMPLATES_DIR = CLI_ROOT / "templates"
-PORTFOLIO_APP = ROOT / "Portfolio-Vite"
-PORTFOLIO_DATA = PORTFOLIO_APP / "src" / "data" / "portfolio.js"
+PORTFOLIO_DATA = PORTFOLIO_APP / "src" / "data" / "portfolio" / "projects.js"
+PORTFOLIO_PAGES = PORTFOLIO_APP / "src" / "data" / "portfolio" / "pages.js"
 PAGES_DIR = PORTFOLIO_APP / "Pages"
 GAMES_DIR = PAGES_DIR / "games"
 ARCADE_ASSETS = PAGES_DIR / "arcade-assets.json"
@@ -79,7 +80,7 @@ class IdeaBrief:
 
 def main() -> None:
     ensure_cli_support_files()
-    print("Portfolio-CLI")
+    print("Portfolio Vite CLI")
     print(
         "Type `idea`, `shape`, `brainstorm`, `expand`, `theme-pack`, `content-plan`, `feature-plan`, `hierarchy`, `mode-pick`, `json-fill`, `build`, `validate`, `status`, `help`, or `quit`."
     )
@@ -1027,19 +1028,27 @@ def insert_portfolio_project(game_json: dict[str, Any]) -> None:
     if f'"{slug}": ' in text:
         return
     if marker not in text:
-        raise RuntimeError("Could not find insertion point in portfolio.js")
+        raise RuntimeError("Could not find insertion point in projects.js")
     text = text.replace(marker, entry + marker, 1)
-    text = re.sub(
-        r'(featuredProjectSlugs:\s*\[\n)([\s\S]*?)(\n\s*\],)',
-        lambda m: append_slug_to_featured_slugs(m, slug),
-        text,
-        count=1,
-    )
     text = text.replace(
         '      technologies: ["JSON", "Shared Runtime", "Prototype"],',
         f'      technologies: ["JSON", "Shared Runtime", "Prototype"],',
     )
     PORTFOLIO_DATA.write_text(text, encoding="utf-8")
+    append_slug_to_page_featured("prototypes", slug)
+    append_slug_to_page_featured("arcade-library", slug)
+
+
+def append_slug_to_page_featured(page_id: str, slug: str) -> None:
+    text = PORTFOLIO_PAGES.read_text(encoding="utf-8")
+    pattern = rf'("{page_id}"|{re.escape(page_id)}): \\{{[\\s\\S]*?featuredProjectSlugs:\\s*\\[\\n(?P<body>[\\s\\S]*?)\\n\\s*\\],'
+    match = re.search(pattern, text)
+    if not match or f'"{slug}"' in match.group("body"):
+        return
+    insert_at = match.end("body")
+    prefix = "" if match.group("body").strip() == "" else "\n"
+    text = text[:insert_at] + f'{prefix}        "{slug}",' + text[insert_at:]
+    PORTFOLIO_PAGES.write_text(text, encoding="utf-8")
 
 
 def append_slug_to_featured_slugs(match: re.Match[str], slug: str) -> str:

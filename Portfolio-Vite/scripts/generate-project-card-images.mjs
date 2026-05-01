@@ -2,12 +2,12 @@ import fs from "node:fs";
 import path from "node:path";
 
 const root = path.resolve(import.meta.dirname, "..");
-const dataPath = path.join(root, "src/data/portfolio.js");
+const dataPath = path.join(root, "src/data/portfolio/projects.js");
 const outputDir = path.join(root, "public/images/projects");
 const publicPrefix = "/images/projects";
 
 const source = fs.readFileSync(dataPath, "utf8");
-const projectsStart = source.indexOf("\n  projects: {");
+const projectsStart = source.indexOf("export const projects = {");
 const projectsSource = source.slice(projectsStart);
 const projectBlocks = [...projectsSource.matchAll(/\n    (["']?)([a-zA-Z0-9_-]+)\1: \{[\s\S]*?\n    \}/g)];
 

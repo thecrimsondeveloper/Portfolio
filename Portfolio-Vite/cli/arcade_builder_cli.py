@@ -23,14 +23,17 @@ from portfolio_cli import (
 )
 
 
-ROOT = Path(__file__).resolve().parents[1]
-CLI_ROOT = ROOT / "Portfolio-CLI"
-STEPS_PATH = CLI_ROOT / "arcade_steps.json"
-SESSION_PATH = CLI_ROOT / "arcade_session.json"
-RUN_PATH = CLI_ROOT / "arcade_run.md"
-LOCK_PATH = CLI_ROOT / "arcade_run.lock"
-PACKETS_DIR = CLI_ROOT / "arcade_packets"
-ARCHIVE_DIR = CLI_ROOT / "arcade_run_archive"
+CLI_ROOT = Path(__file__).resolve().parent
+PORTFOLIO_APP = CLI_ROOT.parent
+ROOT = PORTFOLIO_APP.parent
+STATE_DIR = CLI_ROOT / "state"
+RUNS_DIR = CLI_ROOT / "runs"
+STEPS_PATH = STATE_DIR / "arcade_steps.json"
+SESSION_PATH = STATE_DIR / "arcade_session.json"
+RUN_PATH = STATE_DIR / "arcade_run.md"
+LOCK_PATH = STATE_DIR / "arcade_run.lock"
+PACKETS_DIR = RUNS_DIR / "arcade_packets"
+ARCHIVE_DIR = RUNS_DIR / "arcade_run_archive"
 COPILOT = Path("/opt/homebrew/bin/copilot")
 COPILOT_CONFIG_DIR = ROOT / ".copilot-local"
 
@@ -186,8 +189,8 @@ def git_status() -> list[str]:
 
 def unexpected_dirty(lines: list[str]) -> list[str]:
     allowed = (
-        " M Portfolio-CLI/",
-        "?? Portfolio-CLI/",
+        " M Portfolio-Vite/cli/",
+        "?? Portfolio-Vite/cli/",
         " M Portfolio-Vite/",
         "?? Portfolio-Vite/",
         " M memory.md",
