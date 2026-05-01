@@ -1,0 +1,1203 @@
+{
+  "sourceFile": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/rooftop-while-guard-break/brainstorm-seed.json",
+  "generatedAt": "2026-05-01T19:35:25.586228+00:00",
+  "explorationLevel": "expansive",
+  "method": {
+    "name": "chained_inference_aggregation",
+    "rankedPassing": true,
+    "passCount": 3,
+    "topK": 12,
+    "rowTopK": 6,
+    "sampleSizePerCategory": 3,
+    "smoothSampleSize": 6,
+    "randomSeed": 7
+  },
+  "totals": {
+    "categoryCount": 4,
+    "rowCount": 12,
+    "itemCount": 96
+  },
+  "gameDesignDoc": {
+    "title": "Rooftop While: Guard Break",
+    "explorationLevel": "expansive",
+    "sourceSamples": {
+      "environment": [
+        "rooftop",
+        "tree",
+        "pier",
+        "forest",
+        "maintenance",
+        "rails"
+      ],
+      "mechanics": [
+        "while",
+        "ember",
+        "crash",
+        "flame",
+        "sprint",
+        "slide",
+        "evade"
+      ],
+      "enemies": [
+        "guard",
+        "sentry",
+        "fort",
+        "commander",
+        "leader",
+        "circuitry"
+      ],
+      "progression": [
+        "evolve",
+        "unify",
+        "discover",
+        "expand",
+        "unlock",
+        "reach"
+      ]
+    },
+    "elevatorPitch": "A expansive arcade game set between rooftop and tree, where the player uses while and ember actions to outmaneuver guard forces and drive a evolve-to-unify progression arc.",
+    "worldConcept": "The world blends rooftop, tree, pier into a hostile traversal space patrolled by guard, sentry, fort, pushing the player through compact but expressive runs.",
+    "coreLoop": [
+      "Scout routes through rooftop spaces and identify guard pressure points.",
+      "Use while and ember interactions to survive, reposition, and secure objectives.",
+      "Convert each run into evolve gains that unlock stronger options and open the next challenge band."
+    ],
+    "mechanics": {
+      "primaryActions": [
+        "while",
+        "ember",
+        "crash"
+      ],
+      "enemyPressure": [
+        "guard",
+        "sentry",
+        "fort"
+      ],
+      "progressionHooks": [
+        "evolve",
+        "unify",
+        "discover"
+      ]
+    },
+    "contentPillars": [
+      "Traversal built around while, ember, crash.",
+      "Threat reads driven by guard, sentry, fort.",
+      "Forward momentum shaped by evolve, unify, discover."
+    ],
+    "aggregatedDocument": {
+      "environmentBlend": [
+        "rooftop",
+        "tree",
+        "pier",
+        "forest"
+      ],
+      "mechanicBlend": [
+        "while",
+        "ember",
+        "crash",
+        "flame"
+      ],
+      "enemyBlend": [
+        "guard",
+        "sentry",
+        "fort",
+        "commander"
+      ],
+      "progressionBlend": [
+        "evolve",
+        "unify",
+        "discover",
+        "expand"
+      ],
+      "smootherSummary": "Merge rooftop, tree spaces with while, ember verbs, then pressure the run with guard, sentry threats and resolve it through evolve, unify growth."
+    },
+    "designDoc": {
+      "playerFantasy": "Feel like a fast improviser navigating rooftop hazards while turning sentry pressure into opportunities.",
+      "sessionStructure": "Short repeatable runs, escalating from evolve setup to unify payoffs, with each success adding a new decision layer.",
+      "visualDirection": "Lean on rooftop, tree, and guard motifs for strong silhouettes, readable threat zones, and punchy arcade contrast."
+    }
+  },
+  "categories": [
+    {
+      "category": "Environment Seeds",
+      "rowCount": 3,
+      "itemCount": 24,
+      "topWords": [
+        "harbor",
+        "dock",
+        "pier",
+        "land",
+        "forest",
+        "tree",
+        "leaf",
+        "maintenance",
+        "rails",
+        "rooftop"
+      ],
+      "sampledWords": [
+        "rooftop",
+        "tree",
+        "pier"
+      ],
+      "rankedSample": [
+        "forest",
+        "tree",
+        "pier"
+      ],
+      "piecemealSamples": {
+        "heads": [
+          "rooftop",
+          "maintenance",
+          "rails"
+        ],
+        "middles": [
+          "land"
+        ],
+        "tails": [
+          "leaf"
+        ],
+        "focus": [
+          "leaf",
+          "rooftop",
+          "dock"
+        ]
+      },
+      "smoothedWords": [
+        "rooftop",
+        "tree",
+        "pier",
+        "forest",
+        "maintenance",
+        "rails"
+      ],
+      "rankedPasses": [
+        {
+          "pass": 1,
+          "topWords": [
+            "harbor",
+            "dock",
+            "pier",
+            "land",
+            "forest",
+            "tree",
+            "leaf",
+            "maintenance",
+            "rails",
+            "rooftop"
+          ],
+          "topRankings": [
+            {
+              "word": "harbor",
+              "score": 42.42
+            },
+            {
+              "word": "dock",
+              "score": 37.92
+            },
+            {
+              "word": "pier",
+              "score": 34.32
+            },
+            {
+              "word": "land",
+              "score": 30.72
+            },
+            {
+              "word": "forest",
+              "score": 27.12
+            },
+            {
+              "word": "tree",
+              "score": 23.52
+            },
+            {
+              "word": "leaf",
+              "score": 18.84
+            },
+            {
+              "word": "maintenance",
+              "score": 17.76
+            },
+            {
+              "word": "rails",
+              "score": 17.76
+            },
+            {
+              "word": "rooftop",
+              "score": 17.76
+            }
+          ]
+        },
+        {
+          "pass": 2,
+          "topWords": [
+            "harbor",
+            "dock",
+            "pier",
+            "land",
+            "forest",
+            "tree",
+            "leaf",
+            "maintenance",
+            "rails",
+            "rooftop"
+          ],
+          "topRankings": [
+            {
+              "word": "harbor",
+              "score": 43.927
+            },
+            {
+              "word": "dock",
+              "score": 39.336
+            },
+            {
+              "word": "pier",
+              "score": 35.508
+            },
+            {
+              "word": "land",
+              "score": 31.788
+            },
+            {
+              "word": "forest",
+              "score": 28.068
+            },
+            {
+              "word": "tree",
+              "score": 24.262
+            },
+            {
+              "word": "leaf",
+              "score": 19.322
+            },
+            {
+              "word": "maintenance",
+              "score": 18.394
+            },
+            {
+              "word": "rails",
+              "score": 18.394
+            },
+            {
+              "word": "rooftop",
+              "score": 18.394
+            }
+          ]
+        },
+        {
+          "pass": 3,
+          "topWords": [
+            "harbor",
+            "dock",
+            "pier",
+            "land",
+            "forest",
+            "tree",
+            "leaf",
+            "maintenance",
+            "rails",
+            "rooftop"
+          ],
+          "topRankings": [
+            {
+              "word": "harbor",
+              "score": 44.269
+            },
+            {
+              "word": "dock",
+              "score": 39.612
+            },
+            {
+              "word": "pier",
+              "score": 35.763
+            },
+            {
+              "word": "land",
+              "score": 32.006
+            },
+            {
+              "word": "forest",
+              "score": 28.255
+            },
+            {
+              "word": "tree",
+              "score": 24.414
+            },
+            {
+              "word": "leaf",
+              "score": 19.411
+            },
+            {
+              "word": "maintenance",
+              "score": 18.514
+            },
+            {
+              "word": "rails",
+              "score": 18.514
+            },
+            {
+              "word": "rooftop",
+              "score": 18.514
+            }
+          ]
+        }
+      ],
+      "chainSummaries": [
+        {
+          "category": "Environment Seeds",
+          "seed": "rooftop",
+          "rowLength": 8,
+          "focusWords": [
+            "harbor",
+            "dock",
+            "pier",
+            "land",
+            "forest",
+            "tree"
+          ],
+          "chainDigest": "rooftop -> harbor -> dock -> pier -> land -> forest -> tree -> leaf"
+        },
+        {
+          "category": "Environment Seeds",
+          "seed": "maintenance",
+          "rowLength": 8,
+          "focusWords": [
+            "harbor",
+            "dock",
+            "pier",
+            "land",
+            "forest",
+            "tree"
+          ],
+          "chainDigest": "maintenance -> harbor -> dock -> pier -> land -> forest -> tree -> leaf"
+        },
+        {
+          "category": "Environment Seeds",
+          "seed": "rails",
+          "rowLength": 8,
+          "focusWords": [
+            "harbor",
+            "dock",
+            "pier",
+            "land",
+            "forest",
+            "tree"
+          ],
+          "chainDigest": "rails -> harbor -> dock -> pier -> land -> forest -> tree -> leaf"
+        }
+      ]
+    },
+    {
+      "category": "Mechanic Seeds",
+      "rowCount": 3,
+      "itemCount": 24,
+      "topWords": [
+        "dash",
+        "sprint",
+        "blink",
+        "slide",
+        "crash",
+        "flame",
+        "ember",
+        "evade",
+        "patrols",
+        "while"
+      ],
+      "sampledWords": [
+        "while",
+        "ember",
+        "crash"
+      ],
+      "rankedSample": [
+        "flame",
+        "sprint",
+        "slide"
+      ],
+      "piecemealSamples": {
+        "heads": [
+          "evade",
+          "patrols",
+          "while"
+        ],
+        "middles": [
+          "slide"
+        ],
+        "tails": [
+          "ember"
+        ],
+        "focus": [
+          "patrols",
+          "dash",
+          "slide"
+        ]
+      },
+      "smoothedWords": [
+        "while",
+        "ember",
+        "crash",
+        "flame",
+        "sprint",
+        "slide",
+        "evade"
+      ],
+      "rankedPasses": [
+        {
+          "pass": 1,
+          "topWords": [
+            "dash",
+            "sprint",
+            "blink",
+            "slide",
+            "crash",
+            "flame",
+            "ember",
+            "evade",
+            "patrols",
+            "while"
+          ],
+          "topRankings": [
+            {
+              "word": "dash",
+              "score": 42.42
+            },
+            {
+              "word": "sprint",
+              "score": 37.92
+            },
+            {
+              "word": "blink",
+              "score": 34.32
+            },
+            {
+              "word": "slide",
+              "score": 30.72
+            },
+            {
+              "word": "crash",
+              "score": 27.12
+            },
+            {
+              "word": "flame",
+              "score": 23.52
+            },
+            {
+              "word": "ember",
+              "score": 18.84
+            },
+            {
+              "word": "evade",
+              "score": 17.76
+            },
+            {
+              "word": "patrols",
+              "score": 17.76
+            },
+            {
+              "word": "while",
+              "score": 17.76
+            }
+          ]
+        },
+        {
+          "pass": 2,
+          "topWords": [
+            "dash",
+            "sprint",
+            "blink",
+            "slide",
+            "crash",
+            "flame",
+            "ember",
+            "evade",
+            "patrols",
+            "while"
+          ],
+          "topRankings": [
+            {
+              "word": "dash",
+              "score": 43.927
+            },
+            {
+              "word": "sprint",
+              "score": 39.336
+            },
+            {
+              "word": "blink",
+              "score": 35.508
+            },
+            {
+              "word": "slide",
+              "score": 31.788
+            },
+            {
+              "word": "crash",
+              "score": 28.068
+            },
+            {
+              "word": "flame",
+              "score": 24.262
+            },
+            {
+              "word": "ember",
+              "score": 19.322
+            },
+            {
+              "word": "evade",
+              "score": 18.394
+            },
+            {
+              "word": "patrols",
+              "score": 18.394
+            },
+            {
+              "word": "while",
+              "score": 18.394
+            }
+          ]
+        },
+        {
+          "pass": 3,
+          "topWords": [
+            "dash",
+            "sprint",
+            "blink",
+            "slide",
+            "crash",
+            "flame",
+            "ember",
+            "evade",
+            "patrols",
+            "while"
+          ],
+          "topRankings": [
+            {
+              "word": "dash",
+              "score": 44.269
+            },
+            {
+              "word": "sprint",
+              "score": 39.612
+            },
+            {
+              "word": "blink",
+              "score": 35.763
+            },
+            {
+              "word": "slide",
+              "score": 32.006
+            },
+            {
+              "word": "crash",
+              "score": 28.255
+            },
+            {
+              "word": "flame",
+              "score": 24.414
+            },
+            {
+              "word": "ember",
+              "score": 19.411
+            },
+            {
+              "word": "evade",
+              "score": 18.514
+            },
+            {
+              "word": "patrols",
+              "score": 18.514
+            },
+            {
+              "word": "while",
+              "score": 18.514
+            }
+          ]
+        }
+      ],
+      "chainSummaries": [
+        {
+          "category": "Mechanic Seeds",
+          "seed": "evade",
+          "rowLength": 8,
+          "focusWords": [
+            "dash",
+            "sprint",
+            "blink",
+            "slide",
+            "crash",
+            "flame"
+          ],
+          "chainDigest": "evade -> dash -> sprint -> blink -> slide -> crash -> flame -> ember"
+        },
+        {
+          "category": "Mechanic Seeds",
+          "seed": "patrols",
+          "rowLength": 8,
+          "focusWords": [
+            "dash",
+            "sprint",
+            "blink",
+            "slide",
+            "crash",
+            "flame"
+          ],
+          "chainDigest": "patrols -> dash -> sprint -> blink -> slide -> crash -> flame -> ember"
+        },
+        {
+          "category": "Mechanic Seeds",
+          "seed": "while",
+          "rowLength": 8,
+          "focusWords": [
+            "dash",
+            "sprint",
+            "blink",
+            "slide",
+            "crash",
+            "flame"
+          ],
+          "chainDigest": "while -> dash -> sprint -> blink -> slide -> crash -> flame -> ember"
+        }
+      ]
+    },
+    {
+      "category": "Enemy Seeds",
+      "rowCount": 3,
+      "itemCount": 24,
+      "topWords": [
+        "sentry",
+        "guard",
+        "warden",
+        "commander",
+        "leader",
+        "command",
+        "fort",
+        "chase",
+        "circuitry",
+        "puzzle"
+      ],
+      "sampledWords": [
+        "guard",
+        "sentry",
+        "fort"
+      ],
+      "rankedSample": [
+        "commander",
+        "leader",
+        "sentry"
+      ],
+      "piecemealSamples": {
+        "heads": [
+          "circuitry",
+          "puzzle",
+          "chase"
+        ],
+        "middles": [
+          "commander"
+        ],
+        "tails": [
+          "fort"
+        ],
+        "focus": [
+          "commander",
+          "warden",
+          "leader"
+        ]
+      },
+      "smoothedWords": [
+        "guard",
+        "sentry",
+        "fort",
+        "commander",
+        "leader",
+        "circuitry"
+      ],
+      "rankedPasses": [
+        {
+          "pass": 1,
+          "topWords": [
+            "sentry",
+            "guard",
+            "warden",
+            "commander",
+            "leader",
+            "command",
+            "fort",
+            "chase",
+            "circuitry",
+            "puzzle"
+          ],
+          "topRankings": [
+            {
+              "word": "sentry",
+              "score": 42.42
+            },
+            {
+              "word": "guard",
+              "score": 37.92
+            },
+            {
+              "word": "warden",
+              "score": 34.32
+            },
+            {
+              "word": "commander",
+              "score": 30.72
+            },
+            {
+              "word": "leader",
+              "score": 27.12
+            },
+            {
+              "word": "command",
+              "score": 23.52
+            },
+            {
+              "word": "fort",
+              "score": 18.84
+            },
+            {
+              "word": "chase",
+              "score": 17.76
+            },
+            {
+              "word": "circuitry",
+              "score": 17.76
+            },
+            {
+              "word": "puzzle",
+              "score": 17.76
+            }
+          ]
+        },
+        {
+          "pass": 2,
+          "topWords": [
+            "sentry",
+            "guard",
+            "warden",
+            "commander",
+            "leader",
+            "command",
+            "fort",
+            "chase",
+            "circuitry",
+            "puzzle"
+          ],
+          "topRankings": [
+            {
+              "word": "sentry",
+              "score": 43.927
+            },
+            {
+              "word": "guard",
+              "score": 39.336
+            },
+            {
+              "word": "warden",
+              "score": 35.508
+            },
+            {
+              "word": "commander",
+              "score": 31.788
+            },
+            {
+              "word": "leader",
+              "score": 28.068
+            },
+            {
+              "word": "command",
+              "score": 24.262
+            },
+            {
+              "word": "fort",
+              "score": 19.322
+            },
+            {
+              "word": "chase",
+              "score": 18.394
+            },
+            {
+              "word": "circuitry",
+              "score": 18.394
+            },
+            {
+              "word": "puzzle",
+              "score": 18.394
+            }
+          ]
+        },
+        {
+          "pass": 3,
+          "topWords": [
+            "sentry",
+            "guard",
+            "warden",
+            "commander",
+            "leader",
+            "command",
+            "fort",
+            "chase",
+            "circuitry",
+            "puzzle"
+          ],
+          "topRankings": [
+            {
+              "word": "sentry",
+              "score": 44.269
+            },
+            {
+              "word": "guard",
+              "score": 39.612
+            },
+            {
+              "word": "warden",
+              "score": 35.763
+            },
+            {
+              "word": "commander",
+              "score": 32.006
+            },
+            {
+              "word": "leader",
+              "score": 28.255
+            },
+            {
+              "word": "command",
+              "score": 24.414
+            },
+            {
+              "word": "fort",
+              "score": 19.411
+            },
+            {
+              "word": "chase",
+              "score": 18.514
+            },
+            {
+              "word": "circuitry",
+              "score": 18.514
+            },
+            {
+              "word": "puzzle",
+              "score": 18.514
+            }
+          ]
+        }
+      ],
+      "chainSummaries": [
+        {
+          "category": "Enemy Seeds",
+          "seed": "circuitry",
+          "rowLength": 8,
+          "focusWords": [
+            "sentry",
+            "guard",
+            "warden",
+            "commander",
+            "leader",
+            "command"
+          ],
+          "chainDigest": "circuitry -> sentry -> guard -> warden -> commander -> leader -> command -> fort"
+        },
+        {
+          "category": "Enemy Seeds",
+          "seed": "puzzle",
+          "rowLength": 8,
+          "focusWords": [
+            "sentry",
+            "guard",
+            "warden",
+            "commander",
+            "leader",
+            "command"
+          ],
+          "chainDigest": "puzzle -> sentry -> guard -> warden -> commander -> leader -> command -> fort"
+        },
+        {
+          "category": "Enemy Seeds",
+          "seed": "chase",
+          "rowLength": 8,
+          "focusWords": [
+            "sentry",
+            "guard",
+            "warden",
+            "commander",
+            "leader",
+            "command"
+          ],
+          "chainDigest": "chase -> sentry -> guard -> warden -> commander -> leader -> command -> fort"
+        }
+      ]
+    },
+    {
+      "category": "Progression Seeds",
+      "rowCount": 3,
+      "itemCount": 24,
+      "topWords": [
+        "unlock",
+        "ascend",
+        "evolve",
+        "unify",
+        "expand",
+        "uncover",
+        "discover",
+        "quiet",
+        "reach",
+        "sanctuary"
+      ],
+      "sampledWords": [
+        "evolve",
+        "unify",
+        "discover"
+      ],
+      "rankedSample": [
+        "unify",
+        "expand",
+        "unlock"
+      ],
+      "piecemealSamples": {
+        "heads": [
+          "reach",
+          "quiet",
+          "sanctuary"
+        ],
+        "middles": [
+          "unify"
+        ],
+        "tails": [
+          "discover"
+        ],
+        "focus": [
+          "evolve",
+          "expand",
+          "unlock"
+        ]
+      },
+      "smoothedWords": [
+        "evolve",
+        "unify",
+        "discover",
+        "expand",
+        "unlock",
+        "reach"
+      ],
+      "rankedPasses": [
+        {
+          "pass": 1,
+          "topWords": [
+            "unlock",
+            "ascend",
+            "evolve",
+            "unify",
+            "expand",
+            "uncover",
+            "discover",
+            "quiet",
+            "reach",
+            "sanctuary"
+          ],
+          "topRankings": [
+            {
+              "word": "unlock",
+              "score": 42.42
+            },
+            {
+              "word": "ascend",
+              "score": 37.92
+            },
+            {
+              "word": "evolve",
+              "score": 34.32
+            },
+            {
+              "word": "unify",
+              "score": 30.72
+            },
+            {
+              "word": "expand",
+              "score": 27.12
+            },
+            {
+              "word": "uncover",
+              "score": 23.52
+            },
+            {
+              "word": "discover",
+              "score": 18.84
+            },
+            {
+              "word": "quiet",
+              "score": 17.76
+            },
+            {
+              "word": "reach",
+              "score": 17.76
+            },
+            {
+              "word": "sanctuary",
+              "score": 17.76
+            }
+          ]
+        },
+        {
+          "pass": 2,
+          "topWords": [
+            "unlock",
+            "ascend",
+            "evolve",
+            "unify",
+            "expand",
+            "uncover",
+            "discover",
+            "quiet",
+            "reach",
+            "sanctuary"
+          ],
+          "topRankings": [
+            {
+              "word": "unlock",
+              "score": 43.927
+            },
+            {
+              "word": "ascend",
+              "score": 39.336
+            },
+            {
+              "word": "evolve",
+              "score": 35.508
+            },
+            {
+              "word": "unify",
+              "score": 31.788
+            },
+            {
+              "word": "expand",
+              "score": 28.068
+            },
+            {
+              "word": "uncover",
+              "score": 24.262
+            },
+            {
+              "word": "discover",
+              "score": 19.322
+            },
+            {
+              "word": "quiet",
+              "score": 18.394
+            },
+            {
+              "word": "reach",
+              "score": 18.394
+            },
+            {
+              "word": "sanctuary",
+              "score": 18.394
+            }
+          ]
+        },
+        {
+          "pass": 3,
+          "topWords": [
+            "unlock",
+            "ascend",
+            "evolve",
+            "unify",
+            "expand",
+            "uncover",
+            "discover",
+            "quiet",
+            "reach",
+            "sanctuary"
+          ],
+          "topRankings": [
+            {
+              "word": "unlock",
+              "score": 44.269
+            },
+            {
+              "word": "ascend",
+              "score": 39.612
+            },
+            {
+              "word": "evolve",
+              "score": 35.763
+            },
+            {
+              "word": "unify",
+              "score": 32.006
+            },
+            {
+              "word": "expand",
+              "score": 28.255
+            },
+            {
+              "word": "uncover",
+              "score": 24.414
+            },
+            {
+              "word": "discover",
+              "score": 19.411
+            },
+            {
+              "word": "quiet",
+              "score": 18.514
+            },
+            {
+              "word": "reach",
+              "score": 18.514
+            },
+            {
+              "word": "sanctuary",
+              "score": 18.514
+            }
+          ]
+        }
+      ],
+      "chainSummaries": [
+        {
+          "category": "Progression Seeds",
+          "seed": "reach",
+          "rowLength": 8,
+          "focusWords": [
+            "unlock",
+            "ascend",
+            "evolve",
+            "unify",
+            "expand",
+            "uncover"
+          ],
+          "chainDigest": "reach -> unlock -> ascend -> evolve -> unify -> expand -> uncover -> discover"
+        },
+        {
+          "category": "Progression Seeds",
+          "seed": "quiet",
+          "rowLength": 8,
+          "focusWords": [
+            "unlock",
+            "ascend",
+            "evolve",
+            "unify",
+            "expand",
+            "uncover"
+          ],
+          "chainDigest": "quiet -> unlock -> ascend -> evolve -> unify -> expand -> uncover -> discover"
+        },
+        {
+          "category": "Progression Seeds",
+          "seed": "sanctuary",
+          "rowLength": 8,
+          "focusWords": [
+            "unlock",
+            "ascend",
+            "evolve",
+            "unify",
+            "expand",
+            "uncover"
+          ],
+          "chainDigest": "sanctuary -> unlock -> ascend -> evolve -> unify -> expand -> uncover -> discover"
+        }
+      ]
+    }
+  ]
+}

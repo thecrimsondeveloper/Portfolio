@@ -1,0 +1,38 @@
+{
+  "title": "Overgrown Artifacts: Guard Break",
+  "description": "Navigate overgrown and tree spaces with sprint and crash, survive warden-led pressure, and turn each run into unify progress.",
+  "objective": "Use sprint and crash to survive warden patrols, secure relic routes, and turn each run into unify, evolve progress.",
+  "seed": {
+    "themes": "industrial salvage",
+    "genres": "chase",
+    "environments": "overgrown greenhouse",
+    "settings": "festival night",
+    "characterMotivations": "unmask a hidden group",
+    "movementMechanics": [
+      "wall-running",
+      "slide and vault"
+    ],
+    "coreLoops": "collect and combine artifacts",
+    "progressionLoops": "assemble a map",
+    "completionLoops": "artifact assembly",
+    "rewards": [
+      "movement mastery",
+      "story fragments"
+    ],
+    "antagonists": "mischievous spirits",
+    "visualStyles": "cinematic noir lighting",
+    "audioStyles": "ambient hum",
+    "interactionPatterns": "soft physics-based control",
+    "productionFocus": "create a human-readable design spec",
+    "cameraModes": "top-down",
+    "arenaShapes": "vertical tower",
+    "primaryVerbs": "redirect",
+    "scoringModels": "delivery value",
+    "failureModes": "signal broken",
+    "enemyBehaviors": "patrol",
+    "objectiveStructures": "escort target",
+    "resourceSystems": "battery",
+    "levelProgression": "room ladder",
+    "twistConstraints": "decaying floor"
+  }
+}

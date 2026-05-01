@@ -1,0 +1,27 @@
+{
+  "title": "Rooftop While: Guard Break",
+  "description": "Navigate rooftop and tree spaces with sprint and crash, survive warden-led pressure, and turn each run into unify progress.",
+  "objective": "Use sprint and crash to survive warden patrols, secure relic routes, and turn each run into unify, evolve progress.",
+  "seed": {
+    "themes": "circuitry puzzle chase",
+    "environments": "rooftop maintenance rails",
+    "settings": "power outage",
+    "characterMotivations": "reach a quiet sanctuary",
+    "movementMechanics": [
+      "wall-running",
+      "grapple and zipline"
+    ],
+    "coreLoops": "evade patrols while searching",
+    "progressionLoops": "gather knowledge nodes",
+    "completionLoops": "artifact assembly",
+    "rewards": [
+      "upgrade module",
+      "secret area access"
+    ],
+    "antagonists": "unstable environment",
+    "visualStyles": "architectural minimalism",
+    "audioStyles": "mechanical percussion",
+    "interactionPatterns": "soft physics-based control",
+    "productionFocus": "focus on emergent loops"
+  }
+}

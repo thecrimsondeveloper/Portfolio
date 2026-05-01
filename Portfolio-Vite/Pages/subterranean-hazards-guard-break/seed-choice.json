@@ -1,0 +1,27 @@
+{
+  "title": "Subterranean Hazards: Guard Break",
+  "description": "An arcade game where you fight guards and burn embers to escape, evolving from simple combat into a unified survival experience.",
+  "objective": "Use hazards and ember to survive guard patrols, secure relic routes, and turn each run into expand, uncover progress.",
+  "seed": {
+    "themes": "noir investigation",
+    "environments": "subterranean library",
+    "settings": "twilight",
+    "characterMotivations": "save a stranded companion",
+    "movementMechanics": [
+      "precision jumping",
+      "momentum-based rolling"
+    ],
+    "coreLoops": "guide a companion through hazards",
+    "progressionLoops": "power up a device",
+    "completionLoops": "relay activation",
+    "rewards": [
+      "movement mastery",
+      "upgrade module"
+    ],
+    "antagonists": "self-learning barrier",
+    "visualStyles": "architectural minimalism",
+    "audioStyles": "dripping water motifs",
+    "interactionPatterns": "context-sensitive movement",
+    "productionFocus": "prepare for agent-driven expansion"
+  }
+}

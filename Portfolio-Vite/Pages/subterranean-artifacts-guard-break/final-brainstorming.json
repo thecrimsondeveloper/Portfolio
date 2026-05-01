@@ -1,0 +1,318 @@
+{
+  "title": "Subterranean Artifacts: Guard Break",
+  "sourceSummary": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/subterranean-artifacts-guard-break/brainstorm-summary.json",
+  "sourceSeed": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/subterranean-artifacts-guard-break/brainstorm-seed.json",
+  "generatedAt": "2026-05-01T12:31:55.937971+00:00",
+  "explorationLevel": "expansive",
+  "generation": {
+    "mode": "lm_studio_chainstorm_style",
+    "endpoint": "http://10.0.0.137:1234/v1/chat/completions",
+    "model": "qwen3.5-2b@q8_0",
+    "temperature": 1.0
+  },
+  "buildReady": true,
+  "injectionReady": true,
+  "oneLinePitch": "An arcade game blending subterranean and tree worlds where players use artifacts to outmaneuver guards.",
+  "pageIdentity": {
+    "title": "Subterranean Artifacts: Guard Break",
+    "slug": "subterranean-artifacts-guard-break",
+    "description": "An arcade game blending subterranean and tree worlds where players use artifacts to outmaneuver guards.",
+    "objective": "Use sprint and crash to survive commander patrols, secure relic routes, and turn each run into unify, expand progress.",
+    "overlayBriefing": "An arcade game blending subterranean and tree worlds where players use artifacts to outmaneuver guards.\n\nPlayer explores compact environments while evading patrols sentries and fortifications.\n\nArtifacts provide powers for combat, enabling the player to outmaneuver enemy commanders.\n\nA evolve-to-unify progression arc requires strategic use of powers across diverse terrains.",
+    "hudObjective": "Use sprint and crash to survive commander patrols, secure relic routes, and turn each run into unify, expand progress."
+  },
+  "buildPacket": {
+    "featureRoots": [
+      "Movement",
+      "One Enemy Archetype",
+      "One Route Hazard"
+    ],
+    "implementationChapters": [
+      "Movement",
+      "One Enemy Archetype",
+      "One Route Hazard",
+      "Reward Loop",
+      "Full Run Pacing",
+      "Sprint Controls"
+    ],
+    "overlay": {
+      "introTitle": "Subterranean Artifacts: Guard Break",
+      "introBody": "An arcade game blending subterranean and tree worlds where players use artifacts to outmaneuver guards.",
+      "introBriefing": "An arcade game blending subterranean and tree worlds where players use artifacts to outmaneuver guards.\n\nPlayer explores compact environments while evading patrols sentries and fortifications.\n\nArtifacts provide powers for combat, enabling the player to outmaneuver enemy commanders.\n\nA evolve-to-unify progression arc requires strategic use of powers across diverse terrains.",
+      "startHint": "Press Enter to deploy. Use WASD or Arrow keys to move, Shift to dash, and Space to pulse.",
+      "winTitle": "Route Cleared",
+      "winBody": "The exit gate is live and the relic chain is stable. Press R to run it again.",
+      "lossTitle": "Route Interrupted",
+      "lossBody": "The route collapsed under pressure. Press R to run it again."
+    },
+    "hud": {
+      "objective": "Use sprint and crash to survive commander patrols, secure relic routes, and turn each run into unify, expand progress.",
+      "status": "An arcade game blending subterranean and tree worlds where players use artifacts to outmaneuver guards.",
+      "fields": [
+        "objective",
+        "status",
+        "telemetry"
+      ]
+    },
+    "sceneAnchors": {
+      "playerActions": [
+        "sprint",
+        "crash",
+        "combine"
+      ],
+      "enemyTypes": [
+        "commander",
+        "guard",
+        "sentry"
+      ],
+      "hazards": [
+        "subterranean",
+        "tree",
+        "pier",
+        "forest"
+      ],
+      "progression": [
+        "unify",
+        "expand"
+      ]
+    }
+  },
+  "steps": [
+    {
+      "step": "gameplay_time",
+      "question": "How long should one run last before it feels complete?",
+      "answer": "10 minutes",
+      "impact": "Sets encounter density, map size, and upgrade pacing."
+    },
+    {
+      "step": "enemy_types",
+      "question": "Which enemy types define the core pressure of the run?",
+      "answer": [
+        "commander",
+        "guard",
+        "sentry"
+      ],
+      "impact": "Shapes encounter design, telegraphing, and fail-state tension."
+    },
+    {
+      "step": "player_actions",
+      "question": "Which verbs should the player use constantly?",
+      "answer": [
+        "sprint",
+        "crash",
+        "combine"
+      ],
+      "impact": "Locks the feel of traversal, combat rhythm, and input complexity."
+    },
+    {
+      "step": "progression_goal",
+      "question": "What long-term objective should each run feed into?",
+      "answer": [
+        "unify",
+        "expand"
+      ],
+      "impact": "Determines meta progression rewards and run-to-run continuity."
+    },
+    {
+      "step": "world_anchor",
+      "question": "Which environmental anchors keep the world readable and memorable?",
+      "answer": [
+        "subterranean",
+        "pier"
+      ],
+      "impact": "Guides art direction, hazard framing, and level landmarks."
+    }
+  ],
+  "randomInjections": [
+    {
+      "type": "environmental_twist",
+      "value": [
+        "subterranean",
+        "tree"
+      ],
+      "effect": "Adds a new traversal hazard or alternate route condition."
+    },
+    {
+      "type": "mechanic_modifier",
+      "value": [
+        "collect",
+        "blink"
+      ],
+      "effect": "Mutates the core verb set for a late-run variant or upgrade branch."
+    },
+    {
+      "type": "enemy_pressure",
+      "value": [
+        "commander",
+        "warden"
+      ],
+      "effect": "Introduces a new pressure pattern or elite enemy combination."
+    },
+    {
+      "type": "progression_bonus",
+      "value": [
+        "evolve",
+        "unlock"
+      ],
+      "effect": "Creates a reward spike that changes long-term routing decisions."
+    }
+  ],
+  "explorationLoops": [
+    {
+      "loop": 1,
+      "prompt": "Subterranean Artifacts: Guard Break, a game set between subterranean and tree environments.",
+      "injection": "A player uses artifacts and ember actions to outmaneuver guards in an arcade setting within a pier.",
+      "decision": "The arc follows forgotten enemies through the pier environment using evolutionary mechanics for defense and progression."
+    },
+    {
+      "loop": 2,
+      "prompt": "What happens if land traversal meets flame play under hidden pressure?",
+      "injection": "Resolve the loop by rewarding forgotten instead of raw score.",
+      "decision": "Keep flame as a repeatable skill test, escalate with hidden, and use forgotten as the reason to push deeper."
+    },
+    {
+      "loop": 3,
+      "prompt": "What happens if tree traversal meets ember play under leader pressure?",
+      "injection": "Resolve the loop by rewarding ascend instead of raw score.",
+      "decision": "Keep ember as a repeatable skill test, escalate with leader, and use ascend as the reason to push deeper."
+    },
+    {
+      "loop": 4,
+      "prompt": "Design an interactive RPG with distinct art styles and elemental mechanics where artifacts transform enemies into allies.",
+      "injection": "The player's avatar is a shifting orb of light that consumes the environment, while enemy command structures are revealed by shadows.",
+      "decision": "Game Loop = [Artifacts] -> [Transformation] -> [Unification]; [Progression] -> [Rituals] -> [Evolution]."
+    }
+  ],
+  "finalSpec": {
+    "sessionLength": "10 minutes",
+    "genre": "arcade action prototype",
+    "playerFantasy": "A warrior utilizing enchanted tools to forge unity across hostile terrains.",
+    "world": {
+      "setting": "A subterranean, tree, and pier environment patrolled by formidable guards.",
+      "visualDirection": "Expansive traversal with compact, expressive runs that challenge navigation.",
+      "landmarks": [
+        "subterranean",
+        "tree",
+        "pier",
+        "forest",
+        "library"
+      ]
+    },
+    "coreLoop": [
+      "Player explores compact environments while evading patrols sentries and fortifications.",
+      "Artifacts provide powers for combat, enabling the player to outmaneuver enemy commanders.",
+      "A evolve-to-unify progression arc requires strategic use of powers across diverse terrains."
+    ],
+    "playerActions": [
+      "sprint",
+      "crash",
+      "combine"
+    ],
+    "enemyTypes": [
+      "commander",
+      "guard",
+      "sentry"
+    ],
+    "enemyArchetypes": [
+      {
+        "name": "commander",
+        "role": "pressure chaser",
+        "behavior": "Pushes the player off safe routes and punishes hesitation."
+      },
+      {
+        "name": "guard",
+        "role": "zone controller",
+        "behavior": "Locks down key spaces and forces rerouting."
+      },
+      {
+        "name": "sentry",
+        "role": "ambush disruptor",
+        "behavior": "Breaks steady rhythm and spikes reaction difficulty."
+      }
+    ],
+    "progression": {
+      "metaGoal": [
+        "unify",
+        "expand"
+      ],
+      "rewardHooks": [
+        "evolve",
+        "unify",
+        "discover",
+        "expand"
+      ],
+      "runToRunGrowth": "Each run converts performance into unify, expand upgrades and route unlocks."
+    },
+    "runStructure": {
+      "opening": "Teach sprint movement and introduce commander reads in a low-risk subterranean route.",
+      "midgame": "Layer crash interactions, mixed enemy waves, and injection events from the exploration loops.",
+      "endgame": "Force mastery through stacked hazards, elite commander encounters, and a final unify choice."
+    },
+    "encounterDesign": {
+      "hazards": [
+        "subterranean",
+        "tree",
+        "pier",
+        "forest"
+      ],
+      "enemyCompositions": [
+        "The arc follows forgotten enemies through the pier environment using evolutionary mechanics for defense and progression.",
+        "Keep flame as a repeatable skill test, escalate with hidden, and use forgotten as the reason to push deeper.",
+        "Keep ember as a repeatable skill test, escalate with leader, and use ascend as the reason to push deeper."
+      ],
+      "difficultyRamp": "Progression increases as players tackle harder guards through compact but expressive runs."
+    },
+    "economy": {
+      "currencies": [
+        "evolve",
+        "unify",
+        "discover"
+      ],
+      "spenders": [
+        "environmental_twist",
+        "mechanic_modifier",
+        "enemy_pressure",
+        "progression_bonus"
+      ],
+      "riskReward": "High risk and high reward where careful navigation yields survival against hostile forces."
+    },
+    "ui": {
+      "hud": [
+        "health",
+        "charge meter",
+        "route objective",
+        "reward tracker"
+      ],
+      "readabilityGoals": [
+        "fast threat reads",
+        "clear route ownership",
+        "strong reward telegraphing"
+      ]
+    },
+    "audio": {
+      "tone": "Punchy arcade percussion with environmental accents tied to route danger.",
+      "feedback": [
+        "impact stingers",
+        "threat warning pings",
+        "upgrade reward swells"
+      ]
+    },
+    "technicalBuild": {
+      "scope": "Small browser-playable prototype",
+      "systemsNeeded": [
+        "player controller",
+        "enemy director",
+        "upgrade loop",
+        "hazard routing",
+        "HUD"
+      ],
+      "prototypeOrder": [
+        "movement",
+        "one enemy archetype",
+        "one route hazard",
+        "reward loop",
+        "full run pacing"
+      ]
+    }
+  }
+}

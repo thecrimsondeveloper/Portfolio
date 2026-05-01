@@ -1,0 +1,396 @@
+{
+  "title": "Flooded While: Guard Break",
+  "sourceSummary": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/flooded-while-guard-break/brainstorm-summary.json",
+  "sourceSeed": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/flooded-while-guard-break/brainstorm-seed.json",
+  "generatedAt": "2026-05-01T20:01:47.231921+00:00",
+  "explorationLevel": "expansive",
+  "generation": {
+    "mode": "lm_studio_chainstorm_style",
+    "endpoint": "http://10.0.0.137:1234/v1/chat/completions",
+    "model": "qwen3.5-2b@q8_0",
+    "temperature": 1.0
+  },
+  "buildReady": true,
+  "injectionReady": true,
+  "oneLinePitch": "An arcade game set between flooded and tree, where the player uses while and ember actions to outmaneuver guard forces.",
+  "pageIdentity": {
+    "title": "Flooded While: Guard Break",
+    "slug": "flooded-while-guard-break",
+    "description": "An arcade game set between flooded and tree, where the player uses while and ember actions to outmaneuver guard forces.",
+    "objective": "Use while and ember to survive commander patrols, secure relic routes, and turn each run into discover, evolve progress.",
+    "overlayBriefing": "An arcade game set between flooded and tree, where the player uses while and ember actions to outmaneuver guard forces.\n\nAcquire resources to equip gear that unlocks new abilities for the next phase.\n\nExecute actions to outmaneuver enemies while navigating unstable flooded structures.\n\nDrive an evolve-to-unify progression arc through compact but expressive gameplay runs.",
+    "hudObjective": "Use while and ember to survive commander patrols, secure relic routes, and turn each run into discover, evolve progress."
+  },
+  "buildPacket": {
+    "featureRoots": [
+      "Movement",
+      "One Enemy Archetype",
+      "One Route Hazard"
+    ],
+    "implementationChapters": [
+      "Movement",
+      "One Enemy Archetype",
+      "One Route Hazard",
+      "Reward Loop",
+      "Full Run Pacing",
+      "While Controls"
+    ],
+    "overlay": {
+      "introTitle": "Flooded While: Guard Break",
+      "introBody": "An arcade game set between flooded and tree, where the player uses while and ember actions to outmaneuver guard forces.",
+      "introBriefing": "An arcade game set between flooded and tree, where the player uses while and ember actions to outmaneuver guard forces.\n\nAcquire resources to equip gear that unlocks new abilities for the next phase.\n\nExecute actions to outmaneuver enemies while navigating unstable flooded structures.\n\nDrive an evolve-to-unify progression arc through compact but expressive gameplay runs.",
+      "startHint": "Press Enter to deploy. Use WASD or Arrow keys to move, Shift to dash, and Space to pulse.",
+      "winTitle": "Route Cleared",
+      "winBody": "The exit gate is live and the relic chain is stable. Press R to run it again.",
+      "lossTitle": "Route Interrupted",
+      "lossBody": "The route collapsed under pressure. Press R to run it again."
+    },
+    "hud": {
+      "objective": "Use while and ember to survive commander patrols, secure relic routes, and turn each run into discover, evolve progress.",
+      "status": "An arcade game set between flooded and tree, where the player uses while and ember actions to outmaneuver guard forces.",
+      "fields": [
+        "objective",
+        "status",
+        "telemetry"
+      ]
+    },
+    "sceneAnchors": {
+      "playerActions": [
+        "while",
+        "ember",
+        "sprint"
+      ],
+      "enemyTypes": [
+        "commander",
+        "leader",
+        "warden"
+      ],
+      "hazards": [
+        "flooded",
+        "tree",
+        "pier",
+        "forest"
+      ],
+      "progression": [
+        "discover",
+        "evolve"
+      ]
+    }
+  },
+  "steps": [
+    {
+      "step": "gameplay_time",
+      "question": "How long should one run last before it feels complete?",
+      "answer": "18 minutes",
+      "impact": "Sets encounter density, map size, and upgrade pacing."
+    },
+    {
+      "step": "enemy_types",
+      "question": "Which enemy types define the core pressure of the run?",
+      "answer": [
+        "commander",
+        "leader",
+        "warden"
+      ],
+      "impact": "Shapes encounter design, telegraphing, and fail-state tension."
+    },
+    {
+      "step": "player_actions",
+      "question": "Which verbs should the player use constantly?",
+      "answer": [
+        "while",
+        "ember",
+        "sprint"
+      ],
+      "impact": "Locks the feel of traversal, combat rhythm, and input complexity."
+    },
+    {
+      "step": "progression_goal",
+      "question": "What long-term objective should each run feed into?",
+      "answer": [
+        "discover",
+        "evolve"
+      ],
+      "impact": "Determines meta progression rewards and run-to-run continuity."
+    },
+    {
+      "step": "world_anchor",
+      "question": "Which environmental anchors keep the world readable and memorable?",
+      "answer": [
+        "land",
+        "forest"
+      ],
+      "impact": "Guides art direction, hazard framing, and level landmarks."
+    }
+  ],
+  "randomInjections": [
+    {
+      "type": "environmental_twist",
+      "value": [
+        "land",
+        "leaf"
+      ],
+      "effect": "Adds a new traversal hazard or alternate route condition."
+    },
+    {
+      "type": "mechanic_modifier",
+      "value": [
+        "while",
+        "slide"
+      ],
+      "effect": "Mutates the core verb set for a late-run variant or upgrade branch."
+    },
+    {
+      "type": "enemy_pressure",
+      "value": [
+        "commander",
+        "society"
+      ],
+      "effect": "Introduces a new pressure pattern or elite enemy combination."
+    },
+    {
+      "type": "progression_bonus",
+      "value": [
+        "unify",
+        "evolve"
+      ],
+      "effect": "Creates a reward spike that changes long-term routing decisions."
+    }
+  ],
+  "explorationLoops": [
+    {
+      "loop": 1,
+      "prompt": "Flooded While Guard Break: an arcade game set in a flooded pier where the player uses flame mechanics to defeat guards and unify evolving factions.",
+      "injection": "Use while to destroy tree barriers; use ember to ignite flames that spread through enemies on the floor.",
+      "decision": "Prioritize creating fire barriers between patrol zones using embers, then rush forward to unblock the path with a synchronized wipe of all threats."
+    },
+    {
+      "loop": 2,
+      "prompt": "What happens if land traversal meets flame play under hidden pressure?",
+      "injection": "Resolve the loop by rewarding dawn instead of raw score.",
+      "decision": "Keep flame as a repeatable skill test, escalate with hidden, and use dawn as the reason to push deeper."
+    },
+    {
+      "loop": 3,
+      "prompt": "What happens if tree traversal meets ember play under leader pressure?",
+      "injection": "Resolve the loop by rewarding ascend instead of raw score.",
+      "decision": "Keep ember as a repeatable skill test, escalate with leader, and use ascend as the reason to push deeper."
+    },
+    {
+      "loop": 4,
+      "prompt": "What happens if tree traversal meets blink play under command pressure?",
+      "injection": "Resolve the loop by rewarding evade instead of raw score.",
+      "decision": "Keep blink as a repeatable skill test, escalate with command, and use evade as the reason to push deeper."
+    }
+  ],
+  "finalSpec": {
+    "sessionLength": "18 minutes",
+    "genre": "arcade action prototype",
+    "playerFantasy": "A rogue survivor driving an evolve-to-unify progression arc through hostile terrain.",
+    "world": {
+      "setting": "Blends flooded, tree, and pier into a patrolled space by guard, sentry, fort.",
+      "visualDirection": "High contrast textures with dynamic environmental interactions during traversal runs.",
+      "landmarks": [
+        "flooded",
+        "tree",
+        "pier",
+        "forest",
+        "market"
+      ]
+    },
+    "coreLoop": [
+      "Acquire resources to equip gear that unlocks new abilities for the next phase.",
+      "Execute actions to outmaneuver enemies while navigating unstable flooded structures.",
+      "Drive an evolve-to-unify progression arc through compact but expressive gameplay runs."
+    ],
+    "playerActions": [
+      "while",
+      "ember",
+      "sprint"
+    ],
+    "enemyTypes": [
+      "commander",
+      "leader",
+      "warden"
+    ],
+    "enemyArchetypes": [
+      {
+        "name": "commander",
+        "role": "pressure chaser",
+        "behavior": "Pushes the player off safe routes and punishes hesitation."
+      },
+      {
+        "name": "leader",
+        "role": "zone controller",
+        "behavior": "Locks down key spaces and forces rerouting."
+      },
+      {
+        "name": "warden",
+        "role": "ambush disruptor",
+        "behavior": "Breaks steady rhythm and spikes reaction difficulty."
+      }
+    ],
+    "progression": {
+      "metaGoal": [
+        "discover",
+        "evolve"
+      ],
+      "rewardHooks": [
+        "evolve",
+        "unify",
+        "discover",
+        "expand"
+      ],
+      "runToRunGrowth": "Each run converts performance into discover, evolve upgrades and route unlocks."
+    },
+    "runStructure": {
+      "opening": "Teach while movement and introduce commander reads in a low-risk flooded route.",
+      "midgame": "Layer ember interactions, mixed enemy waves, and injection events from the exploration loops.",
+      "endgame": "Force mastery through stacked hazards, elite commander encounters, and a final discover choice."
+    },
+    "encounterDesign": {
+      "hazards": [
+        "flooded",
+        "tree",
+        "pier",
+        "forest"
+      ],
+      "enemyCompositions": [
+        "Prioritize creating fire barriers between patrol zones using embers, then rush forward to unblock the path with a synchronized wipe of all threats.",
+        "Keep flame as a repeatable skill test, escalate with hidden, and use dawn as the reason to push deeper.",
+        "Keep ember as a repeatable skill test, escalate with leader, and use ascend as the reason to push deeper."
+      ],
+      "difficultyRamp": "New actions and abilities unlock as the player completes more of their short game run."
+    },
+    "economy": {
+      "currencies": [
+        "evolve",
+        "unify",
+        "discover"
+      ],
+      "spenders": [
+        "environmental_twist",
+        "mechanic_modifier",
+        "enemy_pressure",
+        "progression_bonus"
+      ],
+      "riskReward": "High risk of death in hostile terrain balanced by clear reward for successful execution of all required tasks."
+    },
+    "ui": {
+      "hud": [
+        "health",
+        "charge meter",
+        "route objective",
+        "reward tracker"
+      ],
+      "readabilityGoals": [
+        "fast threat reads",
+        "clear route ownership",
+        "strong reward telegraphing"
+      ]
+    },
+    "audio": {
+      "tone": "Punchy arcade percussion with environmental accents tied to route danger.",
+      "feedback": [
+        "impact stingers",
+        "threat warning pings",
+        "upgrade reward swells"
+      ]
+    },
+    "technicalBuild": {
+      "scope": "Small browser-playable prototype",
+      "systemsNeeded": [
+        "player controller",
+        "enemy director",
+        "upgrade loop",
+        "hazard routing",
+        "HUD"
+      ],
+      "prototypeOrder": [
+        "movement",
+        "one enemy archetype",
+        "one route hazard",
+        "reward loop",
+        "full run pacing"
+      ]
+    }
+  },
+  "fallbackSource": "",
+  "gameDesignProfile": {
+    "seedContract": {
+      "sourceSeed": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-kzntv5nv/brainstorm-seed.json",
+      "sourceSummary": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-kzntv5nv/brainstorm-summary.json",
+      "sourceSamples": {
+        "environment": [
+          "flooded",
+          "tree",
+          "pier",
+          "forest",
+          "market",
+          "district"
+        ],
+        "mechanics": [
+          "while",
+          "ember",
+          "crash",
+          "flame",
+          "sprint",
+          "slide",
+          "evade"
+        ],
+        "enemies": [
+          "guard",
+          "sentry",
+          "fort",
+          "commander",
+          "leader",
+          "hidden"
+        ],
+        "progression": [
+          "evolve",
+          "unify",
+          "discover",
+          "expand",
+          "unlock",
+          "escape"
+        ]
+      }
+    },
+    "mechanicFamily": "stealth patrol",
+    "runtimeTemplate": "stealth_patrol",
+    "pacing": "18 minutes",
+    "spatialStructure": "patrol grid",
+    "failurePressure": [
+      "commander",
+      "leader",
+      "warden",
+      "flooded",
+      "tree",
+      "pier",
+      "forest"
+    ],
+    "progressionShape": [
+      "discover",
+      "evolve",
+      "evolve",
+      "unify",
+      "discover",
+      "expand",
+      "Each run converts performance into discover, evolve upgrades and route unlocks."
+    ],
+    "presentationRules": [
+      "Blends flooded, tree, and pier into a patrolled space by guard, sentry, fort.",
+      "High contrast textures with dynamic environmental interactions during traversal runs.",
+      "fast threat reads",
+      "clear route ownership",
+      "strong reward telegraphing"
+    ],
+    "mustPreserve": [
+      "Preserve the randomized seed contract through every stage.",
+      "Treat final-brainstorming.json as the canonical game specification.",
+      "Keep the generated game self-contained in one Pages/<slug>/ folder.",
+      "Make runtime behavior match runtimeTemplate instead of defaulting to one arena scaffold."
+    ],
+    "fallbackSource": ""
+  }
+}

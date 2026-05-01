@@ -1,0 +1,210 @@
+{
+  "gameTitle": "Flooded Artifacts: Guard Break",
+  "profile": {
+    "seedContract": {
+      "sourceSeed": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-2keghzve/brainstorm-seed.json",
+      "sourceSummary": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-2keghzve/brainstorm-summary.json",
+      "sourceSamples": {
+        "environment": [
+          "flooded",
+          "tree",
+          "pier",
+          "forest",
+          "market",
+          "district"
+        ],
+        "mechanics": [
+          "artifacts",
+          "ember",
+          "crash",
+          "flame",
+          "sprint",
+          "slide",
+          "collect"
+        ],
+        "enemies": [
+          "guard",
+          "sentry",
+          "fort",
+          "commander",
+          "leader",
+          "mechanical"
+        ],
+        "progression": [
+          "evolve",
+          "unify",
+          "discover",
+          "expand",
+          "unlock",
+          "deliver"
+        ]
+      },
+      "seed": {
+        "themes": "mechanical festival rescue",
+        "genres": "route runner score attack",
+        "environments": "flooded market district",
+        "settings": "storm",
+        "characterMotivations": "deliver a secret package",
+        "movementMechanics": [
+          "momentum-based rolling",
+          "mirror walking"
+        ],
+        "coreLoops": "collect and combine artifacts",
+        "progressionLoops": "build a safe path",
+        "completionLoops": "artifact assembly",
+        "rewards": [
+          "resource caches",
+          "boss unlock"
+        ],
+        "antagonists": "roving security drones",
+        "visualStyles": "muted earth tones",
+        "audioStyles": "field recording textures",
+        "interactionPatterns": "environmental interaction first",
+        "productionFocus": "create a human-readable design spec",
+        "cameraModes": "cinematic follow rotating",
+        "arenaShapes": "vertical tower with bridges",
+        "primaryVerbs": "decode through hazards",
+        "scoringModels": "rescue count resource bonus",
+        "failureModes": "cargo shattered during finale",
+        "enemyBehaviors": "swarm alternating pattern",
+        "objectiveStructures": "map route before timer",
+        "resourceSystems": "signal carry penalty",
+        "levelProgression": "boss key route with checkpoints",
+        "twistConstraints": "moving goal under low battery"
+      }
+    },
+    "mechanicFamily": "stealth patrol",
+    "runtimeTemplate": "stealth_patrol",
+    "pacing": "18 minutes",
+    "spatialStructure": "patrol grid",
+    "failurePressure": [
+      "warden",
+      "leader",
+      "mechanical",
+      "flooded",
+      "tree",
+      "pier",
+      "forest"
+    ],
+    "progressionShape": [
+      "unify",
+      "evolve",
+      "evolve",
+      "unify",
+      "discover",
+      "expand",
+      "Each run converts performance into unify, evolve upgrades and route unlocks."
+    ],
+    "presentationRules": [
+      "A stylized world blending flooded, tree, and shifting threat territory.",
+      "Lean on flooded, tree, and guard motifs for strong silhouettes, readable threat zones, and punchy arcade contrast.",
+      "fast threat reads",
+      "clear route ownership",
+      "strong reward telegraphing"
+    ],
+    "mustPreserve": [
+      "Preserve the randomized seed contract through every stage.",
+      "Treat final-brainstorming.json as the canonical game specification.",
+      "Keep the generated game self-contained in one Pages/<slug>/ folder.",
+      "Make runtime behavior match runtimeTemplate instead of defaulting to one arena scaffold."
+    ],
+    "fallbackSource": "LM Studio unavailable during auto preflight: [Errno 61] Connection refused; deterministic fallback generation was used."
+  },
+  "canonicalPaths": {
+    "targetDir": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/flooded-artifacts-guard-break",
+    "brainstormSeed": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/flooded-artifacts-guard-break/brainstorm-seed.json",
+    "brainstormSummary": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/flooded-artifacts-guard-break/brainstorm-summary.json",
+    "finalBrainstorm": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/flooded-artifacts-guard-break/final-brainstorming.json",
+    "story": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/flooded-artifacts-guard-break/story-structure.json",
+    "gameScript": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/flooded-artifacts-guard-break/game.js"
+  },
+  "seedCombination": {
+    "themes": "mechanical festival rescue",
+    "genres": "route runner score attack",
+    "environments": "flooded market district",
+    "settings": "storm",
+    "characterMotivations": "deliver a secret package",
+    "movementMechanics": [
+      "momentum-based rolling",
+      "mirror walking"
+    ],
+    "coreLoops": "collect and combine artifacts",
+    "progressionLoops": "build a safe path",
+    "completionLoops": "artifact assembly",
+    "rewards": [
+      "resource caches",
+      "boss unlock"
+    ],
+    "antagonists": "roving security drones",
+    "visualStyles": "muted earth tones",
+    "audioStyles": "field recording textures",
+    "interactionPatterns": "environmental interaction first",
+    "productionFocus": "create a human-readable design spec",
+    "cameraModes": "cinematic follow rotating",
+    "arenaShapes": "vertical tower with bridges",
+    "primaryVerbs": "decode through hazards",
+    "scoringModels": "rescue count resource bonus",
+    "failureModes": "cargo shattered during finale",
+    "enemyBehaviors": "swarm alternating pattern",
+    "objectiveStructures": "map route before timer",
+    "resourceSystems": "signal carry penalty",
+    "levelProgression": "boss key route with checkpoints",
+    "twistConstraints": "moving goal under low battery"
+  },
+  "stageHistory": [
+    {
+      "stage": "stage-1-brainstorm-pipeline",
+      "event": "stage",
+      "summary": "Locked final-brainstorming.json and initialized gameDesignProfile."
+    },
+    {
+      "stage": "stage-2-concept-materialization",
+      "event": "stage",
+      "summary": "Materialized concept from locked brainstorm packet."
+    },
+    {
+      "stage": "stage-3-feature-sprint-loop",
+      "event": "stage",
+      "summary": "Derived feature sprint packets from canonical brainstorm data."
+    },
+    {
+      "stage": "stage-4-design-assembly",
+      "event": "stage",
+      "summary": "Assembled design document."
+    },
+    {
+      "stage": "stage-5-build-planning-loop",
+      "event": "stage",
+      "summary": "Derived fun assessment and implementation chapters."
+    },
+    {
+      "stage": "stage-6-story-and-scaffold-materialization",
+      "event": "stage",
+      "summary": "Created story payload and runtime scaffold for stealth_patrol."
+    },
+    {
+      "stage": "stage-7-html-review-loop",
+      "event": "stage",
+      "summary": "Completed HTML shell review pass."
+    },
+    {
+      "stage": "stage-8-implementation-sprint-loop",
+      "event": "stage",
+      "summary": "Completed configured implementation sprint passes."
+    },
+    {
+      "stage": "stage-9-validation-repair-loop",
+      "event": "stage",
+      "summary": "Completed configured validation loops."
+    },
+    {
+      "stage": "stage-10-arcade-integration-loop",
+      "event": "stage",
+      "summary": "Completed arcade integration loop."
+    }
+  ],
+  "decisions": [],
+  "rejectedIdeas": [],
+  "openIssues": [],
+  "nextStageNotes": []
+}

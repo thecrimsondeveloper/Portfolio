@@ -1,0 +1,823 @@
+{
+  "id": "subterranean-hazards-guard-break",
+  "title": "Subterranean Hazards: Guard Break",
+  "description": "An arcade game where you fight guards and burn embers to escape, evolving from simple combat into a unified survival experience.",
+  "objective": "Use hazards and ember to survive guard patrols, secure relic routes, and turn each run into expand, uncover progress.",
+  "seed": {
+    "themes": "noir investigation",
+    "environments": "subterranean library",
+    "settings": "twilight",
+    "characterMotivations": "save a stranded companion",
+    "movementMechanics": [
+      "precision jumping",
+      "momentum-based rolling"
+    ],
+    "coreLoops": "guide a companion through hazards",
+    "progressionLoops": "power up a device",
+    "completionLoops": "relay activation",
+    "rewards": [
+      "movement mastery",
+      "upgrade module"
+    ],
+    "antagonists": "self-learning barrier",
+    "visualStyles": "architectural minimalism",
+    "audioStyles": "dripping water motifs",
+    "interactionPatterns": "context-sensitive movement",
+    "productionFocus": "prepare for agent-driven expansion"
+  },
+  "hook": "An arcade game where you fight guards and burn embers to escape, evolving from simple combat into a unified survival experience.",
+  "uniqueness": "A rogue-like hero navigating dangerous caves while wielding powerful tools and weapons against hostile foes.",
+  "controls": [
+    "WASD or Arrow keys move the player through the arena.",
+    "Shift triggers a crash burst for repositioning.",
+    "Space converts hazards and ember pressure into crowd control.",
+    "Press Enter to deploy. Use WASD or Arrow keys to move, Shift to dash, and Space to pulse.",
+    "health",
+    "charge meter"
+  ],
+  "fun": {
+    "assessment": "yes - Subterranean Hazards: Guard Break has a readable arcade core built around hazards, ember against guard, sentry with a clear payoff in expand, uncover.",
+    "needs": [
+      "fast threat reads",
+      "clear route ownership",
+      "strong reward telegraphing",
+      "WASD or Arrow keys move the player through the arena.",
+      "Shift triggers a crash burst for repositioning."
+    ]
+  },
+  "design": {
+    "summary": "An arcade game where you fight guards and burn embers to escape, evolving from simple combat into a unified survival experience.",
+    "details": "## Subterranean Hazards: Guard Break\n\n\t\t**Description:** An arcade game where you fight guards and burn embers to escape, evolving from simple combat into a unified survival experience.\n\n\t\t**Objective:** Use hazards and ember to survive guard patrols, secure relic routes, and turn each run into expand, uncover progress.\n\n\t\t**Seed Summary:**\n\t\tGenerated game seed combination:\n- Themes: noir investigation\n- Environments: subterranean library\n- Settings: twilight\n- Character motivations: save a stranded companion\n- Movement mechanics: precision jumping, momentum-based rolling\n- Core loops: guide a companion through hazards\n- Progression loops: power up a device\n- Completion loops: relay activation\n- Rewards: movement mastery, upgrade module\n- Antagonists: self-learning barrier\n- Visual styles: architectural minimalism\n- Audio styles: dripping water motifs\n- Interaction patterns: context-sensitive movement\n- Production focus: prepare for agent-driven expansion\n\n\t\t## Core Fantasy\n\n\t\tAn arcade game where you fight guards and burn embers to escape, evolving from simple combat into a unified survival experience.\n\n\t\t## Why This Game Is Distinct\n\n\t\tA rogue-like hero navigating dangerous caves while wielding powerful tools and weapons against hostile foes.\n\n\t\t## Player Actions\n\n- hazards\n- ember\n- crash\n\n\t\t## Core Loop\n\n- Defend against guard patrols using strategic placement of hazards while managing ember fuel for attacks.\n- Progress through compact levels by surviving pushers and fortresses until your health is full or a key item is found.\n- Unlock new abilities and evolve your gear to create a unified strategy that adapts to increasingly complex threats.\n- Teach hazards movement and introduce guard reads in a low-risk subterranean route.\n- Layer ember interactions, mixed enemy waves, and injection events from the exploration loops.\n- Force mastery through stacked hazards, elite guard encounters, and a final expand choice.\n\n\t\t## Pressure And Opposition\n\n- guard\n- sentry\n- commander\n- subterranean\n- tree\n- pier\n\n\t\t## Rewards And Progression\n\n- expand\n- uncover\n- evolve\n- unify\n- discover\n- Each run converts performance into expand, uncover upgrades and route unlocks.\n\n\t\t## Failure States\n\n- Get overwhelmed by guard.\n- Run out of time before the exit unlocks.\n- Lose health by lingering in active hazard lanes.\n\n\t\t## Visual Identity\n\n- A blend of subterranean caverns, lush forests, and industrial pier structures creating an ever-changing battlefield.\n- Dark, atmospheric lighting with neon accents from burning embers to emphasize the contrast between life and death.\n- subterranean\n- tree\n- pier\n- forest\n\n\t\t## Controls And Readability\n\n- WASD or Arrow keys move the player through the arena.\n- Shift triggers a crash burst for repositioning.\n- Space converts hazards and ember pressure into crowd control.\n- Press Enter to deploy. Use WASD or Arrow keys to move, Shift to dash, and Space to pulse.\n- health\n- charge meter\n\n\t\t## JSON Data Hooks\n\n- scene layout\n- enemy waves\n- relic rewards\n- goal unlock state\n- brainstorm final spec\n- player controller\n\n\t\t## Sprint Builder Branches\n\t\t### Movement\n\n\t\t\t\t- Player promise: The player immediately feels how movement improves the route and unlocks expand.\n\t\t\t\t- Sprint objective: Implement the movement slice so the player can reliably feel hazards under guard.\n\t\t\t\t- Change packet scope: game.js, story-structure.json, index.html\n\t\t\t\t- Simulated checkpoints: Movement is driven by canonical brainstorm data rather than ad hoc prompt output., Movement is visible in live play within the first minute of a run.\n\n\t\t\t\t#### Detail Fractalization\n\t\t\t\t- Movement core slice\n  - Implement the movement behavior in the main loop.\n  - Wire player controller data into story-structure.json and runtime state.\n- Movement feedback pass\n  - Expose clear HUD and overlay feedback for movement.\n  - Validate that movement stays readable during pressure spikes.\n\n### One Enemy Archetype\n\n\t\t\t\t- Player promise: The player immediately feels how one enemy archetype improves the route and unlocks uncover.\n\t\t\t\t- Sprint objective: Implement the one enemy archetype slice so the player can reliably feel ember under sentry.\n\t\t\t\t- Change packet scope: game.js, story-structure.json, index.html\n\t\t\t\t- Simulated checkpoints: One Enemy Archetype is driven by canonical brainstorm data rather than ad hoc prompt output., One Enemy Archetype is visible in live play within the first minute of a run.\n\n\t\t\t\t#### Detail Fractalization\n\t\t\t\t- One Enemy Archetype core slice\n  - Implement the one enemy archetype behavior in the main loop.\n  - Wire enemy director data into story-structure.json and runtime state.\n- One Enemy Archetype feedback pass\n  - Expose clear HUD and overlay feedback for one enemy archetype.\n  - Validate that one enemy archetype stays readable during pressure spikes.\n\n### One Route Hazard\n\n\t\t\t\t- Player promise: The player immediately feels how one route hazard improves the route and unlocks evolve.\n\t\t\t\t- Sprint objective: Implement the one route hazard slice so the player can reliably feel crash under commander.\n\t\t\t\t- Change packet scope: game.js, story-structure.json, index.html\n\t\t\t\t- Simulated checkpoints: One Route Hazard is driven by canonical brainstorm data rather than ad hoc prompt output., One Route Hazard is visible in live play within the first minute of a run.\n\n\t\t\t\t#### Detail Fractalization\n\t\t\t\t- One Route Hazard core slice\n  - Implement the one route hazard behavior in the main loop.\n  - Wire upgrade loop data into story-structure.json and runtime state.\n- One Route Hazard feedback pass\n  - Expose clear HUD and overlay feedback for one route hazard.\n  - Validate that one route hazard stays readable during pressure spikes.\n\n\t\t## Delivery Notes\n\n\t\t- Keep this game self-contained inside its own page folder.\n\t\t- Keep the HTML entry point and story JSON in the same folder.\n\t\t- Preserve a three.js + Rapier prototype structure.\n\t\t- Favor game-specific logic over shared systems.\n\t\t- Use branch-specific change packets to plan the next sprint in isolated slices.\n\n## Fun Game Assessment\n\n\t\t- Assessment: yes - Subterranean Hazards: Guard Break has a readable arcade core built around hazards, ember against guard, sentry with a clear payoff in expand, uncover.\n\n\t\t### Things Needed To Make This Game Fun\n\n- fast threat reads\n- clear route ownership\n- strong reward telegraphing\n- WASD or Arrow keys move the player through the arena.\n- Shift triggers a crash burst for repositioning.\n",
+    "chapters": [
+      "Movement",
+      "One Enemy Archetype",
+      "One Route Hazard",
+      "Reward Loop",
+      "Full Run Pacing",
+      "Hazards Controls"
+    ]
+  },
+  "brainstorm": {
+    "seedFile": "brainstorm-seed.json",
+    "summaryFile": "brainstorm-summary.json",
+    "finalFile": "final-brainstorming.json",
+    "oneLinePitch": "An arcade game where you fight guards and burn embers to escape, evolving from simple combat into a unified survival experience.",
+    "steps": [
+      {
+        "step": "gameplay_time",
+        "question": "How long should one run last before it feels complete?",
+        "answer": "18 minutes",
+        "impact": "Sets encounter density, map size, and upgrade pacing."
+      },
+      {
+        "step": "enemy_types",
+        "question": "Which enemy types define the core pressure of the run?",
+        "answer": [
+          "guard",
+          "sentry",
+          "commander"
+        ],
+        "impact": "Shapes encounter design, telegraphing, and fail-state tension."
+      },
+      {
+        "step": "player_actions",
+        "question": "Which verbs should the player use constantly?",
+        "answer": [
+          "hazards",
+          "ember",
+          "crash"
+        ],
+        "impact": "Locks the feel of traversal, combat rhythm, and input complexity."
+      },
+      {
+        "step": "progression_goal",
+        "question": "What long-term objective should each run feed into?",
+        "answer": [
+          "expand",
+          "uncover"
+        ],
+        "impact": "Determines meta progression rewards and run-to-run continuity."
+      },
+      {
+        "step": "world_anchor",
+        "question": "Which environmental anchors keep the world readable and memorable?",
+        "answer": [
+          "land",
+          "leaf"
+        ],
+        "impact": "Guides art direction, hazard framing, and level landmarks."
+      }
+    ],
+    "randomInjections": [
+      {
+        "type": "environmental_twist",
+        "value": [
+          "harbor",
+          "library"
+        ],
+        "effect": "Adds a new traversal hazard or alternate route condition."
+      },
+      {
+        "type": "mechanic_modifier",
+        "value": [
+          "guide",
+          "companion"
+        ],
+        "effect": "Mutates the core verb set for a late-run variant or upgrade branch."
+      },
+      {
+        "type": "enemy_pressure",
+        "value": [
+          "commander",
+          "sentry"
+        ],
+        "effect": "Introduces a new pressure pattern or elite enemy combination."
+      },
+      {
+        "type": "progression_bonus",
+        "value": [
+          "expand",
+          "discover"
+        ],
+        "effect": "Creates a reward spike that changes long-term routing decisions."
+      }
+    ],
+    "explorationLoops": [
+      {
+        "loop": 1,
+        "prompt": "Play as a rogue to navigate fiery vents and tree roots, avoiding patrol guards while collecting ember shards.",
+        "injection": "Use the \"Flame\" mechanic to scorch path walls and trigger explosive hazards in enemy fortresses.",
+        "decision": "Advance through layers of glowing flora by balancing shield formation with rapid ember-shard collection."
+      },
+      {
+        "loop": 2,
+        "prompt": "A tree vs subterranean arcade game using flames to outmaneuver enemies.",
+        "injection": "Add an ember mechanic that converts into fire for growth progression.",
+        "decision": "Implement a companion evolution system where allies adapt their forms as the player advances."
+      },
+      {
+        "loop": 3,
+        "prompt": "What happens if tree traversal meets ember play under leader pressure?",
+        "injection": "Resolve the loop by rewarding ascend instead of raw score.",
+        "decision": "Keep ember as a repeatable skill test, escalate with leader, and use ascend as the reason to push deeper."
+      },
+      {
+        "loop": 4,
+        "prompt": "What happens if tree traversal meets blink play under command pressure?",
+        "injection": "Resolve the loop by rewarding stranded instead of raw score.",
+        "decision": "Keep blink as a repeatable skill test, escalate with command, and use stranded as the reason to push deeper."
+      }
+    ],
+    "finalSpec": {
+      "sessionLength": "18 minutes",
+      "genre": "arcade action prototype",
+      "playerFantasy": "A rogue-like hero navigating dangerous caves while wielding powerful tools and weapons against hostile foes.",
+      "world": {
+        "setting": "A blend of subterranean caverns, lush forests, and industrial pier structures creating an ever-changing battlefield.",
+        "visualDirection": "Dark, atmospheric lighting with neon accents from burning embers to emphasize the contrast between life and death.",
+        "landmarks": [
+          "subterranean",
+          "tree",
+          "pier",
+          "forest",
+          "library"
+        ]
+      },
+      "coreLoop": [
+        "Defend against guard patrols using strategic placement of hazards while managing ember fuel for attacks.",
+        "Progress through compact levels by surviving pushers and fortresses until your health is full or a key item is found.",
+        "Unlock new abilities and evolve your gear to create a unified strategy that adapts to increasingly complex threats."
+      ],
+      "playerActions": [
+        "hazards",
+        "ember",
+        "crash"
+      ],
+      "enemyTypes": [
+        "guard",
+        "sentry",
+        "commander"
+      ],
+      "enemyArchetypes": [
+        {
+          "name": "guard",
+          "role": "pressure chaser",
+          "behavior": "Pushes the player off safe routes and punishes hesitation."
+        },
+        {
+          "name": "sentry",
+          "role": "zone controller",
+          "behavior": "Locks down key spaces and forces rerouting."
+        },
+        {
+          "name": "commander",
+          "role": "ambush disruptor",
+          "behavior": "Breaks steady rhythm and spikes reaction difficulty."
+        }
+      ],
+      "progression": {
+        "metaGoal": [
+          "expand",
+          "uncover"
+        ],
+        "rewardHooks": [
+          "evolve",
+          "unify",
+          "discover",
+          "expand"
+        ],
+        "runToRunGrowth": "Each run converts performance into expand, uncover upgrades and route unlocks."
+      },
+      "runStructure": {
+        "opening": "Teach hazards movement and introduce guard reads in a low-risk subterranean route.",
+        "midgame": "Layer ember interactions, mixed enemy waves, and injection events from the exploration loops.",
+        "endgame": "Force mastery through stacked hazards, elite guard encounters, and a final expand choice."
+      },
+      "encounterDesign": {
+        "hazards": [
+          "subterranean",
+          "tree",
+          "pier",
+          "forest"
+        ],
+        "enemyCompositions": [
+          "Advance through layers of glowing flora by balancing shield formation with rapid ember-shard collection.",
+          "Implement a companion evolution system where allies adapt their forms as the player advances.",
+          "Keep ember as a repeatable skill test, escalate with leader, and use ascend as the reason to push deeper."
+        ],
+        "difficultyRamp": "Levels gradually increase in speed, add more enemy types, and require precise timing for hazard triggers."
+      },
+      "economy": {
+        "currencies": [
+          "evolve",
+          "unify",
+          "discover"
+        ],
+        "spenders": [
+          "environmental_twist",
+          "mechanic_modifier",
+          "enemy_pressure",
+          "progression_bonus"
+        ],
+        "riskReward": "High risk with immediate death hazards balanced by satisfying rewards from item collection and level completion."
+      },
+      "ui": {
+        "hud": [
+          "health",
+          "charge meter",
+          "route objective",
+          "reward tracker"
+        ],
+        "readabilityGoals": [
+          "fast threat reads",
+          "clear route ownership",
+          "strong reward telegraphing"
+        ]
+      },
+      "audio": {
+        "tone": "Punchy arcade percussion with environmental accents tied to route danger.",
+        "feedback": [
+          "impact stingers",
+          "threat warning pings",
+          "upgrade reward swells"
+        ]
+      },
+      "technicalBuild": {
+        "scope": "Small browser-playable prototype",
+        "systemsNeeded": [
+          "player controller",
+          "enemy director",
+          "upgrade loop",
+          "hazard routing",
+          "HUD"
+        ],
+        "prototypeOrder": [
+          "movement",
+          "one enemy archetype",
+          "one route hazard",
+          "reward loop",
+          "full run pacing"
+        ]
+      }
+    }
+  },
+  "gameDesignProfile": {
+    "seedContract": {
+      "sourceSeed": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-4f0511ij/brainstorm-seed.json",
+      "sourceSummary": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-4f0511ij/brainstorm-summary.json",
+      "sourceSamples": {
+        "environment": [
+          "subterranean",
+          "tree",
+          "pier",
+          "forest",
+          "library",
+          "twilight"
+        ],
+        "mechanics": [
+          "hazards",
+          "ember",
+          "crash",
+          "flame",
+          "sprint",
+          "slide",
+          "guide"
+        ],
+        "enemies": [
+          "guard",
+          "sentry",
+          "fort",
+          "commander",
+          "leader",
+          "noir"
+        ],
+        "progression": [
+          "evolve",
+          "unify",
+          "discover",
+          "expand",
+          "unlock",
+          "save"
+        ]
+      }
+    },
+    "mechanicFamily": "stealth patrol",
+    "runtimeTemplate": "stealth_patrol",
+    "pacing": "18 minutes",
+    "spatialStructure": "patrol grid",
+    "failurePressure": [
+      "guard",
+      "sentry",
+      "commander",
+      "subterranean",
+      "tree",
+      "pier",
+      "forest"
+    ],
+    "progressionShape": [
+      "expand",
+      "uncover",
+      "evolve",
+      "unify",
+      "discover",
+      "expand",
+      "Each run converts performance into expand, uncover upgrades and route unlocks."
+    ],
+    "presentationRules": [
+      "A blend of subterranean caverns, lush forests, and industrial pier structures creating an ever-changing battlefield.",
+      "Dark, atmospheric lighting with neon accents from burning embers to emphasize the contrast between life and death.",
+      "fast threat reads",
+      "clear route ownership",
+      "strong reward telegraphing"
+    ],
+    "mustPreserve": [
+      "Preserve the randomized seed contract through every stage.",
+      "Treat final-brainstorming.json as the canonical game specification.",
+      "Keep the generated game self-contained in one Pages/<slug>/ folder.",
+      "Make runtime behavior match runtimeTemplate instead of defaulting to one arena scaffold."
+    ],
+    "fallbackSource": ""
+  },
+  "sprintBuilder": {
+    "mode": "branching feature design loop",
+    "detailFractalization": true,
+    "featureBranches": [
+      {
+        "feature": "Movement",
+        "sprintObjective": "Implement the movement slice so the player can reliably feel hazards under guard.",
+        "playerPromise": "The player immediately feels how movement improves the route and unlocks expand.",
+        "checkpoints": [
+          "Movement is driven by canonical brainstorm data rather than ad hoc prompt output.",
+          "Movement is visible in live play within the first minute of a run."
+        ],
+        "acceptance": [
+          "The player can describe what movement does after one run.",
+          "Movement remains readable without breaking the current arena loop."
+        ],
+        "scope": [
+          "game.js",
+          "story-structure.json",
+          "index.html"
+        ],
+        "risks": [
+          "Movement could sprawl beyond the canonical build packet if extra systems are added.",
+          "Movement could reduce readability if feedback does not stay compact."
+        ],
+        "branches": [
+          {
+            "branch": "Movement core slice",
+            "tasks": [
+              "Implement the movement behavior in the main loop.",
+              "Wire player controller data into story-structure.json and runtime state."
+            ]
+          },
+          {
+            "branch": "Movement feedback pass",
+            "tasks": [
+              "Expose clear HUD and overlay feedback for movement.",
+              "Validate that movement stays readable during pressure spikes."
+            ]
+          }
+        ]
+      },
+      {
+        "feature": "One Enemy Archetype",
+        "sprintObjective": "Implement the one enemy archetype slice so the player can reliably feel ember under sentry.",
+        "playerPromise": "The player immediately feels how one enemy archetype improves the route and unlocks uncover.",
+        "checkpoints": [
+          "One Enemy Archetype is driven by canonical brainstorm data rather than ad hoc prompt output.",
+          "One Enemy Archetype is visible in live play within the first minute of a run."
+        ],
+        "acceptance": [
+          "The player can describe what one enemy archetype does after one run.",
+          "One Enemy Archetype remains readable without breaking the current arena loop."
+        ],
+        "scope": [
+          "game.js",
+          "story-structure.json",
+          "index.html"
+        ],
+        "risks": [
+          "One Enemy Archetype could sprawl beyond the canonical build packet if extra systems are added.",
+          "One Enemy Archetype could reduce readability if feedback does not stay compact."
+        ],
+        "branches": [
+          {
+            "branch": "One Enemy Archetype core slice",
+            "tasks": [
+              "Implement the one enemy archetype behavior in the main loop.",
+              "Wire enemy director data into story-structure.json and runtime state."
+            ]
+          },
+          {
+            "branch": "One Enemy Archetype feedback pass",
+            "tasks": [
+              "Expose clear HUD and overlay feedback for one enemy archetype.",
+              "Validate that one enemy archetype stays readable during pressure spikes."
+            ]
+          }
+        ]
+      },
+      {
+        "feature": "One Route Hazard",
+        "sprintObjective": "Implement the one route hazard slice so the player can reliably feel crash under commander.",
+        "playerPromise": "The player immediately feels how one route hazard improves the route and unlocks evolve.",
+        "checkpoints": [
+          "One Route Hazard is driven by canonical brainstorm data rather than ad hoc prompt output.",
+          "One Route Hazard is visible in live play within the first minute of a run."
+        ],
+        "acceptance": [
+          "The player can describe what one route hazard does after one run.",
+          "One Route Hazard remains readable without breaking the current arena loop."
+        ],
+        "scope": [
+          "game.js",
+          "story-structure.json",
+          "index.html"
+        ],
+        "risks": [
+          "One Route Hazard could sprawl beyond the canonical build packet if extra systems are added.",
+          "One Route Hazard could reduce readability if feedback does not stay compact."
+        ],
+        "branches": [
+          {
+            "branch": "One Route Hazard core slice",
+            "tasks": [
+              "Implement the one route hazard behavior in the main loop.",
+              "Wire upgrade loop data into story-structure.json and runtime state."
+            ]
+          },
+          {
+            "branch": "One Route Hazard feedback pass",
+            "tasks": [
+              "Expose clear HUD and overlay feedback for one route hazard.",
+              "Validate that one route hazard stays readable during pressure spikes."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "scene": {
+    "arena": {
+      "width": 54,
+      "depth": 54,
+      "groundColor": "#08140f",
+      "laneColor": "#23402f",
+      "accentColor": "#9bff6e",
+      "fogColor": "#091120",
+      "skyColor": "#050813"
+    },
+    "player": {
+      "start": {
+        "x": 0,
+        "y": 0.9,
+        "z": 18
+      },
+      "radius": 0.9,
+      "color": "#8bd8ff",
+      "speed": 7.2,
+      "dashSpeed": 24.0,
+      "dashCooldown": 2.2,
+      "pulseRadius": 5.5,
+      "pulseCooldown": 4.2,
+      "maxHealth": 100
+    },
+    "goal": {
+      "position": {
+        "x": 0,
+        "y": 0.4,
+        "z": -20
+      },
+      "radius": 2.6,
+      "color": "#7df9ff",
+      "unlockRelics": 2
+    },
+    "relics": [
+      {
+        "label": "Evolve",
+        "position": {
+          "x": -18,
+          "y": 1.2,
+          "z": 0
+        },
+        "color": "#7cffc9"
+      },
+      {
+        "label": "Unify",
+        "position": {
+          "x": 18,
+          "y": 1.2,
+          "z": -4
+        },
+        "color": "#8bd8ff"
+      },
+      {
+        "label": "Discover",
+        "position": {
+          "x": -6,
+          "y": 1.2,
+          "z": -16
+        },
+        "color": "#ffd166"
+      },
+      {
+        "label": "Expand",
+        "position": {
+          "x": 14,
+          "y": 1.2,
+          "z": 12
+        },
+        "color": "#ff9ed1"
+      },
+      {
+        "label": "Uncover",
+        "position": {
+          "x": -14,
+          "y": 1.2,
+          "z": 16
+        },
+        "color": "#f6ff7d"
+      }
+    ],
+    "enemies": [
+      {
+        "name": "Guard",
+        "role": "patrol detector",
+        "position": {
+          "x": -16,
+          "y": 0.9,
+          "z": -10
+        },
+        "speed": 1.19,
+        "radius": 1.0,
+        "color": "#ff8c69",
+        "pursuitRange": 10
+      },
+      {
+        "name": "Sentry",
+        "role": "patrol detector",
+        "position": {
+          "x": 14,
+          "y": 0.9,
+          "z": -14
+        },
+        "speed": 1.34,
+        "radius": 1.08,
+        "color": "#ff4f7a",
+        "pursuitRange": 12
+      },
+      {
+        "name": "Commander",
+        "role": "patrol detector",
+        "position": {
+          "x": -12,
+          "y": 0.9,
+          "z": 12
+        },
+        "speed": 1.48,
+        "radius": 1.16,
+        "color": "#ffd166",
+        "pursuitRange": 14
+      }
+    ],
+    "hazards": [
+      {
+        "name": "Subterranean",
+        "position": {
+          "x": -8,
+          "y": 0.05,
+          "z": 0
+        },
+        "radius": 2.8,
+        "damagePerSecond": 10,
+        "color": "#4fd1ff"
+      },
+      {
+        "name": "Tree",
+        "position": {
+          "x": 8,
+          "y": 0.05,
+          "z": 8
+        },
+        "radius": 3.25,
+        "damagePerSecond": 13,
+        "color": "#ff7a45"
+      },
+      {
+        "name": "Pier",
+        "position": {
+          "x": 0,
+          "y": 0.05,
+          "z": -10
+        },
+        "radius": 3.7,
+        "damagePerSecond": 16,
+        "color": "#9bff6e"
+      }
+    ],
+    "camera": {
+      "offset": {
+        "x": 0,
+        "y": 18,
+        "z": 16
+      }
+    },
+    "weather": {
+      "rainDensity": 320
+    },
+    "rules": {
+      "goalRadius": 2.6,
+      "statusMessage": "Stay out of patrol vision, collect intel, and slip to the extraction beacon.",
+      "failStates": [
+        "Get overwhelmed by guard.",
+        "Run out of time before the exit unlocks.",
+        "Lose health by lingering in active hazard lanes."
+      ],
+      "progression": [
+        "expand",
+        "uncover",
+        "evolve",
+        "unify",
+        "discover",
+        "Each run converts performance into expand, uncover upgrades and route unlocks."
+      ],
+      "targetRelics": 2,
+      "timeLimitSeconds": 180,
+      "runtimeTemplate": "stealth_patrol",
+      "mechanicFamily": "stealth patrol",
+      "spatialStructure": "patrol grid",
+      "scoreLabel": "Intel"
+    },
+    "abilities": {
+      "verbs": [
+        "hazards",
+        "ember",
+        "crash"
+      ],
+      "summary": "An arcade game where you fight guards and burn embers to escape, evolving from simple combat into a unified survival experience."
+    },
+    "world": {
+      "setting": "A blend of subterranean caverns, lush forests, and industrial pier structures creating an ever-changing battlefield.",
+      "visualDirection": "Dark, atmospheric lighting with neon accents from burning embers to emphasize the contrast between life and death.",
+      "landmarks": [
+        "subterranean",
+        "tree",
+        "pier",
+        "forest",
+        "library"
+      ]
+    },
+    "profile": {
+      "seedContract": {
+        "sourceSeed": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-4f0511ij/brainstorm-seed.json",
+        "sourceSummary": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-4f0511ij/brainstorm-summary.json",
+        "sourceSamples": {
+          "environment": [
+            "subterranean",
+            "tree",
+            "pier",
+            "forest",
+            "library",
+            "twilight"
+          ],
+          "mechanics": [
+            "hazards",
+            "ember",
+            "crash",
+            "flame",
+            "sprint",
+            "slide",
+            "guide"
+          ],
+          "enemies": [
+            "guard",
+            "sentry",
+            "fort",
+            "commander",
+            "leader",
+            "noir"
+          ],
+          "progression": [
+            "evolve",
+            "unify",
+            "discover",
+            "expand",
+            "unlock",
+            "save"
+          ]
+        }
+      },
+      "mechanicFamily": "stealth patrol",
+      "runtimeTemplate": "stealth_patrol",
+      "pacing": "18 minutes",
+      "spatialStructure": "patrol grid",
+      "failurePressure": [
+        "guard",
+        "sentry",
+        "commander",
+        "subterranean",
+        "tree",
+        "pier",
+        "forest"
+      ],
+      "progressionShape": [
+        "expand",
+        "uncover",
+        "evolve",
+        "unify",
+        "discover",
+        "expand",
+        "Each run converts performance into expand, uncover upgrades and route unlocks."
+      ],
+      "presentationRules": [
+        "A blend of subterranean caverns, lush forests, and industrial pier structures creating an ever-changing battlefield.",
+        "Dark, atmospheric lighting with neon accents from burning embers to emphasize the contrast between life and death.",
+        "fast threat reads",
+        "clear route ownership",
+        "strong reward telegraphing"
+      ],
+      "mustPreserve": [
+        "Preserve the randomized seed contract through every stage.",
+        "Treat final-brainstorming.json as the canonical game specification.",
+        "Keep the generated game self-contained in one Pages/<slug>/ folder.",
+        "Make runtime behavior match runtimeTemplate instead of defaulting to one arena scaffold."
+      ],
+      "fallbackSource": ""
+    }
+  },
+  "story": {
+    "start": "intro",
+    "nodes": [
+      {
+        "id": "intro",
+        "title": "Introduction",
+        "text": "An arcade game where you fight guards and burn embers to escape, evolving from simple combat into a unified survival experience.\n\nDefend against guard patrols using strategic placement of hazards while managing ember fuel for attacks.\n\nProgress through compact levels by surviving pushers and fortresses until your health is full or a key item is found.\n\nUnlock new abilities and evolve your gear to create a unified strategy that adapts to increasingly complex threats.",
+        "choices": []
+      },
+      {
+        "id": "exploration-loop-1",
+        "title": "Exploration Loop 1",
+        "text": "Play as a rogue to navigate fiery vents and tree roots, avoiding patrol guards while collecting ember shards. Advance through layers of glowing flora by balancing shield formation with rapid ember-shard collection.",
+        "choices": []
+      },
+      {
+        "id": "exploration-loop-2",
+        "title": "Exploration Loop 2",
+        "text": "A tree vs subterranean arcade game using flames to outmaneuver enemies. Implement a companion evolution system where allies adapt their forms as the player advances.",
+        "choices": []
+      },
+      {
+        "id": "exploration-loop-3",
+        "title": "Exploration Loop 3",
+        "text": "What happens if tree traversal meets ember play under leader pressure? Keep ember as a repeatable skill test, escalate with leader, and use ascend as the reason to push deeper.",
+        "choices": []
+      }
+    ]
+  },
+  "delivery": {
+    "format": "story-driven JSON nodes",
+    "note": "scene layout, enemy waves, relic rewards, goal unlock state, brainstorm final spec, player controller",
+    "prototypeScope": "Small browser-playable prototype"
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "gameTitle": "Overgrown Systems: Guard Break",
+  "profile": {
+    "seedContract": {
+      "sourceSeed": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-bvx0mncx/brainstorm-seed.json",
+      "sourceSummary": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-bvx0mncx/brainstorm-summary.json",
+      "sourceSamples": {
+        "environment": [
+          "overgrown",
+          "tree",
+          "pier",
+          "forest",
+          "greenhouse",
+          "foggy"
+        ],
+        "mechanics": [
+          "systems",
+          "ember",
+          "crash",
+          "flame",
+          "sprint",
+          "slide",
+          "rebuild"
+        ],
+        "enemies": [
+          "guard",
+          "sentry",
+          "fort",
+          "commander",
+          "leader",
+          "industrial"
+        ],
+        "progression": [
+          "evolve",
+          "unify",
+          "discover",
+          "expand",
+          "unlock",
+          "reach"
+        ]
+      },
+      "seed": {
+        "themes": "industrial salvage",
+        "genres": "stealth arena",
+        "environments": "overgrown greenhouse",
+        "settings": "foggy morning",
+        "characterMotivations": "reach a quiet sanctuary",
+        "movementMechanics": [
+          "momentum-based rolling",
+          "mirror walking"
+        ],
+        "coreLoops": "rebuild broken systems",
+        "progressionLoops": "rescue allies",
+        "completionLoops": "final escape sequence",
+        "rewards": [
+          "boss unlock",
+          "collectibles"
+        ],
+        "antagonists": "patrolling automatons",
+        "visualStyles": "architectural minimalism",
+        "audioStyles": "field recording textures",
+        "interactionPatterns": "context-sensitive movement",
+        "productionFocus": "focus on emergent loops",
+        "cameraModes": "isometric zoom-pulse",
+        "arenaShapes": "hub-and-spokes with switchbacks",
+        "primaryVerbs": "chase with timing",
+        "scoringModels": "perfect route near miss bonus",
+        "failureModes": "core overheated by patrols",
+        "enemyBehaviors": "summon hazards light-triggered",
+        "objectiveStructures": "reach exit before timer",
+        "resourceSystems": "noise zone recharge",
+        "levelProgression": "branching routes with hazard tiers",
+        "twistConstraints": "reversed controls zone after route split"
+      }
+    },
+    "mechanicFamily": "stealth patrol",
+    "runtimeTemplate": "stealth_patrol",
+    "pacing": "15 minutes",
+    "spatialStructure": "patrol grid",
+    "failurePressure": [
+      "commander",
+      "industrial",
+      "warden",
+      "overgrown",
+      "tree",
+      "pier",
+      "forest"
+    ],
+    "progressionShape": [
+      "unify",
+      "discover",
+      "evolve",
+      "unify",
+      "discover",
+      "expand",
+      "Each run converts performance into unify, discover upgrades and route unlocks."
+    ],
+    "presentationRules": [
+      "Overgrown, tree-piercing space patrolled by hostile guards and sentries.",
+      "Dynamic, expressive combat in an organic environment that blends urban and natural elements.",
+      "fast threat reads",
+      "clear route ownership",
+      "strong reward telegraphing"
+    ],
+    "mustPreserve": [
+      "Preserve the randomized seed contract through every stage.",
+      "Treat final-brainstorming.json as the canonical game specification.",
+      "Keep the generated game self-contained in one Pages/<slug>/ folder.",
+      "Make runtime behavior match runtimeTemplate instead of defaulting to one arena scaffold."
+    ],
+    "fallbackSource": ""
+  },
+  "canonicalPaths": {
+    "targetDir": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/overgrown-systems-guard-break",
+    "brainstormSeed": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/overgrown-systems-guard-break/brainstorm-seed.json",
+    "brainstormSummary": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/overgrown-systems-guard-break/brainstorm-summary.json",
+    "finalBrainstorm": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/overgrown-systems-guard-break/final-brainstorming.json",
+    "story": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/overgrown-systems-guard-break/story-structure.json",
+    "gameScript": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/overgrown-systems-guard-break/game.js"
+  },
+  "seedCombination": {
+    "themes": "industrial salvage",
+    "genres": "stealth arena",
+    "environments": "overgrown greenhouse",
+    "settings": "foggy morning",
+    "characterMotivations": "reach a quiet sanctuary",
+    "movementMechanics": [
+      "momentum-based rolling",
+      "mirror walking"
+    ],
+    "coreLoops": "rebuild broken systems",
+    "progressionLoops": "rescue allies",
+    "completionLoops": "final escape sequence",
+    "rewards": [
+      "boss unlock",
+      "collectibles"
+    ],
+    "antagonists": "patrolling automatons",
+    "visualStyles": "architectural minimalism",
+    "audioStyles": "field recording textures",
+    "interactionPatterns": "context-sensitive movement",
+    "productionFocus": "focus on emergent loops",
+    "cameraModes": "isometric zoom-pulse",
+    "arenaShapes": "hub-and-spokes with switchbacks",
+    "primaryVerbs": "chase with timing",
+    "scoringModels": "perfect route near miss bonus",
+    "failureModes": "core overheated by patrols",
+    "enemyBehaviors": "summon hazards light-triggered",
+    "objectiveStructures": "reach exit before timer",
+    "resourceSystems": "noise zone recharge",
+    "levelProgression": "branching routes with hazard tiers",
+    "twistConstraints": "reversed controls zone after route split"
+  },
+  "stageHistory": [
+    {
+      "stage": "stage-1-brainstorm-pipeline",
+      "event": "stage",
+      "summary": "Locked final-brainstorming.json and initialized gameDesignProfile."
+    },
+    {
+      "stage": "stage-2-concept-materialization",
+      "event": "stage",
+      "summary": "Materialized concept from locked brainstorm packet."
+    },
+    {
+      "stage": "stage-3-feature-sprint-loop",
+      "event": "stage",
+      "summary": "Derived feature sprint packets from canonical brainstorm data."
+    },
+    {
+      "stage": "stage-4-design-assembly",
+      "event": "stage",
+      "summary": "Assembled design document."
+    },
+    {
+      "stage": "stage-5-build-planning-loop",
+      "event": "stage",
+      "summary": "Derived fun assessment and implementation chapters."
+    },
+    {
+      "stage": "stage-6-story-and-scaffold-materialization",
+      "event": "stage",
+      "summary": "Created story payload and runtime scaffold for stealth_patrol."
+    },
+    {
+      "stage": "stage-7-html-review-loop",
+      "event": "stage",
+      "summary": "Completed HTML shell review pass."
+    }
+  ],
+  "decisions": [],
+  "rejectedIdeas": [],
+  "openIssues": [],
+  "nextStageNotes": []
+}

@@ -228,6 +228,10 @@ async function renderArcadeMarkup(page, entries, forceReload = false) {
               <span>Start</span>
             </a>
             <h1 class="prototype-player-title" id="prototype-book-heading">${selectedProject.title}</h1>
+            <div class="arcade-local-nav">
+              <a class="button-link secondary" href="/?page=prototypes" data-route-link>Player</a>
+              <a class="button-link secondary" href="/?page=arcade-library" data-route-link>Library</a>
+            </div>
             <button type="button" class="button-link secondary" data-arcade-refresh>
               Refresh game list
             </button>
@@ -265,6 +269,10 @@ async function renderArcadeLibraryMarkup(page, entries, forceReload = false) {
         <div class="content-section-header">
           <div>
             <h2 class="content-section-title" id="prototype-book-heading">Arcade Library</h2>
+          </div>
+          <div class="arcade-local-nav">
+            <a class="button-link secondary" href="/?page=prototypes" data-route-link>Player</a>
+            <a class="button-link secondary" href="/?page=arcade-library" data-route-link>Library</a>
           </div>
           <button type="button" class="button-link secondary" data-arcade-refresh>
             Refresh game list

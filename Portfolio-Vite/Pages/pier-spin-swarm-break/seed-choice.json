@@ -1,0 +1,38 @@
+{
+  "title": "Pier Spin: Swarm Break",
+  "description": "A spin-based arcade where players outmaneuver swarm forces to unlock the peak.",
+  "objective": "Use spin and sprint to survive glitch patrols, secure relic routes, and turn each run into unveil, unlock progress.",
+  "seed": {
+    "themes": "street level mystery",
+    "genres": "stealth puzzle",
+    "environments": "abandoned factory",
+    "settings": "late-night",
+    "characterMotivations": "escape before dawn",
+    "movementMechanics": [
+      "rhythm-based stepping",
+      "mirror walking"
+    ],
+    "coreLoops": "evade patrols while searching",
+    "progressionLoops": "build a safe path",
+    "completionLoops": "relay activation",
+    "rewards": [
+      "boss unlock",
+      "resource caches"
+    ],
+    "antagonists": "rival explorer",
+    "visualStyles": "textured industrial",
+    "audioStyles": "mechanical percussion",
+    "interactionPatterns": "inventory-lite object use",
+    "productionFocus": "focus on motion and feel",
+    "cameraModes": "cinematic follow wide-read",
+    "arenaShapes": "shrinking zone with shortcuts",
+    "primaryVerbs": "trade with timing",
+    "scoringModels": "survival timer speed bonus",
+    "failureModes": "cargo shattered during overload",
+    "enemyBehaviors": "chase on sight light-triggered",
+    "objectiveStructures": "defuse core in split routes",
+    "resourceSystems": "keys slow drain",
+    "levelProgression": "single run with secret exits",
+    "twistConstraints": "rotating room inside safe zone"
+  }
+}

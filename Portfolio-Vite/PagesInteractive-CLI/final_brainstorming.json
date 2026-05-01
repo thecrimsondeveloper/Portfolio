@@ -1,0 +1,250 @@
+{
+  "title": "Pier Root",
+  "sourceSummary": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/PagesInteractive-CLI/summary_brainstorming.json",
+  "sourceSeed": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/PagesInteractive-CLI/seed_brainstorming.json",
+  "generatedAt": "2026-05-01T10:23:57.280822+00:00",
+  "explorationLevel": "expansive",
+  "generation": {
+    "mode": "lm_studio_chainstorm_style",
+    "endpoint": "http://10.0.0.137:1234/v1/chat/completions",
+    "model": "qwen3.5-2b@q8_0",
+    "temperature": 1.0
+  },
+  "buildReady": true,
+  "injectionReady": true,
+  "oneLinePitch": "An arcade game where a player uses root and petal actions to fight space forces on a pier under rain, unlocking mystery progression.",
+  "steps": [
+    {
+      "step": "gameplay_time",
+      "question": "How long should one run last before it feels complete?",
+      "answer": "8 minutes",
+      "impact": "Sets encounter density, map size, and upgrade pacing."
+    },
+    {
+      "step": "enemy_types",
+      "question": "Which enemy types define the core pressure of the run?",
+      "answer": [
+        "guard",
+        "command",
+        "commander"
+      ],
+      "impact": "Shapes encounter design, telegraphing, and fail-state tension."
+    },
+    {
+      "step": "player_actions",
+      "question": "Which verbs should the player use constantly?",
+      "answer": [
+        "root",
+        "petal",
+        "sprint"
+      ],
+      "impact": "Locks the feel of traversal, combat rhythm, and input complexity."
+    },
+    {
+      "step": "progression_goal",
+      "question": "What long-term objective should each run feed into?",
+      "answer": [
+        "mystery",
+        "unlocked"
+      ],
+      "impact": "Determines meta progression rewards and run-to-run continuity."
+    },
+    {
+      "step": "world_anchor",
+      "question": "Which environmental anchors keep the world readable and memorable?",
+      "answer": [
+        "pier",
+        "rain"
+      ],
+      "impact": "Guides art direction, hazard framing, and level landmarks."
+    }
+  ],
+  "randomInjections": [
+    {
+      "type": "environmental_twist",
+      "value": [
+        "den",
+        "mesa"
+      ],
+      "effect": "Adds a new traversal hazard or alternate route condition."
+    },
+    {
+      "type": "mechanic_modifier",
+      "value": [
+        "root",
+        "petal"
+      ],
+      "effect": "Mutates the core verb set for a late-run variant or upgrade branch."
+    },
+    {
+      "type": "enemy_pressure",
+      "value": [
+        "unrest",
+        "home"
+      ],
+      "effect": "Introduces a new pressure pattern or elite enemy combination."
+    },
+    {
+      "type": "progression_bonus",
+      "value": [
+        "mystery",
+        "unlock"
+      ],
+      "effect": "Creates a reward spike that changes long-term routing decisions."
+    }
+  ],
+  "explorationLoops": [
+    {
+      "loop": 1,
+      "prompt": "What happens if cliff traversal meets pile play under swarm pressure?",
+      "injection": "Resolve the loop by rewarding conquest instead of raw score.",
+      "decision": "Keep pile as a repeatable skill test, escalate with swarm, and use conquest as the reason to push deeper."
+    },
+    {
+      "loop": 2,
+      "prompt": "What happens if rain traversal meets dash play under sentry pressure?",
+      "injection": "Resolve the loop by rewarding unlock instead of raw score.",
+      "decision": "Keep dash as a repeatable skill test, escalate with sentry, and use unlock as the reason to push deeper."
+    },
+    {
+      "loop": 3,
+      "prompt": "What happens if top traversal meets message play under beacon pressure?",
+      "injection": "Resolve the loop by rewarding spread instead of raw score.",
+      "decision": "Keep message as a repeatable skill test, escalate with beacon, and use spread as the reason to push deeper."
+    },
+    {
+      "loop": 4,
+      "prompt": "Create an atmospheric arcade game where player actions interact with a rain-soaked pier environment.",
+      "injection": "Integrate the flame mechanic and enemy 'Beacon' to trigger unique movement patterns against space forces.",
+      "decision": "Develop a progression system that unlocks mysteries as the player ascends above the pier."
+    }
+  ],
+  "finalSpec": {
+    "sessionLength": "8 minutes",
+    "genre": "arcade action prototype",
+    "playerFantasy": "A guardian defending their home against chaotic space entities while navigating hostile terrain.",
+    "world": {
+      "setting": "A fusion of pier architecture, rainy skies, and den-like structures inhabited by space monsters.",
+      "visualDirection": "High contrast between the dark water and neon lights of the pier amidst stormy backgrounds.",
+      "landmarks": [
+        "pier",
+        "rain",
+        "den"
+      ]
+    },
+    "coreLoop": [
+      "Root action to push enemies back or plant petals to create temporary barriers against advancing foes.",
+      "Player moves across compact expressive levels, switching between movement methods to survive patrolling by space guards.",
+      "Enemies spawn randomly along rain-slicked paths; surviving the run unlocks new abilities and mystery story elements."
+    ],
+    "playerActions": [
+      "root",
+      "petal",
+      "sprint"
+    ],
+    "enemyTypes": [
+      "guard",
+      "command",
+      "commander"
+    ],
+    "enemyArchetypes": [
+      {
+        "name": "guard",
+        "role": "pressure chaser",
+        "behavior": "Pushes the player off safe routes and punishes hesitation."
+      },
+      {
+        "name": "command",
+        "role": "zone controller",
+        "behavior": "Locks down key spaces and forces rerouting."
+      },
+      {
+        "name": "commander",
+        "role": "ambush disruptor",
+        "behavior": "Breaks steady rhythm and spikes reaction difficulty."
+      }
+    ],
+    "progression": {
+      "metaGoal": [
+        "mystery",
+        "unlocked"
+      ],
+      "rewardHooks": [
+        "mystery",
+        "unlocked",
+        "gain"
+      ],
+      "runToRunGrowth": "Each run converts performance into mystery, unlocked upgrades and route unlocks."
+    },
+    "runStructure": {
+      "opening": "Teach root movement and introduce guard reads in a low-risk pier route.",
+      "midgame": "Layer petal interactions, mixed enemy waves, and injection events from the exploration loops.",
+      "endgame": "Force mastery through stacked hazards, elite guard encounters, and a final mystery choice."
+    },
+    "encounterDesign": {
+      "hazards": [
+        "pier",
+        "rain",
+        "den"
+      ],
+      "enemyCompositions": [
+        "Keep pile as a repeatable skill test, escalate with swarm, and use conquest as the reason to push deeper.",
+        "Keep dash as a repeatable skill test, escalate with sentry, and use unlock as the reason to push deeper.",
+        "Keep message as a repeatable skill test, escalate with beacon, and use spread as the reason to push deeper."
+      ],
+      "difficultyRamp": "Initial waves feature basic root mechanics against easy guards; later runs introduce complex petal strategies and faster enemies."
+    },
+    "economy": {
+      "currencies": [
+        "mystery",
+        "unlocked",
+        "gain"
+      ],
+      "spenders": [
+        "environmental_twist",
+        "mechanic_modifier",
+        "enemy_pressure",
+        "progression_bonus"
+      ],
+      "riskReward": "High risk of being overwhelmed by space forces, but rewards include discovering hidden mysteries within the pier's layers."
+    },
+    "ui": {
+      "hud": [
+        "health",
+        "charge meter",
+        "route objective",
+        "reward tracker"
+      ],
+      "readabilityGoals": [
+        "fast threat reads",
+        "clear route ownership",
+        "strong reward telegraphing"
+      ]
+    },
+    "audio": {
+      "tone": "Punchy arcade percussion with environmental accents tied to route danger.",
+      "feedback": [
+        "impact stingers",
+        "threat warning pings",
+        "upgrade reward swells"
+      ]
+    },
+    "technicalBuild": {
+      "scope": "Small browser-playable prototype",
+      "systemsNeeded": [
+        "player controller",
+        "enemy director",
+        "upgrade loop",
+        "hazard routing",
+        "HUD"
+      ],
+      "prototypeOrder": [
+        "movement",
+        "one enemy archetype",
+        "one route hazard",
+        "reward loop",
+        "full run pacing"
+      ]
+    }
+  }
+}

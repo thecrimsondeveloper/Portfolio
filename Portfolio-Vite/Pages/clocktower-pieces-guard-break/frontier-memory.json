@@ -1,0 +1,210 @@
+{
+  "gameTitle": "Clocktower Pieces: Guard Break",
+  "profile": {
+    "seedContract": {
+      "sourceSeed": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-9poy6otu/brainstorm-seed.json",
+      "sourceSummary": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-9poy6otu/brainstorm-summary.json",
+      "sourceSamples": {
+        "environment": [
+          "clocktower",
+          "tree",
+          "pier",
+          "forest",
+          "interior",
+          "twilight"
+        ],
+        "mechanics": [
+          "pieces",
+          "ember",
+          "crash",
+          "flame",
+          "sprint",
+          "slide",
+          "collect"
+        ],
+        "enemies": [
+          "guard",
+          "sentry",
+          "fort",
+          "commander",
+          "leader",
+          "circuitry"
+        ],
+        "progression": [
+          "evolve",
+          "unify",
+          "discover",
+          "expand",
+          "unlock",
+          "reach"
+        ]
+      },
+      "seed": {
+        "themes": "circuitry puzzle chase",
+        "genres": "survival",
+        "environments": "clocktower interior",
+        "settings": "twilight",
+        "characterMotivations": "reach a quiet sanctuary",
+        "movementMechanics": [
+          "precision jumping",
+          "swinging from cables"
+        ],
+        "coreLoops": "collect scattered pieces",
+        "progressionLoops": "assemble a map",
+        "completionLoops": "artifact assembly",
+        "rewards": [
+          "resource caches",
+          "story fragments"
+        ],
+        "antagonists": "roving security drones",
+        "visualStyles": "muted earth tones",
+        "audioStyles": "low bass pulse",
+        "interactionPatterns": "point-and-click traversal",
+        "productionFocus": "prepare for agent-driven expansion",
+        "cameraModes": "over-the-shoulder",
+        "arenaShapes": "shrinking zone",
+        "primaryVerbs": "chase",
+        "scoringModels": "territory held",
+        "failureModes": "alarm filled",
+        "enemyBehaviors": "patrol",
+        "objectiveStructures": "steal artifact",
+        "resourceSystems": "stamina",
+        "levelProgression": "branching routes",
+        "twistConstraints": "reversed controls zone"
+      }
+    },
+    "mechanicFamily": "stealth patrol",
+    "runtimeTemplate": "stealth_patrol",
+    "pacing": "18 minutes",
+    "spatialStructure": "patrol grid",
+    "failurePressure": [
+      "warden",
+      "leader",
+      "circuitry",
+      "clocktower",
+      "tree",
+      "pier",
+      "forest"
+    ],
+    "progressionShape": [
+      "unify",
+      "evolve",
+      "evolve",
+      "unify",
+      "discover",
+      "expand",
+      "Each run converts performance into unify, evolve upgrades and route unlocks."
+    ],
+    "presentationRules": [
+      "A stylized world blending clocktower, tree, and shifting threat territory.",
+      "Lean on clocktower, tree, and guard motifs for strong silhouettes, readable threat zones, and punchy arcade contrast.",
+      "fast threat reads",
+      "clear route ownership",
+      "strong reward telegraphing"
+    ],
+    "mustPreserve": [
+      "Preserve the randomized seed contract through every stage.",
+      "Treat final-brainstorming.json as the canonical game specification.",
+      "Keep the generated game self-contained in one Pages/<slug>/ folder.",
+      "Make runtime behavior match runtimeTemplate instead of defaulting to one arena scaffold."
+    ],
+    "fallbackSource": "LM Studio unavailable during auto preflight: [Errno 61] Connection refused; deterministic fallback generation was used."
+  },
+  "canonicalPaths": {
+    "targetDir": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/clocktower-pieces-guard-break",
+    "brainstormSeed": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/clocktower-pieces-guard-break/brainstorm-seed.json",
+    "brainstormSummary": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/clocktower-pieces-guard-break/brainstorm-summary.json",
+    "finalBrainstorm": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/clocktower-pieces-guard-break/final-brainstorming.json",
+    "story": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/clocktower-pieces-guard-break/story-structure.json",
+    "gameScript": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/clocktower-pieces-guard-break/game.js"
+  },
+  "seedCombination": {
+    "themes": "circuitry puzzle chase",
+    "genres": "survival",
+    "environments": "clocktower interior",
+    "settings": "twilight",
+    "characterMotivations": "reach a quiet sanctuary",
+    "movementMechanics": [
+      "precision jumping",
+      "swinging from cables"
+    ],
+    "coreLoops": "collect scattered pieces",
+    "progressionLoops": "assemble a map",
+    "completionLoops": "artifact assembly",
+    "rewards": [
+      "resource caches",
+      "story fragments"
+    ],
+    "antagonists": "roving security drones",
+    "visualStyles": "muted earth tones",
+    "audioStyles": "low bass pulse",
+    "interactionPatterns": "point-and-click traversal",
+    "productionFocus": "prepare for agent-driven expansion",
+    "cameraModes": "over-the-shoulder",
+    "arenaShapes": "shrinking zone",
+    "primaryVerbs": "chase",
+    "scoringModels": "territory held",
+    "failureModes": "alarm filled",
+    "enemyBehaviors": "patrol",
+    "objectiveStructures": "steal artifact",
+    "resourceSystems": "stamina",
+    "levelProgression": "branching routes",
+    "twistConstraints": "reversed controls zone"
+  },
+  "stageHistory": [
+    {
+      "stage": "stage-1-brainstorm-pipeline",
+      "event": "stage",
+      "summary": "Locked final-brainstorming.json and initialized gameDesignProfile."
+    },
+    {
+      "stage": "stage-2-concept-materialization",
+      "event": "stage",
+      "summary": "Materialized concept from locked brainstorm packet."
+    },
+    {
+      "stage": "stage-3-feature-sprint-loop",
+      "event": "stage",
+      "summary": "Derived feature sprint packets from canonical brainstorm data."
+    },
+    {
+      "stage": "stage-4-design-assembly",
+      "event": "stage",
+      "summary": "Assembled design document."
+    },
+    {
+      "stage": "stage-5-build-planning-loop",
+      "event": "stage",
+      "summary": "Derived fun assessment and implementation chapters."
+    },
+    {
+      "stage": "stage-6-story-and-scaffold-materialization",
+      "event": "stage",
+      "summary": "Created story payload and runtime scaffold for stealth_patrol."
+    },
+    {
+      "stage": "stage-7-html-review-loop",
+      "event": "stage",
+      "summary": "Completed HTML shell review pass."
+    },
+    {
+      "stage": "stage-8-implementation-sprint-loop",
+      "event": "stage",
+      "summary": "Completed configured implementation sprint passes."
+    },
+    {
+      "stage": "stage-9-validation-repair-loop",
+      "event": "stage",
+      "summary": "Completed configured validation loops."
+    },
+    {
+      "stage": "stage-10-arcade-integration-loop",
+      "event": "stage",
+      "summary": "Completed arcade integration loop."
+    }
+  ],
+  "decisions": [],
+  "rejectedIdeas": [],
+  "openIssues": [],
+  "nextStageNotes": []
+}

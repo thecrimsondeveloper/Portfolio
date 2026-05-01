@@ -15,6 +15,7 @@ import { DEFAULT_PAGE_ID, resolveRoute } from "./router.js";
 import { renderProjectMissing, renderProjectView } from "../ui/project-view.js";
 import { renderConnectView } from "../ui/connect-view.js";
 import { renderPrototypeBookView } from "../ui/prototype-book-view.js";
+import { renderProjectsView } from "../ui/projects-view.js";
 import { renderEmptySectionView, renderSectionView } from "../ui/section-view.js";
 import { renderShell, applyDesignSchema } from "../ui/shell.js";
 import { clearOverlay } from "../ui/overlay-root.js";
@@ -95,6 +96,11 @@ async function renderApp(hosts, state) {
 
   if (page.type === "connect") {
     renderConnectView(hosts.main, page, state.schema.profile);
+    return;
+  }
+
+  if (page.id === "projects") {
+    renderProjectsView(hosts.main, page, state.schema);
     return;
   }
 

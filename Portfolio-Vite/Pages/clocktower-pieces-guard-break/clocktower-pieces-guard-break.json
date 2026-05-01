@@ -1,0 +1,38 @@
+{
+  "id": "clocktower-pieces-guard-break",
+  "title": "Clocktower Pieces: Guard Break",
+  "summary": "Navigate clocktower and tree spaces with sprint and crash, survive warden-led pressure, and turn each run into unify progress.",
+  "mode": "arcade-action",
+  "palette": "clocktower-pieces-guard-break",
+  "instructions": "WASD or Arrow keys move the player through the arena., Shift triggers a scattered burst for repositioning., Space converts sprint and crash pressure into crowd control.",
+  "hud": {
+    "modeLabel": "Clocktower Pieces: Guard Break",
+    "objective": "Use sprint and crash to survive warden patrols, secure relic routes, and turn each run into unify, evolve progress."
+  },
+  "overlay": {
+    "startTitle": "Clocktower Pieces: Guard Break",
+    "startCopy": "Navigate clocktower and tree spaces with sprint and crash, survive warden-led pressure, and turn each run into unify progress.\n\nScout routes through clocktower spaces and identify guard pressure points.\n\nUse pieces and ember interactions to survive, reposition, and secure objectives.\n\nConvert each run into evolve gains that unlock stronger options and open the next challenge band.",
+    "startAction": "Launch Game"
+  },
+  "content": {
+    "hook": "Navigate clocktower and tree spaces with sprint and crash, survive warden-led pressure, and turn each run into unify progress.",
+    "actions": [
+      "sprint",
+      "crash",
+      "scattered"
+    ],
+    "pressure": [
+      "warden",
+      "leader",
+      "circuitry"
+    ],
+    "rewards": [
+      "unify",
+      "evolve",
+      "discover"
+    ],
+    "runtimeTemplate": "stealth_patrol",
+    "mechanicFamily": "stealth patrol"
+  },
+  "image": ""
+}

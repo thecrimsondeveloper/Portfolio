@@ -1,0 +1,38 @@
+{
+  "id": "flooded-while-guard-break",
+  "title": "Flooded While: Guard Break",
+  "summary": "An arcade game set between flooded and tree, where the player uses while and ember actions to outmaneuver guard forces.",
+  "mode": "arcade-action",
+  "palette": "flooded-while-guard-break",
+  "instructions": "WASD or Arrow keys move the player through the arena., Shift triggers a sprint burst for repositioning., Space converts while and ember pressure into crowd control.",
+  "hud": {
+    "modeLabel": "Flooded While: Guard Break",
+    "objective": "Use while and ember to survive commander patrols, secure relic routes, and turn each run into discover, evolve progress."
+  },
+  "overlay": {
+    "startTitle": "Flooded While: Guard Break",
+    "startCopy": "An arcade game set between flooded and tree, where the player uses while and ember actions to outmaneuver guard forces.\n\nAcquire resources to equip gear that unlocks new abilities for the next phase.\n\nExecute actions to outmaneuver enemies while navigating unstable flooded structures.\n\nDrive an evolve-to-unify progression arc through compact but expressive gameplay runs.",
+    "startAction": "Launch Game"
+  },
+  "content": {
+    "hook": "An arcade game set between flooded and tree, where the player uses while and ember actions to outmaneuver guard forces.",
+    "actions": [
+      "while",
+      "ember",
+      "sprint"
+    ],
+    "pressure": [
+      "commander",
+      "leader",
+      "warden"
+    ],
+    "rewards": [
+      "discover",
+      "evolve",
+      "unify"
+    ],
+    "runtimeTemplate": "stealth_patrol",
+    "mechanicFamily": "stealth patrol"
+  },
+  "image": ""
+}

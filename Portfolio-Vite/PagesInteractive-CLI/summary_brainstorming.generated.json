@@ -1,0 +1,1347 @@
+{
+  "sourceFile": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/PagesInteractive-CLI/seed_brainstorming.generated.json",
+  "generatedAt": "2026-05-01T09:35:03.589225+00:00",
+  "explorationLevel": "expansive",
+  "method": {
+    "name": "chained_inference_aggregation",
+    "rankedPassing": true,
+    "passCount": 3,
+    "topK": 12,
+    "rowTopK": 6,
+    "sampleSizePerCategory": 3,
+    "smoothSampleSize": 6,
+    "randomSeed": 7
+  },
+  "totals": {
+    "categoryCount": 4,
+    "rowCount": 12,
+    "itemCount": 96
+  },
+  "gameDesignDoc": {
+    "title": "Dock Swerve: Watch Break",
+    "explorationLevel": "expansive",
+    "sourceSamples": {
+      "environment": [
+        "dock",
+        "spray",
+        "current",
+        "reef",
+        "grove",
+        "pier",
+        "harbor"
+      ],
+      "mechanics": [
+        "swerve",
+        "skid",
+        "echo",
+        "charge",
+        "sprint",
+        "drift",
+        "dash"
+      ],
+      "enemies": [
+        "watch",
+        "warden",
+        "swarm",
+        "drone",
+        "raider",
+        "sentry",
+        "pack"
+      ],
+      "progression": [
+        "expand",
+        "recover",
+        "merge",
+        "converge",
+        "unlock",
+        "reveal"
+      ]
+    },
+    "elevatorPitch": "A expansive arcade game set between dock and spray, where the player uses swerve and skid actions to outmaneuver watch forces and drive a expand-to-recover progression arc.",
+    "worldConcept": "The world blends dock, spray, current into a hostile traversal space patrolled by watch, warden, swarm, pushing the player through compact but expressive runs.",
+    "coreLoop": [
+      "Scout routes through dock spaces and identify watch pressure points.",
+      "Use swerve and skid interactions to survive, reposition, and secure objectives.",
+      "Convert each run into expand gains that unlock stronger options and open the next challenge band."
+    ],
+    "mechanics": {
+      "primaryActions": [
+        "swerve",
+        "skid",
+        "echo"
+      ],
+      "enemyPressure": [
+        "watch",
+        "warden",
+        "swarm"
+      ],
+      "progressionHooks": [
+        "expand",
+        "recover",
+        "merge"
+      ]
+    },
+    "contentPillars": [
+      "Traversal built around swerve, skid, echo.",
+      "Threat reads driven by watch, warden, swarm.",
+      "Forward momentum shaped by expand, recover, merge."
+    ],
+    "aggregatedDocument": {
+      "environmentBlend": [
+        "dock",
+        "spray",
+        "current",
+        "reef"
+      ],
+      "mechanicBlend": [
+        "swerve",
+        "skid",
+        "echo",
+        "charge"
+      ],
+      "enemyBlend": [
+        "watch",
+        "warden",
+        "swarm",
+        "drone"
+      ],
+      "progressionBlend": [
+        "expand",
+        "recover",
+        "merge",
+        "converge"
+      ],
+      "smootherSummary": "Merge dock, spray spaces with swerve, skid verbs, then pressure the run with watch, warden threats and resolve it through expand, recover growth."
+    },
+    "designDoc": {
+      "playerFantasy": "Feel like a fast improviser navigating dock hazards while turning warden pressure into opportunities.",
+      "sessionStructure": "Short repeatable runs, escalating from expand setup to recover payoffs, with each success adding a new decision layer.",
+      "visualDirection": "Lean on dock, spray, and watch motifs for strong silhouettes, readable threat zones, and punchy arcade contrast."
+    }
+  },
+  "categories": [
+    {
+      "category": "Environment Seeds",
+      "rowCount": 3,
+      "itemCount": 24,
+      "topWords": [
+        "harbor",
+        "dock",
+        "pier",
+        "forest",
+        "reef",
+        "grove",
+        "coral",
+        "tide",
+        "canopy",
+        "current",
+        "root",
+        "spray"
+      ],
+      "sampledWords": [
+        "dock",
+        "spray",
+        "current"
+      ],
+      "rankedSample": [
+        "reef",
+        "grove",
+        "pier"
+      ],
+      "piecemealSamples": {
+        "heads": [
+          "harbor",
+          "reef",
+          "forest"
+        ],
+        "middles": [
+          "channel",
+          "spray",
+          "root"
+        ],
+        "tails": [
+          "tree",
+          "pier"
+        ],
+        "focus": [
+          "canopy",
+          "dock",
+          "pier"
+        ]
+      },
+      "smoothedWords": [
+        "dock",
+        "spray",
+        "current",
+        "reef",
+        "grove",
+        "pier",
+        "harbor"
+      ],
+      "rankedPasses": [
+        {
+          "pass": 1,
+          "topWords": [
+            "harbor",
+            "dock",
+            "pier",
+            "forest",
+            "reef",
+            "grove",
+            "coral",
+            "tide",
+            "canopy",
+            "current",
+            "root",
+            "spray"
+          ],
+          "topRankings": [
+            {
+              "word": "harbor",
+              "score": 34.0
+            },
+            {
+              "word": "dock",
+              "score": 29.82
+            },
+            {
+              "word": "pier",
+              "score": 25.2
+            },
+            {
+              "word": "forest",
+              "score": 23.76
+            },
+            {
+              "word": "reef",
+              "score": 15.92
+            },
+            {
+              "word": "grove",
+              "score": 14.92
+            },
+            {
+              "word": "coral",
+              "score": 14.14
+            },
+            {
+              "word": "tide",
+              "score": 12.76
+            },
+            {
+              "word": "canopy",
+              "score": 12.64
+            },
+            {
+              "word": "current",
+              "score": 12.64
+            },
+            {
+              "word": "root",
+              "score": 12.04
+            },
+            {
+              "word": "spray",
+              "score": 12.04
+            }
+          ]
+        },
+        {
+          "pass": 2,
+          "topWords": [
+            "harbor",
+            "dock",
+            "pier",
+            "forest",
+            "reef",
+            "grove",
+            "coral",
+            "tide",
+            "canopy",
+            "current",
+            "root",
+            "spray"
+          ],
+          "topRankings": [
+            {
+              "word": "harbor",
+              "score": 35.275
+            },
+            {
+              "word": "dock",
+              "score": 30.596
+            },
+            {
+              "word": "pier",
+              "score": 26.099
+            },
+            {
+              "word": "forest",
+              "score": 24.569
+            },
+            {
+              "word": "reef",
+              "score": 16.131
+            },
+            {
+              "word": "grove",
+              "score": 15.362
+            },
+            {
+              "word": "coral",
+              "score": 14.422
+            },
+            {
+              "word": "tide",
+              "score": 13.343
+            },
+            {
+              "word": "canopy",
+              "score": 13.206
+            },
+            {
+              "word": "current",
+              "score": 13.112
+            },
+            {
+              "word": "root",
+              "score": 12.593
+            },
+            {
+              "word": "spray",
+              "score": 12.593
+            }
+          ]
+        },
+        {
+          "pass": 3,
+          "topWords": [
+            "harbor",
+            "dock",
+            "pier",
+            "forest",
+            "reef",
+            "grove",
+            "coral",
+            "tide",
+            "canopy",
+            "current",
+            "root",
+            "spray"
+          ],
+          "topRankings": [
+            {
+              "word": "harbor",
+              "score": 35.47
+            },
+            {
+              "word": "dock",
+              "score": 30.821
+            },
+            {
+              "word": "pier",
+              "score": 26.239
+            },
+            {
+              "word": "forest",
+              "score": 24.673
+            },
+            {
+              "word": "reef",
+              "score": 16.154
+            },
+            {
+              "word": "grove",
+              "score": 15.505
+            },
+            {
+              "word": "coral",
+              "score": 14.485
+            },
+            {
+              "word": "tide",
+              "score": 13.5
+            },
+            {
+              "word": "canopy",
+              "score": 13.302
+            },
+            {
+              "word": "current",
+              "score": 13.189
+            },
+            {
+              "word": "root",
+              "score": 12.76
+            },
+            {
+              "word": "spray",
+              "score": 12.76
+            }
+          ]
+        }
+      ],
+      "chainSummaries": [
+        {
+          "category": "Environment Seeds",
+          "seed": "harbor",
+          "rowLength": 8,
+          "focusWords": [
+            "harbor",
+            "dock",
+            "pier",
+            "forest",
+            "tide",
+            "channel"
+          ],
+          "chainDigest": "harbor -> dock -> pier -> tide -> channel -> land -> forest -> tree"
+        },
+        {
+          "category": "Environment Seeds",
+          "seed": "reef",
+          "rowLength": 8,
+          "focusWords": [
+            "harbor",
+            "dock",
+            "pier",
+            "reef",
+            "coral",
+            "current"
+          ],
+          "chainDigest": "reef -> coral -> current -> lagoon -> spray -> harbor -> dock -> pier"
+        },
+        {
+          "category": "Environment Seeds",
+          "seed": "forest",
+          "rowLength": 8,
+          "focusWords": [
+            "harbor",
+            "dock",
+            "pier",
+            "forest",
+            "grove",
+            "canopy"
+          ],
+          "chainDigest": "forest -> grove -> canopy -> moss -> root -> harbor -> dock -> pier"
+        }
+      ]
+    },
+    {
+      "category": "Mechanic Seeds",
+      "rowCount": 3,
+      "itemCount": 24,
+      "topWords": [
+        "dash",
+        "sprint",
+        "blink",
+        "drift",
+        "pulse",
+        "charge",
+        "glide",
+        "slide",
+        "burst",
+        "swerve",
+        "phase",
+        "sail"
+      ],
+      "sampledWords": [
+        "swerve",
+        "skid",
+        "echo"
+      ],
+      "rankedSample": [
+        "charge",
+        "sprint",
+        "drift"
+      ],
+      "piecemealSamples": {
+        "heads": [
+          "dash",
+          "pulse",
+          "drift"
+        ],
+        "middles": [
+          "vault",
+          "phase",
+          "sail"
+        ],
+        "tails": [
+          "ember",
+          "blink"
+        ],
+        "focus": [
+          "skid",
+          "blink",
+          "charge"
+        ]
+      },
+      "smoothedWords": [
+        "swerve",
+        "skid",
+        "echo",
+        "charge",
+        "sprint",
+        "drift",
+        "dash"
+      ],
+      "rankedPasses": [
+        {
+          "pass": 1,
+          "topWords": [
+            "dash",
+            "sprint",
+            "blink",
+            "drift",
+            "pulse",
+            "charge",
+            "glide",
+            "slide",
+            "burst",
+            "swerve",
+            "phase",
+            "sail"
+          ],
+          "topRankings": [
+            {
+              "word": "dash",
+              "score": 34.0
+            },
+            {
+              "word": "sprint",
+              "score": 29.82
+            },
+            {
+              "word": "blink",
+              "score": 25.2
+            },
+            {
+              "word": "drift",
+              "score": 15.92
+            },
+            {
+              "word": "pulse",
+              "score": 15.92
+            },
+            {
+              "word": "charge",
+              "score": 14.14
+            },
+            {
+              "word": "glide",
+              "score": 14.14
+            },
+            {
+              "word": "slide",
+              "score": 12.76
+            },
+            {
+              "word": "burst",
+              "score": 12.64
+            },
+            {
+              "word": "swerve",
+              "score": 12.64
+            },
+            {
+              "word": "phase",
+              "score": 12.04
+            },
+            {
+              "word": "sail",
+              "score": 12.04
+            }
+          ]
+        },
+        {
+          "pass": 2,
+          "topWords": [
+            "dash",
+            "sprint",
+            "blink",
+            "drift",
+            "pulse",
+            "charge",
+            "glide",
+            "slide",
+            "burst",
+            "swerve",
+            "phase",
+            "sail"
+          ],
+          "topRankings": [
+            {
+              "word": "dash",
+              "score": 35.275
+            },
+            {
+              "word": "sprint",
+              "score": 30.596
+            },
+            {
+              "word": "blink",
+              "score": 26.099
+            },
+            {
+              "word": "drift",
+              "score": 16.131
+            },
+            {
+              "word": "pulse",
+              "score": 16.131
+            },
+            {
+              "word": "charge",
+              "score": 14.422
+            },
+            {
+              "word": "glide",
+              "score": 14.422
+            },
+            {
+              "word": "slide",
+              "score": 13.343
+            },
+            {
+              "word": "burst",
+              "score": 13.112
+            },
+            {
+              "word": "swerve",
+              "score": 13.112
+            },
+            {
+              "word": "phase",
+              "score": 12.593
+            },
+            {
+              "word": "sail",
+              "score": 12.593
+            }
+          ]
+        },
+        {
+          "pass": 3,
+          "topWords": [
+            "dash",
+            "sprint",
+            "blink",
+            "drift",
+            "pulse",
+            "charge",
+            "glide",
+            "slide",
+            "burst",
+            "swerve",
+            "phase",
+            "sail"
+          ],
+          "topRankings": [
+            {
+              "word": "dash",
+              "score": 35.47
+            },
+            {
+              "word": "sprint",
+              "score": 30.821
+            },
+            {
+              "word": "blink",
+              "score": 26.239
+            },
+            {
+              "word": "drift",
+              "score": 16.154
+            },
+            {
+              "word": "pulse",
+              "score": 16.154
+            },
+            {
+              "word": "charge",
+              "score": 14.485
+            },
+            {
+              "word": "glide",
+              "score": 14.485
+            },
+            {
+              "word": "slide",
+              "score": 13.492
+            },
+            {
+              "word": "burst",
+              "score": 13.189
+            },
+            {
+              "word": "swerve",
+              "score": 13.189
+            },
+            {
+              "word": "phase",
+              "score": 12.76
+            },
+            {
+              "word": "sail",
+              "score": 12.76
+            }
+          ]
+        }
+      ],
+      "chainSummaries": [
+        {
+          "category": "Mechanic Seeds",
+          "seed": "dash",
+          "rowLength": 8,
+          "focusWords": [
+            "dash",
+            "sprint",
+            "blink",
+            "slide",
+            "vault",
+            "crash"
+          ],
+          "chainDigest": "dash -> sprint -> blink -> slide -> vault -> crash -> flame -> ember"
+        },
+        {
+          "category": "Mechanic Seeds",
+          "seed": "pulse",
+          "rowLength": 8,
+          "focusWords": [
+            "dash",
+            "sprint",
+            "blink",
+            "pulse",
+            "charge",
+            "burst"
+          ],
+          "chainDigest": "pulse -> charge -> burst -> echo -> phase -> dash -> sprint -> blink"
+        },
+        {
+          "category": "Mechanic Seeds",
+          "seed": "drift",
+          "rowLength": 8,
+          "focusWords": [
+            "dash",
+            "sprint",
+            "blink",
+            "drift",
+            "glide",
+            "swerve"
+          ],
+          "chainDigest": "drift -> glide -> swerve -> skid -> sail -> dash -> sprint -> blink"
+        }
+      ]
+    },
+    {
+      "category": "Enemy Seeds",
+      "rowCount": 3,
+      "itemCount": 24,
+      "topWords": [
+        "sentry",
+        "guard",
+        "warden",
+        "drone",
+        "raider",
+        "hunter",
+        "swarm",
+        "fort",
+        "ambush",
+        "stalker",
+        "night",
+        "pack"
+      ],
+      "sampledWords": [
+        "watch",
+        "warden",
+        "swarm"
+      ],
+      "rankedSample": [
+        "drone",
+        "raider",
+        "sentry"
+      ],
+      "piecemealSamples": {
+        "heads": [
+          "sentry",
+          "raider",
+          "drone"
+        ],
+        "middles": [
+          "watch",
+          "pack",
+          "night"
+        ],
+        "tails": [
+          "command",
+          "warden"
+        ],
+        "focus": [
+          "raider",
+          "leader",
+          "ambush"
+        ]
+      },
+      "smoothedWords": [
+        "watch",
+        "warden",
+        "swarm",
+        "drone",
+        "raider",
+        "sentry",
+        "pack"
+      ],
+      "rankedPasses": [
+        {
+          "pass": 1,
+          "topWords": [
+            "sentry",
+            "guard",
+            "warden",
+            "drone",
+            "raider",
+            "hunter",
+            "swarm",
+            "fort",
+            "ambush",
+            "stalker",
+            "night",
+            "pack"
+          ],
+          "topRankings": [
+            {
+              "word": "sentry",
+              "score": 34.0
+            },
+            {
+              "word": "guard",
+              "score": 29.82
+            },
+            {
+              "word": "warden",
+              "score": 25.2
+            },
+            {
+              "word": "drone",
+              "score": 15.92
+            },
+            {
+              "word": "raider",
+              "score": 15.92
+            },
+            {
+              "word": "hunter",
+              "score": 14.14
+            },
+            {
+              "word": "swarm",
+              "score": 14.14
+            },
+            {
+              "word": "fort",
+              "score": 12.76
+            },
+            {
+              "word": "ambush",
+              "score": 12.64
+            },
+            {
+              "word": "stalker",
+              "score": 12.64
+            },
+            {
+              "word": "night",
+              "score": 12.04
+            },
+            {
+              "word": "pack",
+              "score": 12.04
+            }
+          ]
+        },
+        {
+          "pass": 2,
+          "topWords": [
+            "sentry",
+            "guard",
+            "warden",
+            "drone",
+            "raider",
+            "hunter",
+            "swarm",
+            "fort",
+            "ambush",
+            "stalker",
+            "night",
+            "pack"
+          ],
+          "topRankings": [
+            {
+              "word": "sentry",
+              "score": 35.275
+            },
+            {
+              "word": "guard",
+              "score": 30.596
+            },
+            {
+              "word": "warden",
+              "score": 26.099
+            },
+            {
+              "word": "drone",
+              "score": 16.131
+            },
+            {
+              "word": "raider",
+              "score": 16.131
+            },
+            {
+              "word": "hunter",
+              "score": 14.422
+            },
+            {
+              "word": "swarm",
+              "score": 14.422
+            },
+            {
+              "word": "fort",
+              "score": 13.343
+            },
+            {
+              "word": "ambush",
+              "score": 13.112
+            },
+            {
+              "word": "stalker",
+              "score": 13.112
+            },
+            {
+              "word": "night",
+              "score": 12.593
+            },
+            {
+              "word": "pack",
+              "score": 12.593
+            }
+          ]
+        },
+        {
+          "pass": 3,
+          "topWords": [
+            "sentry",
+            "guard",
+            "warden",
+            "drone",
+            "raider",
+            "hunter",
+            "swarm",
+            "fort",
+            "ambush",
+            "stalker",
+            "night",
+            "pack"
+          ],
+          "topRankings": [
+            {
+              "word": "sentry",
+              "score": 35.47
+            },
+            {
+              "word": "guard",
+              "score": 30.821
+            },
+            {
+              "word": "warden",
+              "score": 26.239
+            },
+            {
+              "word": "drone",
+              "score": 16.154
+            },
+            {
+              "word": "raider",
+              "score": 16.154
+            },
+            {
+              "word": "hunter",
+              "score": 14.485
+            },
+            {
+              "word": "swarm",
+              "score": 14.485
+            },
+            {
+              "word": "fort",
+              "score": 13.492
+            },
+            {
+              "word": "ambush",
+              "score": 13.189
+            },
+            {
+              "word": "stalker",
+              "score": 13.189
+            },
+            {
+              "word": "night",
+              "score": 12.76
+            },
+            {
+              "word": "pack",
+              "score": 12.76
+            }
+          ]
+        }
+      ],
+      "chainSummaries": [
+        {
+          "category": "Enemy Seeds",
+          "seed": "sentry",
+          "rowLength": 8,
+          "focusWords": [
+            "sentry",
+            "guard",
+            "warden",
+            "fort",
+            "watch",
+            "commander"
+          ],
+          "chainDigest": "sentry -> guard -> warden -> fort -> watch -> commander -> leader -> command"
+        },
+        {
+          "category": "Enemy Seeds",
+          "seed": "raider",
+          "rowLength": 8,
+          "focusWords": [
+            "sentry",
+            "guard",
+            "warden",
+            "raider",
+            "hunter",
+            "ambush"
+          ],
+          "chainDigest": "raider -> hunter -> ambush -> claw -> pack -> sentry -> guard -> warden"
+        },
+        {
+          "category": "Enemy Seeds",
+          "seed": "drone",
+          "rowLength": 8,
+          "focusWords": [
+            "sentry",
+            "guard",
+            "warden",
+            "drone",
+            "swarm",
+            "stalker"
+          ],
+          "chainDigest": "drone -> swarm -> stalker -> scout -> night -> sentry -> guard -> warden"
+        }
+      ]
+    },
+    {
+      "category": "Progression Seeds",
+      "rowCount": 3,
+      "itemCount": 24,
+      "topWords": [
+        "unlock",
+        "ascend",
+        "evolve",
+        "converge",
+        "recover",
+        "merge",
+        "repair",
+        "discover",
+        "align",
+        "restore",
+        "complete",
+        "renew"
+      ],
+      "sampledWords": [
+        "expand",
+        "recover",
+        "merge"
+      ],
+      "rankedSample": [
+        "converge",
+        "recover",
+        "unlock"
+      ],
+      "piecemealSamples": {
+        "heads": [
+          "unlock",
+          "recover",
+          "converge"
+        ],
+        "middles": [
+          "reveal",
+          "renew",
+          "complete"
+        ],
+        "tails": [
+          "uncover",
+          "evolve"
+        ],
+        "focus": [
+          "expand",
+          "stabilize",
+          "evolve"
+        ]
+      },
+      "smoothedWords": [
+        "expand",
+        "recover",
+        "merge",
+        "converge",
+        "unlock",
+        "reveal"
+      ],
+      "rankedPasses": [
+        {
+          "pass": 1,
+          "topWords": [
+            "unlock",
+            "ascend",
+            "evolve",
+            "converge",
+            "recover",
+            "merge",
+            "repair",
+            "discover",
+            "align",
+            "restore",
+            "complete",
+            "renew"
+          ],
+          "topRankings": [
+            {
+              "word": "unlock",
+              "score": 34.0
+            },
+            {
+              "word": "ascend",
+              "score": 29.82
+            },
+            {
+              "word": "evolve",
+              "score": 25.2
+            },
+            {
+              "word": "converge",
+              "score": 15.92
+            },
+            {
+              "word": "recover",
+              "score": 15.92
+            },
+            {
+              "word": "merge",
+              "score": 14.14
+            },
+            {
+              "word": "repair",
+              "score": 14.14
+            },
+            {
+              "word": "discover",
+              "score": 12.76
+            },
+            {
+              "word": "align",
+              "score": 12.64
+            },
+            {
+              "word": "restore",
+              "score": 12.64
+            },
+            {
+              "word": "complete",
+              "score": 12.04
+            },
+            {
+              "word": "renew",
+              "score": 12.04
+            }
+          ]
+        },
+        {
+          "pass": 2,
+          "topWords": [
+            "unlock",
+            "ascend",
+            "evolve",
+            "converge",
+            "recover",
+            "merge",
+            "repair",
+            "discover",
+            "align",
+            "restore",
+            "complete",
+            "renew"
+          ],
+          "topRankings": [
+            {
+              "word": "unlock",
+              "score": 35.275
+            },
+            {
+              "word": "ascend",
+              "score": 30.596
+            },
+            {
+              "word": "evolve",
+              "score": 26.099
+            },
+            {
+              "word": "converge",
+              "score": 16.131
+            },
+            {
+              "word": "recover",
+              "score": 16.131
+            },
+            {
+              "word": "merge",
+              "score": 14.422
+            },
+            {
+              "word": "repair",
+              "score": 14.422
+            },
+            {
+              "word": "discover",
+              "score": 13.343
+            },
+            {
+              "word": "align",
+              "score": 13.112
+            },
+            {
+              "word": "restore",
+              "score": 13.112
+            },
+            {
+              "word": "complete",
+              "score": 12.593
+            },
+            {
+              "word": "renew",
+              "score": 12.593
+            }
+          ]
+        },
+        {
+          "pass": 3,
+          "topWords": [
+            "unlock",
+            "ascend",
+            "evolve",
+            "converge",
+            "recover",
+            "merge",
+            "repair",
+            "discover",
+            "align",
+            "restore",
+            "complete",
+            "renew"
+          ],
+          "topRankings": [
+            {
+              "word": "unlock",
+              "score": 35.47
+            },
+            {
+              "word": "ascend",
+              "score": 30.821
+            },
+            {
+              "word": "evolve",
+              "score": 26.239
+            },
+            {
+              "word": "converge",
+              "score": 16.154
+            },
+            {
+              "word": "recover",
+              "score": 16.154
+            },
+            {
+              "word": "merge",
+              "score": 14.485
+            },
+            {
+              "word": "repair",
+              "score": 14.485
+            },
+            {
+              "word": "discover",
+              "score": 13.492
+            },
+            {
+              "word": "align",
+              "score": 13.189
+            },
+            {
+              "word": "restore",
+              "score": 13.189
+            },
+            {
+              "word": "complete",
+              "score": 12.76
+            },
+            {
+              "word": "renew",
+              "score": 12.76
+            }
+          ]
+        }
+      ],
+      "chainSummaries": [
+        {
+          "category": "Progression Seeds",
+          "seed": "unlock",
+          "rowLength": 8,
+          "focusWords": [
+            "unlock",
+            "ascend",
+            "evolve",
+            "discover",
+            "reveal",
+            "unify"
+          ],
+          "chainDigest": "unlock -> ascend -> evolve -> discover -> reveal -> unify -> expand -> uncover"
+        },
+        {
+          "category": "Progression Seeds",
+          "seed": "recover",
+          "rowLength": 8,
+          "focusWords": [
+            "unlock",
+            "ascend",
+            "evolve",
+            "recover",
+            "repair",
+            "restore"
+          ],
+          "chainDigest": "recover -> repair -> restore -> stabilize -> renew -> unlock -> ascend -> evolve"
+        },
+        {
+          "category": "Progression Seeds",
+          "seed": "converge",
+          "rowLength": 8,
+          "focusWords": [
+            "unlock",
+            "ascend",
+            "evolve",
+            "converge",
+            "merge",
+            "align"
+          ],
+          "chainDigest": "converge -> merge -> align -> master -> complete -> unlock -> ascend -> evolve"
+        }
+      ]
+    }
+  ]
+}

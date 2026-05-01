@@ -1,46 +1,11 @@
 {
   "entries": [
     {
-      "slug": "harbor-auto-sprint",
-      "title": "Aurora Run",
+      "slug": "ancient-puzzles-guard-break",
+      "title": "Ancient Puzzles: Guard Break",
       "section": "prototypes",
-      "pagePath": "Pages/arcade/aurora-run/",
-      "metadataPath": "Pages/arcade/aurora-run/harbor-auto-sprint.json"
-    },
-    {
-      "slug": "glow-drift",
-      "title": "Lantern Drift",
-      "section": "prototypes",
-      "pagePath": "Pages/arcade/lantern-drift/",
-      "metadataPath": "Pages/arcade/lantern-drift/glow-drift.json"
-    },
-    {
-      "slug": "clockwork-courier",
-      "title": "Relay Fusion",
-      "section": "prototypes",
-      "pagePath": "Pages/arcade/relay-fusion/",
-      "metadataPath": "Pages/arcade/relay-fusion/clockwork-courier.json"
-    },
-    {
-      "slug": "riftbound-saga",
-      "title": "Lab Rift",
-      "section": "prototypes",
-      "pagePath": "Pages/arcade/lab-rift/",
-      "metadataPath": "Pages/arcade/lab-rift/riftbound-saga.json"
-    },
-    {
-      "slug": "beacon-breaker",
-      "title": "Beacon Breaker",
-      "section": "prototypes",
-      "pagePath": "Pages/arcade/beacon-breaker/",
-      "metadataPath": "Pages/arcade/beacon-breaker/beacon-breaker.json"
-    },
-    {
-      "slug": "tide-diver",
-      "title": "Tide Diver",
-      "section": "prototypes",
-      "pagePath": "Pages/arcade/tide-diver/",
-      "metadataPath": "Pages/arcade/tide-diver/tide-diver.json"
+      "pagePath": "Pages/ancient-puzzles-guard-break/",
+      "metadataPath": "Pages/ancient-puzzles-guard-break/ancient-puzzles-guard-break.json"
     },
     {
       "slug": "aurora-beacon-run",
@@ -50,6 +15,55 @@
       "metadataPath": "Pages/arcade/aurora-beacon-run/aurora-beacon-run.json"
     },
     {
+      "slug": "harbor-auto-sprint",
+      "title": "Aurora Run",
+      "section": "prototypes",
+      "pagePath": "Pages/arcade/aurora-run/",
+      "metadataPath": "Pages/arcade/aurora-run/harbor-auto-sprint.json"
+    },
+    {
+      "slug": "beacon-breaker",
+      "title": "Beacon Breaker",
+      "section": "prototypes",
+      "pagePath": "Pages/arcade/beacon-breaker/",
+      "metadataPath": "Pages/arcade/beacon-breaker/beacon-breaker.json"
+    },
+    {
+      "slug": "clocktower-pieces-guard-break",
+      "title": "Clocktower Pieces: Guard Break",
+      "section": "prototypes",
+      "pagePath": "Pages/clocktower-pieces-guard-break/",
+      "metadataPath": "Pages/clocktower-pieces-guard-break/clocktower-pieces-guard-break.json"
+    },
+    {
+      "slug": "flooded-artifacts-guard-break",
+      "title": "Flooded Artifacts: Guard Break",
+      "section": "prototypes",
+      "pagePath": "Pages/flooded-artifacts-guard-break/",
+      "metadataPath": "Pages/flooded-artifacts-guard-break/flooded-artifacts-guard-break.json"
+    },
+    {
+      "slug": "flooded-while-guard-break",
+      "title": "Flooded While: Guard Break",
+      "section": "prototypes",
+      "pagePath": "Pages/flooded-while-guard-break/",
+      "metadataPath": "Pages/flooded-while-guard-break/flooded-while-guard-break.json"
+    },
+    {
+      "slug": "riftbound-saga",
+      "title": "Lab Rift",
+      "section": "prototypes",
+      "pagePath": "Pages/arcade/lab-rift/",
+      "metadataPath": "Pages/arcade/lab-rift/riftbound-saga.json"
+    },
+    {
+      "slug": "glow-drift",
+      "title": "Lantern Drift",
+      "section": "prototypes",
+      "pagePath": "Pages/arcade/lantern-drift/",
+      "metadataPath": "Pages/arcade/lantern-drift/glow-drift.json"
+    },
+    {
       "slug": "lantern-rift-lab",
       "title": "Lantern Rift Lab",
       "section": "prototypes",
@@ -57,11 +71,60 @@
       "metadataPath": "Pages/arcade/lantern-rift-lab/lantern-rift-lab.json"
     },
     {
+      "slug": "overgrown-artifacts-guard-break",
+      "title": "Overgrown Artifacts: Guard Break",
+      "section": "prototypes",
+      "pagePath": "Pages/overgrown-artifacts-guard-break/",
+      "metadataPath": "Pages/overgrown-artifacts-guard-break/overgrown-artifacts-guard-break.json"
+    },
+    {
+      "slug": "pier-spin-swarm-break",
+      "title": "Pier Spin: Swarm Break",
+      "section": "prototypes",
+      "pagePath": "Pages/pier-spin-swarm-break/",
+      "metadataPath": "Pages/pier-spin-swarm-break/pier-spin-swarm-break.json"
+    },
+    {
       "slug": "pulse-relay-forge",
       "title": "Pulse Relay Forge",
       "section": "prototypes",
       "pagePath": "Pages/arcade/pulse-relay-forge/",
       "metadataPath": "Pages/arcade/pulse-relay-forge/pulse-relay-forge.json"
+    },
+    {
+      "slug": "clockwork-courier",
+      "title": "Relay Fusion",
+      "section": "prototypes",
+      "pagePath": "Pages/arcade/relay-fusion/",
+      "metadataPath": "Pages/arcade/relay-fusion/clockwork-courier.json"
+    },
+    {
+      "slug": "rooftop-while-guard-break",
+      "title": "Rooftop While: Guard Break",
+      "section": "prototypes",
+      "pagePath": "Pages/rooftop-while-guard-break/",
+      "metadataPath": "Pages/rooftop-while-guard-break/rooftop-while-guard-break.json"
+    },
+    {
+      "slug": "subterranean-artifacts-guard-break",
+      "title": "Subterranean Artifacts: Guard Break",
+      "section": "prototypes",
+      "pagePath": "Pages/subterranean-artifacts-guard-break/",
+      "metadataPath": "Pages/subterranean-artifacts-guard-break/subterranean-artifacts-guard-break.json"
+    },
+    {
+      "slug": "subterranean-hazards-guard-break",
+      "title": "Subterranean Hazards: Guard Break",
+      "section": "prototypes",
+      "pagePath": "Pages/subterranean-hazards-guard-break/",
+      "metadataPath": "Pages/subterranean-hazards-guard-break/subterranean-hazards-guard-break.json"
+    },
+    {
+      "slug": "tide-diver",
+      "title": "Tide Diver",
+      "section": "prototypes",
+      "pagePath": "Pages/arcade/tide-diver/",
+      "metadataPath": "Pages/arcade/tide-diver/tide-diver.json"
     },
     {
       "slug": "tideforge-arena",

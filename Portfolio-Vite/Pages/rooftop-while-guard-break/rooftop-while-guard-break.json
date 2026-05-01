@@ -1,0 +1,38 @@
+{
+  "id": "rooftop-while-guard-break",
+  "title": "Rooftop While: Guard Break",
+  "summary": "Navigate rooftop and tree spaces with sprint and crash, survive warden-led pressure, and turn each run into unify progress.",
+  "mode": "arcade-action",
+  "palette": "rooftop-while-guard-break",
+  "instructions": "WASD or Arrow keys move between patrol lanes., Shift opens a short crash window that can stun a patrol., Space emits an ember pulse that drops alert and disables nearby patrol cones.",
+  "hud": {
+    "modeLabel": "Rooftop While: Guard Break",
+    "objective": "Use sprint and crash to survive warden patrols, secure three uplinks, and hold extraction long enough to disappear."
+  },
+  "overlay": {
+    "startTitle": "Rooftop While: Guard Break",
+    "startCopy": "Navigate rooftop and tree spaces with sprint and crash, survive warden-led pressure, and turn each run into unify progress.\n\nScout routes through rooftop spaces and identify guard pressure points.\n\nUse while and ember interactions to survive, reposition, and secure rooftop uplinks.\n\nConvert each run into evolve gains that unlock stronger options and open the next challenge band.",
+    "startAction": "Launch Game"
+  },
+  "content": {
+    "hook": "Navigate rooftop and tree spaces with sprint and crash, survive warden-led pressure, and turn each run into unify progress.",
+    "actions": [
+      "sprint",
+      "crash",
+      "patrol evasion"
+    ],
+    "pressure": [
+      "warden",
+      "leader",
+      "circuitry"
+    ],
+    "rewards": [
+      "unify",
+      "evolve",
+      "discover"
+    ],
+    "runtimeTemplate": "stealth_patrol",
+    "mechanicFamily": "stealth patrol"
+  },
+  "image": ""
+}

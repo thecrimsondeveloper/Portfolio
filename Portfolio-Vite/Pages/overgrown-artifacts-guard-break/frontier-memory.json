@@ -1,0 +1,177 @@
+{
+  "gameTitle": "Overgrown Artifacts: Guard Break",
+  "profile": {
+    "seedContract": {
+      "sourceSeed": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-iksziokr/brainstorm-seed.json",
+      "sourceSummary": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-iksziokr/brainstorm-summary.json",
+      "sourceSamples": {
+        "environment": [
+          "overgrown",
+          "tree",
+          "pier",
+          "forest",
+          "greenhouse",
+          "festival"
+        ],
+        "mechanics": [
+          "artifacts",
+          "ember",
+          "crash",
+          "flame",
+          "sprint",
+          "slide",
+          "collect"
+        ],
+        "enemies": [
+          "guard",
+          "sentry",
+          "fort",
+          "commander",
+          "leader",
+          "industrial"
+        ],
+        "progression": [
+          "evolve",
+          "unify",
+          "discover",
+          "expand",
+          "unlock",
+          "unmask"
+        ]
+      }
+    },
+    "mechanicFamily": "stealth patrol",
+    "runtimeTemplate": "stealth_patrol",
+    "pacing": "18 minutes",
+    "spatialStructure": "patrol grid",
+    "failurePressure": [
+      "warden",
+      "leader",
+      "industrial",
+      "overgrown",
+      "tree",
+      "pier",
+      "forest"
+    ],
+    "progressionShape": [
+      "unify",
+      "evolve",
+      "evolve",
+      "unify",
+      "discover",
+      "expand",
+      "Each run converts performance into unify, evolve upgrades and route unlocks."
+    ],
+    "presentationRules": [
+      "A stylized world blending overgrown, tree, and shifting threat territory.",
+      "Lean on overgrown, tree, and guard motifs for strong silhouettes, readable threat zones, and punchy arcade contrast.",
+      "fast threat reads",
+      "clear route ownership",
+      "strong reward telegraphing"
+    ],
+    "mustPreserve": [
+      "Preserve the randomized seed contract through every stage.",
+      "Treat final-brainstorming.json as the canonical game specification.",
+      "Keep the generated game self-contained in one Pages/<slug>/ folder.",
+      "Make runtime behavior match runtimeTemplate instead of defaulting to one arena scaffold."
+    ],
+    "fallbackSource": "LM Studio unavailable during auto preflight: [Errno 61] Connection refused; deterministic fallback generation was used."
+  },
+  "canonicalPaths": {
+    "targetDir": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/overgrown-artifacts-guard-break",
+    "brainstormSeed": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/overgrown-artifacts-guard-break/brainstorm-seed.json",
+    "brainstormSummary": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/overgrown-artifacts-guard-break/brainstorm-summary.json",
+    "finalBrainstorm": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/overgrown-artifacts-guard-break/final-brainstorming.json",
+    "story": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/overgrown-artifacts-guard-break/story-structure.json",
+    "gameScript": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/overgrown-artifacts-guard-break/game.js"
+  },
+  "seedCombination": {
+    "themes": "industrial salvage",
+    "genres": "chase",
+    "environments": "overgrown greenhouse",
+    "settings": "festival night",
+    "characterMotivations": "unmask a hidden group",
+    "movementMechanics": [
+      "wall-running",
+      "slide and vault"
+    ],
+    "coreLoops": "collect and combine artifacts",
+    "progressionLoops": "assemble a map",
+    "completionLoops": "artifact assembly",
+    "rewards": [
+      "movement mastery",
+      "story fragments"
+    ],
+    "antagonists": "mischievous spirits",
+    "visualStyles": "cinematic noir lighting",
+    "audioStyles": "ambient hum",
+    "interactionPatterns": "soft physics-based control",
+    "productionFocus": "create a human-readable design spec",
+    "cameraModes": "top-down",
+    "arenaShapes": "vertical tower",
+    "primaryVerbs": "redirect",
+    "scoringModels": "delivery value",
+    "failureModes": "signal broken",
+    "enemyBehaviors": "patrol",
+    "objectiveStructures": "escort target",
+    "resourceSystems": "battery",
+    "levelProgression": "room ladder",
+    "twistConstraints": "decaying floor"
+  },
+  "stageHistory": [
+    {
+      "stage": "stage-1-brainstorm-pipeline",
+      "event": "stage",
+      "summary": "Locked final-brainstorming.json and initialized gameDesignProfile."
+    },
+    {
+      "stage": "stage-2-concept-materialization",
+      "event": "stage",
+      "summary": "Materialized concept from locked brainstorm packet."
+    },
+    {
+      "stage": "stage-3-feature-sprint-loop",
+      "event": "stage",
+      "summary": "Derived feature sprint packets from canonical brainstorm data."
+    },
+    {
+      "stage": "stage-4-design-assembly",
+      "event": "stage",
+      "summary": "Assembled design document."
+    },
+    {
+      "stage": "stage-5-build-planning-loop",
+      "event": "stage",
+      "summary": "Derived fun assessment and implementation chapters."
+    },
+    {
+      "stage": "stage-6-story-and-scaffold-materialization",
+      "event": "stage",
+      "summary": "Created story payload and runtime scaffold for stealth_patrol."
+    },
+    {
+      "stage": "stage-7-html-review-loop",
+      "event": "stage",
+      "summary": "Completed HTML shell review pass."
+    },
+    {
+      "stage": "stage-8-implementation-sprint-loop",
+      "event": "stage",
+      "summary": "Completed configured implementation sprint passes."
+    },
+    {
+      "stage": "stage-9-validation-repair-loop",
+      "event": "stage",
+      "summary": "Completed configured validation loops."
+    },
+    {
+      "stage": "stage-10-arcade-integration-loop",
+      "event": "stage",
+      "summary": "Completed arcade integration loop."
+    }
+  ],
+  "decisions": [],
+  "rejectedIdeas": [],
+  "openIssues": [],
+  "nextStageNotes": []
+}

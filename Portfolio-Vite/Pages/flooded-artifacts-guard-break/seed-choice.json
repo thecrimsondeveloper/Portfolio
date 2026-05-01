@@ -1,0 +1,38 @@
+{
+  "title": "Flooded Artifacts: Guard Break",
+  "description": "Navigate flooded and tree spaces with sprint and crash, survive warden-led pressure, and turn each run into unify progress.",
+  "objective": "Use sprint and crash to survive warden patrols, secure relic routes, and turn each run into unify, evolve progress.",
+  "seed": {
+    "themes": "mechanical festival rescue",
+    "genres": "route runner score attack",
+    "environments": "flooded market district",
+    "settings": "storm",
+    "characterMotivations": "deliver a secret package",
+    "movementMechanics": [
+      "momentum-based rolling",
+      "mirror walking"
+    ],
+    "coreLoops": "collect and combine artifacts",
+    "progressionLoops": "build a safe path",
+    "completionLoops": "artifact assembly",
+    "rewards": [
+      "resource caches",
+      "boss unlock"
+    ],
+    "antagonists": "roving security drones",
+    "visualStyles": "muted earth tones",
+    "audioStyles": "field recording textures",
+    "interactionPatterns": "environmental interaction first",
+    "productionFocus": "create a human-readable design spec",
+    "cameraModes": "cinematic follow rotating",
+    "arenaShapes": "vertical tower with bridges",
+    "primaryVerbs": "decode through hazards",
+    "scoringModels": "rescue count resource bonus",
+    "failureModes": "cargo shattered during finale",
+    "enemyBehaviors": "swarm alternating pattern",
+    "objectiveStructures": "map route before timer",
+    "resourceSystems": "signal carry penalty",
+    "levelProgression": "boss key route with checkpoints",
+    "twistConstraints": "moving goal under low battery"
+  }
+}

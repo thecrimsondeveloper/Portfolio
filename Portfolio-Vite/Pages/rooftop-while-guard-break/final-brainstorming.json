@@ -1,0 +1,396 @@
+{
+  "title": "Rooftop While: Guard Break",
+  "sourceSummary": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/rooftop-while-guard-break/brainstorm-summary.json",
+  "sourceSeed": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/rooftop-while-guard-break/brainstorm-seed.json",
+  "generatedAt": "2026-05-01T19:35:25.682447+00:00",
+  "explorationLevel": "expansive",
+  "generation": {
+    "mode": "lm_studio_chainstorm_style",
+    "endpoint": "http://127.0.0.1:9/v1/chat/completions",
+    "model": "qwen3.5-2b@q8_0",
+    "temperature": 1.0
+  },
+  "buildReady": true,
+  "injectionReady": true,
+  "oneLinePitch": "Navigate rooftop and tree spaces with sprint and crash, survive warden-led pressure, and turn each run into unify progress.",
+  "pageIdentity": {
+    "title": "Rooftop While: Guard Break",
+    "slug": "rooftop-while-guard-break",
+    "description": "Navigate rooftop and tree spaces with sprint and crash, survive warden-led pressure, and turn each run into unify progress.",
+    "objective": "Use sprint and crash to survive warden patrols, secure relic routes, and turn each run into unify, evolve progress.",
+    "overlayBriefing": "Navigate rooftop and tree spaces with sprint and crash, survive warden-led pressure, and turn each run into unify progress.\n\nScout routes through rooftop spaces and identify guard pressure points.\n\nUse while and ember interactions to survive, reposition, and secure objectives.\n\nConvert each run into evolve gains that unlock stronger options and open the next challenge band.",
+    "hudObjective": "Use sprint and crash to survive warden patrols, secure relic routes, and turn each run into unify, evolve progress."
+  },
+  "buildPacket": {
+    "featureRoots": [
+      "Movement",
+      "One Enemy Archetype",
+      "One Route Hazard"
+    ],
+    "implementationChapters": [
+      "Movement",
+      "One Enemy Archetype",
+      "One Route Hazard",
+      "Reward Loop",
+      "Full Run Pacing",
+      "Sprint Controls"
+    ],
+    "overlay": {
+      "introTitle": "Rooftop While: Guard Break",
+      "introBody": "Navigate rooftop and tree spaces with sprint and crash, survive warden-led pressure, and turn each run into unify progress.",
+      "introBriefing": "Navigate rooftop and tree spaces with sprint and crash, survive warden-led pressure, and turn each run into unify progress.\n\nScout routes through rooftop spaces and identify guard pressure points.\n\nUse while and ember interactions to survive, reposition, and secure objectives.\n\nConvert each run into evolve gains that unlock stronger options and open the next challenge band.",
+      "startHint": "Press Enter to deploy. Use WASD or Arrow keys to move, Shift to dash, and Space to pulse.",
+      "winTitle": "Route Cleared",
+      "winBody": "The exit gate is live and the relic chain is stable. Press R to run it again.",
+      "lossTitle": "Route Interrupted",
+      "lossBody": "The route collapsed under pressure. Press R to run it again."
+    },
+    "hud": {
+      "objective": "Use sprint and crash to survive warden patrols, secure relic routes, and turn each run into unify, evolve progress.",
+      "status": "Navigate rooftop and tree spaces with sprint and crash, survive warden-led pressure, and turn each run into unify progress.",
+      "fields": [
+        "objective",
+        "status",
+        "telemetry"
+      ]
+    },
+    "sceneAnchors": {
+      "playerActions": [
+        "sprint",
+        "crash",
+        "patrols"
+      ],
+      "enemyTypes": [
+        "warden",
+        "leader",
+        "circuitry"
+      ],
+      "hazards": [
+        "rooftop",
+        "tree",
+        "pier",
+        "forest"
+      ],
+      "progression": [
+        "unify",
+        "evolve"
+      ]
+    }
+  },
+  "steps": [
+    {
+      "step": "gameplay_time",
+      "question": "How long should one run last before it feels complete?",
+      "answer": "18 minutes",
+      "impact": "Sets encounter density, map size, and upgrade pacing."
+    },
+    {
+      "step": "enemy_types",
+      "question": "Which enemy types define the core pressure of the run?",
+      "answer": [
+        "warden",
+        "leader",
+        "circuitry"
+      ],
+      "impact": "Shapes encounter design, telegraphing, and fail-state tension."
+    },
+    {
+      "step": "player_actions",
+      "question": "Which verbs should the player use constantly?",
+      "answer": [
+        "sprint",
+        "crash",
+        "patrols"
+      ],
+      "impact": "Locks the feel of traversal, combat rhythm, and input complexity."
+    },
+    {
+      "step": "progression_goal",
+      "question": "What long-term objective should each run feed into?",
+      "answer": [
+        "unify",
+        "evolve"
+      ],
+      "impact": "Determines meta progression rewards and run-to-run continuity."
+    },
+    {
+      "step": "world_anchor",
+      "question": "Which environmental anchors keep the world readable and memorable?",
+      "answer": [
+        "forest",
+        "harbor"
+      ],
+      "impact": "Guides art direction, hazard framing, and level landmarks."
+    }
+  ],
+  "randomInjections": [
+    {
+      "type": "environmental_twist",
+      "value": [
+        "harbor",
+        "maintenance"
+      ],
+      "effect": "Adds a new traversal hazard or alternate route condition."
+    },
+    {
+      "type": "mechanic_modifier",
+      "value": [
+        "blink",
+        "slide"
+      ],
+      "effect": "Mutates the core verb set for a late-run variant or upgrade branch."
+    },
+    {
+      "type": "enemy_pressure",
+      "value": [
+        "warden",
+        "fort"
+      ],
+      "effect": "Introduces a new pressure pattern or elite enemy combination."
+    },
+    {
+      "type": "progression_bonus",
+      "value": [
+        "quiet",
+        "evolve"
+      ],
+      "effect": "Creates a reward spike that changes long-term routing decisions."
+    }
+  ],
+  "explorationLoops": [
+    {
+      "loop": 1,
+      "prompt": "What happens if pier traversal meets flame play under fort pressure?",
+      "injection": "Resolve the loop by rewarding quiet instead of raw score.",
+      "decision": "Keep flame as a repeatable skill test, escalate with fort, and use quiet as the reason to push deeper."
+    },
+    {
+      "loop": 2,
+      "prompt": "What happens if land traversal meets flame play under circuitry pressure?",
+      "injection": "Resolve the loop by rewarding quiet instead of raw score.",
+      "decision": "Keep flame as a repeatable skill test, escalate with circuitry, and use quiet as the reason to push deeper."
+    },
+    {
+      "loop": 3,
+      "prompt": "What happens if tree traversal meets ember play under leader pressure?",
+      "injection": "Resolve the loop by rewarding ascend instead of raw score.",
+      "decision": "Keep ember as a repeatable skill test, escalate with leader, and use ascend as the reason to push deeper."
+    },
+    {
+      "loop": 4,
+      "prompt": "What happens if tree traversal meets blink play under command pressure?",
+      "injection": "Resolve the loop by rewarding sanctuary instead of raw score.",
+      "decision": "Keep blink as a repeatable skill test, escalate with command, and use sanctuary as the reason to push deeper."
+    }
+  ],
+  "finalSpec": {
+    "sessionLength": "18 minutes",
+    "genre": "arcade action prototype",
+    "playerFantasy": "Feel like a fast improviser navigating rooftop hazards while turning sentry pressure into opportunities.",
+    "world": {
+      "setting": "A stylized world blending rooftop, tree, and shifting threat territory.",
+      "visualDirection": "Lean on rooftop, tree, and guard motifs for strong silhouettes, readable threat zones, and punchy arcade contrast.",
+      "landmarks": [
+        "rooftop",
+        "tree",
+        "pier",
+        "forest",
+        "maintenance"
+      ]
+    },
+    "coreLoop": [
+      "Scout routes through rooftop spaces and identify guard pressure points.",
+      "Use while and ember interactions to survive, reposition, and secure objectives.",
+      "Convert each run into evolve gains that unlock stronger options and open the next challenge band."
+    ],
+    "playerActions": [
+      "sprint",
+      "crash",
+      "patrols"
+    ],
+    "enemyTypes": [
+      "warden",
+      "leader",
+      "circuitry"
+    ],
+    "enemyArchetypes": [
+      {
+        "name": "warden",
+        "role": "pressure chaser",
+        "behavior": "Pushes the player off safe routes and punishes hesitation."
+      },
+      {
+        "name": "leader",
+        "role": "zone controller",
+        "behavior": "Locks down key spaces and forces rerouting."
+      },
+      {
+        "name": "circuitry",
+        "role": "ambush disruptor",
+        "behavior": "Breaks steady rhythm and spikes reaction difficulty."
+      }
+    ],
+    "progression": {
+      "metaGoal": [
+        "unify",
+        "evolve"
+      ],
+      "rewardHooks": [
+        "evolve",
+        "unify",
+        "discover",
+        "expand"
+      ],
+      "runToRunGrowth": "Each run converts performance into unify, evolve upgrades and route unlocks."
+    },
+    "runStructure": {
+      "opening": "Teach sprint movement and introduce warden reads in a low-risk rooftop route.",
+      "midgame": "Layer crash interactions, mixed enemy waves, and injection events from the exploration loops.",
+      "endgame": "Force mastery through stacked hazards, elite warden encounters, and a final unify choice."
+    },
+    "encounterDesign": {
+      "hazards": [
+        "rooftop",
+        "tree",
+        "pier",
+        "forest"
+      ],
+      "enemyCompositions": [
+        "Keep flame as a repeatable skill test, escalate with fort, and use quiet as the reason to push deeper.",
+        "Keep flame as a repeatable skill test, escalate with circuitry, and use quiet as the reason to push deeper.",
+        "Keep ember as a repeatable skill test, escalate with leader, and use ascend as the reason to push deeper."
+      ],
+      "difficultyRamp": "Ramp through route compression, enemy overlap, and stronger reward bait rather than pure health inflation."
+    },
+    "economy": {
+      "currencies": [
+        "evolve",
+        "unify",
+        "discover"
+      ],
+      "spenders": [
+        "environmental_twist",
+        "mechanic_modifier",
+        "enemy_pressure",
+        "progression_bonus"
+      ],
+      "riskReward": "Offer stronger progression currency on routes with denser threat overlap and harder extraction paths."
+    },
+    "ui": {
+      "hud": [
+        "health",
+        "charge meter",
+        "route objective",
+        "reward tracker"
+      ],
+      "readabilityGoals": [
+        "fast threat reads",
+        "clear route ownership",
+        "strong reward telegraphing"
+      ]
+    },
+    "audio": {
+      "tone": "Punchy arcade percussion with environmental accents tied to route danger.",
+      "feedback": [
+        "impact stingers",
+        "threat warning pings",
+        "upgrade reward swells"
+      ]
+    },
+    "technicalBuild": {
+      "scope": "Small browser-playable prototype",
+      "systemsNeeded": [
+        "player controller",
+        "enemy director",
+        "upgrade loop",
+        "hazard routing",
+        "HUD"
+      ],
+      "prototypeOrder": [
+        "movement",
+        "one enemy archetype",
+        "one route hazard",
+        "reward loop",
+        "full run pacing"
+      ]
+    }
+  },
+  "fallbackSource": "LM Studio unavailable during auto preflight: [Errno 61] Connection refused; deterministic fallback generation was used.",
+  "gameDesignProfile": {
+    "seedContract": {
+      "sourceSeed": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-xkal25ym/brainstorm-seed.json",
+      "sourceSummary": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-xkal25ym/brainstorm-summary.json",
+      "sourceSamples": {
+        "environment": [
+          "rooftop",
+          "tree",
+          "pier",
+          "forest",
+          "maintenance",
+          "rails"
+        ],
+        "mechanics": [
+          "while",
+          "ember",
+          "crash",
+          "flame",
+          "sprint",
+          "slide",
+          "evade"
+        ],
+        "enemies": [
+          "guard",
+          "sentry",
+          "fort",
+          "commander",
+          "leader",
+          "circuitry"
+        ],
+        "progression": [
+          "evolve",
+          "unify",
+          "discover",
+          "expand",
+          "unlock",
+          "reach"
+        ]
+      }
+    },
+    "mechanicFamily": "stealth patrol",
+    "runtimeTemplate": "stealth_patrol",
+    "pacing": "18 minutes",
+    "spatialStructure": "patrol grid",
+    "failurePressure": [
+      "warden",
+      "leader",
+      "circuitry",
+      "rooftop",
+      "tree",
+      "pier",
+      "forest"
+    ],
+    "progressionShape": [
+      "unify",
+      "evolve",
+      "evolve",
+      "unify",
+      "discover",
+      "expand",
+      "Each run converts performance into unify, evolve upgrades and route unlocks."
+    ],
+    "presentationRules": [
+      "A stylized world blending rooftop, tree, and shifting threat territory.",
+      "Lean on rooftop, tree, and guard motifs for strong silhouettes, readable threat zones, and punchy arcade contrast.",
+      "fast threat reads",
+      "clear route ownership",
+      "strong reward telegraphing"
+    ],
+    "mustPreserve": [
+      "Preserve the randomized seed contract through every stage.",
+      "Treat final-brainstorming.json as the canonical game specification.",
+      "Keep the generated game self-contained in one Pages/<slug>/ folder.",
+      "Make runtime behavior match runtimeTemplate instead of defaulting to one arena scaffold."
+    ],
+    "fallbackSource": "LM Studio unavailable during auto preflight: [Errno 61] Connection refused; deterministic fallback generation was used."
+  }
+}

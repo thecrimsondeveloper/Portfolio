@@ -1,0 +1,1203 @@
+{
+  "sourceFile": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/subterranean-hazards-guard-break/brainstorm-seed.json",
+  "generatedAt": "2026-05-01T20:20:57.190769+00:00",
+  "explorationLevel": "expansive",
+  "method": {
+    "name": "chained_inference_aggregation",
+    "rankedPassing": true,
+    "passCount": 3,
+    "topK": 12,
+    "rowTopK": 6,
+    "sampleSizePerCategory": 3,
+    "smoothSampleSize": 6,
+    "randomSeed": 7
+  },
+  "totals": {
+    "categoryCount": 4,
+    "rowCount": 12,
+    "itemCount": 96
+  },
+  "gameDesignDoc": {
+    "title": "Subterranean Hazards: Guard Break",
+    "explorationLevel": "expansive",
+    "sourceSamples": {
+      "environment": [
+        "subterranean",
+        "tree",
+        "pier",
+        "forest",
+        "library",
+        "twilight"
+      ],
+      "mechanics": [
+        "hazards",
+        "ember",
+        "crash",
+        "flame",
+        "sprint",
+        "slide",
+        "guide"
+      ],
+      "enemies": [
+        "guard",
+        "sentry",
+        "fort",
+        "commander",
+        "leader",
+        "noir"
+      ],
+      "progression": [
+        "evolve",
+        "unify",
+        "discover",
+        "expand",
+        "unlock",
+        "save"
+      ]
+    },
+    "elevatorPitch": "A expansive arcade game set between subterranean and tree, where the player uses hazards and ember actions to outmaneuver guard forces and drive a evolve-to-unify progression arc.",
+    "worldConcept": "The world blends subterranean, tree, pier into a hostile traversal space patrolled by guard, sentry, fort, pushing the player through compact but expressive runs.",
+    "coreLoop": [
+      "Scout routes through subterranean spaces and identify guard pressure points.",
+      "Use hazards and ember interactions to survive, reposition, and secure objectives.",
+      "Convert each run into evolve gains that unlock stronger options and open the next challenge band."
+    ],
+    "mechanics": {
+      "primaryActions": [
+        "hazards",
+        "ember",
+        "crash"
+      ],
+      "enemyPressure": [
+        "guard",
+        "sentry",
+        "fort"
+      ],
+      "progressionHooks": [
+        "evolve",
+        "unify",
+        "discover"
+      ]
+    },
+    "contentPillars": [
+      "Traversal built around hazards, ember, crash.",
+      "Threat reads driven by guard, sentry, fort.",
+      "Forward momentum shaped by evolve, unify, discover."
+    ],
+    "aggregatedDocument": {
+      "environmentBlend": [
+        "subterranean",
+        "tree",
+        "pier",
+        "forest"
+      ],
+      "mechanicBlend": [
+        "hazards",
+        "ember",
+        "crash",
+        "flame"
+      ],
+      "enemyBlend": [
+        "guard",
+        "sentry",
+        "fort",
+        "commander"
+      ],
+      "progressionBlend": [
+        "evolve",
+        "unify",
+        "discover",
+        "expand"
+      ],
+      "smootherSummary": "Merge subterranean, tree spaces with hazards, ember verbs, then pressure the run with guard, sentry threats and resolve it through evolve, unify growth."
+    },
+    "designDoc": {
+      "playerFantasy": "Feel like a fast improviser navigating subterranean hazards while turning sentry pressure into opportunities.",
+      "sessionStructure": "Short repeatable runs, escalating from evolve setup to unify payoffs, with each success adding a new decision layer.",
+      "visualDirection": "Lean on subterranean, tree, and guard motifs for strong silhouettes, readable threat zones, and punchy arcade contrast."
+    }
+  },
+  "categories": [
+    {
+      "category": "Environment Seeds",
+      "rowCount": 3,
+      "itemCount": 24,
+      "topWords": [
+        "harbor",
+        "dock",
+        "pier",
+        "land",
+        "forest",
+        "tree",
+        "leaf",
+        "library",
+        "subterranean",
+        "twilight"
+      ],
+      "sampledWords": [
+        "subterranean",
+        "tree",
+        "pier"
+      ],
+      "rankedSample": [
+        "forest",
+        "tree",
+        "pier"
+      ],
+      "piecemealSamples": {
+        "heads": [
+          "subterranean",
+          "library",
+          "twilight"
+        ],
+        "middles": [
+          "land"
+        ],
+        "tails": [
+          "leaf"
+        ],
+        "focus": [
+          "leaf",
+          "subterranean",
+          "dock"
+        ]
+      },
+      "smoothedWords": [
+        "subterranean",
+        "tree",
+        "pier",
+        "forest",
+        "library",
+        "twilight"
+      ],
+      "rankedPasses": [
+        {
+          "pass": 1,
+          "topWords": [
+            "harbor",
+            "dock",
+            "pier",
+            "land",
+            "forest",
+            "tree",
+            "leaf",
+            "library",
+            "subterranean",
+            "twilight"
+          ],
+          "topRankings": [
+            {
+              "word": "harbor",
+              "score": 42.42
+            },
+            {
+              "word": "dock",
+              "score": 37.92
+            },
+            {
+              "word": "pier",
+              "score": 34.32
+            },
+            {
+              "word": "land",
+              "score": 30.72
+            },
+            {
+              "word": "forest",
+              "score": 27.12
+            },
+            {
+              "word": "tree",
+              "score": 23.52
+            },
+            {
+              "word": "leaf",
+              "score": 18.84
+            },
+            {
+              "word": "library",
+              "score": 17.76
+            },
+            {
+              "word": "subterranean",
+              "score": 17.76
+            },
+            {
+              "word": "twilight",
+              "score": 17.76
+            }
+          ]
+        },
+        {
+          "pass": 2,
+          "topWords": [
+            "harbor",
+            "dock",
+            "pier",
+            "land",
+            "forest",
+            "tree",
+            "leaf",
+            "library",
+            "subterranean",
+            "twilight"
+          ],
+          "topRankings": [
+            {
+              "word": "harbor",
+              "score": 43.927
+            },
+            {
+              "word": "dock",
+              "score": 39.336
+            },
+            {
+              "word": "pier",
+              "score": 35.508
+            },
+            {
+              "word": "land",
+              "score": 31.788
+            },
+            {
+              "word": "forest",
+              "score": 28.068
+            },
+            {
+              "word": "tree",
+              "score": 24.262
+            },
+            {
+              "word": "leaf",
+              "score": 19.322
+            },
+            {
+              "word": "library",
+              "score": 18.394
+            },
+            {
+              "word": "subterranean",
+              "score": 18.394
+            },
+            {
+              "word": "twilight",
+              "score": 18.394
+            }
+          ]
+        },
+        {
+          "pass": 3,
+          "topWords": [
+            "harbor",
+            "dock",
+            "pier",
+            "land",
+            "forest",
+            "tree",
+            "leaf",
+            "library",
+            "subterranean",
+            "twilight"
+          ],
+          "topRankings": [
+            {
+              "word": "harbor",
+              "score": 44.269
+            },
+            {
+              "word": "dock",
+              "score": 39.612
+            },
+            {
+              "word": "pier",
+              "score": 35.763
+            },
+            {
+              "word": "land",
+              "score": 32.006
+            },
+            {
+              "word": "forest",
+              "score": 28.255
+            },
+            {
+              "word": "tree",
+              "score": 24.414
+            },
+            {
+              "word": "leaf",
+              "score": 19.411
+            },
+            {
+              "word": "library",
+              "score": 18.514
+            },
+            {
+              "word": "subterranean",
+              "score": 18.514
+            },
+            {
+              "word": "twilight",
+              "score": 18.514
+            }
+          ]
+        }
+      ],
+      "chainSummaries": [
+        {
+          "category": "Environment Seeds",
+          "seed": "subterranean",
+          "rowLength": 8,
+          "focusWords": [
+            "harbor",
+            "dock",
+            "pier",
+            "land",
+            "forest",
+            "tree"
+          ],
+          "chainDigest": "subterranean -> harbor -> dock -> pier -> land -> forest -> tree -> leaf"
+        },
+        {
+          "category": "Environment Seeds",
+          "seed": "library",
+          "rowLength": 8,
+          "focusWords": [
+            "harbor",
+            "dock",
+            "pier",
+            "land",
+            "forest",
+            "tree"
+          ],
+          "chainDigest": "library -> harbor -> dock -> pier -> land -> forest -> tree -> leaf"
+        },
+        {
+          "category": "Environment Seeds",
+          "seed": "twilight",
+          "rowLength": 8,
+          "focusWords": [
+            "harbor",
+            "dock",
+            "pier",
+            "land",
+            "forest",
+            "tree"
+          ],
+          "chainDigest": "twilight -> harbor -> dock -> pier -> land -> forest -> tree -> leaf"
+        }
+      ]
+    },
+    {
+      "category": "Mechanic Seeds",
+      "rowCount": 3,
+      "itemCount": 24,
+      "topWords": [
+        "dash",
+        "sprint",
+        "blink",
+        "slide",
+        "crash",
+        "flame",
+        "ember",
+        "companion",
+        "guide",
+        "hazards"
+      ],
+      "sampledWords": [
+        "hazards",
+        "ember",
+        "crash"
+      ],
+      "rankedSample": [
+        "flame",
+        "sprint",
+        "slide"
+      ],
+      "piecemealSamples": {
+        "heads": [
+          "guide",
+          "companion",
+          "hazards"
+        ],
+        "middles": [
+          "slide"
+        ],
+        "tails": [
+          "ember"
+        ],
+        "focus": [
+          "companion",
+          "dash",
+          "slide"
+        ]
+      },
+      "smoothedWords": [
+        "hazards",
+        "ember",
+        "crash",
+        "flame",
+        "sprint",
+        "slide",
+        "guide"
+      ],
+      "rankedPasses": [
+        {
+          "pass": 1,
+          "topWords": [
+            "dash",
+            "sprint",
+            "blink",
+            "slide",
+            "crash",
+            "flame",
+            "ember",
+            "companion",
+            "guide",
+            "hazards"
+          ],
+          "topRankings": [
+            {
+              "word": "dash",
+              "score": 42.42
+            },
+            {
+              "word": "sprint",
+              "score": 37.92
+            },
+            {
+              "word": "blink",
+              "score": 34.32
+            },
+            {
+              "word": "slide",
+              "score": 30.72
+            },
+            {
+              "word": "crash",
+              "score": 27.12
+            },
+            {
+              "word": "flame",
+              "score": 23.52
+            },
+            {
+              "word": "ember",
+              "score": 18.84
+            },
+            {
+              "word": "companion",
+              "score": 17.76
+            },
+            {
+              "word": "guide",
+              "score": 17.76
+            },
+            {
+              "word": "hazards",
+              "score": 17.76
+            }
+          ]
+        },
+        {
+          "pass": 2,
+          "topWords": [
+            "dash",
+            "sprint",
+            "blink",
+            "slide",
+            "crash",
+            "flame",
+            "ember",
+            "companion",
+            "guide",
+            "hazards"
+          ],
+          "topRankings": [
+            {
+              "word": "dash",
+              "score": 43.927
+            },
+            {
+              "word": "sprint",
+              "score": 39.336
+            },
+            {
+              "word": "blink",
+              "score": 35.508
+            },
+            {
+              "word": "slide",
+              "score": 31.788
+            },
+            {
+              "word": "crash",
+              "score": 28.068
+            },
+            {
+              "word": "flame",
+              "score": 24.262
+            },
+            {
+              "word": "ember",
+              "score": 19.322
+            },
+            {
+              "word": "companion",
+              "score": 18.394
+            },
+            {
+              "word": "guide",
+              "score": 18.394
+            },
+            {
+              "word": "hazards",
+              "score": 18.394
+            }
+          ]
+        },
+        {
+          "pass": 3,
+          "topWords": [
+            "dash",
+            "sprint",
+            "blink",
+            "slide",
+            "crash",
+            "flame",
+            "ember",
+            "companion",
+            "guide",
+            "hazards"
+          ],
+          "topRankings": [
+            {
+              "word": "dash",
+              "score": 44.269
+            },
+            {
+              "word": "sprint",
+              "score": 39.612
+            },
+            {
+              "word": "blink",
+              "score": 35.763
+            },
+            {
+              "word": "slide",
+              "score": 32.006
+            },
+            {
+              "word": "crash",
+              "score": 28.255
+            },
+            {
+              "word": "flame",
+              "score": 24.414
+            },
+            {
+              "word": "ember",
+              "score": 19.411
+            },
+            {
+              "word": "companion",
+              "score": 18.514
+            },
+            {
+              "word": "guide",
+              "score": 18.514
+            },
+            {
+              "word": "hazards",
+              "score": 18.514
+            }
+          ]
+        }
+      ],
+      "chainSummaries": [
+        {
+          "category": "Mechanic Seeds",
+          "seed": "guide",
+          "rowLength": 8,
+          "focusWords": [
+            "dash",
+            "sprint",
+            "blink",
+            "slide",
+            "crash",
+            "flame"
+          ],
+          "chainDigest": "guide -> dash -> sprint -> blink -> slide -> crash -> flame -> ember"
+        },
+        {
+          "category": "Mechanic Seeds",
+          "seed": "companion",
+          "rowLength": 8,
+          "focusWords": [
+            "dash",
+            "sprint",
+            "blink",
+            "slide",
+            "crash",
+            "flame"
+          ],
+          "chainDigest": "companion -> dash -> sprint -> blink -> slide -> crash -> flame -> ember"
+        },
+        {
+          "category": "Mechanic Seeds",
+          "seed": "hazards",
+          "rowLength": 8,
+          "focusWords": [
+            "dash",
+            "sprint",
+            "blink",
+            "slide",
+            "crash",
+            "flame"
+          ],
+          "chainDigest": "hazards -> dash -> sprint -> blink -> slide -> crash -> flame -> ember"
+        }
+      ]
+    },
+    {
+      "category": "Enemy Seeds",
+      "rowCount": 3,
+      "itemCount": 24,
+      "topWords": [
+        "sentry",
+        "guard",
+        "warden",
+        "commander",
+        "leader",
+        "command",
+        "fort",
+        "investigation",
+        "noir",
+        "where"
+      ],
+      "sampledWords": [
+        "guard",
+        "sentry",
+        "fort"
+      ],
+      "rankedSample": [
+        "commander",
+        "leader",
+        "sentry"
+      ],
+      "piecemealSamples": {
+        "heads": [
+          "noir",
+          "investigation",
+          "where"
+        ],
+        "middles": [
+          "commander"
+        ],
+        "tails": [
+          "fort"
+        ],
+        "focus": [
+          "commander",
+          "warden",
+          "leader"
+        ]
+      },
+      "smoothedWords": [
+        "guard",
+        "sentry",
+        "fort",
+        "commander",
+        "leader",
+        "noir"
+      ],
+      "rankedPasses": [
+        {
+          "pass": 1,
+          "topWords": [
+            "sentry",
+            "guard",
+            "warden",
+            "commander",
+            "leader",
+            "command",
+            "fort",
+            "investigation",
+            "noir",
+            "where"
+          ],
+          "topRankings": [
+            {
+              "word": "sentry",
+              "score": 42.42
+            },
+            {
+              "word": "guard",
+              "score": 37.92
+            },
+            {
+              "word": "warden",
+              "score": 34.32
+            },
+            {
+              "word": "commander",
+              "score": 30.72
+            },
+            {
+              "word": "leader",
+              "score": 27.12
+            },
+            {
+              "word": "command",
+              "score": 23.52
+            },
+            {
+              "word": "fort",
+              "score": 18.84
+            },
+            {
+              "word": "investigation",
+              "score": 17.76
+            },
+            {
+              "word": "noir",
+              "score": 17.76
+            },
+            {
+              "word": "where",
+              "score": 17.76
+            }
+          ]
+        },
+        {
+          "pass": 2,
+          "topWords": [
+            "sentry",
+            "guard",
+            "warden",
+            "commander",
+            "leader",
+            "command",
+            "fort",
+            "investigation",
+            "noir",
+            "where"
+          ],
+          "topRankings": [
+            {
+              "word": "sentry",
+              "score": 43.927
+            },
+            {
+              "word": "guard",
+              "score": 39.336
+            },
+            {
+              "word": "warden",
+              "score": 35.508
+            },
+            {
+              "word": "commander",
+              "score": 31.788
+            },
+            {
+              "word": "leader",
+              "score": 28.068
+            },
+            {
+              "word": "command",
+              "score": 24.262
+            },
+            {
+              "word": "fort",
+              "score": 19.322
+            },
+            {
+              "word": "investigation",
+              "score": 18.394
+            },
+            {
+              "word": "noir",
+              "score": 18.394
+            },
+            {
+              "word": "where",
+              "score": 18.394
+            }
+          ]
+        },
+        {
+          "pass": 3,
+          "topWords": [
+            "sentry",
+            "guard",
+            "warden",
+            "commander",
+            "leader",
+            "command",
+            "fort",
+            "investigation",
+            "noir",
+            "where"
+          ],
+          "topRankings": [
+            {
+              "word": "sentry",
+              "score": 44.269
+            },
+            {
+              "word": "guard",
+              "score": 39.612
+            },
+            {
+              "word": "warden",
+              "score": 35.763
+            },
+            {
+              "word": "commander",
+              "score": 32.006
+            },
+            {
+              "word": "leader",
+              "score": 28.255
+            },
+            {
+              "word": "command",
+              "score": 24.414
+            },
+            {
+              "word": "fort",
+              "score": 19.411
+            },
+            {
+              "word": "investigation",
+              "score": 18.514
+            },
+            {
+              "word": "noir",
+              "score": 18.514
+            },
+            {
+              "word": "where",
+              "score": 18.514
+            }
+          ]
+        }
+      ],
+      "chainSummaries": [
+        {
+          "category": "Enemy Seeds",
+          "seed": "noir",
+          "rowLength": 8,
+          "focusWords": [
+            "sentry",
+            "guard",
+            "warden",
+            "commander",
+            "leader",
+            "command"
+          ],
+          "chainDigest": "noir -> sentry -> guard -> warden -> commander -> leader -> command -> fort"
+        },
+        {
+          "category": "Enemy Seeds",
+          "seed": "investigation",
+          "rowLength": 8,
+          "focusWords": [
+            "sentry",
+            "guard",
+            "warden",
+            "commander",
+            "leader",
+            "command"
+          ],
+          "chainDigest": "investigation -> sentry -> guard -> warden -> commander -> leader -> command -> fort"
+        },
+        {
+          "category": "Enemy Seeds",
+          "seed": "where",
+          "rowLength": 8,
+          "focusWords": [
+            "sentry",
+            "guard",
+            "warden",
+            "commander",
+            "leader",
+            "command"
+          ],
+          "chainDigest": "where -> sentry -> guard -> warden -> commander -> leader -> command -> fort"
+        }
+      ]
+    },
+    {
+      "category": "Progression Seeds",
+      "rowCount": 3,
+      "itemCount": 24,
+      "topWords": [
+        "unlock",
+        "ascend",
+        "evolve",
+        "unify",
+        "expand",
+        "uncover",
+        "discover",
+        "companion",
+        "save",
+        "stranded"
+      ],
+      "sampledWords": [
+        "evolve",
+        "unify",
+        "discover"
+      ],
+      "rankedSample": [
+        "unify",
+        "expand",
+        "unlock"
+      ],
+      "piecemealSamples": {
+        "heads": [
+          "save",
+          "stranded",
+          "companion"
+        ],
+        "middles": [
+          "unify"
+        ],
+        "tails": [
+          "discover"
+        ],
+        "focus": [
+          "evolve",
+          "expand",
+          "unlock"
+        ]
+      },
+      "smoothedWords": [
+        "evolve",
+        "unify",
+        "discover",
+        "expand",
+        "unlock",
+        "save"
+      ],
+      "rankedPasses": [
+        {
+          "pass": 1,
+          "topWords": [
+            "unlock",
+            "ascend",
+            "evolve",
+            "unify",
+            "expand",
+            "uncover",
+            "discover",
+            "companion",
+            "save",
+            "stranded"
+          ],
+          "topRankings": [
+            {
+              "word": "unlock",
+              "score": 42.42
+            },
+            {
+              "word": "ascend",
+              "score": 37.92
+            },
+            {
+              "word": "evolve",
+              "score": 34.32
+            },
+            {
+              "word": "unify",
+              "score": 30.72
+            },
+            {
+              "word": "expand",
+              "score": 27.12
+            },
+            {
+              "word": "uncover",
+              "score": 23.52
+            },
+            {
+              "word": "discover",
+              "score": 18.84
+            },
+            {
+              "word": "companion",
+              "score": 17.76
+            },
+            {
+              "word": "save",
+              "score": 17.76
+            },
+            {
+              "word": "stranded",
+              "score": 17.76
+            }
+          ]
+        },
+        {
+          "pass": 2,
+          "topWords": [
+            "unlock",
+            "ascend",
+            "evolve",
+            "unify",
+            "expand",
+            "uncover",
+            "discover",
+            "companion",
+            "save",
+            "stranded"
+          ],
+          "topRankings": [
+            {
+              "word": "unlock",
+              "score": 43.927
+            },
+            {
+              "word": "ascend",
+              "score": 39.336
+            },
+            {
+              "word": "evolve",
+              "score": 35.508
+            },
+            {
+              "word": "unify",
+              "score": 31.788
+            },
+            {
+              "word": "expand",
+              "score": 28.068
+            },
+            {
+              "word": "uncover",
+              "score": 24.262
+            },
+            {
+              "word": "discover",
+              "score": 19.322
+            },
+            {
+              "word": "companion",
+              "score": 18.394
+            },
+            {
+              "word": "save",
+              "score": 18.394
+            },
+            {
+              "word": "stranded",
+              "score": 18.394
+            }
+          ]
+        },
+        {
+          "pass": 3,
+          "topWords": [
+            "unlock",
+            "ascend",
+            "evolve",
+            "unify",
+            "expand",
+            "uncover",
+            "discover",
+            "companion",
+            "save",
+            "stranded"
+          ],
+          "topRankings": [
+            {
+              "word": "unlock",
+              "score": 44.269
+            },
+            {
+              "word": "ascend",
+              "score": 39.612
+            },
+            {
+              "word": "evolve",
+              "score": 35.763
+            },
+            {
+              "word": "unify",
+              "score": 32.006
+            },
+            {
+              "word": "expand",
+              "score": 28.255
+            },
+            {
+              "word": "uncover",
+              "score": 24.414
+            },
+            {
+              "word": "discover",
+              "score": 19.411
+            },
+            {
+              "word": "companion",
+              "score": 18.514
+            },
+            {
+              "word": "save",
+              "score": 18.514
+            },
+            {
+              "word": "stranded",
+              "score": 18.514
+            }
+          ]
+        }
+      ],
+      "chainSummaries": [
+        {
+          "category": "Progression Seeds",
+          "seed": "save",
+          "rowLength": 8,
+          "focusWords": [
+            "unlock",
+            "ascend",
+            "evolve",
+            "unify",
+            "expand",
+            "uncover"
+          ],
+          "chainDigest": "save -> unlock -> ascend -> evolve -> unify -> expand -> uncover -> discover"
+        },
+        {
+          "category": "Progression Seeds",
+          "seed": "stranded",
+          "rowLength": 8,
+          "focusWords": [
+            "unlock",
+            "ascend",
+            "evolve",
+            "unify",
+            "expand",
+            "uncover"
+          ],
+          "chainDigest": "stranded -> unlock -> ascend -> evolve -> unify -> expand -> uncover -> discover"
+        },
+        {
+          "category": "Progression Seeds",
+          "seed": "companion",
+          "rowLength": 8,
+          "focusWords": [
+            "unlock",
+            "ascend",
+            "evolve",
+            "unify",
+            "expand",
+            "uncover"
+          ],
+          "chainDigest": "companion -> unlock -> ascend -> evolve -> unify -> expand -> uncover -> discover"
+        }
+      ]
+    }
+  ]
+}

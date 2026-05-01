@@ -1,0 +1,38 @@
+{
+  "title": "Clocktower Pieces: Guard Break",
+  "description": "Navigate clocktower and tree spaces with sprint and crash, survive warden-led pressure, and turn each run into unify progress.",
+  "objective": "Use sprint and crash to survive warden patrols, secure relic routes, and turn each run into unify, evolve progress.",
+  "seed": {
+    "themes": "circuitry puzzle chase",
+    "genres": "survival",
+    "environments": "clocktower interior",
+    "settings": "twilight",
+    "characterMotivations": "reach a quiet sanctuary",
+    "movementMechanics": [
+      "precision jumping",
+      "swinging from cables"
+    ],
+    "coreLoops": "collect scattered pieces",
+    "progressionLoops": "assemble a map",
+    "completionLoops": "artifact assembly",
+    "rewards": [
+      "resource caches",
+      "story fragments"
+    ],
+    "antagonists": "roving security drones",
+    "visualStyles": "muted earth tones",
+    "audioStyles": "low bass pulse",
+    "interactionPatterns": "point-and-click traversal",
+    "productionFocus": "prepare for agent-driven expansion",
+    "cameraModes": "over-the-shoulder",
+    "arenaShapes": "shrinking zone",
+    "primaryVerbs": "chase",
+    "scoringModels": "territory held",
+    "failureModes": "alarm filled",
+    "enemyBehaviors": "patrol",
+    "objectiveStructures": "steal artifact",
+    "resourceSystems": "stamina",
+    "levelProgression": "branching routes",
+    "twistConstraints": "reversed controls zone"
+  }
+}

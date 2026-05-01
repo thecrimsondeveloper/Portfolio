@@ -1,0 +1,824 @@
+{
+  "id": "overgrown-artifacts-guard-break",
+  "title": "Overgrown Artifacts: Guard Break",
+  "description": "Navigate overgrown and tree spaces with sprint and crash, survive warden-led pressure, and turn each run into unify progress.",
+  "objective": "Use sprint and crash to survive warden patrols, secure relic routes, and turn each run into unify, evolve progress.",
+  "seed": {
+    "themes": "industrial salvage",
+    "genres": "chase",
+    "environments": "overgrown greenhouse",
+    "settings": "festival night",
+    "characterMotivations": "unmask a hidden group",
+    "movementMechanics": [
+      "wall-running",
+      "slide and vault"
+    ],
+    "coreLoops": "collect and combine artifacts",
+    "progressionLoops": "assemble a map",
+    "completionLoops": "artifact assembly",
+    "rewards": [
+      "movement mastery",
+      "story fragments"
+    ],
+    "antagonists": "mischievous spirits",
+    "visualStyles": "cinematic noir lighting",
+    "audioStyles": "ambient hum",
+    "interactionPatterns": "soft physics-based control",
+    "productionFocus": "create a human-readable design spec",
+    "cameraModes": "top-down",
+    "arenaShapes": "vertical tower",
+    "primaryVerbs": "redirect",
+    "scoringModels": "delivery value",
+    "failureModes": "signal broken",
+    "enemyBehaviors": "patrol",
+    "objectiveStructures": "escort target",
+    "resourceSystems": "battery",
+    "levelProgression": "room ladder",
+    "twistConstraints": "decaying floor"
+  },
+  "hook": "Navigate overgrown and tree spaces with sprint and crash, survive warden-led pressure, and turn each run into unify progress.",
+  "uniqueness": "Feel like a fast improviser navigating overgrown hazards while turning sentry pressure into opportunities.",
+  "controls": [
+    "WASD or Arrow keys move the player through the arena.",
+    "Shift triggers a combine burst for repositioning.",
+    "Space converts sprint and crash pressure into crowd control.",
+    "Press Enter to deploy. Use WASD or Arrow keys to move, Shift to dash, and Space to pulse.",
+    "health",
+    "charge meter"
+  ],
+  "fun": {
+    "assessment": "yes - Overgrown Artifacts: Guard Break has a readable arcade core built around sprint, crash against warden, leader with a clear payoff in unify, evolve.",
+    "needs": [
+      "fast threat reads",
+      "clear route ownership",
+      "strong reward telegraphing",
+      "WASD or Arrow keys move the player through the arena.",
+      "Shift triggers a combine burst for repositioning."
+    ]
+  },
+  "design": {
+    "summary": "Navigate overgrown and tree spaces with sprint and crash, survive warden-led pressure, and turn each run into unify progress.",
+    "details": "## Overgrown Artifacts: Guard Break\n\n\t\t**Description:** Navigate overgrown and tree spaces with sprint and crash, survive warden-led pressure, and turn each run into unify progress.\n\n\t\t**Objective:** Use sprint and crash to survive warden patrols, secure relic routes, and turn each run into unify, evolve progress.\n\n\t\t**Seed Summary:**\n\t\tGenerated game seed combination:\n- Themes: industrial salvage\n- Genres: chase\n- Environments: overgrown greenhouse\n- Settings: festival night\n- Character motivations: unmask a hidden group\n- Movement mechanics: wall-running, slide and vault\n- Core loops: collect and combine artifacts\n- Progression loops: assemble a map\n- Completion loops: artifact assembly\n- Rewards: movement mastery, story fragments\n- Antagonists: mischievous spirits\n- Visual styles: cinematic noir lighting\n- Audio styles: ambient hum\n- Interaction patterns: soft physics-based control\n- Production focus: create a human-readable design spec\n- Camera modes: top-down\n- Arena shapes: vertical tower\n- Primary verbs: redirect\n- Scoring models: delivery value\n- Failure modes: signal broken\n- Enemy behaviors: patrol\n- Objective structures: escort target\n- Resource systems: battery\n- Level progression: room ladder\n- Twist constraints: decaying floor\n\n\t\t## Core Fantasy\n\n\t\tNavigate overgrown and tree spaces with sprint and crash, survive warden-led pressure, and turn each run into unify progress.\n\n\t\t## Why This Game Is Distinct\n\n\t\tFeel like a fast improviser navigating overgrown hazards while turning sentry pressure into opportunities.\n\n\t\t## Player Actions\n\n- sprint\n- crash\n- combine\n\n\t\t## Core Loop\n\n- Scout routes through overgrown spaces and identify guard pressure points.\n- Use artifacts and ember interactions to survive, reposition, and secure objectives.\n- Convert each run into evolve gains that unlock stronger options and open the next challenge band.\n- Teach sprint movement and introduce warden reads in a low-risk overgrown route.\n- Layer crash interactions, mixed enemy waves, and injection events from the exploration loops.\n- Force mastery through stacked hazards, elite warden encounters, and a final unify choice.\n\n\t\t## Pressure And Opposition\n\n- warden\n- leader\n- industrial\n- overgrown\n- tree\n- pier\n\n\t\t## Rewards And Progression\n\n- unify\n- evolve\n- discover\n- expand\n- Each run converts performance into unify, evolve upgrades and route unlocks.\n\n\t\t## Failure States\n\n- Get overwhelmed by warden.\n- Run out of time before the exit unlocks.\n- Lose health by lingering in active hazard lanes.\n\n\t\t## Visual Identity\n\n- A stylized world blending overgrown, tree, and shifting threat territory.\n- Lean on overgrown, tree, and guard motifs for strong silhouettes, readable threat zones, and punchy arcade contrast.\n- overgrown\n- tree\n- pier\n- forest\n\n\t\t## Controls And Readability\n\n- WASD or Arrow keys move the player through the arena.\n- Shift triggers a combine burst for repositioning.\n- Space converts sprint and crash pressure into crowd control.\n- Press Enter to deploy. Use WASD or Arrow keys to move, Shift to dash, and Space to pulse.\n- health\n- charge meter\n\n\t\t## JSON Data Hooks\n\n- scene layout\n- enemy waves\n- relic rewards\n- goal unlock state\n- brainstorm final spec\n- player controller\n\n\t\t## Sprint Builder Branches\n\t\t### Movement\n\n\t\t\t\t- Player promise: The player immediately feels how movement improves the route and unlocks unify.\n\t\t\t\t- Sprint objective: Implement the movement slice so the player can reliably feel sprint under warden.\n\t\t\t\t- Change packet scope: game.js, story-structure.json, index.html\n\t\t\t\t- Simulated checkpoints: Movement is driven by canonical brainstorm data rather than ad hoc prompt output., Movement is visible in live play within the first minute of a run.\n\n\t\t\t\t#### Detail Fractalization\n\t\t\t\t- Movement core slice\n  - Implement the movement behavior in the main loop.\n  - Wire player controller data into story-structure.json and runtime state.\n- Movement feedback pass\n  - Expose clear HUD and overlay feedback for movement.\n  - Validate that movement stays readable during pressure spikes.\n\n### One Enemy Archetype\n\n\t\t\t\t- Player promise: The player immediately feels how one enemy archetype improves the route and unlocks evolve.\n\t\t\t\t- Sprint objective: Implement the one enemy archetype slice so the player can reliably feel crash under leader.\n\t\t\t\t- Change packet scope: game.js, story-structure.json, index.html\n\t\t\t\t- Simulated checkpoints: One Enemy Archetype is driven by canonical brainstorm data rather than ad hoc prompt output., One Enemy Archetype is visible in live play within the first minute of a run.\n\n\t\t\t\t#### Detail Fractalization\n\t\t\t\t- One Enemy Archetype core slice\n  - Implement the one enemy archetype behavior in the main loop.\n  - Wire enemy director data into story-structure.json and runtime state.\n- One Enemy Archetype feedback pass\n  - Expose clear HUD and overlay feedback for one enemy archetype.\n  - Validate that one enemy archetype stays readable during pressure spikes.\n\n### One Route Hazard\n\n\t\t\t\t- Player promise: The player immediately feels how one route hazard improves the route and unlocks discover.\n\t\t\t\t- Sprint objective: Implement the one route hazard slice so the player can reliably feel combine under industrial.\n\t\t\t\t- Change packet scope: game.js, story-structure.json, index.html\n\t\t\t\t- Simulated checkpoints: One Route Hazard is driven by canonical brainstorm data rather than ad hoc prompt output., One Route Hazard is visible in live play within the first minute of a run.\n\n\t\t\t\t#### Detail Fractalization\n\t\t\t\t- One Route Hazard core slice\n  - Implement the one route hazard behavior in the main loop.\n  - Wire upgrade loop data into story-structure.json and runtime state.\n- One Route Hazard feedback pass\n  - Expose clear HUD and overlay feedback for one route hazard.\n  - Validate that one route hazard stays readable during pressure spikes.\n\n\t\t## Delivery Notes\n\n\t\t- Keep this game self-contained inside its own page folder.\n\t\t- Keep the HTML entry point and story JSON in the same folder.\n\t\t- Preserve a three.js + Rapier prototype structure.\n\t\t- Favor game-specific logic over shared systems.\n\t\t- Use branch-specific change packets to plan the next sprint in isolated slices.\n\n## Fun Game Assessment\n\n\t\t- Assessment: yes - Overgrown Artifacts: Guard Break has a readable arcade core built around sprint, crash against warden, leader with a clear payoff in unify, evolve.\n\n\t\t### Things Needed To Make This Game Fun\n\n- fast threat reads\n- clear route ownership\n- strong reward telegraphing\n- WASD or Arrow keys move the player through the arena.\n- Shift triggers a combine burst for repositioning.\n",
+    "chapters": [
+      "Movement",
+      "One Enemy Archetype",
+      "One Route Hazard",
+      "Reward Loop",
+      "Full Run Pacing",
+      "Sprint Controls"
+    ]
+  },
+  "brainstorm": {
+    "seedFile": "brainstorm-seed.json",
+    "summaryFile": "brainstorm-summary.json",
+    "finalFile": "final-brainstorming.json",
+    "oneLinePitch": "Navigate overgrown and tree spaces with sprint and crash, survive warden-led pressure, and turn each run into unify progress.",
+    "steps": [
+      {
+        "step": "gameplay_time",
+        "question": "How long should one run last before it feels complete?",
+        "answer": "18 minutes",
+        "impact": "Sets encounter density, map size, and upgrade pacing."
+      },
+      {
+        "step": "enemy_types",
+        "question": "Which enemy types define the core pressure of the run?",
+        "answer": [
+          "warden",
+          "leader",
+          "industrial"
+        ],
+        "impact": "Shapes encounter design, telegraphing, and fail-state tension."
+      },
+      {
+        "step": "player_actions",
+        "question": "Which verbs should the player use constantly?",
+        "answer": [
+          "sprint",
+          "crash",
+          "combine"
+        ],
+        "impact": "Locks the feel of traversal, combat rhythm, and input complexity."
+      },
+      {
+        "step": "progression_goal",
+        "question": "What long-term objective should each run feed into?",
+        "answer": [
+          "unify",
+          "evolve"
+        ],
+        "impact": "Determines meta progression rewards and run-to-run continuity."
+      },
+      {
+        "step": "world_anchor",
+        "question": "Which environmental anchors keep the world readable and memorable?",
+        "answer": [
+          "forest",
+          "harbor"
+        ],
+        "impact": "Guides art direction, hazard framing, and level landmarks."
+      }
+    ],
+    "randomInjections": [
+      {
+        "type": "environmental_twist",
+        "value": [
+          "harbor",
+          "greenhouse"
+        ],
+        "effect": "Adds a new traversal hazard or alternate route condition."
+      },
+      {
+        "type": "mechanic_modifier",
+        "value": [
+          "blink",
+          "slide"
+        ],
+        "effect": "Mutates the core verb set for a late-run variant or upgrade branch."
+      },
+      {
+        "type": "enemy_pressure",
+        "value": [
+          "warden",
+          "fort"
+        ],
+        "effect": "Introduces a new pressure pattern or elite enemy combination."
+      },
+      {
+        "type": "progression_bonus",
+        "value": [
+          "group",
+          "evolve"
+        ],
+        "effect": "Creates a reward spike that changes long-term routing decisions."
+      }
+    ],
+    "explorationLoops": [
+      {
+        "loop": 1,
+        "prompt": "What happens if pier traversal meets flame play under fort pressure?",
+        "injection": "Resolve the loop by rewarding group instead of raw score.",
+        "decision": "Keep flame as a repeatable skill test, escalate with fort, and use group as the reason to push deeper."
+      },
+      {
+        "loop": 2,
+        "prompt": "What happens if land traversal meets flame play under industrial pressure?",
+        "injection": "Resolve the loop by rewarding group instead of raw score.",
+        "decision": "Keep flame as a repeatable skill test, escalate with industrial, and use group as the reason to push deeper."
+      },
+      {
+        "loop": 3,
+        "prompt": "What happens if tree traversal meets ember play under leader pressure?",
+        "injection": "Resolve the loop by rewarding ascend instead of raw score.",
+        "decision": "Keep ember as a repeatable skill test, escalate with leader, and use ascend as the reason to push deeper."
+      },
+      {
+        "loop": 4,
+        "prompt": "What happens if tree traversal meets blink play under command pressure?",
+        "injection": "Resolve the loop by rewarding hidden instead of raw score.",
+        "decision": "Keep blink as a repeatable skill test, escalate with command, and use hidden as the reason to push deeper."
+      }
+    ],
+    "finalSpec": {
+      "sessionLength": "18 minutes",
+      "genre": "arcade action prototype",
+      "playerFantasy": "Feel like a fast improviser navigating overgrown hazards while turning sentry pressure into opportunities.",
+      "world": {
+        "setting": "A stylized world blending overgrown, tree, and shifting threat territory.",
+        "visualDirection": "Lean on overgrown, tree, and guard motifs for strong silhouettes, readable threat zones, and punchy arcade contrast.",
+        "landmarks": [
+          "overgrown",
+          "tree",
+          "pier",
+          "forest",
+          "greenhouse"
+        ]
+      },
+      "coreLoop": [
+        "Scout routes through overgrown spaces and identify guard pressure points.",
+        "Use artifacts and ember interactions to survive, reposition, and secure objectives.",
+        "Convert each run into evolve gains that unlock stronger options and open the next challenge band."
+      ],
+      "playerActions": [
+        "sprint",
+        "crash",
+        "combine"
+      ],
+      "enemyTypes": [
+        "warden",
+        "leader",
+        "industrial"
+      ],
+      "enemyArchetypes": [
+        {
+          "name": "warden",
+          "role": "pressure chaser",
+          "behavior": "Pushes the player off safe routes and punishes hesitation."
+        },
+        {
+          "name": "leader",
+          "role": "zone controller",
+          "behavior": "Locks down key spaces and forces rerouting."
+        },
+        {
+          "name": "industrial",
+          "role": "ambush disruptor",
+          "behavior": "Breaks steady rhythm and spikes reaction difficulty."
+        }
+      ],
+      "progression": {
+        "metaGoal": [
+          "unify",
+          "evolve"
+        ],
+        "rewardHooks": [
+          "evolve",
+          "unify",
+          "discover",
+          "expand"
+        ],
+        "runToRunGrowth": "Each run converts performance into unify, evolve upgrades and route unlocks."
+      },
+      "runStructure": {
+        "opening": "Teach sprint movement and introduce warden reads in a low-risk overgrown route.",
+        "midgame": "Layer crash interactions, mixed enemy waves, and injection events from the exploration loops.",
+        "endgame": "Force mastery through stacked hazards, elite warden encounters, and a final unify choice."
+      },
+      "encounterDesign": {
+        "hazards": [
+          "overgrown",
+          "tree",
+          "pier",
+          "forest"
+        ],
+        "enemyCompositions": [
+          "Keep flame as a repeatable skill test, escalate with fort, and use group as the reason to push deeper.",
+          "Keep flame as a repeatable skill test, escalate with industrial, and use group as the reason to push deeper.",
+          "Keep ember as a repeatable skill test, escalate with leader, and use ascend as the reason to push deeper."
+        ],
+        "difficultyRamp": "Ramp through route compression, enemy overlap, and stronger reward bait rather than pure health inflation."
+      },
+      "economy": {
+        "currencies": [
+          "evolve",
+          "unify",
+          "discover"
+        ],
+        "spenders": [
+          "environmental_twist",
+          "mechanic_modifier",
+          "enemy_pressure",
+          "progression_bonus"
+        ],
+        "riskReward": "Offer stronger progression currency on routes with denser threat overlap and harder extraction paths."
+      },
+      "ui": {
+        "hud": [
+          "health",
+          "charge meter",
+          "route objective",
+          "reward tracker"
+        ],
+        "readabilityGoals": [
+          "fast threat reads",
+          "clear route ownership",
+          "strong reward telegraphing"
+        ]
+      },
+      "audio": {
+        "tone": "Punchy arcade percussion with environmental accents tied to route danger.",
+        "feedback": [
+          "impact stingers",
+          "threat warning pings",
+          "upgrade reward swells"
+        ]
+      },
+      "technicalBuild": {
+        "scope": "Small browser-playable prototype",
+        "systemsNeeded": [
+          "player controller",
+          "enemy director",
+          "upgrade loop",
+          "hazard routing",
+          "HUD"
+        ],
+        "prototypeOrder": [
+          "movement",
+          "one enemy archetype",
+          "one route hazard",
+          "reward loop",
+          "full run pacing"
+        ]
+      }
+    }
+  },
+  "gameDesignProfile": {
+    "seedContract": {
+      "sourceSeed": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-iksziokr/brainstorm-seed.json",
+      "sourceSummary": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-iksziokr/brainstorm-summary.json",
+      "sourceSamples": {
+        "environment": [
+          "overgrown",
+          "tree",
+          "pier",
+          "forest",
+          "greenhouse",
+          "festival"
+        ],
+        "mechanics": [
+          "artifacts",
+          "ember",
+          "crash",
+          "flame",
+          "sprint",
+          "slide",
+          "collect"
+        ],
+        "enemies": [
+          "guard",
+          "sentry",
+          "fort",
+          "commander",
+          "leader",
+          "industrial"
+        ],
+        "progression": [
+          "evolve",
+          "unify",
+          "discover",
+          "expand",
+          "unlock",
+          "unmask"
+        ]
+      }
+    },
+    "mechanicFamily": "stealth patrol",
+    "runtimeTemplate": "stealth_patrol",
+    "pacing": "18 minutes",
+    "spatialStructure": "patrol grid",
+    "failurePressure": [
+      "warden",
+      "leader",
+      "industrial",
+      "overgrown",
+      "tree",
+      "pier",
+      "forest"
+    ],
+    "progressionShape": [
+      "unify",
+      "evolve",
+      "evolve",
+      "unify",
+      "discover",
+      "expand",
+      "Each run converts performance into unify, evolve upgrades and route unlocks."
+    ],
+    "presentationRules": [
+      "A stylized world blending overgrown, tree, and shifting threat territory.",
+      "Lean on overgrown, tree, and guard motifs for strong silhouettes, readable threat zones, and punchy arcade contrast.",
+      "fast threat reads",
+      "clear route ownership",
+      "strong reward telegraphing"
+    ],
+    "mustPreserve": [
+      "Preserve the randomized seed contract through every stage.",
+      "Treat final-brainstorming.json as the canonical game specification.",
+      "Keep the generated game self-contained in one Pages/<slug>/ folder.",
+      "Make runtime behavior match runtimeTemplate instead of defaulting to one arena scaffold."
+    ],
+    "fallbackSource": "LM Studio unavailable during auto preflight: [Errno 61] Connection refused; deterministic fallback generation was used."
+  },
+  "sprintBuilder": {
+    "mode": "branching feature design loop",
+    "detailFractalization": true,
+    "featureBranches": [
+      {
+        "feature": "Movement",
+        "sprintObjective": "Implement the movement slice so the player can reliably feel sprint under warden.",
+        "playerPromise": "The player immediately feels how movement improves the route and unlocks unify.",
+        "checkpoints": [
+          "Movement is driven by canonical brainstorm data rather than ad hoc prompt output.",
+          "Movement is visible in live play within the first minute of a run."
+        ],
+        "acceptance": [
+          "The player can describe what movement does after one run.",
+          "Movement remains readable without breaking the current arena loop."
+        ],
+        "scope": [
+          "game.js",
+          "story-structure.json",
+          "index.html"
+        ],
+        "risks": [
+          "Movement could sprawl beyond the canonical build packet if extra systems are added.",
+          "Movement could reduce readability if feedback does not stay compact."
+        ],
+        "branches": [
+          {
+            "branch": "Movement core slice",
+            "tasks": [
+              "Implement the movement behavior in the main loop.",
+              "Wire player controller data into story-structure.json and runtime state."
+            ]
+          },
+          {
+            "branch": "Movement feedback pass",
+            "tasks": [
+              "Expose clear HUD and overlay feedback for movement.",
+              "Validate that movement stays readable during pressure spikes."
+            ]
+          }
+        ]
+      },
+      {
+        "feature": "One Enemy Archetype",
+        "sprintObjective": "Implement the one enemy archetype slice so the player can reliably feel crash under leader.",
+        "playerPromise": "The player immediately feels how one enemy archetype improves the route and unlocks evolve.",
+        "checkpoints": [
+          "One Enemy Archetype is driven by canonical brainstorm data rather than ad hoc prompt output.",
+          "One Enemy Archetype is visible in live play within the first minute of a run."
+        ],
+        "acceptance": [
+          "The player can describe what one enemy archetype does after one run.",
+          "One Enemy Archetype remains readable without breaking the current arena loop."
+        ],
+        "scope": [
+          "game.js",
+          "story-structure.json",
+          "index.html"
+        ],
+        "risks": [
+          "One Enemy Archetype could sprawl beyond the canonical build packet if extra systems are added.",
+          "One Enemy Archetype could reduce readability if feedback does not stay compact."
+        ],
+        "branches": [
+          {
+            "branch": "One Enemy Archetype core slice",
+            "tasks": [
+              "Implement the one enemy archetype behavior in the main loop.",
+              "Wire enemy director data into story-structure.json and runtime state."
+            ]
+          },
+          {
+            "branch": "One Enemy Archetype feedback pass",
+            "tasks": [
+              "Expose clear HUD and overlay feedback for one enemy archetype.",
+              "Validate that one enemy archetype stays readable during pressure spikes."
+            ]
+          }
+        ]
+      },
+      {
+        "feature": "One Route Hazard",
+        "sprintObjective": "Implement the one route hazard slice so the player can reliably feel combine under industrial.",
+        "playerPromise": "The player immediately feels how one route hazard improves the route and unlocks discover.",
+        "checkpoints": [
+          "One Route Hazard is driven by canonical brainstorm data rather than ad hoc prompt output.",
+          "One Route Hazard is visible in live play within the first minute of a run."
+        ],
+        "acceptance": [
+          "The player can describe what one route hazard does after one run.",
+          "One Route Hazard remains readable without breaking the current arena loop."
+        ],
+        "scope": [
+          "game.js",
+          "story-structure.json",
+          "index.html"
+        ],
+        "risks": [
+          "One Route Hazard could sprawl beyond the canonical build packet if extra systems are added.",
+          "One Route Hazard could reduce readability if feedback does not stay compact."
+        ],
+        "branches": [
+          {
+            "branch": "One Route Hazard core slice",
+            "tasks": [
+              "Implement the one route hazard behavior in the main loop.",
+              "Wire upgrade loop data into story-structure.json and runtime state."
+            ]
+          },
+          {
+            "branch": "One Route Hazard feedback pass",
+            "tasks": [
+              "Expose clear HUD and overlay feedback for one route hazard.",
+              "Validate that one route hazard stays readable during pressure spikes."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "scene": {
+    "arena": {
+      "width": 54,
+      "depth": 54,
+      "groundColor": "#08140f",
+      "laneColor": "#23402f",
+      "accentColor": "#9bff6e",
+      "fogColor": "#091120",
+      "skyColor": "#050813"
+    },
+    "player": {
+      "start": {
+        "x": 0,
+        "y": 0.9,
+        "z": 18
+      },
+      "radius": 0.9,
+      "color": "#8bd8ff",
+      "speed": 7.2,
+      "dashSpeed": 24.0,
+      "dashCooldown": 2.2,
+      "pulseRadius": 5.5,
+      "pulseCooldown": 4.2,
+      "maxHealth": 100
+    },
+    "goal": {
+      "position": {
+        "x": 0,
+        "y": 0.4,
+        "z": -20
+      },
+      "radius": 2.6,
+      "color": "#7df9ff",
+      "unlockRelics": 2
+    },
+    "relics": [
+      {
+        "label": "Evolve",
+        "position": {
+          "x": -18,
+          "y": 1.2,
+          "z": 0
+        },
+        "color": "#7cffc9"
+      },
+      {
+        "label": "Unify",
+        "position": {
+          "x": 18,
+          "y": 1.2,
+          "z": -4
+        },
+        "color": "#8bd8ff"
+      },
+      {
+        "label": "Discover",
+        "position": {
+          "x": -6,
+          "y": 1.2,
+          "z": -16
+        },
+        "color": "#ffd166"
+      },
+      {
+        "label": "Expand",
+        "position": {
+          "x": 14,
+          "y": 1.2,
+          "z": 12
+        },
+        "color": "#ff9ed1"
+      }
+    ],
+    "enemies": [
+      {
+        "name": "Warden",
+        "role": "patrol detector",
+        "position": {
+          "x": -16,
+          "y": 0.9,
+          "z": -10
+        },
+        "speed": 1.19,
+        "radius": 1.0,
+        "color": "#ff8c69",
+        "pursuitRange": 10
+      },
+      {
+        "name": "Leader",
+        "role": "patrol detector",
+        "position": {
+          "x": 14,
+          "y": 0.9,
+          "z": -14
+        },
+        "speed": 1.34,
+        "radius": 1.08,
+        "color": "#ff4f7a",
+        "pursuitRange": 12
+      },
+      {
+        "name": "Industrial",
+        "role": "patrol detector",
+        "position": {
+          "x": -12,
+          "y": 0.9,
+          "z": 12
+        },
+        "speed": 1.48,
+        "radius": 1.16,
+        "color": "#ffd166",
+        "pursuitRange": 14
+      }
+    ],
+    "hazards": [
+      {
+        "name": "Overgrown",
+        "position": {
+          "x": -8,
+          "y": 0.05,
+          "z": 0
+        },
+        "radius": 2.8,
+        "damagePerSecond": 10,
+        "color": "#4fd1ff"
+      },
+      {
+        "name": "Tree",
+        "position": {
+          "x": 8,
+          "y": 0.05,
+          "z": 8
+        },
+        "radius": 3.25,
+        "damagePerSecond": 13,
+        "color": "#ff7a45"
+      },
+      {
+        "name": "Pier",
+        "position": {
+          "x": 0,
+          "y": 0.05,
+          "z": -10
+        },
+        "radius": 3.7,
+        "damagePerSecond": 16,
+        "color": "#9bff6e"
+      }
+    ],
+    "camera": {
+      "offset": {
+        "x": 0,
+        "y": 18,
+        "z": 16
+      }
+    },
+    "weather": {
+      "rainDensity": 320
+    },
+    "rules": {
+      "goalRadius": 2.6,
+      "statusMessage": "Stay out of patrol vision, collect intel, and slip to the extraction beacon.",
+      "failStates": [
+        "Get overwhelmed by warden.",
+        "Run out of time before the exit unlocks.",
+        "Lose health by lingering in active hazard lanes."
+      ],
+      "progression": [
+        "unify",
+        "evolve",
+        "discover",
+        "expand",
+        "Each run converts performance into unify, evolve upgrades and route unlocks."
+      ],
+      "targetRelics": 2,
+      "timeLimitSeconds": 180,
+      "runtimeTemplate": "stealth_patrol",
+      "mechanicFamily": "stealth patrol",
+      "spatialStructure": "patrol grid",
+      "scoreLabel": "Intel"
+    },
+    "abilities": {
+      "verbs": [
+        "sprint",
+        "crash",
+        "combine"
+      ],
+      "summary": "Navigate overgrown and tree spaces with sprint and crash, survive warden-led pressure, and turn each run into unify progress."
+    },
+    "world": {
+      "setting": "A stylized world blending overgrown, tree, and shifting threat territory.",
+      "visualDirection": "Lean on overgrown, tree, and guard motifs for strong silhouettes, readable threat zones, and punchy arcade contrast.",
+      "landmarks": [
+        "overgrown",
+        "tree",
+        "pier",
+        "forest",
+        "greenhouse"
+      ]
+    },
+    "profile": {
+      "seedContract": {
+        "sourceSeed": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-iksziokr/brainstorm-seed.json",
+        "sourceSummary": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-iksziokr/brainstorm-summary.json",
+        "sourceSamples": {
+          "environment": [
+            "overgrown",
+            "tree",
+            "pier",
+            "forest",
+            "greenhouse",
+            "festival"
+          ],
+          "mechanics": [
+            "artifacts",
+            "ember",
+            "crash",
+            "flame",
+            "sprint",
+            "slide",
+            "collect"
+          ],
+          "enemies": [
+            "guard",
+            "sentry",
+            "fort",
+            "commander",
+            "leader",
+            "industrial"
+          ],
+          "progression": [
+            "evolve",
+            "unify",
+            "discover",
+            "expand",
+            "unlock",
+            "unmask"
+          ]
+        }
+      },
+      "mechanicFamily": "stealth patrol",
+      "runtimeTemplate": "stealth_patrol",
+      "pacing": "18 minutes",
+      "spatialStructure": "patrol grid",
+      "failurePressure": [
+        "warden",
+        "leader",
+        "industrial",
+        "overgrown",
+        "tree",
+        "pier",
+        "forest"
+      ],
+      "progressionShape": [
+        "unify",
+        "evolve",
+        "evolve",
+        "unify",
+        "discover",
+        "expand",
+        "Each run converts performance into unify, evolve upgrades and route unlocks."
+      ],
+      "presentationRules": [
+        "A stylized world blending overgrown, tree, and shifting threat territory.",
+        "Lean on overgrown, tree, and guard motifs for strong silhouettes, readable threat zones, and punchy arcade contrast.",
+        "fast threat reads",
+        "clear route ownership",
+        "strong reward telegraphing"
+      ],
+      "mustPreserve": [
+        "Preserve the randomized seed contract through every stage.",
+        "Treat final-brainstorming.json as the canonical game specification.",
+        "Keep the generated game self-contained in one Pages/<slug>/ folder.",
+        "Make runtime behavior match runtimeTemplate instead of defaulting to one arena scaffold."
+      ],
+      "fallbackSource": "LM Studio unavailable during auto preflight: [Errno 61] Connection refused; deterministic fallback generation was used."
+    }
+  },
+  "story": {
+    "start": "intro",
+    "nodes": [
+      {
+        "id": "intro",
+        "title": "Introduction",
+        "text": "Navigate overgrown and tree spaces with sprint and crash, survive warden-led pressure, and turn each run into unify progress.\n\nScout routes through overgrown spaces and identify guard pressure points.\n\nUse artifacts and ember interactions to survive, reposition, and secure objectives.\n\nConvert each run into evolve gains that unlock stronger options and open the next challenge band.",
+        "choices": []
+      },
+      {
+        "id": "exploration-loop-1",
+        "title": "Exploration Loop 1",
+        "text": "What happens if pier traversal meets flame play under fort pressure? Keep flame as a repeatable skill test, escalate with fort, and use group as the reason to push deeper.",
+        "choices": []
+      },
+      {
+        "id": "exploration-loop-2",
+        "title": "Exploration Loop 2",
+        "text": "What happens if land traversal meets flame play under industrial pressure? Keep flame as a repeatable skill test, escalate with industrial, and use group as the reason to push deeper.",
+        "choices": []
+      },
+      {
+        "id": "exploration-loop-3",
+        "title": "Exploration Loop 3",
+        "text": "What happens if tree traversal meets ember play under leader pressure? Keep ember as a repeatable skill test, escalate with leader, and use ascend as the reason to push deeper.",
+        "choices": []
+      }
+    ]
+  },
+  "delivery": {
+    "format": "story-driven JSON nodes",
+    "note": "scene layout, enemy waves, relic rewards, goal unlock state, brainstorm final spec, player controller",
+    "prototypeScope": "Small browser-playable prototype"
+  }
+}

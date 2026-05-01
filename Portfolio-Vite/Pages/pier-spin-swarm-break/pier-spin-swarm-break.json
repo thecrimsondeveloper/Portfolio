@@ -1,0 +1,38 @@
+{
+  "id": "pier-spin-swarm-break",
+  "title": "Pier Spin: Swarm Break",
+  "summary": "A spin-based arcade where players outmaneuver swarm forces to unlock the peak.",
+  "mode": "arcade-action",
+  "palette": "pier-spin-swarm-break",
+  "instructions": "WASD or Arrow keys move through the factory lanes, Shift triggers a quick dodge step for escaping sightlines, Space uses your pulse action to interrupt nearby threats or hazards",
+  "hud": {
+    "modeLabel": "Pier Spin: Swarm Break",
+    "objective": "Use spin and sprint to survive glitch patrols, secure relic routes, and turn each run into unveil, unlock progress."
+  },
+  "overlay": {
+    "startTitle": "Pier Spin: Swarm Break",
+    "startCopy": "A spin-based arcade where players outmaneuver swarm forces to unlock the peak.\n\nSpin a block to stack it; if a swarm is nearby, dodge or attack first.\n\nSurvive compact but expressive runs filled with glitchy mechanics and pushing hazards.\n\nUnveil the peak's secrets by managing upgrades as you progress through layers.",
+    "startAction": "Launch Game"
+  },
+  "content": {
+    "hook": "A spin-based arcade where players outmaneuver swarm forces to unlock the peak.",
+    "actions": [
+      "spin",
+      "sprint",
+      "pivot"
+    ],
+    "pressure": [
+      "glitch",
+      "sentinel",
+      "breach"
+    ],
+    "rewards": [
+      "unveil",
+      "unlock",
+      "expand"
+    ],
+    "runtimeTemplate": "stealth_patrol",
+    "mechanicFamily": "stealth patrol"
+  },
+  "image": ""
+}

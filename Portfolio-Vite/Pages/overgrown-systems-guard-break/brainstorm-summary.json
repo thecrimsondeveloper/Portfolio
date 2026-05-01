@@ -1,0 +1,4332 @@
+{
+  "sourceFile": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/overgrown-systems-guard-break/brainstorm-seed.json",
+  "generatedAt": "2026-05-01T20:58:43.507186+00:00",
+  "explorationLevel": "expansive",
+  "method": {
+    "name": "chained_inference_aggregation",
+    "rankedPassing": true,
+    "passCount": 3,
+    "topK": 12,
+    "rowTopK": 6,
+    "sampleSizePerCategory": 3,
+    "smoothSampleSize": 6,
+    "randomSeed": 7
+  },
+  "totals": {
+    "categoryCount": 15,
+    "rowCount": 45,
+    "itemCount": 360
+  },
+  "gameDesignDoc": {
+    "title": "Overgrown Systems: Guard Break",
+    "explorationLevel": "expansive",
+    "sourceSamples": {
+      "environment": [
+        "overgrown",
+        "tree",
+        "pier",
+        "forest",
+        "greenhouse",
+        "foggy"
+      ],
+      "mechanics": [
+        "systems",
+        "ember",
+        "crash",
+        "flame",
+        "sprint",
+        "slide",
+        "rebuild"
+      ],
+      "enemies": [
+        "guard",
+        "sentry",
+        "fort",
+        "commander",
+        "leader",
+        "industrial"
+      ],
+      "progression": [
+        "evolve",
+        "unify",
+        "discover",
+        "expand",
+        "unlock",
+        "reach"
+      ]
+    },
+    "elevatorPitch": "A expansive arcade game set between overgrown and tree, where the player uses systems and ember actions to outmaneuver guard forces and drive a evolve-to-unify progression arc.",
+    "worldConcept": "The world blends overgrown, tree, pier into a hostile traversal space patrolled by guard, sentry, fort, pushing the player through compact but expressive runs.",
+    "coreLoop": [
+      "Scout routes through overgrown spaces and identify guard pressure points.",
+      "Use systems and ember interactions to survive, reposition, and secure objectives.",
+      "Convert each run into evolve gains that unlock stronger options and open the next challenge band."
+    ],
+    "mechanics": {
+      "primaryActions": [
+        "systems",
+        "ember",
+        "crash"
+      ],
+      "enemyPressure": [
+        "guard",
+        "sentry",
+        "fort"
+      ],
+      "progressionHooks": [
+        "evolve",
+        "unify",
+        "discover"
+      ]
+    },
+    "contentPillars": [
+      "Traversal built around systems, ember, crash.",
+      "Threat reads driven by guard, sentry, fort.",
+      "Forward momentum shaped by evolve, unify, discover."
+    ],
+    "aggregatedDocument": {
+      "environmentBlend": [
+        "overgrown",
+        "tree",
+        "pier",
+        "forest"
+      ],
+      "mechanicBlend": [
+        "systems",
+        "ember",
+        "crash",
+        "flame"
+      ],
+      "enemyBlend": [
+        "guard",
+        "sentry",
+        "fort",
+        "commander"
+      ],
+      "progressionBlend": [
+        "evolve",
+        "unify",
+        "discover",
+        "expand"
+      ],
+      "smootherSummary": "Merge overgrown, tree spaces with systems, ember verbs, then pressure the run with guard, sentry threats and resolve it through evolve, unify growth."
+    },
+    "designDoc": {
+      "playerFantasy": "Feel like a fast improviser navigating overgrown hazards while turning sentry pressure into opportunities.",
+      "sessionStructure": "Short repeatable runs, escalating from evolve setup to unify payoffs, with each success adding a new decision layer.",
+      "visualDirection": "Lean on overgrown, tree, and guard motifs for strong silhouettes, readable threat zones, and punchy arcade contrast."
+    }
+  },
+  "categories": [
+    {
+      "category": "Environment Seeds",
+      "rowCount": 3,
+      "itemCount": 24,
+      "topWords": [
+        "harbor",
+        "dock",
+        "pier",
+        "land",
+        "forest",
+        "tree",
+        "leaf",
+        "foggy",
+        "greenhouse",
+        "overgrown"
+      ],
+      "sampledWords": [
+        "overgrown",
+        "tree",
+        "pier"
+      ],
+      "rankedSample": [
+        "forest",
+        "tree",
+        "pier"
+      ],
+      "piecemealSamples": {
+        "heads": [
+          "overgrown",
+          "greenhouse",
+          "foggy"
+        ],
+        "middles": [
+          "land"
+        ],
+        "tails": [
+          "leaf"
+        ],
+        "focus": [
+          "leaf",
+          "overgrown",
+          "dock"
+        ]
+      },
+      "smoothedWords": [
+        "overgrown",
+        "tree",
+        "pier",
+        "forest",
+        "greenhouse",
+        "foggy"
+      ],
+      "rankedPasses": [
+        {
+          "pass": 1,
+          "topWords": [
+            "harbor",
+            "dock",
+            "pier",
+            "land",
+            "forest",
+            "tree",
+            "leaf",
+            "foggy",
+            "greenhouse",
+            "overgrown"
+          ],
+          "topRankings": [
+            {
+              "word": "harbor",
+              "score": 42.42
+            },
+            {
+              "word": "dock",
+              "score": 37.92
+            },
+            {
+              "word": "pier",
+              "score": 34.32
+            },
+            {
+              "word": "land",
+              "score": 30.72
+            },
+            {
+              "word": "forest",
+              "score": 27.12
+            },
+            {
+              "word": "tree",
+              "score": 23.52
+            },
+            {
+              "word": "leaf",
+              "score": 18.84
+            },
+            {
+              "word": "foggy",
+              "score": 17.76
+            },
+            {
+              "word": "greenhouse",
+              "score": 17.76
+            },
+            {
+              "word": "overgrown",
+              "score": 17.76
+            }
+          ]
+        },
+        {
+          "pass": 2,
+          "topWords": [
+            "harbor",
+            "dock",
+            "pier",
+            "land",
+            "forest",
+            "tree",
+            "leaf",
+            "foggy",
+            "greenhouse",
+            "overgrown"
+          ],
+          "topRankings": [
+            {
+              "word": "harbor",
+              "score": 43.927
+            },
+            {
+              "word": "dock",
+              "score": 39.336
+            },
+            {
+              "word": "pier",
+              "score": 35.508
+            },
+            {
+              "word": "land",
+              "score": 31.788
+            },
+            {
+              "word": "forest",
+              "score": 28.068
+            },
+            {
+              "word": "tree",
+              "score": 24.262
+            },
+            {
+              "word": "leaf",
+              "score": 19.322
+            },
+            {
+              "word": "foggy",
+              "score": 18.394
+            },
+            {
+              "word": "greenhouse",
+              "score": 18.394
+            },
+            {
+              "word": "overgrown",
+              "score": 18.394
+            }
+          ]
+        },
+        {
+          "pass": 3,
+          "topWords": [
+            "harbor",
+            "dock",
+            "pier",
+            "land",
+            "forest",
+            "tree",
+            "leaf",
+            "foggy",
+            "greenhouse",
+            "overgrown"
+          ],
+          "topRankings": [
+            {
+              "word": "harbor",
+              "score": 44.269
+            },
+            {
+              "word": "dock",
+              "score": 39.612
+            },
+            {
+              "word": "pier",
+              "score": 35.763
+            },
+            {
+              "word": "land",
+              "score": 32.006
+            },
+            {
+              "word": "forest",
+              "score": 28.255
+            },
+            {
+              "word": "tree",
+              "score": 24.414
+            },
+            {
+              "word": "leaf",
+              "score": 19.411
+            },
+            {
+              "word": "foggy",
+              "score": 18.514
+            },
+            {
+              "word": "greenhouse",
+              "score": 18.514
+            },
+            {
+              "word": "overgrown",
+              "score": 18.514
+            }
+          ]
+        }
+      ],
+      "chainSummaries": [
+        {
+          "category": "Environment Seeds",
+          "seed": "overgrown",
+          "rowLength": 8,
+          "focusWords": [
+            "harbor",
+            "dock",
+            "pier",
+            "land",
+            "forest",
+            "tree"
+          ],
+          "chainDigest": "overgrown -> harbor -> dock -> pier -> land -> forest -> tree -> leaf"
+        },
+        {
+          "category": "Environment Seeds",
+          "seed": "greenhouse",
+          "rowLength": 8,
+          "focusWords": [
+            "harbor",
+            "dock",
+            "pier",
+            "land",
+            "forest",
+            "tree"
+          ],
+          "chainDigest": "greenhouse -> harbor -> dock -> pier -> land -> forest -> tree -> leaf"
+        },
+        {
+          "category": "Environment Seeds",
+          "seed": "foggy",
+          "rowLength": 8,
+          "focusWords": [
+            "harbor",
+            "dock",
+            "pier",
+            "land",
+            "forest",
+            "tree"
+          ],
+          "chainDigest": "foggy -> harbor -> dock -> pier -> land -> forest -> tree -> leaf"
+        }
+      ]
+    },
+    {
+      "category": "Genre Seeds",
+      "rowCount": 3,
+      "itemCount": 24,
+      "topWords": [
+        "stealth",
+        "stealtharcade",
+        "arcade",
+        "loop",
+        "pressure",
+        "arena",
+        "stealtharena",
+        "sneak",
+        "identity",
+        "hide",
+        "alarm",
+        "stealthpuzzle"
+      ],
+      "sampledWords": [
+        "alarm",
+        "stealtharcade",
+        "arena"
+      ],
+      "rankedSample": [
+        "arena",
+        "arcade",
+        "loop"
+      ],
+      "piecemealSamples": {
+        "heads": [
+          "stealtharena",
+          "stealth",
+          "arena"
+        ],
+        "middles": [
+          "loop",
+          "alarm"
+        ],
+        "tails": [
+          "stealthpuzzle",
+          "loop"
+        ],
+        "focus": [
+          "alarm",
+          "stealth",
+          "patrol"
+        ]
+      },
+      "smoothedWords": [
+        "alarm",
+        "stealtharcade",
+        "arena",
+        "arcade",
+        "loop",
+        "stealtharena"
+      ],
+      "rankedPasses": [
+        {
+          "pass": 1,
+          "topWords": [
+            "stealth",
+            "stealtharcade",
+            "arcade",
+            "loop",
+            "pressure",
+            "arena",
+            "stealtharena",
+            "sneak",
+            "identity",
+            "hide",
+            "stealthpuzzle",
+            "alarm"
+          ],
+          "topRankings": [
+            {
+              "word": "stealth",
+              "score": 42.62
+            },
+            {
+              "word": "stealtharcade",
+              "score": 40.04
+            },
+            {
+              "word": "arcade",
+              "score": 35.28
+            },
+            {
+              "word": "loop",
+              "score": 26.76
+            },
+            {
+              "word": "pressure",
+              "score": 18.74
+            },
+            {
+              "word": "arena",
+              "score": 17.44
+            },
+            {
+              "word": "stealtharena",
+              "score": 17.44
+            },
+            {
+              "word": "sneak",
+              "score": 16.66
+            },
+            {
+              "word": "identity",
+              "score": 15.68
+            },
+            {
+              "word": "hide",
+              "score": 12.64
+            },
+            {
+              "word": "stealthpuzzle",
+              "score": 12.56
+            },
+            {
+              "word": "alarm",
+              "score": 12.08
+            }
+          ]
+        },
+        {
+          "pass": 2,
+          "topWords": [
+            "stealth",
+            "stealtharcade",
+            "arcade",
+            "loop",
+            "pressure",
+            "arena",
+            "stealtharena",
+            "sneak",
+            "identity",
+            "hide",
+            "alarm",
+            "stealthpuzzle"
+          ],
+          "topRankings": [
+            {
+              "word": "stealth",
+              "score": 44.96
+            },
+            {
+              "word": "stealtharcade",
+              "score": 42.367
+            },
+            {
+              "word": "arcade",
+              "score": 37.56
+            },
+            {
+              "word": "loop",
+              "score": 28.233
+            },
+            {
+              "word": "pressure",
+              "score": 19.466
+            },
+            {
+              "word": "arena",
+              "score": 18.203
+            },
+            {
+              "word": "stealtharena",
+              "score": 18.203
+            },
+            {
+              "word": "sneak",
+              "score": 17.626
+            },
+            {
+              "word": "identity",
+              "score": 16.254
+            },
+            {
+              "word": "hide",
+              "score": 13.414
+            },
+            {
+              "word": "alarm",
+              "score": 13.076
+            },
+            {
+              "word": "stealthpuzzle",
+              "score": 12.882
+            }
+          ]
+        },
+        {
+          "pass": 3,
+          "topWords": [
+            "stealth",
+            "stealtharcade",
+            "arcade",
+            "loop",
+            "pressure",
+            "arena",
+            "stealtharena",
+            "sneak",
+            "identity",
+            "hide",
+            "alarm",
+            "stealthpuzzle"
+          ],
+          "topRankings": [
+            {
+              "word": "stealth",
+              "score": 45.499
+            },
+            {
+              "word": "stealtharcade",
+              "score": 43.039
+            },
+            {
+              "word": "arcade",
+              "score": 38.238
+            },
+            {
+              "word": "loop",
+              "score": 28.564
+            },
+            {
+              "word": "pressure",
+              "score": 19.688
+            },
+            {
+              "word": "arena",
+              "score": 18.389
+            },
+            {
+              "word": "stealtharena",
+              "score": 18.389
+            },
+            {
+              "word": "sneak",
+              "score": 17.968
+            },
+            {
+              "word": "identity",
+              "score": 16.366
+            },
+            {
+              "word": "hide",
+              "score": 13.574
+            },
+            {
+              "word": "alarm",
+              "score": 13.327
+            },
+            {
+              "word": "stealthpuzzle",
+              "score": 12.95
+            }
+          ]
+        }
+      ],
+      "chainSummaries": [
+        {
+          "category": "Genre Seeds",
+          "seed": "stealtharena",
+          "rowLength": 8,
+          "focusWords": [
+            "stealth",
+            "stealtharcade",
+            "arcade",
+            "loop",
+            "pressure",
+            "stealtharena"
+          ],
+          "chainDigest": "stealtharena -> stealtharcade -> stealth -> arcade -> loop -> pressure -> identity -> stealthpuzzle"
+        },
+        {
+          "category": "Genre Seeds",
+          "seed": "stealth",
+          "rowLength": 8,
+          "focusWords": [
+            "stealth",
+            "stealtharcade",
+            "arcade",
+            "loop",
+            "sneak",
+            "hide"
+          ],
+          "chainDigest": "stealth -> sneak -> hide -> patrol -> alarm -> stealtharcade -> arcade -> loop"
+        },
+        {
+          "category": "Genre Seeds",
+          "seed": "arena",
+          "rowLength": 8,
+          "focusWords": [
+            "stealth",
+            "stealtharcade",
+            "arcade",
+            "loop",
+            "pressure",
+            "arena"
+          ],
+          "chainDigest": "arena -> stealtharcade -> stealth -> arcade -> loop -> pressure -> identity -> stealthpuzzle"
+        }
+      ]
+    },
+    {
+      "category": "Camera Mode Seeds",
+      "rowCount": 3,
+      "itemCount": 24,
+      "topWords": [
+        "topdowntracking",
+        "top",
+        "down",
+        "tracking",
+        "view",
+        "isometriczoompulse",
+        "zoom",
+        "readability",
+        "isometric",
+        "diagonal",
+        "depth",
+        "angle"
+      ],
+      "sampledWords": [
+        "depth",
+        "topdowntracking",
+        "angle"
+      ],
+      "rankedSample": [
+        "tracking",
+        "top",
+        "view"
+      ],
+      "piecemealSamples": {
+        "heads": [
+          "isometriczoompulse",
+          "isometric",
+          "zoom"
+        ],
+        "middles": [
+          "tracking",
+          "angle"
+        ],
+        "tails": [
+          "framing",
+          "down"
+        ],
+        "focus": [
+          "tile",
+          "isometriczoompulse",
+          "depth"
+        ]
+      },
+      "smoothedWords": [
+        "depth",
+        "topdowntracking",
+        "angle",
+        "tracking",
+        "top",
+        "view",
+        "isometriczoompulse"
+      ],
+      "rankedPasses": [
+        {
+          "pass": 1,
+          "topWords": [
+            "topdowntracking",
+            "top",
+            "down",
+            "tracking",
+            "view",
+            "isometriczoompulse",
+            "zoom",
+            "isometric",
+            "readability",
+            "diagonal",
+            "depth",
+            "framing"
+          ],
+          "topRankings": [
+            {
+              "word": "topdowntracking",
+              "score": 37.32
+            },
+            {
+              "word": "top",
+              "score": 33.12
+            },
+            {
+              "word": "down",
+              "score": 29.16
+            },
+            {
+              "word": "tracking",
+              "score": 21.14
+            },
+            {
+              "word": "view",
+              "score": 18.08
+            },
+            {
+              "word": "isometriczoompulse",
+              "score": 17.44
+            },
+            {
+              "word": "zoom",
+              "score": 17.44
+            },
+            {
+              "word": "isometric",
+              "score": 15.92
+            },
+            {
+              "word": "readability",
+              "score": 15.68
+            },
+            {
+              "word": "diagonal",
+              "score": 14.14
+            },
+            {
+              "word": "depth",
+              "score": 12.64
+            },
+            {
+              "word": "framing",
+              "score": 12.56
+            }
+          ]
+        },
+        {
+          "pass": 2,
+          "topWords": [
+            "topdowntracking",
+            "top",
+            "down",
+            "tracking",
+            "view",
+            "isometriczoompulse",
+            "zoom",
+            "readability",
+            "isometric",
+            "diagonal",
+            "depth",
+            "framing"
+          ],
+          "topRankings": [
+            {
+              "word": "topdowntracking",
+              "score": 38.785
+            },
+            {
+              "word": "top",
+              "score": 34.311
+            },
+            {
+              "word": "down",
+              "score": 30.166
+            },
+            {
+              "word": "tracking",
+              "score": 21.946
+            },
+            {
+              "word": "view",
+              "score": 18.791
+            },
+            {
+              "word": "isometriczoompulse",
+              "score": 17.986
+            },
+            {
+              "word": "zoom",
+              "score": 17.986
+            },
+            {
+              "word": "readability",
+              "score": 16.174
+            },
+            {
+              "word": "isometric",
+              "score": 16.131
+            },
+            {
+              "word": "diagonal",
+              "score": 14.422
+            },
+            {
+              "word": "depth",
+              "score": 13.112
+            },
+            {
+              "word": "framing",
+              "score": 12.882
+            }
+          ]
+        },
+        {
+          "pass": 3,
+          "topWords": [
+            "topdowntracking",
+            "top",
+            "down",
+            "tracking",
+            "view",
+            "isometriczoompulse",
+            "zoom",
+            "readability",
+            "isometric",
+            "diagonal",
+            "depth",
+            "angle"
+          ],
+          "topRankings": [
+            {
+              "word": "topdowntracking",
+              "score": 39.104
+            },
+            {
+              "word": "top",
+              "score": 34.567
+            },
+            {
+              "word": "down",
+              "score": 30.373
+            },
+            {
+              "word": "tracking",
+              "score": 22.123
+            },
+            {
+              "word": "view",
+              "score": 18.927
+            },
+            {
+              "word": "isometriczoompulse",
+              "score": 18.103
+            },
+            {
+              "word": "zoom",
+              "score": 18.103
+            },
+            {
+              "word": "readability",
+              "score": 16.285
+            },
+            {
+              "word": "isometric",
+              "score": 16.154
+            },
+            {
+              "word": "diagonal",
+              "score": 14.485
+            },
+            {
+              "word": "depth",
+              "score": 13.189
+            },
+            {
+              "word": "angle",
+              "score": 13.041
+            }
+          ]
+        }
+      ],
+      "chainSummaries": [
+        {
+          "category": "Camera Mode Seeds",
+          "seed": "isometriczoompulse",
+          "rowLength": 8,
+          "focusWords": [
+            "topdowntracking",
+            "top",
+            "down",
+            "tracking",
+            "view",
+            "isometriczoompulse"
+          ],
+          "chainDigest": "isometriczoompulse -> topdowntracking -> top -> down -> tracking -> view -> readability -> framing"
+        },
+        {
+          "category": "Camera Mode Seeds",
+          "seed": "isometric",
+          "rowLength": 8,
+          "focusWords": [
+            "topdowntracking",
+            "top",
+            "down",
+            "isometric",
+            "diagonal",
+            "depth"
+          ],
+          "chainDigest": "isometric -> diagonal -> depth -> tile -> angle -> topdowntracking -> top -> down"
+        },
+        {
+          "category": "Camera Mode Seeds",
+          "seed": "zoom",
+          "rowLength": 8,
+          "focusWords": [
+            "topdowntracking",
+            "top",
+            "down",
+            "tracking",
+            "view",
+            "zoom"
+          ],
+          "chainDigest": "zoom -> topdowntracking -> top -> down -> tracking -> view -> readability -> framing"
+        }
+      ]
+    },
+    {
+      "category": "Arena Shape Seeds",
+      "rowCount": 3,
+      "itemCount": 24,
+      "topWords": [
+        "mazewithgates",
+        "maze",
+        "with",
+        "gates",
+        "space",
+        "route",
+        "layout",
+        "hubandspokeswithswitchbacks",
+        "spokes",
+        "switchbacks"
+      ],
+      "sampledWords": [
+        "maze",
+        "mazewithgates",
+        "hubandspokeswithswitchbacks"
+      ],
+      "rankedSample": [
+        "space",
+        "mazewithgates",
+        "with"
+      ],
+      "piecemealSamples": {
+        "heads": [
+          "hubandspokeswithswitchbacks",
+          "spokes",
+          "switchbacks"
+        ],
+        "middles": [
+          "gates"
+        ],
+        "tails": [
+          "layout"
+        ],
+        "focus": [
+          "layout",
+          "mazewithgates",
+          "gates"
+        ]
+      },
+      "smoothedWords": [
+        "maze",
+        "mazewithgates",
+        "hubandspokeswithswitchbacks",
+        "space",
+        "with",
+        "spokes"
+      ],
+      "rankedPasses": [
+        {
+          "pass": 1,
+          "topWords": [
+            "mazewithgates",
+            "maze",
+            "with",
+            "gates",
+            "space",
+            "route",
+            "layout",
+            "hubandspokeswithswitchbacks",
+            "spokes",
+            "switchbacks"
+          ],
+          "topRankings": [
+            {
+              "word": "mazewithgates",
+              "score": 42.42
+            },
+            {
+              "word": "maze",
+              "score": 37.92
+            },
+            {
+              "word": "with",
+              "score": 34.32
+            },
+            {
+              "word": "gates",
+              "score": 30.72
+            },
+            {
+              "word": "space",
+              "score": 27.12
+            },
+            {
+              "word": "route",
+              "score": 23.52
+            },
+            {
+              "word": "layout",
+              "score": 18.84
+            },
+            {
+              "word": "hubandspokeswithswitchbacks",
+              "score": 17.76
+            },
+            {
+              "word": "spokes",
+              "score": 17.76
+            },
+            {
+              "word": "switchbacks",
+              "score": 17.76
+            }
+          ]
+        },
+        {
+          "pass": 2,
+          "topWords": [
+            "mazewithgates",
+            "maze",
+            "with",
+            "gates",
+            "space",
+            "route",
+            "layout",
+            "hubandspokeswithswitchbacks",
+            "spokes",
+            "switchbacks"
+          ],
+          "topRankings": [
+            {
+              "word": "mazewithgates",
+              "score": 43.927
+            },
+            {
+              "word": "maze",
+              "score": 39.336
+            },
+            {
+              "word": "with",
+              "score": 35.508
+            },
+            {
+              "word": "gates",
+              "score": 31.788
+            },
+            {
+              "word": "space",
+              "score": 28.068
+            },
+            {
+              "word": "route",
+              "score": 24.262
+            },
+            {
+              "word": "layout",
+              "score": 19.322
+            },
+            {
+              "word": "hubandspokeswithswitchbacks",
+              "score": 18.394
+            },
+            {
+              "word": "spokes",
+              "score": 18.394
+            },
+            {
+              "word": "switchbacks",
+              "score": 18.394
+            }
+          ]
+        },
+        {
+          "pass": 3,
+          "topWords": [
+            "mazewithgates",
+            "maze",
+            "with",
+            "gates",
+            "space",
+            "route",
+            "layout",
+            "hubandspokeswithswitchbacks",
+            "spokes",
+            "switchbacks"
+          ],
+          "topRankings": [
+            {
+              "word": "mazewithgates",
+              "score": 44.269
+            },
+            {
+              "word": "maze",
+              "score": 39.612
+            },
+            {
+              "word": "with",
+              "score": 35.763
+            },
+            {
+              "word": "gates",
+              "score": 32.006
+            },
+            {
+              "word": "space",
+              "score": 28.255
+            },
+            {
+              "word": "route",
+              "score": 24.414
+            },
+            {
+              "word": "layout",
+              "score": 19.411
+            },
+            {
+              "word": "hubandspokeswithswitchbacks",
+              "score": 18.514
+            },
+            {
+              "word": "spokes",
+              "score": 18.514
+            },
+            {
+              "word": "switchbacks",
+              "score": 18.514
+            }
+          ]
+        }
+      ],
+      "chainSummaries": [
+        {
+          "category": "Arena Shape Seeds",
+          "seed": "hubandspokeswithswitchbacks",
+          "rowLength": 8,
+          "focusWords": [
+            "mazewithgates",
+            "maze",
+            "with",
+            "gates",
+            "space",
+            "route"
+          ],
+          "chainDigest": "hubandspokeswithswitchbacks -> mazewithgates -> maze -> with -> gates -> space -> route -> layout"
+        },
+        {
+          "category": "Arena Shape Seeds",
+          "seed": "spokes",
+          "rowLength": 8,
+          "focusWords": [
+            "mazewithgates",
+            "maze",
+            "with",
+            "gates",
+            "space",
+            "route"
+          ],
+          "chainDigest": "spokes -> mazewithgates -> maze -> with -> gates -> space -> route -> layout"
+        },
+        {
+          "category": "Arena Shape Seeds",
+          "seed": "switchbacks",
+          "rowLength": 8,
+          "focusWords": [
+            "mazewithgates",
+            "maze",
+            "with",
+            "gates",
+            "space",
+            "route"
+          ],
+          "chainDigest": "switchbacks -> mazewithgates -> maze -> with -> gates -> space -> route -> layout"
+        }
+      ]
+    },
+    {
+      "category": "Primary Verb Seeds",
+      "rowCount": 3,
+      "itemCount": 24,
+      "topWords": [
+        "dodgeunderpressure",
+        "dodge",
+        "under",
+        "pressure",
+        "verb",
+        "input",
+        "action",
+        "chase",
+        "chasewithtiming",
+        "timing"
+      ],
+      "sampledWords": [
+        "under",
+        "verb",
+        "pressure"
+      ],
+      "rankedSample": [
+        "under",
+        "verb",
+        "dodge"
+      ],
+      "piecemealSamples": {
+        "heads": [
+          "chasewithtiming",
+          "chase",
+          "timing"
+        ],
+        "middles": [
+          "pressure"
+        ],
+        "tails": [
+          "action"
+        ],
+        "focus": [
+          "pressure",
+          "dodgeunderpressure",
+          "timing"
+        ]
+      },
+      "smoothedWords": [
+        "under",
+        "verb",
+        "pressure",
+        "dodge",
+        "chasewithtiming",
+        "chase"
+      ],
+      "rankedPasses": [
+        {
+          "pass": 1,
+          "topWords": [
+            "dodgeunderpressure",
+            "dodge",
+            "under",
+            "pressure",
+            "verb",
+            "input",
+            "action",
+            "chase",
+            "chasewithtiming",
+            "timing"
+          ],
+          "topRankings": [
+            {
+              "word": "dodgeunderpressure",
+              "score": 42.42
+            },
+            {
+              "word": "dodge",
+              "score": 37.92
+            },
+            {
+              "word": "under",
+              "score": 34.32
+            },
+            {
+              "word": "pressure",
+              "score": 30.72
+            },
+            {
+              "word": "verb",
+              "score": 27.12
+            },
+            {
+              "word": "input",
+              "score": 23.52
+            },
+            {
+              "word": "action",
+              "score": 18.84
+            },
+            {
+              "word": "chase",
+              "score": 17.76
+            },
+            {
+              "word": "chasewithtiming",
+              "score": 17.76
+            },
+            {
+              "word": "timing",
+              "score": 17.76
+            }
+          ]
+        },
+        {
+          "pass": 2,
+          "topWords": [
+            "dodgeunderpressure",
+            "dodge",
+            "under",
+            "pressure",
+            "verb",
+            "input",
+            "action",
+            "chase",
+            "chasewithtiming",
+            "timing"
+          ],
+          "topRankings": [
+            {
+              "word": "dodgeunderpressure",
+              "score": 43.927
+            },
+            {
+              "word": "dodge",
+              "score": 39.336
+            },
+            {
+              "word": "under",
+              "score": 35.508
+            },
+            {
+              "word": "pressure",
+              "score": 31.788
+            },
+            {
+              "word": "verb",
+              "score": 28.068
+            },
+            {
+              "word": "input",
+              "score": 24.262
+            },
+            {
+              "word": "action",
+              "score": 19.322
+            },
+            {
+              "word": "chase",
+              "score": 18.394
+            },
+            {
+              "word": "chasewithtiming",
+              "score": 18.394
+            },
+            {
+              "word": "timing",
+              "score": 18.394
+            }
+          ]
+        },
+        {
+          "pass": 3,
+          "topWords": [
+            "dodgeunderpressure",
+            "dodge",
+            "under",
+            "pressure",
+            "verb",
+            "input",
+            "action",
+            "chase",
+            "chasewithtiming",
+            "timing"
+          ],
+          "topRankings": [
+            {
+              "word": "dodgeunderpressure",
+              "score": 44.269
+            },
+            {
+              "word": "dodge",
+              "score": 39.612
+            },
+            {
+              "word": "under",
+              "score": 35.763
+            },
+            {
+              "word": "pressure",
+              "score": 32.006
+            },
+            {
+              "word": "verb",
+              "score": 28.255
+            },
+            {
+              "word": "input",
+              "score": 24.414
+            },
+            {
+              "word": "action",
+              "score": 19.411
+            },
+            {
+              "word": "chase",
+              "score": 18.514
+            },
+            {
+              "word": "chasewithtiming",
+              "score": 18.514
+            },
+            {
+              "word": "timing",
+              "score": 18.514
+            }
+          ]
+        }
+      ],
+      "chainSummaries": [
+        {
+          "category": "Primary Verb Seeds",
+          "seed": "chasewithtiming",
+          "rowLength": 8,
+          "focusWords": [
+            "dodgeunderpressure",
+            "dodge",
+            "under",
+            "pressure",
+            "verb",
+            "input"
+          ],
+          "chainDigest": "chasewithtiming -> dodgeunderpressure -> dodge -> under -> pressure -> verb -> input -> action"
+        },
+        {
+          "category": "Primary Verb Seeds",
+          "seed": "chase",
+          "rowLength": 8,
+          "focusWords": [
+            "dodgeunderpressure",
+            "dodge",
+            "under",
+            "pressure",
+            "verb",
+            "input"
+          ],
+          "chainDigest": "chase -> dodgeunderpressure -> dodge -> under -> pressure -> verb -> input -> action"
+        },
+        {
+          "category": "Primary Verb Seeds",
+          "seed": "timing",
+          "rowLength": 8,
+          "focusWords": [
+            "dodgeunderpressure",
+            "dodge",
+            "under",
+            "pressure",
+            "verb",
+            "input"
+          ],
+          "chainDigest": "timing -> dodgeunderpressure -> dodge -> under -> pressure -> verb -> input -> action"
+        }
+      ]
+    },
+    {
+      "category": "Mechanic Seeds",
+      "rowCount": 3,
+      "itemCount": 24,
+      "topWords": [
+        "dash",
+        "sprint",
+        "blink",
+        "slide",
+        "crash",
+        "flame",
+        "ember",
+        "broken",
+        "rebuild",
+        "systems"
+      ],
+      "sampledWords": [
+        "systems",
+        "ember",
+        "crash"
+      ],
+      "rankedSample": [
+        "flame",
+        "sprint",
+        "slide"
+      ],
+      "piecemealSamples": {
+        "heads": [
+          "rebuild",
+          "broken",
+          "systems"
+        ],
+        "middles": [
+          "slide"
+        ],
+        "tails": [
+          "ember"
+        ],
+        "focus": [
+          "broken",
+          "dash",
+          "slide"
+        ]
+      },
+      "smoothedWords": [
+        "systems",
+        "ember",
+        "crash",
+        "flame",
+        "sprint",
+        "slide",
+        "rebuild"
+      ],
+      "rankedPasses": [
+        {
+          "pass": 1,
+          "topWords": [
+            "dash",
+            "sprint",
+            "blink",
+            "slide",
+            "crash",
+            "flame",
+            "ember",
+            "broken",
+            "rebuild",
+            "systems"
+          ],
+          "topRankings": [
+            {
+              "word": "dash",
+              "score": 42.42
+            },
+            {
+              "word": "sprint",
+              "score": 37.92
+            },
+            {
+              "word": "blink",
+              "score": 34.32
+            },
+            {
+              "word": "slide",
+              "score": 30.72
+            },
+            {
+              "word": "crash",
+              "score": 27.12
+            },
+            {
+              "word": "flame",
+              "score": 23.52
+            },
+            {
+              "word": "ember",
+              "score": 18.84
+            },
+            {
+              "word": "broken",
+              "score": 17.76
+            },
+            {
+              "word": "rebuild",
+              "score": 17.76
+            },
+            {
+              "word": "systems",
+              "score": 17.76
+            }
+          ]
+        },
+        {
+          "pass": 2,
+          "topWords": [
+            "dash",
+            "sprint",
+            "blink",
+            "slide",
+            "crash",
+            "flame",
+            "ember",
+            "broken",
+            "rebuild",
+            "systems"
+          ],
+          "topRankings": [
+            {
+              "word": "dash",
+              "score": 43.927
+            },
+            {
+              "word": "sprint",
+              "score": 39.336
+            },
+            {
+              "word": "blink",
+              "score": 35.508
+            },
+            {
+              "word": "slide",
+              "score": 31.788
+            },
+            {
+              "word": "crash",
+              "score": 28.068
+            },
+            {
+              "word": "flame",
+              "score": 24.262
+            },
+            {
+              "word": "ember",
+              "score": 19.322
+            },
+            {
+              "word": "broken",
+              "score": 18.394
+            },
+            {
+              "word": "rebuild",
+              "score": 18.394
+            },
+            {
+              "word": "systems",
+              "score": 18.394
+            }
+          ]
+        },
+        {
+          "pass": 3,
+          "topWords": [
+            "dash",
+            "sprint",
+            "blink",
+            "slide",
+            "crash",
+            "flame",
+            "ember",
+            "broken",
+            "rebuild",
+            "systems"
+          ],
+          "topRankings": [
+            {
+              "word": "dash",
+              "score": 44.269
+            },
+            {
+              "word": "sprint",
+              "score": 39.612
+            },
+            {
+              "word": "blink",
+              "score": 35.763
+            },
+            {
+              "word": "slide",
+              "score": 32.006
+            },
+            {
+              "word": "crash",
+              "score": 28.255
+            },
+            {
+              "word": "flame",
+              "score": 24.414
+            },
+            {
+              "word": "ember",
+              "score": 19.411
+            },
+            {
+              "word": "broken",
+              "score": 18.514
+            },
+            {
+              "word": "rebuild",
+              "score": 18.514
+            },
+            {
+              "word": "systems",
+              "score": 18.514
+            }
+          ]
+        }
+      ],
+      "chainSummaries": [
+        {
+          "category": "Mechanic Seeds",
+          "seed": "rebuild",
+          "rowLength": 8,
+          "focusWords": [
+            "dash",
+            "sprint",
+            "blink",
+            "slide",
+            "crash",
+            "flame"
+          ],
+          "chainDigest": "rebuild -> dash -> sprint -> blink -> slide -> crash -> flame -> ember"
+        },
+        {
+          "category": "Mechanic Seeds",
+          "seed": "broken",
+          "rowLength": 8,
+          "focusWords": [
+            "dash",
+            "sprint",
+            "blink",
+            "slide",
+            "crash",
+            "flame"
+          ],
+          "chainDigest": "broken -> dash -> sprint -> blink -> slide -> crash -> flame -> ember"
+        },
+        {
+          "category": "Mechanic Seeds",
+          "seed": "systems",
+          "rowLength": 8,
+          "focusWords": [
+            "dash",
+            "sprint",
+            "blink",
+            "slide",
+            "crash",
+            "flame"
+          ],
+          "chainDigest": "systems -> dash -> sprint -> blink -> slide -> crash -> flame -> ember"
+        }
+      ]
+    },
+    {
+      "category": "Scoring Model Seeds",
+      "rowCount": 3,
+      "itemCount": 24,
+      "topWords": [
+        "timeattackbronzeladder",
+        "time",
+        "perfect",
+        "attack",
+        "bronze",
+        "ladder",
+        "perfectroutenearmissbonus",
+        "route",
+        "score",
+        "clean",
+        "line",
+        "reward"
+      ],
+      "sampledWords": [
+        "perfectroutenearmissbonus",
+        "bronze",
+        "perfect"
+      ],
+      "rankedSample": [
+        "bronze",
+        "time",
+        "ladder"
+      ],
+      "piecemealSamples": {
+        "heads": [
+          "perfectroutenearmissbonus",
+          "perfect",
+          "route"
+        ],
+        "middles": [
+          "bronze",
+          "line"
+        ],
+        "tails": [
+          "reward",
+          "attack"
+        ],
+        "focus": [
+          "route",
+          "perfect",
+          "reward"
+        ]
+      },
+      "smoothedWords": [
+        "perfectroutenearmissbonus",
+        "bronze",
+        "perfect",
+        "time",
+        "ladder",
+        "route"
+      ],
+      "rankedPasses": [
+        {
+          "pass": 1,
+          "topWords": [
+            "timeattackbronzeladder",
+            "time",
+            "perfect",
+            "attack",
+            "bronze",
+            "ladder",
+            "perfectroutenearmissbonus",
+            "route",
+            "score",
+            "clean",
+            "reward",
+            "line"
+          ],
+          "topRankings": [
+            {
+              "word": "timeattackbronzeladder",
+              "score": 38.7
+            },
+            {
+              "word": "time",
+              "score": 33.12
+            },
+            {
+              "word": "perfect",
+              "score": 31.58
+            },
+            {
+              "word": "attack",
+              "score": 29.16
+            },
+            {
+              "word": "bronze",
+              "score": 21.14
+            },
+            {
+              "word": "ladder",
+              "score": 18.08
+            },
+            {
+              "word": "perfectroutenearmissbonus",
+              "score": 17.44
+            },
+            {
+              "word": "route",
+              "score": 17.12
+            },
+            {
+              "word": "score",
+              "score": 15.68
+            },
+            {
+              "word": "clean",
+              "score": 14.44
+            },
+            {
+              "word": "reward",
+              "score": 12.56
+            },
+            {
+              "word": "line",
+              "score": 12.08
+            }
+          ]
+        },
+        {
+          "pass": 2,
+          "topWords": [
+            "timeattackbronzeladder",
+            "time",
+            "perfect",
+            "attack",
+            "bronze",
+            "ladder",
+            "perfectroutenearmissbonus",
+            "route",
+            "score",
+            "clean",
+            "line",
+            "reward"
+          ],
+          "topRankings": [
+            {
+              "word": "timeattackbronzeladder",
+              "score": 40.482
+            },
+            {
+              "word": "time",
+              "score": 34.477
+            },
+            {
+              "word": "perfect",
+              "score": 32.806
+            },
+            {
+              "word": "attack",
+              "score": 30.166
+            },
+            {
+              "word": "bronze",
+              "score": 21.946
+            },
+            {
+              "word": "ladder",
+              "score": 18.791
+            },
+            {
+              "word": "perfectroutenearmissbonus",
+              "score": 18.096
+            },
+            {
+              "word": "route",
+              "score": 17.526
+            },
+            {
+              "word": "score",
+              "score": 16.174
+            },
+            {
+              "word": "clean",
+              "score": 15.205
+            },
+            {
+              "word": "line",
+              "score": 12.969
+            },
+            {
+              "word": "reward",
+              "score": 12.882
+            }
+          ]
+        },
+        {
+          "pass": 3,
+          "topWords": [
+            "timeattackbronzeladder",
+            "time",
+            "perfect",
+            "attack",
+            "bronze",
+            "ladder",
+            "perfectroutenearmissbonus",
+            "route",
+            "score",
+            "clean",
+            "line",
+            "reward"
+          ],
+          "topRankings": [
+            {
+              "word": "timeattackbronzeladder",
+              "score": 40.923
+            },
+            {
+              "word": "time",
+              "score": 34.771
+            },
+            {
+              "word": "perfect",
+              "score": 33.058
+            },
+            {
+              "word": "attack",
+              "score": 30.393
+            },
+            {
+              "word": "bronze",
+              "score": 22.123
+            },
+            {
+              "word": "ladder",
+              "score": 18.927
+            },
+            {
+              "word": "perfectroutenearmissbonus",
+              "score": 18.239
+            },
+            {
+              "word": "route",
+              "score": 17.624
+            },
+            {
+              "word": "score",
+              "score": 16.285
+            },
+            {
+              "word": "clean",
+              "score": 15.413
+            },
+            {
+              "word": "line",
+              "score": 13.202
+            },
+            {
+              "word": "reward",
+              "score": 12.941
+            }
+          ]
+        }
+      ],
+      "chainSummaries": [
+        {
+          "category": "Scoring Model Seeds",
+          "seed": "perfectroutenearmissbonus",
+          "rowLength": 8,
+          "focusWords": [
+            "timeattackbronzeladder",
+            "time",
+            "attack",
+            "bronze",
+            "ladder",
+            "perfectroutenearmissbonus"
+          ],
+          "chainDigest": "perfectroutenearmissbonus -> timeattackbronzeladder -> time -> attack -> bronze -> ladder -> score -> reward"
+        },
+        {
+          "category": "Scoring Model Seeds",
+          "seed": "perfect",
+          "rowLength": 8,
+          "focusWords": [
+            "timeattackbronzeladder",
+            "time",
+            "perfect",
+            "attack",
+            "bronze",
+            "ladder"
+          ],
+          "chainDigest": "perfect -> timeattackbronzeladder -> time -> attack -> bronze -> ladder -> score -> reward"
+        },
+        {
+          "category": "Scoring Model Seeds",
+          "seed": "route",
+          "rowLength": 8,
+          "focusWords": [
+            "timeattackbronzeladder",
+            "time",
+            "perfect",
+            "attack",
+            "route",
+            "clean"
+          ],
+          "chainDigest": "route -> perfect -> clean -> optimal -> line -> timeattackbronzeladder -> time -> attack"
+        }
+      ]
+    },
+    {
+      "category": "Failure Mode Seeds",
+      "rowCount": 3,
+      "itemCount": 24,
+      "topWords": [
+        "caughtbypatrols",
+        "caught",
+        "by",
+        "patrols",
+        "failure",
+        "risk",
+        "warning",
+        "core",
+        "coreoverheatedbypatrols",
+        "overheated"
+      ],
+      "sampledWords": [
+        "failure",
+        "caughtbypatrols",
+        "risk"
+      ],
+      "rankedSample": [
+        "by",
+        "patrols",
+        "caught"
+      ],
+      "piecemealSamples": {
+        "heads": [
+          "coreoverheatedbypatrols",
+          "core",
+          "overheated"
+        ],
+        "middles": [
+          "patrols"
+        ],
+        "tails": [
+          "warning"
+        ],
+        "focus": [
+          "failure",
+          "overheated",
+          "warning"
+        ]
+      },
+      "smoothedWords": [
+        "failure",
+        "caughtbypatrols",
+        "risk",
+        "by",
+        "patrols",
+        "caught",
+        "coreoverheatedbypatrols"
+      ],
+      "rankedPasses": [
+        {
+          "pass": 1,
+          "topWords": [
+            "caughtbypatrols",
+            "caught",
+            "by",
+            "patrols",
+            "failure",
+            "risk",
+            "warning",
+            "core",
+            "coreoverheatedbypatrols",
+            "overheated"
+          ],
+          "topRankings": [
+            {
+              "word": "caughtbypatrols",
+              "score": 42.42
+            },
+            {
+              "word": "caught",
+              "score": 37.92
+            },
+            {
+              "word": "by",
+              "score": 34.32
+            },
+            {
+              "word": "patrols",
+              "score": 30.72
+            },
+            {
+              "word": "failure",
+              "score": 27.12
+            },
+            {
+              "word": "risk",
+              "score": 23.52
+            },
+            {
+              "word": "warning",
+              "score": 18.84
+            },
+            {
+              "word": "core",
+              "score": 17.76
+            },
+            {
+              "word": "coreoverheatedbypatrols",
+              "score": 17.76
+            },
+            {
+              "word": "overheated",
+              "score": 17.76
+            }
+          ]
+        },
+        {
+          "pass": 2,
+          "topWords": [
+            "caughtbypatrols",
+            "caught",
+            "by",
+            "patrols",
+            "failure",
+            "risk",
+            "warning",
+            "core",
+            "coreoverheatedbypatrols",
+            "overheated"
+          ],
+          "topRankings": [
+            {
+              "word": "caughtbypatrols",
+              "score": 43.927
+            },
+            {
+              "word": "caught",
+              "score": 39.336
+            },
+            {
+              "word": "by",
+              "score": 35.508
+            },
+            {
+              "word": "patrols",
+              "score": 31.788
+            },
+            {
+              "word": "failure",
+              "score": 28.068
+            },
+            {
+              "word": "risk",
+              "score": 24.262
+            },
+            {
+              "word": "warning",
+              "score": 19.322
+            },
+            {
+              "word": "core",
+              "score": 18.394
+            },
+            {
+              "word": "coreoverheatedbypatrols",
+              "score": 18.394
+            },
+            {
+              "word": "overheated",
+              "score": 18.394
+            }
+          ]
+        },
+        {
+          "pass": 3,
+          "topWords": [
+            "caughtbypatrols",
+            "caught",
+            "by",
+            "patrols",
+            "failure",
+            "risk",
+            "warning",
+            "core",
+            "coreoverheatedbypatrols",
+            "overheated"
+          ],
+          "topRankings": [
+            {
+              "word": "caughtbypatrols",
+              "score": 44.269
+            },
+            {
+              "word": "caught",
+              "score": 39.612
+            },
+            {
+              "word": "by",
+              "score": 35.763
+            },
+            {
+              "word": "patrols",
+              "score": 32.006
+            },
+            {
+              "word": "failure",
+              "score": 28.255
+            },
+            {
+              "word": "risk",
+              "score": 24.414
+            },
+            {
+              "word": "warning",
+              "score": 19.411
+            },
+            {
+              "word": "core",
+              "score": 18.514
+            },
+            {
+              "word": "coreoverheatedbypatrols",
+              "score": 18.514
+            },
+            {
+              "word": "overheated",
+              "score": 18.514
+            }
+          ]
+        }
+      ],
+      "chainSummaries": [
+        {
+          "category": "Failure Mode Seeds",
+          "seed": "coreoverheatedbypatrols",
+          "rowLength": 8,
+          "focusWords": [
+            "caughtbypatrols",
+            "caught",
+            "by",
+            "patrols",
+            "failure",
+            "risk"
+          ],
+          "chainDigest": "coreoverheatedbypatrols -> caughtbypatrols -> caught -> by -> patrols -> failure -> risk -> warning"
+        },
+        {
+          "category": "Failure Mode Seeds",
+          "seed": "core",
+          "rowLength": 8,
+          "focusWords": [
+            "caughtbypatrols",
+            "caught",
+            "by",
+            "patrols",
+            "failure",
+            "risk"
+          ],
+          "chainDigest": "core -> caughtbypatrols -> caught -> by -> patrols -> failure -> risk -> warning"
+        },
+        {
+          "category": "Failure Mode Seeds",
+          "seed": "overheated",
+          "rowLength": 8,
+          "focusWords": [
+            "caughtbypatrols",
+            "caught",
+            "by",
+            "patrols",
+            "failure",
+            "risk"
+          ],
+          "chainDigest": "overheated -> caughtbypatrols -> caught -> by -> patrols -> failure -> risk -> warning"
+        }
+      ]
+    },
+    {
+      "category": "Enemy Seeds",
+      "rowCount": 3,
+      "itemCount": 24,
+      "topWords": [
+        "sentry",
+        "guard",
+        "warden",
+        "commander",
+        "leader",
+        "command",
+        "fort",
+        "industrial",
+        "overgrown",
+        "salvage"
+      ],
+      "sampledWords": [
+        "guard",
+        "sentry",
+        "fort"
+      ],
+      "rankedSample": [
+        "commander",
+        "leader",
+        "sentry"
+      ],
+      "piecemealSamples": {
+        "heads": [
+          "industrial",
+          "salvage",
+          "overgrown"
+        ],
+        "middles": [
+          "commander"
+        ],
+        "tails": [
+          "fort"
+        ],
+        "focus": [
+          "commander",
+          "warden",
+          "leader"
+        ]
+      },
+      "smoothedWords": [
+        "guard",
+        "sentry",
+        "fort",
+        "commander",
+        "leader",
+        "industrial"
+      ],
+      "rankedPasses": [
+        {
+          "pass": 1,
+          "topWords": [
+            "sentry",
+            "guard",
+            "warden",
+            "commander",
+            "leader",
+            "command",
+            "fort",
+            "industrial",
+            "overgrown",
+            "salvage"
+          ],
+          "topRankings": [
+            {
+              "word": "sentry",
+              "score": 42.42
+            },
+            {
+              "word": "guard",
+              "score": 37.92
+            },
+            {
+              "word": "warden",
+              "score": 34.32
+            },
+            {
+              "word": "commander",
+              "score": 30.72
+            },
+            {
+              "word": "leader",
+              "score": 27.12
+            },
+            {
+              "word": "command",
+              "score": 23.52
+            },
+            {
+              "word": "fort",
+              "score": 18.84
+            },
+            {
+              "word": "industrial",
+              "score": 17.76
+            },
+            {
+              "word": "overgrown",
+              "score": 17.76
+            },
+            {
+              "word": "salvage",
+              "score": 17.76
+            }
+          ]
+        },
+        {
+          "pass": 2,
+          "topWords": [
+            "sentry",
+            "guard",
+            "warden",
+            "commander",
+            "leader",
+            "command",
+            "fort",
+            "industrial",
+            "overgrown",
+            "salvage"
+          ],
+          "topRankings": [
+            {
+              "word": "sentry",
+              "score": 43.927
+            },
+            {
+              "word": "guard",
+              "score": 39.336
+            },
+            {
+              "word": "warden",
+              "score": 35.508
+            },
+            {
+              "word": "commander",
+              "score": 31.788
+            },
+            {
+              "word": "leader",
+              "score": 28.068
+            },
+            {
+              "word": "command",
+              "score": 24.262
+            },
+            {
+              "word": "fort",
+              "score": 19.322
+            },
+            {
+              "word": "industrial",
+              "score": 18.394
+            },
+            {
+              "word": "overgrown",
+              "score": 18.394
+            },
+            {
+              "word": "salvage",
+              "score": 18.394
+            }
+          ]
+        },
+        {
+          "pass": 3,
+          "topWords": [
+            "sentry",
+            "guard",
+            "warden",
+            "commander",
+            "leader",
+            "command",
+            "fort",
+            "industrial",
+            "overgrown",
+            "salvage"
+          ],
+          "topRankings": [
+            {
+              "word": "sentry",
+              "score": 44.269
+            },
+            {
+              "word": "guard",
+              "score": 39.612
+            },
+            {
+              "word": "warden",
+              "score": 35.763
+            },
+            {
+              "word": "commander",
+              "score": 32.006
+            },
+            {
+              "word": "leader",
+              "score": 28.255
+            },
+            {
+              "word": "command",
+              "score": 24.414
+            },
+            {
+              "word": "fort",
+              "score": 19.411
+            },
+            {
+              "word": "industrial",
+              "score": 18.514
+            },
+            {
+              "word": "overgrown",
+              "score": 18.514
+            },
+            {
+              "word": "salvage",
+              "score": 18.514
+            }
+          ]
+        }
+      ],
+      "chainSummaries": [
+        {
+          "category": "Enemy Seeds",
+          "seed": "industrial",
+          "rowLength": 8,
+          "focusWords": [
+            "sentry",
+            "guard",
+            "warden",
+            "commander",
+            "leader",
+            "command"
+          ],
+          "chainDigest": "industrial -> sentry -> guard -> warden -> commander -> leader -> command -> fort"
+        },
+        {
+          "category": "Enemy Seeds",
+          "seed": "salvage",
+          "rowLength": 8,
+          "focusWords": [
+            "sentry",
+            "guard",
+            "warden",
+            "commander",
+            "leader",
+            "command"
+          ],
+          "chainDigest": "salvage -> sentry -> guard -> warden -> commander -> leader -> command -> fort"
+        },
+        {
+          "category": "Enemy Seeds",
+          "seed": "overgrown",
+          "rowLength": 8,
+          "focusWords": [
+            "sentry",
+            "guard",
+            "warden",
+            "commander",
+            "leader",
+            "command"
+          ],
+          "chainDigest": "overgrown -> sentry -> guard -> warden -> commander -> leader -> command -> fort"
+        }
+      ]
+    },
+    {
+      "category": "Enemy Behavior Seeds",
+      "rowCount": 3,
+      "itemCount": 24,
+      "topWords": [
+        "patrolslowpattern",
+        "patrol",
+        "slow",
+        "pattern",
+        "enemy",
+        "pressure",
+        "telegraph",
+        "hazards",
+        "summon",
+        "summonhazardslighttriggered"
+      ],
+      "sampledWords": [
+        "patrolslowpattern",
+        "pressure",
+        "pattern"
+      ],
+      "rankedSample": [
+        "pressure",
+        "patrol",
+        "patrolslowpattern"
+      ],
+      "piecemealSamples": {
+        "heads": [
+          "summonhazardslighttriggered",
+          "summon",
+          "hazards"
+        ],
+        "middles": [
+          "pattern"
+        ],
+        "tails": [
+          "telegraph"
+        ],
+        "focus": [
+          "enemy",
+          "patrol",
+          "telegraph"
+        ]
+      },
+      "smoothedWords": [
+        "patrolslowpattern",
+        "pressure",
+        "pattern",
+        "patrol",
+        "summonhazardslighttriggered",
+        "summon"
+      ],
+      "rankedPasses": [
+        {
+          "pass": 1,
+          "topWords": [
+            "patrolslowpattern",
+            "patrol",
+            "slow",
+            "pattern",
+            "enemy",
+            "pressure",
+            "telegraph",
+            "hazards",
+            "summon",
+            "summonhazardslighttriggered"
+          ],
+          "topRankings": [
+            {
+              "word": "patrolslowpattern",
+              "score": 42.42
+            },
+            {
+              "word": "patrol",
+              "score": 37.92
+            },
+            {
+              "word": "slow",
+              "score": 34.32
+            },
+            {
+              "word": "pattern",
+              "score": 30.72
+            },
+            {
+              "word": "enemy",
+              "score": 27.12
+            },
+            {
+              "word": "pressure",
+              "score": 23.52
+            },
+            {
+              "word": "telegraph",
+              "score": 18.84
+            },
+            {
+              "word": "hazards",
+              "score": 17.76
+            },
+            {
+              "word": "summon",
+              "score": 17.76
+            },
+            {
+              "word": "summonhazardslighttriggered",
+              "score": 17.76
+            }
+          ]
+        },
+        {
+          "pass": 2,
+          "topWords": [
+            "patrolslowpattern",
+            "patrol",
+            "slow",
+            "pattern",
+            "enemy",
+            "pressure",
+            "telegraph",
+            "hazards",
+            "summon",
+            "summonhazardslighttriggered"
+          ],
+          "topRankings": [
+            {
+              "word": "patrolslowpattern",
+              "score": 43.927
+            },
+            {
+              "word": "patrol",
+              "score": 39.336
+            },
+            {
+              "word": "slow",
+              "score": 35.508
+            },
+            {
+              "word": "pattern",
+              "score": 31.788
+            },
+            {
+              "word": "enemy",
+              "score": 28.068
+            },
+            {
+              "word": "pressure",
+              "score": 24.262
+            },
+            {
+              "word": "telegraph",
+              "score": 19.322
+            },
+            {
+              "word": "hazards",
+              "score": 18.394
+            },
+            {
+              "word": "summon",
+              "score": 18.394
+            },
+            {
+              "word": "summonhazardslighttriggered",
+              "score": 18.394
+            }
+          ]
+        },
+        {
+          "pass": 3,
+          "topWords": [
+            "patrolslowpattern",
+            "patrol",
+            "slow",
+            "pattern",
+            "enemy",
+            "pressure",
+            "telegraph",
+            "hazards",
+            "summon",
+            "summonhazardslighttriggered"
+          ],
+          "topRankings": [
+            {
+              "word": "patrolslowpattern",
+              "score": 44.269
+            },
+            {
+              "word": "patrol",
+              "score": 39.612
+            },
+            {
+              "word": "slow",
+              "score": 35.763
+            },
+            {
+              "word": "pattern",
+              "score": 32.006
+            },
+            {
+              "word": "enemy",
+              "score": 28.255
+            },
+            {
+              "word": "pressure",
+              "score": 24.414
+            },
+            {
+              "word": "telegraph",
+              "score": 19.411
+            },
+            {
+              "word": "hazards",
+              "score": 18.514
+            },
+            {
+              "word": "summon",
+              "score": 18.514
+            },
+            {
+              "word": "summonhazardslighttriggered",
+              "score": 18.514
+            }
+          ]
+        }
+      ],
+      "chainSummaries": [
+        {
+          "category": "Enemy Behavior Seeds",
+          "seed": "summonhazardslighttriggered",
+          "rowLength": 8,
+          "focusWords": [
+            "patrolslowpattern",
+            "patrol",
+            "slow",
+            "pattern",
+            "enemy",
+            "pressure"
+          ],
+          "chainDigest": "summonhazardslighttriggered -> patrolslowpattern -> patrol -> slow -> pattern -> enemy -> pressure -> telegraph"
+        },
+        {
+          "category": "Enemy Behavior Seeds",
+          "seed": "summon",
+          "rowLength": 8,
+          "focusWords": [
+            "patrolslowpattern",
+            "patrol",
+            "slow",
+            "pattern",
+            "enemy",
+            "pressure"
+          ],
+          "chainDigest": "summon -> patrolslowpattern -> patrol -> slow -> pattern -> enemy -> pressure -> telegraph"
+        },
+        {
+          "category": "Enemy Behavior Seeds",
+          "seed": "hazards",
+          "rowLength": 8,
+          "focusWords": [
+            "patrolslowpattern",
+            "patrol",
+            "slow",
+            "pattern",
+            "enemy",
+            "pressure"
+          ],
+          "chainDigest": "hazards -> patrolslowpattern -> patrol -> slow -> pattern -> enemy -> pressure -> telegraph"
+        }
+      ]
+    },
+    {
+      "category": "Objective Structure Seeds",
+      "rowCount": 3,
+      "itemCount": 24,
+      "topWords": [
+        "collectsetinoneroom",
+        "collect",
+        "set",
+        "in",
+        "one",
+        "reach",
+        "reachexitbeforetimer",
+        "room",
+        "exit",
+        "escape",
+        "gate",
+        "route"
+      ],
+      "sampledWords": [
+        "one",
+        "escape",
+        "reach"
+      ],
+      "rankedSample": [
+        "in",
+        "collectsetinoneroom",
+        "set"
+      ],
+      "piecemealSamples": {
+        "heads": [
+          "reachexitbeforetimer",
+          "reach",
+          "exit"
+        ],
+        "middles": [
+          "in",
+          "route"
+        ],
+        "tails": [
+          "objective",
+          "set"
+        ],
+        "focus": [
+          "gate",
+          "finish",
+          "set"
+        ]
+      },
+      "smoothedWords": [
+        "one",
+        "escape",
+        "reach",
+        "in",
+        "collectsetinoneroom",
+        "set",
+        "reachexitbeforetimer"
+      ],
+      "rankedPasses": [
+        {
+          "pass": 1,
+          "topWords": [
+            "collectsetinoneroom",
+            "collect",
+            "set",
+            "in",
+            "one",
+            "reach",
+            "reachexitbeforetimer",
+            "exit",
+            "room",
+            "escape",
+            "gate",
+            "objective"
+          ],
+          "topRankings": [
+            {
+              "word": "collectsetinoneroom",
+              "score": 37.32
+            },
+            {
+              "word": "collect",
+              "score": 33.12
+            },
+            {
+              "word": "set",
+              "score": 29.16
+            },
+            {
+              "word": "in",
+              "score": 21.14
+            },
+            {
+              "word": "one",
+              "score": 18.08
+            },
+            {
+              "word": "reach",
+              "score": 17.44
+            },
+            {
+              "word": "reachexitbeforetimer",
+              "score": 17.44
+            },
+            {
+              "word": "exit",
+              "score": 15.92
+            },
+            {
+              "word": "room",
+              "score": 15.68
+            },
+            {
+              "word": "escape",
+              "score": 14.14
+            },
+            {
+              "word": "gate",
+              "score": 12.64
+            },
+            {
+              "word": "objective",
+              "score": 12.56
+            }
+          ]
+        },
+        {
+          "pass": 2,
+          "topWords": [
+            "collectsetinoneroom",
+            "collect",
+            "set",
+            "in",
+            "one",
+            "reach",
+            "reachexitbeforetimer",
+            "room",
+            "exit",
+            "escape",
+            "gate",
+            "objective"
+          ],
+          "topRankings": [
+            {
+              "word": "collectsetinoneroom",
+              "score": 38.785
+            },
+            {
+              "word": "collect",
+              "score": 34.311
+            },
+            {
+              "word": "set",
+              "score": 30.166
+            },
+            {
+              "word": "in",
+              "score": 21.946
+            },
+            {
+              "word": "one",
+              "score": 18.791
+            },
+            {
+              "word": "reach",
+              "score": 17.986
+            },
+            {
+              "word": "reachexitbeforetimer",
+              "score": 17.986
+            },
+            {
+              "word": "room",
+              "score": 16.174
+            },
+            {
+              "word": "exit",
+              "score": 16.131
+            },
+            {
+              "word": "escape",
+              "score": 14.422
+            },
+            {
+              "word": "gate",
+              "score": 13.112
+            },
+            {
+              "word": "objective",
+              "score": 12.882
+            }
+          ]
+        },
+        {
+          "pass": 3,
+          "topWords": [
+            "collectsetinoneroom",
+            "collect",
+            "set",
+            "in",
+            "one",
+            "reach",
+            "reachexitbeforetimer",
+            "room",
+            "exit",
+            "escape",
+            "gate",
+            "route"
+          ],
+          "topRankings": [
+            {
+              "word": "collectsetinoneroom",
+              "score": 39.104
+            },
+            {
+              "word": "collect",
+              "score": 34.567
+            },
+            {
+              "word": "set",
+              "score": 30.373
+            },
+            {
+              "word": "in",
+              "score": 22.123
+            },
+            {
+              "word": "one",
+              "score": 18.927
+            },
+            {
+              "word": "reach",
+              "score": 18.103
+            },
+            {
+              "word": "reachexitbeforetimer",
+              "score": 18.103
+            },
+            {
+              "word": "room",
+              "score": 16.285
+            },
+            {
+              "word": "exit",
+              "score": 16.154
+            },
+            {
+              "word": "escape",
+              "score": 14.485
+            },
+            {
+              "word": "gate",
+              "score": 13.189
+            },
+            {
+              "word": "route",
+              "score": 13.041
+            }
+          ]
+        }
+      ],
+      "chainSummaries": [
+        {
+          "category": "Objective Structure Seeds",
+          "seed": "reachexitbeforetimer",
+          "rowLength": 8,
+          "focusWords": [
+            "collectsetinoneroom",
+            "collect",
+            "set",
+            "in",
+            "one",
+            "reachexitbeforetimer"
+          ],
+          "chainDigest": "reachexitbeforetimer -> collectsetinoneroom -> collect -> set -> in -> one -> room -> objective"
+        },
+        {
+          "category": "Objective Structure Seeds",
+          "seed": "reach",
+          "rowLength": 8,
+          "focusWords": [
+            "collectsetinoneroom",
+            "collect",
+            "set",
+            "in",
+            "one",
+            "reach"
+          ],
+          "chainDigest": "reach -> collectsetinoneroom -> collect -> set -> in -> one -> room -> objective"
+        },
+        {
+          "category": "Objective Structure Seeds",
+          "seed": "exit",
+          "rowLength": 8,
+          "focusWords": [
+            "collectsetinoneroom",
+            "collect",
+            "set",
+            "exit",
+            "escape",
+            "gate"
+          ],
+          "chainDigest": "exit -> escape -> gate -> finish -> route -> collectsetinoneroom -> collect -> set"
+        }
+      ]
+    },
+    {
+      "category": "Resource System Seeds",
+      "rowCount": 3,
+      "itemCount": 24,
+      "topWords": [
+        "staminaslowdrain",
+        "stamina",
+        "slow",
+        "drain",
+        "resource",
+        "meter",
+        "budget",
+        "noise",
+        "noisezonerecharge",
+        "zone"
+      ],
+      "sampledWords": [
+        "drain",
+        "stamina",
+        "staminaslowdrain"
+      ],
+      "rankedSample": [
+        "stamina",
+        "staminaslowdrain",
+        "meter"
+      ],
+      "piecemealSamples": {
+        "heads": [
+          "noisezonerecharge",
+          "noise",
+          "zone"
+        ],
+        "middles": [
+          "drain"
+        ],
+        "tails": [
+          "budget"
+        ],
+        "focus": [
+          "drain",
+          "noisezonerecharge",
+          "slow"
+        ]
+      },
+      "smoothedWords": [
+        "drain",
+        "stamina",
+        "staminaslowdrain",
+        "meter",
+        "noisezonerecharge",
+        "noise"
+      ],
+      "rankedPasses": [
+        {
+          "pass": 1,
+          "topWords": [
+            "staminaslowdrain",
+            "stamina",
+            "slow",
+            "drain",
+            "resource",
+            "meter",
+            "budget",
+            "noise",
+            "noisezonerecharge",
+            "zone"
+          ],
+          "topRankings": [
+            {
+              "word": "staminaslowdrain",
+              "score": 42.42
+            },
+            {
+              "word": "stamina",
+              "score": 37.92
+            },
+            {
+              "word": "slow",
+              "score": 34.32
+            },
+            {
+              "word": "drain",
+              "score": 30.72
+            },
+            {
+              "word": "resource",
+              "score": 27.12
+            },
+            {
+              "word": "meter",
+              "score": 23.52
+            },
+            {
+              "word": "budget",
+              "score": 18.84
+            },
+            {
+              "word": "noise",
+              "score": 17.76
+            },
+            {
+              "word": "noisezonerecharge",
+              "score": 17.76
+            },
+            {
+              "word": "zone",
+              "score": 17.76
+            }
+          ]
+        },
+        {
+          "pass": 2,
+          "topWords": [
+            "staminaslowdrain",
+            "stamina",
+            "slow",
+            "drain",
+            "resource",
+            "meter",
+            "budget",
+            "noise",
+            "noisezonerecharge",
+            "zone"
+          ],
+          "topRankings": [
+            {
+              "word": "staminaslowdrain",
+              "score": 43.927
+            },
+            {
+              "word": "stamina",
+              "score": 39.336
+            },
+            {
+              "word": "slow",
+              "score": 35.508
+            },
+            {
+              "word": "drain",
+              "score": 31.788
+            },
+            {
+              "word": "resource",
+              "score": 28.068
+            },
+            {
+              "word": "meter",
+              "score": 24.262
+            },
+            {
+              "word": "budget",
+              "score": 19.322
+            },
+            {
+              "word": "noise",
+              "score": 18.394
+            },
+            {
+              "word": "noisezonerecharge",
+              "score": 18.394
+            },
+            {
+              "word": "zone",
+              "score": 18.394
+            }
+          ]
+        },
+        {
+          "pass": 3,
+          "topWords": [
+            "staminaslowdrain",
+            "stamina",
+            "slow",
+            "drain",
+            "resource",
+            "meter",
+            "budget",
+            "noise",
+            "noisezonerecharge",
+            "zone"
+          ],
+          "topRankings": [
+            {
+              "word": "staminaslowdrain",
+              "score": 44.269
+            },
+            {
+              "word": "stamina",
+              "score": 39.612
+            },
+            {
+              "word": "slow",
+              "score": 35.763
+            },
+            {
+              "word": "drain",
+              "score": 32.006
+            },
+            {
+              "word": "resource",
+              "score": 28.255
+            },
+            {
+              "word": "meter",
+              "score": 24.414
+            },
+            {
+              "word": "budget",
+              "score": 19.411
+            },
+            {
+              "word": "noise",
+              "score": 18.514
+            },
+            {
+              "word": "noisezonerecharge",
+              "score": 18.514
+            },
+            {
+              "word": "zone",
+              "score": 18.514
+            }
+          ]
+        }
+      ],
+      "chainSummaries": [
+        {
+          "category": "Resource System Seeds",
+          "seed": "noisezonerecharge",
+          "rowLength": 8,
+          "focusWords": [
+            "staminaslowdrain",
+            "stamina",
+            "slow",
+            "drain",
+            "resource",
+            "meter"
+          ],
+          "chainDigest": "noisezonerecharge -> staminaslowdrain -> stamina -> slow -> drain -> resource -> meter -> budget"
+        },
+        {
+          "category": "Resource System Seeds",
+          "seed": "noise",
+          "rowLength": 8,
+          "focusWords": [
+            "staminaslowdrain",
+            "stamina",
+            "slow",
+            "drain",
+            "resource",
+            "meter"
+          ],
+          "chainDigest": "noise -> staminaslowdrain -> stamina -> slow -> drain -> resource -> meter -> budget"
+        },
+        {
+          "category": "Resource System Seeds",
+          "seed": "zone",
+          "rowLength": 8,
+          "focusWords": [
+            "staminaslowdrain",
+            "stamina",
+            "slow",
+            "drain",
+            "resource",
+            "meter"
+          ],
+          "chainDigest": "zone -> staminaslowdrain -> stamina -> slow -> drain -> resource -> meter -> budget"
+        }
+      ]
+    },
+    {
+      "category": "Progression Seeds",
+      "rowCount": 3,
+      "itemCount": 24,
+      "topWords": [
+        "unlock",
+        "ascend",
+        "evolve",
+        "unify",
+        "expand",
+        "uncover",
+        "discover",
+        "quiet",
+        "reach",
+        "sanctuary"
+      ],
+      "sampledWords": [
+        "evolve",
+        "unify",
+        "discover"
+      ],
+      "rankedSample": [
+        "unify",
+        "expand",
+        "unlock"
+      ],
+      "piecemealSamples": {
+        "heads": [
+          "reach",
+          "quiet",
+          "sanctuary"
+        ],
+        "middles": [
+          "unify"
+        ],
+        "tails": [
+          "discover"
+        ],
+        "focus": [
+          "evolve",
+          "expand",
+          "unlock"
+        ]
+      },
+      "smoothedWords": [
+        "evolve",
+        "unify",
+        "discover",
+        "expand",
+        "unlock",
+        "reach"
+      ],
+      "rankedPasses": [
+        {
+          "pass": 1,
+          "topWords": [
+            "unlock",
+            "ascend",
+            "evolve",
+            "unify",
+            "expand",
+            "uncover",
+            "discover",
+            "quiet",
+            "reach",
+            "sanctuary"
+          ],
+          "topRankings": [
+            {
+              "word": "unlock",
+              "score": 42.42
+            },
+            {
+              "word": "ascend",
+              "score": 37.92
+            },
+            {
+              "word": "evolve",
+              "score": 34.32
+            },
+            {
+              "word": "unify",
+              "score": 30.72
+            },
+            {
+              "word": "expand",
+              "score": 27.12
+            },
+            {
+              "word": "uncover",
+              "score": 23.52
+            },
+            {
+              "word": "discover",
+              "score": 18.84
+            },
+            {
+              "word": "quiet",
+              "score": 17.76
+            },
+            {
+              "word": "reach",
+              "score": 17.76
+            },
+            {
+              "word": "sanctuary",
+              "score": 17.76
+            }
+          ]
+        },
+        {
+          "pass": 2,
+          "topWords": [
+            "unlock",
+            "ascend",
+            "evolve",
+            "unify",
+            "expand",
+            "uncover",
+            "discover",
+            "quiet",
+            "reach",
+            "sanctuary"
+          ],
+          "topRankings": [
+            {
+              "word": "unlock",
+              "score": 43.927
+            },
+            {
+              "word": "ascend",
+              "score": 39.336
+            },
+            {
+              "word": "evolve",
+              "score": 35.508
+            },
+            {
+              "word": "unify",
+              "score": 31.788
+            },
+            {
+              "word": "expand",
+              "score": 28.068
+            },
+            {
+              "word": "uncover",
+              "score": 24.262
+            },
+            {
+              "word": "discover",
+              "score": 19.322
+            },
+            {
+              "word": "quiet",
+              "score": 18.394
+            },
+            {
+              "word": "reach",
+              "score": 18.394
+            },
+            {
+              "word": "sanctuary",
+              "score": 18.394
+            }
+          ]
+        },
+        {
+          "pass": 3,
+          "topWords": [
+            "unlock",
+            "ascend",
+            "evolve",
+            "unify",
+            "expand",
+            "uncover",
+            "discover",
+            "quiet",
+            "reach",
+            "sanctuary"
+          ],
+          "topRankings": [
+            {
+              "word": "unlock",
+              "score": 44.269
+            },
+            {
+              "word": "ascend",
+              "score": 39.612
+            },
+            {
+              "word": "evolve",
+              "score": 35.763
+            },
+            {
+              "word": "unify",
+              "score": 32.006
+            },
+            {
+              "word": "expand",
+              "score": 28.255
+            },
+            {
+              "word": "uncover",
+              "score": 24.414
+            },
+            {
+              "word": "discover",
+              "score": 19.411
+            },
+            {
+              "word": "quiet",
+              "score": 18.514
+            },
+            {
+              "word": "reach",
+              "score": 18.514
+            },
+            {
+              "word": "sanctuary",
+              "score": 18.514
+            }
+          ]
+        }
+      ],
+      "chainSummaries": [
+        {
+          "category": "Progression Seeds",
+          "seed": "reach",
+          "rowLength": 8,
+          "focusWords": [
+            "unlock",
+            "ascend",
+            "evolve",
+            "unify",
+            "expand",
+            "uncover"
+          ],
+          "chainDigest": "reach -> unlock -> ascend -> evolve -> unify -> expand -> uncover -> discover"
+        },
+        {
+          "category": "Progression Seeds",
+          "seed": "quiet",
+          "rowLength": 8,
+          "focusWords": [
+            "unlock",
+            "ascend",
+            "evolve",
+            "unify",
+            "expand",
+            "uncover"
+          ],
+          "chainDigest": "quiet -> unlock -> ascend -> evolve -> unify -> expand -> uncover -> discover"
+        },
+        {
+          "category": "Progression Seeds",
+          "seed": "sanctuary",
+          "rowLength": 8,
+          "focusWords": [
+            "unlock",
+            "ascend",
+            "evolve",
+            "unify",
+            "expand",
+            "uncover"
+          ],
+          "chainDigest": "sanctuary -> unlock -> ascend -> evolve -> unify -> expand -> uncover -> discover"
+        }
+      ]
+    },
+    {
+      "category": "Level Progression Seeds",
+      "rowCount": 3,
+      "itemCount": 24,
+      "topWords": [
+        "singlerunwithrerolls",
+        "single",
+        "routes",
+        "run",
+        "with",
+        "rerolls",
+        "branchingrouteswithhazardtiers",
+        "progression",
+        "branching",
+        "paths",
+        "choice",
+        "fork"
+      ],
+      "sampledWords": [
+        "branching",
+        "with",
+        "choice"
+      ],
+      "rankedSample": [
+        "with",
+        "single",
+        "rerolls"
+      ],
+      "piecemealSamples": {
+        "heads": [
+          "branchingrouteswithhazardtiers",
+          "branching",
+          "routes"
+        ],
+        "middles": [
+          "with",
+          "paths"
+        ],
+        "tails": [
+          "stage",
+          "run"
+        ],
+        "focus": [
+          "paths",
+          "routes",
+          "progression"
+        ]
+      },
+      "smoothedWords": [
+        "branching",
+        "with",
+        "choice",
+        "single",
+        "rerolls",
+        "branchingrouteswithhazardtiers"
+      ],
+      "rankedPasses": [
+        {
+          "pass": 1,
+          "topWords": [
+            "singlerunwithrerolls",
+            "single",
+            "run",
+            "routes",
+            "with",
+            "rerolls",
+            "branchingrouteswithhazardtiers",
+            "branching",
+            "progression",
+            "fork",
+            "paths",
+            "choice"
+          ],
+          "topRankings": [
+            {
+              "word": "singlerunwithrerolls",
+              "score": 38.46
+            },
+            {
+              "word": "single",
+              "score": 33.12
+            },
+            {
+              "word": "run",
+              "score": 29.16
+            },
+            {
+              "word": "routes",
+              "score": 28.88
+            },
+            {
+              "word": "with",
+              "score": 21.14
+            },
+            {
+              "word": "rerolls",
+              "score": 18.08
+            },
+            {
+              "word": "branchingrouteswithhazardtiers",
+              "score": 17.44
+            },
+            {
+              "word": "branching",
+              "score": 15.92
+            },
+            {
+              "word": "progression",
+              "score": 15.68
+            },
+            {
+              "word": "fork",
+              "score": 14.14
+            },
+            {
+              "word": "paths",
+              "score": 13.88
+            },
+            {
+              "word": "choice",
+              "score": 13.84
+            }
+          ]
+        },
+        {
+          "pass": 2,
+          "topWords": [
+            "singlerunwithrerolls",
+            "single",
+            "routes",
+            "run",
+            "with",
+            "rerolls",
+            "branchingrouteswithhazardtiers",
+            "progression",
+            "branching",
+            "paths",
+            "fork",
+            "choice"
+          ],
+          "topRankings": [
+            {
+              "word": "singlerunwithrerolls",
+              "score": 40.374
+            },
+            {
+              "word": "single",
+              "score": 34.448
+            },
+            {
+              "word": "routes",
+              "score": 30.348
+            },
+            {
+              "word": "run",
+              "score": 30.166
+            },
+            {
+              "word": "with",
+              "score": 21.946
+            },
+            {
+              "word": "rerolls",
+              "score": 18.791
+            },
+            {
+              "word": "branchingrouteswithhazardtiers",
+              "score": 18.077
+            },
+            {
+              "word": "progression",
+              "score": 16.174
+            },
+            {
+              "word": "branching",
+              "score": 16.131
+            },
+            {
+              "word": "paths",
+              "score": 15.042
+            },
+            {
+              "word": "fork",
+              "score": 14.518
+            },
+            {
+              "word": "choice",
+              "score": 14.507
+            }
+          ]
+        },
+        {
+          "pass": 3,
+          "topWords": [
+            "singlerunwithrerolls",
+            "single",
+            "routes",
+            "run",
+            "with",
+            "rerolls",
+            "branchingrouteswithhazardtiers",
+            "progression",
+            "branching",
+            "paths",
+            "choice",
+            "fork"
+          ],
+          "topRankings": [
+            {
+              "word": "singlerunwithrerolls",
+              "score": 40.872
+            },
+            {
+              "word": "single",
+              "score": 34.758
+            },
+            {
+              "word": "routes",
+              "score": 30.674
+            },
+            {
+              "word": "run",
+              "score": 30.389
+            },
+            {
+              "word": "with",
+              "score": 22.123
+            },
+            {
+              "word": "rerolls",
+              "score": 18.927
+            },
+            {
+              "word": "branchingrouteswithhazardtiers",
+              "score": 18.23
+            },
+            {
+              "word": "progression",
+              "score": 16.285
+            },
+            {
+              "word": "branching",
+              "score": 16.161
+            },
+            {
+              "word": "paths",
+              "score": 15.372
+            },
+            {
+              "word": "choice",
+              "score": 14.67
+            },
+            {
+              "word": "fork",
+              "score": 14.596
+            }
+          ]
+        }
+      ],
+      "chainSummaries": [
+        {
+          "category": "Level Progression Seeds",
+          "seed": "branchingrouteswithhazardtiers",
+          "rowLength": 8,
+          "focusWords": [
+            "singlerunwithrerolls",
+            "single",
+            "run",
+            "with",
+            "rerolls",
+            "branchingrouteswithhazardtiers"
+          ],
+          "chainDigest": "branchingrouteswithhazardtiers -> singlerunwithrerolls -> single -> run -> with -> rerolls -> progression -> stage"
+        },
+        {
+          "category": "Level Progression Seeds",
+          "seed": "branching",
+          "rowLength": 8,
+          "focusWords": [
+            "singlerunwithrerolls",
+            "single",
+            "routes",
+            "run",
+            "branching",
+            "paths"
+          ],
+          "chainDigest": "branching -> fork -> choice -> routes -> paths -> singlerunwithrerolls -> single -> run"
+        },
+        {
+          "category": "Level Progression Seeds",
+          "seed": "routes",
+          "rowLength": 8,
+          "focusWords": [
+            "singlerunwithrerolls",
+            "single",
+            "routes",
+            "run",
+            "with",
+            "rerolls"
+          ],
+          "chainDigest": "routes -> singlerunwithrerolls -> single -> run -> with -> rerolls -> progression -> stage"
+        }
+      ]
+    },
+    {
+      "category": "Twist Constraint Seeds",
+      "rowCount": 3,
+      "itemCount": 24,
+      "topWords": [
+        "reversedcontrolszoneforfinale",
+        "controls",
+        "reversed",
+        "zone",
+        "for",
+        "finale",
+        "twist",
+        "reversedcontrolszoneafterroutesplit",
+        "constraint"
+      ],
+      "sampledWords": [
+        "controls",
+        "for",
+        "reversedcontrolszoneforfinale"
+      ],
+      "rankedSample": [
+        "for",
+        "reversedcontrolszoneforfinale",
+        "controls"
+      ],
+      "piecemealSamples": {
+        "heads": [
+          "reversedcontrolszoneafterroutesplit",
+          "reversed",
+          "controls"
+        ],
+        "middles": [
+          "zone",
+          "for"
+        ],
+        "tails": [
+          "twist",
+          "constraint"
+        ],
+        "focus": [
+          "constraint",
+          "controls",
+          "for"
+        ]
+      },
+      "smoothedWords": [
+        "controls",
+        "for",
+        "reversedcontrolszoneforfinale",
+        "reversedcontrolszoneafterroutesplit",
+        "reversed",
+        "zone"
+      ],
+      "rankedPasses": [
+        {
+          "pass": 1,
+          "topWords": [
+            "reversedcontrolszoneforfinale",
+            "controls",
+            "reversed",
+            "zone",
+            "for",
+            "finale",
+            "twist",
+            "reversedcontrolszoneafterroutesplit",
+            "constraint"
+          ],
+          "topRankings": [
+            {
+              "word": "reversedcontrolszoneforfinale",
+              "score": 50.5
+            },
+            {
+              "word": "controls",
+              "score": 48.42
+            },
+            {
+              "word": "reversed",
+              "score": 47.9
+            },
+            {
+              "word": "zone",
+              "score": 37.98
+            },
+            {
+              "word": "for",
+              "score": 29.52
+            },
+            {
+              "word": "finale",
+              "score": 25.92
+            },
+            {
+              "word": "twist",
+              "score": 21.96
+            },
+            {
+              "word": "reversedcontrolszoneafterroutesplit",
+              "score": 17.76
+            },
+            {
+              "word": "constraint",
+              "score": 13.22
+            }
+          ]
+        },
+        {
+          "pass": 2,
+          "topWords": [
+            "reversedcontrolszoneforfinale",
+            "controls",
+            "reversed",
+            "zone",
+            "for",
+            "finale",
+            "twist",
+            "reversedcontrolszoneafterroutesplit",
+            "constraint"
+          ],
+          "topRankings": [
+            {
+              "word": "reversedcontrolszoneforfinale",
+              "score": 55.895
+            },
+            {
+              "word": "controls",
+              "score": 53.886
+            },
+            {
+              "word": "reversed",
+              "score": 53.012
+            },
+            {
+              "word": "zone",
+              "score": 41.42
+            },
+            {
+              "word": "for",
+              "score": 31.131
+            },
+            {
+              "word": "finale",
+              "score": 26.799
+            },
+            {
+              "word": "twist",
+              "score": 22.668
+            },
+            {
+              "word": "reversedcontrolszoneafterroutesplit",
+              "score": 19.04
+            },
+            {
+              "word": "constraint",
+              "score": 13.635
+            }
+          ]
+        },
+        {
+          "pass": 3,
+          "topWords": [
+            "reversedcontrolszoneforfinale",
+            "controls",
+            "reversed",
+            "zone",
+            "for",
+            "finale",
+            "twist",
+            "reversedcontrolszoneafterroutesplit",
+            "constraint"
+          ],
+          "topRankings": [
+            {
+              "word": "reversedcontrolszoneforfinale",
+              "score": 58.164
+            },
+            {
+              "word": "controls",
+              "score": 55.854
+            },
+            {
+              "word": "reversed",
+              "score": 54.804
+            },
+            {
+              "word": "zone",
+              "score": 42.818
+            },
+            {
+              "word": "for",
+              "score": 31.614
+            },
+            {
+              "word": "finale",
+              "score": 27.049
+            },
+            {
+              "word": "twist",
+              "score": 22.807
+            },
+            {
+              "word": "reversedcontrolszoneafterroutesplit",
+              "score": 19.472
+            },
+            {
+              "word": "constraint",
+              "score": 13.72
+            }
+          ]
+        }
+      ],
+      "chainSummaries": [
+        {
+          "category": "Twist Constraint Seeds",
+          "seed": "reversedcontrolszoneafterroutesplit",
+          "rowLength": 8,
+          "focusWords": [
+            "reversedcontrolszoneforfinale",
+            "controls",
+            "reversed",
+            "zone",
+            "for",
+            "finale"
+          ],
+          "chainDigest": "reversedcontrolszoneafterroutesplit -> reversedcontrolszoneforfinale -> reversed -> controls -> zone -> for -> finale -> twist"
+        },
+        {
+          "category": "Twist Constraint Seeds",
+          "seed": "reversed",
+          "rowLength": 8,
+          "focusWords": [
+            "reversedcontrolszoneforfinale",
+            "controls",
+            "reversed",
+            "zone",
+            "for",
+            "finale"
+          ],
+          "chainDigest": "reversed -> reversedcontrolszoneforfinale -> controls -> zone -> for -> finale -> twist -> constraint"
+        },
+        {
+          "category": "Twist Constraint Seeds",
+          "seed": "controls",
+          "rowLength": 8,
+          "focusWords": [
+            "reversedcontrolszoneforfinale",
+            "controls",
+            "reversed",
+            "zone",
+            "for",
+            "finale"
+          ],
+          "chainDigest": "controls -> reversedcontrolszoneforfinale -> reversed -> zone -> for -> finale -> twist -> constraint"
+        }
+      ]
+    }
+  ]
+}

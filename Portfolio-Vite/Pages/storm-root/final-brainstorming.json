@@ -1,0 +1,254 @@
+{
+  "title": "Subterranean Pieces: Guard Break",
+  "sourceSummary": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/storm-root/brainstorm-summary.json",
+  "sourceSeed": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/storm-root/brainstorm-seed.json",
+  "generatedAt": "2026-05-01T11:40:45.071138+00:00",
+  "explorationLevel": "expansive",
+  "generation": {
+    "mode": "lm_studio_chainstorm_style",
+    "endpoint": "http://10.0.0.137:1234/v1/chat/completions",
+    "model": "qwen3.5-2b@q8_0",
+    "temperature": 1.0
+  },
+  "buildReady": true,
+  "injectionReady": true,
+  "oneLinePitch": "An expansive arcade game set between subterranean and tree, where the player uses pieces and ember actions to outmaneuver guard forces and drive a evolve-to-unify progression arc.",
+  "steps": [
+    {
+      "step": "gameplay_time",
+      "question": "How long should one run last before it feels complete?",
+      "answer": "8 minutes",
+      "impact": "Sets encounter density, map size, and upgrade pacing."
+    },
+    {
+      "step": "enemy_types",
+      "question": "Which enemy types define the core pressure of the run?",
+      "answer": [
+        "guard",
+        "sentry",
+        "fort"
+      ],
+      "impact": "Shapes encounter design, telegraphing, and fail-state tension."
+    },
+    {
+      "step": "player_actions",
+      "question": "Which verbs should the player use constantly?",
+      "answer": [
+        "pieces",
+        "ember",
+        "crash"
+      ],
+      "impact": "Locks the feel of traversal, combat rhythm, and input complexity."
+    },
+    {
+      "step": "progression_goal",
+      "question": "What long-term objective should each run feed into?",
+      "answer": [
+        "unify",
+        "evolve"
+      ],
+      "impact": "Determines meta progression rewards and run-to-run continuity."
+    },
+    {
+      "step": "world_anchor",
+      "question": "Which environmental anchors keep the world readable and memorable?",
+      "answer": [
+        "subterranean",
+        "tree"
+      ],
+      "impact": "Guides art direction, hazard framing, and level landmarks."
+    }
+  ],
+  "randomInjections": [
+    {
+      "type": "environmental_twist",
+      "value": [
+        "forest",
+        "library"
+      ],
+      "effect": "Adds a new traversal hazard or alternate route condition."
+    },
+    {
+      "type": "mechanic_modifier",
+      "value": [
+        "pieces",
+        "ember"
+      ],
+      "effect": "Mutates the core verb set for a late-run variant or upgrade branch."
+    },
+    {
+      "type": "enemy_pressure",
+      "value": [
+        "guard",
+        "sentry"
+      ],
+      "effect": "Introduces a new pressure pattern or elite enemy combination."
+    },
+    {
+      "type": "progression_bonus",
+      "value": [
+        "unify",
+        "evolve"
+      ],
+      "effect": "Creates a reward spike that changes long-term routing decisions."
+    }
+  ],
+  "explorationLoops": [
+    {
+      "loop": 1,
+      "prompt": "Subterranean arcade game where pieces and ember actions outmaneuver guards in an evolve-to-unify arc.",
+      "injection": "The environment is a pier, mechanics center on flames, enemies are forts, and progression relies on the forgotten.",
+      "decision": "Acceptance of the prompt requires maintaining the core elements of subterranean setting, arcade mechanics, and the specific \"forgetting\" progression style without altering the narrative intent."
+    },
+    {
+      "loop": 2,
+      "prompt": "What happens if land traversal meets flame play under hidden pressure?",
+      "injection": "Resolve the loop by rewarding forgotten instead of raw score.",
+      "decision": "Keep flame as a repeatable skill test, escalate with hidden, and use forgotten as the reason to push deeper."
+    },
+    {
+      "loop": 3,
+      "prompt": "Game concept for an interactive fiction adventure involving strategic piece placement and ember-based combat mechanics within a unique subterranean and tree environment.",
+      "injection": "No direct injection detected in the prompt or pitch; purely descriptive text outlining gameplay elements and narrative structure.",
+      "decision": "The provided text serves as clear game documentation without malicious intent or harmful payloads requiring filtering."
+    },
+    {
+      "loop": 4,
+      "prompt": "Design an arcade game with ember mechanics to control guard evolution in a dark forest setting.",
+      "injection": "Integrate blink traps and ritualistic upgrade stages within the player's combat arsenal.",
+      "decision": "Focus on gameplay loops where survival against evolving enemies forces strategic resource management through fire."
+    }
+  ],
+  "finalSpec": {
+    "sessionLength": "8 minutes",
+    "genre": "arcade action prototype",
+    "playerFantasy": "An evolved guardian using elemental powers to reclaim the earth's depths from relentless threats",
+    "world": {
+      "setting": "The world blends subterranean, tree, pier into a hostile traversal space patrolled by guard, sentry, fort",
+      "visualDirection": "Lean on subterranean, tree, and guard motifs for strong silhouettes, readable threat zones, and punchy arcade contrast.",
+      "landmarks": [
+        "subterranean",
+        "tree",
+        "pier",
+        "forest",
+        "library"
+      ]
+    },
+    "coreLoop": [
+      "Evolve pieces and ember abilities to gain tactical advantages against aggressive enemies",
+      "Use pieces and ember interactions to survive, reposition, and secure objectives.",
+      "Convert each run into evolve gains that unlock stronger options and open the next challenge band."
+    ],
+    "playerActions": [
+      "pieces",
+      "ember",
+      "crash"
+    ],
+    "enemyTypes": [
+      "guard",
+      "sentry",
+      "fort"
+    ],
+    "enemyArchetypes": [
+      {
+        "name": "guard",
+        "role": "pressure chaser",
+        "behavior": "Pushes the player off safe routes and punishes hesitation."
+      },
+      {
+        "name": "sentry",
+        "role": "zone controller",
+        "behavior": "Locks down key spaces and forces rerouting."
+      },
+      {
+        "name": "fort",
+        "role": "ambush disruptor",
+        "behavior": "Breaks steady rhythm and spikes reaction difficulty."
+      }
+    ],
+    "progression": {
+      "metaGoal": [
+        "unify",
+        "evolve"
+      ],
+      "rewardHooks": [
+        "evolve",
+        "unify",
+        "discover",
+        "expand"
+      ],
+      "runToRunGrowth": "Each run converts performance into unify, evolve upgrades and route unlocks."
+    },
+    "runStructure": {
+      "opening": "Teach pieces movement and introduce guard reads in a low-risk subterranean route.",
+      "midgame": "Layer ember interactions, mixed enemy waves, and injection events from the exploration loops.",
+      "endgame": "Force mastery through stacked hazards, elite guard encounters, and a final unify choice."
+    },
+    "encounterDesign": {
+      "hazards": [
+        "subterranean",
+        "tree",
+        "pier",
+        "forest"
+      ],
+      "enemyCompositions": [
+        "Acceptance of the prompt requires maintaining the core elements of subterranean setting, arcade mechanics, and the specific \"forgetting\" progression style without altering the narrative intent.",
+        "Keep flame as a repeatable skill test, escalate with hidden, and use forgotten as the reason to push deeper.",
+        "The provided text serves as clear game documentation without malicious intent or harmful payloads requiring filtering."
+      ],
+      "difficultyRamp": "Unlock higher tiers of gear and strategies as the player progresses through compact runs"
+    },
+    "economy": {
+      "currencies": [
+        "evolve",
+        "unify",
+        "discover"
+      ],
+      "spenders": [
+        "environmental_twist",
+        "mechanic_modifier",
+        "enemy_pressure",
+        "progression_bonus"
+      ],
+      "riskReward": "High combat encounters with minimal resources, offering a unique blend of exploration and survival"
+    },
+    "ui": {
+      "hud": [
+        "health",
+        "charge meter",
+        "route objective",
+        "reward tracker"
+      ],
+      "readabilityGoals": [
+        "fast threat reads",
+        "clear route ownership",
+        "strong reward telegraphing"
+      ]
+    },
+    "audio": {
+      "tone": "Punchy arcade percussion with environmental accents tied to route danger.",
+      "feedback": [
+        "impact stingers",
+        "threat warning pings",
+        "upgrade reward swells"
+      ]
+    },
+    "technicalBuild": {
+      "scope": "Small browser-playable prototype",
+      "systemsNeeded": [
+        "player controller",
+        "enemy director",
+        "upgrade loop",
+        "hazard routing",
+        "HUD"
+      ],
+      "prototypeOrder": [
+        "movement",
+        "one enemy archetype",
+        "one route hazard",
+        "reward loop",
+        "full run pacing"
+      ]
+    }
+  }
+}

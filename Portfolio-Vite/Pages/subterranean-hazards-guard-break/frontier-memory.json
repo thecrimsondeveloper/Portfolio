@@ -1,0 +1,194 @@
+{
+  "gameTitle": "Subterranean Hazards: Guard Break",
+  "profile": {
+    "seedContract": {
+      "sourceSeed": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-4f0511ij/brainstorm-seed.json",
+      "sourceSummary": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-4f0511ij/brainstorm-summary.json",
+      "sourceSamples": {
+        "environment": [
+          "subterranean",
+          "tree",
+          "pier",
+          "forest",
+          "library",
+          "twilight"
+        ],
+        "mechanics": [
+          "hazards",
+          "ember",
+          "crash",
+          "flame",
+          "sprint",
+          "slide",
+          "guide"
+        ],
+        "enemies": [
+          "guard",
+          "sentry",
+          "fort",
+          "commander",
+          "leader",
+          "noir"
+        ],
+        "progression": [
+          "evolve",
+          "unify",
+          "discover",
+          "expand",
+          "unlock",
+          "save"
+        ]
+      }
+    },
+    "mechanicFamily": "stealth patrol",
+    "runtimeTemplate": "stealth_patrol",
+    "pacing": "18 minutes",
+    "spatialStructure": "patrol grid",
+    "failurePressure": [
+      "guard",
+      "sentry",
+      "commander",
+      "subterranean",
+      "tree",
+      "pier",
+      "forest"
+    ],
+    "progressionShape": [
+      "expand",
+      "uncover",
+      "evolve",
+      "unify",
+      "discover",
+      "expand",
+      "Each run converts performance into expand, uncover upgrades and route unlocks."
+    ],
+    "presentationRules": [
+      "A blend of subterranean caverns, lush forests, and industrial pier structures creating an ever-changing battlefield.",
+      "Dark, atmospheric lighting with neon accents from burning embers to emphasize the contrast between life and death.",
+      "fast threat reads",
+      "clear route ownership",
+      "strong reward telegraphing"
+    ],
+    "mustPreserve": [
+      "Preserve the randomized seed contract through every stage.",
+      "Treat final-brainstorming.json as the canonical game specification.",
+      "Keep the generated game self-contained in one Pages/<slug>/ folder.",
+      "Make runtime behavior match runtimeTemplate instead of defaulting to one arena scaffold."
+    ],
+    "fallbackSource": ""
+  },
+  "canonicalPaths": {
+    "targetDir": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/subterranean-hazards-guard-break",
+    "brainstormSeed": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/subterranean-hazards-guard-break/brainstorm-seed.json",
+    "brainstormSummary": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/subterranean-hazards-guard-break/brainstorm-summary.json",
+    "finalBrainstorm": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/subterranean-hazards-guard-break/final-brainstorming.json",
+    "story": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/subterranean-hazards-guard-break/story-structure.json",
+    "gameScript": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/subterranean-hazards-guard-break/game.js"
+  },
+  "seedCombination": {
+    "themes": "noir investigation",
+    "environments": "subterranean library",
+    "settings": "twilight",
+    "characterMotivations": "save a stranded companion",
+    "movementMechanics": [
+      "precision jumping",
+      "momentum-based rolling"
+    ],
+    "coreLoops": "guide a companion through hazards",
+    "progressionLoops": "power up a device",
+    "completionLoops": "relay activation",
+    "rewards": [
+      "movement mastery",
+      "upgrade module"
+    ],
+    "antagonists": "self-learning barrier",
+    "visualStyles": "architectural minimalism",
+    "audioStyles": "dripping water motifs",
+    "interactionPatterns": "context-sensitive movement",
+    "productionFocus": "prepare for agent-driven expansion"
+  },
+  "stageHistory": [
+    {
+      "stage": "stage-1-brainstorm-pipeline",
+      "event": "stage",
+      "summary": "Locked final-brainstorming.json and initialized gameDesignProfile."
+    },
+    {
+      "stage": "stage-2-concept-materialization",
+      "event": "stage",
+      "summary": "Materialized concept from locked brainstorm packet."
+    },
+    {
+      "stage": "stage-3-feature-sprint-loop",
+      "event": "stage",
+      "summary": "Derived feature sprint packets from canonical brainstorm data."
+    },
+    {
+      "stage": "stage-4-design-assembly",
+      "event": "stage",
+      "summary": "Assembled design document."
+    },
+    {
+      "stage": "stage-5-build-planning-loop",
+      "event": "stage",
+      "summary": "Derived fun assessment and implementation chapters."
+    },
+    {
+      "stage": "stage-6-story-and-scaffold-materialization",
+      "event": "stage",
+      "summary": "Created story payload and runtime scaffold for stealth_patrol."
+    },
+    {
+      "stage": "stage-7-html-review-loop",
+      "event": "stage",
+      "summary": "Completed HTML shell review pass."
+    },
+    {
+      "stage": "implementation_pass",
+      "event": "memoryUpdate",
+      "summary": "Selected Movement as active feature; plan to add ember resource and hazard pulse reactions."
+    },
+    {
+      "stage": "implementation_pass",
+      "event": "memoryUpdate",
+      "summary": "Selected One Enemy Archetype; plan to add vision/pursuit and pulse stun."
+    },
+    {
+      "stage": "stage-8-implementation-sprint-loop",
+      "event": "stage",
+      "summary": "Completed configured implementation sprint passes."
+    },
+    {
+      "stage": "validation_loop",
+      "event": "memoryUpdate",
+      "summary": "Validation found missing ember/hazard integration; plan to patch game.js, story-structure.json, and index.html."
+    },
+    {
+      "stage": "stage-9-validation-repair-loop",
+      "event": "stage",
+      "summary": "Completed configured validation loops."
+    },
+    {
+      "stage": "stage-10-arcade-integration-loop",
+      "event": "stage",
+      "summary": "Completed arcade integration loop."
+    }
+  ],
+  "decisions": [
+    "ActiveFeature: Movement",
+    "Scope: game.js, story-structure.json, index.html",
+    "ActiveFeature: One Enemy Archetype",
+    "Implement ember resource and hazard pulse reactions"
+  ],
+  "rejectedIdeas": [],
+  "openIssues": [
+    "Timing values need tuning after implementation.",
+    "Exact stun durations and vision angles need playtesting",
+    "Exact pulseCost and stunSeconds need playtesting"
+  ],
+  "nextStageNotes": [
+    "After patches, run validation loops and adjust timings.",
+    "After implementing, run validation loops and adjust numbers",
+    "Apply patches, run node --check, and perform a quick browser smoke test before next validation loop."
+  ]
+}

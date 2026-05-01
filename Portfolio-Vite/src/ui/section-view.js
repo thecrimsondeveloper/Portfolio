@@ -1,7 +1,8 @@
-import { buildProjectHref } from "../app/router.js";
+import { buildPageHref } from "../app/router.js";
 import { renderIntroList } from "./intro-list.js";
 
 const SECTION_PROJECT_LIMIT = 6;
+const WORK_IDEAS = ["automation", "research", "game-dev", "agentic-engineering"];
 
 export function renderSectionView(host, page, schema) {
   const projects = page.featuredProjectSlugs
@@ -20,22 +21,24 @@ export function renderSectionView(host, page, schema) {
         <p class="section-subtitle">${page.subtitle}</p>
       </section>
 
+      ${page.id === "full-stack" ? renderWorkIdeas(page, schema) : ""}
+      ${page.id === "full-stack" ? renderWorkChips() : ""}
       ${renderIntroList(page)}
 
-      <section class="content-section content-section--plain" aria-labelledby="featured-work-heading">
-        <div class="content-section-header">
-          <h2 class="content-section-title" id="featured-work-heading">Featured Work</h2>
-          <p class="content-section-copy">Selected projects presented one at a time with image, title, and summary.</p>
-        </div>
-        <div class="project-grid project-grid--stacked">${projects}</div>
-      </section>
+      ${renderCollapsibleSection(
+        "featured-work",
+        "Featured Work",
+        "Selected projects presented one at a time with image, title, and summary.",
+        `<div class="project-grid project-grid--stacked">${projects}</div>`,
+        true
+      )}
 
-      <section class="content-section" aria-labelledby="tools-heading">
-        <div class="content-section-header">
-          <h2 class="content-section-title" id="tools-heading">Tools / Focus</h2>
-        </div>
-        <div class="tag-list">${tools}</div>
-      </section>
+      ${renderCollapsibleSection(
+        "tools",
+        "Tools / Focus",
+        "The technologies and capabilities that power each work area.",
+        `<div class="tag-list">${tools}</div>`
+      )}
     </div>
   `;
 }
@@ -97,4 +100,77 @@ function renderProjectCard(project) {
 function renderActionLink(link) {
   const rel = link.external ? ' target="_blank" rel="noreferrer"' : "";
   return `<a class="button-link ${link.style || "ghost"}" href="${link.href}"${rel} data-wobble>${link.label}</a>`;
+}
+
+function renderWorkIdeas(page, schema) {
+  const ideaCards = WORK_IDEAS
+    .map((ideaId) => schema.pages[ideaId])
+    .filter(Boolean)
+    .map((idea) => renderWorkIdeaCard(idea))
+    .join("");
+
+  return renderCollapsibleSection(
+    "work-ideas",
+    "Work ideas",
+    "Existing idea areas that define the Work tab and its expertise focus.",
+    `<div class="idea-grid">${ideaCards}</div>`,
+    true
+  );
+}
+
+function renderCollapsibleSection(id, title, summary, content, open = false) {
+  return `
+    <details class="section-block" id="${id}"${open ? " open" : ""}>
+      <summary class="section-block-summary">
+        <div>
+          <span class="section-block-title">${title}</span>
+          <span class="section-block-note">${summary}</span>
+        </div>
+        <span class="section-block-icon" aria-hidden="true">▾</span>
+      </summary>
+      <div class="section-block-content">${content}</div>
+    </details>
+  `;
+}
+
+function renderWorkIdeaCard(idea) {
+  const url = buildPageHref(idea.id);
+  const projectCount = idea.featuredProjectSlugs?.length || 0;
+  return `
+    <article class="idea-card">
+      <div class="idea-card-body">
+        <span class="idea-card-label">${idea.title}</span>
+        <h3>${idea.title}</h3>
+        <p>${idea.description}</p>
+      </div>
+      <div class="idea-card-footer">
+        <span>${projectCount} project${projectCount === 1 ? "" : "s"}</span>
+        <a class="button-link secondary" href="${url}" data-route-link>Explore</a>
+      </div>
+    </article>
+  `;
+}
+
+function renderWorkChips() {
+  const filters = [
+    { id: "full-stack", label: "Full Stack" },
+    { id: "automation", label: "Automation" },
+    { id: "research", label: "Research" },
+    { id: "game-dev", label: "Game Dev / XR" },
+    { id: "agentic-engineering", label: "Agentic" },
+  ];
+
+  return `
+    <div class="work-chips">
+      ${filters
+        .map(
+          (filter) => `
+            <a class="button-link secondary" href="/?page=${encodeURIComponent(filter.id)}" data-route-link>
+              ${filter.label}
+            </a>
+          `
+        )
+        .join("")}
+    </div>
+  `;
 }

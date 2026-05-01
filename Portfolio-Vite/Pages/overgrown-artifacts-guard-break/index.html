@@ -1,0 +1,112 @@
+
+		<!DOCTYPE html>
+		<html lang="en">
+		  <head>
+			<meta charset="UTF-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<title>Overgrown Artifacts: Guard Break</title>
+			<style>
+			  :root {
+				--bg: #050813;
+				--panel: rgba(10, 17, 31, 0.86);
+				--panel-border: rgba(123, 255, 214, 0.18);
+				--text: #eff7ff;
+				--muted: #8eabc8;
+				--accent: #7cffc9;
+			  }
+			  * { box-sizing: border-box; }
+			  body {
+				margin: 0;
+				font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+				background:
+				  radial-gradient(circle at top, rgba(125, 249, 255, 0.14), transparent 32%),
+				  radial-gradient(circle at 80% 20%, rgba(124, 255, 201, 0.12), transparent 26%),
+				  linear-gradient(180deg, #07101d, var(--bg));
+				color: var(--text);
+				min-height: 100vh;
+				overflow: hidden;
+			  }
+			  #game-stage { width: 100vw; height: 100vh; padding: 1rem; }
+			  #game-container {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				border-radius: 24px;
+				border: 1px solid rgba(125, 249, 255, 0.18);
+				background: linear-gradient(180deg, #06101e, #03060d);
+				box-shadow: 0 22px 60px rgba(0, 0, 0, 0.36);
+			  }
+			  #game-canvas { width: 100%; height: 100%; display: block; }
+			  #game-ui {
+				position: absolute;
+				inset: 0;
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-start;
+				padding: 1rem;
+				pointer-events: none;
+				gap: 1rem;
+			  }
+			  .hud-cluster { display: grid; gap: 0.75rem; max-width: min(34rem, 48vw); }
+			  .hud-card { padding: 0.8rem 0.95rem; border-radius: 18px; background: rgba(6, 12, 24, 0.82); border: 1px solid rgba(124, 255, 201, 0.12); backdrop-filter: blur(16px); }
+			  .hud-label { display: block; font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.45rem; }
+			  .hud-value { margin: 0; color: var(--text); line-height: 1.45; }
+			  #game-overlay { position: absolute; inset: 0; display: none; place-items: center; background: rgba(2, 6, 12, 0.66); z-index: 5; padding: 1rem; }
+			  #game-overlay.visible { display: grid; }
+			  .overlay-card { width: min(38rem, 100%); padding: 1.35rem 1.4rem; border-radius: 24px; background: rgba(5, 9, 18, 0.92); border: 1px solid rgba(125, 249, 255, 0.2); box-shadow: 0 28px 64px rgba(0, 0, 0, 0.4); }
+			  .overlay-kicker { margin: 0 0 0.5rem; color: var(--accent); letter-spacing: 0.18em; text-transform: uppercase; font-size: 0.8rem; }
+			  .overlay-card h1, .overlay-card h2 { margin: 0 0 0.65rem; font-size: clamp(2rem, 5vw, 3.5rem); text-transform: uppercase; letter-spacing: 0.08em; }
+			  .overlay-card p { margin: 0.35rem 0; color: var(--muted); line-height: 1.5; }
+			  #story-text { white-space: pre-wrap; color: #d4e5ff; margin: 1rem 0 0; font-family: inherit; line-height: 1.55; }
+			  #overlay-hint { margin-top: 1rem; color: #eff7ff; }
+			  @media (max-width: 900px) {
+				#game-stage { padding: 0; }
+				#game-container { border-radius: 0; }
+				#game-ui { flex-direction: column; align-items: stretch; }
+				.hud-cluster { max-width: none; }
+			  }
+			</style>
+		  </head>
+		  <body>
+			<div id="game-stage">
+			  <div id="game-container">
+				<canvas id="game-canvas"></canvas>
+				<div id="game-ui">
+				  <div class="hud-cluster">
+					<div class="hud-card">
+					  <span class="hud-label">Objective</span>
+					  <p class="hud-value" id="game-objective">Loading objective...</p>
+					</div>
+					<div class="hud-card">
+					  <span class="hud-label">Status</span>
+					  <p class="hud-value" id="game-status">Loading game...</p>
+					</div>
+				  </div>
+				  <div class="hud-cluster">
+					<div class="hud-card">
+					  <span class="hud-label">Telemetry</span>
+					  <p class="hud-value" id="game-metrics">Awaiting scene data...</p>
+					</div>
+				  </div>
+				</div>
+				<div id="game-overlay" class="visible">
+				  <div class="overlay-card">
+					<p class="overlay-kicker">Playable Demo</p>
+					<h1 id="overlay-title">Overgrown Artifacts: Guard Break</h1>
+					<p id="overlay-body">Navigate overgrown and tree spaces with sprint and crash, survive warden-led pressure, and turn each run into unify progress.</p>
+					<pre id="story-text">Navigate overgrown and tree spaces with sprint and crash, survive warden-led pressure, and turn each run into unify progress.
+
+Scout routes through overgrown spaces and identify guard pressure points.
+
+Use artifacts and ember interactions to survive, reposition, and secure objectives.
+
+Convert each run into evolve gains that unlock stronger options and open the next challenge band.</pre>
+					<p id="overlay-hint">Press Enter to deploy. WASD or Arrow keys move the player through the arena., Shift triggers a combine burst for repositioning., Space converts sprint and crash pressure into crowd control., Press Enter to deploy. Use WASD or Arrow keys to move, Shift to dash, and Space to pulse., health, charge meter. Press R to restart after a wipe.</p>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<script type="module" src="./game.js"></script>
+		  </body>
+		</html>

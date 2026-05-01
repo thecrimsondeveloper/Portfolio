@@ -1,0 +1,38 @@
+{
+  "title": "Ancient Puzzles: Guard Break",
+  "description": "A sprawling arcade game where ancient and tree environments host puzzle-based combat against guards, driving an evolve-to-unify arc.",
+  "objective": "Use puzzles and ember to survive guard patrols, secure relic routes, and turn each run into evolve, unify progress.",
+  "seed": {
+    "themes": "urban parkour delivery",
+    "genres": "escort boss rush",
+    "environments": "ancient quarry",
+    "settings": "power outage",
+    "characterMotivations": "reach a quiet sanctuary",
+    "movementMechanics": [
+      "swinging from cables",
+      "momentum-based rolling"
+    ],
+    "coreLoops": "solve motion puzzles to advance",
+    "progressionLoops": "unlock shortcuts",
+    "completionLoops": "ceremony completion",
+    "rewards": [
+      "collectibles",
+      "story fragments"
+    ],
+    "antagonists": "self-learning barrier",
+    "visualStyles": "dusty pastel",
+    "audioStyles": "ambient hum",
+    "interactionPatterns": "combo navigation",
+    "productionFocus": "focus on emergent loops",
+    "cameraModes": "isometric boss-focus",
+    "arenaShapes": "patrol grid with switchbacks",
+    "primaryVerbs": "repair with timing",
+    "scoringModels": "artifact streak silver ladder",
+    "failureModes": "timer expired after warning",
+    "enemyBehaviors": "block routes combo-triggered",
+    "objectiveStructures": "defuse core without alarm",
+    "resourceSystems": "keys risk overflow",
+    "levelProgression": "escalating waves with rerolls",
+    "twistConstraints": "moving goal during alarms"
+  }
+}

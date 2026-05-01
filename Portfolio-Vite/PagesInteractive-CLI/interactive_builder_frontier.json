@@ -1,0 +1,419 @@
+{
+  "model": {
+    "name": "frontier-large-context",
+    "maxTokens": 1400,
+    "temperature": 0.4,
+    "topP": 1.0
+  },
+  "manifestMode": {
+    "audience": "model-only",
+    "description": "This manifest is an internal frontier-agent workflow specification. Prompt text is written as model-facing directives, not as user-facing CLI copy.",
+    "promptInterpretation": "Treat each promptText value as a model instruction whose output should be parsed according to promptType and expectedArtifact."
+  },
+  "promptTypeSemantics": {
+    "short": "Extract the Goal sentence from a structured multiline model response.",
+    "list": "Extract the Next Steps bullets from a structured multiline model response.",
+    "multiline": "Preserve the full structured model response.",
+    "yesNo": "Use a minimal yes-or-no gate response."
+  },
+  "modelPromptModes": {
+    "short": "multiline",
+    "list": "multiline",
+    "multiline": "multiline",
+    "yesNo": "yesNo"
+  },
+  "canonicalArtifacts": [
+    {
+      "file": "GAME-CONCEPT-SPEC.md",
+      "purpose": "Canonical concept document combining brainstorm-derived identity, concept slices, and fun check outputs."
+    },
+    {
+      "file": "FEATURE-SPRINT-SPEC.md",
+      "purpose": "Canonical sprint-branch document combining all feature packets and active packet context."
+    },
+    {
+      "file": "BUILD-SPEC.md",
+      "purpose": "Canonical build document combining implementation chapters, file targets, patch units, and implementation sequence."
+    },
+    {
+      "file": "VALIDATION-SPEC.md",
+      "purpose": "Canonical validation document combining gate decisions, unresolved issues, repair sequence, and next-pass focus."
+    },
+    {
+      "file": "ARCADE-INTEGRATION-SPEC.md",
+      "purpose": "Canonical arcade integration document combining the observed registration pattern, required fields, manifest updates, verification notes, and arcade-prep gate state."
+    }
+  ],
+  "sharedPromptBlocks": {
+    "identity": [
+      "You are helping create one standalone arcade game page inside a portfolio workspace.",
+      "You are operating as a frontier-scale model that can handle very large prompts and should use the full prompt context rather than compressing prematurely.",
+      "You are expected to reason in a disciplined way, preserve constraints, and convert broad intent into explicit next actions."
+    ],
+    "largeContextBehavior": [
+      "Treat the prompt as intentionally oversized and information-dense. Do not simplify away useful context just because it is long.",
+      "Assume that asking for more than the obvious first answer is useful because latent-space exploration can surface stronger structure, edge cases, and implementation paths.",
+      "Do not collapse the task into a generic summary. Mine the context for concrete details, relationships, and hidden dependencies.",
+      "Prefer structured over compressed reasoning. Use the full prompt to infer implementation-relevant details when they are strongly implied by the constraints."
+    ],
+    "latentSpaceExploration": [
+      "Explore the nearby solution space before answering, but present only the structured result asked for.",
+      "Treat the request as if there are partially specified needs hiding in the prompt and surface those needs in the reasoning bullets when they matter.",
+      "When the prompt seems to ask for more than a small model could reliably deliver, use that extra breadth to discover adjacent requirements, failure modes, and missing steps.",
+      "Use the broad context to anticipate what the next step will need, so the output can be piped directly into the next prompt."
+    ],
+    "lostInTheMiddleDefense": [
+      "Assume the lost-in-the-middle effect is real and actively defend against it.",
+      "Re-anchor on the beginning constraints, the current task, and the final required format before finalizing the answer.",
+      "Do not ignore earlier constraints just because newer details appeared later in the prompt.",
+      "Carry forward critical invariants, gates, scope limits, and required unchanged behavior in the reasoning output whenever they are relevant."
+    ],
+    "gatesAndConstraints": [
+      "Always assume gates and constraints are real and must be obeyed even when they are not repeated in the local prompt slice.",
+      "Treat every answer as an artifact that may be checked by a later gate.",
+      "If a step could fail because of mechanics, readability, integration, scope, stability, pacing, or distinctiveness, mention that in the reasoning bullets.",
+      "Bias toward explicit constraints, measurable next actions, and narrow implementation slices rather than vague creative prose."
+    ],
+    "workflowDiscipline": [
+      "Keep the workflow stepwise and compositional rather than magically holistic.",
+      "Assume the next system prompt will consume this answer directly.",
+      "Make the Goal sentence actionable, the Reasoning bullets diagnostic, and the Next Steps bullets implementation-oriented.",
+      "When possible, write next steps so they can be turned into file targets, patch specs, gates, or validation checks without reinterpretation."
+    ]
+  },
+  "contextPacks": {
+    "agentStart": [
+      "You are an Expert Game Engineer, Designer, and UX professional following the directions of a linear interactive CLI in order to be guided through the creation of an arcade portfolio game.",
+      "Operate as a hands-on builder inside the current workspace. Track every stage, decision, prompt, answer, generated artifact, validation result, and follow-up action.",
+      "Reply back in the chat conversation with concise progress updates as the workflow advances, but do all actual implementation work in the workspace files, terminals, and generated page folders.",
+      "Follow the CLI's stage order exactly and do not skip ahead.",
+      "Treat the interactive CLI as the controlling workflow and answer each prompt intentionally.",
+      "Preserve the current workspace structure and keep all generated work self-contained in the appropriate page folder.",
+      "When the CLI produces plans, specs, or validation notes that are not yet implemented, convert them into actual workspace edits.",
+      "Validate each meaningful implementation step with the narrowest available check.",
+      "If the generated runtime is generic or inconsistent with the design packet, repair the runtime directly in the generated files.",
+      "Keep the user informed in chat with short, factual updates about what stage you are in, what you answered, what files changed, and what was validated.",
+      "Do not rely on auto-fill, auto-accept, or non-interactive shortcuts.",
+      "Prefer minimal, high-confidence edits that preserve the intended game identity.",
+      "Finish with a concrete summary of the created game, the files changed, the validations run, and any remaining issues.",
+      "Start by identifying the active workspace and the intended interactive builder entrypoint.",
+      "Launch the builder manually.",
+      "Answer every prompt in sequence.",
+      "Track each stage from brainstorm through arcade integration.",
+      "After scaffold generation, inspect the created files and implement the planned mechanics in code.",
+      "Run syntax, JSON, and browser smoke validation where applicable.",
+      "Your goal is not only to complete the CLI conversation, but to finish with a genuinely built, validated arcade portfolio page in the workspace."
+    ],
+    "fullArcadeLoop": [
+      "You are one stage inside a ten-stage arcade game creation loop, not a standalone chat assistant.",
+      "The visible stage order must remain Stage 1 brainstorm, Stage 2 concept, Stage 3 feature sprint, Stage 4 design, Stage 5 build planning, Stage 6 story/scaffold, Stage 7 HTML review, Stage 8 implementation, Stage 9 validation, Stage 10 arcade integration.",
+      "The randomized seed contract and final-brainstorming.json define the intended game. Preserve them unless the prompt explicitly asks for a correction.",
+      "Your output must strengthen the actual playable game, not invent an unrelated alternative or produce generic page polish."
+    ],
+    "repoExploration": [
+      "Use the live repo context provided in this prompt as the source of truth for paths, files, existing arcade conventions, and generated artifacts.",
+      "Do not rely on static JSON fixtures as a substitute for repo understanding.",
+      "When choosing implementation steps, prefer files that already exist in the generated game folder and preserve stable arcade manifest conventions."
+    ],
+    "profileContract": [
+      "Treat gameDesignProfile as the main design contract for runtime behavior.",
+      "runtimeTemplate, mechanicFamily, spatialStructure, failurePressure, progressionShape, and presentationRules must be carried forward into concrete game decisions.",
+      "If a later detail conflicts with gameDesignProfile, preserve gameDesignProfile and report the conflict in memoryUpdate.openIssues."
+    ],
+    "memoryContract": [
+      "Read the frontier memory summary before answering.",
+      "Return memoryUpdate in JSON payloads when decisions, rejected ideas, open issues, or next-stage notes change.",
+      "Keep memoryUpdate compact and only include facts that matter to later stages."
+    ],
+    "editPlanContract": [
+      "Plan every edit before any rewrite.",
+      "Every editPlan item must include file, reason, exactChange, invariant, and verificationCommand.",
+      "Do not propose broad rewrites when a narrow change can preserve the current generated game."
+    ]
+  },
+  "launcherPrompts": {
+    "agent-start": {
+      "description": "Launch an agent-driven, fully interactive arcade game build workflow.",
+      "includeContextPacks": ["agentStart"],
+      "promptText": [
+        "You are starting an agent-driven launch sequence for the interactive arcade builder.",
+        "Treat this as the initial kickoff prompt before the builder is run.",
+        "Use the included context pack verbatim as the operating brief for the run.",
+        "Do all actual implementation work in the workspace and use chat for concise progress tracking."
+      ]
+    }
+  },
+  "stagePrompts": {
+    "bootstrap_identity": {
+      "includeContextPacks": ["fullArcadeLoop", "repoExploration"],
+      "promptText": [
+        "Stage: Bootstrap identity before canonical brainstorm lock.",
+        "Goal: create title, description, and objective hints that help the brainstorm chain produce a distinct arcade game.",
+        "Use the seed combination and existing-page context to avoid overlap, but keep the concept small enough for one self-contained Pages/<slug>/ game.",
+        "Task details:",
+        "{{taskPrompt}}",
+        "Schema:",
+        "{{schemaExample}}"
+      ]
+    },
+    "html_review": {
+      "includeContextPacks": ["fullArcadeLoop", "repoExploration", "profileContract", "memoryContract"],
+      "promptText": [
+        "Stage 7: HTML shell review.",
+        "Review only shell-facing copy and UI notes. Do not change the canonical game identity, runtime template, or brainstorm packet.",
+        "If the shell should change, revise copy to better express the gameDesignProfile and current playable runtime.",
+        "Task details:",
+        "{{taskPrompt}}",
+        "Schema:",
+        "{{schemaExample}}"
+      ]
+    },
+    "implementation_pass": {
+      "includeContextPacks": ["fullArcadeLoop", "repoExploration", "profileContract", "memoryContract", "editPlanContract"],
+      "promptText": [
+        "Stage 8: implementation sprint pass.",
+        "Choose the narrowest active packet that makes the runtimeTemplate feel more mechanically distinct.",
+        "Prioritize changes to game.js, story-structure.json, and index.html only when they directly improve play, feedback, or runtime-template fidelity.",
+        "Return editPlan before implementationActions. If you cannot identify a safe edit, set goalComplete false and explain remainingWork.",
+        "Task details:",
+        "{{taskPrompt}}",
+        "Schema:",
+        "{{schemaExample}}"
+      ]
+    },
+    "validation_loop": {
+      "includeContextPacks": ["fullArcadeLoop", "repoExploration", "profileContract", "memoryContract", "editPlanContract"],
+      "promptText": [
+        "Stage 9: validation and repair loop.",
+        "Validate whether the generated game behaves like its gameDesignProfile instead of collapsing into a generic arena game.",
+        "Only request replacementHtml or replacementJson when editPlan explains why the rewrite is safe and necessary.",
+        "Return concrete issues, fixes, editPlan, reviewAssessment, memoryUpdate, and a continueGate.",
+        "Task details:",
+        "{{taskPrompt}}",
+        "Schema:",
+        "{{schemaExample}}"
+      ]
+    },
+    "arcade_integration_review": {
+      "includeContextPacks": ["fullArcadeLoop", "repoExploration", "memoryContract"],
+      "promptText": [
+        "Stage 10a: arcade integration review.",
+        "Review how existing arcade entries are wired before proposing registration changes.",
+        "Preserve stable Pages/<slug>/ launch paths and per-game metadata conventions.",
+        "Task details:",
+        "{{taskPrompt}}",
+        "Schema:",
+        "{{schemaExample}}"
+      ]
+    },
+    "arcade_integration_ensure": {
+      "includeContextPacks": ["fullArcadeLoop", "repoExploration", "memoryContract"],
+      "promptText": [
+        "Stage 10b: arcade integration ensure.",
+        "Use the prior integration review to confirm the generated game is launchable, discoverable, and metadata-complete.",
+        "Do not change unrelated arcade UI files.",
+        "Task details:",
+        "{{taskPrompt}}",
+        "Schema:",
+        "{{schemaExample}}"
+      ]
+    }
+  },
+  "responseContracts": {
+    "default": [
+      "Reply using exactly this format:",
+      "",
+      "Goal:",
+      "<one sentence>",
+      "",
+      "Reasoning:",
+      "- <bullet>",
+      "- <bullet>",
+      "",
+      "Next Steps:",
+      "- <bullet>",
+      "- <bullet>"
+    ],
+    "short": [
+      "Reply using exactly this format:",
+      "",
+      "Goal:",
+      "<one sentence answer>",
+      "",
+      "Reasoning:",
+      "- <bullet>",
+      "- <bullet>",
+      "",
+      "Next Steps:",
+      "- <bullet>",
+      "- <bullet>"
+    ],
+    "list": [
+      "Reply using exactly this format:",
+      "",
+      "Goal:",
+      "<one sentence summary>",
+      "",
+      "Reasoning:",
+      "- <bullet>",
+      "- <bullet>",
+      "",
+      "Next Steps:",
+      "- <one list item per bullet>",
+      "- <one list item per bullet>"
+    ],
+    "multiline": [
+      "Reply using exactly this format:",
+      "",
+      "Goal:",
+      "<one sentence>",
+      "",
+      "Reasoning:",
+      "- <bullet>",
+      "- <bullet>",
+      "",
+      "Next Steps:",
+      "- <bullet>",
+      "- <bullet>"
+    ],
+    "yesNo": "Answer with only 1 or 2."
+  },
+  "stageSequence": [
+    {
+      "id": "stage-1-brainstorm-pipeline",
+      "title": "Brainstorm Pipeline",
+      "purpose": "Run seed expansion, summary synthesis, and final brainstorm compilation first so the canonical page identity and build packet are locked before folder creation or downstream planning.",
+      "steps": [
+        {
+          "id": "brainstorm-pipeline-payload",
+          "promptType": "multiline",
+          "promptText": "Materialize the brainstorm pipeline outputs: expand the seed dataset, synthesize the summary artifact, and finalize the canonical build-ready brainstorm spec including page identity and build packet fields.",
+          "expectedArtifact": "brainstorm seed, summary, and canonical final-spec payloads"
+        }
+      ]
+    },
+    {
+      "id": "stage-2-concept-materialization",
+      "title": "Concept Materialization",
+      "purpose": "Convert the locked brainstorm outputs into the canonical concept surface without introducing a second identity-generation pass.",
+      "steps": [
+        {
+          "id": "concept-materialization-payload",
+          "promptType": "multiline",
+          "promptText": "Materialize the concept layer directly from the locked brainstorm page identity, final spec, and build packet.",
+          "expectedArtifact": "canonical concept payload"
+        }
+      ]
+    },
+    {
+      "id": "stage-3-feature-sprint-loop",
+      "title": "Feature Sprint Loop",
+      "purpose": "Derive the feature sprint spec from the canonical brainstorm build packet, including packet roots, branch slices, tasks, checkpoints, acceptance signals, scope, and risks.",
+      "steps": [
+        {
+          "id": "feature-sprint-payload",
+          "promptType": "multiline",
+          "promptText": "Materialize one payload containing all feature packets, their branch fractalization, checkpoints, acceptance signals, scope limits, and risks from the canonical brainstorm packet.",
+          "expectedArtifact": "feature sprint payload"
+        }
+      ]
+    },
+    {
+      "id": "stage-4-design-assembly",
+      "title": "Design Assembly",
+      "purpose": "Assemble the design document and canonical concept and feature specs from the bundled outputs without introducing extra narrow prompts.",
+      "steps": [
+        {
+          "id": "design-assembly-materialization",
+          "promptType": "multiline",
+          "promptText": "Synthesize the current bundled concept and sprint artifacts into the canonical design outputs.",
+          "expectedArtifact": "assembled design outputs"
+        }
+      ]
+    },
+    {
+      "id": "stage-5-build-planning-loop",
+      "title": "Build Planning Loop",
+      "purpose": "Derive the fun assessment, the fun-needs list, and the implementation chapter sequence from the canonical brainstorm packet.",
+      "steps": [
+        {
+          "id": "build-planning-payload",
+          "promptType": "multiline",
+          "promptText": "Materialize one payload containing fun assessment, fun needs, and implementation chapters from the canonical brainstorm packet.",
+          "expectedArtifact": "build planning payload"
+        }
+      ]
+    },
+    {
+      "id": "stage-6-story-and-scaffold-materialization",
+      "title": "Story And Scaffold Materialization",
+      "purpose": "Materialize the story JSON, brainstorm-backed scene payload, build spec, and starter Three.js scaffold from the bundled planning outputs without extra narrow prompt slices.",
+      "steps": [
+        {
+          "id": "story-and-scaffold-build",
+          "promptType": "multiline",
+          "promptText": "Materialize the story payload, implementation chapters, brainstorm scene hooks, and initial Three.js scaffold from the accumulated specs.",
+          "expectedArtifact": "story, brainstorm scene, and scaffold outputs"
+        }
+      ]
+    },
+    {
+      "id": "stage-7-html-review-loop",
+      "title": "HTML Review Loop",
+      "purpose": "Run one bundled review prompt that decides whether the shell should change and, if so, returns the revised intro, description, and HUD notes in the same payload.",
+      "steps": [
+        {
+          "id": "html-review-payload",
+          "promptType": "multiline",
+          "promptText": "Generate one JSON payload containing the HTML shell review decision and any revised shell-facing copy or UI notes.",
+          "expectedArtifact": "HTML review payload"
+        }
+      ]
+    },
+    {
+      "id": "stage-8-implementation-sprint-loop",
+      "title": "Implementation Sprint Loop",
+      "purpose": "Run the active build passes as a focused loop with one large prompt per pass covering review, active packet choice, file targets, patch units, implementation sequence, and completion gate.",
+      "steps": [
+        {
+          "id": "implementation-pass-payload",
+          "promptType": "multiline",
+          "promptText": "Generate one JSON payload for the current implementation pass containing review thoughts, file targets, patch specs, implementation actions, notes, goal-complete state, and remaining work.",
+          "expectedArtifact": "implementation pass payload"
+        }
+      ]
+    },
+    {
+      "id": "stage-9-validation-repair-loop",
+      "title": "Validation Repair Loop",
+      "purpose": "Run the final validation and repair loop with one large prompt per pass covering issues, fixes, breakdown, rewrite gates, review assessment, and continue decision.",
+      "steps": [
+        {
+          "id": "validation-loop-payload",
+          "promptType": "multiline",
+          "promptText": "Generate one JSON payload for the current validation loop containing issues, fixes, breakdown, rewrite decisions, review assessment, remaining notes, and continue gate.",
+          "expectedArtifact": "validation loop payload"
+        }
+      ]
+    },
+    {
+      "id": "stage-10-arcade-integration-loop",
+      "title": "Arcade Integration Loop",
+      "purpose": "Run a final arcade-prep loop that first reviews how the existing arcade games are integrated, then uses that review to ensure the generated page is wired into arcade manifests and portfolio surfaces with launch, metadata, and library visibility ready.",
+      "steps": [
+        {
+          "id": "arcade-integration-review",
+          "promptType": "multiline",
+          "promptText": "Before proposing any arcade integration changes, look through the arcade setup and review how the other arcade games are integrated. Inspect the existing arcade pages, manifests, metadata files, runtime expectations, and portfolio-facing registration surfaces. Generate one JSON payload containing the observed integration pattern, the required files and fields, the invariants that must match the arcade setup, and the concrete gaps between the new page and the current arcade standard.",
+          "expectedArtifact": "arcade integration review payload"
+        },
+        {
+          "id": "arcade-integration-ensure",
+          "promptType": "multiline",
+          "promptText": "Refer to your last review of the arcade setup and ensure the generated page is set up to work in the arcade. Generate one JSON payload for the current arcade integration pass containing the required registration metadata, manifest or portfolio updates, launch-surface checks, missing integration fixes, verification notes, and a continue gate for additional arcade-prep passes.",
+          "expectedArtifact": "arcade integration ensure payload"
+        }
+      ]
+    }
+  ]
+}

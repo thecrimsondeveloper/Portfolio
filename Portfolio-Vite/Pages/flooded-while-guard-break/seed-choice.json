@@ -1,0 +1,27 @@
+{
+  "title": "Flooded While: Guard Break",
+  "description": "An arcade game set between flooded and tree, where the player uses while and ember actions to outmaneuver guard forces.",
+  "objective": "Use while and ember to survive commander patrols, secure relic routes, and turn each run into discover, evolve progress.",
+  "seed": {
+    "themes": "hidden society infiltration",
+    "environments": "flooded market district",
+    "settings": "late-night",
+    "characterMotivations": "escape before dawn",
+    "movementMechanics": [
+      "rhythm-based stepping",
+      "precision jumping"
+    ],
+    "coreLoops": "evade patrols while searching",
+    "progressionLoops": "power up a device",
+    "completionLoops": "ceremony completion",
+    "rewards": [
+      "story fragments",
+      "artifact sets"
+    ],
+    "antagonists": "self-learning barrier",
+    "visualStyles": "muted earth tones",
+    "audioStyles": "field recording textures",
+    "interactionPatterns": "hold-and-release momentum",
+    "productionFocus": "prepare for agent-driven expansion"
+  }
+}

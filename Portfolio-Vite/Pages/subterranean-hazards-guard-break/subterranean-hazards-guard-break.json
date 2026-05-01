@@ -1,0 +1,38 @@
+{
+  "id": "subterranean-hazards-guard-break",
+  "title": "Subterranean Hazards: Guard Break",
+  "summary": "An arcade game where you fight guards and burn embers to escape, evolving from simple combat into a unified survival experience.",
+  "mode": "arcade-action",
+  "palette": "subterranean-hazards-guard-break",
+  "instructions": "Objective: Escort the companion to the relay while avoiding adaptive sentries and managing ember fuel., Controls: WASD or Arrow keys to move; Shift to dash/crash; Space to pulse (break detection); Hold inside uplinks to upload/extract., HUD: Display Health, Ember Charge, Companion Status, Relics/Relays Collected, and Time Remaining.",
+  "hud": {
+    "modeLabel": "Subterranean Hazards: Guard Break",
+    "objective": "Use hazards and ember to survive guard patrols, secure relic routes, and turn each run into expand, uncover progress."
+  },
+  "overlay": {
+    "startTitle": "Subterranean Hazards: Guard Break",
+    "startCopy": "An arcade game where you fight guards and burn embers to escape, evolving from simple combat into a unified survival experience.\n\nDefend against guard patrols using strategic placement of hazards while managing ember fuel for attacks.\n\nProgress through compact levels by surviving pushers and fortresses until your health is full or a key item is found.\n\nUnlock new abilities and evolve your gear to create a unified strategy that adapts to increasingly complex threats.",
+    "startAction": "Launch Game"
+  },
+  "content": {
+    "hook": "An arcade game where you fight guards and burn embers to escape, evolving from simple combat into a unified survival experience.",
+    "actions": [
+      "hazards",
+      "ember",
+      "crash"
+    ],
+    "pressure": [
+      "guard",
+      "sentry",
+      "commander"
+    ],
+    "rewards": [
+      "expand",
+      "uncover",
+      "evolve"
+    ],
+    "runtimeTemplate": "stealth_patrol",
+    "mechanicFamily": "stealth patrol"
+  },
+  "image": ""
+}

@@ -56,6 +56,33 @@ export const pages = {
         "Delivery Flow",
       ],
     },
+    projects: {
+      id: "projects",
+      title: "Projects",
+      route: "projects",
+      type: "projects",
+      description:
+        "Implementation-focused project portfolio showcasing delivered systems, experiments, and technical work.",
+      subtitle:
+        "Browse the concrete project work that realizes the expertise shown in the Work section.",
+      introPoints: [
+        {
+          pair: "Implementation + Delivery",
+          text: "Project entries focused on how ideas were executed, shipped, and maintained.",
+        },
+        {
+          pair: "Technical Detail",
+          text: "Each listing highlights the concrete work, technologies, and operational decisions behind the project.",
+        },
+        {
+          pair: "All Project Work",
+          text: "A single place for implementation-focused case studies across product, automation, game, and agentic work.",
+        },
+      ],
+      meta: ["Project delivery", "Implementation detail", "Technical work"],
+      featuredProjectSlugs: [],
+      tools: ["Project Delivery", "Implementation", "Technical Design"],
+    },
     automation: {
       id: "automation",
       title: "Automation",
@@ -330,13 +357,13 @@ export const pages = {
     },
     connect: {
       id: "connect",
-      title: "Connect",
+      title: "About",
       route: "connect",
       type: "connect",
       description:
-        "Connect with Crimson Wheeler across email, GitHub, and LinkedIn.",
+        "Learn who Crimson Wheeler is, what he builds, and how to reach him.",
       subtitle:
-        "Reach out for portfolio work, collaboration, or technical conversations.",
+        "About, bio, skills, and contact links for collaboration and technical conversation.",
       introPoints: [
         {
           pair: "Email + Projects",

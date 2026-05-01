@@ -1,0 +1,429 @@
+{
+  "title": "Overgrown Systems: Guard Break",
+  "sourceSummary": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/overgrown-systems-guard-break/brainstorm-summary.json",
+  "sourceSeed": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/overgrown-systems-guard-break/brainstorm-seed.json",
+  "generatedAt": "2026-05-01T20:58:50.183469+00:00",
+  "explorationLevel": "expansive",
+  "generation": {
+    "mode": "lm_studio_chainstorm_style",
+    "endpoint": "http://10.0.0.137:1234/v1/chat/completions",
+    "model": "qwen3.5-2b@q8_0",
+    "temperature": 1.0
+  },
+  "buildReady": true,
+  "injectionReady": true,
+  "oneLinePitch": "An expansive arcade game where players outmaneuver guard forces and drive an evolve-to-unify progression arc in a hostile overgrown world.",
+  "pageIdentity": {
+    "title": "Overgrown Systems: Guard Break",
+    "slug": "overgrown-systems-guard-break",
+    "description": "An expansive arcade game where players outmaneuver guard forces and drive an evolve-to-unify progression arc in a hostile overgrown world.",
+    "objective": "Use blink and dash to survive commander patrols, secure relic routes, and turn each run into unify, discover progress.",
+    "overlayBriefing": "An expansive arcade game where players outmaneuver guard forces and drive an evolve-to-unify progression arc in a hostile overgrown world.\n\nConfront enemies while utilizing system-based mechanics to survive compact but challenging runs.\n\nEvolve player abilities through ember actions to gain tactical advantage against growing threats.\n\nNavigate a unique traverse space where pushing forward is essential for survival.",
+    "hudObjective": "Use blink and dash to survive commander patrols, secure relic routes, and turn each run into unify, discover progress."
+  },
+  "buildPacket": {
+    "featureRoots": [
+      "Movement",
+      "One Enemy Archetype",
+      "One Route Hazard"
+    ],
+    "implementationChapters": [
+      "Movement",
+      "One Enemy Archetype",
+      "One Route Hazard",
+      "Reward Loop",
+      "Full Run Pacing",
+      "Blink Controls"
+    ],
+    "overlay": {
+      "introTitle": "Overgrown Systems: Guard Break",
+      "introBody": "An expansive arcade game where players outmaneuver guard forces and drive an evolve-to-unify progression arc in a hostile overgrown world.",
+      "introBriefing": "An expansive arcade game where players outmaneuver guard forces and drive an evolve-to-unify progression arc in a hostile overgrown world.\n\nConfront enemies while utilizing system-based mechanics to survive compact but challenging runs.\n\nEvolve player abilities through ember actions to gain tactical advantage against growing threats.\n\nNavigate a unique traverse space where pushing forward is essential for survival.",
+      "startHint": "Press Enter to deploy. Use WASD or Arrow keys to move, Shift to dash, and Space to pulse.",
+      "winTitle": "Route Cleared",
+      "winBody": "The exit gate is live and the relic chain is stable. Press R to run it again.",
+      "lossTitle": "Route Interrupted",
+      "lossBody": "The route collapsed under pressure. Press R to run it again."
+    },
+    "hud": {
+      "objective": "Use blink and dash to survive commander patrols, secure relic routes, and turn each run into unify, discover progress.",
+      "status": "An expansive arcade game where players outmaneuver guard forces and drive an evolve-to-unify progression arc in a hostile overgrown world.",
+      "fields": [
+        "objective",
+        "status",
+        "telemetry"
+      ]
+    },
+    "sceneAnchors": {
+      "playerActions": [
+        "blink",
+        "dash",
+        "slide"
+      ],
+      "enemyTypes": [
+        "commander",
+        "industrial",
+        "warden"
+      ],
+      "hazards": [
+        "overgrown",
+        "tree",
+        "pier",
+        "forest"
+      ],
+      "progression": [
+        "unify",
+        "discover"
+      ]
+    }
+  },
+  "steps": [
+    {
+      "step": "gameplay_time",
+      "question": "How long should one run last before it feels complete?",
+      "answer": "15 minutes",
+      "impact": "Sets encounter density, map size, and upgrade pacing."
+    },
+    {
+      "step": "enemy_types",
+      "question": "Which enemy types define the core pressure of the run?",
+      "answer": [
+        "commander",
+        "industrial",
+        "warden"
+      ],
+      "impact": "Shapes encounter design, telegraphing, and fail-state tension."
+    },
+    {
+      "step": "player_actions",
+      "question": "Which verbs should the player use constantly?",
+      "answer": [
+        "blink",
+        "dash",
+        "slide"
+      ],
+      "impact": "Locks the feel of traversal, combat rhythm, and input complexity."
+    },
+    {
+      "step": "progression_goal",
+      "question": "What long-term objective should each run feed into?",
+      "answer": [
+        "unify",
+        "discover"
+      ],
+      "impact": "Determines meta progression rewards and run-to-run continuity."
+    },
+    {
+      "step": "world_anchor",
+      "question": "Which environmental anchors keep the world readable and memorable?",
+      "answer": [
+        "overgrown",
+        "tree"
+      ],
+      "impact": "Guides art direction, hazard framing, and level landmarks."
+    }
+  ],
+  "randomInjections": [
+    {
+      "type": "environmental_twist",
+      "value": [
+        "overgrown",
+        "tree"
+      ],
+      "effect": "Adds a new traversal hazard or alternate route condition."
+    },
+    {
+      "type": "mechanic_modifier",
+      "value": [
+        "crash",
+        "flame"
+      ],
+      "effect": "Mutates the core verb set for a late-run variant or upgrade branch."
+    },
+    {
+      "type": "enemy_pressure",
+      "value": [
+        "warden",
+        "fort"
+      ],
+      "effect": "Introduces a new pressure pattern or elite enemy combination."
+    },
+    {
+      "type": "progression_bonus",
+      "value": [
+        "unify",
+        "discover"
+      ],
+      "effect": "Creates a reward spike that changes long-term routing decisions."
+    }
+  ],
+  "explorationLoops": [
+    {
+      "loop": 1,
+      "prompt": "What happens if pier traversal meets flame play under fort pressure?",
+      "injection": "Resolve the loop by rewarding quiet instead of raw score.",
+      "decision": "Keep flame as a repeatable skill test, escalate with fort, and use quiet as the reason to push deeper."
+    },
+    {
+      "loop": 2,
+      "prompt": "Overgrown Systems Guard Break pitch with arcade mechanics and ember evolution.",
+      "injection": "Land environment, flame mechanic, industrial enemies, and quiet progression style.",
+      "decision": "Create a game where players outmaneuver guards using systems to evolve into unifying forces over an industrial landscape."
+    },
+    {
+      "loop": 3,
+      "prompt": "What happens if tree traversal meets ember play under leader pressure?",
+      "injection": "Resolve the loop by rewarding ascend instead of raw score.",
+      "decision": "Keep ember as a repeatable skill test, escalate with leader, and use ascend as the reason to push deeper."
+    },
+    {
+      "loop": 4,
+      "prompt": "What happens if tree traversal meets blink play under command pressure?",
+      "injection": "Resolve the loop by rewarding sanctuary instead of raw score.",
+      "decision": "Keep blink as a repeatable skill test, escalate with command, and use sanctuary as the reason to push deeper."
+    }
+  ],
+  "finalSpec": {
+    "sessionLength": "15 minutes",
+    "genre": "arcade action prototype",
+    "playerFantasy": "A master of systems and ember actions who navigates the tree-filled terrain with precision.",
+    "world": {
+      "setting": "Overgrown, tree-piercing space patrolled by hostile guards and sentries.",
+      "visualDirection": "Dynamic, expressive combat in an organic environment that blends urban and natural elements.",
+      "landmarks": [
+        "overgrown",
+        "tree",
+        "pier",
+        "forest",
+        "greenhouse"
+      ]
+    },
+    "coreLoop": [
+      "Confront enemies while utilizing system-based mechanics to survive compact but challenging runs.",
+      "Evolve player abilities through ember actions to gain tactical advantage against growing threats.",
+      "Navigate a unique traverse space where pushing forward is essential for survival."
+    ],
+    "playerActions": [
+      "blink",
+      "dash",
+      "slide"
+    ],
+    "enemyTypes": [
+      "commander",
+      "industrial",
+      "warden"
+    ],
+    "enemyArchetypes": [
+      {
+        "name": "commander",
+        "role": "pressure chaser",
+        "behavior": "Pushes the player off safe routes and punishes hesitation."
+      },
+      {
+        "name": "industrial",
+        "role": "zone controller",
+        "behavior": "Locks down key spaces and forces rerouting."
+      },
+      {
+        "name": "warden",
+        "role": "ambush disruptor",
+        "behavior": "Breaks steady rhythm and spikes reaction difficulty."
+      }
+    ],
+    "progression": {
+      "metaGoal": [
+        "unify",
+        "discover"
+      ],
+      "rewardHooks": [
+        "evolve",
+        "unify",
+        "discover",
+        "expand"
+      ],
+      "runToRunGrowth": "Each run converts performance into unify, discover upgrades and route unlocks."
+    },
+    "runStructure": {
+      "opening": "Teach blink movement and introduce commander reads in a low-risk overgrown route.",
+      "midgame": "Layer dash interactions, mixed enemy waves, and injection events from the exploration loops.",
+      "endgame": "Force mastery through stacked hazards, elite commander encounters, and a final unify choice."
+    },
+    "encounterDesign": {
+      "hazards": [
+        "overgrown",
+        "tree",
+        "pier",
+        "forest"
+      ],
+      "enemyCompositions": [
+        "Keep flame as a repeatable skill test, escalate with fort, and use quiet as the reason to push deeper.",
+        "Create a game where players outmaneuver guards using systems to evolve into unifying forces over an industrial landscape.",
+        "Keep ember as a repeatable skill test, escalate with leader, and use ascend as the reason to push deeper."
+      ],
+      "difficultyRamp": "Challenges scale from compact, high-risk segments to expansive areas testing endurance and adaptability."
+    },
+    "economy": {
+      "currencies": [
+        "evolve",
+        "unify",
+        "discover"
+      ],
+      "spenders": [
+        "environmental_twist",
+        "mechanic_modifier",
+        "enemy_pressure",
+        "progression_bonus"
+      ],
+      "riskReward": "High stakes of danger balanced by meaningful progression arcs that reward strategic play with unlockable powers."
+    },
+    "ui": {
+      "hud": [
+        "health",
+        "charge meter",
+        "route objective",
+        "reward tracker"
+      ],
+      "readabilityGoals": [
+        "fast threat reads",
+        "clear route ownership",
+        "strong reward telegraphing"
+      ]
+    },
+    "audio": {
+      "tone": "Punchy arcade percussion with environmental accents tied to route danger.",
+      "feedback": [
+        "impact stingers",
+        "threat warning pings",
+        "upgrade reward swells"
+      ]
+    },
+    "technicalBuild": {
+      "scope": "Small browser-playable prototype",
+      "systemsNeeded": [
+        "player controller",
+        "enemy director",
+        "upgrade loop",
+        "hazard routing",
+        "HUD"
+      ],
+      "prototypeOrder": [
+        "movement",
+        "one enemy archetype",
+        "one route hazard",
+        "reward loop",
+        "full run pacing"
+      ]
+    }
+  },
+  "fallbackSource": "",
+  "gameDesignProfile": {
+    "seedContract": {
+      "sourceSeed": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-bvx0mncx/brainstorm-seed.json",
+      "sourceSummary": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-bvx0mncx/brainstorm-summary.json",
+      "sourceSamples": {
+        "environment": [
+          "overgrown",
+          "tree",
+          "pier",
+          "forest",
+          "greenhouse",
+          "foggy"
+        ],
+        "mechanics": [
+          "systems",
+          "ember",
+          "crash",
+          "flame",
+          "sprint",
+          "slide",
+          "rebuild"
+        ],
+        "enemies": [
+          "guard",
+          "sentry",
+          "fort",
+          "commander",
+          "leader",
+          "industrial"
+        ],
+        "progression": [
+          "evolve",
+          "unify",
+          "discover",
+          "expand",
+          "unlock",
+          "reach"
+        ]
+      },
+      "seed": {
+        "themes": "industrial salvage",
+        "genres": "stealth arena",
+        "environments": "overgrown greenhouse",
+        "settings": "foggy morning",
+        "characterMotivations": "reach a quiet sanctuary",
+        "movementMechanics": [
+          "momentum-based rolling",
+          "mirror walking"
+        ],
+        "coreLoops": "rebuild broken systems",
+        "progressionLoops": "rescue allies",
+        "completionLoops": "final escape sequence",
+        "rewards": [
+          "boss unlock",
+          "collectibles"
+        ],
+        "antagonists": "patrolling automatons",
+        "visualStyles": "architectural minimalism",
+        "audioStyles": "field recording textures",
+        "interactionPatterns": "context-sensitive movement",
+        "productionFocus": "focus on emergent loops",
+        "cameraModes": "isometric zoom-pulse",
+        "arenaShapes": "hub-and-spokes with switchbacks",
+        "primaryVerbs": "chase with timing",
+        "scoringModels": "perfect route near miss bonus",
+        "failureModes": "core overheated by patrols",
+        "enemyBehaviors": "summon hazards light-triggered",
+        "objectiveStructures": "reach exit before timer",
+        "resourceSystems": "noise zone recharge",
+        "levelProgression": "branching routes with hazard tiers",
+        "twistConstraints": "reversed controls zone after route split"
+      }
+    },
+    "mechanicFamily": "stealth patrol",
+    "runtimeTemplate": "stealth_patrol",
+    "pacing": "15 minutes",
+    "spatialStructure": "patrol grid",
+    "failurePressure": [
+      "commander",
+      "industrial",
+      "warden",
+      "overgrown",
+      "tree",
+      "pier",
+      "forest"
+    ],
+    "progressionShape": [
+      "unify",
+      "discover",
+      "evolve",
+      "unify",
+      "discover",
+      "expand",
+      "Each run converts performance into unify, discover upgrades and route unlocks."
+    ],
+    "presentationRules": [
+      "Overgrown, tree-piercing space patrolled by hostile guards and sentries.",
+      "Dynamic, expressive combat in an organic environment that blends urban and natural elements.",
+      "fast threat reads",
+      "clear route ownership",
+      "strong reward telegraphing"
+    ],
+    "mustPreserve": [
+      "Preserve the randomized seed contract through every stage.",
+      "Treat final-brainstorming.json as the canonical game specification.",
+      "Keep the generated game self-contained in one Pages/<slug>/ folder.",
+      "Make runtime behavior match runtimeTemplate instead of defaulting to one arena scaffold."
+    ],
+    "fallbackSource": ""
+  }
+}

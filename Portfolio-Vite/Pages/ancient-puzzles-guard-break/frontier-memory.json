@@ -1,0 +1,238 @@
+{
+  "gameTitle": "Ancient Puzzles: Guard Break",
+  "profile": {
+    "seedContract": {
+      "sourceSeed": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-bars9q81/brainstorm-seed.json",
+      "sourceSummary": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-bars9q81/brainstorm-summary.json",
+      "sourceSamples": {
+        "environment": [
+          "ancient",
+          "tree",
+          "pier",
+          "forest",
+          "quarry",
+          "power"
+        ],
+        "mechanics": [
+          "puzzles",
+          "ember",
+          "crash",
+          "flame",
+          "sprint",
+          "slide",
+          "solve"
+        ],
+        "enemies": [
+          "guard",
+          "sentry",
+          "fort",
+          "commander",
+          "leader",
+          "urban"
+        ],
+        "progression": [
+          "evolve",
+          "unify",
+          "discover",
+          "expand",
+          "unlock",
+          "reach"
+        ]
+      },
+      "seed": {
+        "themes": "urban parkour delivery",
+        "genres": "escort boss rush",
+        "environments": "ancient quarry",
+        "settings": "power outage",
+        "characterMotivations": "reach a quiet sanctuary",
+        "movementMechanics": [
+          "swinging from cables",
+          "momentum-based rolling"
+        ],
+        "coreLoops": "solve motion puzzles to advance",
+        "progressionLoops": "unlock shortcuts",
+        "completionLoops": "ceremony completion",
+        "rewards": [
+          "collectibles",
+          "story fragments"
+        ],
+        "antagonists": "self-learning barrier",
+        "visualStyles": "dusty pastel",
+        "audioStyles": "ambient hum",
+        "interactionPatterns": "combo navigation",
+        "productionFocus": "focus on emergent loops",
+        "cameraModes": "isometric boss-focus",
+        "arenaShapes": "patrol grid with switchbacks",
+        "primaryVerbs": "repair with timing",
+        "scoringModels": "artifact streak silver ladder",
+        "failureModes": "timer expired after warning",
+        "enemyBehaviors": "block routes combo-triggered",
+        "objectiveStructures": "defuse core without alarm",
+        "resourceSystems": "keys risk overflow",
+        "levelProgression": "escalating waves with rerolls",
+        "twistConstraints": "moving goal during alarms"
+      }
+    },
+    "mechanicFamily": "stealth patrol",
+    "runtimeTemplate": "stealth_patrol",
+    "pacing": "18 minutes",
+    "spatialStructure": "patrol grid",
+    "failurePressure": [
+      "guard",
+      "sentry",
+      "fort",
+      "ancient",
+      "tree",
+      "pier",
+      "forest"
+    ],
+    "progressionShape": [
+      "evolve",
+      "unify",
+      "evolve",
+      "unify",
+      "discover",
+      "expand",
+      "Each run converts performance into evolve, unify upgrades and route unlocks."
+    ],
+    "presentationRules": [
+      "A blend of ancient ruins, towering trees, and industrial piers forming a treacherous space patrolled by sentry fort units.",
+      "High contrast between natural textures and gritty concrete with dynamic lighting effects.",
+      "fast threat reads",
+      "clear route ownership",
+      "strong reward telegraphing"
+    ],
+    "mustPreserve": [
+      "Preserve the randomized seed contract through every stage.",
+      "Treat final-brainstorming.json as the canonical game specification.",
+      "Keep the generated game self-contained in one Pages/<slug>/ folder.",
+      "Make runtime behavior match runtimeTemplate instead of defaulting to one arena scaffold."
+    ],
+    "fallbackSource": ""
+  },
+  "canonicalPaths": {
+    "targetDir": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/ancient-puzzles-guard-break",
+    "brainstormSeed": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/ancient-puzzles-guard-break/brainstorm-seed.json",
+    "brainstormSummary": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/ancient-puzzles-guard-break/brainstorm-summary.json",
+    "finalBrainstorm": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/ancient-puzzles-guard-break/final-brainstorming.json",
+    "story": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/ancient-puzzles-guard-break/story-structure.json",
+    "gameScript": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/ancient-puzzles-guard-break/game.js"
+  },
+  "seedCombination": {
+    "themes": "urban parkour delivery",
+    "genres": "escort boss rush",
+    "environments": "ancient quarry",
+    "settings": "power outage",
+    "characterMotivations": "reach a quiet sanctuary",
+    "movementMechanics": [
+      "swinging from cables",
+      "momentum-based rolling"
+    ],
+    "coreLoops": "solve motion puzzles to advance",
+    "progressionLoops": "unlock shortcuts",
+    "completionLoops": "ceremony completion",
+    "rewards": [
+      "collectibles",
+      "story fragments"
+    ],
+    "antagonists": "self-learning barrier",
+    "visualStyles": "dusty pastel",
+    "audioStyles": "ambient hum",
+    "interactionPatterns": "combo navigation",
+    "productionFocus": "focus on emergent loops",
+    "cameraModes": "isometric boss-focus",
+    "arenaShapes": "patrol grid with switchbacks",
+    "primaryVerbs": "repair with timing",
+    "scoringModels": "artifact streak silver ladder",
+    "failureModes": "timer expired after warning",
+    "enemyBehaviors": "block routes combo-triggered",
+    "objectiveStructures": "defuse core without alarm",
+    "resourceSystems": "keys risk overflow",
+    "levelProgression": "escalating waves with rerolls",
+    "twistConstraints": "moving goal during alarms"
+  },
+  "stageHistory": [
+    {
+      "stage": "stage-1-brainstorm-pipeline",
+      "event": "stage",
+      "summary": "Locked final-brainstorming.json and initialized gameDesignProfile."
+    },
+    {
+      "stage": "stage-2-concept-materialization",
+      "event": "stage",
+      "summary": "Materialized concept from locked brainstorm packet."
+    },
+    {
+      "stage": "stage-3-feature-sprint-loop",
+      "event": "stage",
+      "summary": "Derived feature sprint packets from canonical brainstorm data."
+    },
+    {
+      "stage": "stage-4-design-assembly",
+      "event": "stage",
+      "summary": "Assembled design document."
+    },
+    {
+      "stage": "stage-5-build-planning-loop",
+      "event": "stage",
+      "summary": "Derived fun assessment and implementation chapters."
+    },
+    {
+      "stage": "stage-6-story-and-scaffold-materialization",
+      "event": "stage",
+      "summary": "Created story payload and runtime scaffold for stealth_patrol."
+    },
+    {
+      "stage": "stage-7-html-review-loop",
+      "event": "stage",
+      "summary": "Completed HTML shell review pass."
+    },
+    {
+      "stage": "implementation_pass",
+      "event": "memoryUpdate",
+      "summary": "Movement pass planned to add ember gating and HUD"
+    },
+    {
+      "stage": "implementation_pass",
+      "event": "memoryUpdate",
+      "summary": "Enemy archetype pass planned to add stun reaction to pulses"
+    },
+    {
+      "stage": "stage-8-implementation-sprint-loop",
+      "event": "stage",
+      "summary": "Completed configured implementation sprint passes."
+    },
+    {
+      "stage": "validation_loop",
+      "event": "memoryUpdate",
+      "summary": "Validation identified missing Ember gating and enemy stun"
+    },
+    {
+      "stage": "stage-9-validation-repair-loop",
+      "event": "stage",
+      "summary": "Completed configured validation loops."
+    },
+    {
+      "stage": "stage-10-arcade-integration-loop",
+      "event": "stage",
+      "summary": "Completed arcade integration loop."
+    }
+  ],
+  "decisions": [
+    "Prioritize movement edits before enemy behavior",
+    "Use stunSeconds=1.2 default",
+    "visionRange=150, visionAngle=60",
+    "Apply edits to story-structure.json and game.js next"
+  ],
+  "rejectedIdeas": [],
+  "openIssues": [
+    "Need to ensure ember HUD updates from game loop",
+    "Need to ensure pulse radius and ember cost balance stun frequency",
+    "Tuning values for pulse cost and stunSeconds will need playtesting"
+  ],
+  "nextStageNotes": [
+    "After movement pass, implement one enemy archetype to react to pulses",
+    "Run validation to confirm interactions",
+    "Apply edits from editPlan, run node --check, then re-run validation if needed"
+  ]
+}

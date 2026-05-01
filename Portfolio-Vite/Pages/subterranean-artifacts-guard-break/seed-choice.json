@@ -1,0 +1,27 @@
+{
+  "title": "Subterranean Artifacts: Guard Break",
+  "description": "An arcade game blending subterranean and tree worlds where players use artifacts to outmaneuver guards.",
+  "objective": "Use sprint and crash to survive commander patrols, secure relic routes, and turn each run into unify, expand progress.",
+  "seed": {
+    "themes": "hidden society infiltration",
+    "environments": "subterranean library",
+    "settings": "midsummer heat",
+    "characterMotivations": "learn a forgotten ritual",
+    "movementMechanics": [
+      "momentum-based rolling",
+      "mirror walking"
+    ],
+    "coreLoops": "collect and combine artifacts",
+    "progressionLoops": "unlock shortcuts",
+    "completionLoops": "vault extraction",
+    "rewards": [
+      "boss unlock",
+      "upgrade module"
+    ],
+    "antagonists": "mischievous spirits",
+    "visualStyles": "cinematic noir lighting",
+    "audioStyles": "ambient hum",
+    "interactionPatterns": "inventory-lite object use",
+    "productionFocus": "focus on emergent loops"
+  }
+}

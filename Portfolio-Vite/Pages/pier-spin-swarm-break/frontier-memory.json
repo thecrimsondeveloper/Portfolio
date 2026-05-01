@@ -1,0 +1,245 @@
+{
+  "gameTitle": "Pier Spin: Swarm Break",
+  "profile": {
+    "seedContract": {
+      "sourceSeed": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-w02c06it/brainstorm-seed.json",
+      "sourceSummary": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-w02c06it/brainstorm-summary.json",
+      "sourceSamples": {
+        "environment": [
+          "pier",
+          "peak",
+          "ice",
+          "harbor",
+          "ember",
+          "wind",
+          "storm"
+        ],
+        "mechanics": [
+          "spin",
+          "stack",
+          "root",
+          "sprint",
+          "grab",
+          "slide"
+        ],
+        "enemies": [
+          "swarm",
+          "commander",
+          "pulse",
+          "guard",
+          "sentry",
+          "marker"
+        ],
+        "progression": [
+          "expand",
+          "upgrade",
+          "pulse",
+          "unlock",
+          "ascend",
+          "surge",
+          "reveal"
+        ]
+      },
+      "seed": {
+        "themes": "street level mystery",
+        "genres": "stealth puzzle",
+        "environments": "abandoned factory",
+        "settings": "late-night",
+        "characterMotivations": "escape before dawn",
+        "movementMechanics": [
+          "rhythm-based stepping",
+          "mirror walking"
+        ],
+        "coreLoops": "evade patrols while searching",
+        "progressionLoops": "build a safe path",
+        "completionLoops": "relay activation",
+        "rewards": [
+          "boss unlock",
+          "resource caches"
+        ],
+        "antagonists": "rival explorer",
+        "visualStyles": "textured industrial",
+        "audioStyles": "mechanical percussion",
+        "interactionPatterns": "inventory-lite object use",
+        "productionFocus": "focus on motion and feel",
+        "cameraModes": "cinematic follow wide-read",
+        "arenaShapes": "shrinking zone with shortcuts",
+        "primaryVerbs": "trade with timing",
+        "scoringModels": "survival timer speed bonus",
+        "failureModes": "cargo shattered during overload",
+        "enemyBehaviors": "chase on sight light-triggered",
+        "objectiveStructures": "defuse core in split routes",
+        "resourceSystems": "keys slow drain",
+        "levelProgression": "single run with secret exits",
+        "twistConstraints": "rotating room inside safe zone"
+      }
+    },
+    "mechanicFamily": "stealth patrol",
+    "runtimeTemplate": "stealth_patrol",
+    "pacing": "18 minutes",
+    "spatialStructure": "patrol grid",
+    "failurePressure": [
+      "glitch",
+      "sentinel",
+      "breach",
+      "pier",
+      "peak",
+      "ice",
+      "harbor"
+    ],
+    "progressionShape": [
+      "unveil",
+      "unlock",
+      "expand",
+      "upgrade",
+      "pulse",
+      "unlock",
+      "Each run converts performance into unveil, unlock upgrades and route unlocks."
+    ],
+    "presentationRules": [
+      "Ice-pier-peak terrain patrolled by relentless swarms and commanding pulses.",
+      "Dynamic lighting, particle explosions, and high-speed camera shakes on spikes.",
+      "fast threat reads",
+      "clear route ownership",
+      "strong reward telegraphing"
+    ],
+    "mustPreserve": [
+      "Preserve the randomized seed contract through every stage.",
+      "Treat final-brainstorming.json as the canonical game specification.",
+      "Keep the generated game self-contained in one Pages/<slug>/ folder.",
+      "Make runtime behavior match runtimeTemplate instead of defaulting to one arena scaffold."
+    ],
+    "fallbackSource": ""
+  },
+  "canonicalPaths": {
+    "targetDir": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/pier-spin-swarm-break",
+    "brainstormSeed": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/pier-spin-swarm-break/brainstorm-seed.json",
+    "brainstormSummary": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/pier-spin-swarm-break/brainstorm-summary.json",
+    "finalBrainstorm": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/pier-spin-swarm-break/final-brainstorming.json",
+    "story": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/pier-spin-swarm-break/story-structure.json",
+    "gameScript": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/pier-spin-swarm-break/game.js"
+  },
+  "seedCombination": {
+    "themes": "street level mystery",
+    "genres": "stealth puzzle",
+    "environments": "abandoned factory",
+    "settings": "late-night",
+    "characterMotivations": "escape before dawn",
+    "movementMechanics": [
+      "rhythm-based stepping",
+      "mirror walking"
+    ],
+    "coreLoops": "evade patrols while searching",
+    "progressionLoops": "build a safe path",
+    "completionLoops": "relay activation",
+    "rewards": [
+      "boss unlock",
+      "resource caches"
+    ],
+    "antagonists": "rival explorer",
+    "visualStyles": "textured industrial",
+    "audioStyles": "mechanical percussion",
+    "interactionPatterns": "inventory-lite object use",
+    "productionFocus": "focus on motion and feel",
+    "cameraModes": "cinematic follow wide-read",
+    "arenaShapes": "shrinking zone with shortcuts",
+    "primaryVerbs": "trade with timing",
+    "scoringModels": "survival timer speed bonus",
+    "failureModes": "cargo shattered during overload",
+    "enemyBehaviors": "chase on sight light-triggered",
+    "objectiveStructures": "defuse core in split routes",
+    "resourceSystems": "keys slow drain",
+    "levelProgression": "single run with secret exits",
+    "twistConstraints": "rotating room inside safe zone"
+  },
+  "stageHistory": [
+    {
+      "stage": "stage-1-brainstorm-pipeline",
+      "event": "stage",
+      "summary": "Locked final-brainstorming.json and initialized gameDesignProfile."
+    },
+    {
+      "stage": "stage-2-concept-materialization",
+      "event": "stage",
+      "summary": "Materialized concept from locked brainstorm packet."
+    },
+    {
+      "stage": "stage-3-feature-sprint-loop",
+      "event": "stage",
+      "summary": "Derived feature sprint packets from canonical brainstorm data."
+    },
+    {
+      "stage": "stage-4-design-assembly",
+      "event": "stage",
+      "summary": "Assembled design document."
+    },
+    {
+      "stage": "stage-5-build-planning-loop",
+      "event": "stage",
+      "summary": "Derived fun assessment and implementation chapters."
+    },
+    {
+      "stage": "stage-6-story-and-scaffold-materialization",
+      "event": "stage",
+      "summary": "Created story payload and runtime scaffold for stealth_patrol."
+    },
+    {
+      "stage": "stage-7-html-review-loop",
+      "event": "stage",
+      "summary": "Completed HTML shell review pass."
+    },
+    {
+      "stage": "implementation_pass",
+      "event": "memoryUpdate",
+      "summary": "Pass 01 prioritizes rhythm-step and mirror-walk movement over broader combat changes."
+    },
+    {
+      "stage": "implementation_pass",
+      "event": "memoryUpdate",
+      "summary": "Pass 02 adds a single sentry archetype to support the factory stealth loop."
+    },
+    {
+      "stage": "stage-8-implementation-sprint-loop",
+      "event": "stage",
+      "summary": "Completed configured implementation sprint passes."
+    },
+    {
+      "stage": "validation_loop",
+      "event": "memoryUpdate",
+      "summary": "Validation confirms the scaffold direction is correct but the runtime still needs movement, sentry, and route-hazard implementation to feel distinct."
+    },
+    {
+      "stage": "stage-9-validation-repair-loop",
+      "event": "stage",
+      "summary": "Completed configured validation loops."
+    },
+    {
+      "stage": "stage-10-arcade-integration-loop",
+      "event": "stage",
+      "summary": "Completed arcade integration loop."
+    }
+  ],
+  "decisions": [
+    "Movement is the first active packet",
+    "HUD should show factory-specific pressure indicators",
+    "Use one readable patrol-alert-chase enemy before adding more hazards",
+    "Keep HUD feedback optional and additive",
+    "Do not request broad HTML or JSON rewrites",
+    "Finish runtime fidelity through focused edits in game.js and story-structure.json"
+  ],
+  "rejectedIdeas": [
+    "Broadly rewriting combat before movement feel is established",
+    "Adding multiple enemy archetypes in the first playable pass",
+    "Masking missing mechanics with copy-only shell changes"
+  ],
+  "openIssues": [
+    "Exact beat window and mirror duration will need playtesting",
+    "Route hazards and rotating-room pressure still need implementation",
+    "Route hazard and live HUD updates are still the main blockers to a complete first playable loop"
+  ],
+  "nextStageNotes": [
+    "Use the next pass for one sentry archetype tied to sight and light pressure",
+    "Validation should check whether movement plus sentry pressure still leaves room for route-building and relay objectives",
+    "After builder completion, directly implement the editPlan and validate with node --check and a browser smoke test"
+  ]
+}

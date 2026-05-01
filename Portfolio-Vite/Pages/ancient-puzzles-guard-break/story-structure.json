@@ -1,0 +1,890 @@
+{
+  "id": "ancient-puzzles-guard-break",
+  "title": "Ancient Puzzles: Guard Break",
+  "description": "A sprawling arcade game where ancient and tree environments host puzzle-based combat against guards, driving an evolve-to-unify arc.",
+  "objective": "Use puzzles and ember to survive guard patrols, secure relic routes, and turn each run into evolve, unify progress.",
+  "seed": {
+    "themes": "urban parkour delivery",
+    "genres": "escort boss rush",
+    "environments": "ancient quarry",
+    "settings": "power outage",
+    "characterMotivations": "reach a quiet sanctuary",
+    "movementMechanics": [
+      "swinging from cables",
+      "momentum-based rolling"
+    ],
+    "coreLoops": "solve motion puzzles to advance",
+    "progressionLoops": "unlock shortcuts",
+    "completionLoops": "ceremony completion",
+    "rewards": [
+      "collectibles",
+      "story fragments"
+    ],
+    "antagonists": "self-learning barrier",
+    "visualStyles": "dusty pastel",
+    "audioStyles": "ambient hum",
+    "interactionPatterns": "combo navigation",
+    "productionFocus": "focus on emergent loops",
+    "cameraModes": "isometric boss-focus",
+    "arenaShapes": "patrol grid with switchbacks",
+    "primaryVerbs": "repair with timing",
+    "scoringModels": "artifact streak silver ladder",
+    "failureModes": "timer expired after warning",
+    "enemyBehaviors": "block routes combo-triggered",
+    "objectiveStructures": "defuse core without alarm",
+    "resourceSystems": "keys risk overflow",
+    "levelProgression": "escalating waves with rerolls",
+    "twistConstraints": "moving goal during alarms"
+  },
+  "hook": "A sprawling arcade game where ancient and tree environments host puzzle-based combat against guards, driving an evolve-to-unify arc.",
+  "uniqueness": "A master of logic and instinct who outsmarts relentless patrols in a hostile traversal world.",
+  "controls": [
+    "WASD or Arrow keys move the player through the arena.",
+    "Shift triggers a solve burst for repositioning.",
+    "Space converts puzzles and ember pressure into crowd control.",
+    "Press Enter to deploy. Use WASD or Arrow keys to move, Shift to dash, and Space to pulse.",
+    "health",
+    "charge meter"
+  ],
+  "fun": {
+    "assessment": "yes - Ancient Puzzles: Guard Break has a readable arcade core built around puzzles, ember against guard, sentry with a clear payoff in evolve, unify.",
+    "needs": [
+      "fast threat reads",
+      "clear route ownership",
+      "strong reward telegraphing",
+      "WASD or Arrow keys move the player through the arena.",
+      "Shift triggers a solve burst for repositioning."
+    ]
+  },
+  "design": {
+    "summary": "A sprawling arcade game where ancient and tree environments host puzzle-based combat against guards, driving an evolve-to-unify arc.",
+    "details": "## Ancient Puzzles: Guard Break\n\n\t\t**Description:** A sprawling arcade game where ancient and tree environments host puzzle-based combat against guards, driving an evolve-to-unify arc.\n\n\t\t**Objective:** Use puzzles and ember to survive guard patrols, secure relic routes, and turn each run into evolve, unify progress.\n\n\t\t**Seed Summary:**\n\t\tGenerated game seed combination:\n- Themes: urban parkour delivery\n- Genres: escort boss rush\n- Environments: ancient quarry\n- Settings: power outage\n- Character motivations: reach a quiet sanctuary\n- Movement mechanics: swinging from cables, momentum-based rolling\n- Core loops: solve motion puzzles to advance\n- Progression loops: unlock shortcuts\n- Completion loops: ceremony completion\n- Rewards: collectibles, story fragments\n- Antagonists: self-learning barrier\n- Visual styles: dusty pastel\n- Audio styles: ambient hum\n- Interaction patterns: combo navigation\n- Production focus: focus on emergent loops\n- Camera modes: isometric boss-focus\n- Arena shapes: patrol grid with switchbacks\n- Primary verbs: repair with timing\n- Scoring models: artifact streak silver ladder\n- Failure modes: timer expired after warning\n- Enemy behaviors: block routes combo-triggered\n- Objective structures: defuse core without alarm\n- Resource systems: keys risk overflow\n- Level progression: escalating waves with rerolls\n- Twist constraints: moving goal during alarms\n\n\t\t## Core Fantasy\n\n\t\tA sprawling arcade game where ancient and tree environments host puzzle-based combat against guards, driving an evolve-to-unify arc.\n\n\t\t## Why This Game Is Distinct\n\n\t\tA master of logic and instinct who outsmarts relentless patrols in a hostile traversal world.\n\n\t\t## Player Actions\n\n- puzzles\n- ember\n- solve\n\n\t\t## Core Loop\n\n- Navigate tight corridors while solving environmental puzzles to disable guards before they engage.\n- Manage resources like embers in an evolve-to-unify system that unlocks new abilities over time.\n- Evolve into a more powerful form by clearing stronger enemies, gradually shifting from evasion to dominance.\n- Teach puzzles movement and introduce guard reads in a low-risk ancient route.\n- Layer ember interactions, mixed enemy waves, and injection events from the exploration loops.\n- Force mastery through stacked hazards, elite guard encounters, and a final evolve choice.\n\n\t\t## Pressure And Opposition\n\n- guard\n- sentry\n- fort\n- ancient\n- tree\n- pier\n\n\t\t## Rewards And Progression\n\n- evolve\n- unify\n- discover\n- expand\n- Each run converts performance into evolve, unify upgrades and route unlocks.\n\n\t\t## Failure States\n\n- Get overwhelmed by guard.\n- Run out of time before the exit unlocks.\n- Lose health by lingering in active hazard lanes.\n\n\t\t## Visual Identity\n\n- A blend of ancient ruins, towering trees, and industrial piers forming a treacherous space patrolled by sentry fort units.\n- High contrast between natural textures and gritty concrete with dynamic lighting effects.\n- ancient\n- tree\n- pier\n- forest\n\n\t\t## Controls And Readability\n\n- WASD or Arrow keys move the player through the arena.\n- Shift triggers a solve burst for repositioning.\n- Space converts puzzles and ember pressure into crowd control.\n- Press Enter to deploy. Use WASD or Arrow keys to move, Shift to dash, and Space to pulse.\n- health\n- charge meter\n\n\t\t## JSON Data Hooks\n\n- scene layout\n- enemy waves\n- relic rewards\n- goal unlock state\n- brainstorm final spec\n- player controller\n\n\t\t## Sprint Builder Branches\n\t\t### Movement\n\n\t\t\t\t- Player promise: The player immediately feels how movement improves the route and unlocks evolve.\n\t\t\t\t- Sprint objective: Implement the movement slice so the player can reliably feel puzzles under guard.\n\t\t\t\t- Change packet scope: game.js, story-structure.json, index.html\n\t\t\t\t- Simulated checkpoints: Movement is driven by canonical brainstorm data rather than ad hoc prompt output., Movement is visible in live play within the first minute of a run.\n\n\t\t\t\t#### Detail Fractalization\n\t\t\t\t- Movement core slice\n  - Implement the movement behavior in the main loop.\n  - Wire player controller data into story-structure.json and runtime state.\n- Movement feedback pass\n  - Expose clear HUD and overlay feedback for movement.\n  - Validate that movement stays readable during pressure spikes.\n\n### One Enemy Archetype\n\n\t\t\t\t- Player promise: The player immediately feels how one enemy archetype improves the route and unlocks unify.\n\t\t\t\t- Sprint objective: Implement the one enemy archetype slice so the player can reliably feel ember under sentry.\n\t\t\t\t- Change packet scope: game.js, story-structure.json, index.html\n\t\t\t\t- Simulated checkpoints: One Enemy Archetype is driven by canonical brainstorm data rather than ad hoc prompt output., One Enemy Archetype is visible in live play within the first minute of a run.\n\n\t\t\t\t#### Detail Fractalization\n\t\t\t\t- One Enemy Archetype core slice\n  - Implement the one enemy archetype behavior in the main loop.\n  - Wire enemy director data into story-structure.json and runtime state.\n- One Enemy Archetype feedback pass\n  - Expose clear HUD and overlay feedback for one enemy archetype.\n  - Validate that one enemy archetype stays readable during pressure spikes.\n\n### One Route Hazard\n\n\t\t\t\t- Player promise: The player immediately feels how one route hazard improves the route and unlocks discover.\n\t\t\t\t- Sprint objective: Implement the one route hazard slice so the player can reliably feel solve under fort.\n\t\t\t\t- Change packet scope: game.js, story-structure.json, index.html\n\t\t\t\t- Simulated checkpoints: One Route Hazard is driven by canonical brainstorm data rather than ad hoc prompt output., One Route Hazard is visible in live play within the first minute of a run.\n\n\t\t\t\t#### Detail Fractalization\n\t\t\t\t- One Route Hazard core slice\n  - Implement the one route hazard behavior in the main loop.\n  - Wire upgrade loop data into story-structure.json and runtime state.\n- One Route Hazard feedback pass\n  - Expose clear HUD and overlay feedback for one route hazard.\n  - Validate that one route hazard stays readable during pressure spikes.\n\n\t\t## Delivery Notes\n\n\t\t- Keep this game self-contained inside its own page folder.\n\t\t- Keep the HTML entry point and story JSON in the same folder.\n\t\t- Preserve a three.js + Rapier prototype structure.\n\t\t- Favor game-specific logic over shared systems.\n\t\t- Use branch-specific change packets to plan the next sprint in isolated slices.\n\n## Fun Game Assessment\n\n\t\t- Assessment: yes - Ancient Puzzles: Guard Break has a readable arcade core built around puzzles, ember against guard, sentry with a clear payoff in evolve, unify.\n\n\t\t### Things Needed To Make This Game Fun\n\n- fast threat reads\n- clear route ownership\n- strong reward telegraphing\n- WASD or Arrow keys move the player through the arena.\n- Shift triggers a solve burst for repositioning.\n",
+    "chapters": [
+      "Movement",
+      "One Enemy Archetype",
+      "One Route Hazard",
+      "Reward Loop",
+      "Full Run Pacing",
+      "Puzzles Controls"
+    ]
+  },
+  "brainstorm": {
+    "seedFile": "brainstorm-seed.json",
+    "summaryFile": "brainstorm-summary.json",
+    "finalFile": "final-brainstorming.json",
+    "oneLinePitch": "A sprawling arcade game where ancient and tree environments host puzzle-based combat against guards, driving an evolve-to-unify arc.",
+    "steps": [
+      {
+        "step": "gameplay_time",
+        "question": "How long should one run last before it feels complete?",
+        "answer": "18 minutes",
+        "impact": "Sets encounter density, map size, and upgrade pacing."
+      },
+      {
+        "step": "enemy_types",
+        "question": "Which enemy types define the core pressure of the run?",
+        "answer": [
+          "guard",
+          "sentry",
+          "fort"
+        ],
+        "impact": "Shapes encounter design, telegraphing, and fail-state tension."
+      },
+      {
+        "step": "player_actions",
+        "question": "Which verbs should the player use constantly?",
+        "answer": [
+          "puzzles",
+          "ember",
+          "solve"
+        ],
+        "impact": "Locks the feel of traversal, combat rhythm, and input complexity."
+      },
+      {
+        "step": "progression_goal",
+        "question": "What long-term objective should each run feed into?",
+        "answer": [
+          "evolve",
+          "unify"
+        ],
+        "impact": "Determines meta progression rewards and run-to-run continuity."
+      },
+      {
+        "step": "world_anchor",
+        "question": "Which environmental anchors keep the world readable and memorable?",
+        "answer": [
+          "ancient",
+          "tree"
+        ],
+        "impact": "Guides art direction, hazard framing, and level landmarks."
+      }
+    ],
+    "randomInjections": [
+      {
+        "type": "environmental_twist",
+        "value": [
+          "harbor",
+          "quarry"
+        ],
+        "effect": "Adds a new traversal hazard or alternate route condition."
+      },
+      {
+        "type": "mechanic_modifier",
+        "value": [
+          "ember",
+          "flame"
+        ],
+        "effect": "Mutates the core verb set for a late-run variant or upgrade branch."
+      },
+      {
+        "type": "enemy_pressure",
+        "value": [
+          "guard",
+          "sentry"
+        ],
+        "effect": "Introduces a new pressure pattern or elite enemy combination."
+      },
+      {
+        "type": "progression_bonus",
+        "value": [
+          "unify",
+          "expand"
+        ],
+        "effect": "Creates a reward spike that changes long-term routing decisions."
+      }
+    ],
+    "explorationLoops": [
+      {
+        "loop": 1,
+        "prompt": "What happens if pier traversal meets flame play under fort pressure?",
+        "injection": "Resolve the loop by rewarding quiet instead of raw score.",
+        "decision": "Keep flame as a repeatable skill test, escalate with fort, and use quiet as the reason to push deeper."
+      },
+      {
+        "loop": 2,
+        "prompt": "Create an adventure game with a fire-based mechanic and tree environment where the player must navigate ancient ruins to defeat urban enemies.",
+        "injection": "Maintain high-energy visuals but ensure combat is played quietly without loud noises or flashing lights.",
+        "decision": "Finalize the game by focusing on atmospheric depth over screen-time mechanics and integrating puzzle elements that reward silence."
+      },
+      {
+        "loop": 3,
+        "prompt": "An arcade adventure where puzzles unlock ember-based abilities to defeat a boss leader and reach the ascension stage.",
+        "injection": "None provided for creative variation or context override.",
+        "decision": "Maintain the original pitch as is without modification."
+      },
+      {
+        "loop": 4,
+        "prompt": "Design an RPG where the player navigates ancient forests, facing goblins and serving as a bridge between two realms.",
+        "injection": "The game features a unique mechanic called \"blink\" that allows players to teleport enemies across distant ravines instantly.",
+        "decision": "The project focuses on environmental storytelling through tree structures and light mechanics (embers) to drive the narrative of unity."
+      }
+    ],
+    "finalSpec": {
+      "sessionLength": "18 minutes",
+      "genre": "arcade action prototype",
+      "playerFantasy": "A master of logic and instinct who outsmarts relentless patrols in a hostile traversal world.",
+      "world": {
+        "setting": "A blend of ancient ruins, towering trees, and industrial piers forming a treacherous space patrolled by sentry fort units.",
+        "visualDirection": "High contrast between natural textures and gritty concrete with dynamic lighting effects.",
+        "landmarks": [
+          "ancient",
+          "tree",
+          "pier",
+          "forest",
+          "quarry"
+        ]
+      },
+      "coreLoop": [
+        "Navigate tight corridors while solving environmental puzzles to disable guards before they engage.",
+        "Manage resources like embers in an evolve-to-unify system that unlocks new abilities over time.",
+        "Evolve into a more powerful form by clearing stronger enemies, gradually shifting from evasion to dominance."
+      ],
+      "playerActions": [
+        "puzzles",
+        "ember",
+        "solve"
+      ],
+      "enemyTypes": [
+        "guard",
+        "sentry",
+        "fort"
+      ],
+      "enemyArchetypes": [
+        {
+          "name": "guard",
+          "role": "pressure chaser",
+          "behavior": "Pushes the player off safe routes and punishes hesitation."
+        },
+        {
+          "name": "sentry",
+          "role": "zone controller",
+          "behavior": "Locks down key spaces and forces rerouting."
+        },
+        {
+          "name": "fort",
+          "role": "ambush disruptor",
+          "behavior": "Breaks steady rhythm and spikes reaction difficulty."
+        }
+      ],
+      "progression": {
+        "metaGoal": [
+          "evolve",
+          "unify"
+        ],
+        "rewardHooks": [
+          "evolve",
+          "unify",
+          "discover",
+          "expand"
+        ],
+        "runToRunGrowth": "Each run converts performance into evolve, unify upgrades and route unlocks."
+      },
+      "runStructure": {
+        "opening": "Teach puzzles movement and introduce guard reads in a low-risk ancient route.",
+        "midgame": "Layer ember interactions, mixed enemy waves, and injection events from the exploration loops.",
+        "endgame": "Force mastery through stacked hazards, elite guard encounters, and a final evolve choice."
+      },
+      "encounterDesign": {
+        "hazards": [
+          "ancient",
+          "tree",
+          "pier",
+          "forest"
+        ],
+        "enemyCompositions": [
+          "Keep flame as a repeatable skill test, escalate with fort, and use quiet as the reason to push deeper.",
+          "Finalize the game by focusing on atmospheric depth over screen-time mechanics and integrating puzzle elements that reward silence.",
+          "Maintain the original pitch as is without modification."
+        ],
+        "difficultyRamp": "Progression scales through increasingly complex puzzle mechanics and tougher enemy tiers as the player evolves."
+      },
+      "economy": {
+        "currencies": [
+          "evolve",
+          "unify",
+          "discover"
+        ],
+        "spenders": [
+          "environmental_twist",
+          "mechanic_modifier",
+          "enemy_pressure",
+          "progression_bonus"
+        ],
+        "riskReward": "High tension with narrow paths and frequent guard attacks balanced against strategic choices that unlock long-term upgrades."
+      },
+      "ui": {
+        "hud": [
+          "health",
+          "charge meter",
+          "route objective",
+          "reward tracker"
+        ],
+        "readabilityGoals": [
+          "fast threat reads",
+          "clear route ownership",
+          "strong reward telegraphing"
+        ]
+      },
+      "audio": {
+        "tone": "Punchy arcade percussion with environmental accents tied to route danger.",
+        "feedback": [
+          "impact stingers",
+          "threat warning pings",
+          "upgrade reward swells"
+        ]
+      },
+      "technicalBuild": {
+        "scope": "Small browser-playable prototype",
+        "systemsNeeded": [
+          "player controller",
+          "enemy director",
+          "upgrade loop",
+          "hazard routing",
+          "HUD"
+        ],
+        "prototypeOrder": [
+          "movement",
+          "one enemy archetype",
+          "one route hazard",
+          "reward loop",
+          "full run pacing"
+        ]
+      }
+    }
+  },
+  "gameDesignProfile": {
+    "seedContract": {
+      "sourceSeed": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-bars9q81/brainstorm-seed.json",
+      "sourceSummary": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-bars9q81/brainstorm-summary.json",
+      "sourceSamples": {
+        "environment": [
+          "ancient",
+          "tree",
+          "pier",
+          "forest",
+          "quarry",
+          "power"
+        ],
+        "mechanics": [
+          "puzzles",
+          "ember",
+          "crash",
+          "flame",
+          "sprint",
+          "slide",
+          "solve"
+        ],
+        "enemies": [
+          "guard",
+          "sentry",
+          "fort",
+          "commander",
+          "leader",
+          "urban"
+        ],
+        "progression": [
+          "evolve",
+          "unify",
+          "discover",
+          "expand",
+          "unlock",
+          "reach"
+        ]
+      },
+      "seed": {
+        "themes": "urban parkour delivery",
+        "genres": "escort boss rush",
+        "environments": "ancient quarry",
+        "settings": "power outage",
+        "characterMotivations": "reach a quiet sanctuary",
+        "movementMechanics": [
+          "swinging from cables",
+          "momentum-based rolling"
+        ],
+        "coreLoops": "solve motion puzzles to advance",
+        "progressionLoops": "unlock shortcuts",
+        "completionLoops": "ceremony completion",
+        "rewards": [
+          "collectibles",
+          "story fragments"
+        ],
+        "antagonists": "self-learning barrier",
+        "visualStyles": "dusty pastel",
+        "audioStyles": "ambient hum",
+        "interactionPatterns": "combo navigation",
+        "productionFocus": "focus on emergent loops",
+        "cameraModes": "isometric boss-focus",
+        "arenaShapes": "patrol grid with switchbacks",
+        "primaryVerbs": "repair with timing",
+        "scoringModels": "artifact streak silver ladder",
+        "failureModes": "timer expired after warning",
+        "enemyBehaviors": "block routes combo-triggered",
+        "objectiveStructures": "defuse core without alarm",
+        "resourceSystems": "keys risk overflow",
+        "levelProgression": "escalating waves with rerolls",
+        "twistConstraints": "moving goal during alarms"
+      }
+    },
+    "mechanicFamily": "stealth patrol",
+    "runtimeTemplate": "stealth_patrol",
+    "pacing": "18 minutes",
+    "spatialStructure": "patrol grid",
+    "failurePressure": [
+      "guard",
+      "sentry",
+      "fort",
+      "ancient",
+      "tree",
+      "pier",
+      "forest"
+    ],
+    "progressionShape": [
+      "evolve",
+      "unify",
+      "evolve",
+      "unify",
+      "discover",
+      "expand",
+      "Each run converts performance into evolve, unify upgrades and route unlocks."
+    ],
+    "presentationRules": [
+      "A blend of ancient ruins, towering trees, and industrial piers forming a treacherous space patrolled by sentry fort units.",
+      "High contrast between natural textures and gritty concrete with dynamic lighting effects.",
+      "fast threat reads",
+      "clear route ownership",
+      "strong reward telegraphing"
+    ],
+    "mustPreserve": [
+      "Preserve the randomized seed contract through every stage.",
+      "Treat final-brainstorming.json as the canonical game specification.",
+      "Keep the generated game self-contained in one Pages/<slug>/ folder.",
+      "Make runtime behavior match runtimeTemplate instead of defaulting to one arena scaffold."
+    ],
+    "fallbackSource": ""
+  },
+  "sprintBuilder": {
+    "mode": "branching feature design loop",
+    "detailFractalization": true,
+    "featureBranches": [
+      {
+        "feature": "Movement",
+        "sprintObjective": "Implement the movement slice so the player can reliably feel puzzles under guard.",
+        "playerPromise": "The player immediately feels how movement improves the route and unlocks evolve.",
+        "checkpoints": [
+          "Movement is driven by canonical brainstorm data rather than ad hoc prompt output.",
+          "Movement is visible in live play within the first minute of a run."
+        ],
+        "acceptance": [
+          "The player can describe what movement does after one run.",
+          "Movement remains readable without breaking the current arena loop."
+        ],
+        "scope": [
+          "game.js",
+          "story-structure.json",
+          "index.html"
+        ],
+        "risks": [
+          "Movement could sprawl beyond the canonical build packet if extra systems are added.",
+          "Movement could reduce readability if feedback does not stay compact."
+        ],
+        "branches": [
+          {
+            "branch": "Movement core slice",
+            "tasks": [
+              "Implement the movement behavior in the main loop.",
+              "Wire player controller data into story-structure.json and runtime state."
+            ]
+          },
+          {
+            "branch": "Movement feedback pass",
+            "tasks": [
+              "Expose clear HUD and overlay feedback for movement.",
+              "Validate that movement stays readable during pressure spikes."
+            ]
+          }
+        ]
+      },
+      {
+        "feature": "One Enemy Archetype",
+        "sprintObjective": "Implement the one enemy archetype slice so the player can reliably feel ember under sentry.",
+        "playerPromise": "The player immediately feels how one enemy archetype improves the route and unlocks unify.",
+        "checkpoints": [
+          "One Enemy Archetype is driven by canonical brainstorm data rather than ad hoc prompt output.",
+          "One Enemy Archetype is visible in live play within the first minute of a run."
+        ],
+        "acceptance": [
+          "The player can describe what one enemy archetype does after one run.",
+          "One Enemy Archetype remains readable without breaking the current arena loop."
+        ],
+        "scope": [
+          "game.js",
+          "story-structure.json",
+          "index.html"
+        ],
+        "risks": [
+          "One Enemy Archetype could sprawl beyond the canonical build packet if extra systems are added.",
+          "One Enemy Archetype could reduce readability if feedback does not stay compact."
+        ],
+        "branches": [
+          {
+            "branch": "One Enemy Archetype core slice",
+            "tasks": [
+              "Implement the one enemy archetype behavior in the main loop.",
+              "Wire enemy director data into story-structure.json and runtime state."
+            ]
+          },
+          {
+            "branch": "One Enemy Archetype feedback pass",
+            "tasks": [
+              "Expose clear HUD and overlay feedback for one enemy archetype.",
+              "Validate that one enemy archetype stays readable during pressure spikes."
+            ]
+          }
+        ]
+      },
+      {
+        "feature": "One Route Hazard",
+        "sprintObjective": "Implement the one route hazard slice so the player can reliably feel solve under fort.",
+        "playerPromise": "The player immediately feels how one route hazard improves the route and unlocks discover.",
+        "checkpoints": [
+          "One Route Hazard is driven by canonical brainstorm data rather than ad hoc prompt output.",
+          "One Route Hazard is visible in live play within the first minute of a run."
+        ],
+        "acceptance": [
+          "The player can describe what one route hazard does after one run.",
+          "One Route Hazard remains readable without breaking the current arena loop."
+        ],
+        "scope": [
+          "game.js",
+          "story-structure.json",
+          "index.html"
+        ],
+        "risks": [
+          "One Route Hazard could sprawl beyond the canonical build packet if extra systems are added.",
+          "One Route Hazard could reduce readability if feedback does not stay compact."
+        ],
+        "branches": [
+          {
+            "branch": "One Route Hazard core slice",
+            "tasks": [
+              "Implement the one route hazard behavior in the main loop.",
+              "Wire upgrade loop data into story-structure.json and runtime state."
+            ]
+          },
+          {
+            "branch": "One Route Hazard feedback pass",
+            "tasks": [
+              "Expose clear HUD and overlay feedback for one route hazard.",
+              "Validate that one route hazard stays readable during pressure spikes."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "scene": {
+    "arena": {
+      "width": 54,
+      "depth": 54,
+      "groundColor": "#08140f",
+      "laneColor": "#23402f",
+      "accentColor": "#9bff6e",
+      "fogColor": "#091120",
+      "skyColor": "#050813"
+    },
+    "player": {
+      "start": {
+        "x": 0,
+        "y": 0.9,
+        "z": 18
+      },
+      "radius": 0.9,
+      "color": "#8bd8ff",
+      "speed": 7.2,
+      "dashSpeed": 24.0,
+      "dashCooldown": 2.2,
+      "pulseRadius": 5.5,
+      "pulseCooldown": 4.2,
+      "maxHealth": 100
+    },
+    "goal": {
+      "position": {
+        "x": 0,
+        "y": 0.4,
+        "z": -20
+      },
+      "radius": 2.6,
+      "color": "#7df9ff",
+      "unlockRelics": 2
+    },
+    "relics": [
+      {
+        "label": "Evolve",
+        "position": {
+          "x": -18,
+          "y": 1.2,
+          "z": 0
+        },
+        "color": "#7cffc9"
+      },
+      {
+        "label": "Unify",
+        "position": {
+          "x": 18,
+          "y": 1.2,
+          "z": -4
+        },
+        "color": "#8bd8ff"
+      },
+      {
+        "label": "Discover",
+        "position": {
+          "x": -6,
+          "y": 1.2,
+          "z": -16
+        },
+        "color": "#ffd166"
+      },
+      {
+        "label": "Expand",
+        "position": {
+          "x": 14,
+          "y": 1.2,
+          "z": 12
+        },
+        "color": "#ff9ed1"
+      }
+    ],
+    "enemies": [
+      {
+        "name": "Guard",
+        "role": "patrol detector",
+        "position": {
+          "x": -16,
+          "y": 0.9,
+          "z": -10
+        },
+        "speed": 1.19,
+        "radius": 1.0,
+        "color": "#ff8c69",
+        "pursuitRange": 10
+      },
+      {
+        "name": "Sentry",
+        "role": "patrol detector",
+        "position": {
+          "x": 14,
+          "y": 0.9,
+          "z": -14
+        },
+        "speed": 1.34,
+        "radius": 1.08,
+        "color": "#ff4f7a",
+        "pursuitRange": 12
+      },
+      {
+        "name": "Fort",
+        "role": "patrol detector",
+        "position": {
+          "x": -12,
+          "y": 0.9,
+          "z": 12
+        },
+        "speed": 1.48,
+        "radius": 1.16,
+        "color": "#ffd166",
+        "pursuitRange": 14
+      }
+    ],
+    "hazards": [
+      {
+        "name": "Ancient",
+        "position": {
+          "x": -8,
+          "y": 0.05,
+          "z": 0
+        },
+        "radius": 2.8,
+        "damagePerSecond": 10,
+        "color": "#4fd1ff"
+      },
+      {
+        "name": "Tree",
+        "position": {
+          "x": 8,
+          "y": 0.05,
+          "z": 8
+        },
+        "radius": 3.25,
+        "damagePerSecond": 13,
+        "color": "#ff7a45"
+      },
+      {
+        "name": "Pier",
+        "position": {
+          "x": 0,
+          "y": 0.05,
+          "z": -10
+        },
+        "radius": 3.7,
+        "damagePerSecond": 16,
+        "color": "#9bff6e"
+      }
+    ],
+    "camera": {
+      "offset": {
+        "x": 0,
+        "y": 18,
+        "z": 16
+      }
+    },
+    "weather": {
+      "rainDensity": 320
+    },
+    "rules": {
+      "goalRadius": 2.6,
+      "statusMessage": "Stay out of patrol vision, collect intel, and slip to the extraction beacon.",
+      "failStates": [
+        "Get overwhelmed by guard.",
+        "Run out of time before the exit unlocks.",
+        "Lose health by lingering in active hazard lanes."
+      ],
+      "progression": [
+        "evolve",
+        "unify",
+        "discover",
+        "expand",
+        "Each run converts performance into evolve, unify upgrades and route unlocks."
+      ],
+      "targetRelics": 2,
+      "timeLimitSeconds": 180,
+      "runtimeTemplate": "stealth_patrol",
+      "mechanicFamily": "stealth patrol",
+      "spatialStructure": "patrol grid",
+      "scoreLabel": "Intel"
+    },
+    "abilities": {
+      "verbs": [
+        "puzzles",
+        "ember",
+        "solve"
+      ],
+      "summary": "A sprawling arcade game where ancient and tree environments host puzzle-based combat against guards, driving an evolve-to-unify arc."
+    },
+    "world": {
+      "setting": "A blend of ancient ruins, towering trees, and industrial piers forming a treacherous space patrolled by sentry fort units.",
+      "visualDirection": "High contrast between natural textures and gritty concrete with dynamic lighting effects.",
+      "landmarks": [
+        "ancient",
+        "tree",
+        "pier",
+        "forest",
+        "quarry"
+      ]
+    },
+    "profile": {
+      "seedContract": {
+        "sourceSeed": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-bars9q81/brainstorm-seed.json",
+        "sourceSummary": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-bars9q81/brainstorm-summary.json",
+        "sourceSamples": {
+          "environment": [
+            "ancient",
+            "tree",
+            "pier",
+            "forest",
+            "quarry",
+            "power"
+          ],
+          "mechanics": [
+            "puzzles",
+            "ember",
+            "crash",
+            "flame",
+            "sprint",
+            "slide",
+            "solve"
+          ],
+          "enemies": [
+            "guard",
+            "sentry",
+            "fort",
+            "commander",
+            "leader",
+            "urban"
+          ],
+          "progression": [
+            "evolve",
+            "unify",
+            "discover",
+            "expand",
+            "unlock",
+            "reach"
+          ]
+        },
+        "seed": {
+          "themes": "urban parkour delivery",
+          "genres": "escort boss rush",
+          "environments": "ancient quarry",
+          "settings": "power outage",
+          "characterMotivations": "reach a quiet sanctuary",
+          "movementMechanics": [
+            "swinging from cables",
+            "momentum-based rolling"
+          ],
+          "coreLoops": "solve motion puzzles to advance",
+          "progressionLoops": "unlock shortcuts",
+          "completionLoops": "ceremony completion",
+          "rewards": [
+            "collectibles",
+            "story fragments"
+          ],
+          "antagonists": "self-learning barrier",
+          "visualStyles": "dusty pastel",
+          "audioStyles": "ambient hum",
+          "interactionPatterns": "combo navigation",
+          "productionFocus": "focus on emergent loops",
+          "cameraModes": "isometric boss-focus",
+          "arenaShapes": "patrol grid with switchbacks",
+          "primaryVerbs": "repair with timing",
+          "scoringModels": "artifact streak silver ladder",
+          "failureModes": "timer expired after warning",
+          "enemyBehaviors": "block routes combo-triggered",
+          "objectiveStructures": "defuse core without alarm",
+          "resourceSystems": "keys risk overflow",
+          "levelProgression": "escalating waves with rerolls",
+          "twistConstraints": "moving goal during alarms"
+        }
+      },
+      "mechanicFamily": "stealth patrol",
+      "runtimeTemplate": "stealth_patrol",
+      "pacing": "18 minutes",
+      "spatialStructure": "patrol grid",
+      "failurePressure": [
+        "guard",
+        "sentry",
+        "fort",
+        "ancient",
+        "tree",
+        "pier",
+        "forest"
+      ],
+      "progressionShape": [
+        "evolve",
+        "unify",
+        "evolve",
+        "unify",
+        "discover",
+        "expand",
+        "Each run converts performance into evolve, unify upgrades and route unlocks."
+      ],
+      "presentationRules": [
+        "A blend of ancient ruins, towering trees, and industrial piers forming a treacherous space patrolled by sentry fort units.",
+        "High contrast between natural textures and gritty concrete with dynamic lighting effects.",
+        "fast threat reads",
+        "clear route ownership",
+        "strong reward telegraphing"
+      ],
+      "mustPreserve": [
+        "Preserve the randomized seed contract through every stage.",
+        "Treat final-brainstorming.json as the canonical game specification.",
+        "Keep the generated game self-contained in one Pages/<slug>/ folder.",
+        "Make runtime behavior match runtimeTemplate instead of defaulting to one arena scaffold."
+      ],
+      "fallbackSource": ""
+    }
+  },
+  "story": {
+    "start": "intro",
+    "nodes": [
+      {
+        "id": "intro",
+        "title": "Introduction",
+        "text": "A sprawling arcade game where ancient and tree environments host puzzle-based combat against guards, driving an evolve-to-unify arc.\n\nNavigate tight corridors while solving environmental puzzles to disable guards before they engage.\n\nManage resources like embers in an evolve-to-unify system that unlocks new abilities over time.\n\nEvolve into a more powerful form by clearing stronger enemies, gradually shifting from evasion to dominance.",
+        "choices": []
+      },
+      {
+        "id": "exploration-loop-1",
+        "title": "Exploration Loop 1",
+        "text": "What happens if pier traversal meets flame play under fort pressure? Keep flame as a repeatable skill test, escalate with fort, and use quiet as the reason to push deeper.",
+        "choices": []
+      },
+      {
+        "id": "exploration-loop-2",
+        "title": "Exploration Loop 2",
+        "text": "Create an adventure game with a fire-based mechanic and tree environment where the player must navigate ancient ruins to defeat urban enemies. Finalize the game by focusing on atmospheric depth over screen-time mechanics and integrating puzzle elements that reward silence.",
+        "choices": []
+      },
+      {
+        "id": "exploration-loop-3",
+        "title": "Exploration Loop 3",
+        "text": "An arcade adventure where puzzles unlock ember-based abilities to defeat a boss leader and reach the ascension stage. Maintain the original pitch as is without modification.",
+        "choices": []
+      }
+    ]
+  },
+  "delivery": {
+    "format": "story-driven JSON nodes",
+    "note": "scene layout, enemy waves, relic rewards, goal unlock state, brainstorm final spec, player controller",
+    "prototypeScope": "Small browser-playable prototype"
+  }
+}

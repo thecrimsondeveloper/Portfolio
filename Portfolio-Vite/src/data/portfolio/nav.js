@@ -44,20 +44,17 @@ const navIcons = {
       <path d="M7 12a4 4 0 0 1 4-4h2v2h-2a2 2 0 1 0 0 4h2v2h-2a4 4 0 0 1-4-4Zm6-1h2v2h-2v-2Zm3-5a4 4 0 0 1 4 4 4 4 0 0 1-4 4h-1v-2h1a2 2 0 1 0 0-4h-2V6h2Z"></path>
     </svg>
   `,
+  projects: `
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M4 4h7v7H4V4Zm9 0h7v7h-7V4ZM4 13h7v7H4v-7Zm9 0h7v7h-7v-7Z"></path>
+    </svg>
+  `,
 };
 
 export const nav = [
-    { id: "full-stack", label: "Full Stack", icon: navIcons["full-stack"] },
-    { id: "automation", label: "Automation", icon: navIcons.automation },
-    { id: "research", label: "Research", icon: navIcons.research },
-    { id: "game-dev", label: "Game Dev / XR", icon: navIcons["game-dev"] },
-    {
-      id: "agentic-engineering",
-      label: "Agentic Engineering",
-      icon: navIcons["agentic-engineering"],
-    },
-    { id: "connect", label: "Connect", icon: navIcons.connect },
-    { id: "arcade-library", label: "Arcade Library", icon: navIcons.prototypes },
+    { id: "full-stack", label: "Work", icon: navIcons["full-stack"] },
+    { id: "projects", label: "Projects", icon: navIcons.projects },
+    { id: "connect", label: "About", icon: navIcons.connect },
     { id: "prototypes", label: "Arcade", icon: navIcons.prototypes },
     { id: "settings", label: "Settings", icon: navIcons.settings },
   ];

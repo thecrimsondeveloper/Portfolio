@@ -1,0 +1,38 @@
+{
+  "title": "Overgrown Systems: Guard Break",
+  "description": "An expansive arcade game where players outmaneuver guard forces and drive an evolve-to-unify progression arc in a hostile overgrown world.",
+  "objective": "Use blink and dash to survive commander patrols, secure relic routes, and turn each run into unify, discover progress.",
+  "seed": {
+    "themes": "industrial salvage",
+    "genres": "stealth arena",
+    "environments": "overgrown greenhouse",
+    "settings": "foggy morning",
+    "characterMotivations": "reach a quiet sanctuary",
+    "movementMechanics": [
+      "momentum-based rolling",
+      "mirror walking"
+    ],
+    "coreLoops": "rebuild broken systems",
+    "progressionLoops": "rescue allies",
+    "completionLoops": "final escape sequence",
+    "rewards": [
+      "boss unlock",
+      "collectibles"
+    ],
+    "antagonists": "patrolling automatons",
+    "visualStyles": "architectural minimalism",
+    "audioStyles": "field recording textures",
+    "interactionPatterns": "context-sensitive movement",
+    "productionFocus": "focus on emergent loops",
+    "cameraModes": "isometric zoom-pulse",
+    "arenaShapes": "hub-and-spokes with switchbacks",
+    "primaryVerbs": "chase with timing",
+    "scoringModels": "perfect route near miss bonus",
+    "failureModes": "core overheated by patrols",
+    "enemyBehaviors": "summon hazards light-triggered",
+    "objectiveStructures": "reach exit before timer",
+    "resourceSystems": "noise zone recharge",
+    "levelProgression": "branching routes with hazard tiers",
+    "twistConstraints": "reversed controls zone after route split"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "subterranean-artifacts-guard-break",
+  "title": "Subterranean Artifacts: Guard Break",
+  "summary": "An arcade game blending subterranean and tree worlds where players use artifacts to outmaneuver guards.",
+  "mode": "arcade-action",
+  "palette": "subterranean-artifacts-guard-break",
+  "instructions": "WASD or Arrow keys move the player through the arena., Shift triggers a combine burst for repositioning., Space converts sprint and crash pressure into crowd control.",
+  "hud": {
+    "modeLabel": "Subterranean Artifacts: Guard Break",
+    "objective": "Use sprint and crash to survive commander patrols, secure relic routes, and turn each run into unify, expand progress."
+  },
+  "overlay": {
+    "startTitle": "Subterranean Artifacts: Guard Break",
+    "startCopy": "An arcade game blending subterranean and tree worlds where players use artifacts to outmaneuver guards.\n\nPlayer explores compact environments while evading patrols sentries and fortifications.\n\nArtifacts provide powers for combat, enabling the player to outmaneuver enemy commanders.\n\nA evolve-to-unify progression arc requires strategic use of powers across diverse terrains.",
+    "startAction": "Launch Game"
+  },
+  "content": {
+    "hook": "An arcade game blending subterranean and tree worlds where players use artifacts to outmaneuver guards.",
+    "actions": [
+      "sprint",
+      "crash",
+      "combine"
+    ],
+    "pressure": [
+      "commander",
+      "guard",
+      "sentry"
+    ],
+    "rewards": [
+      "unify",
+      "expand",
+      "evolve"
+    ]
+  },
+  "image": ""
+}

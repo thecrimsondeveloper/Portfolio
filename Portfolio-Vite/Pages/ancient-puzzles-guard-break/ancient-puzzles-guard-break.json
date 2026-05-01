@@ -1,0 +1,38 @@
+{
+  "id": "ancient-puzzles-guard-break",
+  "title": "Ancient Puzzles: Guard Break",
+  "summary": "A sprawling arcade game where ancient and tree environments host puzzle-based combat against guards, driving an evolve-to-unify arc.",
+  "mode": "arcade-action",
+  "palette": "ancient-puzzles-guard-break",
+  "instructions": "WASD or Arrow keys move the player through the arena., Shift triggers a solve burst for repositioning., Space converts puzzles and ember pressure into crowd control.",
+  "hud": {
+    "modeLabel": "Ancient Puzzles: Guard Break",
+    "objective": "Use puzzles and ember to survive guard patrols, secure relic routes, and turn each run into evolve, unify progress."
+  },
+  "overlay": {
+    "startTitle": "Ancient Puzzles: Guard Break",
+    "startCopy": "A sprawling arcade game where ancient and tree environments host puzzle-based combat against guards, driving an evolve-to-unify arc.\n\nNavigate tight corridors while solving environmental puzzles to disable guards before they engage.\n\nManage resources like embers in an evolve-to-unify system that unlocks new abilities over time.\n\nEvolve into a more powerful form by clearing stronger enemies, gradually shifting from evasion to dominance.",
+    "startAction": "Launch Game"
+  },
+  "content": {
+    "hook": "A sprawling arcade game where ancient and tree environments host puzzle-based combat against guards, driving an evolve-to-unify arc.",
+    "actions": [
+      "puzzles",
+      "ember",
+      "solve"
+    ],
+    "pressure": [
+      "guard",
+      "sentry",
+      "fort"
+    ],
+    "rewards": [
+      "evolve",
+      "unify",
+      "discover"
+    ],
+    "runtimeTemplate": "stealth_patrol",
+    "mechanicFamily": "stealth patrol"
+  },
+  "image": ""
+}

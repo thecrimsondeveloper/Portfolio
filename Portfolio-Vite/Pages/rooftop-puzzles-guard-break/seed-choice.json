@@ -1,0 +1,27 @@
+{
+  "title": "Rooftop Puzzles: Guard Break",
+  "description": "Navigate rooftop and tree spaces with sprint and crash, survive warden-led pressure, and turn each run into unify progress.",
+  "objective": "Use sprint and crash to survive warden patrols, secure relic routes, and turn each run into unify, evolve progress.",
+  "seed": {
+    "themes": "noir investigation",
+    "environments": "rooftop maintenance rails",
+    "settings": "midsummer heat",
+    "characterMotivations": "unmask a hidden group",
+    "movementMechanics": [
+      "grapple and zipline",
+      "slide and vault"
+    ],
+    "coreLoops": "solve motion puzzles to advance",
+    "progressionLoops": "restore environmental systems",
+    "completionLoops": "tower climb to trigger signal",
+    "rewards": [
+      "artifact sets",
+      "collectibles"
+    ],
+    "antagonists": "patrolling automatons",
+    "visualStyles": "warm neon",
+    "audioStyles": "field recording textures",
+    "interactionPatterns": "hold-and-release momentum",
+    "productionFocus": "build a single page interactive proof"
+  }
+}

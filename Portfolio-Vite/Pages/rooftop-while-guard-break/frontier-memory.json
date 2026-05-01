@@ -1,0 +1,191 @@
+{
+  "gameTitle": "Rooftop While: Guard Break",
+  "profile": {
+    "seedContract": {
+      "sourceSeed": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-xkal25ym/brainstorm-seed.json",
+      "sourceSummary": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-xkal25ym/brainstorm-summary.json",
+      "sourceSamples": {
+        "environment": [
+          "rooftop",
+          "tree",
+          "pier",
+          "forest",
+          "maintenance",
+          "rails"
+        ],
+        "mechanics": [
+          "while",
+          "ember",
+          "crash",
+          "flame",
+          "sprint",
+          "slide",
+          "evade"
+        ],
+        "enemies": [
+          "guard",
+          "sentry",
+          "fort",
+          "commander",
+          "leader",
+          "circuitry"
+        ],
+        "progression": [
+          "evolve",
+          "unify",
+          "discover",
+          "expand",
+          "unlock",
+          "reach"
+        ]
+      }
+    },
+    "mechanicFamily": "stealth patrol",
+    "runtimeTemplate": "stealth_patrol",
+    "pacing": "18 minutes",
+    "spatialStructure": "patrol grid",
+    "failurePressure": [
+      "warden",
+      "leader",
+      "circuitry",
+      "rooftop",
+      "tree",
+      "pier",
+      "forest"
+    ],
+    "progressionShape": [
+      "unify",
+      "evolve",
+      "evolve",
+      "unify",
+      "discover",
+      "expand",
+      "Each run converts performance into unify, evolve upgrades and route unlocks."
+    ],
+    "presentationRules": [
+      "A stylized world blending rooftop, tree, and shifting threat territory.",
+      "Lean on rooftop, tree, and guard motifs for strong silhouettes, readable threat zones, and punchy arcade contrast.",
+      "fast threat reads",
+      "clear route ownership",
+      "strong reward telegraphing"
+    ],
+    "mustPreserve": [
+      "Preserve the randomized seed contract through every stage.",
+      "Treat final-brainstorming.json as the canonical game specification.",
+      "Keep the generated game self-contained in one Pages/<slug>/ folder.",
+      "Make runtime behavior match runtimeTemplate instead of defaulting to one arena scaffold."
+    ],
+    "fallbackSource": "LM Studio unavailable during auto preflight: [Errno 61] Connection refused; deterministic fallback generation was used."
+  },
+  "canonicalPaths": {
+    "targetDir": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/rooftop-while-guard-break",
+    "brainstormSeed": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/rooftop-while-guard-break/brainstorm-seed.json",
+    "brainstormSummary": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/rooftop-while-guard-break/brainstorm-summary.json",
+    "finalBrainstorm": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/rooftop-while-guard-break/final-brainstorming.json",
+    "story": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/rooftop-while-guard-break/story-structure.json",
+    "gameScript": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/rooftop-while-guard-break/game.js"
+  },
+  "seedCombination": {
+    "themes": "circuitry puzzle chase",
+    "environments": "rooftop maintenance rails",
+    "settings": "power outage",
+    "characterMotivations": "reach a quiet sanctuary",
+    "movementMechanics": [
+      "wall-running",
+      "grapple and zipline"
+    ],
+    "coreLoops": "evade patrols while searching",
+    "progressionLoops": "gather knowledge nodes",
+    "completionLoops": "artifact assembly",
+    "rewards": [
+      "upgrade module",
+      "secret area access"
+    ],
+    "antagonists": "unstable environment",
+    "visualStyles": "architectural minimalism",
+    "audioStyles": "mechanical percussion",
+    "interactionPatterns": "soft physics-based control",
+    "productionFocus": "focus on emergent loops"
+  },
+  "stageHistory": [
+    {
+      "stage": "stage-1-brainstorm-pipeline",
+      "event": "stage",
+      "summary": "Locked final-brainstorming.json and initialized gameDesignProfile."
+    },
+    {
+      "stage": "stage-2-concept-materialization",
+      "event": "stage",
+      "summary": "Materialized concept from locked brainstorm packet."
+    },
+    {
+      "stage": "stage-3-feature-sprint-loop",
+      "event": "stage",
+      "summary": "Derived feature sprint packets from canonical brainstorm data."
+    },
+    {
+      "stage": "stage-4-design-assembly",
+      "event": "stage",
+      "summary": "Assembled design document."
+    },
+    {
+      "stage": "stage-5-build-planning-loop",
+      "event": "stage",
+      "summary": "Derived fun assessment and implementation chapters."
+    },
+    {
+      "stage": "stage-6-story-and-scaffold-materialization",
+      "event": "stage",
+      "summary": "Created story payload and runtime scaffold for stealth_patrol."
+    },
+    {
+      "stage": "stage-7-html-review-loop",
+      "event": "stage",
+      "summary": "Completed HTML shell review pass."
+    },
+    {
+      "stage": "stage-8-implementation-sprint-loop",
+      "event": "stage",
+      "summary": "Completed configured implementation sprint passes."
+    },
+    {
+      "stage": "stage-9-validation-repair-loop",
+      "event": "stage",
+      "summary": "Completed configured validation loops."
+    },
+    {
+      "stage": "stage-10-arcade-integration-loop",
+      "event": "stage",
+      "summary": "Completed arcade integration loop."
+    },
+    {
+      "stage": "stage-8-implementation-sprint-loop",
+      "event": "stage",
+      "summary": "Repaired the generic relic arena loop into a patrol-grid stealth uplink extraction pass."
+    },
+    {
+      "stage": "stage-9-validation-repair-loop",
+      "event": "stage",
+      "summary": "Validated the repaired runtime with syntax, JSON, and live browser boot checks; continue gate closed."
+    },
+    {
+      "stage": "stage-10-arcade-integration-loop",
+      "event": "stage",
+      "summary": "Refreshed arcade metadata and verification notes to match the repaired stealth patrol runtime."
+    }
+  ],
+  "decisions": [
+    "Replaced the floating relic pickup loop with hold-to-secure rooftop uplinks and extraction hold behavior.",
+    "Moved patrol ownership into explicit story-structure route and vision data so the stealth patrol template is enforced by scene payloads.",
+    "Retuned crash and pulse to manage patrol pressure instead of generic arena crowd control."
+  ],
+  "rejectedIdeas": [
+    "Leaving the generic collect-and-exit loop in place with only patrol-flavored enemy movement."
+  ],
+  "openIssues": [
+    "Three.js logs a non-blocking deprecation warning for THREE.Clock from the CDN module."
+  ],
+  "nextStageNotes": [
+    "If another pass is needed, replace THREE.Clock with THREE.Timer without changing the repaired patrol loop."
+  ]
+}

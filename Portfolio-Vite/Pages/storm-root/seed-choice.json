@@ -1,0 +1,27 @@
+{
+  "title": "Storm Root",
+  "description": "A rain-soaked extraction run across a hostile pier where relic chains unlock a storm gate.",
+  "objective": "Collect relics, survive the patrols, and open the exit beacon.",
+  "seed": {
+    "themes": "hidden society infiltration",
+    "environments": "subterranean library",
+    "settings": "dusk",
+    "characterMotivations": "learn a forgotten ritual",
+    "movementMechanics": [
+      "rhythm-based stepping",
+      "slide and vault"
+    ],
+    "coreLoops": "collect scattered pieces",
+    "progressionLoops": "build a safe path",
+    "completionLoops": "tower climb to trigger signal",
+    "rewards": [
+      "story fragments",
+      "artifact sets"
+    ],
+    "antagonists": "patrolling automatons",
+    "visualStyles": "cinematic noir lighting",
+    "audioStyles": "dripping water motifs",
+    "interactionPatterns": "inventory-lite object use",
+    "productionFocus": "create a human-readable design spec"
+  }
+}

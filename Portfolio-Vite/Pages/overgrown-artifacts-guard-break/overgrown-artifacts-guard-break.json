@@ -1,0 +1,38 @@
+{
+  "id": "overgrown-artifacts-guard-break",
+  "title": "Overgrown Artifacts: Guard Break",
+  "summary": "Navigate overgrown and tree spaces with sprint and crash, survive warden-led pressure, and turn each run into unify progress.",
+  "mode": "arcade-action",
+  "palette": "overgrown-artifacts-guard-break",
+  "instructions": "WASD or Arrow keys move the player through the arena., Shift triggers a combine burst for repositioning., Space converts sprint and crash pressure into crowd control.",
+  "hud": {
+    "modeLabel": "Overgrown Artifacts: Guard Break",
+    "objective": "Use sprint and crash to survive warden patrols, secure relic routes, and turn each run into unify, evolve progress."
+  },
+  "overlay": {
+    "startTitle": "Overgrown Artifacts: Guard Break",
+    "startCopy": "Navigate overgrown and tree spaces with sprint and crash, survive warden-led pressure, and turn each run into unify progress.\n\nScout routes through overgrown spaces and identify guard pressure points.\n\nUse artifacts and ember interactions to survive, reposition, and secure objectives.\n\nConvert each run into evolve gains that unlock stronger options and open the next challenge band.",
+    "startAction": "Launch Game"
+  },
+  "content": {
+    "hook": "Navigate overgrown and tree spaces with sprint and crash, survive warden-led pressure, and turn each run into unify progress.",
+    "actions": [
+      "sprint",
+      "crash",
+      "combine"
+    ],
+    "pressure": [
+      "warden",
+      "leader",
+      "industrial"
+    ],
+    "rewards": [
+      "unify",
+      "evolve",
+      "discover"
+    ],
+    "runtimeTemplate": "stealth_patrol",
+    "mechanicFamily": "stealth patrol"
+  },
+  "image": ""
+}

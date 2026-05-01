@@ -23,7 +23,7 @@ export function renderShell(hosts, state) {
 }
 
 function renderHeader(header, state) {
-  if (state.route.pageId === "prototypes" || state.route.pageId === "landing") {
+  if (state.route.pageId === "landing") {
     header.innerHTML = "";
     return;
   }
@@ -54,7 +54,6 @@ function renderHeader(header, state) {
       <p class="site-header-name">${profile.name}</p>
       <p class="site-header-subtitle">${profile.title}</p>
     </div>
-    <p class="site-header-current" aria-label="Current section">${state.route.currentLabel}</p>
     <nav class="site-header-nav" aria-label="Primary">
       ${navMarkup}
     </nav>
