@@ -1,0 +1,49 @@
+{
+  "id": "clockwork-courier",
+  "title": "Clockwork Courier",
+  "description": "A tense delivery game in a flooded market district at twilight where the player must outmaneuver automated patrols.",
+  "seed": {
+    "themes": "circuitry puzzle chase",
+    "environments": "foggy train yard",
+    "settings": "high tide",
+    "characterMotivations": "unmask a hidden group",
+    "movementMechanics": [
+      "wall-running",
+      "mirror walking"
+    ],
+    "coreLoops": "collect scattered pieces",
+    "progressionLoops": "gather knowledge nodes",
+    "completionLoops": "bridge repair to reconnect route",
+    "rewards": [
+      "movement mastery",
+      "resource caches"
+    ],
+    "antagonists": "unstable environment",
+    "visualStyles": "architectural minimalism",
+    "audioStyles": "breathy wind soundscape",
+    "interactionPatterns": "hold-and-release momentum",
+    "productionFocus": "prototype in directory with JSON and HTML only"
+  },
+  "design": {
+    "summary": "",
+    "details": "\n    # Clockwork Courier\n\n    **Description:** A tense delivery game in a flooded market district at twilight where the player must outmaneuver automated patrols.\n\n    **Objective:** Deliver a vital package while using agile movement and environmental interaction.\n\n    **Seed summary:**\n    Generated game seed combination:\n- Themes: circuitry puzzle chase\n- Environments: foggy train yard\n- Settings: high tide\n- Character motivations: unmask a hidden group\n- Movement mechanics: wall-running, mirror walking\n- Core loops: collect scattered pieces\n- Progression loops: gather knowledge nodes\n- Completion loops: bridge repair to reconnect route\n- Rewards: movement mastery, resource caches\n- Antagonists: unstable environment\n- Visual styles: architectural minimalism\n- Audio styles: breathy wind soundscape\n- Interaction patterns: hold-and-release momentum\n- Production focus: prototype in directory with JSON and HTML only\n\n\n(Add the design details here.)",
+    "chapters": [
+      "This game is about balancing cargo and timing movement through a partially submerged clocktower market. The player collects package fragments, avoids patrolling automatons, and uses power-up devices to unlock shortcuts."
+    ]
+  },
+  "story": {
+    "start": "intro",
+    "nodes": [
+      {
+        "id": "intro",
+        "title": "Introduction",
+        "text": "Describe the opening scene here.",
+        "choices": []
+      }
+    ]
+  },
+  "delivery": {
+    "format": "story-driven JSON nodes",
+    "note": "Add fields for choices, transitions, and implementation mapping as needed."
+  }
+}

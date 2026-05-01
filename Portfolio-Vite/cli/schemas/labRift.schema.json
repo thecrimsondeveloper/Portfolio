@@ -1,0 +1,73 @@
+{
+  "type": "object",
+  "properties": {
+    "mode": {
+      "type": "string",
+      "enum": [
+        "labRift"
+      ]
+    },
+    "content": {
+      "type": "object",
+      "required": [
+        "playerSpeed",
+        "shards",
+        "sentries"
+      ],
+      "properties": {
+        "playerSpeed": {
+          "type": "number"
+        },
+        "shards": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "x",
+              "y"
+            ],
+            "properties": {
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              }
+            },
+            "additionalProperties": false
+          },
+          "minItems": 4
+        },
+        "sentries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "x",
+              "y",
+              "rate"
+            ],
+            "properties": {
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              },
+              "rate": {
+                "type": "number"
+              }
+            },
+            "additionalProperties": false
+          },
+          "minItems": 2
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "mode",
+    "content"
+  ]
+}

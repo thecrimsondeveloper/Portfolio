@@ -1,0 +1,27 @@
+{
+  "title": "Tideforge Relay",
+  "description": "A new game set in a vivid location at a dramatic time, where the player must unmask a hidden group while using momentum-based rolling, mirror walking.",
+  "objective": "Unmask a hidden group by solve motion puzzles to advance and then boss hunt.",
+  "seed": {
+    "themes": "hidden society infiltration",
+    "environments": "foggy train yard",
+    "settings": "late-night",
+    "characterMotivations": "unmask a hidden group",
+    "movementMechanics": [
+      "momentum-based rolling",
+      "mirror walking"
+    ],
+    "coreLoops": "solve motion puzzles to advance",
+    "progressionLoops": "gather knowledge nodes",
+    "completionLoops": "boss hunt",
+    "rewards": [
+      "collectibles",
+      "secret area access"
+    ],
+    "antagonists": "local gang",
+    "visualStyles": "cinematic noir lighting",
+    "audioStyles": "low bass pulse",
+    "interactionPatterns": "hold-and-release momentum",
+    "productionFocus": "build a single page interactive proof"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "obsidian-echoes",
+  "title": "Memory Ruins Voyage",
+  "summary": "A memory pattern game where glowing ruins reveal lost sequences and deeper nodes.",
+  "mode": "echo",
+  "palette": "signal",
+  "instructions": "Watch the pattern, then repeat it using A / S / D / F to restore memory nodes and explore deeper.",
+  "hud": {
+    "modeLabel": "Memory Voyage"
+  },
+  "overlay": {
+    "startTitle": "Memory Ruins Voyage",
+    "startCopy": "Listen to the ruins' echoes, repeat the pattern, and restore lost memories as the sequence grows.",
+    "startAction": "Begin Voyage"
+  },
+  "content": {
+    "pattern": [0, 2, 1, 3, 0, 1],
+    "inputMap": {
+      "a": 0,
+      "s": 1,
+      "d": 2,
+      "f": 3
+    },
+    "revealEvery": 0.65,
+    "padColors": ["#7f6dff", "#64f7ff", "#ff7add", "#ffd965"]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "crimson-wheeler-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "nvidia-chat": "node nvidia-openai.js"
+  },
+  "devDependencies": {
+    "vite": "^7.1.10"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.1",
+    "openai": "^4.9.0",
+    "three": "^0.184.0"
+  }
+}

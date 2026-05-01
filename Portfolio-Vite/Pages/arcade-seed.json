@@ -1,0 +1,178 @@
+{
+  "id": "arcade-seed",
+  "title": "Arcade Seed Generator",
+  "description": "A randomized design seed for building a new arcade game in a target directory.",
+  "targetDirectoryPlaceholder": "Pages/<new-game-folder>/",
+  "randomGenerator": {
+    "instruction": "Sample one or more items from each list below to create a unique game idea. Mix environment, motion, core loop, and completion loop into a cohesive concept.",
+    "sampleRules": {
+      "themes": 1,
+      "environments": 1,
+      "settings": 1,
+      "characterMotivations": 1,
+      "movementMechanics": 2,
+      "coreLoops": 1,
+      "progressionLoops": 1,
+      "completionLoops": 1,
+      "rewards": 2,
+      "antagonists": 1,
+      "visualStyles": 1,
+      "audioStyles": 1,
+      "interactionPatterns": 1,
+      "productionFocus": 1
+    }
+  },
+  "options": {
+    "themes": [
+      "underground ruin exploration",
+      "noir investigation",
+      "urban parkour delivery",
+      "mechanical festival rescue",
+      "ritual archaeology",
+      "artifact recovery",
+      "street level mystery",
+      "hidden society infiltration",
+      "industrial salvage",
+      "circuitry puzzle chase"
+    ],
+    "environments": [
+      "abandoned factory",
+      "subterranean library",
+      "flooded market district",
+      "rooftop maintenance rails",
+      "ancient quarry",
+      "foggy train yard",
+      "quiet town square",
+      "underground cavern",
+      "overgrown greenhouse",
+      "clocktower interior"
+    ],
+    "settings": [
+      "dusk",
+      "storm",
+      "late-night",
+      "twilight",
+      "foggy morning",
+      "power outage",
+      "festival night",
+      "high tide",
+      "harsh winter",
+      "midsummer heat"
+    ],
+    "characterMotivations": [
+      "find a lost relic",
+      "deliver a secret package",
+      "escape before dawn",
+      "repair broken machinery",
+      "avenge a lost friend",
+      "unmask a hidden group",
+      "protect the neighborhood",
+      "learn a forgotten ritual",
+      "reach a quiet sanctuary",
+      "save a stranded companion"
+    ],
+    "movementMechanics": [
+      "precision jumping",
+      "slide and vault",
+      "swinging from cables",
+      "wall-running",
+      "cargo balancing",
+      "stealth crouch",
+      "momentum-based rolling",
+      "grapple and zipline",
+      "rhythm-based stepping",
+      "mirror walking"
+    ],
+    "coreLoops": [
+      "collect scattered pieces",
+      "navigate hazardous spaces",
+      "rebuild broken systems",
+      "trace signal patterns",
+      "evade patrols while searching",
+      "solve motion puzzles to advance",
+      "collect and combine artifacts",
+      "guide a companion through hazards"
+    ],
+    "progressionLoops": [
+      "unlock shortcuts",
+      "gain movement upgrades",
+      "assemble a map",
+      "power up a device",
+      "gather knowledge nodes",
+      "build a safe path",
+      "rescue allies",
+      "restore environmental systems"
+    ],
+    "completionLoops": [
+      "boss hunt",
+      "artifact assembly",
+      "final escape sequence",
+      "ritual activation",
+      "tower climb to trigger signal",
+      "bridge repair to reconnect route",
+      "ceremony completion",
+      "vault extraction",
+      "relay activation"
+    ],
+    "rewards": [
+      "collectibles",
+      "boss unlock",
+      "secret area access",
+      "upgrade module",
+      "story fragments",
+      "artifact sets",
+      "movement mastery",
+      "resource caches"
+    ],
+    "antagonists": [
+      "roving security drones",
+      "corrupted maintenance crew",
+      "ancient guardian",
+      "rival explorer",
+      "unstable environment",
+      "mischievous spirits",
+      "patrolling automatons",
+      "unstable machinery",
+      "local gang",
+      "self-learning barrier"
+    ],
+    "visualStyles": [
+      "textured industrial",
+      "warm neon",
+      "dusty pastel",
+      "wet concrete",
+      "rusted brass",
+      "muted earth tones",
+      "cinematic noir lighting",
+      "hand-painted textures",
+      "architectural minimalism"
+    ],
+    "audioStyles": [
+      "mechanical percussion",
+      "ambient hum",
+      "low bass pulse",
+      "sparse piano",
+      "field recording textures",
+      "dripping water motifs",
+      "breathy wind soundscape",
+      "soft choral pads"
+    ],
+    "interactionPatterns": [
+      "point-and-click traversal",
+      "hold-and-release momentum",
+      "combo navigation",
+      "environmental interaction first",
+      "inventory-lite object use",
+      "context-sensitive movement",
+      "soft physics-based control"
+    ],
+    "productionFocus": [
+      "prototype in directory with JSON and HTML only",
+      "build a single page interactive proof",
+      "focus on motion and feel",
+      "focus on emergent loops",
+      "prepare for agent-driven expansion",
+      "create a human-readable design spec"
+    ]
+  }
+}

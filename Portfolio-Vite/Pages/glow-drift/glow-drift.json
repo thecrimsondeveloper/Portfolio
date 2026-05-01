@@ -1,0 +1,31 @@
+{
+  "id": "glow-drift",
+  "title": "Lantern Drift",
+  "summary": "A drifting lantern memory challenge where repeating the glowing path unlocks deeper patterns.",
+  "mode": "echo",
+  "palette": "orbit",
+  "instructions": "Watch the glowing pattern, then repeat it using Q/W/A/S or Arrow keys.",
+  "hud": {
+    "modeLabel": "Lantern Drift"
+  },
+  "overlay": {
+    "startTitle": "Lantern Drift",
+    "startCopy": "Trace the drifting lantern sequence, replay the pattern accurately, and keep the light trail alive.",
+    "startAction": "Begin Drift"
+  },
+  "content": {
+    "pattern": [0, 2, 3, 1, 0, 3],
+    "inputMap": {
+      "q": 0,
+      "w": 1,
+      "a": 2,
+      "s": 3,
+      "arrowleft": 0,
+      "arrowup": 1,
+      "arrowdown": 2,
+      "arrowright": 3
+    },
+    "padColors": ["#7bf1a8", "#63c6ff", "#ffd873", "#ff5e6c"],
+    "revealEvery": 0.9
+  }
+}

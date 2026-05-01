@@ -1,0 +1,112 @@
+{
+  "id": "echo-loop",
+  "title": "Echo Loop",
+  "summary": "A pattern memory loop where each echo sequence must be repeated in the correct order.",
+  "mode": "echo",
+  "palette": "harbor",
+  "instructions": "Repeat the shown pattern with 1, 2, 3, and 4.",
+  "hud": {
+    "modeLabel": "Repeat Pattern"
+  },
+  "overlay": {
+    "startTitle": "Echo Loop",
+    "startCopy": "A memory loop challenge. Watch the four-pad sequence, then replay it cleanly before the loop resets.",
+    "startAction": "Start Loop"
+  },
+  "settings": {
+    "title": "Echo Settings",
+    "sections": [
+      {
+        "title": "Memory Feel",
+        "controls": [
+          {
+            "key": "difficulty",
+            "label": "Difficulty",
+            "type": "select",
+            "value": "normal",
+            "options": [
+              "easy",
+              "normal",
+              "hard"
+            ]
+          },
+          {
+            "key": "effectIntensity",
+            "label": "Pad Glow",
+            "type": "range",
+            "value": 0.8,
+            "min": 0,
+            "max": 1,
+            "step": 0.05
+          }
+        ]
+      }
+    ]
+  },
+  "help": {
+    "title": "How To Start",
+    "steps": [
+      "Press Start Loop in the center overlay.",
+      "Watch the pad sequence as it lights up.",
+      "Repeat the sequence with 1, 2, 3, and 4.",
+      "Use the menu to restart if you lose the pattern."
+    ],
+    "tips": [
+      "Count the pattern in your head before replaying it.",
+      "Longer runs add more sequence pressure."
+    ]
+  },
+  "menu": {
+    "title": "Pause Menu",
+    "actions": [
+      {
+        "label": "Resume",
+        "action": "resume"
+      },
+      {
+        "label": "Restart",
+        "action": "restart"
+      },
+      {
+        "label": "Help",
+        "action": "open_help"
+      },
+      {
+        "label": "Settings",
+        "action": "open_settings"
+      }
+    ]
+  },
+  "onboarding": {
+    "title": "Echo Setup",
+    "startSteps": [
+      "Open Help to see the four input pads.",
+      "Press Start Loop to show the pattern.",
+      "Replay the pattern exactly once it finishes flashing."
+    ],
+    "firstGoal": "Repeat the opening pattern without breaking the sequence."
+  },
+  "content": {
+    "pattern": [
+      0,
+      2,
+      1,
+      3,
+      2,
+      0
+    ],
+    "revealEvery": 0.5,
+    "padColors": [
+      "#89dbff",
+      "#5d7cff",
+      "#7cf1d0",
+      "#ff7a9e"
+    ],
+    "inputMap": {
+      "1": 0,
+      "2": 1,
+      "3": 2,
+      "4": 3
+    }
+  }
+}

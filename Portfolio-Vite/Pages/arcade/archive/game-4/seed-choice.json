@@ -1,0 +1,27 @@
+{
+  "title": "Game 4",
+  "description": "A test playable arcade game number 4.",
+  "objective": "Complete the mission safely.",
+  "seed": {
+    "themes": "noir investigation",
+    "environments": "ancient quarry",
+    "settings": "late-night",
+    "characterMotivations": "deliver a secret package",
+    "movementMechanics": [
+      "cargo balancing",
+      "grapple and zipline"
+    ],
+    "coreLoops": "navigate hazardous spaces",
+    "progressionLoops": "build a safe path",
+    "completionLoops": "bridge repair to reconnect route",
+    "rewards": [
+      "story fragments",
+      "upgrade module"
+    ],
+    "antagonists": "mischievous spirits",
+    "visualStyles": "muted earth tones",
+    "audioStyles": "sparse piano",
+    "interactionPatterns": "context-sensitive movement",
+    "productionFocus": "focus on motion and feel"
+  }
+}

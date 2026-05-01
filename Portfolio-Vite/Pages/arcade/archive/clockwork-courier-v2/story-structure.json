@@ -1,0 +1,49 @@
+{
+  "id": "clockwork-courier-v2",
+  "title": "Clockwork Courier v2",
+  "description": "A tense delivery game set in a flooded clocktower market at twilight where the player must outmaneuver automated patrols.",
+  "seed": {
+    "themes": "hidden society infiltration",
+    "environments": "abandoned factory",
+    "settings": "late-night",
+    "characterMotivations": "reach a quiet sanctuary",
+    "movementMechanics": [
+      "precision jumping",
+      "grapple and zipline"
+    ],
+    "coreLoops": "navigate hazardous spaces",
+    "progressionLoops": "rescue allies",
+    "completionLoops": "bridge repair to reconnect route",
+    "rewards": [
+      "resource caches",
+      "artifact sets"
+    ],
+    "antagonists": "patrolling automatons",
+    "visualStyles": "muted earth tones",
+    "audioStyles": "mechanical percussion",
+    "interactionPatterns": "soft physics-based control",
+    "productionFocus": "focus on emergent loops"
+  },
+  "design": {
+    "summary": "",
+    "details": "\n    # Clockwork Courier v2\n\n    **Description:** A tense delivery game set in a flooded clocktower market at twilight where the player must outmaneuver automated patrols.\n\n    **Objective:** Deliver a vital package while using agile movement and environmental interaction.\n\n    **Seed summary:**\n    Generated game seed combination:\n- Themes: hidden society infiltration\n- Environments: abandoned factory\n- Settings: late-night\n- Character motivations: reach a quiet sanctuary\n- Movement mechanics: precision jumping, grapple and zipline\n- Core loops: navigate hazardous spaces\n- Progression loops: rescue allies\n- Completion loops: bridge repair to reconnect route\n- Rewards: resource caches, artifact sets\n- Antagonists: patrolling automatons\n- Visual styles: muted earth tones\n- Audio styles: mechanical percussion\n- Interaction patterns: soft physics-based control\n- Production focus: focus on emergent loops\n\n\n(Add the design details here.)",
+    "chapters": [
+      "This game is about balancing cargo and timing movement through a partially submerged clocktower market. The player collects package fragments, avoids patrolling automatons, and uses power-up devices to unlock shortcuts."
+    ]
+  },
+  "story": {
+    "start": "intro",
+    "nodes": [
+      {
+        "id": "intro",
+        "title": "Introduction",
+        "text": "Describe the opening scene here.",
+        "choices": []
+      }
+    ]
+  },
+  "delivery": {
+    "format": "story-driven JSON nodes",
+    "note": "Add fields for choices, transitions, and implementation mapping as needed."
+  }
+}

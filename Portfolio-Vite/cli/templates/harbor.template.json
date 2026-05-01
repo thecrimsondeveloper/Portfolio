@@ -1,0 +1,144 @@
+{
+  "id": "new-harbor",
+  "slug": "new-harbor",
+  "title": "New Harbor",
+  "mode": "harbor",
+  "palette": "harbor",
+  "instructions": "Steer with the cursor and collect markers.",
+  "hud": {
+    "modeLabel": "Drift Route"
+  },
+  "overlay": {
+    "startTitle": "New Harbor",
+    "startCopy": "Greyboxed harbor route.",
+    "startAction": "Start Sail"
+  },
+  "visuals": {
+    "spriteKey": "boatSkiff",
+    "accentSpriteKey": "buoyMarker",
+    "hazardSpriteKey": "hazardBlock",
+    "trailEffectKey": "smoke",
+    "impactEffectKey": "spark"
+  },
+  "settings": {
+    "title": "Settings",
+    "sections": [
+      {
+        "title": "Gameplay",
+        "controls": [
+          {
+            "key": "difficulty",
+            "label": "Difficulty",
+            "type": "select",
+            "value": "normal",
+            "options": [
+              "easy",
+              "normal",
+              "hard"
+            ]
+          },
+          {
+            "key": "effectIntensity",
+            "label": "Effect Intensity",
+            "type": "range",
+            "value": 0.75,
+            "min": 0,
+            "max": 1,
+            "step": 0.05
+          }
+        ]
+      }
+    ]
+  },
+  "help": {
+    "title": "How To Start",
+    "steps": [
+      "Press Start in the center overlay.",
+      "Use the listed controls to begin the run.",
+      "Watch the HUD goal and react to the first pattern."
+    ],
+    "tips": [
+      "Open Settings before the run if you want a different feel.",
+      "Open Menu with Escape to restart or resume."
+    ]
+  },
+  "menu": {
+    "title": "Pause Menu",
+    "actions": [
+      {
+        "label": "Resume",
+        "action": "resume"
+      },
+      {
+        "label": "Restart",
+        "action": "restart"
+      },
+      {
+        "label": "Help",
+        "action": "open_help"
+      },
+      {
+        "label": "Settings",
+        "action": "open_settings"
+      }
+    ]
+  },
+  "onboarding": {
+    "title": "Get Started",
+    "startSteps": [
+      "Open Help if you need the controls.",
+      "Press Start to enter gameplay.",
+      "Learn the first rhythm, route, or hazard pattern before chasing score."
+    ],
+    "firstGoal": "Learn the opening loop and survive the first pressure ramp."
+  },
+  "meta": {
+    "summary": "Greyboxed arcade game built from schema-bound JSON.",
+    "goal": "",
+    "controls": "",
+    "paletteLabel": "",
+    "features": [
+      "JSON-driven content",
+      "Shared runtime mode",
+      "Greyboxed visual treatment"
+    ]
+  },
+  "content": {
+    "buoys": [
+      {
+        "x": 0.18,
+        "y": 0.24
+      },
+      {
+        "x": 0.34,
+        "y": 0.56
+      },
+      {
+        "x": 0.62,
+        "y": 0.34
+      },
+      {
+        "x": 0.78,
+        "y": 0.68
+      }
+    ],
+    "currents": [
+      {
+        "x": -0.2,
+        "y": 0.0
+      },
+      {
+        "x": 0.12,
+        "y": 0.02
+      },
+      {
+        "x": -0.08,
+        "y": -0.03
+      },
+      {
+        "x": 0.16,
+        "y": 0.01
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "beacon-breaker",
+  "title": "Beacon Breaker",
+  "summary": "A harbor sweep game collecting beacons while navigating shifting currents.",
+  "mode": "harbor",
+  "palette": "harbor",
+  "instructions": "Move the cursor to guide your boat and capture all beacons before the tide shifts.",
+  "hud": {
+    "modeLabel": "Beacon Sweep"
+  },
+  "overlay": {
+    "startTitle": "Beacon Breaker",
+    "startCopy": "Steer the skiff through shifting tide bands and collect every beacon.",
+    "startAction": "Start Sweep"
+  },
+  "content": {
+    "buoys": [
+      { "x": 0.22, "y": 0.24 },
+      { "x": 0.72, "y": 0.18 },
+      { "x": 0.38, "y": 0.58 },
+      { "x": 0.64, "y": 0.68 },
+      { "x": 0.52, "y": 0.42 }
+    ],
+    "currents": [
+      { "x": 0.12, "y": 0 },
+      { "x": 0, "y": 0 },
+      { "x": -0.08, "y": 0 },
+      { "x": 0.08, "y": 0 },
+      { "x": 0, "y": 0.02 }
+    ]
+  }
+}

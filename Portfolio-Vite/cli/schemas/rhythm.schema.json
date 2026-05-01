@@ -1,0 +1,44 @@
+{
+  "type": "object",
+  "properties": {
+    "mode": {
+      "type": "string",
+      "enum": [
+        "rhythm"
+      ]
+    },
+    "content": {
+      "type": "object",
+      "required": [
+        "loopDuration",
+        "beats"
+      ],
+      "properties": {
+        "loopDuration": {
+          "type": "number"
+        },
+        "beats": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "time"
+            ],
+            "properties": {
+              "time": {
+                "type": "number"
+              }
+            },
+            "additionalProperties": false
+          },
+          "minItems": 6
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "mode",
+    "content"
+  ]
+}

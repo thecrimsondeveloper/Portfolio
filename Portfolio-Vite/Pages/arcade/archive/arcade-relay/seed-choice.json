@@ -1,0 +1,27 @@
+{
+  "title": "Arcade Relay",
+  "description": "A rapid relay challenge through neon asteroids.",
+  "objective": "Reach the finish line while avoiding moving hazards.",
+  "seed": {
+    "themes": "hidden society infiltration",
+    "environments": "quiet town square",
+    "settings": "late-night",
+    "characterMotivations": "avenge a lost friend",
+    "movementMechanics": [
+      "swinging from cables",
+      "precision jumping"
+    ],
+    "coreLoops": "navigate hazardous spaces",
+    "progressionLoops": "gain movement upgrades",
+    "completionLoops": "vault extraction",
+    "rewards": [
+      "artifact sets",
+      "resource caches"
+    ],
+    "antagonists": "unstable machinery",
+    "visualStyles": "cinematic noir lighting",
+    "audioStyles": "sparse piano",
+    "interactionPatterns": "environmental interaction first",
+    "productionFocus": "focus on motion and feel"
+  }
+}

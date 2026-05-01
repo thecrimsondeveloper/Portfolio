@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" shape-rendering="crispEdges">
+  <rect width="16" height="16" fill="none"/>
+  <rect x="2" y="10" width="3" height="3" fill="#ffd46b" fill-opacity=".85"/>
+  <rect x="6" y="7" width="2" height="2" fill="#ffe7a2" fill-opacity=".8"/>
+  <rect x="9" y="10" width="3" height="3" fill="#ffb84d" fill-opacity=".8"/>
+  <rect x="12" y="6" width="2" height="2" fill="#fff1ca" fill-opacity=".78"/>
+  <rect x="4" y="4" width="2" height="2" fill="#ffde59" fill-opacity=".72"/>
+</svg>

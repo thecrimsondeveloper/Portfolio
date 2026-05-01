@@ -1,0 +1,52 @@
+{
+  "running": true,
+  "settings": {
+    "concurrency": 2,
+    "mode": "auto-build",
+    "tryFull": true
+  },
+  "jobs": [
+    {
+      "id": "job-1777181230872-284a17",
+      "flags": {
+        "idea": "campfire",
+        "theme": "cozy",
+        "mechanic": "dodge",
+        "content": "lanterns",
+        "depth": "full",
+        "mode": "",
+        "tone": "",
+        "autoBuild": true
+      },
+      "status": "built",
+      "phase": "built",
+      "kind": "auto-build",
+      "source": "auto-build",
+      "batchId": "",
+      "parentJobId": "",
+      "command": "python3 /Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-CLI/mini_arcade_orchestrator_cli.py --auto-build --idea campfire --theme cozy --mechanic dodge --content lanterns --depth full",
+      "stdoutTail": [
+        "- Top-down shard sweep under pressure",
+        "- Orbit chain pop with combo decay",
+        "- Memory pads in a fake 3D chamber",
+        "- Sandstorm survival with lane pulses",
+        "Expansions:",
+        "- Neon lane dodger with phase swaps",
+        "- Harbor rhythm route with drifting beats",
+        "- Top-down shard sweep under pressure",
+        "JSON ready: campfire-cozy-dodge-lanterns",
+        "built campfire-cozy-dodge-lanterns",
+        "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-CLI/arcade_packets/2026-04-26T05-27-44+00-00_01-observe-arcade-state_reply.md",
+        "AUTO_BUILD_DONE {\"report\": \"/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-CLI/arcade_auto_report.json\", \"slug\": \"campfire-cozy-dodge-lanterns\", \"status\": \"built\"}"
+      ],
+      "stderrTail": [],
+      "packetPath": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-CLI/arcade_packets/2026-04-26T05-27-44+00-00_01-observe-arcade-state_reply.md",
+      "slug": "campfire-cozy-dodge-lanterns",
+      "exitCode": 0,
+      "startedAt": "2026-04-26T05:27:10.874Z",
+      "endedAt": "2026-04-26T05:27:51.995Z",
+      "createdAt": "2026-04-26T05:27:10.872Z",
+      "durationMs": 41115
+    }
+  ]
+}

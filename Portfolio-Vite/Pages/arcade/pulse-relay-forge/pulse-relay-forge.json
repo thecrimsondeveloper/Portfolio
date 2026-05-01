@@ -1,0 +1,22 @@
+{
+  "id": "pulse-relay-forge",
+  "title": "Pulse Relay Forge",
+  "summary": "A glowing relay test where each pulse node must be hit in time to keep the forge alive.",
+  "mode": "pulse",
+  "palette": "forge",
+  "instructions": "Press 1-4 or Q/W/A/S to route each pulse through the relay nodes.",
+  "hud": {
+    "modeLabel": "Relay Forge"
+  },
+  "overlay": {
+    "startTitle": "Pulse Relay Forge",
+    "startCopy": "Keep the pulse chain alive, hit the next relay node fast, and prevent overload.",
+    "startAction": "Start Relay"
+  },
+  "content": {
+    "baseSpeed": 1.35,
+    "speedRamp": 0.07,
+    "timeout": 1.4,
+    "comboStep": 5
+  }
+}

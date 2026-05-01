@@ -1,0 +1,27 @@
+{
+  "title": "Game 2",
+  "description": "A test playable arcade game number 2.",
+  "objective": "Complete the mission safely.",
+  "seed": {
+    "themes": "hidden society infiltration",
+    "environments": "underground cavern",
+    "settings": "festival night",
+    "characterMotivations": "reach a quiet sanctuary",
+    "movementMechanics": [
+      "cargo balancing",
+      "grapple and zipline"
+    ],
+    "coreLoops": "solve motion puzzles to advance",
+    "progressionLoops": "gain movement upgrades",
+    "completionLoops": "ceremony completion",
+    "rewards": [
+      "artifact sets",
+      "secret area access"
+    ],
+    "antagonists": "unstable machinery",
+    "visualStyles": "cinematic noir lighting",
+    "audioStyles": "sparse piano",
+    "interactionPatterns": "point-and-click traversal",
+    "productionFocus": "build a single page interactive proof"
+  }
+}

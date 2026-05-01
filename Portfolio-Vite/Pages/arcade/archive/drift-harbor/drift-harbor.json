@@ -1,0 +1,135 @@
+{
+  "id": "drift-harbor",
+  "title": "Drift Harbor",
+  "summary": "A harbor-run experience of gliding currents and buoy avoidance in a stylized port.",
+  "mode": "harbor",
+  "palette": "harbor",
+  "instructions": "Steer with the cursor. Ride the currents, thread the harbor, and collect every buoy.",
+  "hud": {
+    "modeLabel": "Collect Buoys"
+  },
+  "overlay": {
+    "startTitle": "Drift Harbor",
+    "startCopy": "A current-driven harbor run. Let the water push you while you weave through the course and sweep the markers.",
+    "startAction": "Set Sail"
+  },
+  "settings": {
+    "title": "Harbor Settings",
+    "sections": [
+      {
+        "title": "Water Feel",
+        "controls": [
+          {
+            "key": "difficulty",
+            "label": "Difficulty",
+            "type": "select",
+            "value": "normal",
+            "options": [
+              "easy",
+              "normal",
+              "hard"
+            ]
+          },
+          {
+            "key": "effectIntensity",
+            "label": "Wake Glow",
+            "type": "range",
+            "value": 0.75,
+            "min": 0,
+            "max": 1,
+            "step": 0.05
+          }
+        ]
+      }
+    ]
+  },
+  "help": {
+    "title": "How To Start",
+    "steps": [
+      "Press Set Sail in the center overlay.",
+      "Steer with the cursor and let the current help you.",
+      "Collect every buoy while staying on course.",
+      "Use the menu to restart if you drift too far."
+    ],
+    "tips": [
+      "Ride the strongest current lines to reduce effort.",
+      "The harbor route changes as you collect buoys."
+    ]
+  },
+  "menu": {
+    "title": "Pause Menu",
+    "actions": [
+      {
+        "label": "Resume",
+        "action": "resume"
+      },
+      {
+        "label": "Restart",
+        "action": "restart"
+      },
+      {
+        "label": "Help",
+        "action": "open_help"
+      },
+      {
+        "label": "Settings",
+        "action": "open_settings"
+      }
+    ]
+  },
+  "onboarding": {
+    "title": "Harbor Setup",
+    "startSteps": [
+      "Open Help to understand the cursor steering.",
+      "Press Set Sail to enter the harbor.",
+      "Move toward the nearest buoy while using the current."
+    ],
+    "firstGoal": "Collect the first buoy and learn the drift path."
+  },
+  "content": {
+    "currents": [
+      {
+        "x": -0.15,
+        "y": 0.02
+      },
+      {
+        "x": 0.05,
+        "y": -0.03
+      },
+      {
+        "x": 0.18,
+        "y": 0.01
+      },
+      {
+        "x": -0.08,
+        "y": 0.04
+      },
+      {
+        "x": 0.12,
+        "y": -0.02
+      }
+    ],
+    "buoys": [
+      {
+        "x": 0.2,
+        "y": 0.24
+      },
+      {
+        "x": 0.34,
+        "y": 0.6
+      },
+      {
+        "x": 0.56,
+        "y": 0.32
+      },
+      {
+        "x": 0.75,
+        "y": 0.64
+      },
+      {
+        "x": 0.84,
+        "y": 0.24
+      }
+    ]
+  }
+}

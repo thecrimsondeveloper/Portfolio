@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sunken Signal | Crimson Wheeler</title>
+  <link rel="stylesheet" href="../arcade-shell.css" />
+</head>
+<body>
+  <div class="arcade-hud" id="hud"></div>
+  <div class="arcade-overlay" id="overlay">
+    <div class="arcade-panel">
+      <h2 id="overlay-title"></h2>
+      <p id="overlay-copy"></p>
+      <button id="action" type="button"></button>
+    </div>
+  </div>
+  <canvas id="game" aria-label="Sunken Signal"></canvas>
+  <script
+    type="module"
+    src="../arcade-bootstrap.js"
+    data-arcade-config="./sunken-signal.json"
+    data-arcade-assets="../arcade-assets.json"
+  ></script>
+</body>
+</html>

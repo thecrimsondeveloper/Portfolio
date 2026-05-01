@@ -1,0 +1,27 @@
+{
+  "title": "Spectral Arc",
+  "description": "A street level mystery set in subterranean library at late-night, where the player must learn a forgotten ritual while using slide and vault, cargo balancing.",
+  "objective": "Learn a forgotten ritual by rebuild broken systems and then vault extraction.",
+  "seed": {
+    "themes": "street level mystery",
+    "environments": "subterranean library",
+    "settings": "late-night",
+    "characterMotivations": "learn a forgotten ritual",
+    "movementMechanics": [
+      "slide and vault",
+      "cargo balancing"
+    ],
+    "coreLoops": "rebuild broken systems",
+    "progressionLoops": "restore environmental systems",
+    "completionLoops": "vault extraction",
+    "rewards": [
+      "upgrade module",
+      "story fragments"
+    ],
+    "antagonists": "unstable environment",
+    "visualStyles": "muted earth tones",
+    "audioStyles": "breathy wind soundscape",
+    "interactionPatterns": "context-sensitive movement",
+    "productionFocus": "prepare for agent-driven expansion"
+  }
+}

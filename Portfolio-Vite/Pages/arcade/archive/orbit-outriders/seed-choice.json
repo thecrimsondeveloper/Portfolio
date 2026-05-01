@@ -1,0 +1,27 @@
+{
+  "title": "Orbit Outriders",
+  "description": "A industrial salvage set in subterranean library at foggy morning, where the player must unmask a hidden group while using mirror walking, rhythm-based stepping.",
+  "objective": "Unmask a hidden group by rebuild broken systems and then relay activation.",
+  "seed": {
+    "themes": "industrial salvage",
+    "environments": "subterranean library",
+    "settings": "foggy morning",
+    "characterMotivations": "unmask a hidden group",
+    "movementMechanics": [
+      "mirror walking",
+      "rhythm-based stepping"
+    ],
+    "coreLoops": "rebuild broken systems",
+    "progressionLoops": "build a safe path",
+    "completionLoops": "relay activation",
+    "rewards": [
+      "boss unlock",
+      "upgrade module"
+    ],
+    "antagonists": "unstable machinery",
+    "visualStyles": "muted earth tones",
+    "audioStyles": "sparse piano",
+    "interactionPatterns": "soft physics-based control",
+    "productionFocus": "focus on motion and feel"
+  }
+}

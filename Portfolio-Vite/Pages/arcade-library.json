@@ -1,0 +1,74 @@
+{
+  "entries": [
+    {
+      "slug": "harbor-auto-sprint",
+      "title": "Aurora Run",
+      "section": "prototypes",
+      "pagePath": "Pages/arcade/aurora-run/",
+      "metadataPath": "Pages/arcade/aurora-run/harbor-auto-sprint.json"
+    },
+    {
+      "slug": "glow-drift",
+      "title": "Lantern Drift",
+      "section": "prototypes",
+      "pagePath": "Pages/arcade/lantern-drift/",
+      "metadataPath": "Pages/arcade/lantern-drift/glow-drift.json"
+    },
+    {
+      "slug": "clockwork-courier",
+      "title": "Relay Fusion",
+      "section": "prototypes",
+      "pagePath": "Pages/arcade/relay-fusion/",
+      "metadataPath": "Pages/arcade/relay-fusion/clockwork-courier.json"
+    },
+    {
+      "slug": "riftbound-saga",
+      "title": "Lab Rift",
+      "section": "prototypes",
+      "pagePath": "Pages/arcade/lab-rift/",
+      "metadataPath": "Pages/arcade/lab-rift/riftbound-saga.json"
+    },
+    {
+      "slug": "beacon-breaker",
+      "title": "Beacon Breaker",
+      "section": "prototypes",
+      "pagePath": "Pages/arcade/beacon-breaker/",
+      "metadataPath": "Pages/arcade/beacon-breaker/beacon-breaker.json"
+    },
+    {
+      "slug": "tide-diver",
+      "title": "Tide Diver",
+      "section": "prototypes",
+      "pagePath": "Pages/arcade/tide-diver/",
+      "metadataPath": "Pages/arcade/tide-diver/tide-diver.json"
+    },
+    {
+      "slug": "aurora-beacon-run",
+      "title": "Aurora Beacon Run",
+      "section": "prototypes",
+      "pagePath": "Pages/arcade/aurora-beacon-run/",
+      "metadataPath": "Pages/arcade/aurora-beacon-run/aurora-beacon-run.json"
+    },
+    {
+      "slug": "lantern-rift-lab",
+      "title": "Lantern Rift Lab",
+      "section": "prototypes",
+      "pagePath": "Pages/arcade/lantern-rift-lab/",
+      "metadataPath": "Pages/arcade/lantern-rift-lab/lantern-rift-lab.json"
+    },
+    {
+      "slug": "pulse-relay-forge",
+      "title": "Pulse Relay Forge",
+      "section": "prototypes",
+      "pagePath": "Pages/arcade/pulse-relay-forge/",
+      "metadataPath": "Pages/arcade/pulse-relay-forge/pulse-relay-forge.json"
+    },
+    {
+      "slug": "tideforge-arena",
+      "title": "Tideforge Arena",
+      "section": "prototypes",
+      "pagePath": "Pages/arcade/tideforge-arena/",
+      "metadataPath": "Pages/arcade/tideforge-arena/tideforge-arena.json"
+    }
+  ]
+}

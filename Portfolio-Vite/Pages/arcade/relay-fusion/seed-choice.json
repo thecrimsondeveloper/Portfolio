@@ -1,0 +1,27 @@
+{
+  "title": "Clockwork Courier",
+  "description": "A tense delivery game in a flooded market district at twilight where the player must outmaneuver automated patrols.",
+  "objective": "Deliver a vital package while using agile movement and environmental interaction.",
+  "seed": {
+    "themes": "circuitry puzzle chase",
+    "environments": "foggy train yard",
+    "settings": "high tide",
+    "characterMotivations": "unmask a hidden group",
+    "movementMechanics": [
+      "wall-running",
+      "mirror walking"
+    ],
+    "coreLoops": "collect scattered pieces",
+    "progressionLoops": "gather knowledge nodes",
+    "completionLoops": "bridge repair to reconnect route",
+    "rewards": [
+      "movement mastery",
+      "resource caches"
+    ],
+    "antagonists": "unstable environment",
+    "visualStyles": "architectural minimalism",
+    "audioStyles": "breathy wind soundscape",
+    "interactionPatterns": "hold-and-release momentum",
+    "productionFocus": "prototype in directory with JSON and HTML only"
+  }
+}

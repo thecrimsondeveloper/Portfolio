@@ -1,0 +1,115 @@
+{
+  "id": "pulse-drift",
+  "title": "Pulse Drift",
+  "summary": "A drift game anchored by pulse notes and timing-based survival.",
+  "mode": "rhythm",
+  "palette": "pulse",
+  "instructions": "Press Space as the pulse notes cross the marker line.",
+  "hud": {
+    "modeLabel": "Hit Beats"
+  },
+  "overlay": {
+    "startTitle": "Pulse Drift",
+    "startCopy": "A rhythm lane game driven by a looping beat chart. Hit the pulses on time to build the run.",
+    "startAction": "Start Drift"
+  },
+  "settings": {
+    "title": "Rhythm Settings",
+    "sections": [
+      {
+        "title": "Beat Feel",
+        "controls": [
+          {
+            "key": "difficulty",
+            "label": "Difficulty",
+            "type": "select",
+            "value": "normal",
+            "options": [
+              "easy",
+              "normal",
+              "hard"
+            ]
+          },
+          {
+            "key": "effectIntensity",
+            "label": "Beat Glow",
+            "type": "range",
+            "value": 0.85,
+            "min": 0,
+            "max": 1,
+            "step": 0.05
+          }
+        ]
+      }
+    ]
+  },
+  "help": {
+    "title": "How To Start",
+    "steps": [
+      "Press Start Drift in the center overlay.",
+      "Watch the beat line and learn the loop timing.",
+      "Press Space as the pulse notes cross the marker line.",
+      "Keep the rhythm going to build score."
+    ],
+    "tips": [
+      "Focus on the marker line rather than the moving notes.",
+      "Missing one note lowers the run quality."
+    ]
+  },
+  "menu": {
+    "title": "Pause Menu",
+    "actions": [
+      {
+        "label": "Resume",
+        "action": "resume"
+      },
+      {
+        "label": "Restart",
+        "action": "restart"
+      },
+      {
+        "label": "Help",
+        "action": "open_help"
+      },
+      {
+        "label": "Settings",
+        "action": "open_settings"
+      }
+    ]
+  },
+  "onboarding": {
+    "title": "Rhythm Setup",
+    "startSteps": [
+      "Open Help to review the marker line.",
+      "Press Start Drift to start the track.",
+      "Tap Space as the first note crosses the target."
+    ],
+    "firstGoal": "Land the first beat and keep the loop alive."
+  },
+  "content": {
+    "loopDuration": 3.8,
+    "beats": [
+      {
+        "time": 0.4
+      },
+      {
+        "time": 0.88
+      },
+      {
+        "time": 1.22
+      },
+      {
+        "time": 1.86
+      },
+      {
+        "time": 2.1
+      },
+      {
+        "time": 2.66
+      },
+      {
+        "time": 3.08
+      }
+    ]
+  }
+}

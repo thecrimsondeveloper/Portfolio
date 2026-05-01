@@ -1,0 +1,127 @@
+{
+  "id": "new-orbit",
+  "slug": "new-orbit",
+  "title": "New Orbit",
+  "mode": "orbit",
+  "palette": "orbit",
+  "instructions": "Move the pointer and click targets.",
+  "hud": {
+    "modeLabel": "Combo Chain"
+  },
+  "overlay": {
+    "startTitle": "New Orbit",
+    "startCopy": "Greyboxed orbit challenge.",
+    "startAction": "Start Chain"
+  },
+  "visuals": {
+    "spriteKey": "orbNode",
+    "accentSpriteKey": "orbNode",
+    "hazardSpriteKey": "hazardBlock",
+    "trailEffectKey": "smoke",
+    "impactEffectKey": "spark"
+  },
+  "settings": {
+    "title": "Settings",
+    "sections": [
+      {
+        "title": "Gameplay",
+        "controls": [
+          {
+            "key": "difficulty",
+            "label": "Difficulty",
+            "type": "select",
+            "value": "normal",
+            "options": [
+              "easy",
+              "normal",
+              "hard"
+            ]
+          },
+          {
+            "key": "effectIntensity",
+            "label": "Effect Intensity",
+            "type": "range",
+            "value": 0.75,
+            "min": 0,
+            "max": 1,
+            "step": 0.05
+          }
+        ]
+      }
+    ]
+  },
+  "help": {
+    "title": "How To Start",
+    "steps": [
+      "Press Start in the center overlay.",
+      "Use the listed controls to begin the run.",
+      "Watch the HUD goal and react to the first pattern."
+    ],
+    "tips": [
+      "Open Settings before the run if you want a different feel.",
+      "Open Menu with Escape to restart or resume."
+    ]
+  },
+  "menu": {
+    "title": "Pause Menu",
+    "actions": [
+      {
+        "label": "Resume",
+        "action": "resume"
+      },
+      {
+        "label": "Restart",
+        "action": "restart"
+      },
+      {
+        "label": "Help",
+        "action": "open_help"
+      },
+      {
+        "label": "Settings",
+        "action": "open_settings"
+      }
+    ]
+  },
+  "onboarding": {
+    "title": "Get Started",
+    "startSteps": [
+      "Open Help if you need the controls.",
+      "Press Start to enter gameplay.",
+      "Learn the first rhythm, route, or hazard pattern before chasing score."
+    ],
+    "firstGoal": "Learn the opening loop and survive the first pressure ramp."
+  },
+  "meta": {
+    "summary": "Greyboxed arcade game built from schema-bound JSON.",
+    "goal": "",
+    "controls": "",
+    "paletteLabel": "",
+    "features": [
+      "JSON-driven content",
+      "Shared runtime mode",
+      "Greyboxed visual treatment"
+    ]
+  },
+  "content": {
+    "orbitSpeed": 1.2,
+    "coreRadius": 88,
+    "rings": [
+      {
+        "radiusBand": 0.18,
+        "radius": 18,
+        "velocity": 0.8
+      },
+      {
+        "radiusBand": 0.26,
+        "radius": 16,
+        "velocity": 1.1
+      },
+      {
+        "radiusBand": 0.34,
+        "radius": 14,
+        "velocity": 1.4
+      }
+    ]
+  }
+}

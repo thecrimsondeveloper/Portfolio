@@ -1,0 +1,27 @@
+{
+  "title": "Auto Fill Test Run",
+  "description": "A new game set in a vivid location at a dramatic time, where the player must learn a forgotten ritual while using precision jumping, rhythm-based stepping.",
+  "objective": "Learn a forgotten ritual by rebuild broken systems and then boss hunt.",
+  "seed": {
+    "themes": "industrial salvage",
+    "environments": "underground cavern",
+    "settings": "power outage",
+    "characterMotivations": "learn a forgotten ritual",
+    "movementMechanics": [
+      "precision jumping",
+      "rhythm-based stepping"
+    ],
+    "coreLoops": "rebuild broken systems",
+    "progressionLoops": "restore environmental systems",
+    "completionLoops": "boss hunt",
+    "rewards": [
+      "boss unlock",
+      "secret area access"
+    ],
+    "antagonists": "unstable machinery",
+    "visualStyles": "cinematic noir lighting",
+    "audioStyles": "soft choral pads",
+    "interactionPatterns": "context-sensitive movement",
+    "productionFocus": "prototype in directory with JSON and HTML only"
+  }
+}

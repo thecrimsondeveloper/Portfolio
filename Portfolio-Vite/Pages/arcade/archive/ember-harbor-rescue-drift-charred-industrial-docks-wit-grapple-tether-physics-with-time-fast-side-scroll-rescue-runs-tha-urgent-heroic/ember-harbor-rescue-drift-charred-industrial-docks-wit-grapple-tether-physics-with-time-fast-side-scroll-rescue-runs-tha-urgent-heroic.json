@@ -1,0 +1,146 @@
+{
+  "id": "ember-harbor-rescue-drift-charred-industrial-docks-wit-grapple-tether-physics-with-time-fast-side-scroll-rescue-runs-tha-urgent-heroic",
+  "slug": "ember-harbor-rescue-drift-charred-industrial-docks-wit-grapple-tether-physics-with-time-fast-side-scroll-rescue-runs-tha-urgent-heroic",
+  "title": "Ember Rescue",
+  "summary": "A rescue run through ember-dark docks where tethered movement and marker collection guide escape.",
+  "mode": "harbor",
+  "palette": "harbor",
+  "instructions": "Use arrow keys or A / D to steer the rescue craft through the ember harbor.",
+  "hud": {
+    "modeLabel": "Drift Route"
+  },
+  "overlay": {
+    "startTitle": "Ember Rescue",
+    "startCopy": "Steer through ember-dark docks, collect rescue markers, and outrun the falling firestorm.",
+    "startAction": "Start Rescue"
+  },
+  "visuals": {
+    "spriteKey": "boatSkiff",
+    "accentSpriteKey": "buoyMarker",
+    "hazardSpriteKey": "hazardBlock",
+    "trailEffectKey": "smoke",
+    "impactEffectKey": "spark"
+  },
+  "settings": {
+    "title": "Settings",
+    "sections": [
+      {
+        "title": "Gameplay",
+        "controls": [
+          {
+            "key": "difficulty",
+            "label": "Difficulty",
+            "type": "select",
+            "value": "normal",
+            "options": [
+              "easy",
+              "normal",
+              "hard"
+            ]
+          },
+          {
+            "key": "effectIntensity",
+            "label": "Effect Intensity",
+            "type": "range",
+            "value": 0.75,
+            "min": 0,
+            "max": 1,
+            "step": 0.05
+          }
+        ]
+      }
+    ]
+  },
+  "help": {
+    "title": "How To Start Ember Harbor Rescue-Drift Charred Industrial Docks Wit Grapple-Tether Physics With Time Fast Side-Scroll Rescue Runs Tha Urgent Heroic",
+    "steps": [
+      "Press Start in the center overlay.",
+      "Use the controls: Use arrow keys or A / D to steer the rescue craft through the ember harbor.",
+      "Follow the first goal: Grapple-tether physics with time through Ember Harbor Rescue-Drift."
+    ],
+    "tips": [
+      "Theme: Charred industrial docks wit, urgent heroic.",
+      "Support mechanics: Charred industrial docks wit, Fast side-scroll rescue runs tha."
+    ]
+  },
+  "menu": {
+    "title": "Pause Menu",
+    "actions": [
+      {
+        "label": "Resume",
+        "action": "resume"
+      },
+      {
+        "label": "Restart",
+        "action": "restart"
+      },
+      {
+        "label": "Help",
+        "action": "open_help"
+      },
+      {
+        "label": "Settings",
+        "action": "open_settings"
+      }
+    ]
+  },
+  "onboarding": {
+    "title": "Get Started",
+    "startSteps": [
+      "Press Start in the center overlay.",
+      "Use the controls: Use arrow keys or A / D to steer the rescue craft through the ember harbor.",
+      "Follow the first goal: Grapple-tether physics with time through Ember Harbor Rescue-Drift."
+    ],
+    "firstGoal": "Grapple-tether physics with time through Ember Harbor Rescue-Drift"
+  },
+  "meta": {
+    "summary": "A rescue run through ember-dark docks where tethered movement and marker collection guide escape.",
+    "goal": "Ember Harbor Rescue-Drift Charred industrial docks wit Grapple-tether physics with time Fast side-scroll rescue runs tha urgent heroic",
+    "controls": "Use arrow keys or A / D to steer the rescue craft through the ember harbor.",
+    "paletteLabel": "harbor",
+    "features": [
+      "JSON-driven content",
+      "Grapple-Tether Physics With Time",
+      "Charred Industrial Docks Wit",
+      "Fast Side-Scroll Rescue Runs Tha"
+    ]
+  },
+  "content": {
+    "buoys": [
+      {
+        "x": 0.18,
+        "y": 0.24
+      },
+      {
+        "x": 0.34,
+        "y": 0.56
+      },
+      {
+        "x": 0.62,
+        "y": 0.34
+      },
+      {
+        "x": 0.78,
+        "y": 0.68
+      }
+    ],
+    "currents": [
+      {
+        "x": -0.2,
+        "y": 0.0
+      },
+      {
+        "x": 0.12,
+        "y": 0.02
+      },
+      {
+        "x": -0.08,
+        "y": -0.03
+      },
+      {
+        "x": 0.16,
+        "y": 0.01
+      }
+    ]
+  }
+}

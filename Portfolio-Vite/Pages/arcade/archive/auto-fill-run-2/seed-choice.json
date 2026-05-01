@@ -1,0 +1,27 @@
+{
+  "title": "Auto Fill Run 2",
+  "description": "A new game set in a vivid location at a dramatic time, where the player must repair broken machinery while using grapple and zipline, swinging from cables.",
+  "objective": "Repair broken machinery by trace signal patterns and then bridge repair to reconnect route.",
+  "seed": {
+    "themes": "artifact recovery",
+    "environments": "ancient quarry",
+    "settings": "high tide",
+    "characterMotivations": "repair broken machinery",
+    "movementMechanics": [
+      "grapple and zipline",
+      "swinging from cables"
+    ],
+    "coreLoops": "trace signal patterns",
+    "progressionLoops": "assemble a map",
+    "completionLoops": "bridge repair to reconnect route",
+    "rewards": [
+      "upgrade module",
+      "resource caches"
+    ],
+    "antagonists": "rival explorer",
+    "visualStyles": "wet concrete",
+    "audioStyles": "mechanical percussion",
+    "interactionPatterns": "soft physics-based control",
+    "productionFocus": "focus on motion and feel"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Clockwork Courier v2",
+  "description": "A tense delivery game set in a flooded clocktower market at twilight where the player must outmaneuver automated patrols.",
+  "objective": "Deliver a vital package while using agile movement and environmental interaction.",
+  "seed": {
+    "themes": "hidden society infiltration",
+    "environments": "abandoned factory",
+    "settings": "late-night",
+    "characterMotivations": "reach a quiet sanctuary",
+    "movementMechanics": [
+      "precision jumping",
+      "grapple and zipline"
+    ],
+    "coreLoops": "navigate hazardous spaces",
+    "progressionLoops": "rescue allies",
+    "completionLoops": "bridge repair to reconnect route",
+    "rewards": [
+      "resource caches",
+      "artifact sets"
+    ],
+    "antagonists": "patrolling automatons",
+    "visualStyles": "muted earth tones",
+    "audioStyles": "mechanical percussion",
+    "interactionPatterns": "soft physics-based control",
+    "productionFocus": "focus on emergent loops"
+  }
+}

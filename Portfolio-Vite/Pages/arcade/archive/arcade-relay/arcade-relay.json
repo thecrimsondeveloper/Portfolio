@@ -1,0 +1,64 @@
+{
+  "id": "arcade-relay",
+  "title": "Arcade Relay",
+  "summary": "A neon relay run with lane handoff zones and checkpoint bonuses.",
+  "mode": "runner",
+  "palette": "signal",
+  "instructions": "Use Arrow keys or A / D to switch lanes. Reach the handoff zone for relay bonus points.",
+  "hud": {
+    "modeLabel": "Arcade Relay"
+  },
+  "overlay": {
+    "startTitle": "Arcade Relay",
+    "startCopy": "A neon relay run that rewards lane handoffs and checkpoint timing.",
+    "startAction": "Start Run"
+  },
+  "content": {
+    "lanes": [
+      0.18,
+      0.5,
+      0.82
+    ],
+    "spawnInterval": 0.5,
+    "spawnFactor": 0.09,
+    "speedGrowth": 0.08,
+    "speedCap": 4.2,
+    "checkpointInterval": 420,
+    "checkpointLanes": [
+      0,
+      1,
+      2
+    ],
+    "checkpointReward": 20,
+    "patterns": [
+      {
+        "lanes": [
+          0
+        ]
+      },
+      {
+        "lanes": [
+          2
+        ]
+      },
+      {
+        "lanes": [
+          1
+        ]
+      },
+      {
+        "lanes": [
+          0,
+          2
+        ]
+      },
+      {
+        "lanes": [
+          0,
+          1,
+          2
+        ]
+      }
+    ]
+  }
+}

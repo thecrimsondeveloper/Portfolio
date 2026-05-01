@@ -1,0 +1,23 @@
+{
+  "id": "aurora-beacon-run",
+  "title": "Aurora Beacon Run",
+  "summary": "A 3D harbor runner through glowing beacon gates with timed bonus windows.",
+  "mode": "threejs",
+  "palette": "signal",
+  "instructions": "Use Left and Right to steer the boat through the glowing beacon gates.",
+  "hud": {
+    "modeLabel": "Beacon Run"
+  },
+  "overlay": {
+    "startTitle": "Aurora Beacon Run",
+    "startCopy": "Pilot the glow boat through beacon windows, chase the bonus lane, and survive the harbor surge.",
+    "startAction": "Launch Run"
+  },
+  "content": {
+    "lanes": [-2.4, 0, 2.4],
+    "gateInterval": 1.4,
+    "bonusStageTime": 18,
+    "specialGateChance": 0.25,
+    "pressureWaveTime": 28
+  }
+}

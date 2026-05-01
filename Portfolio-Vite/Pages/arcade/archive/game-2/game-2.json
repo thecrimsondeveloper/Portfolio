@@ -1,0 +1,53 @@
+{
+  "id": "game-2",
+  "title": "Escape Island",
+  "summary": "A tropical escape run where obstacles force quick decisions.",
+  "mode": "runner",
+  "palette": "orbit",
+  "instructions": "Use Arrow keys or A / D to switch lanes and dodge every obstacle.",
+  "hud": {
+    "modeLabel": "Escape Island"
+  },
+  "overlay": {
+    "startTitle": "Escape Island",
+    "startCopy": "A tropical escape run where obstacles force quick decisions.",
+    "startAction": "Start Run"
+  },
+  "content": {
+    "lanes": [
+      0.18,
+      0.5,
+      0.82
+    ],
+    "patterns": [
+      {
+        "lanes": [
+          0
+        ]
+      },
+      {
+        "lanes": [
+          2
+        ]
+      },
+      {
+        "lanes": [
+          1
+        ]
+      },
+      {
+        "lanes": [
+          0,
+          2
+        ]
+      },
+      {
+        "lanes": [
+          0,
+          1,
+          2
+        ]
+      }
+    ]
+  }
+}

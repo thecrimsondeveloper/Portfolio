@@ -1,0 +1,27 @@
+{
+  "title": "Arcade Relay Run Full",
+  "description": "A data-driven three.js + Rapier arcade relay game in a ruined clocktower market.",
+  "objective": "Deliver a package through relay gates while using momentum and physics-based traversal in a reactive environment.",
+  "seed": {
+    "themes": "industrial salvage",
+    "environments": "subterranean library",
+    "settings": "twilight",
+    "characterMotivations": "reach a quiet sanctuary",
+    "movementMechanics": [
+      "grapple and zipline",
+      "rhythm-based stepping"
+    ],
+    "coreLoops": "solve motion puzzles to advance",
+    "progressionLoops": "build a safe path",
+    "completionLoops": "ceremony completion",
+    "rewards": [
+      "resource caches",
+      "boss unlock"
+    ],
+    "antagonists": "corrupted maintenance crew",
+    "visualStyles": "cinematic noir lighting",
+    "audioStyles": "ambient hum",
+    "interactionPatterns": "inventory-lite object use",
+    "productionFocus": "focus on motion and feel"
+  }
+}

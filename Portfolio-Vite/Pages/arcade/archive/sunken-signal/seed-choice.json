@@ -1,0 +1,27 @@
+{
+  "title": "Sunken Signal",
+  "description": "A urban parkour delivery set in overgrown greenhouse at festival night, where the player must reach a quiet sanctuary while using swinging from cables, precision jumping.",
+  "objective": "Reach a quiet sanctuary by trace signal patterns and then relay activation.",
+  "seed": {
+    "themes": "urban parkour delivery",
+    "environments": "overgrown greenhouse",
+    "settings": "festival night",
+    "characterMotivations": "reach a quiet sanctuary",
+    "movementMechanics": [
+      "swinging from cables",
+      "precision jumping"
+    ],
+    "coreLoops": "trace signal patterns",
+    "progressionLoops": "gain movement upgrades",
+    "completionLoops": "relay activation",
+    "rewards": [
+      "collectibles",
+      "story fragments"
+    ],
+    "antagonists": "ancient guardian",
+    "visualStyles": "hand-painted textures",
+    "audioStyles": "dripping water motifs",
+    "interactionPatterns": "combo navigation",
+    "productionFocus": "focus on motion and feel"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "tide-diver",
+  "title": "Tide Diver",
+  "summary": "A depth run through tide-laced caverns, collecting shards while avoiding sentry currents.",
+  "mode": "labRift",
+  "palette": "harbor",
+  "instructions": "Use Arrow keys or WASD to swim, collect shards, and reach the open tide exit.",
+  "hud": {
+    "modeLabel": "Tide Dive"
+  },
+  "overlay": {
+    "startTitle": "Tide Diver",
+    "startCopy": "Dive into the tide pool, gather the glowing shards, and escape the currents.",
+    "startAction": "Dive In"
+  },
+  "content": {
+    "playerSpeed": 260,
+    "shards": [
+      { "x": 0.26, "y": 0.22 },
+      { "x": 0.74, "y": 0.18 },
+      { "x": 0.20, "y": 0.62 },
+      { "x": 0.68, "y": 0.72 }
+    ],
+    "sentries": [
+      { "x": 0.42, "y": 0.4, "rate": 1.4, "phase": 0 },
+      { "x": 0.6, "y": 0.58, "rate": 1.1, "phase": 1.5 },
+      { "x": 0.32, "y": 0.78, "rate": 0.9, "phase": 2.1 }
+    ]
+  }
+}

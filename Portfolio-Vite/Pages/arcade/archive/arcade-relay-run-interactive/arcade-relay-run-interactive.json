@@ -1,0 +1,64 @@
+{
+  "id": "arcade-relay-run-interactive",
+  "title": "Relay Sprint",
+  "summary": "A relay sprint that rewards steady lane rhythm.",
+  "mode": "runner",
+  "palette": "signal",
+  "instructions": "Use Arrow keys or A / D to switch lanes. Stay steady to build sprint momentum.",
+  "hud": {
+    "modeLabel": "Relay Sprint"
+  },
+  "overlay": {
+    "startTitle": "Relay Sprint",
+    "startCopy": "A relay sprint that rewards steady rhythm and lane control.",
+    "startAction": "Start Run"
+  },
+  "content": {
+    "lanes": [
+      0.18,
+      0.5,
+      0.82
+    ],
+    "spawnInterval": 0.48,
+    "spawnFactor": 0.1,
+    "speedGrowth": 0.1,
+    "speedCap": 4.6,
+    "comboThreshold": 1.5,
+    "comboReward": 18,
+    "patterns": [
+      {
+        "lanes": [
+          0
+        ]
+      },
+      {
+        "lanes": [
+          2
+        ]
+      },
+      {
+        "lanes": [
+          1
+        ]
+      },
+      {
+        "lanes": [
+          0,
+          2
+        ]
+      },
+      {
+        "lanes": [
+          0,
+          1
+        ]
+      },
+      {
+        "lanes": [
+          1,
+          2
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Game One",
+  "description": "A first test playable arcade space run.",
+  "objective": "Reach the goal and avoid hazards.",
+  "seed": {
+    "themes": "urban parkour delivery",
+    "environments": "overgrown greenhouse",
+    "settings": "high tide",
+    "characterMotivations": "unmask a hidden group",
+    "movementMechanics": [
+      "wall-running",
+      "swinging from cables"
+    ],
+    "coreLoops": "evade patrols while searching",
+    "progressionLoops": "assemble a map",
+    "completionLoops": "tower climb to trigger signal",
+    "rewards": [
+      "collectibles",
+      "secret area access"
+    ],
+    "antagonists": "rival explorer",
+    "visualStyles": "muted earth tones",
+    "audioStyles": "ambient hum",
+    "interactionPatterns": "inventory-lite object use",
+    "productionFocus": "build a single page interactive proof"
+  }
+}

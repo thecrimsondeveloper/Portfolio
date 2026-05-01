@@ -1,0 +1,136 @@
+{
+  "id": "neural-network-pulse-dodger",
+  "slug": "neural-network-pulse-dodger",
+  "title": "Neural Pulse",
+  "summary": "A pulse dodger that channels neural network rhythm into reactive timing.",
+  "mode": "pulseGrid",
+  "palette": "pulse",
+  "instructions": "Press Space on the active beats to dodge neural pulses and keep the system stable.",
+  "hud": {
+    "modeLabel": "Beat Grid"
+  },
+  "overlay": {
+    "startTitle": "Neural Pulse",
+    "startCopy": "Dodge incoming pulses in the neural network and keep the system on-line.",
+    "startAction": "Start Pulse"
+  },
+  "visuals": {
+    "spriteKey": "padTile",
+    "accentSpriteKey": "orbNode",
+    "hazardSpriteKey": "hazardBlock",
+    "trailEffectKey": "smoke",
+    "impactEffectKey": "spark"
+  },
+  "settings": {
+    "title": "Settings",
+    "sections": [
+      {
+        "title": "Gameplay",
+        "controls": [
+          {
+            "key": "difficulty",
+            "label": "Difficulty",
+            "type": "select",
+            "value": "normal",
+            "options": [
+              "easy",
+              "normal",
+              "hard"
+            ]
+          },
+          {
+            "key": "effectIntensity",
+            "label": "Effect Intensity",
+            "type": "range",
+            "value": 0.75,
+            "min": 0,
+            "max": 1,
+            "step": 0.05
+          }
+        ]
+      }
+    ]
+  },
+  "help": {
+    "title": "How To Start Neural Network Pulse Dodger",
+    "steps": [
+      "Press Start in the center overlay.",
+      "Use the controls: Press Space on the active beats to dodge neural pulses and keep the system stable.",
+      "Follow the first goal: intro, pressure ramp, dense finish."
+    ],
+    "tips": [
+      "Theme: neon, greybox, arcade.",
+      "Support mechanics: timed swap, pickup pressure."
+    ]
+  },
+  "menu": {
+    "title": "Pause Menu",
+    "actions": [
+      {
+        "label": "Resume",
+        "action": "resume"
+      },
+      {
+        "label": "Restart",
+        "action": "restart"
+      },
+      {
+        "label": "Help",
+        "action": "open_help"
+      },
+      {
+        "label": "Settings",
+        "action": "open_settings"
+      }
+    ]
+  },
+  "onboarding": {
+    "title": "Get Started",
+    "startSteps": [
+      "Press Start in the center overlay.",
+      "Use the controls: Press Space on the active beats to dodge neural pulses and keep the system stable.",
+      "Follow the first goal: intro, pressure ramp, dense finish."
+    ],
+    "firstGoal": "intro, pressure ramp, dense finish"
+  },
+  "meta": {
+    "summary": "A pulse dodger that channels neural network rhythm into reactive timing.",
+    "goal": "Neural Network Pulse Dodger",
+    "controls": "Press Space on the active beats to dodge neural pulses and keep the system stable.",
+    "paletteLabel": "pulse",
+    "features": [
+      "JSON-driven content",
+      "Dodge And Route",
+      "Timed Swap",
+      "Pickup Pressure"
+    ]
+  },
+  "content": {
+    "sequence": [
+      {
+        "cell": 6,
+        "time": 0.2
+      },
+      {
+        "cell": 7,
+        "time": 0.5
+      },
+      {
+        "cell": 12,
+        "time": 0.8
+      },
+      {
+        "cell": 17,
+        "time": 1.1
+      },
+      {
+        "cell": 18,
+        "time": 1.35
+      },
+      {
+        "cell": 13,
+        "time": 1.6
+      }
+    ]
+  }
+}

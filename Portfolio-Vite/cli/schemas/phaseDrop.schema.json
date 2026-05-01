@@ -1,0 +1,31 @@
+{
+  "type": "object",
+  "properties": {
+    "mode": {
+      "type": "string",
+      "enum": [
+        "phaseDrop"
+      ]
+    },
+    "content": {
+      "type": "object",
+      "required": [
+        "phases"
+      ],
+      "properties": {
+        "phases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 3
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "mode",
+    "content"
+  ]
+}

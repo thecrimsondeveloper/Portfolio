@@ -1,0 +1,27 @@
+{
+  "title": "Arcade Relay Run",
+  "description": "A data-driven three.js + Rapier arcade delivery game in a ruined clocktower market.",
+  "objective": "Deliver packages through relay gates while using momentum and physics-based traversal.",
+  "seed": {
+    "themes": "hidden society infiltration",
+    "environments": "abandoned factory",
+    "settings": "foggy morning",
+    "characterMotivations": "deliver a secret package",
+    "movementMechanics": [
+      "cargo balancing",
+      "grapple and zipline"
+    ],
+    "coreLoops": "guide a companion through hazards",
+    "progressionLoops": "restore environmental systems",
+    "completionLoops": "vault extraction",
+    "rewards": [
+      "resource caches",
+      "collectibles"
+    ],
+    "antagonists": "corrupted maintenance crew",
+    "visualStyles": "muted earth tones",
+    "audioStyles": "soft choral pads",
+    "interactionPatterns": "context-sensitive movement",
+    "productionFocus": "prototype in directory with JSON and HTML only"
+  }
+}

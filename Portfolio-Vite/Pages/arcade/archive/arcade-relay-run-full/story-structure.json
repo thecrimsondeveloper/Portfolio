@@ -1,0 +1,51 @@
+{
+  "id": "arcade-relay-run-full",
+  "title": "Arcade Relay Run Full",
+  "description": "A data-driven three.js + Rapier arcade relay game in a ruined clocktower market.",
+  "seed": {
+    "themes": "industrial salvage",
+    "environments": "subterranean library",
+    "settings": "twilight",
+    "characterMotivations": "reach a quiet sanctuary",
+    "movementMechanics": [
+      "grapple and zipline",
+      "rhythm-based stepping"
+    ],
+    "coreLoops": "solve motion puzzles to advance",
+    "progressionLoops": "build a safe path",
+    "completionLoops": "ceremony completion",
+    "rewards": [
+      "resource caches",
+      "boss unlock"
+    ],
+    "antagonists": "corrupted maintenance crew",
+    "visualStyles": "cinematic noir lighting",
+    "audioStyles": "ambient hum",
+    "interactionPatterns": "inventory-lite object use",
+    "productionFocus": "focus on motion and feel"
+  },
+  "fun": {
+    "assessment": "yes",
+    "needs": []
+  },
+  "design": {
+    "summary": "",
+    "details": "\n    # Arcade Relay Run Full\n\n    **Description:** A data-driven three.js + Rapier arcade relay game in a ruined clocktower market.\n\n    **Objective:** Deliver a package through relay gates while using momentum and physics-based traversal in a reactive environment.\n\n    **Seed summary:**\n    Generated game seed combination:\n- Themes: industrial salvage\n- Environments: subterranean library\n- Settings: twilight\n- Character motivations: reach a quiet sanctuary\n- Movement mechanics: grapple and zipline, rhythm-based stepping\n- Core loops: solve motion puzzles to advance\n- Progression loops: build a safe path\n- Completion loops: ceremony completion\n- Rewards: resource caches, boss unlock\n- Antagonists: corrupted maintenance crew\n- Visual styles: cinematic noir lighting\n- Audio styles: ambient hum\n- Interaction patterns: inventory-lite object use\n- Production focus: focus on motion and feel\n\n    **Expansion ideas:**\n    - relay gate timing puzzles\n- cargo balancing with environmental hazards\n- unlock shortcuts through modular upgrades\n- patrols and rescue objectives add stakes\n- data-driven level events that can be tuned from JSON\n\n\nA data-driven three.js + Rapier game where the player navigates a decayed clocktower market, balancing cargo and timing through dynamic relay gates.\nThe game relies on physics-based momentum, reactive obstacles, and upgrade modules to keep the arcade loop engaging.\nVisual style should be atmospheric with neon highlights and damp stone surfaces, while audio uses mechanical percussion and wet ambience.\nUse JSON-driven event triggers, level data, and upgrade tuning so the experience is easy to iterate from the page data.\n\n## Fun game assessment\n\n- Assessment: yes\n\n### Things needed to make this game fun\n- (No fun checklist items provided yet.)\n",
+    "chapters": []
+  },
+  "story": {
+    "start": "intro",
+    "nodes": [
+      {
+        "id": "intro",
+        "title": "Introduction",
+        "text": "Describe the opening scene here.",
+        "choices": []
+      }
+    ]
+  },
+  "delivery": {
+    "format": "story-driven JSON nodes",
+    "note": "Add fields for choices, transitions, and implementation mapping as needed."
+  }
+}

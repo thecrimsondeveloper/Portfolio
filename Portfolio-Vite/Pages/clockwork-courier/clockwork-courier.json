@@ -1,0 +1,53 @@
+{
+  "id": "clockwork-courier",
+  "title": "Relay Fusion",
+  "summary": "A relay-based courier run that fuses clockwork motion and timed phase lanes into a single delivery challenge.",
+  "mode": "runner",
+  "palette": "orbit",
+  "instructions": "Use Arrow keys or A / D to switch lanes, hit relay checkpoints, and match phase gates.",
+  "hud": {
+    "modeLabel": "Relay Fusion"
+  },
+  "overlay": {
+    "startTitle": "Relay Fusion",
+    "startCopy": "Fuse your delivery through clockwork lanes, time the phase gates, and keep the relay chain active.",
+    "startAction": "Start Relay"
+  },
+  "content": {
+    "lanes": [
+      0.18,
+      0.5,
+      0.82
+    ],
+    "patterns": [
+      {
+        "lanes": [
+          0
+        ]
+      },
+      {
+        "lanes": [
+          2
+        ]
+      },
+      {
+        "lanes": [
+          1
+        ]
+      },
+      {
+        "lanes": [
+          0,
+          2
+        ]
+      },
+      {
+        "lanes": [
+          0,
+          1,
+          2
+        ]
+      }
+    ]
+  }
+}

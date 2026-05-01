@@ -1,0 +1,41 @@
+{
+  "id": "playtest-studio",
+  "title": "Studio Beat",
+  "summary": "A studio-style playtest loop built around timing and sequence.",
+  "mode": "pulseGrid",
+  "palette": "pulse",
+  "instructions": "Press Space on the lit tiles to complete the studio test and earn a higher replay score.",
+  "hud": {
+    "modeLabel": "Playtest Studio"
+  },
+  "overlay": {
+    "startTitle": "Studio Beat",
+    "startCopy": "Complete the studio playtest by hitting lit tiles on time and build a better run each time.",
+    "startAction": "Start Test"
+  },
+  "content": {
+    "deadline": 1.4,
+    "sequence": [
+      {
+        "cell": 0,
+        "time": 0.5
+      },
+      {
+        "cell": 6,
+        "time": 1.1
+      },
+      {
+        "cell": 12,
+        "time": 1.7
+      },
+      {
+        "cell": 18,
+        "time": 2.3
+      },
+      {
+        "cell": 24,
+        "time": 2.9
+      }
+    ]
+  }
+}

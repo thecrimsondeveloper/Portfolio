@@ -1,0 +1,27 @@
+{
+  "title": "Hidden Relay Run",
+  "description": "A relay-style delivery puzzle in a flooded market where players route packages through shifting plant corridors under a festival night sky.",
+  "objective": "Deliver critical packages through dynamic relay gates while avoiding patrols and restoring the market's support systems.",
+  "seed": {
+    "themes": "mechanical festival rescue",
+    "environments": "flooded market district",
+    "settings": "festival night",
+    "characterMotivations": "protect the neighborhood",
+    "movementMechanics": [
+      "swinging from cables",
+      "mirror walking"
+    ],
+    "coreLoops": "solve motion puzzles to advance",
+    "progressionLoops": "unlock shortcuts",
+    "completionLoops": "artifact assembly",
+    "rewards": [
+      "resource caches",
+      "story fragments"
+    ],
+    "antagonists": "rival explorer",
+    "visualStyles": "hand-painted textures",
+    "audioStyles": "field recording textures",
+    "interactionPatterns": "context-sensitive movement",
+    "productionFocus": "prepare for agent-driven expansion"
+  }
+}

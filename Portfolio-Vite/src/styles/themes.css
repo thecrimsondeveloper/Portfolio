@@ -1,0 +1,429 @@
+body[data-theme="slate"] {
+  --page-bg-top: #10161c;
+  --page-bg: #0b1014;
+  --page-bg-bottom: #070b0f;
+  --page-glow-a: rgba(255, 122, 89, 0.08);
+  --page-glow-b: rgba(29, 111, 114, 0.08);
+  --header-start: #17232a;
+  --header-end: #0f151b;
+  --header-glow: rgba(255, 122, 89, 0.1);
+  --header-subtitle-ink: rgba(247, 242, 235, 0.82);
+  --header-control-bg: rgba(19, 37, 42, 0.94);
+  --header-control-border: rgba(255, 255, 255, 0.08);
+  --header-control-shadow: 0 18px 40px rgba(6, 11, 12, 0.25);
+  --sidebar-start: #17232a;
+  --sidebar-end: #0f151b;
+  --sidebar-glow: rgba(255, 122, 89, 0.1);
+  --sidebar-surface-start: rgba(10, 14, 18, 0.92);
+  --sidebar-surface-end: rgba(8, 11, 16, 0.97);
+  --sidebar-surface-glow: rgba(255, 122, 89, 0.06);
+  --bg-elevated: rgba(9, 13, 17, 0.96);
+  --panel: #0f1419;
+  --panel-strong: #151b22;
+  --ink: #f4f1ea;
+  --muted: rgba(244, 241, 234, 0.7);
+  --line: rgba(255, 255, 255, 0.09);
+  --sidebar-ink: #f7f2eb;
+  --sidebar-muted-ink: rgba(247, 242, 235, 0.7);
+  --sidebar-link-ink: rgba(247, 242, 235, 0.82);
+  --sidebar-link-hover-border: rgba(255, 255, 255, 0.2);
+  --sidebar-link-hover-bg:
+    linear-gradient(180deg, var(--glass-surface-bg-hover), rgba(255, 255, 255, 0.04)),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.05));
+  --sidebar-link-active-ink: #fff5f1;
+  --sidebar-link-active-bg:
+    linear-gradient(180deg, rgba(255, 122, 89, 0.2), rgba(255, 122, 89, 0.08)),
+    linear-gradient(135deg, rgba(255, 122, 89, 0.58), rgba(255, 255, 255, 0.1));
+  --sidebar-link-active-border: rgba(255, 122, 89, 0.28);
+  --sidebar-link-active-shadow: inset 0 0 0 1px rgba(255, 122, 89, 0.16), var(--glass-surface-shadow);
+  --accent: #ff7a59;
+  --accent-strong: #d85b3e;
+  --accent-soft: rgba(255, 122, 89, 0.14);
+  --secondary: #1d6f72;
+  --secondary-soft: rgba(29, 111, 114, 0.12);
+  --shadow: 0 28px 64px rgba(0, 0, 0, 0.34);
+  --content-shell-start: #101922;
+  --content-shell-end: #0a1016;
+  --content-shell-glow: rgba(255, 122, 89, 0.08);
+  --content-shell-panel: rgba(12, 16, 21, 0.9);
+  --content-shell-panel-strong: rgba(17, 23, 30, 0.95);
+  --content-shell-panel-hover: rgba(23, 29, 38, 0.96);
+  --content-shell-border: rgba(255, 255, 255, 0.09);
+  --content-shell-highlight: rgba(255, 255, 255, 0.05);
+  --content-shell-shadow: 0 28px 64px rgba(0, 0, 0, 0.24);
+  --content-shell-ink: #f4f1ea;
+  --content-shell-muted: rgba(244, 241, 234, 0.72);
+  --content-chip-bg: rgba(255, 255, 255, 0.04);
+  --content-chip-border: rgba(255, 255, 255, 0.1);
+  --content-chip-ink: #f4f1ea;
+  --glass-surface-bg: rgba(255, 255, 255, 0.035);
+  --glass-surface-bg-hover: rgba(255, 255, 255, 0.065);
+  --glass-surface-active: rgba(255, 122, 89, 0.12);
+  --glass-surface-border: rgba(255, 255, 255, 0.12);
+  --glass-surface-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  --content-control-bg: rgba(255, 255, 255, 0.035);
+  --content-control-bg-hover: rgba(255, 255, 255, 0.07);
+  --control-hover-border: rgba(255, 255, 255, 0.18);
+  --control-focus-ring: 0 0 0 2px rgba(255, 122, 89, 0.18);
+  --control-primary-ink: #fff5f1;
+  --control-primary-bg:
+    linear-gradient(180deg, rgba(255, 122, 89, 0.1), rgba(255, 122, 89, 0.05)) padding-box,
+    linear-gradient(135deg, rgba(255, 122, 89, 0.72), rgba(255, 255, 255, 0.06)) border-box;
+  --control-primary-shadow: inset 0 0 0 1px rgba(255, 122, 89, 0.12);
+  --control-secondary-bg:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02)) padding-box,
+    linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.04)) border-box;
+  --control-active-ink: #fff5f1;
+  --control-active-bg: var(--glass-surface-active);
+  --control-active-border: var(--accent);
+  --control-active-shadow: inset 0 0 0 1px rgba(255, 122, 89, 0.14);
+  --main-surface-start: rgba(13, 20, 27, 0.82);
+  --main-surface-end: rgba(8, 12, 17, 0.94);
+  --main-surface-glow: rgba(255, 122, 89, 0.07);
+  --main-surface-border: rgba(255, 255, 255, 0.06);
+  --particle-color: rgba(255, 245, 241, 0.22);
+}
+
+body[data-theme="dawn"] {
+  --page-bg-top: #101720;
+  --page-bg: #0c121a;
+  --page-bg-bottom: #081019;
+  --page-glow-a: rgba(59, 127, 209, 0.12);
+  --page-glow-b: rgba(234, 170, 114, 0.08);
+  --header-start: #233246;
+  --header-end: #152134;
+  --header-glow: rgba(59, 127, 209, 0.12);
+  --header-subtitle-ink: rgba(246, 249, 253, 0.82);
+  --header-control-bg: rgba(22, 34, 52, 0.94);
+  --header-control-border: rgba(246, 249, 253, 0.12);
+  --header-control-shadow: 0 18px 40px rgba(8, 12, 18, 0.28);
+  --sidebar-start: #233246;
+  --sidebar-end: #152134;
+  --sidebar-glow: rgba(59, 127, 209, 0.12);
+  --sidebar-surface-start: rgba(17, 27, 42, 0.92);
+  --sidebar-surface-end: rgba(12, 20, 33, 0.97);
+  --sidebar-surface-glow: rgba(59, 127, 209, 0.08);
+  --bg-elevated: rgba(8, 12, 18, 0.96);
+  --panel: #0e151f;
+  --panel-strong: #131c29;
+  --ink: #f6f9fd;
+  --muted: rgba(246, 249, 253, 0.7);
+  --line: rgba(255, 255, 255, 0.09);
+  --sidebar-ink: #f6f9fd;
+  --sidebar-muted-ink: rgba(246, 249, 253, 0.72);
+  --sidebar-link-ink: rgba(246, 249, 253, 0.84);
+  --sidebar-link-hover-border: rgba(246, 249, 253, 0.2);
+  --sidebar-link-hover-bg:
+    linear-gradient(180deg, var(--glass-surface-bg-hover), rgba(246, 249, 253, 0.04)),
+    linear-gradient(135deg, rgba(241, 248, 255, 0.22), rgba(241, 248, 255, 0.04));
+  --sidebar-link-active-ink: #eef6ff;
+  --sidebar-link-active-bg:
+    linear-gradient(180deg, rgba(59, 127, 209, 0.2), rgba(59, 127, 209, 0.08)),
+    linear-gradient(135deg, rgba(59, 127, 209, 0.58), rgba(241, 248, 255, 0.1));
+  --sidebar-link-active-border: rgba(59, 127, 209, 0.32);
+  --sidebar-link-active-shadow: inset 0 0 0 1px rgba(59, 127, 209, 0.16), var(--glass-surface-shadow);
+  --accent: #3b7fd1;
+  --accent-strong: #24578f;
+  --accent-soft: rgba(59, 127, 209, 0.12);
+  --secondary: #d37d45;
+  --secondary-soft: rgba(211, 125, 69, 0.12);
+  --shadow: 0 28px 64px rgba(0, 0, 0, 0.34);
+  --content-shell-start: #111a27;
+  --content-shell-end: #0b121b;
+  --content-shell-glow: rgba(59, 127, 209, 0.08);
+  --content-shell-panel: rgba(12, 18, 26, 0.9);
+  --content-shell-panel-strong: rgba(18, 26, 37, 0.95);
+  --content-shell-panel-hover: rgba(24, 35, 49, 0.96);
+  --content-shell-border: rgba(255, 255, 255, 0.09);
+  --content-shell-highlight: rgba(255, 255, 255, 0.05);
+  --content-shell-shadow: 0 28px 64px rgba(0, 0, 0, 0.24);
+  --content-shell-ink: #f6f9fd;
+  --content-shell-muted: rgba(246, 249, 253, 0.72);
+  --content-chip-bg: rgba(255, 255, 255, 0.04);
+  --content-chip-border: rgba(255, 255, 255, 0.1);
+  --content-chip-ink: #f6f9fd;
+  --glass-surface-bg: rgba(255, 255, 255, 0.04);
+  --glass-surface-bg-hover: rgba(255, 255, 255, 0.07);
+  --glass-surface-active: rgba(59, 127, 209, 0.12);
+  --glass-surface-border: rgba(255, 255, 255, 0.12);
+  --glass-surface-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  --content-control-bg: rgba(255, 255, 255, 0.035);
+  --content-control-bg-hover: rgba(255, 255, 255, 0.07);
+  --control-hover-border: rgba(246, 249, 253, 0.18);
+  --control-focus-ring: 0 0 0 2px rgba(59, 127, 209, 0.18);
+  --control-primary-ink: #eef6ff;
+  --control-primary-bg:
+    linear-gradient(180deg, rgba(59, 127, 209, 0.12), rgba(59, 127, 209, 0.05)) padding-box,
+    linear-gradient(135deg, rgba(59, 127, 209, 0.72), rgba(241, 248, 255, 0.08)) border-box;
+  --control-primary-shadow: inset 0 0 0 1px rgba(59, 127, 209, 0.14);
+  --control-secondary-bg:
+    linear-gradient(180deg, rgba(241, 248, 255, 0.05), rgba(241, 248, 255, 0.02)) padding-box,
+    linear-gradient(135deg, rgba(241, 248, 255, 0.18), rgba(241, 248, 255, 0.05)) border-box;
+  --control-active-ink: #eef6ff;
+  --control-active-bg: var(--glass-surface-active);
+  --control-active-border: var(--accent);
+  --control-active-shadow: inset 0 0 0 1px rgba(59, 127, 209, 0.14);
+  --main-surface-start: rgba(12, 18, 28, 0.82);
+  --main-surface-end: rgba(8, 12, 19, 0.94);
+  --main-surface-glow: rgba(59, 127, 209, 0.08);
+  --main-surface-border: rgba(255, 255, 255, 0.06);
+  --particle-color: rgba(241, 248, 255, 0.22);
+}
+
+body[data-theme="ember"] {
+  --page-bg-top: #171416;
+  --page-bg: #111012;
+  --page-bg-bottom: #0c0b0d;
+  --page-glow-a: rgba(255, 106, 61, 0.18);
+  --page-glow-b: rgba(255, 179, 115, 0.08);
+  --header-start: #231d1f;
+  --header-end: #161213;
+  --header-glow: rgba(255, 106, 61, 0.2);
+  --header-subtitle-ink: rgba(246, 240, 235, 0.82);
+  --header-control-bg: rgba(33, 26, 28, 0.94);
+  --header-control-border: rgba(246, 240, 235, 0.12);
+  --header-control-shadow: 0 18px 40px rgba(15, 10, 10, 0.3);
+  --sidebar-start: #231d1f;
+  --sidebar-end: #161213;
+  --sidebar-glow: rgba(255, 106, 61, 0.2);
+  --sidebar-surface-start: rgba(24, 19, 20, 0.93);
+  --sidebar-surface-end: rgba(15, 12, 13, 0.98);
+  --sidebar-surface-glow: rgba(255, 106, 61, 0.1);
+  --bg-elevated: rgba(28, 23, 25, 0.9);
+  --panel: #1b1718;
+  --panel-strong: #201b1c;
+  --ink: #f6efe9;
+  --muted: #b8aca3;
+  --line: rgba(255, 255, 255, 0.09);
+  --sidebar-ink: #f6f0eb;
+  --sidebar-muted-ink: rgba(246, 240, 235, 0.72);
+  --sidebar-link-ink: rgba(246, 240, 235, 0.84);
+  --sidebar-link-hover-border: rgba(246, 240, 235, 0.22);
+  --sidebar-link-hover-bg:
+    linear-gradient(180deg, var(--glass-surface-bg-hover), rgba(246, 240, 235, 0.05)),
+    linear-gradient(135deg, rgba(255, 222, 208, 0.2), rgba(255, 222, 208, 0.04));
+  --sidebar-link-active-ink: #fff1ea;
+  --sidebar-link-active-bg:
+    linear-gradient(180deg, rgba(255, 106, 61, 0.24), rgba(255, 106, 61, 0.1)),
+    linear-gradient(135deg, rgba(255, 106, 61, 0.64), rgba(255, 240, 235, 0.12));
+  --sidebar-link-active-border: rgba(255, 106, 61, 0.34);
+  --sidebar-link-active-shadow: inset 0 0 0 1px rgba(255, 106, 61, 0.18), var(--glass-surface-shadow);
+  --accent: #ff6a3d;
+  --accent-strong: #d8451f;
+  --accent-soft: rgba(255, 106, 61, 0.16);
+  --secondary: #ffb373;
+  --secondary-soft: rgba(255, 179, 115, 0.12);
+  --shadow: 0 28px 64px rgba(0, 0, 0, 0.38);
+  --content-shell-start: #2a2124;
+  --content-shell-end: #171315;
+  --content-shell-glow: rgba(255, 106, 61, 0.22);
+  --content-shell-panel: rgba(24, 19, 20, 0.95);
+  --content-shell-panel-strong: rgba(33, 26, 28, 0.98);
+  --content-shell-panel-hover: rgba(42, 32, 34, 0.98);
+  --content-shell-border: rgba(255, 255, 255, 0.1);
+  --content-shell-highlight: rgba(255, 255, 255, 0.06);
+  --content-shell-shadow: 0 28px 64px rgba(0, 0, 0, 0.42);
+  --content-shell-ink: #f6f0eb;
+  --content-shell-muted: rgba(246, 240, 235, 0.72);
+  --content-chip-bg: rgba(255, 255, 255, 0.05);
+  --content-chip-border: rgba(255, 255, 255, 0.1);
+  --content-chip-ink: #f6f0eb;
+  --glass-surface-bg: rgba(255, 240, 235, 0.06);
+  --glass-surface-bg-hover: rgba(255, 240, 235, 0.11);
+  --glass-surface-active: rgba(255, 106, 61, 0.18);
+  --glass-surface-border: rgba(246, 240, 235, 0.14);
+  --glass-surface-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  --content-control-bg: rgba(255, 255, 255, 0.04);
+  --content-control-bg-hover: rgba(255, 255, 255, 0.08);
+  --control-hover-border: rgba(246, 240, 235, 0.18);
+  --control-focus-ring: 0 0 0 2px rgba(255, 106, 61, 0.2);
+  --control-primary-ink: #fff1ea;
+  --control-primary-bg:
+    linear-gradient(180deg, rgba(255, 106, 61, 0.14), rgba(255, 106, 61, 0.06)) padding-box,
+    linear-gradient(135deg, rgba(255, 106, 61, 0.76), rgba(255, 240, 235, 0.1)) border-box;
+  --control-primary-shadow: inset 0 0 0 1px rgba(255, 106, 61, 0.14);
+  --control-secondary-bg:
+    linear-gradient(180deg, rgba(255, 240, 235, 0.05), rgba(255, 240, 235, 0.02)) padding-box,
+    linear-gradient(135deg, rgba(255, 240, 235, 0.18), rgba(255, 240, 235, 0.05)) border-box;
+  --control-active-ink: #fff1ea;
+  --control-active-bg: var(--glass-surface-active);
+  --control-active-border: var(--accent);
+  --control-active-shadow: inset 0 0 0 1px rgba(255, 106, 61, 0.16);
+  --main-surface-start: rgba(20, 16, 18, 0.84);
+  --main-surface-end: rgba(11, 9, 10, 0.95);
+  --main-surface-glow: rgba(255, 106, 61, 0.08);
+  --main-surface-border: rgba(255, 255, 255, 0.06);
+  --particle-color: rgba(255, 234, 226, 0.22);
+}
+
+body[data-theme="forest"] {
+  --page-bg-top: #101a14;
+  --page-bg: #0c120e;
+  --page-bg-bottom: #080d0a;
+  --page-glow-a: rgba(123, 201, 127, 0.08);
+  --page-glow-b: rgba(55, 93, 66, 0.06);
+  --header-start: #1b2b21;
+  --header-end: #111a14;
+  --header-glow: rgba(123, 201, 127, 0.1);
+  --header-subtitle-ink: rgba(243, 248, 242, 0.82);
+  --header-control-bg: rgba(17, 29, 22, 0.94);
+  --header-control-border: rgba(243, 248, 242, 0.1);
+  --header-control-shadow: 0 18px 40px rgba(7, 12, 9, 0.26);
+  --sidebar-start: #1b2b21;
+  --sidebar-end: #111a14;
+  --sidebar-glow: rgba(123, 201, 127, 0.1);
+  --sidebar-surface-start: rgba(11, 18, 13, 0.92);
+  --sidebar-surface-end: rgba(8, 13, 10, 0.97);
+  --sidebar-surface-glow: rgba(123, 201, 127, 0.08);
+  --bg-elevated: rgba(8, 12, 10, 0.96);
+  --panel: #0d1510;
+  --panel-strong: #121b15;
+  --ink: #f3f8f2;
+  --muted: rgba(243, 248, 242, 0.72);
+  --line: rgba(255, 255, 255, 0.09);
+  --sidebar-ink: #f3f8f2;
+  --sidebar-muted-ink: rgba(243, 248, 242, 0.72);
+  --sidebar-link-ink: rgba(243, 248, 242, 0.84);
+  --sidebar-link-hover-border: rgba(243, 248, 242, 0.2);
+  --sidebar-link-hover-bg:
+    linear-gradient(180deg, var(--glass-surface-bg-hover), rgba(243, 248, 242, 0.04)),
+    linear-gradient(135deg, rgba(236, 248, 238, 0.2), rgba(236, 248, 238, 0.04));
+  --sidebar-link-active-ink: #f3fff4;
+  --sidebar-link-active-bg:
+    linear-gradient(180deg, rgba(123, 201, 127, 0.2), rgba(123, 201, 127, 0.08)),
+    linear-gradient(135deg, rgba(123, 201, 127, 0.56), rgba(236, 248, 238, 0.1));
+  --sidebar-link-active-border: rgba(123, 201, 127, 0.3);
+  --sidebar-link-active-shadow: inset 0 0 0 1px rgba(123, 201, 127, 0.16), var(--glass-surface-shadow);
+  --accent: #7bc97f;
+  --accent-strong: #4e9c62;
+  --accent-soft: rgba(123, 201, 127, 0.12);
+  --secondary: #4b7d55;
+  --secondary-soft: rgba(75, 125, 85, 0.12);
+  --shadow: 0 28px 64px rgba(0, 0, 0, 0.34);
+  --content-shell-start: #101b15;
+  --content-shell-end: #0a100c;
+  --content-shell-glow: rgba(123, 201, 127, 0.08);
+  --content-shell-panel: rgba(10, 16, 12, 0.9);
+  --content-shell-panel-strong: rgba(16, 24, 18, 0.95);
+  --content-shell-panel-hover: rgba(22, 33, 24, 0.96);
+  --content-shell-border: rgba(255, 255, 255, 0.09);
+  --content-shell-highlight: rgba(255, 255, 255, 0.05);
+  --content-shell-shadow: 0 28px 64px rgba(0, 0, 0, 0.24);
+  --content-shell-ink: #f3f8f2;
+  --content-shell-muted: rgba(243, 248, 242, 0.72);
+  --content-chip-bg: rgba(255, 255, 255, 0.04);
+  --content-chip-border: rgba(255, 255, 255, 0.1);
+  --content-chip-ink: #f3f8f2;
+  --glass-surface-bg: rgba(255, 255, 255, 0.035);
+  --glass-surface-bg-hover: rgba(255, 255, 255, 0.065);
+  --glass-surface-active: rgba(123, 201, 127, 0.12);
+  --glass-surface-border: rgba(255, 255, 255, 0.12);
+  --glass-surface-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  --content-control-bg: rgba(255, 255, 255, 0.035);
+  --content-control-bg-hover: rgba(255, 255, 255, 0.07);
+  --control-hover-border: rgba(243, 248, 242, 0.18);
+  --control-focus-ring: 0 0 0 2px rgba(123, 201, 127, 0.18);
+  --control-primary-ink: #f3fff4;
+  --control-primary-bg:
+    linear-gradient(180deg, rgba(123, 201, 127, 0.12), rgba(123, 201, 127, 0.05)) padding-box,
+    linear-gradient(135deg, rgba(123, 201, 127, 0.72), rgba(236, 248, 238, 0.08)) border-box;
+  --control-primary-shadow: inset 0 0 0 1px rgba(123, 201, 127, 0.14);
+  --control-secondary-bg:
+    linear-gradient(180deg, rgba(236, 248, 238, 0.04), rgba(236, 248, 238, 0.02)) padding-box,
+    linear-gradient(135deg, rgba(236, 248, 238, 0.18), rgba(236, 248, 238, 0.05)) border-box;
+  --control-active-ink: #f3fff4;
+  --control-active-bg: var(--glass-surface-active);
+  --control-active-border: var(--accent);
+  --control-active-shadow: inset 0 0 0 1px rgba(123, 201, 127, 0.14);
+  --main-surface-start: rgba(12, 18, 14, 0.84);
+  --main-surface-end: rgba(8, 12, 9, 0.95);
+  --main-surface-glow: rgba(123, 201, 127, 0.07);
+  --main-surface-border: rgba(255, 255, 255, 0.06);
+  --particle-color: rgba(236, 248, 238, 0.2);
+}
+
+body[data-theme="midnight"] {
+  --page-bg-top: #10172b;
+  --page-bg: #0c1222;
+  --page-bg-bottom: #08101c;
+  --page-glow-a: rgba(99, 215, 255, 0.18);
+  --page-glow-b: rgba(66, 119, 255, 0.12);
+  --header-start: #18243f;
+  --header-end: #0b1327;
+  --header-glow: rgba(99, 215, 255, 0.16);
+  --header-subtitle-ink: rgba(238, 246, 255, 0.84);
+  --header-control-bg: rgba(13, 22, 44, 0.94);
+  --header-control-border: rgba(238, 246, 255, 0.14);
+  --header-control-shadow: 0 18px 40px rgba(4, 9, 20, 0.32);
+  --sidebar-start: #18243f;
+  --sidebar-end: #0b1327;
+  --sidebar-glow: rgba(99, 215, 255, 0.16);
+  --sidebar-surface-start: rgba(12, 20, 41, 0.93);
+  --sidebar-surface-end: rgba(7, 12, 27, 0.98);
+  --sidebar-surface-glow: rgba(99, 215, 255, 0.1);
+  --bg-elevated: rgba(16, 22, 41, 0.88);
+  --panel: #111a33;
+  --panel-strong: #17213f;
+  --ink: #f5f7ff;
+  --muted: #b1b9d0;
+  --line: rgba(99, 215, 255, 0.14);
+  --sidebar-ink: #eef6ff;
+  --sidebar-muted-ink: rgba(238, 246, 255, 0.74);
+  --sidebar-link-ink: rgba(238, 246, 255, 0.86);
+  --sidebar-link-hover-border: rgba(238, 246, 255, 0.22);
+  --sidebar-link-hover-bg:
+    linear-gradient(180deg, var(--glass-surface-bg-hover), rgba(238, 246, 255, 0.05)),
+    linear-gradient(135deg, rgba(235, 246, 255, 0.24), rgba(235, 246, 255, 0.05));
+  --sidebar-link-active-ink: #f2fbff;
+  --sidebar-link-active-bg:
+    linear-gradient(180deg, rgba(99, 215, 255, 0.22), rgba(99, 215, 255, 0.09)),
+    linear-gradient(135deg, rgba(99, 215, 255, 0.6), rgba(235, 246, 255, 0.12));
+  --sidebar-link-active-border: rgba(99, 215, 255, 0.34);
+  --sidebar-link-active-shadow: inset 0 0 0 1px rgba(99, 215, 255, 0.18), var(--glass-surface-shadow);
+  --accent: #63d7ff;
+  --accent-strong: #2ca6cb;
+  --accent-soft: rgba(99, 215, 255, 0.16);
+  --secondary: #8fb1ff;
+  --secondary-soft: rgba(143, 177, 255, 0.14);
+  --shadow: 0 28px 64px rgba(0, 0, 0, 0.4);
+  --content-shell-start: #1a2847;
+  --content-shell-end: #0d172d;
+  --content-shell-glow: rgba(99, 215, 255, 0.18);
+  --content-shell-panel: rgba(13, 22, 44, 0.95);
+  --content-shell-panel-strong: rgba(20, 33, 64, 0.98);
+  --content-shell-panel-hover: rgba(29, 45, 81, 0.98);
+  --content-shell-border: rgba(255, 255, 255, 0.11);
+  --content-shell-highlight: rgba(255, 255, 255, 0.08);
+  --content-shell-shadow: 0 28px 64px rgba(0, 0, 0, 0.4);
+  --content-shell-ink: #eef6ff;
+  --content-shell-muted: rgba(238, 246, 255, 0.72);
+  --content-chip-bg: rgba(255, 255, 255, 0.06);
+  --content-chip-border: rgba(255, 255, 255, 0.12);
+  --content-chip-ink: #eef6ff;
+  --glass-surface-bg: rgba(227, 240, 255, 0.08);
+  --glass-surface-bg-hover: rgba(227, 240, 255, 0.14);
+  --glass-surface-active: rgba(99, 215, 255, 0.16);
+  --glass-surface-border: rgba(238, 246, 255, 0.16);
+  --glass-surface-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.09);
+  --content-control-bg: rgba(255, 255, 255, 0.05);
+  --content-control-bg-hover: rgba(255, 255, 255, 0.1);
+  --control-hover-border: rgba(238, 246, 255, 0.2);
+  --control-focus-ring: 0 0 0 2px rgba(99, 215, 255, 0.2);
+  --control-primary-ink: #f2fbff;
+  --control-primary-bg:
+    linear-gradient(180deg, rgba(99, 215, 255, 0.14), rgba(99, 215, 255, 0.06)) padding-box,
+    linear-gradient(135deg, rgba(99, 215, 255, 0.76), rgba(235, 246, 255, 0.1)) border-box;
+  --control-primary-shadow: inset 0 0 0 1px rgba(99, 215, 255, 0.16);
+  --control-secondary-bg:
+    linear-gradient(180deg, rgba(235, 246, 255, 0.06), rgba(235, 246, 255, 0.025)) padding-box,
+    linear-gradient(135deg, rgba(235, 246, 255, 0.22), rgba(235, 246, 255, 0.06)) border-box;
+  --control-active-ink: #f2fbff;
+  --control-active-bg: var(--glass-surface-active);
+  --control-active-border: var(--accent);
+  --control-active-shadow: inset 0 0 0 1px rgba(99, 215, 255, 0.16);
+  --main-surface-start: rgba(11, 19, 38, 0.82);
+  --main-surface-end: rgba(8, 12, 24, 0.95);
+  --main-surface-glow: rgba(99, 215, 255, 0.08);
+  --main-surface-border: rgba(255, 255, 255, 0.06);
+  --particle-color: rgba(235, 246, 255, 0.24);
+}

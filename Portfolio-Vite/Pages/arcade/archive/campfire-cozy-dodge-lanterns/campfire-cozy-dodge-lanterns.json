@@ -1,0 +1,144 @@
+{
+  "id": "campfire-cozy-dodge-lanterns",
+  "slug": "campfire-cozy-dodge-lanterns",
+  "title": "Lantern Drift",
+  "summary": "A cozy dodge challenge around a campfire where lanterns drift and hazards block your path.",
+  "mode": "runner",
+  "palette": "signal",
+  "instructions": "Move with arrow keys or A / D to avoid drifting lanterns and protect the campfire.",
+  "hud": {
+    "modeLabel": "Infinite Run"
+  },
+  "overlay": {
+    "startTitle": "Lantern Drift",
+    "startCopy": "Dodge drifting lanterns around the campfire, stay in motion, and keep the night safe.",
+    "startAction": "Start Drift"
+  },
+  "visuals": {
+    "spriteKey": "runnerShip",
+    "accentSpriteKey": "orbNode",
+    "hazardSpriteKey": "hazardBlock",
+    "trailEffectKey": "smoke",
+    "impactEffectKey": "spark"
+  },
+  "settings": {
+    "title": "Settings",
+    "sections": [
+      {
+        "title": "Gameplay",
+        "controls": [
+          {
+            "key": "difficulty",
+            "label": "Difficulty",
+            "type": "select",
+            "value": "normal",
+            "options": [
+              "easy",
+              "normal",
+              "hard"
+            ]
+          },
+          {
+            "key": "effectIntensity",
+            "label": "Effect Intensity",
+            "type": "range",
+            "value": 0.75,
+            "min": 0,
+            "max": 1,
+            "step": 0.05
+          }
+        ]
+      }
+    ]
+  },
+  "help": {
+    "title": "How To Start Campfire Cozy Dodge Lanterns",
+    "steps": [
+      "Press Start in the center overlay.",
+      "Use the controls: Move with arrow keys or A / D to avoid drifting lanterns and protect the campfire.",
+      "Follow the first goal: dodge through campfire."
+    ],
+    "tips": [
+      "Theme: cozy.",
+      "Support mechanics: cozy, lanterns."
+    ]
+  },
+  "menu": {
+    "title": "Pause Menu",
+    "actions": [
+      {
+        "label": "Resume",
+        "action": "resume"
+      },
+      {
+        "label": "Restart",
+        "action": "restart"
+      },
+      {
+        "label": "Help",
+        "action": "open_help"
+      },
+      {
+        "label": "Settings",
+        "action": "open_settings"
+      }
+    ]
+  },
+  "onboarding": {
+    "title": "Get Started",
+    "startSteps": [
+      "Press Start in the center overlay.",
+      "Use the controls: Move with arrow keys or A / D to avoid drifting lanterns and protect the campfire.",
+      "Follow the first goal: dodge through campfire."
+    ],
+    "firstGoal": "dodge through campfire"
+  },
+  "meta": {
+    "summary": "A cozy dodge challenge around a campfire where lanterns drift and hazards block your path.",
+    "goal": "campfire cozy dodge lanterns",
+    "controls": "Move with arrow keys or A / D to avoid drifting lanterns and protect the campfire.",
+    "paletteLabel": "signal",
+    "features": [
+      "JSON-driven content",
+      "Dodge",
+      "Cozy",
+      "Lanterns"
+    ]
+  },
+  "content": {
+    "lanes": [
+      0.22,
+      0.4,
+      0.58,
+      0.76
+    ],
+    "patterns": [
+      {
+        "lanes": [
+          0
+        ]
+      },
+      {
+        "lanes": [
+          1
+        ]
+      },
+      {
+        "lanes": [
+          2
+        ]
+      },
+      {
+        "lanes": [
+          3
+        ]
+      },
+      {
+        "lanes": [
+          0,
+          2
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "auto-fill-run-2",
+  "title": "Auto Fill Run 2",
+  "summary": "A rapid run that makes your route feel automatic and alive.",
+  "mode": "runner",
+  "palette": "pulse",
+  "instructions": "Use Arrow keys or A / D to switch lanes and dodge every obstacle.",
+  "hud": {
+    "modeLabel": "Auto Fill Run 2"
+  },
+  "overlay": {
+    "startTitle": "Auto Fill Run 2",
+    "startCopy": "A rapid run that makes your route feel automatic and alive.",
+    "startAction": "Start Run"
+  },
+  "content": {
+    "lanes": [
+      0.18,
+      0.5,
+      0.82
+    ],
+    "patterns": [
+      {
+        "lanes": [
+          0
+        ]
+      },
+      {
+        "lanes": [
+          2
+        ]
+      },
+      {
+        "lanes": [
+          1
+        ]
+      },
+      {
+        "lanes": [
+          0,
+          2
+        ]
+      },
+      {
+        "lanes": [
+          0,
+          1,
+          2
+        ]
+      }
+    ]
+  }
+}

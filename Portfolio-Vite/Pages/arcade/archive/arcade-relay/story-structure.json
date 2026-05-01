@@ -1,0 +1,89 @@
+{
+  "id": "arcade-relay",
+  "title": "Arcade Relay",
+  "description": "A rapid relay challenge through neon asteroids.",
+  "seed": {
+    "themes": "hidden society infiltration",
+    "environments": "quiet town square",
+    "settings": "late-night",
+    "characterMotivations": "avenge a lost friend",
+    "movementMechanics": [
+      "swinging from cables",
+      "precision jumping"
+    ],
+    "coreLoops": "navigate hazardous spaces",
+    "progressionLoops": "gain movement upgrades",
+    "completionLoops": "vault extraction",
+    "rewards": [
+      "artifact sets",
+      "resource caches"
+    ],
+    "antagonists": "unstable machinery",
+    "visualStyles": "cinematic noir lighting",
+    "audioStyles": "sparse piano",
+    "interactionPatterns": "environmental interaction first",
+    "productionFocus": "focus on motion and feel"
+  },
+  "fun": {
+    "assessment": "yes",
+    "needs": [
+      "Clear hazard timing",
+      "Smooth responsive movement",
+      "A satisfying finish sequence"
+    ]
+  },
+  "design": {
+    "summary": "",
+    "details": "\n    # Arcade Relay\n\n    **Description:** A rapid relay challenge through neon asteroids.\n\n    **Objective:** Reach the finish line while avoiding moving hazards.\n\n    **Seed summary:**\n    Generated game seed combination:\n- Themes: hidden society infiltration\n- Environments: quiet town square\n- Settings: late-night\n- Character motivations: avenge a lost friend\n- Movement mechanics: swinging from cables, precision jumping\n- Core loops: navigate hazardous spaces\n- Progression loops: gain movement upgrades\n- Completion loops: vault extraction\n- Rewards: artifact sets, resource caches\n- Antagonists: unstable machinery\n- Visual styles: cinematic noir lighting\n- Audio styles: sparse piano\n- Interaction patterns: environmental interaction first\n- Production focus: focus on motion and feel\n\n    **Expansion ideas:**\n    A fast relay through a neon tunnel with timed gates and moving hazards.\n\n\n# Arcade Relay Design\nPlayer runs through a glowing corridor, avoids obstacles, and reaches a finish platform.\nUse the seed details and design the game as a data-driven three.js + Rapier experience.\n\n## Fun game assessment\n\n    - Assessment: yes\n\n    ### Things needed to make this game fun\n\n- Clear hazard timing\n- Smooth responsive movement\n- A satisfying finish sequence\n",
+    "chapters": [
+      "Game setup and controls",
+      "Hazard timing and obstacles",
+      "Goal and progression"
+    ]
+  },
+  "scene": {
+    "ground": {
+      "width": 60,
+      "depth": 60,
+      "color": "#121a2a"
+    },
+    "player": {
+      "start": {"x": 0, "y": 0.5, "z": 10},
+      "size": {"x": 1, "y": 1, "z": 1},
+      "color": "#8bd8ff",
+      "speed": 4.0
+    },
+    "goal": {
+      "position": {"x": 0, "y": 0.1, "z": -12},
+      "size": {"x": 3, "y": 0.2, "z": 3},
+      "color": "#6cff8a"
+    },
+    "obstacles": [
+      {"position": {"x": -6, "y": 1, "z": -2}, "size": {"x": 3, "y": 2, "z": 3}, "color": "#ff8a5c"},
+      {"position": {"x": 6, "y": 1, "z": -6}, "size": {"x": 3, "y": 2, "z": 3}, "color": "#ff8a5c"},
+      {"position": {"x": 0, "y": 1, "z": -8}, "size": {"x": 3, "y": 2, "z": 3}, "color": "#ff8a5c"}
+    ],
+    "camera": {
+      "offset": {"x": 0, "y": 8, "z": 16}
+    },
+    "rules": {
+      "goalRadius": 1.5,
+      "statusMessage": "Reach the green goal area."
+    }
+  },
+  "story": {
+    "start": "intro",
+    "nodes": [
+      {
+        "id": "intro",
+        "title": "Introduction",
+        "text": "Describe the opening scene here.",
+        "choices": []
+      }
+    ]
+  },
+  "delivery": {
+    "format": "story-driven JSON nodes",
+    "note": "Add fields for choices, transitions, and implementation mapping as needed."
+  }
+}

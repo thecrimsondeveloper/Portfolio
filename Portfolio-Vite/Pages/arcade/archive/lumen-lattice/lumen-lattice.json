@@ -1,0 +1,41 @@
+{
+  "id": "lumen-lattice",
+  "title": "Lumen Vault",
+  "summary": "A rhythm vault game that charges glowing cells to unlock deeper vault layers.",
+  "mode": "pulseGrid",
+  "palette": "pulse",
+  "instructions": "Press Space on lit tiles in time to charge the vault cells and keep the network alive.",
+  "hud": {
+    "modeLabel": "Lumen Vault"
+  },
+  "overlay": {
+    "startTitle": "Lumen Vault",
+    "startCopy": "Lock in the rhythm, charge the glowing vault cells, and unlock deeper layers with precision timing.",
+    "startAction": "Open Vault"
+  },
+  "content": {
+    "deadline": 1.4,
+    "sequence": [
+      {
+        "cell": 0,
+        "time": 0.5
+      },
+      {
+        "cell": 6,
+        "time": 1.1
+      },
+      {
+        "cell": 12,
+        "time": 1.7
+      },
+      {
+        "cell": 18,
+        "time": 2.3
+      },
+      {
+        "cell": 24,
+        "time": 2.9
+      }
+    ]
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "id": "help-panel-harbor",
+  "slug": "help-panel-harbor",
+  "title": "Harbor Help Run",
+  "summary": "A harbor briefing game where cursor movement and marker collection unlock the help panel.",
+  "mode": "harbor",
+  "palette": "pulse",
+  "instructions": "Steer the cursor to collect markers and unlock the help panel before the harbor drifts away.",
+  "hud": {
+    "modeLabel": "Drift Route"
+  },
+  "overlay": {
+    "startTitle": "Harbor Help Run",
+    "startCopy": "Collect markers in the harbor to power up the help panel and complete the mission.",
+    "startAction": "Start Run"
+  },
+  "visuals": {
+    "spriteKey": "boatSkiff",
+    "accentSpriteKey": "buoyMarker",
+    "hazardSpriteKey": "hazardBlock",
+    "trailEffectKey": "smoke",
+    "impactEffectKey": "spark"
+  },
+  "settings": {
+    "title": "Settings",
+    "sections": [
+      {
+        "title": "Gameplay",
+        "controls": [
+          {
+            "key": "difficulty",
+            "label": "Difficulty",
+            "type": "select",
+            "value": "normal",
+            "options": [
+              "easy",
+              "normal",
+              "hard"
+            ]
+          },
+          {
+            "key": "effectIntensity",
+            "label": "Effect Intensity",
+            "type": "range",
+            "value": 0.75,
+            "min": 0,
+            "max": 1,
+            "step": 0.05
+          }
+        ]
+      }
+    ]
+  },
+  "help": {
+    "title": "How To Start Help Panel Harbor",
+    "steps": [
+      "Press Start in the center overlay.",
+      "Use the controls: Steer the cursor to collect markers and unlock the help panel before the harbor drifts away.",
+      "Follow the first goal: intro, pressure ramp, dense finish."
+    ],
+    "tips": [
+      "Theme: neon, greybox, arcade.",
+      "Support mechanics: timed swap, pickup pressure."
+    ]
+  },
+  "menu": {
+    "title": "Pause Menu",
+    "actions": [
+      {
+        "label": "Resume",
+        "action": "resume"
+      },
+      {
+        "label": "Restart",
+        "action": "restart"
+      },
+      {
+        "label": "Help",
+        "action": "open_help"
+      },
+      {
+        "label": "Settings",
+        "action": "open_settings"
+      }
+    ]
+  },
+  "onboarding": {
+    "title": "Get Started",
+    "startSteps": [
+      "Press Start in the center overlay.",
+      "Use the controls: Steer the cursor to collect markers and unlock the help panel before the harbor drifts away.",
+      "Follow the first goal: intro, pressure ramp, dense finish."
+    ],
+    "firstGoal": "intro, pressure ramp, dense finish"
+  },
+  "meta": {
+    "summary": "A harbor briefing game where cursor movement and marker collection unlock the help panel.",
+    "goal": "help panel harbor",
+    "controls": "Steer the cursor to collect markers and unlock the help panel before the harbor drifts away.",
+    "paletteLabel": "pulse",
+    "features": [
+      "JSON-driven content",
+      "Dodge And Route",
+      "Timed Swap",
+      "Pickup Pressure"
+    ]
+  },
+  "content": {
+    "buoys": [
+      {
+        "x": 0.18,
+        "y": 0.24
+      },
+      {
+        "x": 0.34,
+        "y": 0.56
+      },
+      {
+        "x": 0.62,
+        "y": 0.34
+      },
+      {
+        "x": 0.78,
+        "y": 0.68
+      },
+      {
+        "x": 0.86,
+        "y": 0.42
+      }
+    ],
+    "currents": [
+      {
+        "x": -0.2,
+        "y": 0.0
+      },
+      {
+        "x": 0.12,
+        "y": 0.02
+      },
+      {
+        "x": -0.08,
+        "y": -0.03
+      },
+      {
+        "x": 0.16,
+        "y": 0.01
+      }
+    ]
+  }
+}

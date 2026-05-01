@@ -1,0 +1,65 @@
+{
+  "id": "arcade-relay-run",
+  "title": "Relay Run",
+  "summary": "A fast relay run with a central momentum lane bonus.",
+  "mode": "runner",
+  "palette": "pulse",
+  "instructions": "Use Arrow keys or A / D to switch lanes. Hold the relay lane to build momentum.",
+  "hud": {
+    "modeLabel": "Relay Run"
+  },
+  "overlay": {
+    "startTitle": "Relay Run",
+    "startCopy": "A fast relay run where the center lane builds relay momentum.",
+    "startAction": "Start Run"
+  },
+  "content": {
+    "lanes": [
+      0.18,
+      0.5,
+      0.82
+    ],
+    "spawnInterval": 0.48,
+    "spawnFactor": 0.092,
+    "speedGrowth": 0.09,
+    "speedCap": 4.4,
+    "bonusLane": 1,
+    "bonusHoldTime": 1.25,
+    "bonusPoints": 16,
+    "patterns": [
+      {
+        "lanes": [
+          0,
+          2
+        ]
+      },
+      {
+        "lanes": [
+          1
+        ]
+      },
+      {
+        "lanes": [
+          0,
+          1
+        ]
+      },
+      {
+        "lanes": [
+          1,
+          2
+        ]
+      },
+      {
+        "lanes": [
+          0
+        ]
+      },
+      {
+        "lanes": [
+          2
+        ]
+      }
+    ]
+  }
+}

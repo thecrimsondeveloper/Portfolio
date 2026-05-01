@@ -1,0 +1,36 @@
+{
+  "id": "new-arcade-game",
+  "title": "Nova Drift",
+  "summary": "A fresh arcade test run in a neon orbital puzzle format.",
+  "mode": "orbit",
+  "palette": "orbit",
+  "instructions": "Click targets in orbit to build score while staying on the move.",
+  "hud": {
+    "modeLabel": "Nova Drift"
+  },
+  "overlay": {
+    "startTitle": "Nova Drift",
+    "startCopy": "A fresh arcade test run in a neon orbital puzzle format.",
+    "startAction": "Launch Orbit"
+  },
+  "content": {
+    "coreRadius": 58,
+    "rings": [
+      {
+        "radiusBand": 0.22,
+        "radius": 18,
+        "velocity": 0.9
+      },
+      {
+        "radiusBand": 0.4,
+        "radius": 22,
+        "velocity": 0.55
+      },
+      {
+        "radiusBand": 0.58,
+        "radius": 26,
+        "velocity": 0.38
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "circuit-relay",
+  "title": "Circuit Relay",
+  "summary": "A phase-synced lane run where each relay must match the active circuit color.",
+  "mode": "phaseDrop",
+  "palette": "signal",
+  "instructions": "Use Arrow keys or A / D to match the active circuit phase before the relay arrives.",
+  "hud": {
+    "modeLabel": "Circuit Relay"
+  },
+  "overlay": {
+    "startTitle": "Circuit Relay",
+    "startCopy": "Stay in sync with the circuit phases and survive the relay.",
+    "startAction": "Engage Circuit"
+  },
+  "content": {
+    "phases": ["#7bf1a8", "#ffde59", "#ff5e6c", "#63c6ff"]
+  }
+}

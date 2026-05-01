@@ -1,0 +1,190 @@
+:root {
+  --page-bg-top: #11161d;
+  --page-bg: #0c1016;
+  --page-bg-bottom: #080b10;
+  --page-glow-a: rgba(255, 122, 89, 0.08);
+  --page-glow-b: rgba(99, 215, 255, 0.06);
+  --header-start: #18232b;
+  --header-end: #0f151b;
+  --header-glow: rgba(255, 122, 89, 0.1);
+  --header-subtitle-ink: rgba(247, 242, 235, 0.82);
+  --header-control-bg: rgba(19, 37, 42, 0.94);
+  --header-control-border: rgba(255, 255, 255, 0.08);
+  --header-control-shadow: 0 18px 40px rgba(6, 11, 12, 0.25);
+  --sidebar-start: #18232b;
+  --sidebar-end: #0f151b;
+  --sidebar-glow: rgba(255, 122, 89, 0.1);
+  --sidebar-surface-start: rgba(10, 14, 18, 0.92);
+  --sidebar-surface-end: rgba(8, 11, 16, 0.97);
+  --sidebar-surface-glow: rgba(255, 122, 89, 0.06);
+  --bg-elevated: rgba(10, 14, 18, 0.96);
+  --panel: #11161d;
+  --panel-strong: #161c24;
+  --ink: #f4f1ea;
+  --muted: #b4bbc4;
+  --line: rgba(255, 255, 255, 0.09);
+  --sidebar-ink: #f7f2eb;
+  --sidebar-muted-ink: rgba(247, 242, 235, 0.7);
+  --sidebar-link-ink: rgba(247, 242, 235, 0.82);
+  --sidebar-link-hover-border: rgba(255, 255, 255, 0.2);
+  --sidebar-link-hover-bg:
+    linear-gradient(180deg, var(--glass-surface-bg-hover), rgba(255, 255, 255, 0.04)),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.05));
+  --sidebar-link-active-ink: #fff5f1;
+  --sidebar-link-active-bg:
+    linear-gradient(180deg, rgba(255, 122, 89, 0.2), rgba(255, 122, 89, 0.08)),
+    linear-gradient(135deg, rgba(255, 122, 89, 0.58), rgba(255, 255, 255, 0.1));
+  --sidebar-link-active-border: rgba(255, 122, 89, 0.28);
+  --sidebar-link-active-shadow: inset 0 0 0 1px rgba(255, 122, 89, 0.16), var(--glass-surface-shadow);
+  --accent: #ff7a59;
+  --accent-strong: #d85b3e;
+  --accent-soft: rgba(255, 122, 89, 0.14);
+  --secondary: #1d6f72;
+  --secondary-soft: rgba(29, 111, 114, 0.12);
+  --shadow: 0 28px 64px rgba(0, 0, 0, 0.34);
+  --radius-lg: 14px;
+  --radius-md: 10px;
+  --radius-sm: 6px;
+  --content-shell-start: #111922;
+  --content-shell-end: #0a1016;
+  --content-shell-glow: rgba(255, 122, 89, 0.08);
+  --content-shell-panel: rgba(12, 17, 23, 0.28);
+  --content-shell-panel-strong: rgba(18, 24, 31, 0.38);
+  --content-shell-panel-hover: rgba(24, 31, 40, 0.46);
+  --content-shell-border: rgba(255, 255, 255, 0.075);
+  --content-shell-highlight: rgba(255, 255, 255, 0.035);
+  --content-shell-edge-fade: rgba(255, 255, 255, 0.035);
+  --content-shell-shadow: 0 18px 48px rgba(0, 0, 0, 0.16);
+  --content-shell-ink: #f4f1ea;
+  --content-shell-muted: rgba(244, 241, 234, 0.72);
+  --content-chip-bg: rgba(255, 255, 255, 0.04);
+  --content-chip-border: rgba(255, 255, 255, 0.1);
+  --content-chip-ink: #f4f1ea;
+  --glass-surface-bg: rgba(255, 255, 255, 0.025);
+  --glass-surface-bg-hover: rgba(255, 255, 255, 0.05);
+  --glass-surface-active: rgba(255, 122, 89, 0.1);
+  --glass-surface-border: rgba(255, 255, 255, 0.09);
+  --glass-surface-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.045);
+  --content-control-bg: rgba(255, 255, 255, 0.025);
+  --content-control-bg-hover: rgba(255, 255, 255, 0.055);
+  --control-hover-border: rgba(255, 255, 255, 0.18);
+  --control-focus-ring: 0 0 0 2px rgba(255, 122, 89, 0.18);
+  --control-primary-ink: #fff5f1;
+  --control-primary-bg:
+    linear-gradient(180deg, rgba(255, 122, 89, 0.1), rgba(255, 122, 89, 0.05)) padding-box,
+    linear-gradient(135deg, rgba(255, 122, 89, 0.72), rgba(255, 255, 255, 0.06)) border-box;
+  --control-primary-shadow: inset 0 0 0 1px rgba(255, 122, 89, 0.12);
+  --control-secondary-bg:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02)) padding-box,
+    linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.04)) border-box;
+  --control-active-ink: #fff5f1;
+  --control-active-bg: var(--glass-surface-active);
+  --control-active-border: var(--accent);
+  --control-active-shadow: inset 0 0 0 1px rgba(255, 122, 89, 0.14);
+  --main-surface-start: rgba(12, 18, 24, 0.82);
+  --main-surface-end: rgba(8, 12, 17, 0.94);
+  --main-surface-glow: rgba(255, 122, 89, 0.07);
+  --main-surface-border: rgba(255, 255, 255, 0.06);
+  --particle-color: rgba(255, 245, 241, 0.22);
+  --structure-gap: 0.45rem;
+  --structure-padding: 0.8rem;
+  --structure-padding-mobile: 0.62rem;
+  --structure-control-padding-inline: 0.58rem;
+  --structure-control-padding-block: 0.42rem;
+  --structure-control-min-height: 2.55rem;
+  --content-shell-radius-lg: 8px;
+  --content-shell-radius-md: 6px;
+  --content-shell-radius-sm: 4px;
+  --sidebar-panel-radius: 6px;
+  --button-radius: 6px;
+  --control-pill-radius: 6px;
+  --header-height: 4.35rem;
+  --sidebar-width-collapsed: 3.1rem;
+  --sidebar-item-height: 4rem;
+  --sidebar-width-expanded: 320px;
+  --sidebar-width-mobile: min(88vw, 340px);
+  --content-max-width: 1160px;
+  --content-padding-desktop: 1.1rem clamp(0.9rem, 2.1vw, 1.65rem) 1.65rem;
+  --content-padding-mobile: 0.62rem 0.62rem 1rem;
+  --project-grid-columns: 2;
+  --app-font-family: "Avenir Next", "Trebuchet MS", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--page-bg-bottom);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, var(--page-glow-a), transparent 28%),
+    radial-gradient(circle at bottom right, var(--page-glow-b), transparent 24%),
+    linear-gradient(180deg, var(--page-bg-top) 0%, var(--page-bg) 52%, var(--page-bg-bottom) 100%);
+  font-family: var(--app-font-family);
+  overflow-x: hidden;
+}
+
+body.app-root {
+  position: relative;
+}
+
+.app-scene {
+  position: relative;
+  min-height: 100vh;
+  isolation: isolate;
+}
+
+.app-shell-grid {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto 1fr;
+}
+
+.app-overlay-root {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 80;
+}
+
+.app-floating-settings {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  pointer-events: auto;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+select,
+textarea,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}

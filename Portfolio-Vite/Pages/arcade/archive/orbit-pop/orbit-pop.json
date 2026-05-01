@@ -1,0 +1,115 @@
+{
+  "id": "orbit-pop",
+  "title": "Orbit Pop",
+  "summary": "A fast orbit pop challenge of moving targets and chained clicks.",
+  "mode": "orbit",
+  "palette": "orbit",
+  "instructions": "Track the moving targets with your cursor and click to chain pops.",
+  "hud": {
+    "modeLabel": "Chain Pops"
+  },
+  "overlay": {
+    "startTitle": "Orbit Pop",
+    "startCopy": "A combo-driven orbital target game. Keep the chain alive and clear every ring before the pattern resets.",
+    "startAction": "Start Orbit"
+  },
+  "settings": {
+    "title": "Orbit Settings",
+    "sections": [
+      {
+        "title": "Target Flow",
+        "controls": [
+          {
+            "key": "difficulty",
+            "label": "Difficulty",
+            "type": "select",
+            "value": "normal",
+            "options": [
+              "easy",
+              "normal",
+              "hard"
+            ]
+          },
+          {
+            "key": "effectIntensity",
+            "label": "Orb Glow",
+            "type": "range",
+            "value": 0.7,
+            "min": 0,
+            "max": 1,
+            "step": 0.05
+          }
+        ]
+      }
+    ]
+  },
+  "help": {
+    "title": "How To Start",
+    "steps": [
+      "Press Start Orbit in the center overlay.",
+      "Move the cursor over the orbiting targets.",
+      "Click targets to keep the combo chain alive.",
+      "Missed clicks reset the chain, so recover quickly."
+    ],
+    "tips": [
+      "Clear the nearest ring first to build momentum.",
+      "Keep your cursor close to the next target."
+    ]
+  },
+  "menu": {
+    "title": "Pause Menu",
+    "actions": [
+      {
+        "label": "Resume",
+        "action": "resume"
+      },
+      {
+        "label": "Restart",
+        "action": "restart"
+      },
+      {
+        "label": "Help",
+        "action": "open_help"
+      },
+      {
+        "label": "Settings",
+        "action": "open_settings"
+      }
+    ]
+  },
+  "onboarding": {
+    "title": "Orbit Setup",
+    "startSteps": [
+      "Open Help to review cursor timing.",
+      "Press Start Orbit to begin the ring chain.",
+      "Click the first available target and keep the combo alive."
+    ],
+    "firstGoal": "Build your first combo chain and clear the orbit ring."
+  },
+  "content": {
+    "coreRadius": 140,
+    "orbitSpeed": 1.6,
+    "rings": [
+      {
+        "radiusBand": 0.16,
+        "radius": 18,
+        "velocity": 0.8
+      },
+      {
+        "radiusBand": 0.22,
+        "radius": 16,
+        "velocity": 1.1
+      },
+      {
+        "radiusBand": 0.28,
+        "radius": 14,
+        "velocity": 1.4
+      },
+      {
+        "radiusBand": 0.34,
+        "radius": 14,
+        "velocity": 1.7
+      }
+    ]
+  }
+}

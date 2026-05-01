@@ -1,0 +1,144 @@
+{
+  "id": "crystal-comet-run-prismatic-neon-crystals-with-celestial-ste-momentum-racing-maze-reconfiguration-temporal-phasing-high-speed-comet-runs-through-shifting-crystal-mazes-whe-tense-neon",
+  "slug": "crystal-comet-run-prismatic-neon-crystals-with-celestial-ste-momentum-racing-maze-reconfiguration-temporal-phasing-high-speed-comet-runs-through-shifting-crystal-mazes-whe-tense-neon",
+  "title": "Comet Drift",
+  "summary": "A comet-run challenge through shifting crystal lanes with tempo-based maze reconfiguration.",
+  "mode": "runner",
+  "palette": "signal",
+  "instructions": "Move with arrow keys or A / D to pilot the comet through shifting crystal corridors.",
+  "hud": {
+    "modeLabel": "Infinite Run"
+  },
+  "overlay": {
+    "startTitle": "Comet Drift",
+    "startCopy": "Ride the comet through shifting crystal corridors and stay ahead of the maze as it reconfigures.",
+    "startAction": "Launch Comet"
+  },
+  "visuals": {
+    "spriteKey": "runnerShip",
+    "accentSpriteKey": "orbNode",
+    "hazardSpriteKey": "hazardBlock",
+    "trailEffectKey": "smoke",
+    "impactEffectKey": "spark"
+  },
+  "settings": {
+    "title": "Settings",
+    "sections": [
+      {
+        "title": "Gameplay",
+        "controls": [
+          {
+            "key": "difficulty",
+            "label": "Difficulty",
+            "type": "select",
+            "value": "normal",
+            "options": [
+              "easy",
+              "normal",
+              "hard"
+            ]
+          },
+          {
+            "key": "effectIntensity",
+            "label": "Effect Intensity",
+            "type": "range",
+            "value": 0.75,
+            "min": 0,
+            "max": 1,
+            "step": 0.05
+          }
+        ]
+      }
+    ]
+  },
+  "help": {
+    "title": "How To Start Crystal Comet Run Prismatic Neon Crystals With Celestial Ste Momentum Racing; Maze Reconfiguration; Temporal Phasing High-Speed Comet Runs Through Shifting Crystal Mazes Whe Tense Neon",
+    "steps": [
+      "Press Start in the center overlay.",
+      "Use the controls: Move with arrow keys or A / D to pilot the comet through shifting crystal corridors.",
+      "Follow the first goal: Momentum racing; maze reconfiguration; temporal phasing through Crystal Comet Run."
+    ],
+    "tips": [
+      "Theme: Prismatic neon crystals with celestial ste, tense neon.",
+      "Support mechanics: Prismatic neon crystals with celestial ste, High-speed comet runs through shifting crystal mazes whe."
+    ]
+  },
+  "menu": {
+    "title": "Pause Menu",
+    "actions": [
+      {
+        "label": "Resume",
+        "action": "resume"
+      },
+      {
+        "label": "Restart",
+        "action": "restart"
+      },
+      {
+        "label": "Help",
+        "action": "open_help"
+      },
+      {
+        "label": "Settings",
+        "action": "open_settings"
+      }
+    ]
+  },
+  "onboarding": {
+    "title": "Get Started",
+    "startSteps": [
+      "Press Start in the center overlay.",
+      "Use the controls: Move with arrow keys or A / D to pilot the comet through shifting crystal corridors.",
+      "Follow the first goal: Momentum racing; maze reconfiguration; temporal phasing through Crystal Comet Run."
+    ],
+    "firstGoal": "Momentum racing; maze reconfiguration; temporal phasing through Crystal Comet Run"
+  },
+  "meta": {
+    "summary": "A comet-run challenge through shifting crystal lanes with tempo-based maze reconfiguration.",
+    "goal": "Crystal Comet Run Prismatic neon crystals with celestial ste Momentum racing; maze reconfiguration; temporal phasing High-speed comet runs through shifting crystal mazes whe tense neon",
+    "controls": "Move with arrow keys or A / D to pilot the comet through shifting crystal corridors.",
+    "paletteLabel": "signal",
+    "features": [
+      "JSON-driven content",
+      "Momentum Racing; Maze Reconfiguration; Temporal Phasing",
+      "Prismatic Neon Crystals With Celestial Ste",
+      "High-Speed Comet Runs Through Shifting Crystal Mazes Whe"
+    ]
+  },
+  "content": {
+    "lanes": [
+      0.22,
+      0.4,
+      0.58,
+      0.76
+    ],
+    "patterns": [
+      {
+        "lanes": [
+          0
+        ]
+      },
+      {
+        "lanes": [
+          1
+        ]
+      },
+      {
+        "lanes": [
+          2
+        ]
+      },
+      {
+        "lanes": [
+          3
+        ]
+      },
+      {
+        "lanes": [
+          0,
+          2
+        ]
+      }
+    ]
+  }
+}

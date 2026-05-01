@@ -1,0 +1,78 @@
+{
+  "id": "arcade-relay-run-full",
+  "title": "Relay Rush",
+  "summary": "A full relay run with burst waves and tougher blocking patterns.",
+  "mode": "runner",
+  "palette": "orbit",
+  "instructions": "Use Arrow keys or A / D to switch lanes. Survive rush waves and tighter blocks.",
+  "hud": {
+    "modeLabel": "Relay Rush"
+  },
+  "overlay": {
+    "startTitle": "Relay Rush",
+    "startCopy": "A full relay run punctuated by burst waves and reflex timing.",
+    "startAction": "Start Run"
+  },
+  "content": {
+    "lanes": [
+      0.18,
+      0.5,
+      0.82
+    ],
+    "spawnInterval": 0.55,
+    "spawnFactor": 0.085,
+    "speedGrowth": 0.095,
+    "speedCap": 5,
+    "burstInterval": 7.2,
+    "burstPatterns": [
+      {
+        "lanes": [
+          0,
+          1
+        ]
+      },
+      {
+        "lanes": [
+          1,
+          2
+        ]
+      },
+      {
+        "lanes": [
+          0,
+          1,
+          2
+        ]
+      }
+    ],
+    "patterns": [
+      {
+        "lanes": [
+          0
+        ]
+      },
+      {
+        "lanes": [
+          2
+        ]
+      },
+      {
+        "lanes": [
+          1
+        ]
+      },
+      {
+        "lanes": [
+          0,
+          2
+        ]
+      },
+      {
+        "lanes": [
+          1,
+          2
+        ]
+      }
+    ]
+  }
+}

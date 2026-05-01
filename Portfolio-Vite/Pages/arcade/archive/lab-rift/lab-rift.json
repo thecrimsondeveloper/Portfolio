@@ -1,0 +1,124 @@
+{
+  "id": "lab-rift",
+  "title": "Lab Rift",
+  "summary": "A laboratory escape run collecting shards before the gate opens.",
+  "mode": "labRift",
+  "palette": "signal",
+  "instructions": "Move with arrows or WASD. Collect every shard, then escape through the open gate.",
+  "hud": {
+    "modeLabel": "Collect Shards"
+  },
+  "overlay": {
+    "startTitle": "Lab Rift",
+    "startCopy": "A small top-down room run. Sweep the chamber, dodge the sentries, and unlock the exit with every shard.",
+    "startAction": "Enter Rift"
+  },
+  "settings": {
+    "title": "Lab Settings",
+    "sections": [
+      {
+        "title": "Rift Flow",
+        "controls": [
+          {
+            "key": "difficulty",
+            "label": "Difficulty",
+            "type": "select",
+            "value": "normal",
+            "options": [
+              "easy",
+              "normal",
+              "hard"
+            ]
+          },
+          {
+            "key": "effectIntensity",
+            "label": "Scanner Glow",
+            "type": "range",
+            "value": 0.7,
+            "min": 0,
+            "max": 1,
+            "step": 0.05
+          }
+        ]
+      }
+    ]
+  },
+  "help": {
+    "title": "How To Start",
+    "steps": [
+      "Press Enter Rift in the center overlay.",
+      "Move with Arrow Keys or WASD.",
+      "Collect every shard before leaving the room.",
+      "Avoid the sentries while you route to the gate."
+    ],
+    "tips": [
+      "Map the room first, then collect the closest shard.",
+      "The exit opens after every shard is taken."
+    ]
+  },
+  "menu": {
+    "title": "Pause Menu",
+    "actions": [
+      {
+        "label": "Resume",
+        "action": "resume"
+      },
+      {
+        "label": "Restart",
+        "action": "restart"
+      },
+      {
+        "label": "Help",
+        "action": "open_help"
+      },
+      {
+        "label": "Settings",
+        "action": "open_settings"
+      }
+    ]
+  },
+  "onboarding": {
+    "title": "Lab Setup",
+    "startSteps": [
+      "Open Help to learn the movement keys.",
+      "Press Enter Rift to enter the chamber.",
+      "Take the first shard and then route toward the exit path."
+    ],
+    "firstGoal": "Collect the first shard and start clearing the room."
+  },
+  "content": {
+    "playerSpeed": 320,
+    "shards": [
+      {
+        "x": 0.25,
+        "y": 0.24
+      },
+      {
+        "x": 0.42,
+        "y": 0.68
+      },
+      {
+        "x": 0.66,
+        "y": 0.34
+      },
+      {
+        "x": 0.74,
+        "y": 0.72
+      }
+    ],
+    "sentries": [
+      {
+        "x": 0.36,
+        "y": 0.44,
+        "phase": 0.2,
+        "rate": 1.8
+      },
+      {
+        "x": 0.61,
+        "y": 0.56,
+        "phase": 1.6,
+        "rate": 1.4
+      }
+    ]
+  }
+}

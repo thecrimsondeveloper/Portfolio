@@ -1,0 +1,27 @@
+{
+  "title": "Lumen Lattice",
+  "description": "A street level mystery set in clocktower interior at foggy morning, where the player must find a lost relic while using swinging from cables, stealth crouch.",
+  "objective": "Find a lost relic by rebuild broken systems and then bridge repair to reconnect route.",
+  "seed": {
+    "themes": "street level mystery",
+    "environments": "clocktower interior",
+    "settings": "foggy morning",
+    "characterMotivations": "find a lost relic",
+    "movementMechanics": [
+      "swinging from cables",
+      "stealth crouch"
+    ],
+    "coreLoops": "rebuild broken systems",
+    "progressionLoops": "rescue allies",
+    "completionLoops": "bridge repair to reconnect route",
+    "rewards": [
+      "collectibles",
+      "boss unlock"
+    ],
+    "antagonists": "unstable environment",
+    "visualStyles": "rusted brass",
+    "audioStyles": "low bass pulse",
+    "interactionPatterns": "hold-and-release momentum",
+    "productionFocus": "focus on motion and feel"
+  }
+}

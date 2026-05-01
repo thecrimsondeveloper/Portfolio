@@ -1,0 +1,30 @@
+# macOS metadata
+.DS_Store
+
+# Local agent/runtime state
+.codex-screens/
+.copilot-local/
+.nexus-link/
+.playwright-mcp/
+
+# Python local environments
+.venv/
+__pycache__/
+*.py[cod]
+
+# Node/Vite local outputs
+node_modules/
+dist/
+.vite/
+
+# Local env files
+.env
+.env.*
+!.env.example
+
+# Local screenshots and preview captures
+*.png
+*.jpg
+*.jpeg
+*.webp
+!Portfolio-Vite/public/**

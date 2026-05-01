@@ -1,0 +1,311 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "id",
+    "slug",
+    "title",
+    "mode",
+    "palette",
+    "instructions",
+    "hud",
+    "overlay",
+    "visuals",
+    "settings",
+    "help",
+    "menu",
+    "onboarding",
+    "meta",
+    "content"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "mode": {
+      "type": "string",
+      "enum": [
+        "runner",
+        "orbit",
+        "pulseGrid",
+        "labRift",
+        "phaseDrop",
+        "harbor",
+        "rhythm",
+        "echo"
+      ]
+    },
+    "palette": {
+      "type": "string"
+    },
+    "instructions": {
+      "type": "string"
+    },
+    "hud": {
+      "type": "object",
+      "required": [
+        "modeLabel"
+      ],
+      "properties": {
+        "modeLabel": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "overlay": {
+      "type": "object",
+      "required": [
+        "startTitle",
+        "startCopy",
+        "startAction"
+      ],
+      "properties": {
+        "startTitle": {
+          "type": "string"
+        },
+        "startCopy": {
+          "type": "string"
+        },
+        "startAction": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "visuals": {
+      "type": "object",
+      "required": [
+        "spriteKey",
+        "accentSpriteKey",
+        "hazardSpriteKey",
+        "trailEffectKey",
+        "impactEffectKey"
+      ],
+      "properties": {
+        "spriteKey": {
+          "type": "string"
+        },
+        "accentSpriteKey": {
+          "type": "string"
+        },
+        "hazardSpriteKey": {
+          "type": "string"
+        },
+        "trailEffectKey": {
+          "type": "string"
+        },
+        "impactEffectKey": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "settings": {
+      "type": "object",
+      "required": [
+        "title",
+        "sections"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "sections": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "title",
+              "controls"
+            ],
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "controls": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "key",
+                    "label",
+                    "type",
+                    "value"
+                  ],
+                  "properties": {
+                    "key": {
+                      "type": "string"
+                    },
+                    "label": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "select",
+                        "range"
+                      ]
+                    },
+                    "value": {},
+                    "options": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "min": {
+                      "type": "number"
+                    },
+                    "max": {
+                      "type": "number"
+                    },
+                    "step": {
+                      "type": "number"
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "minItems": 1
+              }
+            },
+            "additionalProperties": false
+          },
+          "minItems": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "help": {
+      "type": "object",
+      "required": [
+        "title",
+        "steps"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 3
+        },
+        "tips": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "menu": {
+      "type": "object",
+      "required": [
+        "title",
+        "actions"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "actions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "label",
+              "action"
+            ],
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "action": {
+                "type": "string",
+                "enum": [
+                  "resume",
+                  "restart",
+                  "open_help",
+                  "open_settings"
+                ]
+              }
+            },
+            "additionalProperties": false
+          },
+          "minItems": 2
+        }
+      },
+      "additionalProperties": false
+    },
+    "onboarding": {
+      "type": "object",
+      "required": [
+        "title",
+        "startSteps",
+        "firstGoal"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "startSteps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 3
+        },
+        "firstGoal": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "meta": {
+      "type": "object",
+      "required": [
+        "summary",
+        "goal",
+        "controls",
+        "paletteLabel",
+        "features"
+      ],
+      "properties": {
+        "summary": {
+          "type": "string"
+        },
+        "goal": {
+          "type": "string"
+        },
+        "controls": {
+          "type": "string"
+        },
+        "paletteLabel": {
+          "type": "string"
+        },
+        "features": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 3
+        }
+      },
+      "additionalProperties": false
+    },
+    "content": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}

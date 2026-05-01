@@ -1,0 +1,26 @@
+{
+  "id": "pulse-vault",
+  "title": "Pulse Vault",
+  "summary": "A timing run through pulse-sequenced vault cells where each beat opens one gate.",
+  "mode": "pulseGrid",
+  "palette": "signal",
+  "instructions": "Press Space on the beat to charge the vault cells in sequence.",
+  "hud": {
+    "modeLabel": "Pulse Vault"
+  },
+  "overlay": {
+    "startTitle": "Pulse Vault",
+    "startCopy": "Synchronize with the pulse grid and complete each vault sequence.",
+    "startAction": "Secure Vault"
+  },
+  "content": {
+    "sequence": [
+      { "cell": 6, "time": 0.8 },
+      { "cell": 12, "time": 1.7 },
+      { "cell": 18, "time": 2.6 },
+      { "cell": 7, "time": 3.5 },
+      { "cell": 13, "time": 4.4 },
+      { "cell": 19, "time": 5.3 }
+    ]
+  }
+}

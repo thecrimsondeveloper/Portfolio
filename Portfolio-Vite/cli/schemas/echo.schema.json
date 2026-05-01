@@ -1,0 +1,68 @@
+{
+  "type": "object",
+  "properties": {
+    "mode": {
+      "type": "string",
+      "enum": [
+        "echo"
+      ]
+    },
+    "content": {
+      "type": "object",
+      "required": [
+        "pattern",
+        "revealEvery",
+        "inputMap",
+        "padColors"
+      ],
+      "properties": {
+        "pattern": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "minItems": 4
+        },
+        "revealEvery": {
+          "type": "number"
+        },
+        "inputMap": {
+          "type": "object",
+          "required": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "properties": {
+            "1": {
+              "type": "integer"
+            },
+            "2": {
+              "type": "integer"
+            },
+            "3": {
+              "type": "integer"
+            },
+            "4": {
+              "type": "integer"
+            }
+          },
+          "additionalProperties": false
+        },
+        "padColors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 4
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "mode",
+    "content"
+  ]
+}

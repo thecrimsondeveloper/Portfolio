@@ -1,0 +1,78 @@
+{
+  "id": "sandstorm-memory-harbor",
+  "slug": "sandstorm-memory-harbor",
+  "title": "Sandstorm Harbor",
+  "summary": "A memory harbor test through sandstorm lanes where markers appear and disappear.",
+  "mode": "harbor",
+  "palette": "pulse",
+  "instructions": "Steer with the cursor and collect markers while the sandstorm obscures the path.",
+  "hud": {
+    "modeLabel": "Drift Route"
+  },
+  "overlay": {
+    "startTitle": "Sandstorm Harbor",
+    "startCopy": "Steer through sand-blurred harbor lanes, collect markers, and keep memory beacons from fading.",
+    "startAction": "Start Run"
+  },
+  "visuals": {
+    "spriteKey": "boatSkiff",
+    "accentSpriteKey": "buoyMarker",
+    "hazardSpriteKey": "hazardBlock",
+    "trailEffectKey": "smoke",
+    "impactEffectKey": "spark"
+  },
+  "meta": {
+    "summary": "A memory harbor test through sandstorm lanes where markers appear and disappear.",
+    "goal": "sandstorm memory harbor",
+    "controls": "Steer with the cursor and collect markers while the sandstorm obscures the path.",
+    "paletteLabel": "pulse",
+    "features": [
+      "JSON-driven content",
+      "Dodge And Route",
+      "Timed Swap",
+      "Pickup Pressure"
+    ]
+  },
+  "content": {
+    "buoys": [
+      {
+        "x": 0.18,
+        "y": 0.24
+      },
+      {
+        "x": 0.34,
+        "y": 0.56
+      },
+      {
+        "x": 0.62,
+        "y": 0.34
+      },
+      {
+        "x": 0.78,
+        "y": 0.68
+      },
+      {
+        "x": 0.86,
+        "y": 0.42
+      }
+    ],
+    "currents": [
+      {
+        "x": -0.2,
+        "y": 0.0
+      },
+      {
+        "x": 0.12,
+        "y": 0.02
+      },
+      {
+        "x": -0.08,
+        "y": -0.03
+      },
+      {
+        "x": 0.16,
+        "y": 0.01
+      }
+    ]
+  }
+}

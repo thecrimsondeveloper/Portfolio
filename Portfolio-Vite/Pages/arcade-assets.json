@@ -1,0 +1,80 @@
+{
+  "version": "1.0",
+  "palettes": {
+    "signal": {
+      "bgTop": "#142446",
+      "bgBottom": "#070d16",
+      "accent": "#8fddff",
+      "accentStrong": "#5d7cff",
+      "danger": "#ff5e6c",
+      "warning": "#ffd873",
+      "surface": "rgba(8, 12, 18, 0.62)",
+      "line": "rgba(255, 255, 255, 0.12)",
+      "ink": "#eef3ff",
+      "muted": "rgba(238, 243, 255, 0.72)"
+    },
+    "orbit": {
+      "bgTop": "#251249",
+      "bgBottom": "#090811",
+      "accent": "#7bf1a8",
+      "accentStrong": "#63c6ff",
+      "danger": "#ffde59",
+      "warning": "#ffd0f4",
+      "surface": "rgba(12, 10, 20, 0.62)",
+      "line": "rgba(255, 255, 255, 0.12)",
+      "ink": "#fff5d6",
+      "muted": "rgba(255, 245, 214, 0.72)"
+    },
+    "pulse": {
+      "bgTop": "#141226",
+      "bgBottom": "#080a12",
+      "accent": "#b68cff",
+      "accentStrong": "#67d5ff",
+      "danger": "#ff7a9e",
+      "warning": "#f3f0ff",
+      "surface": "rgba(10, 10, 18, 0.62)",
+      "line": "rgba(255, 255, 255, 0.12)",
+      "ink": "#f3f4ff",
+      "muted": "rgba(243, 244, 255, 0.72)"
+    },
+    "harbor": {
+      "bgTop": "#123844",
+      "bgBottom": "#071219",
+      "accent": "#6fd8ff",
+      "accentStrong": "#a7fff1",
+      "danger": "#ff8a64",
+      "warning": "#ffd46b",
+      "surface": "rgba(8, 14, 18, 0.6)",
+      "line": "rgba(255, 255, 255, 0.12)",
+      "ink": "#eef9ff",
+      "muted": "rgba(238, 249, 255, 0.72)"
+    }
+  },
+  "motifs": {
+    "runner": {
+      "laneGlow": "rgba(121, 164, 255, 0.14)",
+      "stripe": "rgba(137, 219, 255, 0.24)"
+    },
+    "pulseGrid": {
+      "cellBorder": "rgba(255, 255, 255, 0.06)"
+    },
+    "harbor": {
+      "wake": "rgba(167, 255, 241, 0.18)"
+    }
+  },
+  "sprites": {
+    "runnerShip": "../assets/arcade/runner-ship.svg",
+    "hazardBlock": "../assets/arcade/hazard-block.svg",
+    "orbNode": "../assets/arcade/orb-node.svg",
+    "shardCrystal": "../assets/arcade/shard-crystal.svg",
+    "sentryDrone": "../assets/arcade/sentry-drone.svg",
+    "boatSkiff": "../assets/arcade/boat-skiff.svg",
+    "buoyMarker": "../assets/arcade/buoy-marker.svg",
+    "padTile": "../assets/arcade/pad-tile.svg"
+  },
+  "effects": {
+    "smoke": "../assets/arcade/effect-smoke.svg",
+    "spark": "../assets/arcade/effect-spark.svg",
+    "sand": "../assets/arcade/effect-sand.svg"
+  }
+}

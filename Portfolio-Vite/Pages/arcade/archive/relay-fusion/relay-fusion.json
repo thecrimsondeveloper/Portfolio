@@ -1,0 +1,107 @@
+{
+  "id": "relay-fusion",
+  "title": "Relay Fusion",
+  "summary": "A merged relay run that cycles through handoffs, rush waves, and sprint combos.",
+  "mode": "runner",
+  "palette": "orbit",
+  "instructions": "Use Arrow keys or A / D to switch lanes. Adapt to each relay stage as it changes.",
+  "hud": {
+    "modeLabel": "Relay Fusion"
+  },
+  "overlay": {
+    "startTitle": "Relay Fusion",
+    "startCopy": "Cycle through relay handoffs, rush waves, and sprint combos in one merged runner.",
+    "startAction": "Start Run"
+  },
+  "content": {
+    "lanes": [
+      0.18,
+      0.5,
+      0.82
+    ],
+    "spawnInterval": 0.52,
+    "spawnFactor": 0.09,
+    "speedGrowth": 0.095,
+    "speedCap": 4.8,
+    "checkpointInterval": 420,
+    "checkpointLanes": [
+      0,
+      1,
+      2
+    ],
+    "checkpointReward": 22,
+    "burstInterval": 8.2,
+    "burstPatterns": [
+      {
+        "lanes": [
+          0,
+          1
+        ]
+      },
+      {
+        "lanes": [
+          1,
+          2
+        ]
+      },
+      {
+        "lanes": [
+          0,
+          1,
+          2
+        ]
+      }
+    ],
+    "comboThreshold": 1.6,
+    "comboReward": 20,
+    "stageSequence": [
+      {
+        "name": "handoff",
+        "duration": 10
+      },
+      {
+        "name": "rush",
+        "duration": 8
+      },
+      {
+        "name": "sprint",
+        "duration": 10
+      }
+    ],
+    "patterns": [
+      {
+        "lanes": [
+          0
+        ]
+      },
+      {
+        "lanes": [
+          2
+        ]
+      },
+      {
+        "lanes": [
+          1
+        ]
+      },
+      {
+        "lanes": [
+          0,
+          2
+        ]
+      },
+      {
+        "lanes": [
+          0,
+          1
+        ]
+      },
+      {
+        "lanes": [
+          1,
+          2
+        ]
+      }
+    ]
+  }
+}

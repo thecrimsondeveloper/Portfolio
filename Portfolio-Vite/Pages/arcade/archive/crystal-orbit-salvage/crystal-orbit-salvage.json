@@ -1,0 +1,57 @@
+{
+  "id": "crystal-orbit-salvage",
+  "slug": "crystal-orbit-salvage",
+  "title": "Orbit Salvage",
+  "summary": "A precision orbit pickup game that rewards careful targeting and salvage timing.",
+  "mode": "orbit",
+  "palette": "pulse",
+  "instructions": "Move the pointer and click salvage targets in orbit to recover cores and avoid hazards.",
+  "hud": {
+    "modeLabel": "Combo Chain"
+  },
+  "overlay": {
+    "startTitle": "Orbit Salvage",
+    "startCopy": "Launch into a salvage orbit run, collect drifting cores, and return safely to the docking ring.",
+    "startAction": "Begin Salvage"
+  },
+  "visuals": {
+    "spriteKey": "orbNode",
+    "accentSpriteKey": "orbNode",
+    "hazardSpriteKey": "hazardBlock",
+    "trailEffectKey": "smoke",
+    "impactEffectKey": "spark"
+  },
+  "meta": {
+    "summary": "A precision orbit pickup game that rewards careful targeting and salvage timing.",
+    "goal": "crystal orbit salvage",
+    "controls": "Move the pointer and click salvage targets in orbit to recover cores and avoid hazards.",
+    "paletteLabel": "pulse",
+    "features": [
+      "JSON-driven content",
+      "Dodge And Route",
+      "Timed Swap",
+      "Pickup Pressure"
+    ]
+  },
+  "content": {
+    "orbitSpeed": 1.2,
+    "coreRadius": 88,
+    "rings": [
+      {
+        "radiusBand": 0.18,
+        "radius": 18,
+        "velocity": 0.8
+      },
+      {
+        "radiusBand": 0.26,
+        "radius": 16,
+        "velocity": 1.1
+      },
+      {
+        "radiusBand": 0.34,
+        "radius": 14,
+        "velocity": 1.4
+      }
+    ]
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "type": "object",
+  "properties": {
+    "mode": {
+      "type": "string",
+      "enum": [
+        "orbit"
+      ]
+    },
+    "content": {
+      "type": "object",
+      "required": [
+        "orbitSpeed",
+        "coreRadius",
+        "rings"
+      ],
+      "properties": {
+        "orbitSpeed": {
+          "type": "number"
+        },
+        "coreRadius": {
+          "type": "number"
+        },
+        "rings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "radiusBand",
+              "radius",
+              "velocity"
+            ],
+            "properties": {
+              "radiusBand": {
+                "type": "number"
+              },
+              "radius": {
+                "type": "number"
+              },
+              "velocity": {
+                "type": "number"
+              }
+            },
+            "additionalProperties": false
+          },
+          "minItems": 3
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "mode",
+    "content"
+  ]
+}

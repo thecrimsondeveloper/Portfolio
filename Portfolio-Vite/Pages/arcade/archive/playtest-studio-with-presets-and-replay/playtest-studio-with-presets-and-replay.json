@@ -1,0 +1,36 @@
+{
+  "id": "playtest-studio-with-presets-and-replay",
+  "title": "Playtest Studio Plus",
+  "summary": "A preset-friendly orbit game with replay-focused feedback.",
+  "mode": "orbit",
+  "palette": "orbit",
+  "instructions": "Click targets in orbit to build score while staying on the move.",
+  "hud": {
+    "modeLabel": "Playtest Studio Plus"
+  },
+  "overlay": {
+    "startTitle": "Playtest Studio Plus",
+    "startCopy": "A preset-friendly orbit game with replay-focused feedback.",
+    "startAction": "Launch Orbit"
+  },
+  "content": {
+    "coreRadius": 58,
+    "rings": [
+      {
+        "radiusBand": 0.22,
+        "radius": 18,
+        "velocity": 0.9
+      },
+      {
+        "radiusBand": 0.4,
+        "radius": 22,
+        "velocity": 0.55
+      },
+      {
+        "radiusBand": 0.58,
+        "radius": 26,
+        "velocity": 0.38
+      }
+    ]
+  }
+}

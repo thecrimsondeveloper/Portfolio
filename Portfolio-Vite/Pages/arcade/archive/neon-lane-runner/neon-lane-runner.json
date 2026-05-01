@@ -1,0 +1,42 @@
+{
+  "id": "neon-lane-runner",
+  "slug": "neon-lane-runner",
+  "title": "Neon Lanes",
+  "summary": "A neon lane swap runner that prizes split-second horizontal movement.",
+  "mode": "phaseDrop",
+  "palette": "pulse",
+  "instructions": "Use left and right to swap lanes and avoid hazards in the neon corridor.",
+  "hud": {
+    "modeLabel": "Phase Shift"
+  },
+  "overlay": {
+    "startTitle": "Neon Lanes",
+    "startCopy": "Swap lanes quickly in a neon corridor and survive the moving hazards until the run ends.",
+    "startAction": "Start Run"
+  },
+  "visuals": {
+    "spriteKey": "padTile",
+    "accentSpriteKey": "orbNode",
+    "hazardSpriteKey": "hazardBlock",
+    "trailEffectKey": "smoke",
+    "impactEffectKey": "spark"
+  },
+  "meta": {
+    "summary": "A neon lane swap runner that prizes split-second horizontal movement.",
+    "goal": "neon lane runner",
+    "controls": "Use left and right to swap lanes and avoid hazards in the neon corridor.",
+    "paletteLabel": "pulse",
+    "features": [
+      "JSON-driven content",
+      "Shared runtime mode",
+      "Greyboxed visual treatment"
+    ]
+  },
+  "content": {
+    "phases": [
+      "#ff7a9e",
+      "#67d5ff",
+      "#b68cff"
+    ]
+  }
+}

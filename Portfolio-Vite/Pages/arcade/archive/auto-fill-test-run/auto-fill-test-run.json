@@ -1,0 +1,53 @@
+{
+  "id": "auto-fill-test-run",
+  "title": "Auto Fill Test Run",
+  "summary": "A test run that checks reflexes and easy route recovery.",
+  "mode": "runner",
+  "palette": "signal",
+  "instructions": "Use Arrow keys or A / D to switch lanes and dodge every obstacle.",
+  "hud": {
+    "modeLabel": "Auto Fill Test Run"
+  },
+  "overlay": {
+    "startTitle": "Auto Fill Test Run",
+    "startCopy": "A test run that checks reflexes and easy route recovery.",
+    "startAction": "Start Run"
+  },
+  "content": {
+    "lanes": [
+      0.18,
+      0.5,
+      0.82
+    ],
+    "patterns": [
+      {
+        "lanes": [
+          0
+        ]
+      },
+      {
+        "lanes": [
+          2
+        ]
+      },
+      {
+        "lanes": [
+          1
+        ]
+      },
+      {
+        "lanes": [
+          0,
+          2
+        ]
+      },
+      {
+        "lanes": [
+          0,
+          1,
+          2
+        ]
+      }
+    ]
+  }
+}

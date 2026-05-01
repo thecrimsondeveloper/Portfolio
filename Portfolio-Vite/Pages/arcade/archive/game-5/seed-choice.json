@@ -1,0 +1,27 @@
+{
+  "title": "Game 5",
+  "description": "A test playable arcade game number 5.",
+  "objective": "Complete the mission safely.",
+  "seed": {
+    "themes": "hidden society infiltration",
+    "environments": "ancient quarry",
+    "settings": "foggy morning",
+    "characterMotivations": "reach a quiet sanctuary",
+    "movementMechanics": [
+      "precision jumping",
+      "slide and vault"
+    ],
+    "coreLoops": "trace signal patterns",
+    "progressionLoops": "rescue allies",
+    "completionLoops": "vault extraction",
+    "rewards": [
+      "collectibles",
+      "story fragments"
+    ],
+    "antagonists": "patrolling automatons",
+    "visualStyles": "dusty pastel",
+    "audioStyles": "dripping water motifs",
+    "interactionPatterns": "context-sensitive movement",
+    "productionFocus": "prototype in directory with JSON and HTML only"
+  }
+}

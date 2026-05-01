@@ -1,0 +1,51 @@
+{
+  "id": "arcade-relay-run",
+  "title": "Arcade Relay Run",
+  "description": "A data-driven three.js + Rapier arcade delivery game in a ruined clocktower market.",
+  "seed": {
+    "themes": "hidden society infiltration",
+    "environments": "abandoned factory",
+    "settings": "foggy morning",
+    "characterMotivations": "deliver a secret package",
+    "movementMechanics": [
+      "cargo balancing",
+      "grapple and zipline"
+    ],
+    "coreLoops": "guide a companion through hazards",
+    "progressionLoops": "restore environmental systems",
+    "completionLoops": "vault extraction",
+    "rewards": [
+      "resource caches",
+      "collectibles"
+    ],
+    "antagonists": "corrupted maintenance crew",
+    "visualStyles": "muted earth tones",
+    "audioStyles": "soft choral pads",
+    "interactionPatterns": "context-sensitive movement",
+    "productionFocus": "prototype in directory with JSON and HTML only"
+  },
+  "fun": {
+    "assessment": "yes",
+    "needs": []
+  },
+  "design": {
+    "summary": "",
+    "details": "\n    # Arcade Relay Run\n\n    **Description:** A data-driven three.js + Rapier arcade delivery game in a ruined clocktower market.\n\n    **Objective:** Deliver packages through relay gates while using momentum and physics-based traversal.\n\n    **Seed summary:**\n    Generated game seed combination:\n- Themes: hidden society infiltration\n- Environments: abandoned factory\n- Settings: foggy morning\n- Character motivations: deliver a secret package\n- Movement mechanics: cargo balancing, grapple and zipline\n- Core loops: guide a companion through hazards\n- Progression loops: restore environmental systems\n- Completion loops: vault extraction\n- Rewards: resource caches, collectibles\n- Antagonists: corrupted maintenance crew\n- Visual styles: muted earth tones\n- Audio styles: soft choral pads\n- Interaction patterns: context-sensitive movement\n- Production focus: prototype in directory with JSON and HTML only\n\n    **Expansion ideas:**\n    - relay gate timing puzzles\n- cargo balancing with environmental hazards\n- unlock shortcuts through modular upgrades\n- patrols and rescue objectives add stakes\n- data-driven level events that can be tuned from JSON\n\n\n- Core movement, physics, and relay gate systems\n- Player controls, momentum, and package handling\n- Progression, upgrade modules, and shortcut unlocking\n- Patrol behavior, hazards, and emergency rescue sequences\n- Final delivery, escape, and completion reward flow\n\n## Fun game assessment\n\n- Assessment: yes\n\n### Things needed to make this game fun\n- (No fun checklist items provided yet.)\n",
+    "chapters": []
+  },
+  "story": {
+    "start": "intro",
+    "nodes": [
+      {
+        "id": "intro",
+        "title": "Introduction",
+        "text": "Describe the opening scene here.",
+        "choices": []
+      }
+    ]
+  },
+  "delivery": {
+    "format": "story-driven JSON nodes",
+    "note": "Add fields for choices, transitions, and implementation mapping as needed."
+  }
+}

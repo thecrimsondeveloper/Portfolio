@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiniArcade Control</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main id="app">
+      <section class="topbar">
+        <div class="brand">
+          <strong>MiniArcade</strong>
+          <span id="repoStatus">detecting</span>
+        </div>
+        <div class="controls">
+          <button id="hardStopBtn" type="button">Full Stop</button>
+          <label>
+            Idea Loop
+            <input id="ideaLoop" type="checkbox" />
+          </label>
+          <label>
+            Try Full
+            <input id="tryFull" type="checkbox" />
+          </label>
+          <label>
+            Mode
+            <select id="mode">
+              <option value="auto-build" selected>auto-build</option>
+              <option value="plan-only">plan-only</option>
+              <option value="validate">validate</option>
+              <option value="build">build</option>
+            </select>
+          </label>
+          <label>
+            Workers
+            <input id="concurrency" type="number" min="1" max="10" value="5" />
+          </label>
+          <label>
+            Batch
+            <input id="batchCount" type="number" min="1" max="10" value="5" />
+          </label>
+        </div>
+      </section>
+
+      <section class="seedbar">
+        <input id="idea" class="seedInput" value="campfire" placeholder="idea" />
+        <input id="theme" class="seedInput" value="cozy" placeholder="theme" />
+        <input id="mechanic" class="seedInput" value="dodge" placeholder="mechanic" />
+        <input id="content" class="seedInput" value="lanterns" placeholder="content" />
+        <select id="depth" class="seedInput">
+          <option value="quick" selected>quick</option>
+          <option value="full">full</option>
+          <option value="deep">deep</option>
+        </select>
+        <button id="launchAutoBtn" type="button">Auto Build</button>
+        <button id="clearBtn" type="button">Clear Complete</button>
+      </section>
+
+      <section class="seedbar secondary">
+        <input
+          id="batchPrompt"
+          class="batchPrompt"
+          placeholder="Optional brainstorm batch prompt."
+        />
+        <button id="launchBatchBtn" type="button">Batch</button>
+      </section>
+
+      <section class="stage">
+        <div class="stars"></div>
+        <div class="statusStrip">
+          <span id="queueStatus">idle</span>
+          <span id="counts">queued 0 / running 0</span>
+        </div>
+        <div id="queueLane" class="queueLane"></div>
+      </section>
+
+      <aside id="drawer" class="drawer" aria-live="polite">
+        <button id="closeDrawer" type="button">Close</button>
+        <h2 id="drawerTitle">Worker</h2>
+        <pre id="drawerBody"></pre>
+        <button id="retryBtn" type="button">Retry</button>
+      </aside>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

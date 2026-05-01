@@ -1,0 +1,27 @@
+{
+  "title": "New Arcade Game",
+  "description": "A new game set in a vivid location at a dramatic time, where the player must repair broken machinery while using grapple and zipline, swinging from cables.",
+  "objective": "Repair broken machinery by trace signal patterns and then tower climb to trigger signal.",
+  "seed": {
+    "themes": "circuitry puzzle chase",
+    "environments": "underground cavern",
+    "settings": "harsh winter",
+    "characterMotivations": "repair broken machinery",
+    "movementMechanics": [
+      "grapple and zipline",
+      "swinging from cables"
+    ],
+    "coreLoops": "trace signal patterns",
+    "progressionLoops": "restore environmental systems",
+    "completionLoops": "tower climb to trigger signal",
+    "rewards": [
+      "boss unlock",
+      "resource caches"
+    ],
+    "antagonists": "unstable environment",
+    "visualStyles": "muted earth tones",
+    "audioStyles": "field recording textures",
+    "interactionPatterns": "point-and-click traversal",
+    "productionFocus": "prepare for agent-driven expansion"
+  }
+}

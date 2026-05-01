@@ -1,0 +1,27 @@
+{
+  "title": "Neon Drift Lab",
+  "description": "A artifact recovery set in flooded market district at storm, where the player must protect the neighborhood while using stealth crouch, rhythm-based stepping.",
+  "objective": "Protect the neighborhood by collect scattered pieces and then ritual activation.",
+  "seed": {
+    "themes": "artifact recovery",
+    "environments": "flooded market district",
+    "settings": "storm",
+    "characterMotivations": "protect the neighborhood",
+    "movementMechanics": [
+      "stealth crouch",
+      "rhythm-based stepping"
+    ],
+    "coreLoops": "collect scattered pieces",
+    "progressionLoops": "assemble a map",
+    "completionLoops": "ritual activation",
+    "rewards": [
+      "story fragments",
+      "artifact sets"
+    ],
+    "antagonists": "mischievous spirits",
+    "visualStyles": "hand-painted textures",
+    "audioStyles": "mechanical percussion",
+    "interactionPatterns": "inventory-lite object use",
+    "productionFocus": "prototype in directory with JSON and HTML only"
+  }
+}

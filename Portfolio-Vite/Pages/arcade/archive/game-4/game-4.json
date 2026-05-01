@@ -1,0 +1,62 @@
+{
+  "id": "game-4",
+  "title": "Campfire Climb",
+  "summary": "A cozy harbor-style challenge of collecting markers before nightfall.",
+  "mode": "harbor",
+  "palette": "harbor",
+  "instructions": "Move the boat to collect all buoys before the current pulls you off course.",
+  "hud": {
+    "modeLabel": "Campfire Climb"
+  },
+  "overlay": {
+    "startTitle": "Campfire Climb",
+    "startCopy": "A cozy harbor-style challenge of collecting markers before nightfall.",
+    "startAction": "Set Sail"
+  },
+  "content": {
+    "currents": [
+      {
+        "x": -0.12,
+        "y": 0.02
+      },
+      {
+        "x": 0.08,
+        "y": -0.03
+      },
+      {
+        "x": -0.05,
+        "y": 0.04
+      },
+      {
+        "x": 0.1,
+        "y": -0.02
+      },
+      {
+        "x": -0.06,
+        "y": 0.03
+      }
+    ],
+    "buoys": [
+      {
+        "x": 0.22,
+        "y": 0.28
+      },
+      {
+        "x": 0.38,
+        "y": 0.6
+      },
+      {
+        "x": 0.6,
+        "y": 0.36
+      },
+      {
+        "x": 0.78,
+        "y": 0.68
+      },
+      {
+        "x": 0.88,
+        "y": 0.26
+      }
+    ]
+  }
+}

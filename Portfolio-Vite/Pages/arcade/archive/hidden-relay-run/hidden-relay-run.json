@@ -1,0 +1,65 @@
+{
+  "id": "hidden-relay-run",
+  "title": "Hidden Relay",
+  "summary": "A hidden relay where surprise obstacles appear at the last moment.",
+  "mode": "runner",
+  "palette": "pulse",
+  "instructions": "Use Arrow keys or A / D to switch lanes. Watch for obstacles that only appear late.",
+  "hud": {
+    "modeLabel": "Hidden Relay"
+  },
+  "overlay": {
+    "startTitle": "Hidden Relay",
+    "startCopy": "A hidden relay with surprise obstacles that reveal themselves late.",
+    "startAction": "Start Run"
+  },
+  "content": {
+    "lanes": [
+      0.18,
+      0.5,
+      0.82
+    ],
+    "spawnInterval": 0.52,
+    "spawnFactor": 0.092,
+    "speedGrowth": 0.085,
+    "speedCap": 4.3,
+    "hiddenObstacleRate": 0.32,
+    "hiddenRevealAt": 0.2,
+    "patterns": [
+      {
+        "lanes": [
+          0
+        ]
+      },
+      {
+        "lanes": [
+          2
+        ]
+      },
+      {
+        "lanes": [
+          1
+        ]
+      },
+      {
+        "lanes": [
+          0,
+          2
+        ]
+      },
+      {
+        "lanes": [
+          1,
+          2
+        ]
+      },
+      {
+        "lanes": [
+          0,
+          1,
+          2
+        ]
+      }
+    ]
+  }
+}

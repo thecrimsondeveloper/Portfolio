@@ -1,0 +1,144 @@
+{
+  "id": "harbor-sprint-retro-seaport-reflex-lane-runner-with-pulse-gr-short-rhythmic-lane-runs-dodge-energetic",
+  "slug": "harbor-sprint-retro-seaport-reflex-lane-runner-with-pulse-gr-short-rhythmic-lane-runs-dodge-energetic",
+  "title": "Seaport Sprint",
+  "summary": "A retro harbor sprint where quick lane shifts keep you ahead of the incoming pulse traffic.",
+  "mode": "runner",
+  "palette": "signal",
+  "instructions": "Move with arrow keys or A / D to race the harbor lanes and dodge the pulse.",
+  "hud": {
+    "modeLabel": "Infinite Run"
+  },
+  "overlay": {
+    "startTitle": "Seaport Sprint",
+    "startCopy": "Sprint through retro harbor lanes, dodge pulse hazards, and chase the high-speed finish.",
+    "startAction": "Start Sprint"
+  },
+  "visuals": {
+    "spriteKey": "runnerShip",
+    "accentSpriteKey": "orbNode",
+    "hazardSpriteKey": "hazardBlock",
+    "trailEffectKey": "smoke",
+    "impactEffectKey": "spark"
+  },
+  "settings": {
+    "title": "Settings",
+    "sections": [
+      {
+        "title": "Gameplay",
+        "controls": [
+          {
+            "key": "difficulty",
+            "label": "Difficulty",
+            "type": "select",
+            "value": "normal",
+            "options": [
+              "easy",
+              "normal",
+              "hard"
+            ]
+          },
+          {
+            "key": "effectIntensity",
+            "label": "Effect Intensity",
+            "type": "range",
+            "value": 0.75,
+            "min": 0,
+            "max": 1,
+            "step": 0.05
+          }
+        ]
+      }
+    ]
+  },
+  "help": {
+    "title": "How To Start Harbor Sprint Retro Seaport Reflex Lane-Runner With Pulse-Gr Short Rhythmic Lane Runs: Dodge Energetic",
+    "steps": [
+      "Press Start in the center overlay.",
+      "Use the controls: Move with arrow keys or A / D to race the harbor lanes and dodge the pulse.",
+      "Follow the first goal: Reflex lane-runner with pulse-gr through Harbor Sprint."
+    ],
+    "tips": [
+      "Theme: Retro seaport, energetic.",
+      "Support mechanics: Retro seaport, Short rhythmic lane runs: dodge."
+    ]
+  },
+  "menu": {
+    "title": "Pause Menu",
+    "actions": [
+      {
+        "label": "Resume",
+        "action": "resume"
+      },
+      {
+        "label": "Restart",
+        "action": "restart"
+      },
+      {
+        "label": "Help",
+        "action": "open_help"
+      },
+      {
+        "label": "Settings",
+        "action": "open_settings"
+      }
+    ]
+  },
+  "onboarding": {
+    "title": "Get Started",
+    "startSteps": [
+      "Press Start in the center overlay.",
+      "Use the controls: Move with arrow keys or A / D to race the harbor lanes and dodge the pulse.",
+      "Follow the first goal: Reflex lane-runner with pulse-gr through Harbor Sprint."
+    ],
+    "firstGoal": "Reflex lane-runner with pulse-gr through Harbor Sprint"
+  },
+  "meta": {
+    "summary": "A retro harbor sprint where quick lane shifts keep you ahead of the incoming pulse traffic.",
+    "goal": "Harbor Sprint Retro seaport Reflex lane-runner with pulse-gr Short rhythmic lane runs: dodge energetic",
+    "controls": "Move with arrow keys or A / D to race the harbor lanes and dodge the pulse.",
+    "paletteLabel": "signal",
+    "features": [
+      "JSON-driven content",
+      "Reflex Lane-Runner With Pulse-Gr",
+      "Retro Seaport",
+      "Short Rhythmic Lane Runs: Dodge"
+    ]
+  },
+  "content": {
+    "lanes": [
+      0.22,
+      0.4,
+      0.58,
+      0.76
+    ],
+    "patterns": [
+      {
+        "lanes": [
+          0
+        ]
+      },
+      {
+        "lanes": [
+          1
+        ]
+      },
+      {
+        "lanes": [
+          2
+        ]
+      },
+      {
+        "lanes": [
+          3
+        ]
+      },
+      {
+        "lanes": [
+          0,
+          2
+        ]
+      }
+    ]
+  }
+}

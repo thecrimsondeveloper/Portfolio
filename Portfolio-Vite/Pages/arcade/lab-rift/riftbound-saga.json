@@ -1,0 +1,27 @@
+{
+  "id": "riftbound-saga",
+  "title": "Lab Rift",
+  "summary": "A lab rift run through collapsing passages where every hazard requires precision timing and lane choice.",
+  "mode": "runner",
+  "palette": "pulse",
+  "instructions": "Use Arrow keys or A / D to dodge rift hazards and stay in the safe lane.",
+  "hud": {
+    "modeLabel": "Lab Rift"
+  },
+  "overlay": {
+    "startTitle": "Lab Rift",
+    "startCopy": "Venture into the lab rift, dodge the collapsing passages, and keep your run intact under pressure.",
+    "startAction": "Enter Rift"
+  },
+  "content": {
+    "lanes": [0.18, 0.5, 0.82],
+    "patterns": [
+      { "lanes": [0] },
+      { "lanes": [2] },
+      { "lanes": [1] },
+      { "lanes": [0, 2] },
+      { "lanes": [1, 2] },
+      { "lanes": [0, 1] }
+    ]
+  }
+}

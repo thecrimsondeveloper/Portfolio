@@ -1,0 +1,52 @@
+{
+  "id": "hidden-relay-run",
+  "title": "Hidden Relay Run",
+  "description": "A relay-style delivery puzzle in a flooded market where players route packages through shifting plant corridors under a festival night sky.",
+  "seed": {
+    "themes": "mechanical festival rescue",
+    "environments": "flooded market district",
+    "settings": "festival night",
+    "characterMotivations": "protect the neighborhood",
+    "movementMechanics": [
+      "swinging from cables",
+      "mirror walking"
+    ],
+    "coreLoops": "solve motion puzzles to advance",
+    "progressionLoops": "unlock shortcuts",
+    "completionLoops": "artifact assembly",
+    "rewards": [
+      "resource caches",
+      "story fragments"
+    ],
+    "antagonists": "rival explorer",
+    "visualStyles": "hand-painted textures",
+    "audioStyles": "field recording textures",
+    "interactionPatterns": "context-sensitive movement",
+    "productionFocus": "prepare for agent-driven expansion"
+  },
+  "design": {
+    "summary": "",
+    "details": "\n    # Hidden Relay Run\n\n    **Description:** A relay-style delivery puzzle in a flooded market where players route packages through shifting plant corridors under a festival night sky.\n\n    **Objective:** Deliver critical packages through dynamic relay gates while avoiding patrols and restoring the market's support systems.\n\n    **Seed summary:**\n    Generated game seed combination:\n- Themes: mechanical festival rescue\n- Environments: flooded market district\n- Settings: festival night\n- Character motivations: protect the neighborhood\n- Movement mechanics: swinging from cables, mirror walking\n- Core loops: solve motion puzzles to advance\n- Progression loops: unlock shortcuts\n- Completion loops: artifact assembly\n- Rewards: resource caches, story fragments\n- Antagonists: rival explorer\n- Visual styles: hand-painted textures\n- Audio styles: field recording textures\n- Interaction patterns: context-sensitive movement\n- Production focus: prepare for agent-driven expansion\n\n    **Expansion ideas:**\n    - relay gate timing puzzles - environmental plant growth traps - route planning under time pressure - collectible power modules for equipment upgrades - branching delivery paths with alternative exits END\n\n\nHidden Relay Run is a delivery puzzle experience where the player navigates an overgrown, flooded market at festival night, routing packages through animated relay gates and plant corridors.\nThe core gameplay blends timing, route planning, and environmental interaction: players must use swinging movement, precision jumps, and dynamic gate timing to reach delivery nodes.\nPlayers collect power modules to upgrade movement and unlock alternate paths, while rescue and repair objectives reward exploration and completion loops.",
+    "chapters": [
+      "Core movement and relay gate flow",
+      "Environmental interaction and obstacle timing",
+      "Progression, power modules, and alternate routes",
+      "Rescue objectives, repair tasks, and reward loops"
+    ]
+  },
+  "story": {
+    "start": "intro",
+    "nodes": [
+      {
+        "id": "intro",
+        "title": "Introduction",
+        "text": "Describe the opening scene here.",
+        "choices": []
+      }
+    ]
+  },
+  "delivery": {
+    "format": "story-driven JSON nodes",
+    "note": "Add fields for choices, transitions, and implementation mapping as needed."
+  }
+}

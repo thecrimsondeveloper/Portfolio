@@ -1,0 +1,144 @@
+{
+  "id": "neon-orbital-courier-neon-cyberpunk-astro-minimal-timed-dash-windows-with-orbit-at-short-high-score-courier-runs-wi-urgent",
+  "slug": "neon-orbital-courier-neon-cyberpunk-astro-minimal-timed-dash-windows-with-orbit-at-short-high-score-courier-runs-wi-urgent",
+  "title": "Orbital Courier",
+  "summary": "A cyberpunk orbital courier dash through timed windows and high-score gates.",
+  "mode": "runner",
+  "palette": "signal",
+  "instructions": "Move with arrow keys or A / D to time the orbital courier through dash windows.",
+  "hud": {
+    "modeLabel": "Infinite Run"
+  },
+  "overlay": {
+    "startTitle": "Orbital Courier",
+    "startCopy": "Time your courier dashes through orbital windows and stay on course in the neon void.",
+    "startAction": "Start Courier"
+  },
+  "visuals": {
+    "spriteKey": "runnerShip",
+    "accentSpriteKey": "orbNode",
+    "hazardSpriteKey": "hazardBlock",
+    "trailEffectKey": "smoke",
+    "impactEffectKey": "spark"
+  },
+  "settings": {
+    "title": "Settings",
+    "sections": [
+      {
+        "title": "Gameplay",
+        "controls": [
+          {
+            "key": "difficulty",
+            "label": "Difficulty",
+            "type": "select",
+            "value": "normal",
+            "options": [
+              "easy",
+              "normal",
+              "hard"
+            ]
+          },
+          {
+            "key": "effectIntensity",
+            "label": "Effect Intensity",
+            "type": "range",
+            "value": 0.75,
+            "min": 0,
+            "max": 1,
+            "step": 0.05
+          }
+        ]
+      }
+    ]
+  },
+  "help": {
+    "title": "How To Start Neon Orbital Courier Neon Cyberpunk Astro-Minimal Timed Dash Windows With Orbit At Short High-Score Courier Runs Wi Urgent",
+    "steps": [
+      "Press Start in the center overlay.",
+      "Use the controls: Move with arrow keys or A / D to time the orbital courier through dash windows.",
+      "Follow the first goal: timed dash windows with orbit at through Neon Orbital Courier."
+    ],
+    "tips": [
+      "Theme: neon cyberpunk astro-minimal, urgent.",
+      "Support mechanics: neon cyberpunk astro-minimal, short high-score courier runs wi."
+    ]
+  },
+  "menu": {
+    "title": "Pause Menu",
+    "actions": [
+      {
+        "label": "Resume",
+        "action": "resume"
+      },
+      {
+        "label": "Restart",
+        "action": "restart"
+      },
+      {
+        "label": "Help",
+        "action": "open_help"
+      },
+      {
+        "label": "Settings",
+        "action": "open_settings"
+      }
+    ]
+  },
+  "onboarding": {
+    "title": "Get Started",
+    "startSteps": [
+      "Press Start in the center overlay.",
+      "Use the controls: Move with arrow keys or A / D to time the orbital courier through dash windows.",
+      "Follow the first goal: timed dash windows with orbit at through Neon Orbital Courier."
+    ],
+    "firstGoal": "timed dash windows with orbit at through Neon Orbital Courier"
+  },
+  "meta": {
+    "summary": "A cyberpunk orbital courier dash through timed windows and high-score gates.",
+    "goal": "Neon Orbital Courier neon cyberpunk astro-minimal timed dash windows with orbit at short high-score courier runs wi urgent",
+    "controls": "Move with arrow keys or A / D to time the orbital courier through dash windows.",
+    "paletteLabel": "signal",
+    "features": [
+      "JSON-driven content",
+      "Timed Dash Windows With Orbit At",
+      "Neon Cyberpunk Astro-Minimal",
+      "Short High-Score Courier Runs Wi"
+    ]
+  },
+  "content": {
+    "lanes": [
+      0.22,
+      0.4,
+      0.58,
+      0.76
+    ],
+    "patterns": [
+      {
+        "lanes": [
+          0
+        ]
+      },
+      {
+        "lanes": [
+          1
+        ]
+      },
+      {
+        "lanes": [
+          2
+        ]
+      },
+      {
+        "lanes": [
+          3
+        ]
+      },
+      {
+        "lanes": [
+          0,
+          2
+        ]
+      }
+    ]
+  }
+}

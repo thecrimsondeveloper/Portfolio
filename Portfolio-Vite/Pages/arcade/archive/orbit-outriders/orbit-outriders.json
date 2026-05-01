@@ -1,0 +1,36 @@
+{
+  "id": "orbit-outriders",
+  "title": "Orbit Salvage Outriders",
+  "summary": "An orbital salvage game where outriders collect drifting wreckage before it decays.",
+  "mode": "orbit",
+  "palette": "orbit",
+  "instructions": "Move the pointer and click orbiting salvage targets to chain pickups before they burn out.",
+  "hud": {
+    "modeLabel": "Salvage Chain"
+  },
+  "overlay": {
+    "startTitle": "Orbit Salvage Outriders",
+    "startCopy": "Salvage wreckage from the orbit field, chain your pickups, and recover enough parts before the pressure peaks.",
+    "startAction": "Start Salvage"
+  },
+  "content": {
+    "coreRadius": 58,
+    "rings": [
+      {
+        "radiusBand": 0.22,
+        "radius": 18,
+        "velocity": 0.9
+      },
+      {
+        "radiusBand": 0.4,
+        "radius": 22,
+        "velocity": 0.55
+      },
+      {
+        "radiusBand": 0.58,
+        "radius": 26,
+        "velocity": 0.38
+      }
+    ]
+  }
+}

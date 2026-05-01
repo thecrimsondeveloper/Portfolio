@@ -1,0 +1,88 @@
+{
+  "steps": [
+    {
+      "id": "01-observe-arcade-state",
+      "title": "Observe Arcade State",
+      "module": "arcade",
+      "goal": "Inspect existing Arcade runtime, schemas, templates, pages, and portfolio data before choosing work.",
+      "prompt": "Report what is true now, what is blocked, and the smallest next useful ArcadeBuilder improvement. Do not edit files."
+    },
+    {
+      "id": "02-expand-seed-flags",
+      "title": "Expand Seed Flags",
+      "module": "intent",
+      "goal": "Turn one-word flags into a compact game intent.",
+      "prompt": "Expand the tiny Arcade flags into a concise game premise, audience feel, and runtime target. Keep output bounded."
+    },
+    {
+      "id": "03-select-runtime-mode",
+      "title": "Select Runtime Mode",
+      "module": "runtime",
+      "goal": "Choose or confirm the shared Arcade runtime mode.",
+      "prompt": "Pick the best existing Arcade runtime mode for the flags. Do not invent a new mode unless the current modes cannot express the idea."
+    },
+    {
+      "id": "04-plan-game-loop",
+      "title": "Plan Game Loop",
+      "module": "gameplay",
+      "goal": "Define the core action, scoring, fail state, and progression loop.",
+      "prompt": "Create a compact loop plan with player action, feedback, scoring, fail state, and one progression idea."
+    },
+    {
+      "id": "05-plan-theme-pack",
+      "title": "Plan Theme Pack",
+      "module": "presentation",
+      "goal": "Define palette, mood, labels, and presentation constraints.",
+      "prompt": "Create a compact theme pack from the flags. Keep it compatible with shared Arcade assets and greybox visuals."
+    },
+    {
+      "id": "06-plan-content-contract",
+      "title": "Plan Content Contract",
+      "module": "content",
+      "goal": "Define reusable content objects and how JSON expresses them.",
+      "prompt": "List the content objects the JSON needs and how the runtime should use them. Stay within existing Arcade runtime patterns."
+    },
+    {
+      "id": "07-plan-schema-fields",
+      "title": "Plan Schema Fields",
+      "module": "schema",
+      "goal": "Identify needed schema or template changes for this game type.",
+      "prompt": "Identify the minimum schema/template fields needed for this idea. Prefer existing fields and name any real gaps."
+    },
+    {
+      "id": "08-fill-json",
+      "title": "Fill JSON",
+      "module": "json",
+      "goal": "Produce schema-bound game JSON only.",
+      "prompt": "Produce JSON-ready decisions only. Do not write JavaScript or invent external assets."
+    },
+    {
+      "id": "09-repair-json",
+      "title": "Repair JSON",
+      "module": "json",
+      "goal": "Fix validation errors without inventing runtime code.",
+      "prompt": "Given validation errors, propose the smallest JSON/schema repair. Preserve the original flags."
+    },
+    {
+      "id": "10-build-arcade-entry",
+      "title": "Build Arcade Entry",
+      "module": "build",
+      "goal": "Write JSON, shell page, and portfolio registration through existing builder code.",
+      "prompt": "Prepare build-ready instructions for the existing Arcade builder. Do not bypass validation."
+    },
+    {
+      "id": "11-validate-build",
+      "title": "Validate Build",
+      "module": "verify",
+      "goal": "Run allowed CLI, NPX, and browser checks.",
+      "prompt": "Verify the ArcadeBuilder output with allowed commands. Do not add smoke or unit tests unless asked."
+    },
+    {
+      "id": "12-recommend-next",
+      "title": "Recommend Next",
+      "module": "handoff",
+      "goal": "Write the next useful packet or finish.",
+      "prompt": "Summarize what should happen next, exact blockers, and the next safe packet if work remains."
+    }
+  ]
+}

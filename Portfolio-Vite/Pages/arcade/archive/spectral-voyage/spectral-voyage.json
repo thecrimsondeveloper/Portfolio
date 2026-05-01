@@ -1,0 +1,25 @@
+{
+  "id": "spectral-voyage",
+  "title": "Memory Voyage",
+  "summary": "A spectral current orbit game where you collect glowing memories before the passage fades.",
+  "mode": "orbit",
+  "palette": "orbit",
+  "instructions": "Move the pointer or tap memory nodes before they drift away.",
+  "hud": {
+    "modeLabel": "Memory Voyage"
+  },
+  "overlay": {
+    "startTitle": "Memory Voyage",
+    "startCopy": "Set sail through spectral currents and collect the glowing memory nodes.",
+    "startAction": "Launch Voyage"
+  },
+  "content": {
+    "orbitSpeed": 1.05,
+    "coreRadius": 86,
+    "rings": [
+      { "radiusBand": 0.16, "radius": 18, "velocity": 0.82 },
+      { "radiusBand": 0.26, "radius": 16, "velocity": 1.22 },
+      { "radiusBand": 0.38, "radius": 14, "velocity": 1.62 }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "lantern-rift-lab",
+  "title": "Lantern Rift Lab",
+  "summary": "A 3D lantern memory lab that lengthens its sequence and quickens its reveal over time.",
+  "mode": "threejs",
+  "palette": "pulse",
+  "instructions": "Watch the lantern sequence, then repeat it with keys 1-4.",
+  "hud": {
+    "modeLabel": "Rift Memory"
+  },
+  "overlay": {
+    "startTitle": "Lantern Rift Lab",
+    "startCopy": "Repeat the glowing lantern pattern and keep the drift sequence alive as it grows.",
+    "startAction": "Start Lab"
+  },
+  "content": {
+    "padCount": 4,
+    "revealSpeed": 0.9,
+    "streakThreshold": 3,
+    "mirrorSequenceAt": 6
+  }
+}

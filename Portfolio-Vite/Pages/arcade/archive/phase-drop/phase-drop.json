@@ -1,0 +1,96 @@
+{
+  "id": "phase-drop",
+  "title": "Neon Phasefall",
+  "summary": "A neon phase experiment where shifting lanes, tiles, and phases must sync to survive.",
+  "mode": "phaseDrop",
+  "palette": "pulse",
+  "instructions": "Use left/right arrows to swap lanes and stay in the active phase while the pulse windows shift.",
+  "hud": {
+    "modeLabel": "Phasefall"
+  },
+  "overlay": {
+    "startTitle": "Neon Phasefall",
+    "startCopy": "Enter the neon phase experiment, read the active phase, and slip between the safe lanes as the drop accelerates.",
+    "startAction": "Start Phasefall"
+  },
+  "settings": {
+    "title": "Phase Settings",
+    "sections": [
+      {
+        "title": "Timing Layer",
+        "controls": [
+          {
+            "key": "difficulty",
+            "label": "Difficulty",
+            "type": "select",
+            "value": "normal",
+            "options": [
+              "easy",
+              "normal",
+              "hard"
+            ]
+          },
+          {
+            "key": "effectIntensity",
+            "label": "Phase Glow",
+            "type": "range",
+            "value": 0.9,
+            "min": 0,
+            "max": 1,
+            "step": 0.05
+          }
+        ]
+      }
+    ]
+  },
+  "help": {
+    "title": "How To Start",
+    "steps": [
+      "Press Start Drop in the center overlay.",
+      "Use Left and Right to switch lanes.",
+      "Match the active phase before the block reaches you.",
+      "Keep your lane aligned with the phase window."
+    ],
+    "tips": [
+      "The safest lane can change as the phase shifts.",
+      "Watch the HUD phase label before each move."
+    ]
+  },
+  "menu": {
+    "title": "Pause Menu",
+    "actions": [
+      {
+        "label": "Resume",
+        "action": "resume"
+      },
+      {
+        "label": "Restart",
+        "action": "restart"
+      },
+      {
+        "label": "Help",
+        "action": "open_help"
+      },
+      {
+        "label": "Settings",
+        "action": "open_settings"
+      }
+    ]
+  },
+  "onboarding": {
+    "title": "Phase Setup",
+    "startSteps": [
+      "Open Help to see the phase timing rule.",
+      "Press Start Drop to begin the lane run.",
+      "Move into the active phase before the block hits."
+    ],
+    "firstGoal": "Survive the first phase cycle and learn the swap rhythm."
+  },
+  "content": {
+    "phases": [
+      "#7d8aff",
+      "#7cf1d0",
+      "#ff7a9e"
+    ]
+  }
+}

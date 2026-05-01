@@ -1,0 +1,59 @@
+{
+  "id": "drift-beat-harbor",
+  "slug": "drift-beat-harbor",
+  "title": "Harbor Beat",
+  "summary": "A beat-based drift challenge that blends rhythm inputs with harbor lane weaving.",
+  "mode": "pulseGrid",
+  "palette": "pulse",
+  "instructions": "Press Space on the active beats to drift through the harbor course and keep the rhythm alive.",
+  "hud": {
+    "modeLabel": "Beat Grid"
+  },
+  "overlay": {
+    "startTitle": "Harbor Beat",
+    "startCopy": "Glide through pulse-synced harbor lanes while matching the beat and avoiding off-rhythm hazards.",
+    "startAction": "Start Drift"
+  },
+  "visuals": {
+    "spriteKey": "padTile",
+    "accentSpriteKey": "padTile",
+    "hazardSpriteKey": "hazardBlock",
+    "trailEffectKey": "smoke",
+    "impactEffectKey": "spark"
+  },
+  "meta": {
+    "summary": "A beat-based drift challenge that blends rhythm inputs with harbor lane weaving.",
+    "goal": "drift beat harbor",
+    "controls": "Press Space on the active beats to drift through the harbor course and keep the rhythm alive.",
+    "paletteLabel": "pulse",
+    "features": [
+      "JSON-driven content",
+      "Shared runtime mode",
+      "Greyboxed visual treatment"
+    ]
+  },
+  "content": {
+    "sequence": [
+      {
+        "cell": 6,
+        "time": 0.2
+      },
+      {
+        "cell": 7,
+        "time": 0.5
+      },
+      {
+        "cell": 12,
+        "time": 0.8
+      },
+      {
+        "cell": 17,
+        "time": 1.1
+      },
+      {
+        "cell": 18,
+        "time": 1.35
+      }
+    ]
+  }
+}

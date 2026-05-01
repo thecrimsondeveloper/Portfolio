@@ -1,0 +1,27 @@
+{
+  "title": "Arcade Relay Run Interactive",
+  "description": "A data-driven three.js + Rapier arcade relay game in a ruined clocktower market.",
+  "objective": "Deliver a package through relay gates while using momentum and physics-based traversal in a reactive environment.",
+  "seed": {
+    "themes": "street level mystery",
+    "environments": "clocktower interior",
+    "settings": "high tide",
+    "characterMotivations": "escape before dawn",
+    "movementMechanics": [
+      "rhythm-based stepping",
+      "slide and vault"
+    ],
+    "coreLoops": "collect scattered pieces",
+    "progressionLoops": "power up a device",
+    "completionLoops": "bridge repair to reconnect route",
+    "rewards": [
+      "upgrade module",
+      "movement mastery"
+    ],
+    "antagonists": "rival explorer",
+    "visualStyles": "hand-painted textures",
+    "audioStyles": "ambient hum",
+    "interactionPatterns": "inventory-lite object use",
+    "productionFocus": "build a single page interactive proof"
+  }
+}

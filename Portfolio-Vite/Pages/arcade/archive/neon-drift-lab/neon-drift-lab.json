@@ -1,0 +1,23 @@
+{
+  "id": "neon-drift-lab",
+  "title": "Neon Drift Lab",
+  "summary": "A neon lab test where drifting lanes and phases collide.",
+  "mode": "phaseDrop",
+  "palette": "pulse",
+  "instructions": "Shift lanes and match the active phase to keep the blocks from colliding.",
+  "hud": {
+    "modeLabel": "Neon Drift Lab"
+  },
+  "overlay": {
+    "startTitle": "Neon Drift Lab",
+    "startCopy": "A neon lab test where drifting lanes and phases collide.",
+    "startAction": "Phase In"
+  },
+  "content": {
+    "phases": [
+      "#7bf1a8",
+      "#8fddff",
+      "#ffde59"
+    ]
+  }
+}

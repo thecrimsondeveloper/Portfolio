@@ -1,0 +1,142 @@
+{
+  "id": "new-runner",
+  "slug": "new-runner",
+  "title": "New Runner",
+  "mode": "runner",
+  "palette": "signal",
+  "instructions": "Move with arrow keys or A / D.",
+  "hud": {
+    "modeLabel": "Infinite Run"
+  },
+  "overlay": {
+    "startTitle": "New Runner",
+    "startCopy": "Greyboxed runner challenge.",
+    "startAction": "Start Run"
+  },
+  "visuals": {
+    "spriteKey": "runnerShip",
+    "accentSpriteKey": "orbNode",
+    "hazardSpriteKey": "hazardBlock",
+    "trailEffectKey": "smoke",
+    "impactEffectKey": "spark"
+  },
+  "settings": {
+    "title": "Settings",
+    "sections": [
+      {
+        "title": "Gameplay",
+        "controls": [
+          {
+            "key": "difficulty",
+            "label": "Difficulty",
+            "type": "select",
+            "value": "normal",
+            "options": [
+              "easy",
+              "normal",
+              "hard"
+            ]
+          },
+          {
+            "key": "effectIntensity",
+            "label": "Effect Intensity",
+            "type": "range",
+            "value": 0.75,
+            "min": 0,
+            "max": 1,
+            "step": 0.05
+          }
+        ]
+      }
+    ]
+  },
+  "help": {
+    "title": "How To Start",
+    "steps": [
+      "Press Start in the center overlay.",
+      "Use the listed controls to begin the run.",
+      "Watch the HUD goal and react to the first pattern."
+    ],
+    "tips": [
+      "Open Settings before the run if you want a different feel.",
+      "Open Menu with Escape to restart or resume."
+    ]
+  },
+  "menu": {
+    "title": "Pause Menu",
+    "actions": [
+      {
+        "label": "Resume",
+        "action": "resume"
+      },
+      {
+        "label": "Restart",
+        "action": "restart"
+      },
+      {
+        "label": "Help",
+        "action": "open_help"
+      },
+      {
+        "label": "Settings",
+        "action": "open_settings"
+      }
+    ]
+  },
+  "onboarding": {
+    "title": "Get Started",
+    "startSteps": [
+      "Open Help if you need the controls.",
+      "Press Start to enter gameplay.",
+      "Learn the first rhythm, route, or hazard pattern before chasing score."
+    ],
+    "firstGoal": "Learn the opening loop and survive the first pressure ramp."
+  },
+  "meta": {
+    "summary": "Greyboxed arcade game built from schema-bound JSON.",
+    "goal": "",
+    "controls": "",
+    "paletteLabel": "",
+    "features": [
+      "JSON-driven content",
+      "Shared runtime mode",
+      "Greyboxed visual treatment"
+    ]
+  },
+  "content": {
+    "lanes": [
+      0.22,
+      0.4,
+      0.58,
+      0.76
+    ],
+    "patterns": [
+      {
+        "lanes": [
+          0
+        ]
+      },
+      {
+        "lanes": [
+          1
+        ]
+      },
+      {
+        "lanes": [
+          2
+        ]
+      },
+      {
+        "lanes": [
+          3
+        ]
+      },
+      {
+        "lanes": [
+          0,
+          2
+        ]
+      }
+    ]
+  }
+}

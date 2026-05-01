@@ -1,0 +1,23 @@
+{
+  "id": "game-3",
+  "title": "Circuit Breaker",
+  "summary": "A phase-based circuit challenge where timing keeps you alive.",
+  "mode": "phaseDrop",
+  "palette": "pulse",
+  "instructions": "Shift lanes and match the active phase to keep the blocks from colliding.",
+  "hud": {
+    "modeLabel": "Circuit Breaker"
+  },
+  "overlay": {
+    "startTitle": "Circuit Breaker",
+    "startCopy": "A phase-based circuit challenge where timing keeps you alive.",
+    "startAction": "Phase In"
+  },
+  "content": {
+    "phases": [
+      "#7bf1a8",
+      "#8fddff",
+      "#ffde59"
+    ]
+  }
+}

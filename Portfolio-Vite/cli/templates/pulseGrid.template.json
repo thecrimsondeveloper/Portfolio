@@ -1,0 +1,130 @@
+{
+  "id": "new-grid",
+  "slug": "new-grid",
+  "title": "New Grid",
+  "mode": "pulseGrid",
+  "palette": "pulse",
+  "instructions": "Press Space on the pulse beats.",
+  "hud": {
+    "modeLabel": "Beat Grid"
+  },
+  "overlay": {
+    "startTitle": "New Grid",
+    "startCopy": "Greyboxed pulse grid challenge.",
+    "startAction": "Start Grid"
+  },
+  "visuals": {
+    "spriteKey": "padTile",
+    "accentSpriteKey": "padTile",
+    "hazardSpriteKey": "hazardBlock",
+    "trailEffectKey": "smoke",
+    "impactEffectKey": "spark"
+  },
+  "settings": {
+    "title": "Settings",
+    "sections": [
+      {
+        "title": "Gameplay",
+        "controls": [
+          {
+            "key": "difficulty",
+            "label": "Difficulty",
+            "type": "select",
+            "value": "normal",
+            "options": [
+              "easy",
+              "normal",
+              "hard"
+            ]
+          },
+          {
+            "key": "effectIntensity",
+            "label": "Effect Intensity",
+            "type": "range",
+            "value": 0.75,
+            "min": 0,
+            "max": 1,
+            "step": 0.05
+          }
+        ]
+      }
+    ]
+  },
+  "help": {
+    "title": "How To Start",
+    "steps": [
+      "Press Start in the center overlay.",
+      "Use the listed controls to begin the run.",
+      "Watch the HUD goal and react to the first pattern."
+    ],
+    "tips": [
+      "Open Settings before the run if you want a different feel.",
+      "Open Menu with Escape to restart or resume."
+    ]
+  },
+  "menu": {
+    "title": "Pause Menu",
+    "actions": [
+      {
+        "label": "Resume",
+        "action": "resume"
+      },
+      {
+        "label": "Restart",
+        "action": "restart"
+      },
+      {
+        "label": "Help",
+        "action": "open_help"
+      },
+      {
+        "label": "Settings",
+        "action": "open_settings"
+      }
+    ]
+  },
+  "onboarding": {
+    "title": "Get Started",
+    "startSteps": [
+      "Open Help if you need the controls.",
+      "Press Start to enter gameplay.",
+      "Learn the first rhythm, route, or hazard pattern before chasing score."
+    ],
+    "firstGoal": "Learn the opening loop and survive the first pressure ramp."
+  },
+  "meta": {
+    "summary": "Greyboxed arcade game built from schema-bound JSON.",
+    "goal": "",
+    "controls": "",
+    "paletteLabel": "",
+    "features": [
+      "JSON-driven content",
+      "Shared runtime mode",
+      "Greyboxed visual treatment"
+    ]
+  },
+  "content": {
+    "sequence": [
+      {
+        "cell": 6,
+        "time": 0.2
+      },
+      {
+        "cell": 7,
+        "time": 0.5
+      },
+      {
+        "cell": 12,
+        "time": 0.8
+      },
+      {
+        "cell": 17,
+        "time": 1.1
+      },
+      {
+        "cell": 18,
+        "time": 1.35
+      }
+    ]
+  }
+}
