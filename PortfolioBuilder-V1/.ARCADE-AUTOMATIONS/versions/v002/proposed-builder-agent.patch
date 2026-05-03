@@ -1,0 +1,16 @@
+diff --git a/.ARCADE-CLI/builder-agent.py b/.ARCADE-CLI/builder-agent.py
+--- a/.ARCADE-CLI/builder-agent.py
++++ b/.ARCADE-CLI/builder-agent.py
+@@
+         if not browser.get("canvasBecameNonblank"):
+             targets.extend(["index.html", "style.css", "game.js"])
++        if browser.get("canvasBecameNonblank") and not browser.get("canvasGainedPixels", True):
++            targets.extend(["index.html", "style.css", "game.js"])
+@@
+         if target == "game.js":
+             return (
+                 "Rules for game.js: wire any visible Start/Play button to start gameplay; draw an initial frame before input; "
+-                "after Start/Play, the canvas must become nonblank within one second; use standard DOM ids gameCanvas and startButton." + common_title_rule
++                "after Start/Play, the canvas must visibly change within one second; use requestAnimationFrame for ongoing gameplay; "
++                "implement the same named mechanics promised in contract.json and story-structure.json; use standard DOM ids gameCanvas and startButton." + common_title_rule
+             )

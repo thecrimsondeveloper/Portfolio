@@ -3,7 +3,7 @@
 ## Registration Changes
 
 - Wrote arcade metadata to /Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/pier-spin-swarm-break/pier-spin-swarm-break.json.
-- Added pier-spin-swarm-break to /Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/arcade-library.json.
+- Updated existing pier-spin-swarm-break entry in /Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/arcade-library.json.
 
 ## Verification Notes
 

@@ -1,0 +1,430 @@
+{
+  "title": "Dock Pulse: Swarm Break",
+  "sourceSummary": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/dock-pulse-swarm-break/brainstorm-summary.json",
+  "sourceSeed": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/dock-pulse-swarm-break/brainstorm-seed.json",
+  "generatedAt": "2026-05-02T00:27:31.524982+00:00",
+  "explorationLevel": "expansive",
+  "generation": {
+    "mode": "lm_studio_chainstorm_style",
+    "endpoint": "http://10.0.0.137:1234/v1/chat/completions",
+    "model": "qwen3.5-2b@q8_0",
+    "temperature": 1.0
+  },
+  "buildReady": true,
+  "injectionReady": true,
+  "oneLinePitch": "An expansive arcade game set between dock and canyon, where the player uses pulse and spike actions to outmaneuver swarm forces and drive an expand-to-upgrade progression arc.",
+  "pageIdentity": {
+    "title": "Dock Pulse: Swarm Break",
+    "slug": "dock-pulse-swarm-break",
+    "description": "An expansive arcade game set between dock and canyon, where the player uses pulse and spike actions to outmaneuver swarm forces and drive an expand-to-upgrade progression arc.",
+    "objective": "Use pulse and spike to survive swarm patrols, secure relic routes, and turn each run into expand, upgrade progress.",
+    "overlayBriefing": "An expansive arcade game set between dock and canyon, where the player uses pulse and spike actions to outmaneuver swarm forces and drive an expand-to-upgrade progression arc.\n\nPlayer uses pulse to stun enemies or spikes to disrupt formations while avoiding swarm hordes through compact runs.\n\nProgression unlocks new pulse abilities and spike variants that alter the tactical approach and expand gameplay depth over time.\n\nConvert each run into expand gains that unlock stronger options and open the next challenge band.",
+    "hudObjective": "Use pulse and spike to survive swarm patrols, secure relic routes, and turn each run into expand, upgrade progress."
+  },
+  "buildPacket": {
+    "featureRoots": [
+      "Movement",
+      "One Enemy Archetype",
+      "One Route Hazard"
+    ],
+    "implementationChapters": [
+      "Movement",
+      "One Enemy Archetype",
+      "One Route Hazard",
+      "Reward Loop",
+      "Full Run Pacing",
+      "Pulse Controls"
+    ],
+    "overlay": {
+      "introTitle": "Dock Pulse: Swarm Break",
+      "introBody": "An expansive arcade game set between dock and canyon, where the player uses pulse and spike actions to outmaneuver swarm forces and drive an expand-to-upgrade progression arc.",
+      "introBriefing": "An expansive arcade game set between dock and canyon, where the player uses pulse and spike actions to outmaneuver swarm forces and drive an expand-to-upgrade progression arc.\n\nPlayer uses pulse to stun enemies or spikes to disrupt formations while avoiding swarm hordes through compact runs.\n\nProgression unlocks new pulse abilities and spike variants that alter the tactical approach and expand gameplay depth over time.\n\nConvert each run into expand gains that unlock stronger options and open the next challenge band.",
+      "startHint": "Press Enter to deploy. Use WASD or Arrow keys to move, Shift to dash, and Space to pulse.",
+      "winTitle": "Route Cleared",
+      "winBody": "The exit gate is live and the relic chain is stable. Press R to run it again.",
+      "lossTitle": "Route Interrupted",
+      "lossBody": "The route collapsed under pressure. Press R to run it again."
+    },
+    "hud": {
+      "objective": "Use pulse and spike to survive swarm patrols, secure relic routes, and turn each run into expand, upgrade progress.",
+      "status": "An expansive arcade game set between dock and canyon, where the player uses pulse and spike actions to outmaneuver swarm forces and drive an expand-to-upgrade progression arc.",
+      "fields": [
+        "objective",
+        "status",
+        "telemetry"
+      ]
+    },
+    "sceneAnchors": {
+      "playerActions": [
+        "pulse",
+        "spike",
+        "dash"
+      ],
+      "enemyTypes": [
+        "swarm",
+        "commander",
+        "pulse"
+      ],
+      "hazards": [
+        "dock",
+        "canyon",
+        "pulse",
+        "ember"
+      ],
+      "progression": [
+        "expand",
+        "upgrade"
+      ]
+    }
+  },
+  "steps": [
+    {
+      "step": "gameplay_time",
+      "question": "How long should one run last before it feels complete?",
+      "answer": "18 minutes",
+      "impact": "Sets encounter density, map size, and upgrade pacing."
+    },
+    {
+      "step": "enemy_types",
+      "question": "Which enemy types define the core pressure of the run?",
+      "answer": [
+        "swarm",
+        "commander",
+        "pulse"
+      ],
+      "impact": "Shapes encounter design, telegraphing, and fail-state tension."
+    },
+    {
+      "step": "player_actions",
+      "question": "Which verbs should the player use constantly?",
+      "answer": [
+        "pulse",
+        "spike",
+        "dash"
+      ],
+      "impact": "Locks the feel of traversal, combat rhythm, and input complexity."
+    },
+    {
+      "step": "progression_goal",
+      "question": "What long-term objective should each run feed into?",
+      "answer": [
+        "expand",
+        "upgrade"
+      ],
+      "impact": "Determines meta progression rewards and run-to-run continuity."
+    },
+    {
+      "step": "world_anchor",
+      "question": "Which environmental anchors keep the world readable and memorable?",
+      "answer": [
+        "dock",
+        "canyon"
+      ],
+      "impact": "Guides art direction, hazard framing, and level landmarks."
+    }
+  ],
+  "randomInjections": [
+    {
+      "type": "environmental_twist",
+      "value": [
+        "dock",
+        "canyon"
+      ],
+      "effect": "Adds a new traversal hazard or alternate route condition."
+    },
+    {
+      "type": "mechanic_modifier",
+      "value": [
+        "rhythm",
+        "relay"
+      ],
+      "effect": "Mutates the core verb set for a late-run variant or upgrade branch."
+    },
+    {
+      "type": "enemy_pressure",
+      "value": [
+        "commander",
+        "pulse"
+      ],
+      "effect": "Introduces a new pressure pattern or elite enemy combination."
+    },
+    {
+      "type": "progression_bonus",
+      "value": [
+        "uncover",
+        "trace"
+      ],
+      "effect": "Creates a reward spike that changes long-term routing decisions."
+    }
+  ],
+  "explorationLoops": [
+    {
+      "loop": 1,
+      "prompt": "Design a 2D top-down arcade game where the player controls a hovercraft navigating dock and canyon terrain to destroy drones using pulse attacks.",
+      "injection": "Add an expand-to-upgrade system that increases vehicle speed, firepower, and shield health as levels are revealed through enemy drops.",
+      "decision": "Implement a grid-based movement system with physics for collision, featuring unique drift mechanics in the harbor zone versus precision aiming in the canyon zone."
+    },
+    {
+      "loop": 2,
+      "prompt": "Create an immersive arcade experience where dock and canyon environments collide with swarming entities using a dual-action combat style.",
+      "injection": "Introduce a core mechanic where the player controls a vehicle or platform that expands, upgrades, and reacts to the swarm's movements through strategic slams and bursts.",
+      "decision": "Deliver a cohesive narrative of survival in shifting landscapes while delivering high-octane gameplay that merges physical mechanics with tactical progression arcs."
+    },
+    {
+      "loop": 3,
+      "prompt": "Create an arcade game where players control a vehicle with pulse and spike actions to fight swarms in a shadowy dock-canyon setting.",
+      "injection": "The core loop must emphasize burst upgrades that scale the player's offensive capabilities dynamically as they clear waves of enemies.",
+      "decision": "Implement a visual style blending neon aesthetics with deep shadows to heighten tension while allowing players to visually distinguish between pulse and spike attacks during combat."
+    },
+    {
+      "loop": 4,
+      "prompt": "Design the game loop using pulse and spike actions to clear swarm enemies while upgrading the vehicle.",
+      "injection": "Introduce a hidden enemy mechanic where stalker units reveal themselves only through spike triggers.",
+      "decision": "Create an expand-to-upgrade progression system where clearing waves unlocks new vehicle dimensions and abilities."
+    }
+  ],
+  "finalSpec": {
+    "sessionLength": "18 minutes",
+    "genre": "arcade action prototype",
+    "playerFantasy": "A strategist navigating a hostile environment with dual-action skills in compact but expressive runs.",
+    "world": {
+      "setting": "Dock meets canyon under attack by swarms of pulse units.",
+      "visualDirection": "Dynamic traversal featuring dark industrial dock tones contrasted against stark canyon landscapes, enhanced by colorful pulse effects and sharp spike animations.",
+      "landmarks": [
+        "dock",
+        "canyon",
+        "pulse",
+        "ember",
+        "harbor"
+      ]
+    },
+    "coreLoop": [
+      "Player uses pulse to stun enemies or spikes to disrupt formations while avoiding swarm hordes through compact runs.",
+      "Progression unlocks new pulse abilities and spike variants that alter the tactical approach and expand gameplay depth over time.",
+      "Convert each run into expand gains that unlock stronger options and open the next challenge band."
+    ],
+    "playerActions": [
+      "pulse",
+      "spike",
+      "dash"
+    ],
+    "enemyTypes": [
+      "swarm",
+      "commander",
+      "pulse"
+    ],
+    "enemyArchetypes": [
+      {
+        "name": "swarm",
+        "role": "pressure chaser",
+        "behavior": "Pushes the player off safe routes and punishes hesitation."
+      },
+      {
+        "name": "commander",
+        "role": "zone controller",
+        "behavior": "Locks down key spaces and forces rerouting."
+      },
+      {
+        "name": "pulse",
+        "role": "ambush disruptor",
+        "behavior": "Breaks steady rhythm and spikes reaction difficulty."
+      }
+    ],
+    "progression": {
+      "metaGoal": [
+        "expand",
+        "upgrade"
+      ],
+      "rewardHooks": [
+        "expand",
+        "upgrade",
+        "pulse",
+        "ascend"
+      ],
+      "runToRunGrowth": "Each run converts performance into expand, upgrade upgrades and route unlocks."
+    },
+    "runStructure": {
+      "opening": "Teach pulse movement and introduce swarm reads in a low-risk dock route.",
+      "midgame": "Layer spike interactions, mixed enemy waves, and injection events from the exploration loops.",
+      "endgame": "Force mastery through stacked hazards, elite swarm encounters, and a final expand choice."
+    },
+    "encounterDesign": {
+      "hazards": [
+        "dock",
+        "canyon",
+        "pulse",
+        "ember"
+      ],
+      "enemyCompositions": [
+        "Implement a grid-based movement system with physics for collision, featuring unique drift mechanics in the harbor zone versus precision aiming in the canyon zone.",
+        "Deliver a cohesive narrative of survival in shifting landscapes while delivering high-octane gameplay that merges physical mechanics with tactical progression arcs.",
+        "Implement a visual style blending neon aesthetics with deep shadows to heighten tension while allowing players to visually distinguish between pulse and spike attacks during combat."
+      ],
+      "difficultyRamp": "Enemy swarms increase in number and aggression as player levels progress, forcing adaptive use of pulse and spike mechanics."
+    },
+    "economy": {
+      "currencies": [
+        "expand",
+        "upgrade",
+        "pulse"
+      ],
+      "spenders": [
+        "environmental_twist",
+        "mechanic_modifier",
+        "enemy_pressure",
+        "progression_bonus"
+      ],
+      "riskReward": "High difficulty ensures survival challenges where precise execution determines success in narrow dock-canyon corridors."
+    },
+    "ui": {
+      "hud": [
+        "health",
+        "charge meter",
+        "route objective",
+        "reward tracker"
+      ],
+      "readabilityGoals": [
+        "fast threat reads",
+        "clear route ownership",
+        "strong reward telegraphing"
+      ]
+    },
+    "audio": {
+      "tone": "Punchy arcade percussion with environmental accents tied to route danger.",
+      "feedback": [
+        "impact stingers",
+        "threat warning pings",
+        "upgrade reward swells"
+      ]
+    },
+    "technicalBuild": {
+      "scope": "Small browser-playable prototype",
+      "systemsNeeded": [
+        "player controller",
+        "enemy director",
+        "upgrade loop",
+        "hazard routing",
+        "HUD"
+      ],
+      "prototypeOrder": [
+        "movement",
+        "one enemy archetype",
+        "one route hazard",
+        "reward loop",
+        "full run pacing"
+      ]
+    }
+  },
+  "fallbackSource": "",
+  "gameDesignProfile": {
+    "seedContract": {
+      "sourceSeed": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-br8l843d/brainstorm-seed.json",
+      "sourceSummary": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-br8l843d/brainstorm-summary.json",
+      "sourceSamples": {
+        "environment": [
+          "dock",
+          "canyon",
+          "pulse",
+          "ember",
+          "harbor",
+          "storm",
+          "wind"
+        ],
+        "mechanics": [
+          "pulse",
+          "spike",
+          "haul",
+          "pivot",
+          "slam",
+          "grab",
+          "spark"
+        ],
+        "enemies": [
+          "swarm",
+          "commander",
+          "pulse",
+          "drone",
+          "stalker",
+          "marker"
+        ],
+        "progression": [
+          "expand",
+          "upgrade",
+          "pulse",
+          "ascend",
+          "reveal",
+          "evolve",
+          "unlock"
+        ]
+      },
+      "seed": {
+        "themes": "urban parkour delivery",
+        "genres": "survival arena",
+        "environments": "rooftop maintenance rails",
+        "settings": "midsummer heat",
+        "characterMotivations": "protect the neighborhood",
+        "movementMechanics": [
+          "mirror walking",
+          "momentum-based rolling"
+        ],
+        "coreLoops": "trace signal patterns",
+        "progressionLoops": "gain movement upgrades",
+        "completionLoops": "boss hunt",
+        "rewards": [
+          "resource caches",
+          "boss unlock"
+        ],
+        "antagonists": "ancient guardian",
+        "visualStyles": "hand-painted textures",
+        "audioStyles": "ambient hum",
+        "interactionPatterns": "environmental interaction first",
+        "productionFocus": "prototype in directory with JSON and HTML only",
+        "cameraModes": "cinematic follow wide-read",
+        "arenaShapes": "patrol grid with bridges",
+        "primaryVerbs": "repair around patrols",
+        "scoringModels": "delivery value no-hit bonus",
+        "failureModes": "resource depleted while carrying",
+        "enemyBehaviors": "summon hazards slow pattern",
+        "objectiveStructures": "repair network with limited resource",
+        "resourceSystems": "noise risk overflow",
+        "levelProgression": "escalating waves with checkpoints",
+        "twistConstraints": "decaying floor for finale"
+      }
+    },
+    "mechanicFamily": "stealth patrol",
+    "runtimeTemplate": "stealth_patrol",
+    "pacing": "18 minutes",
+    "spatialStructure": "patrol grid",
+    "failurePressure": [
+      "swarm",
+      "commander",
+      "pulse",
+      "dock",
+      "canyon",
+      "ember"
+    ],
+    "progressionShape": [
+      "expand",
+      "upgrade",
+      "expand",
+      "upgrade",
+      "pulse",
+      "ascend",
+      "Each run converts performance into expand, upgrade upgrades and route unlocks."
+    ],
+    "presentationRules": [
+      "Dock meets canyon under attack by swarms of pulse units.",
+      "Dynamic traversal featuring dark industrial dock tones contrasted against stark canyon landscapes, enhanced by colorful pulse effects and sharp spike animations.",
+      "fast threat reads",
+      "clear route ownership",
+      "strong reward telegraphing"
+    ],
+    "mustPreserve": [
+      "Preserve the randomized seed contract through every stage.",
+      "Treat final-brainstorming.json as the canonical game specification.",
+      "Keep the generated game self-contained in one Pages/<slug>/ folder.",
+      "Make runtime behavior match runtimeTemplate instead of defaulting to one arena scaffold."
+    ],
+    "fallbackSource": ""
+  }
+}

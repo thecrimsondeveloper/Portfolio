@@ -1,0 +1,283 @@
+{
+  "gameTitle": "Dock Spin Swarm Break",
+  "profile": {
+    "seedContract": {
+      "sourceSeed": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-3jhsal3w/brainstorm-seed.json",
+      "sourceSummary": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-3jhsal3w/brainstorm-summary.json",
+      "sourceSamples": {
+        "environment": [
+          "dock",
+          "canyon",
+          "pulse",
+          "ice",
+          "ember",
+          "wind",
+          "storm"
+        ],
+        "mechanics": [
+          "spin",
+          "stack",
+          "root",
+          "dash",
+          "slam",
+          "grab",
+          "guide"
+        ],
+        "enemies": [
+          "swarm",
+          "commander",
+          "pulse",
+          "guard",
+          "stalker",
+          "sentry",
+          "storm"
+        ],
+        "progression": [
+          "expand",
+          "upgrade",
+          "pulse",
+          "unlock",
+          "ascend",
+          "surge",
+          "reveal"
+        ]
+      },
+      "seed": {
+        "themes": "circuitry puzzle chase",
+        "genres": "escape arcade",
+        "environments": "flooded market district",
+        "settings": "harsh winter",
+        "characterMotivations": "unmask a hidden group",
+        "movementMechanics": [
+          "rhythm-based stepping",
+          "stealth crouch"
+        ],
+        "coreLoops": "guide a companion through hazards",
+        "progressionLoops": "rescue allies",
+        "completionLoops": "vault extraction",
+        "rewards": [
+          "story fragments",
+          "artifact sets"
+        ],
+        "antagonists": "unstable machinery",
+        "visualStyles": "wet concrete",
+        "audioStyles": "breathy wind soundscape",
+        "interactionPatterns": "point-and-click traversal",
+        "productionFocus": "build a single page interactive proof",
+        "cameraModes": "isometric room-snap",
+        "arenaShapes": "vertical tower with bridges",
+        "primaryVerbs": "redirect with timing",
+        "scoringModels": "artifact streak perfect clear",
+        "failureModes": "resource depleted at low stamina",
+        "enemyBehaviors": "block routes lane pattern",
+        "objectiveStructures": "escort target without alarm",
+        "resourceSystems": "battery risk overflow",
+        "levelProgression": "branching routes with secret exits",
+        "twistConstraints": "no stopping during alarms"
+      }
+    },
+    "mechanicFamily": "route runner",
+    "runtimeTemplate": "route_runner",
+    "pacing": "18 minutes",
+    "spatialStructure": "lane route",
+    "failurePressure": [
+      "drone",
+      "sentinel",
+      "watch",
+      "dock",
+      "canyon",
+      "pulse",
+      "ice"
+    ],
+    "progressionShape": [
+      "expand",
+      "pulse",
+      "expand",
+      "upgrade",
+      "pulse",
+      "unlock",
+      "Each run converts performance into expand, pulse upgrades and route unlocks."
+    ],
+    "presentationRules": [
+      "A blend of dock, canyon, pulse into a hostile space patrolled by drone swarms, commanders, and pulsing energy.",
+      "Expressive runs focused on compact environments that demand precise spin and stack mechanics.",
+      "fast threat reads",
+      "clear route ownership",
+      "strong reward telegraphing"
+    ],
+    "mustPreserve": [
+      "Preserve the randomized seed contract through every stage.",
+      "Treat final-brainstorming.json as the canonical game specification.",
+      "Keep the generated game self-contained in one Pages/<slug>/ folder.",
+      "Make runtime behavior match runtimeTemplate instead of defaulting to one arena scaffold."
+    ],
+    "fallbackSource": ""
+  },
+  "canonicalPaths": {
+    "targetDir": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/dock-spin-swarm-break",
+    "brainstormSeed": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/dock-spin-swarm-break/brainstorm-seed.json",
+    "brainstormSummary": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/dock-spin-swarm-break/brainstorm-summary.json",
+    "finalBrainstorm": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/dock-spin-swarm-break/final-brainstorming.json",
+    "story": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/dock-spin-swarm-break/story-structure.json",
+    "gameScript": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/dock-spin-swarm-break/game.js"
+  },
+  "seedCombination": {
+    "themes": "circuitry puzzle chase",
+    "genres": "escape arcade",
+    "environments": "flooded market district",
+    "settings": "harsh winter",
+    "characterMotivations": "unmask a hidden group",
+    "movementMechanics": [
+      "rhythm-based stepping",
+      "stealth crouch"
+    ],
+    "coreLoops": "guide a companion through hazards",
+    "progressionLoops": "rescue allies",
+    "completionLoops": "vault extraction",
+    "rewards": [
+      "story fragments",
+      "artifact sets"
+    ],
+    "antagonists": "unstable machinery",
+    "visualStyles": "wet concrete",
+    "audioStyles": "breathy wind soundscape",
+    "interactionPatterns": "point-and-click traversal",
+    "productionFocus": "build a single page interactive proof",
+    "cameraModes": "isometric room-snap",
+    "arenaShapes": "vertical tower with bridges",
+    "primaryVerbs": "redirect with timing",
+    "scoringModels": "artifact streak perfect clear",
+    "failureModes": "resource depleted at low stamina",
+    "enemyBehaviors": "block routes lane pattern",
+    "objectiveStructures": "escort target without alarm",
+    "resourceSystems": "battery risk overflow",
+    "levelProgression": "branching routes with secret exits",
+    "twistConstraints": "no stopping during alarms"
+  },
+  "stageHistory": [
+    {
+      "stage": "stage-1-brainstorm-pipeline",
+      "event": "stage",
+      "summary": "Locked final-brainstorming.json and initialized gameDesignProfile."
+    },
+    {
+      "stage": "stage-2-concept-materialization",
+      "event": "stage",
+      "summary": "Materialized concept from locked brainstorm packet."
+    },
+    {
+      "stage": "stage-3-feature-sprint-loop",
+      "event": "stage",
+      "summary": "Derived feature sprint packets from canonical brainstorm data."
+    },
+    {
+      "stage": "stage-4-design-assembly",
+      "event": "stage",
+      "summary": "Assembled design document."
+    },
+    {
+      "stage": "stage-5-build-planning-loop",
+      "event": "stage",
+      "summary": "Derived fun assessment and implementation chapters."
+    },
+    {
+      "stage": "stage-6-story-and-scaffold-materialization",
+      "event": "stage",
+      "summary": "Created story payload and runtime scaffold for route_runner."
+    },
+    {
+      "stage": "stage-7-html-review-loop",
+      "event": "stage",
+      "summary": "Completed HTML shell review pass."
+    },
+    {
+      "stage": "implementation_pass",
+      "event": "memoryUpdate",
+      "summary": "Pass 1 prioritized movement and route-feedback tuning over broader AI or hazard changes."
+    },
+    {
+      "stage": "implementation_pass",
+      "event": "memoryUpdate",
+      "summary": "Pass 2 selected a single blocker enemy and dock-surge hazard to finish the first distinct gameplay version."
+    },
+    {
+      "stage": "stage-8-implementation-sprint-loop",
+      "event": "stage",
+      "summary": "Completed configured implementation sprint passes."
+    },
+    {
+      "stage": "validation_loop",
+      "event": "memoryUpdate",
+      "summary": "Validation loop 1 confirmed the main gaps are still runtime feel, blocker clarity, and copy alignment rather than file structure."
+    },
+    {
+      "stage": "validation_loop",
+      "event": "memoryUpdate",
+      "summary": "Validation loop 2 closed the planning gate and reduced the remaining work to one concrete repair set plus smoke checks."
+    },
+    {
+      "stage": "stage-9-validation-repair-loop",
+      "event": "stage",
+      "summary": "Completed configured validation loops."
+    },
+    {
+      "stage": "stage-10-arcade-integration-loop",
+      "event": "stage",
+      "summary": "Completed arcade integration loop."
+    },
+    {
+      "stage": "implementation_pass",
+      "event": "memoryUpdate",
+      "summary": "Implemented the first movement pass for Dock Spin."
+    },
+    {
+      "stage": "validation_loop",
+      "event": "memoryUpdate",
+      "summary": "Completed first validation loop. Moving to arcade integration after one final tweak."
+    }
+  ],
+  "decisions": [
+    "Chose Movement as the first implementation packet.",
+    "Preserved the existing runtime scaffold and focused on feel plus UI language.",
+    "Chose One Enemy Archetype as the second implementation packet.",
+    "Bundled one dock hazard specialization with the enemy pass to keep the route fantasy coherent.",
+    "Kept HTML and JSON rewrite gates closed.",
+    "Prioritized direct runtime repair in game.js over broad scaffold regeneration.",
+    "Stopped the validation loop after consolidating the smallest viable repair plan.",
+    "Kept both rewrite gates closed because targeted edits remain sufficient.",
+    "Used 20 rad/s for spin speed.",
+    "Renamed gates to Refine Gates.",
+    "Decided to add continuous velocity-based spin."
+  ],
+  "rejectedIdeas": [
+    "Skipped a broad enemy-system rewrite in pass 1.",
+    "Skipped full shell redesign because the current layout is already serviceable.",
+    "Skipped adding multiple enemy families in the same pass.",
+    "Skipped a broader level-layout rewrite because the current scaffold can support a blocker pattern.",
+    "Rejected full file rewrites because the current scaffold is already serviceable.",
+    "Rejected manifest changes before gameplay validation is complete.",
+    "Rejected a third speculative validation loop before implementation.",
+    "Rejected full scaffold regeneration.",
+    "Rejected adding a full trail effect until Stage 10."
+  ],
+  "openIssues": [
+    "Current enemy and hazard behavior may still feel generic after the movement pass.",
+    "Validation still needs to confirm the finished runtime feels specific enough in-browser.",
+    "The shipped files still need the planned movement, blocker, and hazard repairs.",
+    "Arcade registration should wait until smoke validation passes on the repaired runtime.",
+    "The runtime edits and smoke validation still need to be executed before the build is truly validated.",
+    "Need to add the 'Shock' enemy logic in the next pass."
+  ],
+  "nextStageNotes": [
+    "Second pass should specialize one enemy archetype or one route hazard.",
+    "Validation should confirm the runtime feels distinct from the default arena template.",
+    "Validation should check that movement, blockers, and hazard pressure all read as one coherent dock extraction loop.",
+    "Arcade integration should register the page only after the smoke checks pass.",
+    "Next validation pass should confirm the repaired runtime feels distinct in browser.",
+    "Close the continue gate only after the remaining runtime-specific issues are resolved or explicitly accepted.",
+    "Arcade integration can register the page structure now, but final confidence depends on post-edit smoke validation.",
+    "Implement the repair plan immediately after the CLI flow completes.",
+    "Focus on the 'One Enemy Archetype' slice next.",
+    "Almost ready for Stage 10."
+  ]
+}

@@ -1,0 +1,531 @@
+{
+  "id": "ember-shift-void-relay",
+  "title": "Ember Shift: Void Relay",
+  "description": "A high-stakes survival game in a collapsing nebula. Shift between dimensions to bypass unstable matter.",
+  "objective": "",
+  "seed": {},
+  "hook": "Ember Shift: Void Relay turns the current seed into a readable arcade challenge.",
+  "uniqueness": "Ember Shift: Void Relay uses root, petal, sprint inside storm-lit arena lanes, high-contrast enemy silhouettes, rainy neon reflections.",
+  "controls": [
+    "WASD or Arrow keys move the player through the arena.",
+    "Shift triggers a sprint burst for repositioning.",
+    "Space converts root and petal pressure into crowd control.",
+    "Press Enter to deploy. Use WASD or Arrow keys to move, Shift to dash, and Space to pulse."
+  ],
+  "fun": {
+    "assessment": "yes - Ember Shift: Void Relay has a readable arcade core built around root, petal against enemy pressure, route hazards with a clear payoff in Relay the core data to the extraction point before the nebula collapses., route unlocks.",
+    "needs": [
+      "WASD or Arrow keys move the player through the arena.",
+      "Shift triggers a sprint burst for repositioning.",
+      "enemy pressure",
+      "route hazards",
+      "Relay the core data to the extraction point before the nebula collapses."
+    ]
+  },
+  "design": {
+    "summary": "Ember Shift: Void Relay turns the current seed into a readable arcade challenge.",
+    "details": "## Ember Shift: Void Relay\n\n\t\t**Description:** A high-stakes survival game in a collapsing nebula. Shift between dimensions to bypass unstable matter.\n\n\t\t**Objective:** Relay the core data to the extraction point before the nebula collapses.\n\n\t\t**Seed Summary:**\n\t\tGenerated game seed combination:\n- Themes: ritual archaeology\n- Genres: escape arcade\n- Environments: subterranean library\n- Settings: high tide\n- Character motivations: learn a forgotten ritual\n- Movement mechanics: rhythm-based stepping, grapple and zipline\n- Core loops: guide a companion through hazards\n- Progression loops: assemble a map\n- Completion loops: boss hunt\n- Rewards: collectibles, resource caches\n- Antagonists: rival explorer\n- Visual styles: cinematic noir lighting\n- Audio styles: sparse piano\n- Interaction patterns: environmental interaction first\n- Production focus: focus on emergent loops\n- Camera modes: node-map lane-shift\n- Arena shapes: lanes with safe islands\n- Primary verbs: trade around patrols\n- Scoring models: stealth rating resource bonus\n- Failure modes: crushed by hazards\n- Enemy behaviors: summon hazards combo-triggered\n- Objective structures: repair network in split routes\n- Resource systems: oxygen combo refill\n- Level progression: single run with hard gates\n- Twist constraints: reversed controls zone after route split\n- Weather effects: gravity waves variation 11 variation 59\n- Ui aesthetics: minimalist vector variation 19 variation 36 variation 63\n- Movement quirks: teleport dashes variation 14 variation 43 variation 58\n- Environmental hazards: crushing walls variation 19 variation 26 variation 41\n- Power sources: battery cells variation 76\n- Lighting styles: low-key variation 10 variation 24 variation 71\n- Narrative tone: existential variation 19 variation 42\n- Death animations: shattering glass variation 27 variation 72\n- Crowd dynamics: curious wildlife variation 35 variation 45\n- Map modifiers: infinite loop variation 12 variation 18 variation 23 variation 49 variation 50 variation 86\n- Soundscapes: mechanical heartbeat variation 64 variation 83\n- Color palettes: emerald toxic variation 15 variation 26 variation 92\n- Architecture: modular space station variation 63 variation 84\n- Artifact types: bio-samples variation 89 variation 92\n- Game tempo: burst-driven variation 10 variation 31 variation 32\n- Boss mechanics: phased transformation variation 18 variation 24 variation 47\n- Player perks: invisibility cloak variation 13 variation 26 variation 50\n- Enemy archetypes: tankers variation 23 variation 36\n- Narrative stakes: prevent the collapse\n- Post processing: depth of field variation 12 variation 26 variation 33\n\n\t\t## Core Fantasy\n\n\t\tEmber Shift: Void Relay turns the current seed into a readable arcade challenge.\n\n\t\t## Why This Game Is Distinct\n\n\t\tEmber Shift: Void Relay uses root, petal, sprint inside storm-lit arena lanes, high-contrast enemy silhouettes, rainy neon reflections.\n\n\t\t## Player Actions\n\n- root\n- petal\n- sprint\n\n\t\t## Core Loop\n\n- Enter the route and read the first threat.\n- Use the core verb set to resolve the active pressure.\n- Convert the current room into progression gain.\n- Trigger the completion condition and finish the playfield.\n\n\t\t## Pressure And Opposition\n\n- enemy pressure\n- route hazards\n- time pressure\n\n\t\t## Rewards And Progression\n\n- Relay the core data to the extraction point before the nebula collapses.\n- route unlocks\n- new ability gains\n\n\t\t## Failure States\n\n- Get overwhelmed by enemy pressure.\n- Run out of time before the completion condition unlocks.\n- Lose health by lingering in active hazard lanes.\n\n\t\t## Visual Identity\n\n- storm-lit arena lanes\n- high-contrast enemy silhouettes\n- rainy neon reflections\n- goal-first readability\n\n\t\t## Controls And Readability\n\n- WASD or Arrow keys move the player through the arena.\n- Shift triggers a sprint burst for repositioning.\n- Space converts root and petal pressure into crowd control.\n- Press Enter to deploy. Use WASD or Arrow keys to move, Shift to dash, and Space to pulse.\n\n\t\t## JSON Data Hooks\n\n- scene layout\n- enemy waves\n- objective rewards\n- goal unlock state\n- brainstorm final spec\n\n\t\t## Sprint Builder Branches\n\t\t### Root\n\n\t\t\t\t- Player promise: The player immediately feels how root improves the route and unlocks Relay the core data to the extraction point before the nebula collapses..\n\t\t\t\t- Sprint objective: Implement the root slice so the player can reliably feel root under enemy pressure.\n\t\t\t\t- Change packet scope: game.js, story-structure.json, index.html\n\t\t\t\t- Simulated checkpoints: Root is driven by canonical brainstorm data rather than ad hoc prompt output., Root is visible in live play within the first minute of a run.\n\n\t\t\t\t#### Detail Fractalization\n\t\t\t\t- Root core slice\n  - Implement the root behavior in the main loop.\n  - Wire root data into story-structure.json and runtime state.\n- Root feedback pass\n  - Expose clear HUD and overlay feedback for root.\n  - Validate that root stays readable during pressure spikes.\n\n### Petal\n\n\t\t\t\t- Player promise: The player immediately feels how petal improves the route and unlocks route unlocks.\n\t\t\t\t- Sprint objective: Implement the petal slice so the player can reliably feel petal under route hazards.\n\t\t\t\t- Change packet scope: game.js, story-structure.json, index.html\n\t\t\t\t- Simulated checkpoints: Petal is driven by canonical brainstorm data rather than ad hoc prompt output., Petal is visible in live play within the first minute of a run.\n\n\t\t\t\t#### Detail Fractalization\n\t\t\t\t- Petal core slice\n  - Implement the petal behavior in the main loop.\n  - Wire petal data into story-structure.json and runtime state.\n- Petal feedback pass\n  - Expose clear HUD and overlay feedback for petal.\n  - Validate that petal stays readable during pressure spikes.\n\n### Sprint\n\n\t\t\t\t- Player promise: The player immediately feels how sprint improves the route and unlocks new ability gains.\n\t\t\t\t- Sprint objective: Implement the sprint slice so the player can reliably feel sprint under time pressure.\n\t\t\t\t- Change packet scope: game.js, story-structure.json, index.html\n\t\t\t\t- Simulated checkpoints: Sprint is driven by canonical brainstorm data rather than ad hoc prompt output., Sprint is visible in live play within the first minute of a run.\n\n\t\t\t\t#### Detail Fractalization\n\t\t\t\t- Sprint core slice\n  - Implement the sprint behavior in the main loop.\n  - Wire sprint data into story-structure.json and runtime state.\n- Sprint feedback pass\n  - Expose clear HUD and overlay feedback for sprint.\n  - Validate that sprint stays readable during pressure spikes.\n\n\t\t## Delivery Notes\n\n\t\t- Keep this game self-contained inside its own page folder.\n\t\t- Keep the HTML entry point and story JSON in the same folder.\n\t\t- Preserve a three.js + Rapier prototype structure.\n\t\t- Favor game-specific logic over shared systems.\n\t\t- Use branch-specific change packets to plan the next sprint in isolated slices.\n\n## Fun Game Assessment\n\n\t\t- Assessment: yes - Ember Shift: Void Relay has a readable arcade core built around root, petal against enemy pressure, route hazards with a clear payoff in Relay the core data to the extraction point before the nebula collapses., route unlocks.\n\n\t\t### Things Needed To Make This Game Fun\n\n- WASD or Arrow keys move the player through the arena.\n- Shift triggers a sprint burst for repositioning.\n- enemy pressure\n- route hazards\n- Relay the core data to the extraction point before the nebula collapses.\n",
+    "chapters": [
+      "Core Movement Loop",
+      "Threat Pressure Pass",
+      "Reward And Goal Flow",
+      "Presentation And Overlay Polish"
+    ]
+  },
+  "brainstorm": {
+    "seedFile": "seed_brainstorming.json",
+    "summaryFile": "summary_brainstorming.json",
+    "finalFile": "final-brainstorming.json",
+    "oneLinePitch": "Ember Shift: Void Relay turns the current seed into a readable arcade challenge.",
+    "steps": [],
+    "randomInjections": [],
+    "explorationLoops": [],
+    "finalSpec": {}
+  },
+  "gameDesignProfile": {
+    "seedContract": {
+      "seed": {
+        "themes": "ritual archaeology",
+        "genres": "escape arcade",
+        "environments": "subterranean library",
+        "settings": "high tide",
+        "characterMotivations": "learn a forgotten ritual",
+        "movementMechanics": [
+          "rhythm-based stepping",
+          "grapple and zipline"
+        ],
+        "coreLoops": "guide a companion through hazards",
+        "progressionLoops": "assemble a map",
+        "completionLoops": "boss hunt",
+        "rewards": [
+          "collectibles",
+          "resource caches"
+        ],
+        "antagonists": "rival explorer",
+        "visualStyles": "cinematic noir lighting",
+        "audioStyles": "sparse piano",
+        "interactionPatterns": "environmental interaction first",
+        "productionFocus": "focus on emergent loops",
+        "cameraModes": "node-map lane-shift",
+        "arenaShapes": "lanes with safe islands",
+        "primaryVerbs": "trade around patrols",
+        "scoringModels": "stealth rating resource bonus",
+        "failureModes": "crushed by hazards",
+        "enemyBehaviors": "summon hazards combo-triggered",
+        "objectiveStructures": "repair network in split routes",
+        "resourceSystems": "oxygen combo refill",
+        "levelProgression": "single run with hard gates",
+        "twistConstraints": "reversed controls zone after route split",
+        "weatherEffects": "gravity waves variation 11 variation 59",
+        "uiAesthetics": "minimalist vector variation 19 variation 36 variation 63",
+        "movementQuirks": "teleport dashes variation 14 variation 43 variation 58",
+        "environmentalHazards": "crushing walls variation 19 variation 26 variation 41",
+        "powerSources": "battery cells variation 76",
+        "lightingStyles": "low-key variation 10 variation 24 variation 71",
+        "narrativeTone": "existential variation 19 variation 42",
+        "deathAnimations": "shattering glass variation 27 variation 72",
+        "crowdDynamics": "curious wildlife variation 35 variation 45",
+        "mapModifiers": "infinite loop variation 12 variation 18 variation 23 variation 49 variation 50 variation 86",
+        "soundscapes": "mechanical heartbeat variation 64 variation 83",
+        "colorPalettes": "emerald toxic variation 15 variation 26 variation 92",
+        "architecture": "modular space station variation 63 variation 84",
+        "artifactTypes": "bio-samples variation 89 variation 92",
+        "gameTempo": "burst-driven variation 10 variation 31 variation 32",
+        "bossMechanics": "phased transformation variation 18 variation 24 variation 47",
+        "playerPerks": "invisibility cloak variation 13 variation 26 variation 50",
+        "enemyArchetypes": "tankers variation 23 variation 36",
+        "narrativeStakes": "prevent the collapse",
+        "postProcessing": "depth of field variation 12 variation 26 variation 33"
+      },
+      "sourceSeed": null,
+      "sourceSummary": null,
+      "sourceSamples": {}
+    },
+    "mechanicFamily": "route runner",
+    "runtimeTemplate": "route_runner",
+    "pacing": "short readable arcade run",
+    "spatialStructure": "lane route",
+    "failurePressure": [],
+    "progressionShape": [],
+    "presentationRules": [],
+    "mustPreserve": [
+      "Preserve the randomized seed contract through every stage.",
+      "Treat final-brainstorming.json as the canonical game specification.",
+      "Keep the generated game self-contained in one Pages/<slug>/ folder.",
+      "Make runtime behavior match runtimeTemplate instead of defaulting to one arena scaffold."
+    ],
+    "fallbackSource": ""
+  },
+  "sprintBuilder": {
+    "mode": "branching feature design loop",
+    "detailFractalization": true,
+    "featureBranches": [
+      {
+        "feature": "Root",
+        "sprintObjective": "Implement the root slice so the player can reliably feel root under enemy pressure.",
+        "playerPromise": "The player immediately feels how root improves the route and unlocks Relay the core data to the extraction point before the nebula collapses..",
+        "checkpoints": [
+          "Root is driven by canonical brainstorm data rather than ad hoc prompt output.",
+          "Root is visible in live play within the first minute of a run."
+        ],
+        "acceptance": [
+          "The player can describe what root does after one run.",
+          "Root remains readable without breaking the current arena loop."
+        ],
+        "scope": [
+          "game.js",
+          "story-structure.json",
+          "index.html"
+        ],
+        "risks": [
+          "Root could sprawl beyond the canonical build packet if extra systems are added.",
+          "Root could reduce readability if feedback does not stay compact."
+        ],
+        "branches": [
+          {
+            "branch": "Root core slice",
+            "tasks": [
+              "Implement the root behavior in the main loop.",
+              "Wire root data into story-structure.json and runtime state."
+            ]
+          },
+          {
+            "branch": "Root feedback pass",
+            "tasks": [
+              "Expose clear HUD and overlay feedback for root.",
+              "Validate that root stays readable during pressure spikes."
+            ]
+          }
+        ]
+      },
+      {
+        "feature": "Petal",
+        "sprintObjective": "Implement the petal slice so the player can reliably feel petal under route hazards.",
+        "playerPromise": "The player immediately feels how petal improves the route and unlocks route unlocks.",
+        "checkpoints": [
+          "Petal is driven by canonical brainstorm data rather than ad hoc prompt output.",
+          "Petal is visible in live play within the first minute of a run."
+        ],
+        "acceptance": [
+          "The player can describe what petal does after one run.",
+          "Petal remains readable without breaking the current arena loop."
+        ],
+        "scope": [
+          "game.js",
+          "story-structure.json",
+          "index.html"
+        ],
+        "risks": [
+          "Petal could sprawl beyond the canonical build packet if extra systems are added.",
+          "Petal could reduce readability if feedback does not stay compact."
+        ],
+        "branches": [
+          {
+            "branch": "Petal core slice",
+            "tasks": [
+              "Implement the petal behavior in the main loop.",
+              "Wire petal data into story-structure.json and runtime state."
+            ]
+          },
+          {
+            "branch": "Petal feedback pass",
+            "tasks": [
+              "Expose clear HUD and overlay feedback for petal.",
+              "Validate that petal stays readable during pressure spikes."
+            ]
+          }
+        ]
+      },
+      {
+        "feature": "Sprint",
+        "sprintObjective": "Implement the sprint slice so the player can reliably feel sprint under time pressure.",
+        "playerPromise": "The player immediately feels how sprint improves the route and unlocks new ability gains.",
+        "checkpoints": [
+          "Sprint is driven by canonical brainstorm data rather than ad hoc prompt output.",
+          "Sprint is visible in live play within the first minute of a run."
+        ],
+        "acceptance": [
+          "The player can describe what sprint does after one run.",
+          "Sprint remains readable without breaking the current arena loop."
+        ],
+        "scope": [
+          "game.js",
+          "story-structure.json",
+          "index.html"
+        ],
+        "risks": [
+          "Sprint could sprawl beyond the canonical build packet if extra systems are added.",
+          "Sprint could reduce readability if feedback does not stay compact."
+        ],
+        "branches": [
+          {
+            "branch": "Sprint core slice",
+            "tasks": [
+              "Implement the sprint behavior in the main loop.",
+              "Wire sprint data into story-structure.json and runtime state."
+            ]
+          },
+          {
+            "branch": "Sprint feedback pass",
+            "tasks": [
+              "Expose clear HUD and overlay feedback for sprint.",
+              "Validate that sprint stays readable during pressure spikes."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "scene": {
+    "arena": {
+      "width": 30,
+      "depth": 86,
+      "groundColor": "#08101d",
+      "laneColor": "#284d7a",
+      "accentColor": "#ffd166",
+      "fogColor": "#091120",
+      "skyColor": "#050813"
+    },
+    "player": {
+      "start": {
+        "x": 0,
+        "y": 0.9,
+        "z": 34
+      },
+      "radius": 0.9,
+      "color": "#8bd8ff",
+      "speed": 9.6,
+      "dashSpeed": 28.0,
+      "dashCooldown": 1.35,
+      "pulseRadius": 5.5,
+      "pulseCooldown": 2.8,
+      "maxHealth": 100
+    },
+    "goal": {
+      "position": {
+        "x": 0,
+        "y": 0.4,
+        "z": -36
+      },
+      "radius": 2.6,
+      "color": "#7df9ff",
+      "unlockRelics": 3
+    },
+    "relics": [
+      {
+        "label": "Signal",
+        "position": {
+          "x": -8,
+          "y": 1.2,
+          "z": 22
+        },
+        "color": "#7cffc9"
+      },
+      {
+        "label": "Mystery",
+        "position": {
+          "x": 7,
+          "y": 1.2,
+          "z": 9
+        },
+        "color": "#8bd8ff"
+      },
+      {
+        "label": "Charge",
+        "position": {
+          "x": -5,
+          "y": 1.2,
+          "z": -4
+        },
+        "color": "#ffd166"
+      },
+      {
+        "label": "Route",
+        "position": {
+          "x": 6,
+          "y": 1.2,
+          "z": -17
+        },
+        "color": "#ff9ed1"
+      },
+      {
+        "label": "Bloom",
+        "position": {
+          "x": 0,
+          "y": 1.2,
+          "z": -30
+        },
+        "color": "#f6ff7d"
+      }
+    ],
+    "enemies": [
+      {
+        "name": "Guard",
+        "role": "pressure chaser",
+        "position": {
+          "x": -11,
+          "y": 0.9,
+          "z": 16
+        },
+        "speed": 1.45,
+        "radius": 1.0,
+        "color": "#ff8c69",
+        "pursuitRange": 12
+      },
+      {
+        "name": "Warden",
+        "role": "pressure chaser",
+        "position": {
+          "x": 11,
+          "y": 0.9,
+          "z": 2
+        },
+        "speed": 1.63,
+        "radius": 1.08,
+        "color": "#ff4f7a",
+        "pursuitRange": 12
+      },
+      {
+        "name": "Commander",
+        "role": "pressure chaser",
+        "position": {
+          "x": -9,
+          "y": 0.9,
+          "z": -12
+        },
+        "speed": 1.81,
+        "radius": 1.16,
+        "color": "#ffd166",
+        "pursuitRange": 12
+      }
+    ],
+    "hazards": [
+      {
+        "name": "Squall",
+        "position": {
+          "x": -5,
+          "y": 0.05,
+          "z": 12
+        },
+        "radius": 3.2,
+        "damagePerSecond": 10,
+        "color": "#4fd1ff"
+      },
+      {
+        "name": "Breaker",
+        "position": {
+          "x": 5,
+          "y": 0.05,
+          "z": -6
+        },
+        "radius": 3.2,
+        "damagePerSecond": 13,
+        "color": "#ff7a45"
+      },
+      {
+        "name": "Undertow",
+        "position": {
+          "x": 0,
+          "y": 0.05,
+          "z": -24
+        },
+        "radius": 3.2,
+        "damagePerSecond": 16,
+        "color": "#9bff6e"
+      }
+    ],
+    "camera": {
+      "offset": {
+        "x": 0,
+        "y": 22,
+        "z": 18
+      }
+    },
+    "weather": {
+      "rainDensity": 320
+    },
+    "rules": {
+      "goalRadius": 2.6,
+      "statusMessage": "Sprint through route gates, grab enough markers, and reach the finish lane.",
+      "failStates": [
+        "Get overwhelmed by enemy pressure.",
+        "Run out of time before the completion condition unlocks.",
+        "Lose health by lingering in active hazard lanes."
+      ],
+      "progression": [
+        "Relay the core data to the extraction point before the nebula collapses.",
+        "route unlocks",
+        "new ability gains"
+      ],
+      "targetRelics": 3,
+      "timeLimitSeconds": 120,
+      "runtimeTemplate": "route_runner",
+      "mechanicFamily": "route runner",
+      "spatialStructure": "lane route",
+      "scoreLabel": "Gates"
+    },
+    "abilities": {
+      "verbs": [
+        "root",
+        "petal",
+        "sprint"
+      ],
+      "summary": "Ember Shift: Void Relay turns the current seed into a readable arcade challenge."
+    },
+    "world": {
+      "setting": "Ember Shift: Void Relay",
+      "visualDirection": "High-contrast storm routes with readable silhouettes.",
+      "landmarks": []
+    },
+    "profile": {
+      "seedContract": {
+        "seed": {
+          "themes": "ritual archaeology",
+          "genres": "escape arcade",
+          "environments": "subterranean library",
+          "settings": "high tide",
+          "characterMotivations": "learn a forgotten ritual",
+          "movementMechanics": [
+            "rhythm-based stepping",
+            "grapple and zipline"
+          ],
+          "coreLoops": "guide a companion through hazards",
+          "progressionLoops": "assemble a map",
+          "completionLoops": "boss hunt",
+          "rewards": [
+            "collectibles",
+            "resource caches"
+          ],
+          "antagonists": "rival explorer",
+          "visualStyles": "cinematic noir lighting",
+          "audioStyles": "sparse piano",
+          "interactionPatterns": "environmental interaction first",
+          "productionFocus": "focus on emergent loops",
+          "cameraModes": "node-map lane-shift",
+          "arenaShapes": "lanes with safe islands",
+          "primaryVerbs": "trade around patrols",
+          "scoringModels": "stealth rating resource bonus",
+          "failureModes": "crushed by hazards",
+          "enemyBehaviors": "summon hazards combo-triggered",
+          "objectiveStructures": "repair network in split routes",
+          "resourceSystems": "oxygen combo refill",
+          "levelProgression": "single run with hard gates",
+          "twistConstraints": "reversed controls zone after route split",
+          "weatherEffects": "gravity waves variation 11 variation 59",
+          "uiAesthetics": "minimalist vector variation 19 variation 36 variation 63",
+          "movementQuirks": "teleport dashes variation 14 variation 43 variation 58",
+          "environmentalHazards": "crushing walls variation 19 variation 26 variation 41",
+          "powerSources": "battery cells variation 76",
+          "lightingStyles": "low-key variation 10 variation 24 variation 71",
+          "narrativeTone": "existential variation 19 variation 42",
+          "deathAnimations": "shattering glass variation 27 variation 72",
+          "crowdDynamics": "curious wildlife variation 35 variation 45",
+          "mapModifiers": "infinite loop variation 12 variation 18 variation 23 variation 49 variation 50 variation 86",
+          "soundscapes": "mechanical heartbeat variation 64 variation 83",
+          "colorPalettes": "emerald toxic variation 15 variation 26 variation 92",
+          "architecture": "modular space station variation 63 variation 84",
+          "artifactTypes": "bio-samples variation 89 variation 92",
+          "gameTempo": "burst-driven variation 10 variation 31 variation 32",
+          "bossMechanics": "phased transformation variation 18 variation 24 variation 47",
+          "playerPerks": "invisibility cloak variation 13 variation 26 variation 50",
+          "enemyArchetypes": "tankers variation 23 variation 36",
+          "narrativeStakes": "prevent the collapse",
+          "postProcessing": "depth of field variation 12 variation 26 variation 33"
+        },
+        "sourceSeed": null,
+        "sourceSummary": null,
+        "sourceSamples": {}
+      },
+      "mechanicFamily": "route runner",
+      "runtimeTemplate": "route_runner",
+      "pacing": "short readable arcade run",
+      "spatialStructure": "lane route",
+      "failurePressure": [],
+      "progressionShape": [],
+      "presentationRules": [],
+      "mustPreserve": [
+        "Preserve the randomized seed contract through every stage.",
+        "Treat final-brainstorming.json as the canonical game specification.",
+        "Keep the generated game self-contained in one Pages/<slug>/ folder.",
+        "Make runtime behavior match runtimeTemplate instead of defaulting to one arena scaffold."
+      ],
+      "fallbackSource": ""
+    }
+  },
+  "story": {
+    "start": "intro",
+    "nodes": [
+      {
+        "id": "intro",
+        "title": "Introduction",
+        "text": "Ember Shift: Void Relay turns the current seed into a readable arcade challenge.",
+        "choices": []
+      }
+    ]
+  },
+  "delivery": {
+    "format": "story-driven JSON nodes",
+    "note": "scene layout, enemy waves, objective rewards, goal unlock state, brainstorm final spec",
+    "prototypeScope": "Small browser-playable prototype"
+  }
+}

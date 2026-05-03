@@ -3,10 +3,9 @@
 		## Actions
 
 
-- Edit story-structure.json first so runtime can read the new values
-- Implement rhythm-step and mirror-walk behavior in game.js
-- Adjust HUD text in index.html last
+- Edit game.js to add spin properties to the player object.
+- Edit game.js to update movement and collision logic.
 
 		## Notes
 
-		Keep the pass narrow: movement feel and player-facing feedback only. Enemy logic and route hazards should wait for later passes.
+		Keeping the spin duration short to maintain the 'arcade' rhythm. Deflection force will be normalized to avoid extreme launches.

@@ -51,11 +51,6 @@ class ArenaGame {
 	this.status = document.getElementById('game-status');
 	this.metrics = document.getElementById('game-metrics');
 	this.objective = document.getElementById('game-objective');
-	this.healthReadout = document.getElementById('hud-health');
-	this.keysReadout = document.getElementById('hud-keys');
-	this.dawnReadout = document.getElementById('hud-dawn');
-	this.relayReadout = document.getElementById('hud-relay');
-	this.alertReadout = document.getElementById('hud-alert');
 	this.storyText = document.getElementById('story-text');
 	this.overlay = document.getElementById('game-overlay');
 	this.overlayTitle = document.getElementById('overlay-title');
@@ -86,7 +81,6 @@ class ArenaGame {
 		this.eventTimer = 0;
 		this.template = 'arena_survival';
 		this.score = 0;
-		this.alertState = 'Hidden';
 	  }
 
   async init() {
@@ -225,24 +219,10 @@ class ArenaGame {
 	  pulseCooldown: 0,
 	  invulnerability: 0,
 	  maxHealth: playerConfig.maxHealth,
-	  health: playerConfig.maxHealth,
-	  beatInterval: playerConfig.beatInterval || 0.72,
-	  beatWindow: playerConfig.beatWindow || 0.16,
-	  onBeatBoost: playerConfig.onBeatBoost || 0.4,
-	  offBeatPenalty: playerConfig.offBeatPenalty || 0.75,
-	  mirrorDuration: playerConfig.mirrorDuration || 1.2,
-	  mirrorTimer: 0,
-	  beatBonusTimer: 0,
-	  offBeatTimer: 0,
-	  wasMoving: false,
-	  lastStepTime: Number.NEGATIVE_INFINITY,
-	  maxKeyCharge: playerConfig.keyChargeMax || 100,
-	  keyCharge: playerConfig.keyChargeMax || 100,
-	  keyDrainPerSecond: playerConfig.keyDrainPerSecond || 2,
-	  dashKeyCost: playerConfig.dashKeyCost || 6,
-	  pulseKeyCost: playerConfig.pulseKeyCost || 20,
-	  relicKeyRestore: playerConfig.relicKeyRestore || 24,
-	};
+      health: playerConfig.maxHealth,
+      spinTime: 0,
+      isSpinning: false,
+    };
   }
 
   createGoal() {
@@ -282,7 +262,7 @@ class ArenaGame {
   }
 
   createHazards() {
-	this.hazards = this.config.hazards.map((config, index) => {
+	this.hazards = this.config.hazards.map((config) => {
 	  const mesh = new THREE.Mesh(
 		new THREE.CylinderGeometry(config.radius, config.radius, 0.14, 32),
 		new THREE.MeshBasicMaterial({ color: config.color, transparent: true, opacity: 0.22 })
@@ -297,17 +277,7 @@ class ArenaGame {
 	  outline.position.copy(mesh.position);
 	  outline.position.y += 0.08;
 	  this.scene.add(outline);
-	  return {
-		...config,
-		mesh,
-		outline,
-		basePosition: new THREE.Vector3(config.position.x, config.position.y, config.position.z),
-		orbitRadius: config.orbitRadius || 0,
-		rotateSpeed: config.rotateSpeed || 0,
-		lockDuration: config.lockDuration || 1,
-		lockTimer: 0,
-		phase: index * 1.9,
-	  };
+	  return { ...config, mesh, outline };
 	});
   }
 
@@ -340,15 +310,6 @@ class ArenaGame {
 		velocity: new THREE.Vector3(),
 		stun: 0,
 		hitCooldown: 0,
-		state: 'patrol',
-		alertTimer: 0,
-		chaseTimer: 0,
-		visionRange: config.visionRange || config.pursuitRange + 2,
-		visionAngle: THREE.MathUtils.degToRad(config.visionAngle || 55),
-		alertSeconds: config.alertSeconds || 1.2,
-		chaseSeconds: config.chaseSeconds || 2.2,
-		stunSeconds: config.stunSeconds || 1.2,
-		facing: new THREE.Vector3(0, 0, -1),
 		phase: index * 0.7,
 	  };
 	});
@@ -383,17 +344,10 @@ class ArenaGame {
 	this.player.dashCooldown = 0;
 	this.player.pulseCooldown = 0;
 	this.player.invulnerability = 0;
-	this.player.mirrorTimer = 0;
-	this.player.beatBonusTimer = 0;
-	this.player.offBeatTimer = 0;
-	this.player.wasMoving = false;
-	this.player.lastStepTime = Number.NEGATIVE_INFINITY;
-	this.player.keyCharge = this.player.maxKeyCharge;
 		this.goalUnlocked = false;
 		this.relicCount = 0;
 		this.score = 0;
 		this.timeRemaining = this.config.rules.timeLimitSeconds;
-	this.alertState = 'Hidden';
 	this.state = 'running';
 	this.elapsed = 0;
 	this.overlay.classList.remove('visible');
@@ -409,16 +363,6 @@ class ArenaGame {
 	  enemy.velocity.set(0, 0, 0);
 	  enemy.stun = 0;
 	  enemy.hitCooldown = 0;
-	  enemy.state = 'patrol';
-	  enemy.alertTimer = 0;
-	  enemy.chaseTimer = 0;
-	  enemy.facing.set(0, 0, -1);
-	});
-	this.hazards.forEach((hazard) => {
-	  hazard.lockTimer = 0;
-	  hazard.mesh.position.copy(hazard.basePosition);
-	  hazard.outline.position.copy(hazard.basePosition);
-	  hazard.outline.position.y += 0.08;
 	});
 	this.updateHud(0);
   }
@@ -450,13 +394,8 @@ class ArenaGame {
 
   triggerPulse() {
 	if (this.player.pulseCooldown > 0 || this.state !== 'running') return;
-	if (this.player.keyCharge < this.player.pulseKeyCost) {
-	  this.setStatus('Key circuit too low for a pulse.', 0.9);
-	  return;
-	}
 	const radius = this.config.player.pulseRadius;
 	this.player.pulseCooldown = this.config.player.pulseCooldown;
-	this.player.keyCharge = Math.max(0, this.player.keyCharge - this.player.pulseKeyCost);
 	this.player.ring.scale.setScalar(1.7);
 	this.enemies.forEach((enemy) => {
 	  const offset = enemy.mesh.position.clone().sub(this.player.mesh.position);
@@ -465,17 +404,7 @@ class ArenaGame {
 	  if (distance < radius) {
 		const direction = offset.normalize();
 		enemy.velocity.add(direction.multiplyScalar(9));
-		enemy.stun = enemy.stunSeconds;
-		enemy.alertTimer = 0;
-		enemy.chaseTimer = 0;
-		enemy.state = 'stunned';
-	  }
-	});
-	this.hazards.forEach((hazard) => {
-	  const offset = hazard.mesh.position.clone().sub(this.player.mesh.position);
-	  offset.y = 0;
-	  if (offset.length() < radius + hazard.radius * 0.4) {
-		hazard.lockTimer = hazard.lockDuration;
+		enemy.stun = 1.3;
 	  }
 	});
 	this.setStatus('Pulse burst cleared breathing room.', 1.0);
@@ -488,46 +417,31 @@ class ArenaGame {
 	  (this.input.keys.backward ? 1 : 0) - (this.input.keys.forward ? 1 : 0)
 	);
 	if (move.lengthSq() > 0) move.normalize();
-	const hasMovement = move.lengthSq() > 0;
-	if (hasMovement) {
-	  const sinceStep = this.elapsed - this.player.lastStepTime;
-	  const canRegisterStep = !this.player.wasMoving || sinceStep >= this.player.beatInterval * 0.7;
-	  if (canRegisterStep) {
-		const onBeat = Number.isFinite(this.player.lastStepTime) && Math.abs(sinceStep - this.player.beatInterval) <= this.player.beatWindow;
-		if (onBeat) {
-		  this.player.beatBonusTimer = 0.28;
-		  this.player.offBeatTimer = 0;
-		  this.setStatus('On-beat step locked the lane open.', 0.45);
-		} else if (Number.isFinite(this.player.lastStepTime)) {
-		  this.player.offBeatTimer = 0.24;
-		}
-		this.player.lastStepTime = this.elapsed;
-	  }
-	}
-	this.player.wasMoving = hasMovement;
-
-	if (this.player.mirrorTimer > 0 && hasMovement) {
-	  move.x *= -1;
-	  move.z *= -1;
-	}
 
 	if (this.input.consumeDash() && this.player.dashCooldown <= 0) {
 	  const dashDirection = move.lengthSq() > 0 ? move.clone() : new THREE.Vector3(0, 0, -1);
 	  this.player.velocity.add(dashDirection.multiplyScalar(this.config.player.dashSpeed));
 	  this.player.dashCooldown = this.config.player.dashCooldown;
-	  this.player.mirrorTimer = this.player.mirrorDuration;
-	  this.player.keyCharge = Math.max(0, this.player.keyCharge - this.player.dashKeyCost);
-	  this.setStatus('Mirror step engaged.', 0.8);
+	  this.setStatus('Dash burst engaged.', 0.8);
 	}
 
-	if (this.input.consumePulse()) {
-	  this.triggerPulse();
-	}
+		if (this.input.consumePulse() && this.player.pulseCooldown <= 0) {
+		  this.player.isSpinning = true;
+		  this.player.spinTime = 0.6;
+		  this.player.pulseCooldown = this.config.player.pulseCooldown;
+		  this.setStatus('Spinning! Deflecting threats.', 0.6);
+		}
 
-		let speedMultiplier = 1;
-		if (this.player.beatBonusTimer > 0) speedMultiplier += this.player.onBeatBoost;
-		if (this.player.offBeatTimer > 0) speedMultiplier *= this.player.offBeatPenalty;
-		const desiredVelocity = move.multiplyScalar(this.config.player.speed * speedMultiplier);
+		if (this.player.isSpinning) {
+		  this.player.spinTime -= delta;
+		  this.player.mesh.rotation.y += delta * 20;
+		  this.player.ring.rotation.z += delta * 15;
+		  if (this.player.spinTime <= 0) {
+			this.player.isSpinning = false;
+		  }
+		}
+
+		const desiredVelocity = move.multiplyScalar(this.config.player.speed);
 		this.player.velocity.lerp(desiredVelocity, dampFactor(delta, 12));
 		if (this.template === 'route_runner' && this.state === 'running') {
 		  this.player.velocity.z -= 1.6;
@@ -543,14 +457,10 @@ class ArenaGame {
   }
 
   updateEnemies(delta) {
-	let highestAlert = 'Hidden';
 	this.enemies.forEach((enemy) => {
 	  enemy.hitCooldown = Math.max(0, enemy.hitCooldown - delta);
-	  enemy.alertTimer = Math.max(0, enemy.alertTimer - delta);
-	  enemy.chaseTimer = Math.max(0, enemy.chaseTimer - delta);
 	  if (enemy.stun > 0) {
 		enemy.stun = Math.max(0, enemy.stun - delta);
-		enemy.state = 'stunned';
 		enemy.mesh.rotation.y += delta * 6;
 		enemy.velocity.multiplyScalar(0.94);
 	  } else {
@@ -559,25 +469,8 @@ class ArenaGame {
 		const distance = chase.length();
 		let desiredVelocity = new THREE.Vector3();
 			if (this.template === 'stealth_patrol') {
-			  const patrolTarget = enemy.anchor.clone().add(new THREE.Vector3(Math.sin(this.elapsed * 0.7 + enemy.phase) * 6, 0, Math.cos(this.elapsed * 0.55 + enemy.phase) * 6));
-			  const patrol = patrolTarget.sub(enemy.mesh.position).setY(0);
-			  const forward = enemy.facing.clone().normalize();
-			  const chaseDir = distance > 0.001 ? chase.clone().normalize() : new THREE.Vector3(0, 0, -1);
-			  const seesPlayer = distance < enemy.visionRange && forward.dot(chaseDir) > Math.cos(enemy.visionAngle * 0.5);
-			  if (seesPlayer) {
-				enemy.alertTimer = enemy.alertSeconds;
-				enemy.chaseTimer = enemy.chaseSeconds;
-			  }
-			  if (enemy.alertTimer > 0) {
-				enemy.state = 'alert';
-				desiredVelocity = patrol.multiplyScalar(0.18);
-			  } else if (enemy.chaseTimer > 0) {
-				enemy.state = 'chase';
-				desiredVelocity = chaseDir.multiplyScalar(Math.max(enemy.speed * 3.1, enemy.speed + enemy.chaseTimer));
-			  } else {
-				enemy.state = 'patrol';
-				desiredVelocity = patrol.multiplyScalar(enemy.speed * 0.4);
-			  }
+			  const patrol = new THREE.Vector3(Math.sin(this.elapsed * 0.8 + enemy.phase), 0, Math.cos(this.elapsed * 0.6 + enemy.phase));
+			  desiredVelocity = distance < enemy.pursuitRange ? chase.normalize().multiplyScalar(enemy.speed * 3.2) : patrol.multiplyScalar(enemy.speed * 1.45);
 			} else if (this.template === 'route_runner') {
 			  desiredVelocity.set(Math.sin(this.elapsed * 1.6 + enemy.phase), 0, Math.cos(this.elapsed * 0.4 + enemy.phase) * 0.35).multiplyScalar(enemy.speed * 2.4);
 			  if (distance < enemy.pursuitRange) desiredVelocity.add(chase.normalize().multiplyScalar(enemy.speed * 1.7));
@@ -591,25 +484,25 @@ class ArenaGame {
 			  }
 			}
 		enemy.velocity.lerp(desiredVelocity, dampFactor(delta, 4.8));
-		if (enemy.velocity.lengthSq() > 0.0001) {
-		  enemy.facing.lerp(enemy.velocity.clone().normalize(), dampFactor(delta, 8));
-		}
 	  }
 
 	  enemy.mesh.position.addScaledVector(enemy.velocity, delta);
 	  enemy.mesh.position.x = clamp(enemy.mesh.position.x, -24, 24);
 	  enemy.mesh.position.z = clamp(enemy.mesh.position.z, -24, 24);
 	  enemy.mesh.lookAt(this.player.mesh.position.x, enemy.mesh.position.y, this.player.mesh.position.z);
-	  if (enemy.state === 'chase') highestAlert = 'Detected';
-	  else if (enemy.state === 'alert' && highestAlert !== 'Detected') highestAlert = 'Watched';
 
 	  const distanceToPlayer = enemy.mesh.position.clone().sub(this.player.mesh.position).setY(0).length();
-	  if (distanceToPlayer < enemy.radius + this.player.radius && enemy.hitCooldown <= 0) {
-		enemy.hitCooldown = 1.1;
-		this.applyDamage(12, `${enemy.name} broke through the route.`);
+	  if (distanceToPlayer < enemy.radius + this.player.radius) {
+		if (this.player.isSpinning) {
+		  const pushDir = enemy.mesh.position.clone().sub(this.player.mesh.position).normalize();
+		  enemy.velocity.add(pushDir.multiplyScalar(15));
+		  enemy.stun = 0.8;
+		} else if (enemy.hitCooldown <= 0) {
+		  enemy.hitCooldown = 1.1;
+		  this.applyDamage(12, `${enemy.name} broke through the route.`);
+		}
 	  }
 	});
-	this.alertState = highestAlert;
   }
 
   updateRelics(delta) {
@@ -622,12 +515,10 @@ class ArenaGame {
 			relic.collected = true;
 			relic.mesh.visible = false;
 			this.relicCount += 1;
-			this.player.keyCharge = Math.min(this.player.maxKeyCharge, this.player.keyCharge + this.player.relicKeyRestore);
-			this.timeRemaining = Math.min(this.config.rules.timeLimitSeconds, this.timeRemaining + 10);
 			const scoreGain = this.template === 'relay_chain' ? 150 : this.template === 'stealth_patrol' ? 125 : 100;
 			this.score += scoreGain;
 			const scoreLabel = this.config.rules.scoreLabel || 'Relic';
-			this.setStatus(`${scoreLabel} ${relic.label} secured. Keys stabilized and relay charge increased.`, 1.0);
+			this.setStatus(`${scoreLabel} ${relic.label} secured. Exit charge increased.`, 1.0);
 		if (!this.goalUnlocked && this.relicCount >= this.goal.unlockRelics) {
 		  this.goalUnlocked = true;
 		  this.goal.ring.material.color.set(0x7df9ff);
@@ -641,21 +532,10 @@ class ArenaGame {
 
   updateHazards(delta) {
 	this.hazards.forEach((hazard, index) => {
-	  hazard.lockTimer = Math.max(0, hazard.lockTimer - delta);
-	  if (hazard.orbitRadius > 0) {
-		const angle = this.elapsed * hazard.rotateSpeed + hazard.phase;
-		hazard.mesh.position.x = hazard.basePosition.x + Math.cos(angle) * hazard.orbitRadius;
-		hazard.mesh.position.z = hazard.basePosition.z + Math.sin(angle) * hazard.orbitRadius;
-		hazard.outline.position.x = hazard.mesh.position.x;
-		hazard.outline.position.z = hazard.mesh.position.z;
-	  }
 	  const pulse = 1 + Math.sin(this.elapsed * 2.2 + index) * 0.08;
 	  hazard.outline.scale.setScalar(pulse);
-	  const active = hazard.lockTimer <= 0;
-	  hazard.mesh.material.opacity = active ? 0.24 : 0.08;
-	  hazard.outline.material.opacity = active ? 0.48 : 0.16;
 	  const distance = hazard.mesh.position.clone().sub(this.player.mesh.position).setY(0).length();
-	  if (active && distance < hazard.radius) {
+	  if (distance < hazard.radius) {
 		this.applyDamage(hazard.damagePerSecond * delta, `${hazard.name} chewed through the route.`);
 	  }
 	});
@@ -710,14 +590,7 @@ class ArenaGame {
 	this.player.dashCooldown = Math.max(0, this.player.dashCooldown - delta);
 	this.player.pulseCooldown = Math.max(0, this.player.pulseCooldown - delta);
 	this.player.invulnerability = Math.max(0, this.player.invulnerability - delta);
-	this.player.mirrorTimer = Math.max(0, this.player.mirrorTimer - delta);
-	this.player.beatBonusTimer = Math.max(0, this.player.beatBonusTimer - delta);
-	this.player.offBeatTimer = Math.max(0, this.player.offBeatTimer - delta);
-	this.player.keyCharge = Math.max(0, this.player.keyCharge - this.player.keyDrainPerSecond * delta);
 	this.player.ring.scale.lerp(new THREE.Vector3(1, 1, 1), dampFactor(delta, 6));
-	if (this.state === 'running' && this.player.keyCharge <= 0) {
-	  this.applyDamage(10 * delta, 'The key circuit is collapsing.');
-	}
 
 	if (this.timeRemaining <= 0 && this.state === 'running') {
 	  this.finishRun('Window Closed', 'The storm sealed the route before extraction. Press R to try again.');
@@ -730,14 +603,8 @@ class ArenaGame {
 		this.status.textContent = activeMessage;
 		const templateLabel = (this.config.rules.mechanicFamily || this.template).replace(/_/g, ' ');
 		const scoreLabel = this.config.rules.scoreLabel || 'Relics';
-		const rhythmState = this.player.mirrorTimer > 0 ? 'Mirror walk' : this.player.beatBonusTimer > 0 ? 'On beat' : this.player.offBeatTimer > 0 ? 'Off beat' : 'Steady';
-		const rotatingHazards = this.hazards.filter((hazard) => hazard.orbitRadius > 0 && hazard.lockTimer <= 0).length;
-		this.metrics.textContent = `${templateLabel} | ${rhythmState} | ${scoreLabel} ${this.relicCount}/${this.goal.unlockRelics} | Rotating breaches ${rotatingHazards} | Score ${this.score} | Dash ${this.player.dashCooldown > 0 ? this.player.dashCooldown.toFixed(1) + 's' : 'ready'} | Pulse ${this.player.pulseCooldown > 0 ? this.player.pulseCooldown.toFixed(1) + 's' : 'ready'}`;
-		if (this.healthReadout) this.healthReadout.textContent = `${Math.ceil(this.player.health)} / ${this.player.maxHealth}`;
-		if (this.keysReadout) this.keysReadout.textContent = `${Math.ceil(this.player.keyCharge)} / ${this.player.maxKeyCharge}`;
-		if (this.dawnReadout) this.dawnReadout.textContent = `${Math.ceil(this.timeRemaining)}s`;
-		if (this.relayReadout) this.relayReadout.textContent = `${this.relicCount} / ${this.goal.unlockRelics} online`;
-		if (this.alertReadout) this.alertReadout.textContent = this.alertState;
+		const spinStatus = this.player.isSpinning ? 'ACTIVE' : (this.player.pulseCooldown > 0 ? this.player.pulseCooldown.toFixed(1) + 's' : 'ready');
+		this.metrics.textContent = `${templateLabel} | Health ${Math.ceil(this.player.health)} | ${scoreLabel} ${this.relicCount}/${this.goal.unlockRelics} | Score ${this.score} | Time ${Math.ceil(this.timeRemaining)}s | Dash ${this.player.dashCooldown > 0 ? this.player.dashCooldown.toFixed(1) + 's' : 'ready'} | Spin ${spinStatus}`;
 	  }
 
   update(delta) {

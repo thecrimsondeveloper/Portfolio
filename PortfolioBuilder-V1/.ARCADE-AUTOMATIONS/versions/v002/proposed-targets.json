@@ -1,0 +1,33 @@
+{
+  "targets": {
+    "arcade-builder": {
+      "id": "arcade-builder",
+      "enabled": true,
+      "intervalMinutes": 60,
+      "cwd": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/PortfolioBuilder-V1",
+      "command": [
+        "python3",
+        ".ARCADE-CLI/builder-orchestrator.py",
+        "--goal",
+        "{goal}",
+        "--slug",
+        "{slug}"
+      ],
+      "env": {
+        "NVIDIA_IDEA_TEMPERATURE": "0.95"
+      },
+      "goalTemplate": "Invent and build one original high-depth arcade game from scratch for the Portfolio Arcade. Run id: {run_id}. Follow a controlled linear sequence and do not skip steps. First inspect the registry and choose a unique concept that does not reuse an existing title, premise, enemy pattern, core verb, or theme. Define one clear core loop. Implement at least three runtime-visible mechanics that create player decisions; each mechanic must appear in contract.json, story-structure.json, DESIGN.md, game.js, and VALIDATION.md. Include progression or escalation, objective pressure, readable controls, HUD feedback, distinct hazards or enemies, and one mechanic beyond movement and collision. Use requestAnimationFrame for the gameplay loop. After Start/Play/Begin, the canvas or HUD must visibly change within one second. Validate with strict Playwright QA, run the upgrade loop until technical and depth gates pass, and register into the arcade library only after strict QA passes.",
+      "slugTemplate": "auto-arcade-{timestamp}",
+      "version": "v002",
+      "lifecycleRole": "challenger",
+      "comparisonGroup": "arcade-builder-lineage",
+      "competesAgainst": "arcade-builder",
+      "nextVersionSource": true
+    }
+  },
+  "lifecyclePolicy": {
+    "mode": "side-by-side-version-race",
+    "promotionRule": "Promote v002 only after it beats v001 on strict technical, depth, coherence, and arcade-registration evidence. Then disable v001 and create v003 from promoted v002 on the next loop."
+  },
+  "updatedAt": "2026-05-02T10:45:00Z"
+}

@@ -1,0 +1,16 @@
+diff --git a/.ARCADE-CLI/engines/playwright-qa.py b/.ARCADE-CLI/engines/playwright-qa.py
+--- a/.ARCADE-CLI/engines/playwright-qa.py
++++ b/.ARCADE-CLI/engines/playwright-qa.py
+@@
+ def browser_failure_reasons(
+@@
+     if canvas_after_pixels <= 100:
+         reasons.append(f"Canvas stayed blank after interaction ({canvas_after_pixels} nonblack pixels).")
+     elif not canvas_became_nonblank:
+         reasons.append("Canvas did not show visible gameplay pixels after start.")
++    elif not canvas_gained_pixels:
++        reasons.append("Canvas did not gain visible gameplay pixels after Start/Play/Begin.")
+@@
+     if not title_consistency.get("ok"):
+         reasons.append(title_consistency.get("error", "Generated titles are inconsistent."))
+     return reasons

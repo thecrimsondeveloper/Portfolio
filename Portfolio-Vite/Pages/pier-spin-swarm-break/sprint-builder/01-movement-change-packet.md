@@ -2,11 +2,11 @@
 
 			## Sprint Objective
 
-			Implement the movement slice so the player can reliably feel spin under glitch.
+			Implement the movement slice so the player can reliably feel spin under guard.
 
 			## Player Promise
 
-			The player immediately feels how movement improves the route and unlocks unveil.
+			The player immediately feels how movement improves the route and unlocks expand.
 
 			## Why This Branch Exists
 

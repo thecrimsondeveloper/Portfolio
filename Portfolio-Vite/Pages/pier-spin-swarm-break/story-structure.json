@@ -1,64 +1,64 @@
 {
   "id": "pier-spin-swarm-break",
   "title": "Pier Spin: Swarm Break",
-  "description": "A stealth-puzzle escape run built around rhythm stepping, mirror walking, and route control inside a shifting abandoned factory.",
-  "objective": "Time your steps, hold your key charge, route around rotating breach lanes, and trigger the relay before dawn.",
+  "description": "A expansive arcade game set between pier and peak, where the player uses spin and stack actions to outmaneuver swarm forces and drive an expand-to-upgrade progression arc.",
+  "objective": "Use spin and stack to resolve guard-driven pressure, complete the active objective chain, and turn each run into expand, pulse progress.",
   "seed": {
-    "themes": "street level mystery",
-    "genres": "stealth puzzle",
-    "environments": "abandoned factory",
-    "settings": "late-night",
-    "characterMotivations": "escape before dawn",
+    "themes": "mechanical festival rescue",
+    "genres": "escort resource run",
+    "environments": "rooftop maintenance rails",
+    "settings": "foggy morning",
+    "characterMotivations": "repair broken machinery",
     "movementMechanics": [
-      "rhythm-based stepping",
+      "cargo balancing",
       "mirror walking"
     ],
     "coreLoops": "evade patrols while searching",
-    "progressionLoops": "build a safe path",
-    "completionLoops": "relay activation",
+    "progressionLoops": "power up a device",
+    "completionLoops": "ceremony completion",
     "rewards": [
-      "boss unlock",
-      "resource caches"
+      "upgrade module",
+      "story fragments"
     ],
-    "antagonists": "rival explorer",
+    "antagonists": "mischievous spirits",
     "visualStyles": "textured industrial",
-    "audioStyles": "mechanical percussion",
+    "audioStyles": "breathy wind soundscape",
     "interactionPatterns": "inventory-lite object use",
-    "productionFocus": "focus on motion and feel",
-    "cameraModes": "cinematic follow wide-read",
-    "arenaShapes": "shrinking zone with shortcuts",
-    "primaryVerbs": "trade with timing",
-    "scoringModels": "survival timer speed bonus",
-    "failureModes": "cargo shattered during overload",
-    "enemyBehaviors": "chase on sight light-triggered",
-    "objectiveStructures": "defuse core in split routes",
-    "resourceSystems": "keys slow drain",
-    "levelProgression": "single run with secret exits",
-    "twistConstraints": "rotating room inside safe zone"
+    "productionFocus": "prototype in directory with JSON and HTML only",
+    "cameraModes": "over-the-shoulder danger-tilt",
+    "arenaShapes": "maze with shortcuts",
+    "primaryVerbs": "redirect through hazards",
+    "scoringModels": "time attack near miss bonus",
+    "failureModes": "core overheated after warning",
+    "enemyBehaviors": "block routes phase-shifted",
+    "objectiveStructures": "activate sequence after miniboss",
+    "resourceSystems": "stamina combo refill",
+    "levelProgression": "escalating waves with secret exits",
+    "twistConstraints": "shared health inside safe zone"
   },
-  "hook": "Slip through a late-night factory where patrol lights, rotating routes, and a fading key signal force every move to count.",
-  "uniqueness": "A master of the pier who wields spinning power against chaotic invaders.",
+  "hook": "A expansive arcade game set between pier and peak, where the player uses spin and stack actions to outmaneuver swarm forces and drive an expand-to-upgrade progression arc.",
+  "uniqueness": "A guardian who masters elemental flow and dynamic balance to dismantle overwhelming swarms.",
   "controls": [
     "WASD or Arrow keys move the player through the arena.",
-    "Shift triggers a pivot burst for repositioning.",
-    "Space converts spin and sprint pressure into crowd control.",
+    "Shift triggers a dash burst for repositioning.",
+    "Space converts spin and stack pressure into crowd control.",
     "Press Enter to deploy. Use WASD or Arrow keys to move, Shift to dash, and Space to pulse.",
     "health",
     "charge meter"
   ],
   "fun": {
-    "assessment": "yes - Pier Spin: Swarm Break has a readable arcade core built around spin, sprint against glitch, sentinel with a clear payoff in unveil, unlock.",
+    "assessment": "yes - Pier Spin: Swarm Break has a readable arcade core built around spin, stack against guard, sentinel with a clear payoff in expand, pulse.",
     "needs": [
       "fast threat reads",
       "clear route ownership",
       "strong reward telegraphing",
       "WASD or Arrow keys move the player through the arena.",
-      "Shift triggers a pivot burst for repositioning."
+      "Shift triggers a dash burst for repositioning."
     ]
   },
   "design": {
-    "summary": "A spin-based arcade where players outmaneuver swarm forces to unlock the peak.",
-    "details": "## Pier Spin: Swarm Break\n\n\t\t**Description:** A spin-based arcade where players outmaneuver swarm forces to unlock the peak.\n\n\t\t**Objective:** Use spin and sprint to survive glitch patrols, secure relic routes, and turn each run into unveil, unlock progress.\n\n\t\t**Seed Summary:**\n\t\tGenerated game seed combination:\n- Themes: street level mystery\n- Genres: stealth puzzle\n- Environments: abandoned factory\n- Settings: late-night\n- Character motivations: escape before dawn\n- Movement mechanics: rhythm-based stepping, mirror walking\n- Core loops: evade patrols while searching\n- Progression loops: build a safe path\n- Completion loops: relay activation\n- Rewards: boss unlock, resource caches\n- Antagonists: rival explorer\n- Visual styles: textured industrial\n- Audio styles: mechanical percussion\n- Interaction patterns: inventory-lite object use\n- Production focus: focus on motion and feel\n- Camera modes: cinematic follow wide-read\n- Arena shapes: shrinking zone with shortcuts\n- Primary verbs: trade with timing\n- Scoring models: survival timer speed bonus\n- Failure modes: cargo shattered during overload\n- Enemy behaviors: chase on sight light-triggered\n- Objective structures: defuse core in split routes\n- Resource systems: keys slow drain\n- Level progression: single run with secret exits\n- Twist constraints: rotating room inside safe zone\n\n\t\t## Core Fantasy\n\n\t\tA spin-based arcade where players outmaneuver swarm forces to unlock the peak.\n\n\t\t## Why This Game Is Distinct\n\n\t\tA master of the pier who wields spinning power against chaotic invaders.\n\n\t\t## Player Actions\n\n- spin\n- sprint\n- pivot\n\n\t\t## Core Loop\n\n- Spin a block to stack it; if a swarm is nearby, dodge or attack first.\n- Survive compact but expressive runs filled with glitchy mechanics and pushing hazards.\n- Unveil the peak's secrets by managing upgrades as you progress through layers.\n- Teach spin movement and introduce glitch reads in a low-risk pier route.\n- Layer sprint interactions, mixed enemy waves, and injection events from the exploration loops.\n- Force mastery through stacked hazards, elite glitch encounters, and a final unveil choice.\n\n\t\t## Pressure And Opposition\n\n- glitch\n- sentinel\n- breach\n- pier\n- peak\n- ice\n\n\t\t## Rewards And Progression\n\n- unveil\n- unlock\n- expand\n- upgrade\n- pulse\n- Each run converts performance into unveil, unlock upgrades and route unlocks.\n\n\t\t## Failure States\n\n- Get overwhelmed by glitch.\n- Run out of time before the exit unlocks.\n- Lose health by lingering in active hazard lanes.\n\n\t\t## Visual Identity\n\n- Ice-pier-peak terrain patrolled by relentless swarms and commanding pulses.\n- Dynamic lighting, particle explosions, and high-speed camera shakes on spikes.\n- pier\n- peak\n- ice\n- harbor\n\n\t\t## Controls And Readability\n\n- WASD or Arrow keys move the player through the arena.\n- Shift triggers a pivot burst for repositioning.\n- Space converts spin and sprint pressure into crowd control.\n- Press Enter to deploy. Use WASD or Arrow keys to move, Shift to dash, and Space to pulse.\n- health\n- charge meter\n\n\t\t## JSON Data Hooks\n\n- scene layout\n- enemy waves\n- relic rewards\n- goal unlock state\n- brainstorm final spec\n- player controller\n\n\t\t## Sprint Builder Branches\n\t\t### Movement\n\n\t\t\t\t- Player promise: The player immediately feels how movement improves the route and unlocks unveil.\n\t\t\t\t- Sprint objective: Implement the movement slice so the player can reliably feel spin under glitch.\n\t\t\t\t- Change packet scope: game.js, story-structure.json, index.html\n\t\t\t\t- Simulated checkpoints: Movement is driven by canonical brainstorm data rather than ad hoc prompt output., Movement is visible in live play within the first minute of a run.\n\n\t\t\t\t#### Detail Fractalization\n\t\t\t\t- Movement core slice\n  - Implement the movement behavior in the main loop.\n  - Wire player controller data into story-structure.json and runtime state.\n- Movement feedback pass\n  - Expose clear HUD and overlay feedback for movement.\n  - Validate that movement stays readable during pressure spikes.\n\n### One Enemy Archetype\n\n\t\t\t\t- Player promise: The player immediately feels how one enemy archetype improves the route and unlocks unlock.\n\t\t\t\t- Sprint objective: Implement the one enemy archetype slice so the player can reliably feel sprint under sentinel.\n\t\t\t\t- Change packet scope: game.js, story-structure.json, index.html\n\t\t\t\t- Simulated checkpoints: One Enemy Archetype is driven by canonical brainstorm data rather than ad hoc prompt output., One Enemy Archetype is visible in live play within the first minute of a run.\n\n\t\t\t\t#### Detail Fractalization\n\t\t\t\t- One Enemy Archetype core slice\n  - Implement the one enemy archetype behavior in the main loop.\n  - Wire enemy director data into story-structure.json and runtime state.\n- One Enemy Archetype feedback pass\n  - Expose clear HUD and overlay feedback for one enemy archetype.\n  - Validate that one enemy archetype stays readable during pressure spikes.\n\n### One Route Hazard\n\n\t\t\t\t- Player promise: The player immediately feels how one route hazard improves the route and unlocks expand.\n\t\t\t\t- Sprint objective: Implement the one route hazard slice so the player can reliably feel pivot under breach.\n\t\t\t\t- Change packet scope: game.js, story-structure.json, index.html\n\t\t\t\t- Simulated checkpoints: One Route Hazard is driven by canonical brainstorm data rather than ad hoc prompt output., One Route Hazard is visible in live play within the first minute of a run.\n\n\t\t\t\t#### Detail Fractalization\n\t\t\t\t- One Route Hazard core slice\n  - Implement the one route hazard behavior in the main loop.\n  - Wire upgrade loop data into story-structure.json and runtime state.\n- One Route Hazard feedback pass\n  - Expose clear HUD and overlay feedback for one route hazard.\n  - Validate that one route hazard stays readable during pressure spikes.\n\n\t\t## Delivery Notes\n\n\t\t- Keep this game self-contained inside its own page folder.\n\t\t- Keep the HTML entry point and story JSON in the same folder.\n\t\t- Preserve a three.js + Rapier prototype structure.\n\t\t- Favor game-specific logic over shared systems.\n\t\t- Use branch-specific change packets to plan the next sprint in isolated slices.\n\n## Fun Game Assessment\n\n\t\t- Assessment: yes - Pier Spin: Swarm Break has a readable arcade core built around spin, sprint against glitch, sentinel with a clear payoff in unveil, unlock.\n\n\t\t### Things Needed To Make This Game Fun\n\n- fast threat reads\n- clear route ownership\n- strong reward telegraphing\n- WASD or Arrow keys move the player through the arena.\n- Shift triggers a pivot burst for repositioning.\n",
+    "summary": "A expansive arcade game set between pier and peak, where the player uses spin and stack actions to outmaneuver swarm forces and drive an expand-to-upgrade progression arc.",
+    "details": "## Pier Spin: Swarm Break\n\n\t\t**Description:** A expansive arcade game set between pier and peak, where the player uses spin and stack actions to outmaneuver swarm forces and drive an expand-to-upgrade progression arc.\n\n\t\t**Objective:** Use spin and stack to resolve guard-driven pressure, complete the active objective chain, and turn each run into expand, pulse progress.\n\n\t\t**Seed Summary:**\n\t\tGenerated game seed combination:\n- Themes: mechanical festival rescue\n- Genres: escort resource run\n- Environments: rooftop maintenance rails\n- Settings: foggy morning\n- Character motivations: repair broken machinery\n- Movement mechanics: cargo balancing, mirror walking\n- Core loops: evade patrols while searching\n- Progression loops: power up a device\n- Completion loops: ceremony completion\n- Rewards: upgrade module, story fragments\n- Antagonists: mischievous spirits\n- Visual styles: textured industrial\n- Audio styles: breathy wind soundscape\n- Interaction patterns: inventory-lite object use\n- Production focus: prototype in directory with JSON and HTML only\n- Camera modes: over-the-shoulder danger-tilt\n- Arena shapes: maze with shortcuts\n- Primary verbs: redirect through hazards\n- Scoring models: time attack near miss bonus\n- Failure modes: core overheated after warning\n- Enemy behaviors: block routes phase-shifted\n- Objective structures: activate sequence after miniboss\n- Resource systems: stamina combo refill\n- Level progression: escalating waves with secret exits\n- Twist constraints: shared health inside safe zone\n\n\t\t## Core Fantasy\n\n\t\tA expansive arcade game set between pier and peak, where the player uses spin and stack actions to outmaneuver swarm forces and drive an expand-to-upgrade progression arc.\n\n\t\t## Why This Game Is Distinct\n\n\t\tA guardian who masters elemental flow and dynamic balance to dismantle overwhelming swarms.\n\n\t\t## Player Actions\n\n- spin\n- stack\n- dash\n\n\t\t## Core Loop\n\n- Spin an obstacle to deflect incoming projectiles while stacking resources to fortify your position against swarms.\n- Maneuver across compact terrain while managing limited charges, utilizing unique moves to create space for rapid repositioning.\n- Climb upward to access high-visibility objectives and upgrade tools that modify future swarm compositions.\n- Teach spin movement and introduce guard reads in a low-risk pier route.\n- Layer stack interactions, mixed enemy waves, and injection events from the exploration loops.\n- Force mastery through stacked hazards, elite guard encounters, and a final expand choice.\n\n\t\t## Pressure And Opposition\n\n- guard\n- sentinel\n- storm\n- pier\n- peak\n- ice\n\n\t\t## Rewards And Progression\n\n- expand\n- pulse\n- upgrade\n- ascend\n- Each run converts performance into expand, pulse upgrades and route unlocks.\n\n\t\t## Failure States\n\n- Get overwhelmed by guard.\n- Run out of time before the completion condition unlocks.\n- Lose health by lingering in active hazard lanes.\n\n\t\t## Visual Identity\n\n- The world blends pier, peak, ice into a hostile traversal space patrolled by swarm, commander, pulse.\n- Dynamic lighting on exposed stone surfaces contrasts with the icy textures of peaks; depth is created through particle effects and atmospheric fog.\n- pier\n- peak\n- ice\n- harbor\n\n\t\t## Controls And Readability\n\n- WASD or Arrow keys move the player through the arena.\n- Shift triggers a dash burst for repositioning.\n- Space converts spin and stack pressure into crowd control.\n- Press Enter to deploy. Use WASD or Arrow keys to move, Shift to dash, and Space to pulse.\n- health\n- charge meter\n\n\t\t## JSON Data Hooks\n\n- scene layout\n- enemy waves\n- objective rewards\n- goal unlock state\n- brainstorm final spec\n- player controller\n\n\t\t## Sprint Builder Branches\n\t\t### Movement\n\n\t\t\t\t- Player promise: The player immediately feels how movement improves the route and unlocks expand.\n\t\t\t\t- Sprint objective: Implement the movement slice so the player can reliably feel spin under guard.\n\t\t\t\t- Change packet scope: game.js, story-structure.json, index.html\n\t\t\t\t- Simulated checkpoints: Movement is driven by canonical brainstorm data rather than ad hoc prompt output., Movement is visible in live play within the first minute of a run.\n\n\t\t\t\t#### Detail Fractalization\n\t\t\t\t- Movement core slice\n  - Implement the movement behavior in the main loop.\n  - Wire player controller data into story-structure.json and runtime state.\n- Movement feedback pass\n  - Expose clear HUD and overlay feedback for movement.\n  - Validate that movement stays readable during pressure spikes.\n\n### One Enemy Archetype\n\n\t\t\t\t- Player promise: The player immediately feels how one enemy archetype improves the route and unlocks pulse.\n\t\t\t\t- Sprint objective: Implement the one enemy archetype slice so the player can reliably feel stack under sentinel.\n\t\t\t\t- Change packet scope: game.js, story-structure.json, index.html\n\t\t\t\t- Simulated checkpoints: One Enemy Archetype is driven by canonical brainstorm data rather than ad hoc prompt output., One Enemy Archetype is visible in live play within the first minute of a run.\n\n\t\t\t\t#### Detail Fractalization\n\t\t\t\t- One Enemy Archetype core slice\n  - Implement the one enemy archetype behavior in the main loop.\n  - Wire enemy director data into story-structure.json and runtime state.\n- One Enemy Archetype feedback pass\n  - Expose clear HUD and overlay feedback for one enemy archetype.\n  - Validate that one enemy archetype stays readable during pressure spikes.\n\n### One Route Hazard\n\n\t\t\t\t- Player promise: The player immediately feels how one route hazard improves the route and unlocks upgrade.\n\t\t\t\t- Sprint objective: Implement the one route hazard slice so the player can reliably feel dash under storm.\n\t\t\t\t- Change packet scope: game.js, story-structure.json, index.html\n\t\t\t\t- Simulated checkpoints: One Route Hazard is driven by canonical brainstorm data rather than ad hoc prompt output., One Route Hazard is visible in live play within the first minute of a run.\n\n\t\t\t\t#### Detail Fractalization\n\t\t\t\t- One Route Hazard core slice\n  - Implement the one route hazard behavior in the main loop.\n  - Wire upgrade loop data into story-structure.json and runtime state.\n- One Route Hazard feedback pass\n  - Expose clear HUD and overlay feedback for one route hazard.\n  - Validate that one route hazard stays readable during pressure spikes.\n\n\t\t## Delivery Notes\n\n\t\t- Keep this game self-contained inside its own page folder.\n\t\t- Keep the HTML entry point and story JSON in the same folder.\n\t\t- Preserve a three.js + Rapier prototype structure.\n\t\t- Favor game-specific logic over shared systems.\n\t\t- Use branch-specific change packets to plan the next sprint in isolated slices.\n\n## Fun Game Assessment\n\n\t\t- Assessment: yes - Pier Spin: Swarm Break has a readable arcade core built around spin, stack against guard, sentinel with a clear payoff in expand, pulse.\n\n\t\t### Things Needed To Make This Game Fun\n\n- fast threat reads\n- clear route ownership\n- strong reward telegraphing\n- WASD or Arrow keys move the player through the arena.\n- Shift triggers a dash burst for repositioning.\n",
     "chapters": [
       "Movement",
       "One Enemy Archetype",
@@ -72,21 +72,21 @@
     "seedFile": "brainstorm-seed.json",
     "summaryFile": "brainstorm-summary.json",
     "finalFile": "final-brainstorming.json",
-    "oneLinePitch": "A spin-based arcade where players outmaneuver swarm forces to unlock the peak.",
+    "oneLinePitch": "A expansive arcade game set between pier and peak, where the player uses spin and stack actions to outmaneuver swarm forces and drive an expand-to-upgrade progression arc.",
     "steps": [
       {
         "step": "gameplay_time",
         "question": "How long should one run last before it feels complete?",
-        "answer": "18 minutes",
+        "answer": "8 minutes",
         "impact": "Sets encounter density, map size, and upgrade pacing."
       },
       {
         "step": "enemy_types",
         "question": "Which enemy types define the core pressure of the run?",
         "answer": [
-          "glitch",
+          "guard",
           "sentinel",
-          "breach"
+          "storm"
         ],
         "impact": "Shapes encounter design, telegraphing, and fail-state tension."
       },
@@ -95,8 +95,8 @@
         "question": "Which verbs should the player use constantly?",
         "answer": [
           "spin",
-          "sprint",
-          "pivot"
+          "stack",
+          "dash"
         ],
         "impact": "Locks the feel of traversal, combat rhythm, and input complexity."
       },
@@ -104,8 +104,8 @@
         "step": "progression_goal",
         "question": "What long-term objective should each run feed into?",
         "answer": [
-          "unveil",
-          "unlock"
+          "expand",
+          "pulse"
         ],
         "impact": "Determines meta progression rewards and run-to-run continuity."
       },
@@ -123,32 +123,32 @@
       {
         "type": "environmental_twist",
         "value": [
-          "storm",
-          "drift"
+          "pier",
+          "ice"
         ],
         "effect": "Adds a new traversal hazard or alternate route condition."
       },
       {
         "type": "mechanic_modifier",
         "value": [
-          "pivot",
-          "dash"
+          "track",
+          "relay"
         ],
         "effect": "Mutates the core verb set for a late-run variant or upgrade branch."
       },
       {
         "type": "enemy_pressure",
         "value": [
-          "storm",
-          "beacon"
+          "commander",
+          "swarm"
         ],
         "effect": "Introduces a new pressure pattern or elite enemy combination."
       },
       {
         "type": "progression_bonus",
         "value": [
-          "advance",
-          "unlock"
+          "pulse",
+          "advance"
         ],
         "effect": "Creates a reward spike that changes long-term routing decisions."
       }
@@ -156,36 +156,36 @@
     "explorationLoops": [
       {
         "loop": 1,
-        "prompt": "What happens if relay traversal meets stack play under stalker pressure?",
-        "injection": "Resolve the loop by rewarding reveal instead of raw score.",
-        "decision": "Keep stack as a repeatable skill test, escalate with stalker, and use reveal as the reason to push deeper."
+        "prompt": "A fast-paced arcade survival game where players spin blocks and stack energy to destroy swarms of enemy guards while upgrading their pier defenses.",
+        "injection": "The core loop requires constant vertical stacking (vaulting) to gain power levels that unlock new terrain types and permanent upgrades on the pier.",
+        "decision": "Play this as a high-speed, visually striking action experience focused on rhythm-based destruction and strategic tower placement rather than traditional turn-based combat."
       },
       {
         "loop": 2,
-        "prompt": "What happens if ember traversal meets carry play under trigger pressure?",
-        "injection": "Resolve the loop by rewarding reveal instead of raw score.",
-        "decision": "Keep carry as a repeatable skill test, escalate with trigger, and use reveal as the reason to push deeper."
+        "prompt": "A sci-fi arcade platformer with vertical stacking and swarm mechanics on a futuristic pier.",
+        "injection": "The \"Rewire\" mechanic lets the player alter enemy behavior to exploit glitch patterns, creating endless tactical loops.",
+        "decision": "Execute a burst by triggering multiple stacked glitches simultaneously, overwhelming the swarm before it can regenerate or retreat."
       },
       {
         "loop": 3,
-        "prompt": "What happens if frost traversal meets carry play under beacon pressure?",
-        "injection": "Resolve the loop by rewarding pulse instead of raw score.",
-        "decision": "Keep carry as a repeatable skill test, escalate with beacon, and use pulse as the reason to push deeper."
+        "prompt": "What happens if relay traversal meets flip play under marker pressure?",
+        "injection": "Resolve the loop by rewarding advance instead of raw score.",
+        "decision": "Keep flip as a repeatable skill test, escalate with marker, and use advance as the reason to push deeper."
       },
       {
         "loop": 4,
-        "prompt": "What happens if swell traversal meets blink play under marker pressure?",
-        "injection": "Resolve the loop by rewarding burst instead of raw score.",
-        "decision": "Keep blink as a repeatable skill test, escalate with marker, and use burst as the reason to push deeper."
+        "prompt": "What happens if relay traversal meets pivot play under stalker pressure?",
+        "injection": "Resolve the loop by rewarding uncover instead of raw score.",
+        "decision": "Keep pivot as a repeatable skill test, escalate with stalker, and use uncover as the reason to push deeper."
       }
     ],
     "finalSpec": {
-      "sessionLength": "18 minutes",
+      "sessionLength": "8 minutes",
       "genre": "arcade action prototype",
-      "playerFantasy": "A master of the pier who wields spinning power against chaotic invaders.",
+      "playerFantasy": "A guardian who masters elemental flow and dynamic balance to dismantle overwhelming swarms.",
       "world": {
-        "setting": "Ice-pier-peak terrain patrolled by relentless swarms and commanding pulses.",
-        "visualDirection": "Dynamic lighting, particle explosions, and high-speed camera shakes on spikes.",
+        "setting": "The world blends pier, peak, ice into a hostile traversal space patrolled by swarm, commander, pulse.",
+        "visualDirection": "Dynamic lighting on exposed stone surfaces contrasts with the icy textures of peaks; depth is created through particle effects and atmospheric fog.",
         "landmarks": [
           "pier",
           "peak",
@@ -195,23 +195,23 @@
         ]
       },
       "coreLoop": [
-        "Spin a block to stack it; if a swarm is nearby, dodge or attack first.",
-        "Survive compact but expressive runs filled with glitchy mechanics and pushing hazards.",
-        "Unveil the peak's secrets by managing upgrades as you progress through layers."
+        "Spin an obstacle to deflect incoming projectiles while stacking resources to fortify your position against swarms.",
+        "Maneuver across compact terrain while managing limited charges, utilizing unique moves to create space for rapid repositioning.",
+        "Climb upward to access high-visibility objectives and upgrade tools that modify future swarm compositions."
       ],
       "playerActions": [
         "spin",
-        "sprint",
-        "pivot"
+        "stack",
+        "dash"
       ],
       "enemyTypes": [
-        "glitch",
+        "guard",
         "sentinel",
-        "breach"
+        "storm"
       ],
       "enemyArchetypes": [
         {
-          "name": "glitch",
+          "name": "guard",
           "role": "pressure chaser",
           "behavior": "Pushes the player off safe routes and punishes hesitation."
         },
@@ -221,28 +221,28 @@
           "behavior": "Locks down key spaces and forces rerouting."
         },
         {
-          "name": "breach",
+          "name": "storm",
           "role": "ambush disruptor",
           "behavior": "Breaks steady rhythm and spikes reaction difficulty."
         }
       ],
       "progression": {
         "metaGoal": [
-          "unveil",
-          "unlock"
+          "expand",
+          "pulse"
         ],
         "rewardHooks": [
           "expand",
           "upgrade",
           "pulse",
-          "unlock"
+          "ascend"
         ],
-        "runToRunGrowth": "Each run converts performance into unveil, unlock upgrades and route unlocks."
+        "runToRunGrowth": "Each run converts performance into expand, pulse upgrades and route unlocks."
       },
       "runStructure": {
-        "opening": "Teach spin movement and introduce glitch reads in a low-risk pier route.",
-        "midgame": "Layer sprint interactions, mixed enemy waves, and injection events from the exploration loops.",
-        "endgame": "Force mastery through stacked hazards, elite glitch encounters, and a final unveil choice."
+        "opening": "Teach spin movement and introduce guard reads in a low-risk pier route.",
+        "midgame": "Layer stack interactions, mixed enemy waves, and injection events from the exploration loops.",
+        "endgame": "Force mastery through stacked hazards, elite guard encounters, and a final expand choice."
       },
       "encounterDesign": {
         "hazards": [
@@ -252,11 +252,11 @@
           "harbor"
         ],
         "enemyCompositions": [
-          "Keep stack as a repeatable skill test, escalate with stalker, and use reveal as the reason to push deeper.",
-          "Keep carry as a repeatable skill test, escalate with trigger, and use reveal as the reason to push deeper.",
-          "Keep carry as a repeatable skill test, escalate with beacon, and use pulse as the reason to push deeper."
+          "Play this as a high-speed, visually striking action experience focused on rhythm-based destruction and strategic tower placement rather than traditional turn-based combat.",
+          "Execute a burst by triggering multiple stacked glitches simultaneously, overwhelming the swarm before it can regenerate or retreat.",
+          "Keep flip as a repeatable skill test, escalate with marker, and use advance as the reason to push deeper."
         ],
-        "difficultyRamp": "Start simple on ice, escalate to fast-paced stack fights, then tackle pulse pushes."
+        "difficultyRamp": "Progression from basic spin mechanics introduces complex stacking layers; later stages require precise timing under pressure to survive increased swarms."
       },
       "economy": {
         "currencies": [
@@ -270,7 +270,7 @@
           "enemy_pressure",
           "progression_bonus"
         ],
-        "riskReward": "High stakes where missteps trigger glitches; small skill gains yield massive unlocks."
+        "riskReward": "Players face the risk of overcommitting or running out of resources, while rewards scale with their strategic adaptability across distinct run lengths."
       },
       "ui": {
         "hud": [
@@ -314,8 +314,8 @@
   },
   "gameDesignProfile": {
     "seedContract": {
-      "sourceSeed": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-w02c06it/brainstorm-seed.json",
-      "sourceSummary": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-w02c06it/brainstorm-summary.json",
+      "sourceSeed": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-umboj6x8/brainstorm-seed.json",
+      "sourceSummary": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-umboj6x8/brainstorm-summary.json",
       "sourceSamples": {
         "environment": [
           "pier",
@@ -330,87 +330,89 @@
           "spin",
           "stack",
           "root",
-          "sprint",
+          "pivot",
+          "slam",
           "grab",
-          "slide"
+          "rewire"
         ],
         "enemies": [
           "swarm",
           "commander",
           "pulse",
           "guard",
+          "stalker",
           "sentry",
-          "marker"
+          "storm"
         ],
         "progression": [
           "expand",
           "upgrade",
           "pulse",
-          "unlock",
           "ascend",
-          "surge",
+          "unveil",
+          "evolve",
           "reveal"
         ]
       },
       "seed": {
-        "themes": "street level mystery",
-        "genres": "stealth puzzle",
-        "environments": "abandoned factory",
-        "settings": "late-night",
-        "characterMotivations": "escape before dawn",
+        "themes": "mechanical festival rescue",
+        "genres": "escort resource run",
+        "environments": "rooftop maintenance rails",
+        "settings": "foggy morning",
+        "characterMotivations": "repair broken machinery",
         "movementMechanics": [
-          "rhythm-based stepping",
+          "cargo balancing",
           "mirror walking"
         ],
         "coreLoops": "evade patrols while searching",
-        "progressionLoops": "build a safe path",
-        "completionLoops": "relay activation",
+        "progressionLoops": "power up a device",
+        "completionLoops": "ceremony completion",
         "rewards": [
-          "boss unlock",
-          "resource caches"
+          "upgrade module",
+          "story fragments"
         ],
-        "antagonists": "rival explorer",
+        "antagonists": "mischievous spirits",
         "visualStyles": "textured industrial",
-        "audioStyles": "mechanical percussion",
+        "audioStyles": "breathy wind soundscape",
         "interactionPatterns": "inventory-lite object use",
-        "productionFocus": "focus on motion and feel",
-        "cameraModes": "cinematic follow wide-read",
-        "arenaShapes": "shrinking zone with shortcuts",
-        "primaryVerbs": "trade with timing",
-        "scoringModels": "survival timer speed bonus",
-        "failureModes": "cargo shattered during overload",
-        "enemyBehaviors": "chase on sight light-triggered",
-        "objectiveStructures": "defuse core in split routes",
-        "resourceSystems": "keys slow drain",
-        "levelProgression": "single run with secret exits",
-        "twistConstraints": "rotating room inside safe zone"
+        "productionFocus": "prototype in directory with JSON and HTML only",
+        "cameraModes": "over-the-shoulder danger-tilt",
+        "arenaShapes": "maze with shortcuts",
+        "primaryVerbs": "redirect through hazards",
+        "scoringModels": "time attack near miss bonus",
+        "failureModes": "core overheated after warning",
+        "enemyBehaviors": "block routes phase-shifted",
+        "objectiveStructures": "activate sequence after miniboss",
+        "resourceSystems": "stamina combo refill",
+        "levelProgression": "escalating waves with secret exits",
+        "twistConstraints": "shared health inside safe zone"
       }
     },
-    "mechanicFamily": "stealth patrol",
-    "runtimeTemplate": "stealth_patrol",
-    "pacing": "18 minutes",
-    "spatialStructure": "patrol grid",
+    "mechanicFamily": "route runner",
+    "runtimeTemplate": "route_runner",
+    "pacing": "8 minutes",
+    "spatialStructure": "lane route",
     "failurePressure": [
-      "glitch",
+      "guard",
       "sentinel",
-      "breach",
+      "storm",
       "pier",
       "peak",
       "ice",
       "harbor"
     ],
     "progressionShape": [
-      "unveil",
-      "unlock",
+      "expand",
+      "pulse",
       "expand",
       "upgrade",
       "pulse",
-      "unlock",
-      "Each run converts performance into unveil, unlock upgrades and route unlocks."
+      "ascend",
+      "Each run converts performance into expand, pulse upgrades and route unlocks."
     ],
     "presentationRules": [
-      "Ice-pier-peak terrain patrolled by relentless swarms and commanding pulses.",
-      "Dynamic lighting, particle explosions, and high-speed camera shakes on spikes.",
+      "The world blends pier, peak, ice into a hostile traversal space patrolled by swarm, commander, pulse.",
+      "Dynamic lighting on exposed stone surfaces contrasts with the icy textures of peaks; depth is created through particle effects and atmospheric fog.",
       "fast threat reads",
       "clear route ownership",
       "strong reward telegraphing"
@@ -429,8 +431,8 @@
     "featureBranches": [
       {
         "feature": "Movement",
-        "sprintObjective": "Implement the movement slice so the player can reliably feel spin under glitch.",
-        "playerPromise": "The player immediately feels how movement improves the route and unlocks unveil.",
+        "sprintObjective": "Implement the movement slice so the player can reliably feel spin under guard.",
+        "playerPromise": "The player immediately feels how movement improves the route and unlocks expand.",
         "checkpoints": [
           "Movement is driven by canonical brainstorm data rather than ad hoc prompt output.",
           "Movement is visible in live play within the first minute of a run."
@@ -467,8 +469,8 @@
       },
       {
         "feature": "One Enemy Archetype",
-        "sprintObjective": "Implement the one enemy archetype slice so the player can reliably feel sprint under sentinel.",
-        "playerPromise": "The player immediately feels how one enemy archetype improves the route and unlocks unlock.",
+        "sprintObjective": "Implement the one enemy archetype slice so the player can reliably feel stack under sentinel.",
+        "playerPromise": "The player immediately feels how one enemy archetype improves the route and unlocks pulse.",
         "checkpoints": [
           "One Enemy Archetype is driven by canonical brainstorm data rather than ad hoc prompt output.",
           "One Enemy Archetype is visible in live play within the first minute of a run."
@@ -505,8 +507,8 @@
       },
       {
         "feature": "One Route Hazard",
-        "sprintObjective": "Implement the one route hazard slice so the player can reliably feel pivot under breach.",
-        "playerPromise": "The player immediately feels how one route hazard improves the route and unlocks expand.",
+        "sprintObjective": "Implement the one route hazard slice so the player can reliably feel dash under storm.",
+        "playerPromise": "The player immediately feels how one route hazard improves the route and unlocks upgrade.",
         "checkpoints": [
           "One Route Hazard is driven by canonical brainstorm data rather than ad hoc prompt output.",
           "One Route Hazard is visible in live play within the first minute of a run."
@@ -545,11 +547,11 @@
   },
   "scene": {
     "arena": {
-      "width": 54,
-      "depth": 54,
-      "groundColor": "#08140f",
-      "laneColor": "#23402f",
-      "accentColor": "#9bff6e",
+      "width": 30,
+      "depth": 86,
+      "groundColor": "#08101d",
+      "laneColor": "#284d7a",
+      "accentColor": "#ffd166",
       "fogColor": "#091120",
       "skyColor": "#050813"
     },
@@ -557,189 +559,146 @@
       "start": {
         "x": 0,
         "y": 0.9,
-        "z": 18
+        "z": 34
       },
       "radius": 0.9,
       "color": "#8bd8ff",
-      "speed": 7.2,
-      "dashSpeed": 24.0,
-      "dashCooldown": 2.2,
+      "speed": 9.6,
+      "dashSpeed": 28.0,
+      "dashCooldown": 1.35,
       "pulseRadius": 5.5,
-      "pulseCooldown": 4.2,
-      "maxHealth": 100,
-      "beatInterval": 0.72,
-      "beatWindow": 0.16,
-      "onBeatBoost": 0.42,
-      "offBeatPenalty": 0.72,
-      "mirrorDuration": 1.25,
-      "keyChargeMax": 100,
-      "keyDrainPerSecond": 2.2,
-      "dashKeyCost": 6,
-      "pulseKeyCost": 20,
-      "relicKeyRestore": 24
+      "pulseCooldown": 2.8,
+      "maxHealth": 100
     },
     "goal": {
       "position": {
         "x": 0,
         "y": 0.4,
-        "z": -20
+        "z": -36
       },
       "radius": 2.6,
       "color": "#7df9ff",
-      "unlockRelics": 2
+      "unlockRelics": 3
     },
     "relics": [
       {
         "label": "Expand",
         "position": {
-          "x": -18,
+          "x": -8,
           "y": 1.2,
-          "z": 0
+          "z": 22
         },
         "color": "#7cffc9"
       },
       {
         "label": "Upgrade",
         "position": {
-          "x": 18,
+          "x": 7,
           "y": 1.2,
-          "z": -4
+          "z": 9
         },
         "color": "#8bd8ff"
       },
       {
         "label": "Pulse",
         "position": {
-          "x": -6,
+          "x": -5,
           "y": 1.2,
-          "z": -16
+          "z": -4
         },
         "color": "#ffd166"
       },
       {
-        "label": "Unlock",
+        "label": "Ascend",
         "position": {
-          "x": 14,
+          "x": 6,
           "y": 1.2,
-          "z": 12
+          "z": -17
         },
         "color": "#ff9ed1"
-      },
-      {
-        "label": "Unveil",
-        "position": {
-          "x": -14,
-          "y": 1.2,
-          "z": 16
-        },
-        "color": "#f6ff7d"
       }
     ],
     "enemies": [
       {
-        "name": "Glitch",
-        "role": "patrol detector",
+        "name": "Guard",
+        "role": "pressure chaser",
         "position": {
-          "x": -16,
+          "x": -11,
           "y": 0.9,
-          "z": -10
+          "z": 16
         },
-        "speed": 1.19,
+        "speed": 1.45,
         "radius": 1.0,
         "color": "#ff8c69",
-        "pursuitRange": 10,
-        "visionRange": 12,
-        "visionAngle": 56,
-        "alertSeconds": 1.1,
-        "chaseSeconds": 2.2,
-        "stunSeconds": 1.2
+        "pursuitRange": 12
       },
       {
         "name": "Sentinel",
-        "role": "patrol detector",
+        "role": "zone controller",
         "position": {
-          "x": 14,
+          "x": 11,
           "y": 0.9,
-          "z": -14
+          "z": 2
         },
-        "speed": 1.34,
+        "speed": 1.63,
         "radius": 1.08,
         "color": "#ff4f7a",
-        "pursuitRange": 12,
-        "visionRange": 14,
-        "visionAngle": 50,
-        "alertSeconds": 1.3,
-        "chaseSeconds": 2.8,
-        "stunSeconds": 1.4
+        "pursuitRange": 12
       },
       {
-        "name": "Breach",
-        "role": "patrol detector",
+        "name": "Storm",
+        "role": "ambush disruptor",
         "position": {
-          "x": -12,
+          "x": -9,
           "y": 0.9,
-          "z": 12
+          "z": -12
         },
-        "speed": 1.48,
+        "speed": 1.81,
         "radius": 1.16,
         "color": "#ffd166",
-        "pursuitRange": 14,
-        "visionRange": 16,
-        "visionAngle": 60,
-        "alertSeconds": 1.0,
-        "chaseSeconds": 3.0,
-        "stunSeconds": 1.0
+        "pursuitRange": 12
       }
     ],
     "hazards": [
       {
         "name": "Pier",
         "position": {
-          "x": -8,
+          "x": -5,
           "y": 0.05,
-          "z": 0
+          "z": 12
         },
-        "radius": 2.8,
+        "radius": 3.2,
         "damagePerSecond": 10,
-        "color": "#4fd1ff",
-        "orbitRadius": 5.8,
-        "rotateSpeed": 0.55,
-        "lockDuration": 1.3
+        "color": "#4fd1ff"
       },
       {
         "name": "Peak",
         "position": {
-          "x": 8,
+          "x": 5,
           "y": 0.05,
-          "z": 8
+          "z": -6
         },
-        "radius": 3.25,
+        "radius": 3.2,
         "damagePerSecond": 13,
-        "color": "#ff7a45",
-        "orbitRadius": 4.4,
-        "rotateSpeed": -0.42,
-        "lockDuration": 1.1
+        "color": "#ff7a45"
       },
       {
         "name": "Ice",
         "position": {
           "x": 0,
           "y": 0.05,
-          "z": -10
+          "z": -24
         },
-        "radius": 3.7,
+        "radius": 3.2,
         "damagePerSecond": 16,
-        "color": "#9bff6e",
-        "orbitRadius": 2.4,
-        "rotateSpeed": 0.68,
-        "lockDuration": 0.9
+        "color": "#9bff6e"
       }
     ],
     "camera": {
       "offset": {
         "x": 0,
-        "y": 18,
-        "z": 16
+        "y": 22,
+        "z": 18
       }
     },
     "weather": {
@@ -747,38 +706,37 @@
     },
     "rules": {
       "goalRadius": 2.6,
-      "statusMessage": "Stay out of patrol vision, collect intel, and slip to the extraction beacon.",
+      "statusMessage": "Sprint through route gates, grab enough markers, and reach the finish lane.",
       "failStates": [
-        "Get overwhelmed by glitch.",
-        "Run out of time before the exit unlocks.",
+        "Get overwhelmed by guard.",
+        "Run out of time before the completion condition unlocks.",
         "Lose health by lingering in active hazard lanes."
       ],
       "progression": [
-        "unveil",
-        "unlock",
         "expand",
-        "upgrade",
         "pulse",
-        "Each run converts performance into unveil, unlock upgrades and route unlocks."
+        "upgrade",
+        "ascend",
+        "Each run converts performance into expand, pulse upgrades and route unlocks."
       ],
-      "targetRelics": 2,
-      "timeLimitSeconds": 180,
-      "runtimeTemplate": "stealth_patrol",
-      "mechanicFamily": "stealth patrol",
-      "spatialStructure": "patrol grid",
-      "scoreLabel": "Intel"
+      "targetRelics": 3,
+      "timeLimitSeconds": 120,
+      "runtimeTemplate": "route_runner",
+      "mechanicFamily": "route runner",
+      "spatialStructure": "lane route",
+      "scoreLabel": "Gates"
     },
     "abilities": {
       "verbs": [
         "spin",
-        "sprint",
-        "pivot"
+        "stack",
+        "dash"
       ],
-      "summary": "A spin-based arcade where players outmaneuver swarm forces to unlock the peak."
+      "summary": "A expansive arcade game set between pier and peak, where the player uses spin and stack actions to outmaneuver swarm forces and drive an expand-to-upgrade progression arc."
     },
     "world": {
-      "setting": "Ice-pier-peak terrain patrolled by relentless swarms and commanding pulses.",
-      "visualDirection": "Dynamic lighting, particle explosions, and high-speed camera shakes on spikes.",
+      "setting": "The world blends pier, peak, ice into a hostile traversal space patrolled by swarm, commander, pulse.",
+      "visualDirection": "Dynamic lighting on exposed stone surfaces contrasts with the icy textures of peaks; depth is created through particle effects and atmospheric fog.",
       "landmarks": [
         "pier",
         "peak",
@@ -789,8 +747,8 @@
     },
     "profile": {
       "seedContract": {
-        "sourceSeed": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-w02c06it/brainstorm-seed.json",
-        "sourceSummary": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-w02c06it/brainstorm-summary.json",
+        "sourceSeed": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-umboj6x8/brainstorm-seed.json",
+        "sourceSummary": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-umboj6x8/brainstorm-summary.json",
         "sourceSamples": {
           "environment": [
             "pier",
@@ -805,87 +763,89 @@
             "spin",
             "stack",
             "root",
-            "sprint",
+            "pivot",
+            "slam",
             "grab",
-            "slide"
+            "rewire"
           ],
           "enemies": [
             "swarm",
             "commander",
             "pulse",
             "guard",
+            "stalker",
             "sentry",
-            "marker"
+            "storm"
           ],
           "progression": [
             "expand",
             "upgrade",
             "pulse",
-            "unlock",
             "ascend",
-            "surge",
+            "unveil",
+            "evolve",
             "reveal"
           ]
         },
         "seed": {
-          "themes": "street level mystery",
-          "genres": "stealth puzzle",
-          "environments": "abandoned factory",
-          "settings": "late-night",
-          "characterMotivations": "escape before dawn",
+          "themes": "mechanical festival rescue",
+          "genres": "escort resource run",
+          "environments": "rooftop maintenance rails",
+          "settings": "foggy morning",
+          "characterMotivations": "repair broken machinery",
           "movementMechanics": [
-            "rhythm-based stepping",
+            "cargo balancing",
             "mirror walking"
           ],
           "coreLoops": "evade patrols while searching",
-          "progressionLoops": "build a safe path",
-          "completionLoops": "relay activation",
+          "progressionLoops": "power up a device",
+          "completionLoops": "ceremony completion",
           "rewards": [
-            "boss unlock",
-            "resource caches"
+            "upgrade module",
+            "story fragments"
           ],
-          "antagonists": "rival explorer",
+          "antagonists": "mischievous spirits",
           "visualStyles": "textured industrial",
-          "audioStyles": "mechanical percussion",
+          "audioStyles": "breathy wind soundscape",
           "interactionPatterns": "inventory-lite object use",
-          "productionFocus": "focus on motion and feel",
-          "cameraModes": "cinematic follow wide-read",
-          "arenaShapes": "shrinking zone with shortcuts",
-          "primaryVerbs": "trade with timing",
-          "scoringModels": "survival timer speed bonus",
-          "failureModes": "cargo shattered during overload",
-          "enemyBehaviors": "chase on sight light-triggered",
-          "objectiveStructures": "defuse core in split routes",
-          "resourceSystems": "keys slow drain",
-          "levelProgression": "single run with secret exits",
-          "twistConstraints": "rotating room inside safe zone"
+          "productionFocus": "prototype in directory with JSON and HTML only",
+          "cameraModes": "over-the-shoulder danger-tilt",
+          "arenaShapes": "maze with shortcuts",
+          "primaryVerbs": "redirect through hazards",
+          "scoringModels": "time attack near miss bonus",
+          "failureModes": "core overheated after warning",
+          "enemyBehaviors": "block routes phase-shifted",
+          "objectiveStructures": "activate sequence after miniboss",
+          "resourceSystems": "stamina combo refill",
+          "levelProgression": "escalating waves with secret exits",
+          "twistConstraints": "shared health inside safe zone"
         }
       },
-      "mechanicFamily": "stealth patrol",
-      "runtimeTemplate": "stealth_patrol",
-      "pacing": "18 minutes",
-      "spatialStructure": "patrol grid",
+      "mechanicFamily": "route runner",
+      "runtimeTemplate": "route_runner",
+      "pacing": "8 minutes",
+      "spatialStructure": "lane route",
       "failurePressure": [
-        "glitch",
+        "guard",
         "sentinel",
-        "breach",
+        "storm",
         "pier",
         "peak",
         "ice",
         "harbor"
       ],
       "progressionShape": [
-        "unveil",
-        "unlock",
+        "expand",
+        "pulse",
         "expand",
         "upgrade",
         "pulse",
-        "unlock",
-        "Each run converts performance into unveil, unlock upgrades and route unlocks."
+        "ascend",
+        "Each run converts performance into expand, pulse upgrades and route unlocks."
       ],
       "presentationRules": [
-        "Ice-pier-peak terrain patrolled by relentless swarms and commanding pulses.",
-        "Dynamic lighting, particle explosions, and high-speed camera shakes on spikes.",
+        "The world blends pier, peak, ice into a hostile traversal space patrolled by swarm, commander, pulse.",
+        "Dynamic lighting on exposed stone surfaces contrasts with the icy textures of peaks; depth is created through particle effects and atmospheric fog.",
         "fast threat reads",
         "clear route ownership",
         "strong reward telegraphing"
@@ -905,32 +865,32 @@
       {
         "id": "intro",
         "title": "Introduction",
-        "text": "A spin-based arcade where players outmaneuver swarm forces to unlock the peak.\n\nSpin a block to stack it; if a swarm is nearby, dodge or attack first.\n\nSurvive compact but expressive runs filled with glitchy mechanics and pushing hazards.\n\nUnveil the peak's secrets by managing upgrades as you progress through layers.",
+        "text": "A expansive arcade game set between pier and peak, where the player uses spin and stack actions to outmaneuver swarm forces and drive an expand-to-upgrade progression arc.\n\nSpin an obstacle to deflect incoming projectiles while stacking resources to fortify your position against swarms.\n\nManeuver across compact terrain while managing limited charges, utilizing unique moves to create space for rapid repositioning.\n\nClimb upward to access high-visibility objectives and upgrade tools that modify future swarm compositions.",
         "choices": []
       },
       {
         "id": "exploration-loop-1",
         "title": "Exploration Loop 1",
-        "text": "What happens if relay traversal meets stack play under stalker pressure? Keep stack as a repeatable skill test, escalate with stalker, and use reveal as the reason to push deeper.",
+        "text": "A fast-paced arcade survival game where players spin blocks and stack energy to destroy swarms of enemy guards while upgrading their pier defenses. Play this as a high-speed, visually striking action experience focused on rhythm-based destruction and strategic tower placement rather than traditional turn-based combat.",
         "choices": []
       },
       {
         "id": "exploration-loop-2",
         "title": "Exploration Loop 2",
-        "text": "What happens if ember traversal meets carry play under trigger pressure? Keep carry as a repeatable skill test, escalate with trigger, and use reveal as the reason to push deeper.",
+        "text": "A sci-fi arcade platformer with vertical stacking and swarm mechanics on a futuristic pier. Execute a burst by triggering multiple stacked glitches simultaneously, overwhelming the swarm before it can regenerate or retreat.",
         "choices": []
       },
       {
         "id": "exploration-loop-3",
         "title": "Exploration Loop 3",
-        "text": "What happens if frost traversal meets carry play under beacon pressure? Keep carry as a repeatable skill test, escalate with beacon, and use pulse as the reason to push deeper.",
+        "text": "What happens if relay traversal meets flip play under marker pressure? Keep flip as a repeatable skill test, escalate with marker, and use advance as the reason to push deeper.",
         "choices": []
       }
     ]
   },
   "delivery": {
     "format": "story-driven JSON nodes",
-    "note": "scene layout, enemy waves, relic rewards, goal unlock state, brainstorm final spec, player controller",
+    "note": "scene layout, enemy waves, objective rewards, goal unlock state, brainstorm final spec, player controller",
     "prototypeScope": "Small browser-playable prototype"
   }
 }

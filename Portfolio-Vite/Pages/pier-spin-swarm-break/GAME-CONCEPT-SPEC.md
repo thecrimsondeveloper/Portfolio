@@ -3,86 +3,85 @@
 ## Identity
 
 - Title: Pier Spin: Swarm Break
-- Description: A spin-based arcade where players outmaneuver swarm forces to unlock the peak.
-- Objective: Use spin and sprint to survive glitch patrols, secure relic routes, and turn each run into unveil, unlock progress.
-- Distinctiveness: A master of the pier who wields spinning power against chaotic invaders.
+- Description: A expansive arcade game set between pier and peak, where the player uses spin and stack actions to outmaneuver swarm forces and drive an expand-to-upgrade progression arc.
+- Objective: Use spin and stack to resolve guard-driven pressure, complete the active objective chain, and turn each run into expand, pulse progress.
+- Distinctiveness: A guardian who masters elemental flow and dynamic balance to dismantle overwhelming swarms.
 
 ## Seed Summary
 
 Generated game seed combination:
-- Themes: street level mystery
-- Genres: stealth puzzle
-- Environments: abandoned factory
-- Settings: late-night
-- Character motivations: escape before dawn
-- Movement mechanics: rhythm-based stepping, mirror walking
+- Themes: mechanical festival rescue
+- Genres: escort resource run
+- Environments: rooftop maintenance rails
+- Settings: foggy morning
+- Character motivations: repair broken machinery
+- Movement mechanics: cargo balancing, mirror walking
 - Core loops: evade patrols while searching
-- Progression loops: build a safe path
-- Completion loops: relay activation
-- Rewards: boss unlock, resource caches
-- Antagonists: rival explorer
+- Progression loops: power up a device
+- Completion loops: ceremony completion
+- Rewards: upgrade module, story fragments
+- Antagonists: mischievous spirits
 - Visual styles: textured industrial
-- Audio styles: mechanical percussion
+- Audio styles: breathy wind soundscape
 - Interaction patterns: inventory-lite object use
-- Production focus: focus on motion and feel
-- Camera modes: cinematic follow wide-read
-- Arena shapes: shrinking zone with shortcuts
-- Primary verbs: trade with timing
-- Scoring models: survival timer speed bonus
-- Failure modes: cargo shattered during overload
-- Enemy behaviors: chase on sight light-triggered
-- Objective structures: defuse core in split routes
-- Resource systems: keys slow drain
-- Level progression: single run with secret exits
-- Twist constraints: rotating room inside safe zone
+- Production focus: prototype in directory with JSON and HTML only
+- Camera modes: over-the-shoulder danger-tilt
+- Arena shapes: maze with shortcuts
+- Primary verbs: redirect through hazards
+- Scoring models: time attack near miss bonus
+- Failure modes: core overheated after warning
+- Enemy behaviors: block routes phase-shifted
+- Objective structures: activate sequence after miniboss
+- Resource systems: stamina combo refill
+- Level progression: escalating waves with secret exits
+- Twist constraints: shared health inside safe zone
 
 ## Core Fantasy
 
-A spin-based arcade where players outmaneuver swarm forces to unlock the peak.
+A expansive arcade game set between pier and peak, where the player uses spin and stack actions to outmaneuver swarm forces and drive an expand-to-upgrade progression arc.
 
 ## Player Actions
 
 - spin
-- sprint
-- pivot
+- stack
+- dash
 
 ## Core Loop Beats
 
-- Spin a block to stack it; if a swarm is nearby, dodge or attack first.
-- Survive compact but expressive runs filled with glitchy mechanics and pushing hazards.
-- Unveil the peak's secrets by managing upgrades as you progress through layers.
-- Teach spin movement and introduce glitch reads in a low-risk pier route.
-- Layer sprint interactions, mixed enemy waves, and injection events from the exploration loops.
-- Force mastery through stacked hazards, elite glitch encounters, and a final unveil choice.
+- Spin an obstacle to deflect incoming projectiles while stacking resources to fortify your position against swarms.
+- Maneuver across compact terrain while managing limited charges, utilizing unique moves to create space for rapid repositioning.
+- Climb upward to access high-visibility objectives and upgrade tools that modify future swarm compositions.
+- Teach spin movement and introduce guard reads in a low-risk pier route.
+- Layer stack interactions, mixed enemy waves, and injection events from the exploration loops.
+- Force mastery through stacked hazards, elite guard encounters, and a final expand choice.
 
 ## Threats And Pressure
 
-- glitch
+- guard
 - sentinel
-- breach
+- storm
 - pier
 - peak
 - ice
 
 ## Rewards And Progression
 
-- unveil
-- unlock
 - expand
-- upgrade
 - pulse
-- Each run converts performance into unveil, unlock upgrades and route unlocks.
+- upgrade
+- ascend
+- Each run converts performance into expand, pulse upgrades and route unlocks.
 
 ## Fail States
 
-- Get overwhelmed by glitch.
-- Run out of time before the exit unlocks.
+- Get overwhelmed by guard.
+- Run out of time before the completion condition unlocks.
 - Lose health by lingering in active hazard lanes.
 
 ## Visual Identity
 
-- Ice-pier-peak terrain patrolled by relentless swarms and commanding pulses.
-- Dynamic lighting, particle explosions, and high-speed camera shakes on spikes.
+- The world blends pier, peak, ice into a hostile traversal space patrolled by swarm, commander, pulse.
+- Dynamic lighting on exposed stone surfaces contrasts with the icy textures of peaks; depth is created through particle effects and atmospheric fog.
 - pier
 - peak
 - ice
@@ -91,8 +90,8 @@ A spin-based arcade where players outmaneuver swarm forces to unlock the peak.
 ## Controls And HUD
 
 - WASD or Arrow keys move the player through the arena.
-- Shift triggers a pivot burst for repositioning.
-- Space converts spin and sprint pressure into crowd control.
+- Shift triggers a dash burst for repositioning.
+- Space converts spin and stack pressure into crowd control.
 - Press Enter to deploy. Use WASD or Arrow keys to move, Shift to dash, and Space to pulse.
 - health
 - charge meter
@@ -101,32 +100,32 @@ A spin-based arcade where players outmaneuver swarm forces to unlock the peak.
 
 - scene layout
 - enemy waves
-- relic rewards
+- objective rewards
 - goal unlock state
 - brainstorm final spec
 - player controller
 
 ## Story Intro
 
-A spin-based arcade where players outmaneuver swarm forces to unlock the peak.
+A expansive arcade game set between pier and peak, where the player uses spin and stack actions to outmaneuver swarm forces and drive an expand-to-upgrade progression arc.
 
-Spin a block to stack it; if a swarm is nearby, dodge or attack first.
+Spin an obstacle to deflect incoming projectiles while stacking resources to fortify your position against swarms.
 
-Survive compact but expressive runs filled with glitchy mechanics and pushing hazards.
+Maneuver across compact terrain while managing limited charges, utilizing unique moves to create space for rapid repositioning.
 
-Unveil the peak's secrets by managing upgrades as you progress through layers.
+Climb upward to access high-visibility objectives and upgrade tools that modify future swarm compositions.
 
 ## HUD Status Message
 
-Use spin and sprint to survive glitch patrols, secure relic routes, and turn each run into unveil, unlock progress.
+Use spin and stack to resolve guard-driven pressure, complete the active objective chain, and turn each run into expand, pulse progress.
 
 ## Fun Check
 
-- Assessment: yes - Pier Spin: Swarm Break has a readable arcade core built around spin, sprint against glitch, sentinel with a clear payoff in unveil, unlock.
+- Assessment: yes - Pier Spin: Swarm Break has a readable arcade core built around spin, stack against guard, sentinel with a clear payoff in expand, pulse.
 					- Fun needs:
 
 - fast threat reads
 - clear route ownership
 - strong reward telegraphing
 - WASD or Arrow keys move the player through the arena.
-- Shift triggers a pivot burst for repositioning.
+- Shift triggers a dash burst for repositioning.

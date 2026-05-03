@@ -4,6 +4,7 @@
 # Local agent/runtime state
 .codex-screens/
 .copilot-local/
+copilot-memory.md
 .nexus-link/
 .playwright-mcp/
 
@@ -11,11 +12,16 @@
 .venv/
 __pycache__/
 *.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 
 # Node/Vite local outputs
 node_modules/
 dist/
 .vite/
+playwright-report/
+test-results/
 
 # Local env files
 .env
@@ -28,6 +34,14 @@ dist/
 *.jpeg
 *.webp
 !Portfolio-Vite/public/**
+Portfolio-Vite/Pages/**/.qa/
+
+# Generated arcade automation pages
+Portfolio-Vite/Pages/auto-arcade-*/
+Portfolio-Vite/Pages/auto-arcade-v*/
+Portfolio-Vite/Pages/a-frogger-style-game-that-star/
+Portfolio-Vite/Pages/invent-an-original-arcade-game/
+Portfolio-Vite/Pages/error-calling-nvidia-api-*/
 
 # Generated CLI run output
 Portfolio-Vite/cli/runs/
@@ -37,3 +51,11 @@ Portfolio-Vite/cli/state/arcade_auto_report.json
 Portfolio-Vite/cli/state/arcade_run.lock
 Portfolio-Vite/cli/state/*.tmp
 Portfolio-Vite/cli/MiniArcadeControl/data/*.json
+
+# PortfolioBuilder local automation/runtime output
+# Version source is tracked; copied sessions/env/log output is ignored.
+PortfolioBuilder-V1/.ARCADE-AUTOMATIONS/logs/
+PortfolioBuilder-V1/.ARCADE-AUTOMATIONS/runs/
+PortfolioBuilder-V1/.ARCADE-AUTOMATIONS/failed-builds/
+PortfolioBuilder-V1/.ARCADE-AUTOMATIONS/supervisor.lock
+PortfolioBuilder-V1/**/.ARCADE-SYSTEM/sessions/

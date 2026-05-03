@@ -1,0 +1,38 @@
+{
+  "id": "dock-spin-swarm-break",
+  "title": "Dock Spin: Swarm Break",
+  "summary": "Navigate dock and canyon spaces with spin and relay, solve shock-driven pressure, and turn each run into refine progress.",
+  "mode": "arcade-action",
+  "palette": "dock-spin-swarm-break",
+  "instructions": "WASD or Arrow keys move the player through the arena., Shift triggers a twist burst for repositioning., Space converts spin and relay pressure into crowd control.",
+  "hud": {
+    "modeLabel": "Dock Spin: Swarm Break",
+    "objective": "Use spin and relay to resolve shock-driven pressure, complete the active objective chain, and turn each run into refine, rhythm progress."
+  },
+  "overlay": {
+    "startTitle": "Dock Spin: Swarm Break",
+    "startCopy": "Navigate dock and canyon spaces with spin and relay, solve shock-driven pressure, and turn each run into refine progress.\n\nScout routes through dock spaces and identify swarm pressure points.\n\nUse spin and stack interactions to survive, reposition, and secure objectives.\n\nConvert each run into expand gains that unlock stronger options and open the next challenge band.",
+    "startAction": "Launch Game"
+  },
+  "content": {
+    "hook": "Navigate dock and canyon spaces with spin and relay, solve shock-driven pressure, and turn each run into refine progress.",
+    "actions": [
+      "spin",
+      "relay",
+      "twist"
+    ],
+    "pressure": [
+      "shock",
+      "storm",
+      "void"
+    ],
+    "rewards": [
+      "refine",
+      "rhythm",
+      "expand"
+    ],
+    "runtimeTemplate": "route_runner",
+    "mechanicFamily": "route runner"
+  },
+  "image": ""
+}

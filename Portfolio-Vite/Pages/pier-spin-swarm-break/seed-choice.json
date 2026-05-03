@@ -1,38 +1,38 @@
 {
   "title": "Pier Spin: Swarm Break",
-  "description": "A spin-based arcade where players outmaneuver swarm forces to unlock the peak.",
-  "objective": "Use spin and sprint to survive glitch patrols, secure relic routes, and turn each run into unveil, unlock progress.",
+  "description": "A expansive arcade game set between pier and peak, where the player uses spin and stack actions to outmaneuver swarm forces and drive an expand-to-upgrade progression arc.",
+  "objective": "Use spin and stack to resolve guard-driven pressure, complete the active objective chain, and turn each run into expand, pulse progress.",
   "seed": {
-    "themes": "street level mystery",
-    "genres": "stealth puzzle",
-    "environments": "abandoned factory",
-    "settings": "late-night",
-    "characterMotivations": "escape before dawn",
+    "themes": "mechanical festival rescue",
+    "genres": "escort resource run",
+    "environments": "rooftop maintenance rails",
+    "settings": "foggy morning",
+    "characterMotivations": "repair broken machinery",
     "movementMechanics": [
-      "rhythm-based stepping",
+      "cargo balancing",
       "mirror walking"
     ],
     "coreLoops": "evade patrols while searching",
-    "progressionLoops": "build a safe path",
-    "completionLoops": "relay activation",
+    "progressionLoops": "power up a device",
+    "completionLoops": "ceremony completion",
     "rewards": [
-      "boss unlock",
-      "resource caches"
+      "upgrade module",
+      "story fragments"
     ],
-    "antagonists": "rival explorer",
+    "antagonists": "mischievous spirits",
     "visualStyles": "textured industrial",
-    "audioStyles": "mechanical percussion",
+    "audioStyles": "breathy wind soundscape",
     "interactionPatterns": "inventory-lite object use",
-    "productionFocus": "focus on motion and feel",
-    "cameraModes": "cinematic follow wide-read",
-    "arenaShapes": "shrinking zone with shortcuts",
-    "primaryVerbs": "trade with timing",
-    "scoringModels": "survival timer speed bonus",
-    "failureModes": "cargo shattered during overload",
-    "enemyBehaviors": "chase on sight light-triggered",
-    "objectiveStructures": "defuse core in split routes",
-    "resourceSystems": "keys slow drain",
-    "levelProgression": "single run with secret exits",
-    "twistConstraints": "rotating room inside safe zone"
+    "productionFocus": "prototype in directory with JSON and HTML only",
+    "cameraModes": "over-the-shoulder danger-tilt",
+    "arenaShapes": "maze with shortcuts",
+    "primaryVerbs": "redirect through hazards",
+    "scoringModels": "time attack near miss bonus",
+    "failureModes": "core overheated after warning",
+    "enemyBehaviors": "block routes phase-shifted",
+    "objectiveStructures": "activate sequence after miniboss",
+    "resourceSystems": "stamina combo refill",
+    "levelProgression": "escalating waves with secret exits",
+    "twistConstraints": "shared health inside safe zone"
   }
 }

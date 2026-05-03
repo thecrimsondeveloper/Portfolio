@@ -1,0 +1,233 @@
+{
+  "gameTitle": "Dock Pulse: Swarm Break",
+  "profile": {
+    "seedContract": {
+      "sourceSeed": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-br8l843d/brainstorm-seed.json",
+      "sourceSummary": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-br8l843d/brainstorm-summary.json",
+      "sourceSamples": {
+        "environment": [
+          "dock",
+          "canyon",
+          "pulse",
+          "ember",
+          "harbor",
+          "storm",
+          "wind"
+        ],
+        "mechanics": [
+          "pulse",
+          "spike",
+          "haul",
+          "pivot",
+          "slam",
+          "grab",
+          "spark"
+        ],
+        "enemies": [
+          "swarm",
+          "commander",
+          "pulse",
+          "drone",
+          "stalker",
+          "marker"
+        ],
+        "progression": [
+          "expand",
+          "upgrade",
+          "pulse",
+          "ascend",
+          "reveal",
+          "evolve",
+          "unlock"
+        ]
+      },
+      "seed": {
+        "themes": "urban parkour delivery",
+        "genres": "survival arena",
+        "environments": "rooftop maintenance rails",
+        "settings": "midsummer heat",
+        "characterMotivations": "protect the neighborhood",
+        "movementMechanics": [
+          "mirror walking",
+          "momentum-based rolling"
+        ],
+        "coreLoops": "trace signal patterns",
+        "progressionLoops": "gain movement upgrades",
+        "completionLoops": "boss hunt",
+        "rewards": [
+          "resource caches",
+          "boss unlock"
+        ],
+        "antagonists": "ancient guardian",
+        "visualStyles": "hand-painted textures",
+        "audioStyles": "ambient hum",
+        "interactionPatterns": "environmental interaction first",
+        "productionFocus": "prototype in directory with JSON and HTML only",
+        "cameraModes": "cinematic follow wide-read",
+        "arenaShapes": "patrol grid with bridges",
+        "primaryVerbs": "repair around patrols",
+        "scoringModels": "delivery value no-hit bonus",
+        "failureModes": "resource depleted while carrying",
+        "enemyBehaviors": "summon hazards slow pattern",
+        "objectiveStructures": "repair network with limited resource",
+        "resourceSystems": "noise risk overflow",
+        "levelProgression": "escalating waves with checkpoints",
+        "twistConstraints": "decaying floor for finale"
+      }
+    },
+    "mechanicFamily": "stealth patrol",
+    "runtimeTemplate": "stealth_patrol",
+    "pacing": "18 minutes",
+    "spatialStructure": "patrol grid",
+    "failurePressure": [
+      "swarm",
+      "commander",
+      "pulse",
+      "dock",
+      "canyon",
+      "ember"
+    ],
+    "progressionShape": [
+      "expand",
+      "upgrade",
+      "expand",
+      "upgrade",
+      "pulse",
+      "ascend",
+      "Each run converts performance into expand, upgrade upgrades and route unlocks."
+    ],
+    "presentationRules": [
+      "Dock meets canyon under attack by swarms of pulse units.",
+      "Dynamic traversal featuring dark industrial dock tones contrasted against stark canyon landscapes, enhanced by colorful pulse effects and sharp spike animations.",
+      "fast threat reads",
+      "clear route ownership",
+      "strong reward telegraphing"
+    ],
+    "mustPreserve": [
+      "Preserve the randomized seed contract through every stage.",
+      "Treat final-brainstorming.json as the canonical game specification.",
+      "Keep the generated game self-contained in one Pages/<slug>/ folder.",
+      "Make runtime behavior match runtimeTemplate instead of defaulting to one arena scaffold."
+    ],
+    "fallbackSource": ""
+  },
+  "canonicalPaths": {
+    "targetDir": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/dock-pulse-swarm-break",
+    "brainstormSeed": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/dock-pulse-swarm-break/brainstorm-seed.json",
+    "brainstormSummary": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/dock-pulse-swarm-break/brainstorm-summary.json",
+    "finalBrainstorm": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/dock-pulse-swarm-break/final-brainstorming.json",
+    "story": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/dock-pulse-swarm-break/story-structure.json",
+    "gameScript": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/dock-pulse-swarm-break/game.js"
+  },
+  "seedCombination": {
+    "themes": "urban parkour delivery",
+    "genres": "survival arena",
+    "environments": "rooftop maintenance rails",
+    "settings": "midsummer heat",
+    "characterMotivations": "protect the neighborhood",
+    "movementMechanics": [
+      "mirror walking",
+      "momentum-based rolling"
+    ],
+    "coreLoops": "trace signal patterns",
+    "progressionLoops": "gain movement upgrades",
+    "completionLoops": "boss hunt",
+    "rewards": [
+      "resource caches",
+      "boss unlock"
+    ],
+    "antagonists": "ancient guardian",
+    "visualStyles": "hand-painted textures",
+    "audioStyles": "ambient hum",
+    "interactionPatterns": "environmental interaction first",
+    "productionFocus": "prototype in directory with JSON and HTML only",
+    "cameraModes": "cinematic follow wide-read",
+    "arenaShapes": "patrol grid with bridges",
+    "primaryVerbs": "repair around patrols",
+    "scoringModels": "delivery value no-hit bonus",
+    "failureModes": "resource depleted while carrying",
+    "enemyBehaviors": "summon hazards slow pattern",
+    "objectiveStructures": "repair network with limited resource",
+    "resourceSystems": "noise risk overflow",
+    "levelProgression": "escalating waves with checkpoints",
+    "twistConstraints": "decaying floor for finale"
+  },
+  "stageHistory": [
+    {
+      "stage": "stage-1-brainstorm-pipeline",
+      "event": "stage",
+      "summary": "Locked final-brainstorming.json and initialized gameDesignProfile."
+    },
+    {
+      "stage": "stage-2-concept-materialization",
+      "event": "stage",
+      "summary": "Materialized concept from locked brainstorm packet."
+    },
+    {
+      "stage": "stage-3-feature-sprint-loop",
+      "event": "stage",
+      "summary": "Derived feature sprint packets from canonical brainstorm data."
+    },
+    {
+      "stage": "stage-4-design-assembly",
+      "event": "stage",
+      "summary": "Assembled design document."
+    },
+    {
+      "stage": "stage-5-build-planning-loop",
+      "event": "stage",
+      "summary": "Derived fun assessment and implementation chapters."
+    },
+    {
+      "stage": "stage-6-story-and-scaffold-materialization",
+      "event": "stage",
+      "summary": "Created story payload and runtime scaffold for stealth_patrol."
+    },
+    {
+      "stage": "stage-7-html-review-loop",
+      "event": "stage",
+      "summary": "Completed HTML shell review pass."
+    },
+    {
+      "stage": "implementation_pass",
+      "event": "memoryUpdate",
+      "summary": "Pass 1 should repair the generic relic arena into a relay-repair courier loop before deeper enemy or hazard work."
+    },
+    {
+      "stage": "implementation_pass",
+      "event": "memoryUpdate",
+      "summary": "Pass 2 should lock one commander archetype so the relay run has route-control pressure and a readable pulse counter-window."
+    },
+    {
+      "stage": "stage-8-implementation-sprint-loop",
+      "event": "stage",
+      "summary": "Completed configured implementation sprint passes."
+    }
+  ],
+  "decisions": [
+    "Keep the existing three.js scaffold and patch mechanics locally.",
+    "Use Movement as the active packet because it best changes player feel immediately.",
+    "Delay commander and finale work until the relay loop is playable.",
+    "Use One Enemy Archetype as the second and final initial planning pass.",
+    "Model the commander as a lane-control threat rather than a high-health brute.",
+    "Advance out of Stage 8 after this pass so live file implementation and validation can happen."
+  ],
+  "rejectedIdeas": [
+    "Do not rewrite the entire runtime in the first implementation pass.",
+    "Do not add broad new systems that are not needed for the relay loop.",
+    "Do not add multiple new enemy classes in this pass.",
+    "Do not spend this pass on broad visual polish instead of route pressure."
+  ],
+  "openIssues": [
+    "Current scaffold copy and mechanics still mention relic collection and exit unlocking.",
+    "The generated overlay hint currently includes raw UI note text instead of a cleaned control summary.",
+    "The actual runtime files still need the relay and commander edits applied.",
+    "A route hazard pass may still be needed if the arena floor remains too static in play."
+  ],
+  "nextStageNotes": [
+    "Validation should explicitly check that relic wording is gone from the playable loop.",
+    "Arcade integration should only proceed after one browser smoke pass confirms the relay run is readable and playable.",
+    "Validation should check for relay wording, commander pressure, and pulse counterplay in the live runtime.",
+    "If the game still feels generic after browser smoke testing, use the validation loop to justify one hazard-focused repair pass."
+  ]
+}

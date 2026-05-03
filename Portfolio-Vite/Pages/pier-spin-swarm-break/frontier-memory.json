@@ -217,6 +217,21 @@
       "stage": "stage-10-arcade-integration-loop",
       "event": "stage",
       "summary": "Completed arcade integration loop."
+    },
+    {
+      "stage": "stage-6-story-and-scaffold-materialization",
+      "event": "stage",
+      "summary": "Created story payload and runtime scaffold for route_runner."
+    },
+    {
+      "stage": "implementation_pass",
+      "event": "memoryUpdate",
+      "summary": "Implemented core Movement slice with spin deflection."
+    },
+    {
+      "stage": "validation_loop",
+      "event": "memoryUpdate",
+      "summary": "Completed validation loop 01, pivoting to Stage 10 arcade integration."
     }
   ],
   "decisions": [
@@ -225,21 +240,28 @@
     "Use one readable patrol-alert-chase enemy before adding more hazards",
     "Keep HUD feedback optional and additive",
     "Do not request broad HTML or JSON rewrites",
-    "Finish runtime fidelity through focused edits in game.js and story-structure.json"
+    "Finish runtime fidelity through focused edits in game.js and story-structure.json",
+    "Repurposed pulse as a sustained spin state for better 'Pier Spin' identity alignment.",
+    "Finalized spin as the primary defensive and route-clearing verb."
   ],
   "rejectedIdeas": [
     "Broadly rewriting combat before movement feel is established",
     "Adding multiple enemy archetypes in the first playable pass",
-    "Masking missing mechanics with copy-only shell changes"
+    "Masking missing mechanics with copy-only shell changes",
+    "Infinite spin (would break difficulty balancing).",
+    "Stamina-based spin (kept it cooldown-based for arcade feel)."
   ],
   "openIssues": [
     "Exact beat window and mirror duration will need playtesting",
     "Route hazards and rotating-room pressure still need implementation",
-    "Route hazard and live HUD updates are still the main blockers to a complete first playable loop"
+    "Route hazard and live HUD updates are still the main blockers to a complete first playable loop",
+    "Need better visual feedback for spin completion."
   ],
   "nextStageNotes": [
     "Use the next pass for one sentry archetype tied to sight and light pressure",
     "Validation should check whether movement plus sentry pressure still leaves room for route-building and relay objectives",
-    "After builder completion, directly implement the editPlan and validate with node --check and a browser smoke test"
+    "After builder completion, directly implement the editPlan and validate with node --check and a browser smoke test",
+    "Ensure 'One Enemy Archetype' interacts specifically with the spin state.",
+    "Ensure arcade-library.json is correctly updated in Stage 10."
   ]
 }

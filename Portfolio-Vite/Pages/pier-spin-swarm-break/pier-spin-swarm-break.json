@@ -1,38 +1,38 @@
 {
   "id": "pier-spin-swarm-break",
   "title": "Pier Spin: Swarm Break",
-  "summary": "A spin-based arcade where players outmaneuver swarm forces to unlock the peak.",
+  "summary": "A expansive arcade game set between pier and peak, where the player uses spin and stack actions to outmaneuver swarm forces and drive an expand-to-upgrade progression arc.",
   "mode": "arcade-action",
   "palette": "pier-spin-swarm-break",
-  "instructions": "WASD or Arrow keys move through the factory lanes, Shift triggers a quick dodge step for escaping sightlines, Space uses your pulse action to interrupt nearby threats or hazards",
+  "instructions": "Dynamic camera tilt when moving at high speeds., Pulse effects on the HUD when stacking energy., Warning alerts for core temperature.",
   "hud": {
     "modeLabel": "Pier Spin: Swarm Break",
-    "objective": "Use spin and sprint to survive glitch patrols, secure relic routes, and turn each run into unveil, unlock progress."
+    "objective": "Use spin and stack to resolve guard-driven pressure, complete the active objective chain, and turn each run into expand, pulse progress."
   },
   "overlay": {
     "startTitle": "Pier Spin: Swarm Break",
-    "startCopy": "A spin-based arcade where players outmaneuver swarm forces to unlock the peak.\n\nSpin a block to stack it; if a swarm is nearby, dodge or attack first.\n\nSurvive compact but expressive runs filled with glitchy mechanics and pushing hazards.\n\nUnveil the peak's secrets by managing upgrades as you progress through layers.",
+    "startCopy": "A expansive arcade game set between pier and peak, where the player uses spin and stack actions to outmaneuver swarm forces and drive an expand-to-upgrade progression arc.\n\nSpin an obstacle to deflect incoming projectiles while stacking resources to fortify your position against swarms.\n\nManeuver across compact terrain while managing limited charges, utilizing unique moves to create space for rapid repositioning.\n\nClimb upward to access high-visibility objectives and upgrade tools that modify future swarm compositions.",
     "startAction": "Launch Game"
   },
   "content": {
-    "hook": "A spin-based arcade where players outmaneuver swarm forces to unlock the peak.",
+    "hook": "A expansive arcade game set between pier and peak, where the player uses spin and stack actions to outmaneuver swarm forces and drive an expand-to-upgrade progression arc.",
     "actions": [
       "spin",
-      "sprint",
-      "pivot"
+      "stack",
+      "dash"
     ],
     "pressure": [
-      "glitch",
+      "guard",
       "sentinel",
-      "breach"
+      "storm"
     ],
     "rewards": [
-      "unveil",
-      "unlock",
-      "expand"
+      "expand",
+      "pulse",
+      "upgrade"
     ],
-    "runtimeTemplate": "stealth_patrol",
-    "mechanicFamily": "stealth patrol"
+    "runtimeTemplate": "route_runner",
+    "mechanicFamily": "route runner"
   },
   "image": ""
 }

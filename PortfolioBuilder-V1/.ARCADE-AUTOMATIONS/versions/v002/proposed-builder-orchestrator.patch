@@ -1,0 +1,18 @@
+diff --git a/.ARCADE-CLI/builder-orchestrator.py b/.ARCADE-CLI/builder-orchestrator.py
+--- a/.ARCADE-CLI/builder-orchestrator.py
++++ b/.ARCADE-CLI/builder-orchestrator.py
+@@
+         if "story structure" in lower_stage or "story-structure.json" in lower_stage:
+-            return "- Return valid JSON only. First character must be `{`. The `title` must exactly match contract.json.title from the prompt."
++            return "- Return valid JSON only. First character must be `{`. The `title` must exactly match contract.json.title from the prompt. Include an `implementedMechanics` array with at least three mechanics that must be implemented in game.js."
+@@
+         if "game.js" in lower_stage:
+-            return "- Return JavaScript only. Do not include HTML, CSS, or JSON metadata. Use standard DOM ids gameCanvas and startButton. Wire Start/Play/Begin controls and draw a visible initial frame plus a nonblank gameplay frame within one second after start. Preserve the canonical contract title where referenced."
++            return "- Return JavaScript only. Do not include HTML, CSS, or JSON metadata. Use standard DOM ids gameCanvas and startButton. Wire Start/Play/Begin controls. Draw a visible initial frame, then use requestAnimationFrame so the canvas visibly changes within one second after start. Implement at least three named mechanics from contract.json/story-structure.json, including one mechanic beyond movement and collision. Preserve the canonical contract title where referenced."
+@@
+         if "design.md" in lower_stage:
+-            return "- Return Markdown only. It must describe the actual generated game and use contract.json.title as the title."
++            return "- Return Markdown only. It must describe the actual generated game, use contract.json.title as the title, and list only mechanics that will be implemented in game.js."
+         if "validation review" in lower_stage or "validation.md" in lower_stage:
+-            return "- Return Markdown only. It must review the actual generated game and use contract.json.title as the title."
++            return "- Return Markdown only. It must review the actual generated game, use contract.json.title as the title, and verify the implemented mechanic list against game.js."

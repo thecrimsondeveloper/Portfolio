@@ -2,19 +2,18 @@
 
 		## Sprint Objective
 
-		Make movement feel deliberate by adding rhythm-step timing, mirror-walk state, and factory HUD feedback.
+		Implement the Movement core slice with spin mechanics and guard deflection.
 
 		## Implementation Plan
 
 
-- Add movement tuning fields to story-structure.json
-- Patch game.js movement state and input handling
-- Update HUD wording in index.html
-- Run JSON and JS validation commands
+- Define spin constants in player object.
+- Update updatePlayer loop to check for spin input and manage duration.
+- Update updateEnemies to apply deflection if player is spinning.
+- Test movement in the browser (mental simulation).
 
 		## Simulated Checkpoints
 
 
-- story-structure.json parses successfully
-- game.js passes syntax validation
-- HUD labels remain readable and tied to the runtime theme
+- Spin state is active for a set duration after Space is pressed.
+- Enemies are pushed back on contact during spin.

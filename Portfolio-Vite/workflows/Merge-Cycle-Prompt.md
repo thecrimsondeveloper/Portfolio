@@ -14,15 +14,23 @@ Keep every arcade game separate. Do not create shared modules. Do not extract sh
 
 ### 1.
 
-GOAL: List all existing arcade games and describe their current state without making any changes.
+Goal: Create a read-only inventory of every existing arcade game and describe each one as its own separate player experience, without editing files or running commands.
 
-THINK ABOUT: each game’s name, entry file, JSON fixture usage, core mechanic, controls, visual style, completion level, missing features, bugs, polish issues, and whether it follows the current arcade expectations.
+Thinking chain:
+First, identify each arcade game by its entry file and JSON fixture.
+Then, describe the actual gameplay: core mechanic, player action, controls, win/fail condition, and visual identity.
+Then, judge what makes that game distinct, what feels unfinished, what may be broken, and what is only conceptually duplicated from other games.
+Then, estimate current playtime and explain what drives that playtime: score chasing, survival, escalation, collection, replayability, full loop, or story/progression.
+Then, choose one smallest safe game-specific improvement for that game only.
 
-ACHIEVE BY: scanning the arcade-related files and producing a clear inventory of every game, one by one.
-
-RULE: Keep every arcade game separate. Do not create shared modules. Do not extract shared systems. Do not centralize game logic. Do not refactor unrelated systems. Do not change non-arcade files. Prefer the smallest useful game-specific improvement. It is okay for games to repeat similar code if that keeps them simple, separate, and easy to edit.
-
-ENDING RULE: Do not modify files. Output a game-by-game list with features, issues, missing pieces, and the safest next improvement for each game.
+Sequential output plan:
+1. Read arcade files directly only.
+2. Do not run terminal commands, Python snippets, MCP tools, scripts, tests, build tools, package commands, or workspace automation.
+3. Keep every arcade game separate.
+4. Do not create shared modules, shared systems, shared game logic, or merged frameworks.
+5. Use similarity only for comparison, not as a reason to refactor.
+6. Output every game with these fields: game name, entry file, JSON fixture, core mechanic, controls, estimated playtime, playtime driver, loop/story assessment, strengths, issues, missing gameplay/polish, and safest next game-specific improvement.
+7. If a complete inventory cannot be made from direct file reading, stop and ask for permission before using any execution tool.
 
 ### 2.
 

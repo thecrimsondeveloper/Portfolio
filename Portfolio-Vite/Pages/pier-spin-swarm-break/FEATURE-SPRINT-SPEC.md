@@ -4,8 +4,8 @@
 
 ### Movement
 
-		- Sprint objective: Implement the movement slice so the player can reliably feel spin under glitch.
-		- Player promise: The player immediately feels how movement improves the route and unlocks unveil.
+		- Sprint objective: Implement the movement slice so the player can reliably feel spin under guard.
+		- Player promise: The player immediately feels how movement improves the route and unlocks expand.
 		- Branch reason: Movement is a distinct, testable slice backed by the canonical brainstorm packet and should land without widening scope.
 
 		#### Branch Slices
@@ -39,8 +39,8 @@
 
 ### One Enemy Archetype
 
-		- Sprint objective: Implement the one enemy archetype slice so the player can reliably feel sprint under sentinel.
-		- Player promise: The player immediately feels how one enemy archetype improves the route and unlocks unlock.
+		- Sprint objective: Implement the one enemy archetype slice so the player can reliably feel stack under sentinel.
+		- Player promise: The player immediately feels how one enemy archetype improves the route and unlocks pulse.
 		- Branch reason: One Enemy Archetype is a distinct, testable slice backed by the canonical brainstorm packet and should land without widening scope.
 
 		#### Branch Slices
@@ -74,8 +74,8 @@
 
 ### One Route Hazard
 
-		- Sprint objective: Implement the one route hazard slice so the player can reliably feel pivot under breach.
-		- Player promise: The player immediately feels how one route hazard improves the route and unlocks expand.
+		- Sprint objective: Implement the one route hazard slice so the player can reliably feel dash under storm.
+		- Player promise: The player immediately feels how one route hazard improves the route and unlocks upgrade.
 		- Branch reason: One Route Hazard is a distinct, testable slice backed by the canonical brainstorm packet and should land without widening scope.
 
 		#### Branch Slices
@@ -109,8 +109,8 @@
 
 ## Active Packet Context
 
-- Active feature: One Enemy Archetype
-- Active packet reason: A single readable sentry turns rhythm stepping and mirror walking into meaningful stealth decisions.
-- Active sprint objective: Implement the one enemy archetype slice so the player can reliably feel sprint under sentinel.
-- Active player promise: The player immediately feels how one enemy archetype improves the route and unlocks unlock.
-- Current pass goal: Add one factory sentry archetype that patrols lanes, reacts to sightlines, and pressures the new movement rules.
+- Active feature: Movement
+- Active packet reason: Movement is the foundational slice for the 'Pier Spin' identity. Establishing the spin-to-deflect mechanic early is critical for the 'route runner' template.
+- Active sprint objective: Implement the movement slice so the player can reliably feel spin under guard.
+- Active player promise: The player immediately feels how movement improves the route and unlocks expand.
+- Current pass goal: Implement the Movement core slice with spin mechanics and guard deflection.

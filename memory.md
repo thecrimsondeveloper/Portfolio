@@ -3,35 +3,35 @@ Portfolio is a Vite-first portfolio workspace: `Portfolio-Vite` is the canonical
 
 ## #SELF REMINDERS
 - Keep replies short, direct, and action-oriented.
-- Main goals: preserve the 10-stage Arcade Builder flow, keep LM Studio additive/non-blocking, and make seed growth observable.
-- Command rule: omit `--raw` when the user needs proof; the brainstorm seed fetcher prints appended rows, source, endpoint, and model only in normal output.
-- Required-mode rule: `--brainstorm-mode required` now fails unless LM Studio returns usable unique rows for every category.
-- Next: give users the non-raw required command for proof, and `--raw` only for scripts that need just the output path.
+- Main goals: keep Arcade Builder verbose, keep 30-second local autostart active, and quarantine failed generated folders before they pollute Pages.
+- Implemented proof: `.ARCADE-AUTOMATIONS/arcade_automations.py` now emits callback events plus 4-second run heartbeats and supervisor events.
+- Verification: observed six PASS runs registered in `arcade-library.json`; failed run `20260502-065710-arcade-builder` was quarantined under `.ARCADE-AUTOMATIONS/failed-builds`.
+- Next: monitor the active supervisor for the next failed run and confirm the patched quarantine rule catches it automatically.
 
 ## #SELF REMINDERS
 - Keep replies short, direct, and action-oriented.
-- Main goals: preserve the 10-stage Arcade Builder flow, keep LM Studio additive/non-blocking, and grow 2D brainstorm rows through the 2B model.
-- Latest run: `seed_fetcher_cli.py` appended one row per category in place; original four buckets are now 4 rows and expanded categories are now 101 rows.
-- Parser rule: model rows split on whitespace and punctuation; low-quality compact rows fall back to deterministic append rows.
-- Next: if row quality still feels too compact, improve seed vocabulary normalization rather than resetting the dataset.
+- Main goals: distinguish local build cadence from Codex audit cadence, keep builder reliable, and avoid claiming hourly readiness without checking `targets.json`.
+- Current state: local `arcade-builder` supervisor is running, but target interval is `0.5` minutes, not hourly.
+- Current audit: Codex app `arcade-automation-audit` is ACTIVE on `gpt-5.5` high with `FREQ=HOURLY;INTERVAL=6`.
+- Next: if user wants hourly build cadence, set local target interval to `60`; if user wants hourly improvement audits, update the Codex automation interval from 6 hours to 1 hour.
 
 ## #SELF REMINDERS
 - Keep replies short, direct, and action-oriented.
-- Main goals: preserve the 10-stage Arcade Builder flow, keep LM Studio additive/non-blocking, and make brainstorm runs grow the seed dataset.
-- Seed fetcher rule: preserve existing 2D rows, append one 2B-generated row per category when augmentation is enabled, and fall back deterministically if LM Studio is down.
-- 2D shape rule: the 11 expanded categories stay at 100 rows baseline and can grow on each run; do not collapse them back to 3-row samples.
-- Next: when running brainstorm CLI directly, use the default auto mode unless you explicitly want deterministic-only output.
+- Main goals: give exact runnable commands, set local Arcade Builder to hourly, and preserve the 6-hour Codex improvement cadence.
+- Preferred cadence: local builder every 60 minutes so it can create roughly six games before `arcade-automation-audit` improves the system every 6 hours.
+- Command shape: replace `arcade-builder` with `--interval-minutes 60`; start supervisor only if no supervisor is already running.
+- Next: after command runs, verify `targets.json` shows `intervalMinutes: 60.0` and `status` shows `supervisorRunning: true`.
 
 ## #SELF REMINDERS
 - Keep replies short, direct, and action-oriented.
-- Main goals: preserve the 10-stage Arcade Builder flow, keep LM Studio additive/non-blocking, and keep seed dimensions mechanically diverse.
-- Current seed rule: the 11 uniqueness categories each have 100 unique sampled options in `arcade-seed.json` and 100 matching source rows in `seed_brainstorming.json`.
-- Validation rule: prove seed changes with JSON checks, Python compile, exact option counts, and a dead-LM-Studio non-interactive builder run.
-- Next: if games still converge, expand runtime templates or final brainstorm synthesis, not just the seed vocabulary.
+- Main goals: answer whether commands had effects from live state, keep hourly cadence clear, and warn when `add-target` resets schedule metadata.
+- Verified effect: user's `add-target --interval-minutes 60` changed `targets.json` to `intervalMinutes: 60.0` and supervisor PID `15864` is still running.
+- Side effect: replacing the target reset `lastRunAt`, `nextRunAt`, and last status; the active supervisor treated it as due and started run `20260502-103821-arcade-builder`.
+- Next: after the current run finishes, confirm `nextRunAt` advances about 60 minutes and avoid re-running `add-target` unless changing cadence or prompt.
 
 ## #SELF REMINDERS
 - Keep replies short, direct, and action-oriented.
-- Main goals: preserve the 10-stage Arcade Builder flow, keep LM Studio additive/non-blocking, and push game uniqueness through seed contracts.
-- Seed uniqueness rule: `arcade-seed.json`, `seed_brainstorming.json`, and `seed_fetcher_cli.py` must stay aligned when adding category dimensions.
-- Contract rule: generated `final-brainstorming.json > gameDesignProfile.seedContract.seed` must include sampled seed categories, not only source samples.
-- Next: when validating seed changes, run JSON checks, Python compile, and a dead-LM-Studio non-interactive builder pass.
+- Main goals: give macOS-safe live monitor commands, show target status plus latest run logs, and avoid relying on unavailable `watch`.
+- Preferred monitor: a `while true` terminal loop that prints `status`, `list-targets`, latest run records, and tails the newest arcade-builder log every 5 seconds.
+- Current cadence: local builder should stay hourly while `arcade-automation-audit` improves every 6 hours.
+- Next: if the monitor is too noisy, add a repo CLI subcommand like `monitor-runs` instead of expanding ad hoc shell snippets.

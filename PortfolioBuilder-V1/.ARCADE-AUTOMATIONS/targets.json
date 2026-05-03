@@ -1,0 +1,81 @@
+{
+  "targets": {
+    "arcade-builder": {
+      "id": "arcade-builder",
+      "enabled": true,
+      "intervalMinutes": 60,
+      "cwd": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/PortfolioBuilder-V1",
+      "command": [
+        "python3",
+        ".ARCADE-CLI/builder-orchestrator.py",
+        "--goal",
+        "{goal}",
+        "--slug",
+        "{slug}"
+      ],
+      "env": {
+        "NVIDIA_IDEA_TEMPERATURE": "0.95"
+      },
+      "goalTemplate": "Invent and build one original high-depth arcade game from scratch for the Portfolio Arcade. Run id: {run_id}. Follow a controlled linear sequence and do not skip steps: first inspect the existing registry and choose a unique concept that does not reuse an existing title, premise, enemy pattern, core verb, or theme; then define one clear core loop; then add at least three meaningful mechanics that create player decisions; then add progression, escalation, or phase changes; then add readable controls and UI feedback; then build complete browser-playable files; then validate with strict Playwright QA; then use the upgrade loop until the game passes. Final output must register into the arcade library only after strict QA passes.",
+      "slugTemplate": "auto-arcade-{timestamp}",
+      "nextRunAt": "2026-05-02T11:42:29Z",
+      "lastRunAt": "2026-05-02T10:42:29Z",
+      "lastRunId": "20260502-103953-arcade-builder",
+      "version": "v001",
+      "lastStatus": "PASS",
+      "lastRecordPath": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/PortfolioBuilder-V1/.ARCADE-AUTOMATIONS/runs/arcade-builder/20260502-103953-arcade-builder.json",
+      "lifecycleRole": "active-baseline",
+      "comparisonGroup": "arcade-builder-lineage",
+      "promotionPolicy": "Keep running until a challenger version beats this target on strict technical gates, depth gates, coherence, and arcade registration; then disable this target and preserve it as decommissioned evidence.",
+      "nextVersionSource": false
+    },
+    "arcade-builder-v002": {
+      "id": "arcade-builder-v002",
+      "enabled": true,
+      "intervalMinutes": 60,
+      "cwd": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/PortfolioBuilder-V1/.ARCADE-AUTOMATIONS/versions/v002/PortfolioBuilder-V2",
+      "command": [
+        "python3",
+        ".ARCADE-CLI/builder-orchestrator.py",
+        "--goal",
+        "{goal}",
+        "--slug",
+        "{slug}"
+      ],
+      "env": {
+        "NVIDIA_IDEA_TEMPERATURE": "0.95"
+      },
+      "goalTemplate": "Invent and build one original high-depth arcade game from scratch for the Portfolio Arcade. Run id: {run_id}. Follow a controlled linear sequence and do not skip steps. First inspect the registry and choose a unique concept that does not reuse an existing title, premise, enemy pattern, core verb, or theme. Define one clear core loop. Implement at least three runtime-visible mechanics that create player decisions; each mechanic must appear in contract.json, story-structure.json, DESIGN.md, game.js, and VALIDATION.md. Include progression or escalation, objective pressure, readable controls, HUD feedback, distinct hazards or enemies, and one mechanic beyond movement and collision. Use requestAnimationFrame for the gameplay loop. After Start/Play/Begin, the canvas or HUD must visibly change within one second. Validate with strict Playwright QA, run the upgrade loop until technical and depth gates pass, and register into the arcade library only after strict QA passes.",
+      "slugTemplate": "auto-arcade-v002-{timestamp}",
+      "nextRunAt": "2026-05-02T11:42:29Z",
+      "lastRunAt": null,
+      "lastRunId": null,
+      "version": "v002",
+      "lastStatus": null,
+      "lastRecordPath": null,
+      "lifecycleRole": "challenger",
+      "comparisonGroup": "arcade-builder-lineage",
+      "competesAgainst": "arcade-builder",
+      "promotionPolicy": "Run beside the active baseline. Promote only when latest V2 evidence is better than V1. On promotion, disable the older baseline and use V2 as the source for v003 on the next automation improvement loop.",
+      "nextVersionSource": true
+    }
+  },
+  "updatedAt": "2026-05-02T11:08:00Z",
+  "lifecyclePolicy": {
+    "mode": "side-by-side-version-race",
+    "activeBaseline": "arcade-builder",
+    "activeChallenger": "arcade-builder-v002",
+    "nextIncrementRule": "After a challenger is promoted, the next audit copies the promoted builder project into the next vNNN folder and registers a new challenger target.",
+    "decommissionRule": "Disable, do not delete, the older baseline target after the challenger wins; keep run records and version folders as evidence.",
+    "promotionRequires": [
+      "exitCode PASS",
+      "final report PASS or PASS_AFTER_UPGRADE",
+      "strict Playwright proof including visible post-start change",
+      "valid Start/Play/Begin interaction",
+      "valid JSON and node --check game.js",
+      "arcade registration PASS",
+      "depth gates PASS",
+      "better than current baseline on latest comparable run evidence"
+    ]
+  }
+}

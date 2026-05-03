@@ -2,11 +2,11 @@
 
 			## Sprint Objective
 
-			Implement the one route hazard slice so the player can reliably feel pivot under breach.
+			Implement the one route hazard slice so the player can reliably feel dash under storm.
 
 			## Player Promise
 
-			The player immediately feels how one route hazard improves the route and unlocks expand.
+			The player immediately feels how one route hazard improves the route and unlocks upgrade.
 
 			## Why This Branch Exists
 

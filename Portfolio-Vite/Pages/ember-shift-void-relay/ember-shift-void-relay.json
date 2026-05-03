@@ -1,0 +1,38 @@
+{
+  "id": "ember-shift-void-relay",
+  "title": "Ember Shift: Void Relay",
+  "summary": "A high-stakes survival game in a collapsing nebula. Shift between dimensions to bypass unstable matter.",
+  "mode": "arcade-action",
+  "palette": "ember-shift-void-relay",
+  "instructions": "WASD or Arrow keys move the player through the arena., Shift triggers a sprint burst for repositioning., Space converts root and petal pressure into crowd control.",
+  "hud": {
+    "modeLabel": "Ember Shift: Void Relay",
+    "objective": "Complete objectives, resolve enemy pressure, route hazards, and trigger the finish condition."
+  },
+  "overlay": {
+    "startTitle": "Ember Shift: Void Relay",
+    "startCopy": "Ember Shift: Void Relay turns the current seed into a readable arcade challenge.",
+    "startAction": "Launch Game"
+  },
+  "content": {
+    "hook": "Ember Shift: Void Relay turns the current seed into a readable arcade challenge.",
+    "actions": [
+      "root",
+      "petal",
+      "sprint"
+    ],
+    "pressure": [
+      "enemy pressure",
+      "route hazards",
+      "time pressure"
+    ],
+    "rewards": [
+      "Relay the core data to the extraction point before the nebula collapses.",
+      "route unlocks",
+      "new ability gains"
+    ],
+    "runtimeTemplate": "route_runner",
+    "mechanicFamily": "route runner"
+  },
+  "image": ""
+}

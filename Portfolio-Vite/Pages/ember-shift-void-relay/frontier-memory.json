@@ -1,0 +1,100 @@
+{
+  "gameTitle": "Ember Shift: Void Relay",
+  "profile": {
+    "oneLinePitch": "A high-stakes survival game in a collapsing nebula. Shift between dimensions to bypass unstable matter.",
+    "objective": "Relay the core data to the extraction point before the nebula collapses."
+  },
+  "seedCombination": {
+    "themes": "ember",
+    "environments": "nebula",
+    "mechanics": [
+      "shift",
+      "relay"
+    ],
+    "enemies": "void-shadow"
+  },
+  "stageHistory": [
+    {
+      "stage": "0",
+      "event": "agent_input",
+      "summary": "Contract received from Agent."
+    },
+    {
+      "stage": "stage-1-brainstorm-pipeline",
+      "event": "stage",
+      "summary": "Locked final-brainstorming.json and initialized gameDesignProfile."
+    },
+    {
+      "stage": "stage-2-concept-materialization",
+      "event": "stage",
+      "summary": "Materialized concept from locked brainstorm packet."
+    },
+    {
+      "stage": "stage-3-feature-sprint-loop",
+      "event": "stage",
+      "summary": "Derived feature sprint packets from canonical brainstorm data."
+    },
+    {
+      "stage": "stage-4-design-assembly",
+      "event": "stage",
+      "summary": "Assembled design document."
+    },
+    {
+      "stage": "stage-5-build-planning-loop",
+      "event": "stage",
+      "summary": "Derived fun assessment and implementation chapters."
+    },
+    {
+      "stage": "stage-6-story-and-scaffold-materialization",
+      "event": "stage",
+      "summary": "Created story payload and runtime scaffold."
+    },
+    {
+      "stage": "stage-7-html-review-loop",
+      "event": "stage",
+      "summary": "Completed HTML shell review pass."
+    },
+    {
+      "stage": "implementation_pass",
+      "event": "memoryUpdate",
+      "summary": "Established the Shift mechanic as the core loop anchor."
+    },
+    {
+      "stage": "stage-8-implementation-sprint-loop",
+      "event": "stage",
+      "summary": "Completed configured implementation sprint passes."
+    },
+    {
+      "stage": "validation_loop",
+      "event": "memoryUpdate",
+      "summary": "Finalized the Shift-for-Survival loop."
+    },
+    {
+      "stage": "stage-9-validation-repair-loop",
+      "event": "stage",
+      "summary": "Completed configured validation loops."
+    },
+    {
+      "stage": "stage-10-arcade-integration-loop",
+      "event": "stage",
+      "summary": "Completed arcade integration loop."
+    }
+  ],
+  "decisions": [
+    "Used Pulse/Space as the shift toggle.",
+    "Shifted players are immune to Shadows but not physical obstacles."
+  ],
+  "openIssues": [
+    "Need to define what 'Void Shadows' do to shifted players.",
+    "None."
+  ],
+  "nextStage": "2",
+  "rejectedIdeas": [
+    "Rejected automatic shifting for now.",
+    "Rejected infinite shifting; player must relay data in normal state."
+  ],
+  "nextStageNotes": [
+    "Focus on the Relay mechanic in Stage 9.",
+    "Ready for Arcade registration."
+  ]
+}

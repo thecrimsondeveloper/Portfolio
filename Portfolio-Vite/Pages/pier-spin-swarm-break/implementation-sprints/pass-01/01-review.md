@@ -2,31 +2,31 @@
 
 		## Thoughts
 
-		The strongest first pass is movement because the design contract depends on rhythm-based stepping and mirror walking. Keep edits narrow and centered on movement state, player feedback, and tuning fields.
+		I will implement the spin mechanic as part of the movement core. Spinning will be triggered by the Space key (currently pulse) and will provide a defensive boost and deflection against 'guard' enemies. I will also wire the player controller data into the runtime state more explicitly.
 
 		## Target Changes
 
 
-- Add rhythm-step timing state and mirror-walk toggle data to story-structure.json
-- Update game.js movement loop so consecutive on-beat steps feel faster and off-beat movement feels unstable
-- Update index.html HUD copy to surface Dawn Timer, Keys, and Relay progress
+- Add 'spin' state and duration to player object.
+- Implement rapid rotation and deflection logic in updatePlayer.
+- Modify updateEnemies to account for player spin deflection.
+- Update HUD to show spin state.
 
 		## Risks
 
 
-- Over-tuning movement could make the starter run feel sluggish
-- HUD wording changes must match existing element ids or stay additive
+- Spin mechanic might feel too similar to the existing pulse if not visually distinct.
+- Deflection force might be too high, causing enemies to fly off the arena.
 
 		## Acceptance Signals
 
 
-- Player movement exposes a visible rhythm or cadence mechanic instead of generic free-move motion
-- Mirror-walk state exists in config and can be surfaced in runtime behavior
-- game.js passes node --check and story-structure.json parses
+- Player can activate spin with Space.
+- Spinning provides clear visual feedback (faster rotation).
+- Guard enemies are deflected when they hit a spinning player.
 
 		## Target Files Or Surfaces
 
 
 - game.js
 - story-structure.json
-- index.html

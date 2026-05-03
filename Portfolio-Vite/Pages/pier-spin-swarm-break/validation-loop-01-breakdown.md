@@ -2,7 +2,7 @@
 		# Validation Loop 01 Breakdown
 
 
-- Patch story-structure.json with movement, sentry, and route-hazard tuning values so runtime changes are data-backed.
-- Patch game.js in three slices: movement timing, sentry state machine, and a single rotating or locking route hazard tied to the level flow.
-- Patch index.html only where needed to expose stable HUD labels for keys, dawn, relay, and alert state.
-- Run JSON and JS validation after each focused edit rather than waiting for one large rewrite.
+- Update ArenaGame.createPlayer to initialize spin state.
+- Update ArenaGame.updatePlayer to manage spin duration and rotation.
+- Update ArenaGame.updateEnemies to handle spin-based deflection.
+- Update ArenaGame.updateHud to show spin status.

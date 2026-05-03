@@ -1,0 +1,452 @@
+{
+  "title": "Dock Spin: Swarm Break",
+  "sourceSummary": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/dock-spin-swarm-break/brainstorm-summary.json",
+  "sourceSeed": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/dock-spin-swarm-break/brainstorm-seed.json",
+  "generatedAt": "2026-05-02T01:55:00.916609+00:00",
+  "explorationLevel": "expansive",
+  "generation": {
+    "mode": "lm_studio_chainstorm_style",
+    "endpoint": "http://10.0.0.137:1234/v1/chat/completions",
+    "model": "qwen3.5-2b@q8_0",
+    "temperature": 1.0
+  },
+  "buildReady": true,
+  "injectionReady": true,
+  "oneLinePitch": "Navigate dock and canyon spaces with spin and relay, solve shock-driven pressure, and turn each run into refine progress.",
+  "pageIdentity": {
+    "title": "Dock Spin: Swarm Break",
+    "slug": "dock-spin-swarm-break",
+    "description": "Navigate dock and canyon spaces with spin and relay, solve shock-driven pressure, and turn each run into refine progress.",
+    "objective": "Use spin and relay to resolve shock-driven pressure, complete the active objective chain, and turn each run into refine, rhythm progress.",
+    "overlayBriefing": "Navigate dock and canyon spaces with spin and relay, solve shock-driven pressure, and turn each run into refine progress.\n\nScout routes through dock spaces and identify swarm pressure points.\n\nUse spin and stack interactions to survive, reposition, and secure objectives.\n\nConvert each run into expand gains that unlock stronger options and open the next challenge band.",
+    "hudObjective": "Use spin and relay to resolve shock-driven pressure, complete the active objective chain, and turn each run into refine, rhythm progress."
+  },
+  "buildPacket": {
+    "featureRoots": [
+      "Movement",
+      "One Enemy Archetype",
+      "One Route Hazard"
+    ],
+    "implementationChapters": [
+      "Movement",
+      "One Enemy Archetype",
+      "One Route Hazard",
+      "Reward Loop",
+      "Full Run Pacing",
+      "Spin Controls"
+    ],
+    "overlay": {
+      "introTitle": "Dock Spin: Swarm Break",
+      "introBody": "Navigate dock and canyon spaces with spin and relay, solve shock-driven pressure, and turn each run into refine progress.",
+      "introBriefing": "Navigate dock and canyon spaces with spin and relay, solve shock-driven pressure, and turn each run into refine progress.\n\nScout routes through dock spaces and identify swarm pressure points.\n\nUse spin and stack interactions to survive, reposition, and secure objectives.\n\nConvert each run into expand gains that unlock stronger options and open the next challenge band.",
+      "startHint": "Press Enter to deploy. Use WASD or Arrow keys to move, Shift to dash, and Space to pulse.",
+      "winTitle": "Route Cleared",
+      "winBody": "The completion condition is live and the objective chain is stable. Press R to run it again.",
+      "lossTitle": "Route Interrupted",
+      "lossBody": "The route collapsed under pressure. Press R to run it again."
+    },
+    "hud": {
+      "objective": "Use spin and relay to resolve shock-driven pressure, complete the active objective chain, and turn each run into refine, rhythm progress.",
+      "status": "Navigate dock and canyon spaces with spin and relay, solve shock-driven pressure, and turn each run into refine progress.",
+      "fields": [
+        "objective",
+        "status",
+        "telemetry"
+      ]
+    },
+    "sceneAnchors": {
+      "playerActions": [
+        "spin",
+        "relay",
+        "twist"
+      ],
+      "enemyTypes": [
+        "shock",
+        "storm",
+        "void"
+      ],
+      "hazards": [
+        "dock",
+        "canyon",
+        "pulse",
+        "harbor"
+      ],
+      "progression": [
+        "refine",
+        "rhythm"
+      ]
+    }
+  },
+  "steps": [
+    {
+      "step": "gameplay_time",
+      "question": "How long should one run last before it feels complete?",
+      "answer": "10 minutes",
+      "impact": "Sets encounter density, map size, and upgrade pacing."
+    },
+    {
+      "step": "enemy_types",
+      "question": "Which enemy types define the core pressure of the run?",
+      "answer": [
+        "shock",
+        "storm",
+        "void"
+      ],
+      "impact": "Shapes encounter design, telegraphing, and fail-state tension."
+    },
+    {
+      "step": "player_actions",
+      "question": "Which verbs should the player use constantly?",
+      "answer": [
+        "spin",
+        "relay",
+        "twist"
+      ],
+      "impact": "Locks the feel of traversal, combat rhythm, and input complexity."
+    },
+    {
+      "step": "progression_goal",
+      "question": "What long-term objective should each run feed into?",
+      "answer": [
+        "refine",
+        "rhythm"
+      ],
+      "impact": "Determines meta progression rewards and run-to-run continuity."
+    },
+    {
+      "step": "world_anchor",
+      "question": "Which environmental anchors keep the world readable and memorable?",
+      "answer": [
+        "desert",
+        "ember"
+      ],
+      "impact": "Guides art direction, hazard framing, and level landmarks."
+    }
+  ],
+  "randomInjections": [
+    {
+      "type": "environmental_twist",
+      "value": [
+        "land",
+        "wind"
+      ],
+      "effect": "Adds a new traversal hazard or alternate route condition."
+    },
+    {
+      "type": "mechanic_modifier",
+      "value": [
+        "grab",
+        "rewire"
+      ],
+      "effect": "Mutates the core verb set for a late-run variant or upgrade branch."
+    },
+    {
+      "type": "enemy_pressure",
+      "value": [
+        "leader",
+        "fort"
+      ],
+      "effect": "Introduces a new pressure pattern or elite enemy combination."
+    },
+    {
+      "type": "progression_bonus",
+      "value": [
+        "burst",
+        "reveal"
+      ],
+      "effect": "Creates a reward spike that changes long-term routing decisions."
+    }
+  ],
+  "explorationLoops": [
+    {
+      "loop": 1,
+      "prompt": "What happens if drift traversal meets vault play under bots pressure?",
+      "injection": "Resolve the loop by rewarding surge instead of raw score.",
+      "decision": "Keep vault as a repeatable skill test, escalate with bots, and use surge as the reason to push deeper."
+    },
+    {
+      "loop": 2,
+      "prompt": "What happens if desert traversal meets dash play under stalker pressure?",
+      "injection": "Resolve the loop by rewarding evolve instead of raw score.",
+      "decision": "Keep dash as a repeatable skill test, escalate with stalker, and use evolve as the reason to push deeper."
+    },
+    {
+      "loop": 3,
+      "prompt": "What happens if dune traversal meets dash play under signal pressure?",
+      "injection": "Resolve the loop by rewarding uncover instead of raw score.",
+      "decision": "Keep dash as a repeatable skill test, escalate with signal, and use uncover as the reason to push deeper."
+    },
+    {
+      "loop": 4,
+      "prompt": "What happens if ember traversal meets spike play under wave pressure?",
+      "injection": "Resolve the loop by rewarding rhythm instead of raw score.",
+      "decision": "Keep spike as a repeatable skill test, escalate with wave, and use rhythm as the reason to push deeper."
+    }
+  ],
+  "finalSpec": {
+    "sessionLength": "10 minutes",
+    "genre": "arcade action prototype",
+    "playerFantasy": "Feel like a fast improviser navigating dock hazards while turning commander pressure into opportunities.",
+    "world": {
+      "setting": "A stylized world blending dock, canyon, and shifting threat territory.",
+      "visualDirection": "Lean on dock, canyon, and swarm motifs for strong silhouettes, readable threat zones, and punchy arcade contrast.",
+      "landmarks": [
+        "dock",
+        "canyon",
+        "pulse",
+        "harbor",
+        "ember"
+      ]
+    },
+    "coreLoop": [
+      "Scout routes through dock spaces and identify swarm pressure points.",
+      "Use spin and stack interactions to survive, reposition, and secure objectives.",
+      "Convert each run into expand gains that unlock stronger options and open the next challenge band."
+    ],
+    "playerActions": [
+      "spin",
+      "relay",
+      "twist"
+    ],
+    "enemyTypes": [
+      "shock",
+      "storm",
+      "void"
+    ],
+    "enemyArchetypes": [
+      {
+        "name": "shock",
+        "role": "pressure chaser",
+        "behavior": "Pushes the player off safe routes and punishes hesitation."
+      },
+      {
+        "name": "storm",
+        "role": "zone controller",
+        "behavior": "Locks down key spaces and forces rerouting."
+      },
+      {
+        "name": "void",
+        "role": "ambush disruptor",
+        "behavior": "Breaks steady rhythm and spikes reaction difficulty."
+      }
+    ],
+    "progression": {
+      "metaGoal": [
+        "refine",
+        "rhythm"
+      ],
+      "rewardHooks": [
+        "expand",
+        "upgrade",
+        "pulse",
+        "unveil"
+      ],
+      "runToRunGrowth": "Each run converts performance into refine, rhythm upgrades and route unlocks."
+    },
+    "runStructure": {
+      "opening": "Teach spin movement and introduce shock reads in a low-risk dock route.",
+      "midgame": "Layer relay interactions, mixed enemy waves, and injection events from the exploration loops.",
+      "endgame": "Force mastery through stacked hazards, elite shock encounters, and a final refine choice."
+    },
+    "encounterDesign": {
+      "hazards": [
+        "dock",
+        "canyon",
+        "pulse",
+        "harbor"
+      ],
+      "enemyCompositions": [
+        "Keep vault as a repeatable skill test, escalate with bots, and use surge as the reason to push deeper.",
+        "Keep dash as a repeatable skill test, escalate with stalker, and use evolve as the reason to push deeper.",
+        "Keep dash as a repeatable skill test, escalate with signal, and use uncover as the reason to push deeper."
+      ],
+      "difficultyRamp": "Ramp through route compression, enemy overlap, and stronger reward bait rather than pure health inflation."
+    },
+    "economy": {
+      "currencies": [
+        "expand",
+        "upgrade",
+        "pulse"
+      ],
+      "spenders": [
+        "environmental_twist",
+        "mechanic_modifier",
+        "enemy_pressure",
+        "progression_bonus"
+      ],
+      "riskReward": "Offer stronger progression currency on routes with denser threat overlap and harder extraction paths."
+    },
+    "ui": {
+      "hud": [
+        "health",
+        "charge meter",
+        "route objective",
+        "reward tracker"
+      ],
+      "readabilityGoals": [
+        "fast threat reads",
+        "clear route ownership",
+        "strong reward telegraphing"
+      ]
+    },
+    "audio": {
+      "tone": "Punchy arcade percussion with environmental accents tied to route danger.",
+      "feedback": [
+        "impact stingers",
+        "threat warning pings",
+        "upgrade reward swells"
+      ]
+    },
+    "technicalBuild": {
+      "scope": "Small browser-playable prototype",
+      "systemsNeeded": [
+        "player controller",
+        "enemy director",
+        "upgrade loop",
+        "hazard routing",
+        "HUD"
+      ],
+      "prototypeOrder": [
+        "movement",
+        "one enemy archetype",
+        "one route hazard",
+        "reward loop",
+        "full run pacing"
+      ]
+    }
+  },
+  "fallbackSource": "LM Studio unavailable during auto preflight: [Errno 1] Operation not permitted; deterministic fallback generation was used.",
+  "gameDesignProfile": {
+    "seedContract": {
+      "sourceSeed": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-154eise5/brainstorm-seed.json",
+      "sourceSummary": "/private/var/folders/39/z4v5c5bj7ws6krbnfg777dn80000gn/T/frontier-brainstorm-154eise5/brainstorm-summary.json",
+      "sourceSamples": {
+        "environment": [
+          "dock",
+          "canyon",
+          "pulse",
+          "harbor",
+          "ember",
+          "wind",
+          "storm"
+        ],
+        "mechanics": [
+          "spin",
+          "stack",
+          "root",
+          "pivot",
+          "slam",
+          "grab",
+          "rewire"
+        ],
+        "enemies": [
+          "swarm",
+          "commander",
+          "pulse",
+          "stalker",
+          "storm",
+          "sentry",
+          "marker"
+        ],
+        "progression": [
+          "expand",
+          "upgrade",
+          "pulse",
+          "unveil",
+          "ascend",
+          "evolve",
+          "reveal"
+        ]
+      },
+      "seed": {
+        "themes": "underground ruin exploration",
+        "genres": "chase boss rush",
+        "environments": "underground cavern",
+        "settings": "festival night",
+        "characterMotivations": "learn a forgotten ritual",
+        "movementMechanics": [
+          "cargo balancing",
+          "mirror walking"
+        ],
+        "coreLoops": "evade patrols while searching",
+        "progressionLoops": "power up a device",
+        "completionLoops": "boss hunt",
+        "rewards": [
+          "movement mastery",
+          "secret area access"
+        ],
+        "antagonists": "roving security drones",
+        "visualStyles": "dusty pastel",
+        "audioStyles": "sparse piano",
+        "interactionPatterns": "inventory-lite object use",
+        "productionFocus": "focus on emergent loops",
+        "cameraModes": "split-screen boss-focus",
+        "arenaShapes": "spiral climb with safe islands",
+        "primaryVerbs": "dodge around patrols",
+        "scoringModels": "risk multiplier style bonus",
+        "failureModes": "companion lost by patrols",
+        "enemyBehaviors": "mirror player spiral pattern",
+        "objectiveStructures": "activate sequence while chased",
+        "resourceSystems": "battery enemy steal",
+        "levelProgression": "unlockable shortcuts with route memory",
+        "twistConstraints": "no stopping after route split",
+        "weatherEffects": "chrono-fog variation 28 variation 85 variation 96",
+        "uiAesthetics": "paper sketch variation 33 variation 55",
+        "movementQuirks": "low gravity variation 13",
+        "environmentalHazards": "crushing walls variation 19",
+        "powerSources": "nuclear variation 25",
+        "lightingStyles": "dynamic strobes variation 42 variation 52",
+        "narrativeTone": "eerie",
+        "deathAnimations": "pixel explosion variation 10 variation 15 variation 69",
+        "crowdDynamics": "gathering cultists variation 17 variation 29 variation 39 variation 40",
+        "mapModifiers": "infinite loop variation 27 variation 30",
+        "soundscapes": "industrial clang variation 19 variation 23",
+        "colorPalettes": "vaporwave pink",
+        "architecture": "gothic revival variation 20",
+        "artifactTypes": "encoded keys variation 10",
+        "gameTempo": "stop-and-go variation 21 variation 28 variation 72",
+        "bossMechanics": "summoning adds variation 10 variation 28",
+        "playerPerks": "health regen variation 25 variation 75 variation 85",
+        "enemyArchetypes": "rust hulks variation 14 variation 32",
+        "narrativeStakes": "avenge the mentor variation 13",
+        "postProcessing": "vignette variation 99"
+      }
+    },
+    "mechanicFamily": "route runner",
+    "runtimeTemplate": "route_runner",
+    "pacing": "10 minutes",
+    "spatialStructure": "lane route",
+    "failurePressure": [
+      "shock",
+      "storm",
+      "void",
+      "dock",
+      "canyon",
+      "pulse",
+      "harbor"
+    ],
+    "progressionShape": [
+      "refine",
+      "rhythm",
+      "expand",
+      "upgrade",
+      "pulse",
+      "unveil",
+      "Each run converts performance into refine, rhythm upgrades and route unlocks."
+    ],
+    "presentationRules": [
+      "A stylized world blending dock, canyon, and shifting threat territory.",
+      "Lean on dock, canyon, and swarm motifs for strong silhouettes, readable threat zones, and punchy arcade contrast.",
+      "fast threat reads",
+      "clear route ownership",
+      "strong reward telegraphing"
+    ],
+    "mustPreserve": [
+      "Preserve the randomized seed contract through every stage.",
+      "Treat final-brainstorming.json as the canonical game specification.",
+      "Keep the generated game self-contained in one Pages/<slug>/ folder.",
+      "Make runtime behavior match runtimeTemplate instead of defaulting to one arena scaffold."
+    ],
+    "fallbackSource": "LM Studio unavailable during auto preflight: [Errno 1] Operation not permitted; deterministic fallback generation was used."
+  }
+}

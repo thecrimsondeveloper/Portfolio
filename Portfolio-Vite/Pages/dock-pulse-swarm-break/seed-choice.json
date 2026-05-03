@@ -1,0 +1,38 @@
+{
+  "title": "Dock Pulse: Swarm Break",
+  "description": "An expansive arcade game set between dock and canyon, where the player uses pulse and spike actions to outmaneuver swarm forces and drive an expand-to-upgrade progression arc.",
+  "objective": "Use pulse and spike to survive swarm patrols, secure relic routes, and turn each run into expand, upgrade progress.",
+  "seed": {
+    "themes": "urban parkour delivery",
+    "genres": "survival arena",
+    "environments": "rooftop maintenance rails",
+    "settings": "midsummer heat",
+    "characterMotivations": "protect the neighborhood",
+    "movementMechanics": [
+      "mirror walking",
+      "momentum-based rolling"
+    ],
+    "coreLoops": "trace signal patterns",
+    "progressionLoops": "gain movement upgrades",
+    "completionLoops": "boss hunt",
+    "rewards": [
+      "resource caches",
+      "boss unlock"
+    ],
+    "antagonists": "ancient guardian",
+    "visualStyles": "hand-painted textures",
+    "audioStyles": "ambient hum",
+    "interactionPatterns": "environmental interaction first",
+    "productionFocus": "prototype in directory with JSON and HTML only",
+    "cameraModes": "cinematic follow wide-read",
+    "arenaShapes": "patrol grid with bridges",
+    "primaryVerbs": "repair around patrols",
+    "scoringModels": "delivery value no-hit bonus",
+    "failureModes": "resource depleted while carrying",
+    "enemyBehaviors": "summon hazards slow pattern",
+    "objectiveStructures": "repair network with limited resource",
+    "resourceSystems": "noise risk overflow",
+    "levelProgression": "escalating waves with checkpoints",
+    "twistConstraints": "decaying floor for finale"
+  }
+}

@@ -78,12 +78,12 @@
         "pulse"
       ],
       [
-        "storm",
-        "debris",
-        "ruins",
-        "lights",
-        "fog",
-        "neon"
+        "platform",
+        "path",
+        "flow",
+        "light",
+        "sound",
+        "signal"
       ]
     ]
   ],
@@ -1138,11 +1138,11 @@
         "runner"
       ],
       [
+        "stealtharcade",
         "chase",
-        "maze",
         "loop",
-        "score",
         "tension",
+        "score",
         "attack"
       ]
     ]
@@ -2204,12 +2204,12 @@
         "pulse"
       ],
       [
-        "orbit",
-        "zoom",
-        "pulse",
-        "read",
-        "track",
-        "frame"
+        "over",
+        "tilt",
+        "speed",
+        "view",
+        "angle",
+        "rotation"
       ]
     ]
   ],
@@ -3267,12 +3267,12 @@
         "cross"
       ],
       [
-        "arena",
-        "collision",
-        "shrink",
-        "layout",
-        "zones",
-        "obstacles"
+        "maze",
+        "shortcut",
+        "platform",
+        "hazard",
+        "island",
+        "wall"
       ]
     ]
   ],
@@ -4333,10 +4333,12 @@
         "intercept"
       ],
       [
-        "input",
-        "trigger",
-        "feedback",
-        "loop"
+        "redirect",
+        "hazard",
+        "timing",
+        "choice",
+        "combo",
+        "momentum"
       ]
     ]
   ],
@@ -4420,10 +4422,11 @@
         "slide"
       ],
       [
-        "slide",
         "dash",
-        "sprint",
-        "hook"
+        "patrol",
+        "avoid",
+        "track",
+        "signal"
       ]
     ]
   ],
@@ -5475,11 +5478,9 @@
         "timer"
       ],
       [
-        "score",
+        "highscorevelocitytarget",
         "multiplier",
         "feedback",
-        "lag",
-        "time",
         "bonus"
       ]
     ]
@@ -6538,12 +6539,12 @@
         "end"
       ],
       [
-        "shattered",
-        "cargo",
-        "failure",
+        "crashed",
+        "failed",
         "reset",
-        "depleted",
-        "caughtafterwarning"
+        "overload",
+        "gameover",
+        "restart"
       ]
     ]
   ],
@@ -6629,12 +6630,12 @@
         "traps"
       ],
       [
-        "storm",
-        "beacon",
-        "pulse",
-        "trap",
-        "trigger",
-        "glitch"
+        "barricade",
+        "spike",
+        "turret",
+        "drone",
+        "glitch",
+        "pulse"
       ]
     ]
   ],
@@ -7688,12 +7689,11 @@
         "track"
       ],
       [
-        "sweeping",
-        "zigzagging",
-        "flickering",
-        "flashing",
-        "looping",
-        "reacting"
+        "spiralzonepattern",
+        "obstacle",
+        "chase",
+        "zone",
+        "timer"
       ]
     ]
   ],
@@ -8741,13 +8741,7 @@
         "reset"
       ],
       [
-        "resetpathforwardobjectivecheckpoints",
-        "checkinnewarea",
-        "newzone",
-        "collectsetacrossthreerooms",
-        "three",
-        "rooms",
-        "completion"
+        "triggerchainafterminibosssequence"
       ]
     ]
   ],
@@ -9801,12 +9795,13 @@
         "recharge"
       ],
       [
-        "combo",
-        "speed",
-        "rates",
-        "logics",
-        "economy",
-        "trade"
+        "fresh",
+        "resource",
+        "drain",
+        "meter",
+        "budget",
+        "recover",
+        "burst"
       ]
     ]
   ],
@@ -9892,10 +9887,14 @@
         "rhythm"
       ],
       [
-        "unveil",
-        "track",
-        "burst",
-        "surge"
+        "repair",
+        "broken",
+        "machinery",
+        "unlock",
+        "ascend",
+        "evolve",
+        "discover",
+        "reveal"
       ]
     ]
   ],
@@ -10951,11 +10950,12 @@
         "soft"
       ],
       [
-        "hard",
+        "wave",
+        "escalating",
+        "hidden",
         "gates",
-        "loops",
-        "momentum",
-        "points"
+        "timer",
+        "score"
       ]
     ]
   ],
@@ -12017,9 +12017,11 @@
         "zone"
       ],
       [
+        "reversed",
         "twist",
-        "challenge",
-        "reversal",
+        "constraint",
+        "alarm",
+        "pickup",
         "zone"
       ]
     ]

@@ -1,0 +1,1 @@
+The Gothic theme emphasizes dark, moody atmospheres, ornate architecture (spires, arches, stained glass), and a sense of melancholy or ancient mystery. Use colors like deep purples, obsidian blacks, and flickering gold. The narrative should feel high-stakes and existential.

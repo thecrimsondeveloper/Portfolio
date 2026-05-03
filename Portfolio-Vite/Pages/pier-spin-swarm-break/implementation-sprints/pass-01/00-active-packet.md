@@ -6,15 +6,15 @@
 
 		## Sprint Objective
 
-		Implement the movement slice so the player can reliably feel spin under glitch.
+		Implement the movement slice so the player can reliably feel spin under guard.
 
 		## Player Promise
 
-		The player immediately feels how movement improves the route and unlocks unveil.
+		The player immediately feels how movement improves the route and unlocks expand.
 
 		## Why This Packet Is Active
 
-		Movement is the clearest way to make the stealth-puzzle factory run feel distinct before enemy and hazard tuning.
+		Movement is the foundational slice for the 'Pier Spin' identity. Establishing the spin-to-deflect mechanic early is critical for the 'route runner' template.
 
 		## Candidate Packets Seen During Selection
 

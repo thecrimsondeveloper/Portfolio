@@ -478,10 +478,12 @@
   display: grid;
   place-items: center;
   text-align: center;
+  pointer-events: none;
 }
 
 .landing-copy-shell {
   max-width: 46rem;
+  pointer-events: none;
 }
 
 .landing-actions {
@@ -519,6 +521,11 @@
   background: rgba(255, 230, 173, 0.14);
   border-color: rgba(255, 230, 173, 0.7);
   transform: translateY(-1px);
+}
+
+.landing-button,
+.landing-continue-link {
+  pointer-events: auto;
 }
 
 .landing-kicker,

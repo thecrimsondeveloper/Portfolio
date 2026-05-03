@@ -2,11 +2,11 @@
 
 			## Sprint Objective
 
-			Implement the one enemy archetype slice so the player can reliably feel sprint under sentinel.
+			Implement the one enemy archetype slice so the player can reliably feel stack under sentinel.
 
 			## Player Promise
 
-			The player immediately feels how one enemy archetype improves the route and unlocks unlock.
+			The player immediately feels how one enemy archetype improves the route and unlocks pulse.
 
 			## Why This Branch Exists
 

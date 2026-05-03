@@ -1,6 +1,6 @@
 {
   "sourceFile": "/Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite/Pages/pier-spin-swarm-break/brainstorm-seed.json",
-  "generatedAt": "2026-05-01T22:00:44.309766+00:00",
+  "generatedAt": "2026-05-02T01:23:16.039604+00:00",
   "explorationLevel": "expansive",
   "method": {
     "name": "chained_inference_aggregation",
@@ -15,7 +15,7 @@
   "totals": {
     "categoryCount": 15,
     "rowCount": 1217,
-    "itemCount": 9516
+    "itemCount": 9518
   },
   "gameDesignDoc": {
     "title": "Pier Spin: Swarm Break",
@@ -34,25 +34,27 @@
         "spin",
         "stack",
         "root",
-        "sprint",
+        "pivot",
+        "slam",
         "grab",
-        "slide"
+        "rewire"
       ],
       "enemies": [
         "swarm",
         "commander",
         "pulse",
         "guard",
+        "stalker",
         "sentry",
-        "marker"
+        "storm"
       ],
       "progression": [
         "expand",
         "upgrade",
         "pulse",
-        "unlock",
         "ascend",
-        "surge",
+        "unveil",
+        "evolve",
         "reveal"
       ]
     },
@@ -96,7 +98,7 @@
         "spin",
         "stack",
         "root",
-        "sprint"
+        "pivot"
       ],
       "enemyBlend": [
         "swarm",
@@ -108,7 +110,7 @@
         "expand",
         "upgrade",
         "pulse",
-        "unlock"
+        "ascend"
       ],
       "smootherSummary": "Merge pier, peak spaces with spin, stack verbs, then pressure the run with swarm, commander threats and resolve it through expand, upgrade growth."
     },
@@ -133,8 +135,8 @@
         "pulse",
         "swell",
         "frost",
-        "canyon",
         "desert",
+        "canyon",
         "dock"
       ],
       "sampledWords": [
@@ -151,7 +153,7 @@
         "heads": [
           "storm",
           "harbor",
-          "frost"
+          "platform"
         ],
         "middles": [
           "peak",
@@ -190,23 +192,23 @@
             "ember",
             "desert",
             "frost",
-            "canyon",
             "swell",
             "dock",
+            "canyon",
             "pulse"
           ],
           "topRankings": [
             {
               "word": "storm",
-              "score": 68.24
+              "score": 54.48
             },
             {
               "word": "tide",
-              "score": 52.42
+              "score": 50.86
             },
             {
               "word": "wind",
-              "score": 47.86
+              "score": 46.3
             },
             {
               "word": "ice",
@@ -229,16 +231,16 @@
               "score": 31.92
             },
             {
-              "word": "canyon",
-              "score": 30.98
-            },
-            {
               "word": "swell",
               "score": 29.86
             },
             {
               "word": "dock",
               "score": 29.82
+            },
+            {
+              "word": "canyon",
+              "score": 29.42
             },
             {
               "word": "pulse",
@@ -256,8 +258,8 @@
             "harbor",
             "ember",
             "frost",
-            "pulse",
             "desert",
+            "pulse",
             "swell",
             "canyon",
             "dock"
@@ -265,47 +267,47 @@
           "topRankings": [
             {
               "word": "storm",
-              "score": 72.901
+              "score": 58.126
             },
             {
               "word": "tide",
-              "score": 57.17
+              "score": 55.394
             },
             {
               "word": "wind",
-              "score": 54.074
+              "score": 52.235
             },
             {
               "word": "ice",
-              "score": 43.418
+              "score": 43.044
             },
             {
               "word": "harbor",
-              "score": 37.735
+              "score": 37.548
             },
             {
               "word": "ember",
-              "score": 36.72
+              "score": 36.533
             },
             {
               "word": "frost",
-              "score": 34.226
-            },
-            {
-              "word": "pulse",
-              "score": 33.98
+              "score": 34.101
             },
             {
               "word": "desert",
               "score": 33.91
             },
             {
+              "word": "pulse",
+              "score": 33.793
+            },
+            {
               "word": "swell",
-              "score": 33.822
+              "score": 33.698
             },
             {
               "word": "canyon",
-              "score": 33.496
+              "score": 31.845
             },
             {
               "word": "dock",
@@ -325,58 +327,58 @@
             "pulse",
             "swell",
             "frost",
-            "canyon",
             "desert",
+            "canyon",
             "dock"
           ],
           "topRankings": [
             {
               "word": "storm",
-              "score": 74.06
+              "score": 59.158
             },
             {
               "word": "tide",
-              "score": 59.195
+              "score": 57.215
             },
             {
               "word": "wind",
-              "score": 56.797
+              "score": 54.736
             },
             {
               "word": "ice",
-              "score": 45.216
+              "score": 44.772
             },
             {
               "word": "harbor",
-              "score": 38.279
+              "score": 38.08
             },
             {
               "word": "ember",
-              "score": 38.12
+              "score": 37.885
             },
             {
               "word": "pulse",
-              "score": 35.671
+              "score": 35.413
             },
             {
               "word": "swell",
-              "score": 35.32
+              "score": 35.128
             },
             {
               "word": "frost",
-              "score": 35.047
-            },
-            {
-              "word": "canyon",
-              "score": 34.86
+              "score": 34.875
             },
             {
               "word": "desert",
-              "score": 34.253
+              "score": 34.238
+            },
+            {
+              "word": "canyon",
+              "score": 33.027
             },
             {
               "word": "dock",
-              "score": 31.37
+              "score": 31.338
             }
           ]
         }
@@ -402,8 +404,8 @@
           "rowLength": 8,
           "focusWords": [
             "harbor",
-            "canyon",
             "desert",
+            "canyon",
             "dock",
             "pier",
             "dune"
@@ -505,17 +507,17 @@
         },
         {
           "category": "Environment Seeds",
-          "seed": "storm",
+          "seed": "platform",
           "rowLength": 6,
           "focusWords": [
-            "storm",
-            "debris",
-            "ruins",
-            "lights",
-            "fog",
-            "neon"
+            "platform",
+            "path",
+            "flow",
+            "light",
+            "sound",
+            "signal"
           ],
-          "chainDigest": "storm -> debris -> ruins -> lights -> fog -> neon"
+          "chainDigest": "platform -> path -> flow -> light -> sound -> signal"
         }
       ]
     },
@@ -526,16 +528,16 @@
       "topWords": [
         "puzzle",
         "arcade",
+        "chase",
         "score",
         "runner",
-        "chase",
         "stealth",
         "platformer",
         "arena",
         "escape",
         "defense",
         "maze",
-        "loop"
+        "tactics"
       ],
       "sampledWords": [
         "time",
@@ -544,8 +546,8 @@
       ],
       "rankedSample": [
         "stealth",
-        "score",
-        "runner"
+        "chase",
+        "score"
       ],
       "piecemealSamples": {
         "heads": [
@@ -574,8 +576,8 @@
         "escape",
         "rhythmactionresourcerun",
         "stealth",
+        "chase",
         "score",
-        "runner",
         "survivalarena"
       ],
       "rankedPasses": [
@@ -598,51 +600,51 @@
           "topRankings": [
             {
               "word": "puzzle",
-              "score": 954.04
+              "score": 952.12
             },
             {
               "word": "arcade",
-              "score": 932.78
+              "score": 931.18
             },
             {
               "word": "score",
-              "score": 881.98
+              "score": 855.46
             },
             {
               "word": "chase",
-              "score": 799.8
+              "score": 824.62
             },
             {
               "word": "runner",
-              "score": 794.82
+              "score": 792.54
             },
             {
               "word": "stealth",
-              "score": 768.86
+              "score": 767.86
             },
             {
               "word": "escape",
-              "score": 727.96
+              "score": 728.52
             },
             {
               "word": "defense",
-              "score": 667.96
+              "score": 666.7
             },
             {
               "word": "loop",
-              "score": 645.52
+              "score": 646.02
             },
             {
               "word": "arena",
-              "score": 641.72
+              "score": 640.82
             },
             {
               "word": "platformer",
-              "score": 639.22
+              "score": 638.8
             },
             {
               "word": "tension",
-              "score": 577.16
+              "score": 554.4
             }
           ]
         },
@@ -651,9 +653,9 @@
           "topWords": [
             "puzzle",
             "arcade",
+            "chase",
             "score",
             "runner",
-            "chase",
             "stealth",
             "escape",
             "defense",
@@ -665,51 +667,51 @@
           "topRankings": [
             {
               "word": "puzzle",
-              "score": 1805.544
+              "score": 1798.67
             },
             {
               "word": "arcade",
-              "score": 1796.017
-            },
-            {
-              "word": "score",
-              "score": 1716.852
-            },
-            {
-              "word": "runner",
-              "score": 1658.274
+              "score": 1784.1
             },
             {
               "word": "chase",
-              "score": 1649.654
+              "score": 1702.296
+            },
+            {
+              "word": "score",
+              "score": 1657.314
+            },
+            {
+              "word": "runner",
+              "score": 1648.351
             },
             {
               "word": "stealth",
-              "score": 1598.682
+              "score": 1592.204
             },
             {
               "word": "escape",
-              "score": 1487.591
+              "score": 1485.793
             },
             {
               "word": "defense",
-              "score": 1357.74
+              "score": 1354.619
             },
             {
               "word": "platformer",
-              "score": 1336.409
+              "score": 1333.564
             },
             {
               "word": "arena",
-              "score": 1306.749
+              "score": 1305.185
             },
             {
               "word": "loop",
-              "score": 1229.627
+              "score": 1183.11
             },
             {
               "word": "maze",
-              "score": 1139.882
+              "score": 1078.282
             }
           ]
         },
@@ -718,65 +720,65 @@
           "topWords": [
             "puzzle",
             "arcade",
+            "chase",
             "score",
             "runner",
-            "chase",
             "stealth",
             "platformer",
             "arena",
             "escape",
             "defense",
             "maze",
-            "loop"
+            "tactics"
           ],
           "topRankings": [
             {
               "word": "puzzle",
-              "score": 3318.631
+              "score": 3294.295
             },
             {
               "word": "arcade",
-              "score": 3287.917
-            },
-            {
-              "word": "score",
-              "score": 3103.274
-            },
-            {
-              "word": "runner",
-              "score": 2901.183
+              "score": 3251.51
             },
             {
               "word": "chase",
-              "score": 2893.485
+              "score": 2991.147
+            },
+            {
+              "word": "score",
+              "score": 2976.868
+            },
+            {
+              "word": "runner",
+              "score": 2873.389
             },
             {
               "word": "stealth",
-              "score": 2803.038
+              "score": 2784.973
             },
             {
               "word": "platformer",
-              "score": 2608.56
+              "score": 2593.549
             },
             {
               "word": "arena",
-              "score": 2580.126
+              "score": 2567.501
             },
             {
               "word": "escape",
-              "score": 2535.567
+              "score": 2527.749
             },
             {
               "word": "defense",
-              "score": 2317.826
+              "score": 2311.547
             },
             {
               "word": "maze",
-              "score": 2226.143
+              "score": 2109.593
             },
             {
-              "word": "loop",
-              "score": 2083.68
+              "word": "tactics",
+              "score": 2063.728
             }
           ]
         }
@@ -858,8 +860,8 @@
           "rowLength": 8,
           "focusWords": [
             "puzzle",
-            "runner",
             "chase",
+            "runner",
             "stealth",
             "escape",
             "defense"
@@ -872,9 +874,9 @@
           "rowLength": 8,
           "focusWords": [
             "puzzle",
+            "chase",
             "score",
             "runner",
-            "chase",
             "stealth",
             "defense"
           ],
@@ -886,8 +888,8 @@
           "rowLength": 8,
           "focusWords": [
             "puzzle",
-            "runner",
             "chase",
+            "runner",
             "stealth",
             "defense",
             "boss"
@@ -928,9 +930,9 @@
           "rowLength": 8,
           "focusWords": [
             "arcade",
+            "chase",
             "score",
             "runner",
-            "chase",
             "loop",
             "pressure"
           ],
@@ -943,8 +945,8 @@
           "focusWords": [
             "puzzle",
             "arcade",
-            "score",
             "chase",
+            "score",
             "loop",
             "pressure"
           ],
@@ -1012,8 +1014,8 @@
           "rowLength": 8,
           "focusWords": [
             "puzzle",
-            "score",
             "chase",
+            "score",
             "stealth",
             "escape",
             "tension"
@@ -1040,8 +1042,8 @@
           "rowLength": 8,
           "focusWords": [
             "puzzle",
-            "runner",
             "chase",
+            "runner",
             "stealth",
             "defense",
             "time"
@@ -1054,9 +1056,9 @@
           "rowLength": 8,
           "focusWords": [
             "puzzle",
+            "chase",
             "score",
             "runner",
-            "chase",
             "defense",
             "resource"
           ],
@@ -1139,8 +1141,8 @@
           "focusWords": [
             "stealth",
             "escape",
-            "loop",
             "tactics",
+            "loop",
             "tension",
             "pressure"
           ],
@@ -1156,7 +1158,7 @@
             "escape",
             "tension",
             "pressure",
-            "attack"
+            "identity"
           ],
           "chainDigest": "escapescoreattack -> escape -> score -> attack -> pressure -> identity -> tension -> stealth"
         },
@@ -1209,8 +1211,8 @@
           "focusWords": [
             "puzzle",
             "arcade",
-            "runner",
             "chase",
+            "runner",
             "stealth",
             "defense"
           ],
@@ -1223,9 +1225,9 @@
           "focusWords": [
             "puzzle",
             "arcade",
+            "chase",
             "score",
             "runner",
-            "chase",
             "defense"
           ],
           "chainDigest": "wavedefensepuzzle -> wave -> defense -> puzzle -> chase -> runner -> score -> arcade"
@@ -1280,8 +1282,8 @@
             "arcade",
             "score",
             "defense",
-            "loop",
             "tactics",
+            "loop",
             "pressure"
           ],
           "chainDigest": "wavedefensetactics -> wave -> defense -> tactics -> score -> arcade -> loop -> pressure"
@@ -1348,8 +1350,8 @@
           "rowLength": 8,
           "focusWords": [
             "arcade",
-            "runner",
             "chase",
+            "runner",
             "stealth",
             "escape",
             "tension"
@@ -1362,8 +1364,8 @@
           "rowLength": 8,
           "focusWords": [
             "puzzle",
-            "runner",
             "chase",
+            "runner",
             "stealth",
             "escape",
             "defense"
@@ -1376,8 +1378,8 @@
           "rowLength": 8,
           "focusWords": [
             "puzzle",
-            "runner",
             "chase",
+            "runner",
             "stealth",
             "platformer",
             "defense"
@@ -1390,9 +1392,9 @@
           "rowLength": 8,
           "focusWords": [
             "puzzle",
+            "chase",
             "score",
             "runner",
-            "chase",
             "arena",
             "defense"
           ],
@@ -1421,8 +1423,8 @@
             "score",
             "runner",
             "defense",
-            "loop",
-            "tactics"
+            "tactics",
+            "loop"
           ],
           "chainDigest": "routerunnertactics -> route -> runner -> tactics -> defense -> score -> arcade -> loop"
         },
@@ -1544,8 +1546,8 @@
           "rowLength": 8,
           "focusWords": [
             "puzzle",
-            "runner",
             "chase",
+            "runner",
             "stealth",
             "defense",
             "maze"
@@ -1558,9 +1560,9 @@
           "rowLength": 8,
           "focusWords": [
             "puzzle",
+            "chase",
             "score",
             "runner",
-            "chase",
             "defense",
             "tactics"
           ],
@@ -1712,8 +1714,8 @@
           "rowLength": 8,
           "focusWords": [
             "puzzle",
-            "score",
             "chase",
+            "score",
             "stealth",
             "defense",
             "extraction"
@@ -1726,8 +1728,8 @@
           "rowLength": 8,
           "focusWords": [
             "puzzle",
-            "runner",
             "chase",
+            "runner",
             "defense",
             "boss",
             "extraction"
@@ -1855,8 +1857,8 @@
             "stealth",
             "escape",
             "tension",
-            "attack",
-            "network"
+            "network",
+            "attack"
           ],
           "chainDigest": "relaynetworkscoreattack -> relay -> network -> score -> attack -> tension -> escape -> stealth"
         },
@@ -1977,8 +1979,8 @@
           "seed": "rhythmactiontactics",
           "rowLength": 8,
           "focusWords": [
-            "loop",
             "tactics",
+            "loop",
             "tension",
             "pressure",
             "action",
@@ -1994,9 +1996,9 @@
             "score",
             "tension",
             "pressure",
-            "attack",
             "action",
-            "identity"
+            "identity",
+            "attack"
           ],
           "chainDigest": "rhythmactionscoreattack -> rhythm -> action -> score -> attack -> pressure -> identity -> tension"
         },
@@ -2049,8 +2051,8 @@
           "focusWords": [
             "puzzle",
             "arcade",
-            "runner",
             "chase",
+            "runner",
             "stealth",
             "defense"
           ],
@@ -2063,9 +2065,9 @@
           "focusWords": [
             "puzzle",
             "arcade",
+            "chase",
             "score",
             "runner",
-            "chase",
             "defense"
           ],
           "chainDigest": "survivalpuzzle -> survival -> puzzle -> chase -> defense -> runner -> score -> arcade"
@@ -2119,8 +2121,8 @@
           "focusWords": [
             "arcade",
             "score",
-            "loop",
             "tactics",
+            "loop",
             "pressure",
             "survival"
           ],
@@ -2136,7 +2138,7 @@
             "loop",
             "pressure",
             "survival",
-            "attack"
+            "identity"
           ],
           "chainDigest": "survivalscoreattack -> survival -> score -> attack -> arcade -> loop -> pressure -> identity"
         },
@@ -2267,17 +2269,17 @@
         },
         {
           "category": "Genre Seeds",
-          "seed": "chase",
+          "seed": "stealtharcade",
           "rowLength": 6,
           "focusWords": [
-            "score",
             "chase",
-            "maze",
+            "score",
             "loop",
             "tension",
-            "attack"
+            "attack",
+            "stealtharcade"
           ],
-          "chainDigest": "chase -> maze -> loop -> score -> tension -> attack"
+          "chainDigest": "stealtharcade -> chase -> loop -> tension -> score -> attack"
         }
       ]
     },
@@ -2297,7 +2299,7 @@
         "shift",
         "zoom",
         "read",
-        "frame"
+        "wide"
       ],
       "sampledWords": [
         "follow",
@@ -2321,9 +2323,9 @@
           "snap"
         ],
         "tails": [
+          "rotation",
           "lock",
-          "track",
-          "view"
+          "track"
         ],
         "focus": [
           "sideviewmapreveal",
@@ -2351,60 +2353,60 @@
             "follow",
             "map",
             "read",
-            "frame",
             "tracking",
             "rotating",
             "locked",
-            "zoom"
+            "frame",
+            "lock"
           ],
           "topRankings": [
             {
               "word": "lane",
-              "score": 807.74
+              "score": 807.02
             },
             {
               "word": "room",
-              "score": 774.42
+              "score": 776.3
             },
             {
               "word": "view",
-              "score": 692.94
+              "score": 716.86
             },
             {
               "word": "shift",
-              "score": 572.02
+              "score": 568.7
             },
             {
               "word": "follow",
-              "score": 551.44
+              "score": 547.2
             },
             {
               "word": "map",
-              "score": 538.02
+              "score": 538.16
             },
             {
               "word": "read",
-              "score": 537.46
-            },
-            {
-              "word": "frame",
-              "score": 505.32
+              "score": 516.28
             },
             {
               "word": "tracking",
-              "score": 492.84
+              "score": 493.22
             },
             {
               "word": "rotating",
-              "score": 479.26
+              "score": 479.2
             },
             {
               "word": "locked",
-              "score": 473.54
+              "score": 473.48
             },
             {
-              "word": "zoom",
-              "score": 415.1
+              "word": "frame",
+              "score": 470.8
+            },
+            {
+              "word": "lock",
+              "score": 387.8
             }
           ]
         },
@@ -2416,10 +2418,10 @@
             "view",
             "map",
             "follow",
-            "shift",
             "tracking",
-            "locked",
+            "shift",
             "rotating",
+            "locked",
             "read",
             "frame",
             "zoom"
@@ -2427,51 +2429,51 @@
           "topRankings": [
             {
               "word": "lane",
-              "score": 1540.554
+              "score": 1534.51
             },
             {
               "word": "room",
-              "score": 1492.762
+              "score": 1496.546
             },
             {
               "word": "view",
-              "score": 1317.61
+              "score": 1353.474
             },
             {
               "word": "map",
-              "score": 1071.837
+              "score": 1071.518
             },
             {
               "word": "follow",
-              "score": 1013.831
-            },
-            {
-              "word": "shift",
-              "score": 946.114
+              "score": 1001.624
             },
             {
               "word": "tracking",
-              "score": 943.131
+              "score": 947.41
             },
             {
-              "word": "locked",
-              "score": 931.358
+              "word": "shift",
+              "score": 933.857
             },
             {
               "word": "rotating",
-              "score": 929.81
+              "score": 931.51
+            },
+            {
+              "word": "locked",
+              "score": 927.553
             },
             {
               "word": "read",
-              "score": 890.566
+              "score": 844.498
             },
             {
               "word": "frame",
-              "score": 851.238
+              "score": 790.338
             },
             {
               "word": "zoom",
-              "score": 780.914
+              "score": 727.991
             }
           ]
         },
@@ -2489,56 +2491,56 @@
             "shift",
             "zoom",
             "read",
-            "frame"
+            "wide"
           ],
           "topRankings": [
             {
               "word": "lane",
-              "score": 2601.413
+              "score": 2587.65
             },
             {
               "word": "room",
-              "score": 2541.21
+              "score": 2544.098
             },
             {
               "word": "view",
-              "score": 2154.972
+              "score": 2209.905
             },
             {
               "word": "map",
-              "score": 1895.484
+              "score": 1892.525
             },
             {
               "word": "tracking",
-              "score": 1708.05
+              "score": 1712.711
             },
             {
               "word": "rotating",
-              "score": 1692.469
+              "score": 1692.215
             },
             {
               "word": "locked",
-              "score": 1681.704
+              "score": 1671.017
             },
             {
               "word": "follow",
-              "score": 1636.738
+              "score": 1611.887
             },
             {
               "word": "shift",
-              "score": 1503.348
+              "score": 1477.167
             },
             {
               "word": "zoom",
-              "score": 1405.001
+              "score": 1317.339
             },
             {
               "word": "read",
-              "score": 1336.733
+              "score": 1262.958
             },
             {
-              "word": "frame",
-              "score": 1323.824
+              "word": "wide",
+              "score": 1251.674
             }
           ]
         }
@@ -2567,8 +2569,8 @@
             "read",
             "frame",
             "down",
-            "track",
-            "angle"
+            "angle",
+            "track"
           ],
           "chainDigest": "topdownlocked -> top -> down -> locked -> frame -> read -> track -> angle"
         },
@@ -2580,9 +2582,9 @@
             "rotating",
             "read",
             "down",
-            "track",
+            "angle",
             "depth",
-            "angle"
+            "track"
           ],
           "chainDigest": "topdownrotating -> top -> down -> rotating -> read -> track -> angle -> depth"
         },
@@ -2593,10 +2595,10 @@
           "focusWords": [
             "zoom",
             "down",
-            "track",
+            "angle",
             "depth",
-            "pulse",
-            "angle"
+            "track",
+            "pulse"
           ],
           "chainDigest": "topdownzoompulse -> top -> down -> zoom -> pulse -> track -> angle -> depth"
         },
@@ -2606,11 +2608,11 @@
           "rowLength": 8,
           "focusWords": [
             "room",
-            "orbit",
             "down",
+            "orbit",
+            "angle",
             "depth",
-            "snap",
-            "angle"
+            "snap"
           ],
           "chainDigest": "topdownroomsnap -> top -> down -> room -> snap -> angle -> depth -> orbit"
         },
@@ -2622,8 +2624,8 @@
             "lane",
             "follow",
             "shift",
-            "orbit",
             "down",
+            "orbit",
             "depth"
           ],
           "chainDigest": "topdownlaneshift -> top -> down -> lane -> shift -> depth -> orbit -> follow"
@@ -2636,8 +2638,8 @@
             "follow",
             "boss",
             "lock",
-            "orbit",
             "down",
+            "orbit",
             "focus"
           ],
           "chainDigest": "topdownbossfocus -> top -> down -> boss -> focus -> orbit -> follow -> lock"
@@ -2721,8 +2723,8 @@
             "rotating",
             "read",
             "frame",
-            "track",
-            "angle"
+            "angle",
+            "track"
           ],
           "chainDigest": "sideviewrotating -> side -> view -> rotating -> frame -> read -> track -> angle"
         },
@@ -2748,9 +2750,9 @@
             "room",
             "view",
             "read",
+            "angle",
             "track",
-            "snap",
-            "angle"
+            "snap"
           ],
           "chainDigest": "sideviewroomsnap -> side -> view -> room -> snap -> read -> track -> angle"
         },
@@ -2762,9 +2764,9 @@
             "lane",
             "view",
             "shift",
-            "track",
+            "angle",
             "depth",
-            "angle"
+            "track"
           ],
           "chainDigest": "sideviewlaneshift -> side -> view -> lane -> shift -> track -> angle -> depth"
         },
@@ -2776,8 +2778,8 @@
             "view",
             "boss",
             "orbit",
-            "depth",
             "angle",
+            "depth",
             "focus"
           ],
           "chainDigest": "sideviewbossfocus -> side -> view -> boss -> focus -> angle -> depth -> orbit"
@@ -2904,7 +2906,7 @@
             "read",
             "frame",
             "isometric",
-            "track"
+            "angle"
           ],
           "chainDigest": "isometriclaneshift -> isometric -> lane -> shift -> frame -> read -> track -> angle"
         },
@@ -2916,9 +2918,9 @@
             "read",
             "boss",
             "isometric",
-            "track",
+            "angle",
             "depth",
-            "angle"
+            "track"
           ],
           "chainDigest": "isometricbossfocus -> isometric -> boss -> focus -> read -> track -> angle -> depth"
         },
@@ -2928,11 +2930,11 @@
           "rowLength": 8,
           "focusWords": [
             "map",
-            "orbit",
             "isometric",
-            "track",
+            "orbit",
+            "angle",
             "depth",
-            "angle"
+            "track"
           ],
           "chainDigest": "isometricmapreveal -> isometric -> map -> reveal -> track -> angle -> depth -> orbit"
         },
@@ -2943,10 +2945,10 @@
           "focusWords": [
             "follow",
             "danger",
-            "orbit",
             "isometric",
-            "depth",
-            "angle"
+            "orbit",
+            "angle",
+            "depth"
           ],
           "chainDigest": "isometricdangertilt -> isometric -> danger -> tilt -> angle -> depth -> orbit -> follow"
         },
@@ -2959,8 +2961,8 @@
             "read",
             "wide",
             "lock",
-            "orbit",
-            "isometric"
+            "isometric",
+            "orbit"
           ],
           "chainDigest": "isometricwideread -> isometric -> wide -> read -> depth -> orbit -> follow -> lock"
         },
@@ -2972,9 +2974,9 @@
             "tracking",
             "follow",
             "lock",
-            "orbit",
             "shoulder",
-            "the"
+            "orbit",
+            "over"
           ],
           "chainDigest": "overtheshouldertracking -> over -> the -> shoulder -> tracking -> orbit -> follow -> lock"
         },
@@ -2988,7 +2990,7 @@
             "shift",
             "lock",
             "shoulder",
-            "the"
+            "over"
           ],
           "chainDigest": "overtheshoulderlocked -> over -> the -> shoulder -> locked -> follow -> lock -> shift"
         },
@@ -3002,7 +3004,7 @@
             "shift",
             "lock",
             "shoulder",
-            "the"
+            "over"
           ],
           "chainDigest": "overtheshoulderrotating -> over -> the -> shoulder -> rotating -> lock -> shift -> room"
         },
@@ -3016,7 +3018,7 @@
             "zoom",
             "shoulder",
             "pulse",
-            "the"
+            "over"
           ],
           "chainDigest": "overtheshoulderzoompulse -> over -> the -> shoulder -> zoom -> pulse -> shift -> room"
         },
@@ -3030,7 +3032,7 @@
             "view",
             "shoulder",
             "snap",
-            "the"
+            "over"
           ],
           "chainDigest": "overtheshoulderroomsnap -> over -> the -> shoulder -> room -> snap -> lane -> view"
         },
@@ -3044,7 +3046,7 @@
             "shift",
             "frame",
             "shoulder",
-            "the"
+            "over"
           ],
           "chainDigest": "overtheshoulderlaneshift -> over -> the -> shoulder -> lane -> shift -> view -> frame"
         },
@@ -3058,7 +3060,7 @@
             "boss",
             "shoulder",
             "focus",
-            "the"
+            "over"
           ],
           "chainDigest": "overtheshoulderbossfocus -> over -> the -> shoulder -> boss -> focus -> view -> frame"
         },
@@ -3072,7 +3074,7 @@
             "frame",
             "shoulder",
             "reveal",
-            "the"
+            "over"
           ],
           "chainDigest": "overtheshouldermapreveal -> over -> the -> shoulder -> map -> reveal -> frame -> read"
         },
@@ -3086,7 +3088,7 @@
             "shoulder",
             "track",
             "tilt",
-            "the"
+            "over"
           ],
           "chainDigest": "overtheshoulderdangertilt -> over -> the -> shoulder -> danger -> tilt -> read -> track"
         },
@@ -3098,9 +3100,9 @@
             "read",
             "wide",
             "shoulder",
-            "track",
             "angle",
-            "the"
+            "track",
+            "over"
           ],
           "chainDigest": "overtheshoulderwideread -> over -> the -> shoulder -> wide -> read -> track -> angle"
         },
@@ -3113,8 +3115,8 @@
             "tracking",
             "follow",
             "orbit",
-            "depth",
-            "angle"
+            "angle",
+            "depth"
           ],
           "chainDigest": "fixedroomtracking -> fixed -> room -> tracking -> angle -> depth -> orbit -> follow"
         },
@@ -3237,10 +3239,10 @@
           "focusWords": [
             "room",
             "read",
-            "frame",
             "wide",
-            "track",
-            "angle"
+            "frame",
+            "angle",
+            "track"
           ],
           "chainDigest": "fixedroomwideread -> fixed -> room -> wide -> read -> frame -> track -> angle"
         },
@@ -3252,9 +3254,9 @@
             "lane",
             "tracking",
             "read",
-            "track",
+            "angle",
             "depth",
-            "angle"
+            "track"
           ],
           "chainDigest": "scrollinglanetracking -> scrolling -> lane -> tracking -> read -> track -> angle -> depth"
         },
@@ -3266,9 +3268,9 @@
             "lane",
             "locked",
             "orbit",
-            "track",
+            "angle",
             "depth",
-            "angle"
+            "track"
           ],
           "chainDigest": "scrollinglanelocked -> scrolling -> lane -> locked -> track -> angle -> depth -> orbit"
         },
@@ -3281,8 +3283,8 @@
             "rotating",
             "follow",
             "orbit",
-            "depth",
-            "angle"
+            "angle",
+            "depth"
           ],
           "chainDigest": "scrollinglanerotating -> scrolling -> lane -> rotating -> angle -> depth -> orbit -> follow"
         },
@@ -3378,8 +3380,8 @@
             "lane",
             "view",
             "read",
-            "frame",
             "wide",
+            "frame",
             "track"
           ],
           "chainDigest": "scrollinglanewideread -> scrolling -> lane -> wide -> read -> view -> frame -> track"
@@ -3407,8 +3409,8 @@
             "read",
             "frame",
             "arena",
-            "track",
-            "angle"
+            "angle",
+            "track"
           ],
           "chainDigest": "radialarenalocked -> radial -> arena -> locked -> frame -> read -> track -> angle"
         },
@@ -3420,9 +3422,9 @@
             "rotating",
             "read",
             "arena",
-            "track",
+            "angle",
             "depth",
-            "angle"
+            "track"
           ],
           "chainDigest": "radialarenarotating -> radial -> arena -> rotating -> read -> track -> angle -> depth"
         },
@@ -3433,10 +3435,10 @@
           "focusWords": [
             "zoom",
             "arena",
-            "track",
+            "angle",
             "depth",
-            "pulse",
-            "angle"
+            "track",
+            "pulse"
           ],
           "chainDigest": "radialarenazoompulse -> radial -> arena -> zoom -> pulse -> track -> angle -> depth"
         },
@@ -3446,11 +3448,11 @@
           "rowLength": 8,
           "focusWords": [
             "room",
-            "orbit",
             "arena",
+            "orbit",
+            "angle",
             "depth",
-            "snap",
-            "angle"
+            "snap"
           ],
           "chainDigest": "radialarenaroomsnap -> radial -> arena -> room -> snap -> angle -> depth -> orbit"
         },
@@ -3462,8 +3464,8 @@
             "lane",
             "follow",
             "shift",
-            "orbit",
             "arena",
+            "orbit",
             "depth"
           ],
           "chainDigest": "radialarenalaneshift -> radial -> arena -> lane -> shift -> depth -> orbit -> follow"
@@ -3476,8 +3478,8 @@
             "follow",
             "boss",
             "lock",
-            "orbit",
             "arena",
+            "orbit",
             "focus"
           ],
           "chainDigest": "radialarenabossfocus -> radial -> arena -> boss -> focus -> orbit -> follow -> lock"
@@ -3588,9 +3590,9 @@
             "room",
             "map",
             "read",
+            "angle",
             "track",
-            "snap",
-            "angle"
+            "snap"
           ],
           "chainDigest": "nodemaproomsnap -> node -> map -> room -> snap -> read -> track -> angle"
         },
@@ -3602,9 +3604,9 @@
             "lane",
             "map",
             "shift",
-            "track",
+            "angle",
             "depth",
-            "angle"
+            "track"
           ],
           "chainDigest": "nodemaplaneshift -> node -> map -> lane -> shift -> track -> angle -> depth"
         },
@@ -3616,8 +3618,8 @@
             "map",
             "boss",
             "orbit",
-            "depth",
             "angle",
+            "depth",
             "focus"
           ],
           "chainDigest": "nodemapbossfocus -> node -> map -> boss -> focus -> angle -> depth -> orbit"
@@ -3756,8 +3758,8 @@
             "read",
             "boss",
             "screen",
-            "track",
             "angle",
+            "track",
             "focus"
           ],
           "chainDigest": "splitscreenbossfocus -> split -> screen -> boss -> focus -> read -> track -> angle"
@@ -3769,9 +3771,9 @@
           "focusWords": [
             "map",
             "screen",
-            "track",
-            "depth",
             "angle",
+            "depth",
+            "track",
             "reveal"
           ],
           "chainDigest": "splitscreenmapreveal -> split -> screen -> map -> reveal -> track -> angle -> depth"
@@ -3782,10 +3784,10 @@
           "rowLength": 8,
           "focusWords": [
             "danger",
-            "orbit",
             "screen",
-            "depth",
+            "orbit",
             "angle",
+            "depth",
             "tilt"
           ],
           "chainDigest": "splitscreendangertilt -> split -> screen -> danger -> tilt -> angle -> depth -> orbit"
@@ -3798,8 +3800,8 @@
             "follow",
             "read",
             "wide",
-            "orbit",
             "screen",
+            "orbit",
             "depth"
           ],
           "chainDigest": "splitscreenwideread -> split -> screen -> wide -> read -> depth -> orbit -> follow"
@@ -3924,8 +3926,8 @@
             "follow",
             "read",
             "danger",
-            "track",
             "angle",
+            "track",
             "tilt"
           ],
           "chainDigest": "cinematicfollowdangertilt -> cinematic -> follow -> danger -> tilt -> read -> track -> angle"
@@ -3938,9 +3940,9 @@
             "follow",
             "read",
             "wide",
-            "track",
+            "angle",
             "depth",
-            "angle"
+            "track"
           ],
           "chainDigest": "cinematicfollowwideread -> cinematic -> follow -> wide -> read -> track -> angle -> depth"
         },
@@ -3951,8 +3953,8 @@
           "focusWords": [
             "pulse",
             "radialarenaroomsnap",
-            "relay",
             "radialarenalaneshift",
+            "relay",
             "radialarenabossfocus",
             "radialarenamapreveal"
           ],
@@ -4029,17 +4031,17 @@
         },
         {
           "category": "Camera Mode Seeds",
-          "seed": "orbit",
+          "seed": "over",
           "rowLength": 6,
           "focusWords": [
-            "zoom",
-            "read",
-            "frame",
-            "orbit",
-            "track",
-            "pulse"
+            "view",
+            "angle",
+            "tilt",
+            "over",
+            "speed",
+            "rotation"
           ],
-          "chainDigest": "orbit -> zoom -> pulse -> read -> track -> frame"
+          "chainDigest": "over -> tilt -> speed -> view -> angle -> rotation"
         }
       ]
     },
@@ -4056,10 +4058,10 @@
         "tower",
         "paths",
         "space",
-        "zones",
-        "layout",
         "navigation",
-        "switches"
+        "zones",
+        "switches",
+        "layout"
       ],
       "sampledWords": [
         "mazewithcollapsepaths",
@@ -4113,20 +4115,20 @@
             "grid",
             "tower",
             "paths",
-            "zones",
             "space",
-            "layout",
+            "maze",
             "shortcuts",
-            "navigation"
+            "navigation",
+            "layout"
           ],
           "topRankings": [
             {
               "word": "with",
-              "score": 1225.78
+              "score": 1227.94
             },
             {
               "word": "bridges",
-              "score": 585.66
+              "score": 584.54
             },
             {
               "word": "elevators",
@@ -4134,11 +4136,11 @@
             },
             {
               "word": "gates",
-              "score": 494.84
+              "score": 493.72
             },
             {
               "word": "grid",
-              "score": 470.68
+              "score": 469.9
             },
             {
               "word": "tower",
@@ -4146,19 +4148,15 @@
             },
             {
               "word": "paths",
-              "score": 380.26
-            },
-            {
-              "word": "zones",
-              "score": 311.04
+              "score": 379.48
             },
             {
               "word": "space",
               "score": 309.16
             },
             {
-              "word": "layout",
-              "score": 306.1
+              "word": "maze",
+              "score": 293.48
             },
             {
               "word": "shortcuts",
@@ -4166,7 +4164,11 @@
             },
             {
               "word": "navigation",
-              "score": 288.74
+              "score": 287.84
+            },
+            {
+              "word": "layout",
+              "score": 284.3
             }
           ]
         },
@@ -4181,59 +4183,59 @@
             "tower",
             "paths",
             "space",
-            "zones",
-            "layout",
             "navigation",
-            "switches"
+            "zones",
+            "switches",
+            "layout"
           ],
           "topRankings": [
             {
               "word": "with",
-              "score": 1531.486
+              "score": 1533.588
             },
             {
               "word": "bridges",
-              "score": 912.997
+              "score": 908.913
             },
             {
               "word": "elevators",
-              "score": 740.218
+              "score": 739.491
             },
             {
               "word": "gates",
-              "score": 733.074
+              "score": 728.614
             },
             {
               "word": "grid",
-              "score": 684.134
+              "score": 680.274
             },
             {
               "word": "tower",
-              "score": 663.662
+              "score": 663.621
             },
             {
               "word": "paths",
-              "score": 615.157
+              "score": 611.595
             },
             {
               "word": "space",
-              "score": 514.544
-            },
-            {
-              "word": "zones",
-              "score": 497.74
-            },
-            {
-              "word": "layout",
-              "score": 476.721
+              "score": 513.73
             },
             {
               "word": "navigation",
-              "score": 473.151
+              "score": 470.37
+            },
+            {
+              "word": "zones",
+              "score": 451.855
             },
             {
               "word": "switches",
-              "score": 443.142
+              "score": 440.844
+            },
+            {
+              "word": "layout",
+              "score": 439.67
             }
           ]
         },
@@ -4248,59 +4250,59 @@
             "tower",
             "paths",
             "space",
-            "zones",
-            "layout",
             "navigation",
-            "switches"
+            "zones",
+            "switches",
+            "layout"
           ],
           "topRankings": [
             {
               "word": "with",
-              "score": 1712.803
+              "score": 1714.654
             },
             {
               "word": "bridges",
-              "score": 1229.381
+              "score": 1220.705
             },
             {
               "word": "elevators",
-              "score": 991.198
+              "score": 987.801
             },
             {
               "word": "gates",
-              "score": 983.382
+              "score": 973.952
             },
             {
               "word": "grid",
-              "score": 908.312
+              "score": 899.981
             },
             {
               "word": "tower",
-              "score": 857.489
+              "score": 856.197
             },
             {
               "word": "paths",
-              "score": 824.541
+              "score": 817.521
             },
             {
               "word": "space",
-              "score": 703.15
-            },
-            {
-              "word": "zones",
-              "score": 692.105
-            },
-            {
-              "word": "layout",
-              "score": 645.607
+              "score": 700.047
             },
             {
               "word": "navigation",
-              "score": 637.489
+              "score": 631.911
+            },
+            {
+              "word": "zones",
+              "score": 621.55
             },
             {
               "word": "switches",
-              "score": 595.975
+              "score": 591.366
+            },
+            {
+              "word": "layout",
+              "score": 590.015
             }
           ]
         }
@@ -4314,8 +4316,8 @@
             "with",
             "gates",
             "space",
-            "layout",
             "navigation",
+            "layout",
             "route"
           ],
           "chainDigest": "mazewithgates -> maze -> with -> gates -> space -> route -> layout -> navigation"
@@ -4327,8 +4329,8 @@
           "focusWords": [
             "with",
             "gates",
-            "layout",
             "navigation",
+            "layout",
             "shortcuts",
             "route"
           ],
@@ -4343,8 +4345,8 @@
             "bridges",
             "elevators",
             "gates",
-            "layout",
-            "navigation"
+            "navigation",
+            "layout"
           ],
           "chainDigest": "mazewithbridges -> maze -> with -> bridges -> layout -> navigation -> gates -> elevators"
         },
@@ -4482,8 +4484,8 @@
             "with",
             "bridges",
             "space",
-            "layout",
             "navigation",
+            "layout",
             "route"
           ],
           "chainDigest": "laneswithbridges -> lanes -> with -> bridges -> space -> route -> layout -> navigation"
@@ -4496,8 +4498,8 @@
             "with",
             "elevators",
             "gates",
-            "layout",
             "navigation",
+            "layout",
             "route"
           ],
           "chainDigest": "laneswithelevators -> lanes -> with -> elevators -> route -> layout -> navigation -> gates"
@@ -4509,8 +4511,8 @@
           "focusWords": [
             "with",
             "gates",
-            "layout",
             "navigation",
+            "layout",
             "walls",
             "moving"
           ],
@@ -4676,8 +4678,8 @@
           "rowLength": 8,
           "focusWords": [
             "with",
-            "layout",
             "navigation",
+            "layout",
             "islands",
             "safe",
             "loop"
@@ -5014,8 +5016,8 @@
             "with",
             "bridges",
             "gates",
-            "layout",
             "navigation",
+            "layout",
             "chain"
           ],
           "chainDigest": "roomchainwithgates -> room -> chain -> with -> gates -> layout -> navigation -> bridges"
@@ -5166,8 +5168,8 @@
           "rowLength": 8,
           "focusWords": [
             "with",
-            "layout",
             "navigation",
+            "layout",
             "shortcuts",
             "route",
             "routes"
@@ -5182,8 +5184,8 @@
             "with",
             "bridges",
             "gates",
-            "layout",
             "navigation",
+            "layout",
             "routes"
           ],
           "chainDigest": "splitrouteswithbridges -> split -> routes -> with -> bridges -> layout -> navigation -> gates"
@@ -5335,8 +5337,8 @@
           "focusWords": [
             "with",
             "elevators",
-            "layout",
             "navigation",
+            "layout",
             "route",
             "zone"
           ],
@@ -5348,8 +5350,8 @@
           "rowLength": 8,
           "focusWords": [
             "with",
-            "layout",
             "navigation",
+            "layout",
             "walls",
             "moving",
             "zone"
@@ -5517,8 +5519,8 @@
           "focusWords": [
             "with",
             "grid",
-            "layout",
             "navigation",
+            "layout",
             "islands",
             "safe"
           ],
@@ -5670,8 +5672,8 @@
           "rowLength": 8,
           "focusWords": [
             "with",
-            "layout",
             "navigation",
+            "layout",
             "route",
             "switchbacks",
             "climb"
@@ -5684,8 +5686,8 @@
           "rowLength": 8,
           "focusWords": [
             "with",
-            "layout",
             "navigation",
+            "layout",
             "nodes",
             "relay",
             "climb"
@@ -5791,24 +5793,24 @@
         },
         {
           "category": "Arena Shape Seeds",
-          "seed": "arena",
+          "seed": "maze",
           "rowLength": 6,
           "focusWords": [
-            "zones",
-            "layout",
-            "arena",
-            "obstacles",
-            "shrink",
-            "collision"
+            "hazard",
+            "maze",
+            "shortcut",
+            "island",
+            "platform",
+            "wall"
           ],
-          "chainDigest": "arena -> collision -> shrink -> layout -> zones -> obstacles"
+          "chainDigest": "maze -> shortcut -> platform -> hazard -> island -> wall"
         }
       ]
     },
     {
       "category": "Primary Verb Seeds",
       "rowCount": 107,
-      "itemCount": 845,
+      "itemCount": 847,
       "topWords": [
         "redirect",
         "timing",
@@ -5875,60 +5877,60 @@
             "to",
             "verb",
             "defend",
-            "input",
             "choice",
-            "action",
             "carry",
-            "mastery"
+            "action",
+            "mastery",
+            "input"
           ],
           "topRankings": [
             {
               "word": "timing",
-              "score": 544.9
+              "score": 556.98
             },
             {
               "word": "redirect",
-              "score": 513.94
+              "score": 528.72
             },
             {
               "word": "repair",
-              "score": 499.44
+              "score": 500.46
             },
             {
               "word": "pressure",
-              "score": 488.92
+              "score": 491.52
             },
             {
               "word": "to",
-              "score": 421.46
+              "score": 423.02
             },
             {
               "word": "verb",
-              "score": 400.78
+              "score": 402.48
             },
             {
               "word": "defend",
-              "score": 396.58
-            },
-            {
-              "word": "input",
-              "score": 346.64
+              "score": 397.62
             },
             {
               "word": "choice",
-              "score": 339.5
-            },
-            {
-              "word": "action",
-              "score": 339.26
+              "score": 357.42
             },
             {
               "word": "carry",
-              "score": 338.06
+              "score": 339.08
+            },
+            {
+              "word": "action",
+              "score": 337.94
             },
             {
               "word": "mastery",
-              "score": 336.8
+              "score": 337.82
+            },
+            {
+              "word": "input",
+              "score": 336.06
             }
           ]
         },
@@ -5936,66 +5938,66 @@
           "pass": 2,
           "topWords": [
             "redirect",
-            "repair",
             "timing",
+            "repair",
             "pressure",
             "to",
             "verb",
             "defend",
+            "choice",
             "with",
             "sneak",
             "under",
-            "choice",
             "carry"
           ],
           "topRankings": [
             {
               "word": "redirect",
-              "score": 825.455
-            },
-            {
-              "word": "repair",
-              "score": 791.166
+              "score": 848.479
             },
             {
               "word": "timing",
-              "score": 785.08
+              "score": 811.267
+            },
+            {
+              "word": "repair",
+              "score": 794.314
             },
             {
               "word": "pressure",
-              "score": 711.482
+              "score": 716.843
             },
             {
               "word": "to",
-              "score": 587.922
+              "score": 589.818
             },
             {
               "word": "verb",
-              "score": 573.578
+              "score": 576.812
             },
             {
               "word": "defend",
-              "score": 568.161
-            },
-            {
-              "word": "with",
-              "score": 506.194
-            },
-            {
-              "word": "sneak",
-              "score": 505.248
-            },
-            {
-              "word": "under",
-              "score": 501.716
+              "score": 570.547
             },
             {
               "word": "choice",
-              "score": 489.412
+              "score": 514.094
+            },
+            {
+              "word": "with",
+              "score": 509.057
+            },
+            {
+              "word": "sneak",
+              "score": 506.467
+            },
+            {
+              "word": "under",
+              "score": 503.82
             },
             {
               "word": "carry",
-              "score": 484.266
+              "score": 486.613
             }
           ]
         },
@@ -6018,51 +6020,51 @@
           "topRankings": [
             {
               "word": "redirect",
-              "score": 1074.942
+              "score": 1105.178
             },
             {
               "word": "timing",
-              "score": 1031.84
+              "score": 1069.994
             },
             {
               "word": "repair",
-              "score": 1026.265
+              "score": 1032.45
             },
             {
               "word": "pressure",
-              "score": 897.806
+              "score": 908.091
             },
             {
               "word": "to",
-              "score": 832.913
+              "score": 837.264
             },
             {
               "word": "with",
-              "score": 764.796
+              "score": 771.202
             },
             {
               "word": "under",
-              "score": 758.908
+              "score": 763.648
             },
             {
               "word": "verb",
-              "score": 744.365
+              "score": 751.337
             },
             {
               "word": "defend",
-              "score": 742.994
+              "score": 747.745
             },
             {
               "word": "through",
-              "score": 728.716
+              "score": 733.214
             },
             {
               "word": "around",
-              "score": 727.531
+              "score": 731.954
             },
             {
               "word": "before",
-              "score": 727.531
+              "score": 731.954
             }
           ]
         }
@@ -6606,8 +6608,8 @@
           "rowLength": 8,
           "focusWords": [
             "before",
-            "escort",
             "choice",
+            "escort",
             "mastery",
             "action",
             "motion"
@@ -6620,8 +6622,8 @@
           "rowLength": 8,
           "focusWords": [
             "inside",
-            "escort",
             "choice",
+            "escort",
             "mastery",
             "motion",
             "rooms"
@@ -6636,8 +6638,8 @@
             "timing",
             "pressure",
             "under",
-            "carry",
             "choice",
+            "carry",
             "motion"
           ],
           "chainDigest": "buildunderpressure -> build -> under -> pressure -> motion -> choice -> timing -> carry"
@@ -6650,8 +6652,8 @@
             "timing",
             "pressure",
             "through",
-            "carry",
             "choice",
+            "carry",
             "build"
           ],
           "chainDigest": "buildthroughhazards -> build -> through -> hazards -> choice -> timing -> pressure -> carry"
@@ -6820,7 +6822,7 @@
             "pressure",
             "with",
             "defend",
-            "carry"
+            "choice"
           ],
           "chainDigest": "repairwithtiming -> repair -> with -> timing -> choice -> pressure -> carry -> defend"
         },
@@ -6918,7 +6920,7 @@
             "verb",
             "input",
             "mastery",
-            "action"
+            "trade"
           ],
           "chainDigest": "tradeunderpressure -> trade -> under -> pressure -> verb -> input -> action -> mastery"
         },
@@ -6930,8 +6932,8 @@
             "through",
             "input",
             "mastery",
-            "action",
             "trade",
+            "action",
             "motion"
           ],
           "chainDigest": "tradethroughhazards -> trade -> through -> hazards -> input -> action -> mastery -> motion"
@@ -6944,8 +6946,8 @@
             "around",
             "choice",
             "mastery",
-            "action",
             "trade",
+            "action",
             "motion"
           ],
           "chainDigest": "tradearoundpatrols -> trade -> around -> patrols -> action -> mastery -> motion -> choice"
@@ -7554,35 +7556,37 @@
         },
         {
           "category": "Primary Verb Seeds",
-          "seed": "input",
-          "rowLength": 4,
+          "seed": "redirect",
+          "rowLength": 6,
           "focusWords": [
-            "input",
-            "trigger",
-            "feedback",
-            "loop"
+            "redirect",
+            "timing",
+            "choice",
+            "combo",
+            "hazard",
+            "momentum"
           ],
-          "chainDigest": "input -> trigger -> feedback -> loop"
+          "chainDigest": "redirect -> hazard -> timing -> choice -> combo -> momentum"
         }
       ]
     },
     {
       "category": "Mechanic Seeds",
       "rowCount": 10,
-      "itemCount": 62,
+      "itemCount": 63,
       "topWords": [
-        "hook",
         "spin",
         "slam",
+        "hook",
         "grab",
         "dash",
-        "sprint",
         "pivot",
-        "slide",
+        "signal",
+        "sprint",
         "anchor",
         "spike",
-        "signal",
-        "blink"
+        "relay",
+        "twist"
       ],
       "sampledWords": [
         "spin",
@@ -7590,20 +7594,20 @@
         "root"
       ],
       "rankedSample": [
-        "sprint",
-        "spin",
+        "pivot",
+        "slam",
         "grab"
       ],
       "piecemealSamples": {
         "heads": [
-          "slide",
           "rewire",
-          "carry"
+          "carry",
+          "spin"
         ],
         "middles": [
           "hook",
           "pivot",
-          "sprint"
+          "avoid"
         ],
         "tails": [
           "slide",
@@ -7611,218 +7615,219 @@
           "ember"
         ],
         "focus": [
+          "track",
           "ember",
-          "flip",
-          "slide"
+          "flip"
         ]
       },
       "smoothedWords": [
         "spin",
         "stack",
         "root",
-        "sprint",
+        "pivot",
+        "slam",
         "grab",
-        "slide"
+        "rewire"
       ],
       "rankedPasses": [
         {
           "pass": 1,
           "topWords": [
-            "hook",
             "spin",
+            "hook",
             "slam",
             "grab",
             "dash",
+            "signal",
             "sprint",
-            "slide",
             "pivot",
             "relay",
-            "signal",
-            "blink",
-            "anchor"
+            "anchor",
+            "spike",
+            "blink"
           ],
           "topRankings": [
             {
-              "word": "hook",
-              "score": 73.62
+              "word": "spin",
+              "score": 66.08
             },
             {
-              "word": "spin",
-              "score": 67.18
+              "word": "hook",
+              "score": 65.06
             },
             {
               "word": "slam",
-              "score": 63.86
+              "score": 63.42
             },
             {
               "word": "grab",
-              "score": 50.0
+              "score": 49.34
             },
             {
               "word": "dash",
-              "score": 47.18
-            },
-            {
-              "word": "sprint",
-              "score": 41.26
-            },
-            {
-              "word": "slide",
-              "score": 33.48
-            },
-            {
-              "word": "pivot",
-              "score": 29.94
-            },
-            {
-              "word": "relay",
-              "score": 27.9
+              "score": 48.72
             },
             {
               "word": "signal",
-              "score": 27.74
+              "score": 33.58
             },
             {
-              "word": "blink",
-              "score": 27.3
+              "word": "sprint",
+              "score": 31.26
+            },
+            {
+              "word": "pivot",
+              "score": 30.3
+            },
+            {
+              "word": "relay",
+              "score": 28.34
             },
             {
               "word": "anchor",
-              "score": 27.0
+              "score": 27.36
+            },
+            {
+              "word": "spike",
+              "score": 26.12
+            },
+            {
+              "word": "blink",
+              "score": 25.64
             }
           ]
         },
         {
           "pass": 2,
           "topWords": [
-            "hook",
             "spin",
             "slam",
+            "hook",
             "grab",
             "dash",
-            "sprint",
-            "slide",
-            "pivot",
             "signal",
+            "pivot",
+            "sprint",
             "anchor",
             "spike",
+            "relay",
             "blink"
           ],
           "topRankings": [
             {
-              "word": "hook",
-              "score": 83.879
-            },
-            {
               "word": "spin",
-              "score": 77.891
+              "score": 76.067
             },
             {
               "word": "slam",
-              "score": 75.325
+              "score": 74.436
+            },
+            {
+              "word": "hook",
+              "score": 73.803
             },
             {
               "word": "grab",
-              "score": 56.65
+              "score": 55.491
             },
             {
               "word": "dash",
-              "score": 51.651
-            },
-            {
-              "word": "sprint",
-              "score": 44.735
-            },
-            {
-              "word": "slide",
-              "score": 36.376
-            },
-            {
-              "word": "pivot",
-              "score": 35.399
+              "score": 52.551
             },
             {
               "word": "signal",
-              "score": 30.298
+              "score": 36.352
+            },
+            {
+              "word": "pivot",
+              "score": 35.355
+            },
+            {
+              "word": "sprint",
+              "score": 32.398
             },
             {
               "word": "anchor",
-              "score": 30.242
+              "score": 30.409
             },
             {
               "word": "spike",
-              "score": 29.739
+              "score": 29.581
+            },
+            {
+              "word": "relay",
+              "score": 29.222
             },
             {
               "word": "blink",
-              "score": 29.13
+              "score": 26.81
             }
           ]
         },
         {
           "pass": 3,
           "topWords": [
-            "hook",
             "spin",
             "slam",
+            "hook",
             "grab",
             "dash",
-            "sprint",
             "pivot",
-            "slide",
+            "signal",
+            "sprint",
             "anchor",
             "spike",
-            "signal",
-            "blink"
+            "relay",
+            "twist"
           ],
           "topRankings": [
             {
-              "word": "hook",
-              "score": 88.653
-            },
-            {
               "word": "spin",
-              "score": 83.205
+              "score": 80.916
             },
             {
               "word": "slam",
-              "score": 80.245
+              "score": 78.969
+            },
+            {
+              "word": "hook",
+              "score": 77.947
             },
             {
               "word": "grab",
-              "score": 59.608
+              "score": 58.165
             },
             {
               "word": "dash",
-              "score": 53.321
-            },
-            {
-              "word": "sprint",
-              "score": 46.239
+              "score": 53.689
             },
             {
               "word": "pivot",
-              "score": 38.114
-            },
-            {
-              "word": "slide",
-              "score": 37.488
-            },
-            {
-              "word": "anchor",
-              "score": 31.944
-            },
-            {
-              "word": "spike",
-              "score": 31.569
+              "score": 37.9
             },
             {
               "word": "signal",
-              "score": 31.36
+              "score": 37.401
             },
             {
-              "word": "blink",
-              "score": 29.778
+              "word": "sprint",
+              "score": 32.951
+            },
+            {
+              "word": "anchor",
+              "score": 32.017
+            },
+            {
+              "word": "spike",
+              "score": 31.319
+            },
+            {
+              "word": "relay",
+              "score": 29.48
+            },
+            {
+              "word": "twist",
+              "score": 27.525
             }
           ]
         }
@@ -7835,10 +7840,10 @@
           "focusWords": [
             "dash",
             "sprint",
-            "slide",
             "blink",
             "crash",
-            "vault"
+            "vault",
+            "slide"
           ],
           "chainDigest": "dash -> sprint -> blink -> slide -> vault -> crash -> flame -> ember"
         },
@@ -7848,11 +7853,11 @@
           "rowLength": 8,
           "focusWords": [
             "dash",
+            "signal",
             "sprint",
             "anchor",
-            "signal",
-            "blink",
-            "relay"
+            "relay",
+            "blink"
           ],
           "chainDigest": "rewire -> relay -> signal -> wire -> anchor -> dash -> sprint -> blink"
         },
@@ -7862,8 +7867,8 @@
           "rowLength": 8,
           "focusWords": [
             "dash",
-            "sprint",
             "pivot",
+            "sprint",
             "blink",
             "carry",
             "haul"
@@ -7875,9 +7880,9 @@
           "seed": "slam",
           "rowLength": 5,
           "focusWords": [
-            "hook",
             "spin",
             "slam",
+            "hook",
             "grab",
             "twist"
           ],
@@ -7901,9 +7906,9 @@
           "seed": "spin",
           "rowLength": 5,
           "focusWords": [
-            "hook",
             "spin",
             "slam",
+            "hook",
             "grab",
             "pivot"
           ],
@@ -7914,9 +7919,9 @@
           "seed": "spin",
           "rowLength": 6,
           "focusWords": [
-            "hook",
             "spin",
             "slam",
+            "hook",
             "grab",
             "spike",
             "twist"
@@ -7930,8 +7935,8 @@
           "focusWords": [
             "hook",
             "grab",
-            "spike",
             "signal",
+            "spike",
             "relay",
             "twist"
           ],
@@ -7942,9 +7947,9 @@
           "seed": "hook",
           "rowLength": 7,
           "focusWords": [
-            "hook",
             "spin",
             "slam",
+            "hook",
             "grab",
             "slide",
             "flip"
@@ -7953,22 +7958,23 @@
         },
         {
           "category": "Mechanic Seeds",
-          "seed": "slide",
-          "rowLength": 4,
+          "seed": "dash",
+          "rowLength": 5,
           "focusWords": [
-            "hook",
             "dash",
-            "sprint",
-            "slide"
+            "signal",
+            "patrol",
+            "track",
+            "avoid"
           ],
-          "chainDigest": "slide -> dash -> sprint -> hook"
+          "chainDigest": "dash -> patrol -> avoid -> track -> signal"
         }
       ]
     },
     {
       "category": "Scoring Model Seeds",
       "rowCount": 107,
-      "itemCount": 838,
+      "itemCount": 836,
       "topWords": [
         "route",
         "bonus",
@@ -7976,8 +7982,8 @@
         "timer",
         "value",
         "ladder",
-        "multiplier",
         "risk",
+        "multiplier",
         "perfect",
         "resource",
         "speed",
@@ -8001,7 +8007,7 @@
         ],
         "middles": [
           "deliveryvaluestylebonus",
-          "lag",
+          "verb",
           "bonus"
         ],
         "tails": [
@@ -8037,26 +8043,26 @@
             "ladder",
             "reward",
             "combo",
-            "multiplier",
+            "feedback",
             "perfect",
-            "rank"
+            "multiplier"
           ],
           "topRankings": [
             {
               "word": "bonus",
-              "score": 977.76
+              "score": 980.22
             },
             {
               "word": "route",
-              "score": 849.8
+              "score": 849.56
             },
             {
               "word": "style",
-              "score": 697.44
+              "score": 697.2
             },
             {
               "word": "timer",
-              "score": 628.48
+              "score": 628.24
             },
             {
               "word": "value",
@@ -8064,31 +8070,31 @@
             },
             {
               "word": "risk",
-              "score": 555.22
+              "score": 555.06
             },
             {
               "word": "ladder",
-              "score": 547.8
+              "score": 546.6
             },
             {
               "word": "reward",
-              "score": 531.86
+              "score": 529.26
             },
             {
               "word": "combo",
-              "score": 518.52
+              "score": 517.34
             },
             {
-              "word": "multiplier",
-              "score": 427.04
+              "word": "feedback",
+              "score": 415.88
             },
             {
               "word": "perfect",
-              "score": 410.58
+              "score": 410.34
             },
             {
-              "word": "rank",
-              "score": 385.32
+              "word": "multiplier",
+              "score": 403.16
             }
           ]
         },
@@ -8102,60 +8108,60 @@
             "value",
             "ladder",
             "risk",
-            "multiplier",
             "combo",
             "reward",
+            "multiplier",
             "perfect",
-            "resource"
+            "feedback"
           ],
           "topRankings": [
             {
               "word": "bonus",
-              "score": 1540.391
+              "score": 1558.884
             },
             {
               "word": "route",
-              "score": 1531.026
+              "score": 1528.13
             },
             {
               "word": "style",
-              "score": 1215.526
+              "score": 1212.664
             },
             {
               "word": "timer",
-              "score": 1105.858
+              "score": 1110.768
             },
             {
               "word": "value",
-              "score": 1030.749
+              "score": 1030.452
             },
             {
               "word": "ladder",
-              "score": 895.281
+              "score": 896.282
             },
             {
               "word": "risk",
-              "score": 873.066
-            },
-            {
-              "word": "multiplier",
-              "score": 794.722
+              "score": 871.022
             },
             {
               "word": "combo",
-              "score": 777.5
+              "score": 774.474
             },
             {
               "word": "reward",
-              "score": 761.338
+              "score": 756.597
+            },
+            {
+              "word": "multiplier",
+              "score": 752.991
             },
             {
               "word": "perfect",
-              "score": 712.937
+              "score": 709.917
             },
             {
-              "word": "resource",
-              "score": 660.536
+              "word": "feedback",
+              "score": 663.847
             }
           ]
         },
@@ -8168,8 +8174,8 @@
             "timer",
             "value",
             "ladder",
-            "multiplier",
             "risk",
+            "multiplier",
             "perfect",
             "resource",
             "speed",
@@ -8178,51 +8184,51 @@
           "topRankings": [
             {
               "word": "route",
-              "score": 2440.039
+              "score": 2436.368
             },
             {
               "word": "bonus",
-              "score": 2229.112
+              "score": 2265.018
             },
             {
               "word": "style",
-              "score": 1911.458
+              "score": 1909.212
             },
             {
               "word": "timer",
-              "score": 1728.873
+              "score": 1738.33
             },
             {
               "word": "value",
-              "score": 1576.228
+              "score": 1575.212
             },
             {
               "word": "ladder",
-              "score": 1329.991
-            },
-            {
-              "word": "multiplier",
-              "score": 1261.946
+              "score": 1331.114
             },
             {
               "word": "risk",
-              "score": 1259.569
+              "score": 1257.818
+            },
+            {
+              "word": "multiplier",
+              "score": 1202.828
             },
             {
               "word": "perfect",
-              "score": 1127.341
+              "score": 1122.008
             },
             {
               "word": "resource",
-              "score": 1108.594
+              "score": 1104.409
             },
             {
               "word": "speed",
-              "score": 1108.594
+              "score": 1104.409
             },
             {
               "word": "combo",
-              "score": 1080.757
+              "score": 1077.299
             }
           ]
         }
@@ -8294,7 +8300,7 @@
             "combo",
             "near",
             "attack",
-            "time"
+            "miss"
           ],
           "chainDigest": "timeattacknearmissbonus -> time -> attack -> near -> miss -> bonus -> combo -> timer"
         },
@@ -8308,7 +8314,7 @@
             "timer",
             "no",
             "attack",
-            "time"
+            "hit"
           ],
           "chainDigest": "timeattacknohitbonus -> time -> attack -> no -> hit -> bonus -> timer -> style"
         },
@@ -8796,8 +8802,8 @@
             "bonus",
             "timer",
             "ladder",
-            "multiplier",
             "risk",
+            "multiplier",
             "combo"
           ],
           "chainDigest": "riskmultiplierbronzeladder -> risk -> multiplier -> bronze -> ladder -> combo -> timer -> bonus"
@@ -8811,8 +8817,8 @@
             "style",
             "timer",
             "ladder",
-            "multiplier",
-            "risk"
+            "risk",
+            "multiplier"
           ],
           "chainDigest": "riskmultipliersilverladder -> risk -> multiplier -> silver -> ladder -> timer -> bonus -> style"
         },
@@ -8825,8 +8831,8 @@
             "bonus",
             "style",
             "ladder",
-            "multiplier",
-            "risk"
+            "risk",
+            "multiplier"
           ],
           "chainDigest": "riskmultipliergoldladder -> risk -> multiplier -> gold -> ladder -> bonus -> style -> route"
         },
@@ -8838,8 +8844,8 @@
             "route",
             "style",
             "value",
-            "multiplier",
             "risk",
+            "multiplier",
             "perfect"
           ],
           "chainDigest": "riskmultiplierperfectclear -> risk -> multiplier -> perfect -> clear -> style -> route -> value"
@@ -8852,8 +8858,8 @@
             "route",
             "bonus",
             "value",
-            "multiplier",
             "risk",
+            "multiplier",
             "near"
           ],
           "chainDigest": "riskmultipliernearmissbonus -> risk -> multiplier -> near -> miss -> bonus -> route -> value"
@@ -8865,8 +8871,8 @@
           "focusWords": [
             "bonus",
             "value",
-            "multiplier",
             "risk",
+            "multiplier",
             "reward",
             "no"
           ],
@@ -8880,8 +8886,8 @@
             "route",
             "bonus",
             "value",
-            "multiplier",
             "risk",
+            "multiplier",
             "reward"
           ],
           "chainDigest": "riskmultiplierroutebonus -> risk -> multiplier -> route -> bonus -> value -> reward -> score"
@@ -8892,8 +8898,8 @@
           "rowLength": 8,
           "focusWords": [
             "bonus",
-            "multiplier",
             "risk",
+            "multiplier",
             "speed",
             "reward",
             "rank"
@@ -8906,8 +8912,8 @@
           "rowLength": 8,
           "focusWords": [
             "bonus",
-            "multiplier",
             "risk",
+            "multiplier",
             "resource",
             "reward",
             "rank"
@@ -8921,8 +8927,8 @@
           "focusWords": [
             "bonus",
             "style",
-            "multiplier",
             "risk",
+            "multiplier",
             "reward",
             "feedback"
           ],
@@ -9049,8 +9055,8 @@
             "value",
             "resource",
             "reward",
-            "score",
-            "count"
+            "count",
+            "score"
           ],
           "chainDigest": "rescuecountresourcebonus -> rescue -> count -> resource -> bonus -> value -> reward -> score"
         },
@@ -9063,8 +9069,8 @@
             "style",
             "reward",
             "rank",
-            "score",
-            "count"
+            "count",
+            "score"
           ],
           "chainDigest": "rescuecountstylebonus -> rescue -> count -> style -> bonus -> reward -> score -> rank"
         },
@@ -9566,8 +9572,8 @@
             "bonus",
             "reward",
             "no",
-            "score",
             "rating",
+            "score",
             "hit"
           ],
           "chainDigest": "stealthratingnohitbonus -> stealth -> rating -> no -> hit -> bonus -> reward -> score"
@@ -9581,8 +9587,8 @@
             "bonus",
             "reward",
             "rank",
-            "score",
-            "rating"
+            "rating",
+            "score"
           ],
           "chainDigest": "stealthratingroutebonus -> stealth -> rating -> route -> bonus -> score -> reward -> rank"
         },
@@ -9698,25 +9704,23 @@
             "route",
             "timer",
             "combo",
-            "time",
             "survival",
+            "time",
             "pressure"
           ],
           "chainDigest": "time -> combo -> survival -> anchor -> verb -> pressure -> route -> timer"
         },
         {
           "category": "Scoring Model Seeds",
-          "seed": "score",
-          "rowLength": 6,
+          "seed": "highscorevelocitytarget",
+          "rowLength": 4,
           "focusWords": [
             "bonus",
             "multiplier",
             "feedback",
-            "score",
-            "time",
-            "lag"
+            "highscorevelocitytarget"
           ],
-          "chainDigest": "score -> multiplier -> feedback -> lag -> time -> bonus"
+          "chainDigest": "highscorevelocitytarget -> multiplier -> feedback -> bonus"
         }
       ]
     },
@@ -9732,10 +9736,10 @@
         "caught",
         "expired",
         "after",
-        "by",
         "during",
-        "warning",
+        "by",
         "reset",
+        "warning",
         "near"
       ],
       "sampledWords": [
@@ -9791,26 +9795,26 @@
             "warning",
             "reset",
             "after",
-            "by",
             "during",
+            "by",
             "alarm"
           ],
           "topRankings": [
             {
               "word": "depleted",
-              "score": 645.92
+              "score": 638.8
             },
             {
               "word": "broken",
-              "score": 609.88
+              "score": 609.48
             },
             {
               "word": "collapsed",
-              "score": 515.12
+              "score": 514.46
             },
             {
               "word": "crushed",
-              "score": 512.52
+              "score": 512.12
             },
             {
               "word": "expired",
@@ -9818,27 +9822,27 @@
             },
             {
               "word": "caught",
-              "score": 505.94
+              "score": 505.78
             },
             {
               "word": "warning",
-              "score": 493.78
+              "score": 493.56
             },
             {
               "word": "reset",
-              "score": 475.88
+              "score": 483.36
             },
             {
               "word": "after",
-              "score": 470.06
-            },
-            {
-              "word": "by",
-              "score": 456.14
+              "score": 467.72
             },
             {
               "word": "during",
-              "score": 456.14
+              "score": 454.4
+            },
+            {
+              "word": "by",
+              "score": 453.8
             },
             {
               "word": "alarm",
@@ -9856,60 +9860,60 @@
             "caught",
             "expired",
             "warning",
-            "after",
             "reset",
-            "by",
+            "after",
             "during",
+            "by",
             "alarm"
           ],
           "topRankings": [
             {
               "word": "depleted",
-              "score": 1098.563
+              "score": 1088.887
             },
             {
               "word": "broken",
-              "score": 1021.566
+              "score": 1022.581
             },
             {
               "word": "collapsed",
-              "score": 882.515
+              "score": 881.106
             },
             {
               "word": "crushed",
-              "score": 877.242
+              "score": 876.248
             },
             {
               "word": "caught",
-              "score": 859.218
+              "score": 857.045
             },
             {
               "word": "expired",
-              "score": 842.43
+              "score": 841.134
             },
             {
               "word": "warning",
-              "score": 755.658
-            },
-            {
-              "word": "after",
-              "score": 740.76
+              "score": 757.228
             },
             {
               "word": "reset",
-              "score": 738.459
+              "score": 756.789
             },
             {
-              "word": "by",
-              "score": 731.811
+              "word": "after",
+              "score": 736.802
             },
             {
               "word": "during",
-              "score": 729.414
+              "score": 728.198
+            },
+            {
+              "word": "by",
+              "score": 727.781
             },
             {
               "word": "alarm",
-              "score": 657.164
+              "score": 656.685
             }
           ]
         },
@@ -9923,60 +9927,60 @@
             "caught",
             "expired",
             "after",
-            "by",
             "during",
-            "warning",
+            "by",
             "reset",
+            "warning",
             "near"
           ],
           "topRankings": [
             {
               "word": "depleted",
-              "score": 1616.762
+              "score": 1605.839
             },
             {
               "word": "broken",
-              "score": 1485.868
+              "score": 1488.568
             },
             {
               "word": "collapsed",
-              "score": 1277.858
+              "score": 1276.664
             },
             {
               "word": "crushed",
-              "score": 1269.474
+              "score": 1268.914
             },
             {
               "word": "caught",
-              "score": 1238.4
+              "score": 1234.692
             },
             {
               "word": "expired",
-              "score": 1201.113
+              "score": 1199.451
             },
             {
               "word": "after",
-              "score": 1114.995
-            },
-            {
-              "word": "by",
-              "score": 1107.266
+              "score": 1108.812
             },
             {
               "word": "during",
-              "score": 1103.168
+              "score": 1101.819
             },
             {
-              "word": "warning",
-              "score": 1060.44
+              "word": "by",
+              "score": 1100.773
             },
             {
               "word": "reset",
-              "score": 1040.754
+              "score": 1072.658
+            },
+            {
+              "word": "warning",
+              "score": 1064.916
             },
             {
               "word": "near",
-              "score": 980.086
+              "score": 973.765
             }
           ]
         }
@@ -9989,8 +9993,8 @@
           "focusWords": [
             "caught",
             "by",
-            "warning",
             "reset",
+            "warning",
             "failure",
             "patrols"
           ],
@@ -10004,8 +10008,8 @@
             "crushed",
             "caught",
             "by",
-            "warning",
             "reset",
+            "warning",
             "risk"
           ],
           "chainDigest": "caughtbyhazards -> caught -> by -> hazards -> risk -> warning -> reset -> crushed"
@@ -10019,8 +10023,8 @@
             "crushed",
             "caught",
             "during",
-            "warning",
-            "reset"
+            "reset",
+            "warning"
           ],
           "chainDigest": "caughtduringfinale -> caught -> during -> finale -> warning -> reset -> crushed -> depleted"
         },
@@ -10157,8 +10161,8 @@
           "focusWords": [
             "crushed",
             "during",
-            "warning",
             "reset",
+            "warning",
             "failure",
             "risk"
           ],
@@ -10170,8 +10174,8 @@
           "rowLength": 8,
           "focusWords": [
             "crushed",
-            "warning",
             "reset",
+            "warning",
             "at",
             "risk",
             "stamina"
@@ -10188,7 +10192,7 @@
             "crushed",
             "caught",
             "after",
-            "warning"
+            "reset"
           ],
           "chainDigest": "crushedafterwarning -> crushed -> after -> warning -> reset -> caught -> depleted -> collapsed"
         },
@@ -10325,8 +10329,8 @@
           "focusWords": [
             "expired",
             "after",
-            "warning",
             "reset",
+            "warning",
             "failure",
             "risk"
           ],
@@ -10353,8 +10357,8 @@
           "focusWords": [
             "caught",
             "expired",
-            "warning",
             "reset",
+            "warning",
             "while",
             "carrying"
           ],
@@ -10506,8 +10510,8 @@
           "rowLength": 8,
           "focusWords": [
             "depleted",
-            "warning",
             "reset",
+            "warning",
             "near",
             "exit",
             "risk"
@@ -10522,8 +10526,8 @@
             "depleted",
             "caught",
             "during",
-            "warning",
             "reset",
+            "warning",
             "overload"
           ],
           "chainDigest": "resourcedepletedduringoverload -> resource -> depleted -> during -> overload -> warning -> reset -> caught"
@@ -10647,8 +10651,8 @@
           "focusWords": [
             "near",
             "failure",
-            "exit",
             "loss",
+            "exit",
             "risk",
             "lost"
           ],
@@ -10662,8 +10666,8 @@
             "during",
             "warning",
             "failure",
-            "risk",
             "overload",
+            "risk",
             "lost"
           ],
           "chainDigest": "companionlostduringoverload -> companion -> lost -> during -> overload -> failure -> risk -> warning"
@@ -10689,8 +10693,8 @@
           "focusWords": [
             "caught",
             "by",
-            "warning",
             "reset",
+            "warning",
             "alarm",
             "patrols"
           ],
@@ -10789,8 +10793,8 @@
             "near",
             "alarm",
             "failure",
-            "exit",
-            "loss"
+            "loss",
+            "exit"
           ],
           "chainDigest": "alarmfillednearexit -> alarm -> filled -> near -> exit -> expired -> loss -> failure"
         },
@@ -10803,8 +10807,8 @@
             "alarm",
             "failure",
             "loss",
-            "risk",
-            "overload"
+            "overload",
+            "risk"
           ],
           "chainDigest": "alarmfilledduringoverload -> alarm -> filled -> during -> overload -> loss -> failure -> risk"
         },
@@ -10843,8 +10847,8 @@
           "focusWords": [
             "collapsed",
             "by",
-            "warning",
             "reset",
+            "warning",
             "risk",
             "hazards"
           ],
@@ -10858,8 +10862,8 @@
             "collapsed",
             "caught",
             "during",
-            "warning",
             "reset",
+            "warning",
             "finale"
           ],
           "chainDigest": "routecollapsedduringfinale -> route -> collapsed -> during -> finale -> warning -> reset -> caught"
@@ -11027,8 +11031,8 @@
             "crushed",
             "caught",
             "after",
-            "warning",
-            "reset"
+            "reset",
+            "warning"
           ],
           "chainDigest": "signalbrokenafterwarning -> signal -> broken -> after -> warning -> reset -> caught -> crushed"
         },
@@ -11164,8 +11168,8 @@
           "rowLength": 8,
           "focusWords": [
             "after",
-            "warning",
             "reset",
+            "warning",
             "failure",
             "risk",
             "overheated"
@@ -11192,8 +11196,8 @@
           "rowLength": 8,
           "focusWords": [
             "caught",
-            "warning",
             "reset",
+            "warning",
             "while",
             "carrying",
             "overheated"
@@ -11294,7 +11298,7 @@
             "alarm",
             "shattered",
             "stamina",
-            "cargo"
+            "low"
           ],
           "chainDigest": "cargoshatteredatlowstamina -> cargo -> shattered -> at -> low -> stamina -> expired -> alarm"
         },
@@ -11322,7 +11326,7 @@
             "loss",
             "shattered",
             "zone",
-            "cargo"
+            "red"
           ],
           "chainDigest": "cargoshatteredinsideredzone -> cargo -> shattered -> inside -> red -> zone -> loss -> failure"
         },
@@ -11345,8 +11349,8 @@
           "seed": "cargoshatterednearexit",
           "rowLength": 8,
           "focusWords": [
-            "warning",
             "reset",
+            "warning",
             "near",
             "exit",
             "risk",
@@ -11361,8 +11365,8 @@
           "focusWords": [
             "caught",
             "during",
-            "warning",
             "reset",
+            "warning",
             "overload",
             "shattered"
           ],
@@ -11378,7 +11382,7 @@
             "reset",
             "shattered",
             "strike",
-            "cargo"
+            "third"
           ],
           "chainDigest": "cargoshatteredafterthirdstrike -> cargo -> shattered -> after -> third -> strike -> reset -> caught"
         },
@@ -11432,8 +11436,8 @@
             "depleted",
             "broken",
             "collapsed",
-            "warning",
             "reset",
+            "warning",
             "failure"
           ],
           "chainDigest": "failure -> risk -> warning -> reset -> collapsed -> broken -> depleted"
@@ -11443,8 +11447,8 @@
           "seed": "risk",
           "rowLength": 6,
           "focusWords": [
-            "warning",
             "reset",
+            "warning",
             "failure",
             "risk",
             "crash",
@@ -11468,17 +11472,17 @@
         },
         {
           "category": "Failure Mode Seeds",
-          "seed": "shattered",
+          "seed": "crashed",
           "rowLength": 6,
           "focusWords": [
-            "depleted",
             "reset",
-            "failure",
-            "shattered",
-            "cargo",
-            "caughtafterwarning"
+            "overload",
+            "failed",
+            "gameover",
+            "crashed",
+            "restart"
           ],
-          "chainDigest": "shattered -> cargo -> failure -> reset -> depleted -> caughtafterwarning"
+          "chainDigest": "crashed -> failed -> reset -> overload -> gameover -> restart"
         }
       ]
     },
@@ -11489,15 +11493,15 @@
       "topWords": [
         "sentry",
         "swarm",
-        "storm",
         "pulse",
         "guard",
-        "beacon",
         "stalker",
-        "trap",
+        "storm",
+        "drone",
         "warden",
-        "flare",
+        "glitch",
         "fort",
+        "flare",
         "watch"
       ],
       "sampledWords": [
@@ -11506,14 +11510,14 @@
         "pulse"
       ],
       "rankedSample": [
-        "pulse",
         "guard",
+        "stalker",
         "sentry"
       ],
       "piecemealSamples": {
         "heads": [
-          "marker",
           "storm",
+          "barricade",
           "drone"
         ],
         "middles": [
@@ -11537,24 +11541,25 @@
         "commander",
         "pulse",
         "guard",
+        "stalker",
         "sentry",
-        "marker"
+        "storm"
       ],
       "rankedPasses": [
         {
           "pass": 1,
           "topWords": [
             "sentry",
-            "storm",
             "swarm",
-            "pulse",
             "guard",
-            "beacon",
+            "pulse",
+            "storm",
             "stalker",
+            "drone",
             "warden",
-            "trap",
             "fort",
             "flare",
+            "glitch",
             "watch"
           ],
           "topRankings": [
@@ -11563,36 +11568,32 @@
               "score": 49.92
             },
             {
-              "word": "storm",
-              "score": 43.64
-            },
-            {
               "word": "swarm",
-              "score": 41.84
-            },
-            {
-              "word": "pulse",
-              "score": 36.36
+              "score": 40.94
             },
             {
               "word": "guard",
               "score": 31.62
             },
             {
-              "word": "beacon",
-              "score": 28.86
+              "word": "pulse",
+              "score": 30.46
+            },
+            {
+              "word": "storm",
+              "score": 29.04
             },
             {
               "word": "stalker",
               "score": 27.96
             },
             {
-              "word": "warden",
-              "score": 25.88
+              "word": "drone",
+              "score": 26.92
             },
             {
-              "word": "trap",
-              "score": 24.96
+              "word": "warden",
+              "score": 25.88
             },
             {
               "word": "fort",
@@ -11600,7 +11601,11 @@
             },
             {
               "word": "flare",
-              "score": 22.86
+              "score": 22.26
+            },
+            {
+              "word": "glitch",
+              "score": 21.72
             },
             {
               "word": "watch",
@@ -11612,15 +11617,15 @@
           "pass": 2,
           "topWords": [
             "sentry",
-            "storm",
             "swarm",
             "pulse",
             "guard",
-            "beacon",
             "stalker",
-            "trap",
+            "storm",
+            "drone",
             "warden",
             "fort",
+            "glitch",
             "flare",
             "watch"
           ],
@@ -11630,32 +11635,28 @@
               "score": 52.126
             },
             {
-              "word": "storm",
-              "score": 45.845
-            },
-            {
               "word": "swarm",
-              "score": 45.188
+              "score": 44.121
             },
             {
               "word": "pulse",
-              "score": 41.251
+              "score": 34.251
             },
             {
               "word": "guard",
               "score": 32.561
             },
             {
-              "word": "beacon",
-              "score": 30.94
-            },
-            {
               "word": "stalker",
-              "score": 30.889
+              "score": 30.709
             },
             {
-              "word": "trap",
-              "score": 27.782
+              "word": "storm",
+              "score": 30.339
+            },
+            {
+              "word": "drone",
+              "score": 28.886
             },
             {
               "word": "warden",
@@ -11666,8 +11667,12 @@
               "score": 24.112
             },
             {
+              "word": "glitch",
+              "score": 24.012
+            },
+            {
               "word": "flare",
-              "score": 24.087
+              "score": 23.182
             },
             {
               "word": "watch",
@@ -11680,61 +11685,61 @@
           "topWords": [
             "sentry",
             "swarm",
-            "storm",
             "pulse",
             "guard",
-            "beacon",
             "stalker",
-            "trap",
+            "storm",
+            "drone",
             "warden",
-            "flare",
+            "glitch",
             "fort",
+            "flare",
             "watch"
           ],
           "topRankings": [
             {
               "word": "sentry",
-              "score": 52.448
+              "score": 52.432
             },
             {
               "word": "swarm",
-              "score": 46.707
-            },
-            {
-              "word": "storm",
-              "score": 46.338
+              "score": 45.507
             },
             {
               "word": "pulse",
-              "score": 42.726
+              "score": 35.292
             },
             {
               "word": "guard",
               "score": 32.926
             },
             {
-              "word": "beacon",
-              "score": 31.81
-            },
-            {
               "word": "stalker",
-              "score": 31.651
+              "score": 31.437
             },
             {
-              "word": "trap",
-              "score": 29.011
+              "word": "storm",
+              "score": 30.637
+            },
+            {
+              "word": "drone",
+              "score": 29.398
             },
             {
               "word": "warden",
               "score": 27.336
             },
             {
-              "word": "flare",
-              "score": 24.473
+              "word": "glitch",
+              "score": 25.085
             },
             {
               "word": "fort",
               "score": 24.408
+            },
+            {
+              "word": "flare",
+              "score": 23.408
             },
             {
               "word": "watch",
@@ -11767,8 +11772,8 @@
             "swarm",
             "guard",
             "stalker",
-            "warden",
-            "drone"
+            "drone",
+            "warden"
           ],
           "chainDigest": "drone -> swarm -> stalker -> scout -> night -> sentry -> guard -> warden"
         },
@@ -11779,10 +11784,10 @@
           "focusWords": [
             "sentry",
             "guard",
-            "beacon",
             "warden",
             "marker",
-            "totem"
+            "totem",
+            "signal"
           ],
           "chainDigest": "marker -> totem -> beacon -> flag -> signal -> sentry -> guard -> warden"
         },
@@ -11832,8 +11837,8 @@
           "rowLength": 6,
           "focusWords": [
             "pulse",
-            "trap",
             "flare",
+            "trap",
             "breach",
             "void",
             "raid"
@@ -11846,8 +11851,8 @@
           "rowLength": 6,
           "focusWords": [
             "swarm",
-            "storm",
             "pulse",
+            "storm",
             "glitch",
             "shard",
             "tide"
@@ -11870,24 +11875,24 @@
         },
         {
           "category": "Enemy Seeds",
-          "seed": "storm",
+          "seed": "barricade",
           "rowLength": 6,
           "focusWords": [
-            "storm",
             "pulse",
-            "beacon",
-            "trap",
+            "drone",
             "glitch",
-            "trigger"
+            "barricade",
+            "turret",
+            "spike"
           ],
-          "chainDigest": "storm -> beacon -> pulse -> trap -> trigger -> glitch"
+          "chainDigest": "barricade -> spike -> turret -> drone -> glitch -> pulse"
         }
       ]
     },
     {
       "category": "Enemy Behavior Seeds",
       "rowCount": 107,
-      "itemCount": 840,
+      "itemCount": 839,
       "topWords": [
         "pattern",
         "ambush",
@@ -11905,7 +11910,7 @@
       "sampledWords": [
         "patrollighttriggered",
         "stealitemsslowpattern",
-        "looping"
+        "summonhazardsphaseshifted"
       ],
       "rankedSample": [
         "mirror",
@@ -11924,7 +11929,7 @@
           "patrol"
         ],
         "tails": [
-          "reacting",
+          "timer",
           "tactics",
           "corrupt"
         ],
@@ -11937,7 +11942,7 @@
       "smoothedWords": [
         "patrollighttriggered",
         "stealitemsslowpattern",
-        "looping",
+        "summonhazardsphaseshifted",
         "mirror",
         "ambush",
         "pattern",
@@ -11963,7 +11968,7 @@
           "topRankings": [
             {
               "word": "pattern",
-              "score": 1009.28
+              "score": 1009.8
             },
             {
               "word": "ambush",
@@ -11971,7 +11976,7 @@
             },
             {
               "word": "swarm",
-              "score": 623.94
+              "score": 624.46
             },
             {
               "word": "patrol",
@@ -11979,15 +11984,15 @@
             },
             {
               "word": "triggered",
-              "score": 572.14
+              "score": 572.66
             },
             {
               "word": "mirror",
-              "score": 553.76
+              "score": 554.28
             },
             {
               "word": "corrupt",
-              "score": 486.96
+              "score": 487.74
             },
             {
               "word": "telegraph",
@@ -11995,11 +12000,11 @@
             },
             {
               "word": "block",
-              "score": 479.96
+              "score": 480.74
             },
             {
               "word": "zone",
-              "score": 434.4
+              "score": 457.18
             },
             {
               "word": "slow",
@@ -12030,51 +12035,51 @@
           "topRankings": [
             {
               "word": "pattern",
-              "score": 1572.114
+              "score": 1574.207
             },
             {
               "word": "ambush",
-              "score": 1122.465
+              "score": 1122.798
             },
             {
               "word": "swarm",
-              "score": 1052.009
+              "score": 1054.06
             },
             {
               "word": "patrol",
-              "score": 972.59
+              "score": 972.818
             },
             {
               "word": "triggered",
-              "score": 896.059
+              "score": 898.225
             },
             {
               "word": "mirror",
-              "score": 828.526
+              "score": 830.535
             },
             {
               "word": "slow",
-              "score": 703.042
+              "score": 703.208
             },
             {
               "word": "corrupt",
-              "score": 697.935
+              "score": 700.887
             },
             {
               "word": "telegraph",
-              "score": 695.896
+              "score": 696.062
             },
             {
               "word": "block",
-              "score": 684.272
+              "score": 687.193
             },
             {
               "word": "zone",
-              "score": 640.871
+              "score": 671.698
             },
             {
               "word": "sound",
-              "score": 602.462
+              "score": 605.3
             }
           ]
         },
@@ -12097,51 +12102,51 @@
           "topRankings": [
             {
               "word": "pattern",
-              "score": 2121.965
+              "score": 2125.778
             },
             {
               "word": "ambush",
-              "score": 1634.702
+              "score": 1636.155
             },
             {
               "word": "swarm",
-              "score": 1522.015
+              "score": 1525.579
             },
             {
               "word": "patrol",
-              "score": 1391.41
+              "score": 1392.435
             },
             {
               "word": "triggered",
-              "score": 1253.367
+              "score": 1257.267
             },
             {
               "word": "mirror",
-              "score": 1159.487
+              "score": 1162.862
             },
             {
               "word": "slow",
-              "score": 1147.257
+              "score": 1148.085
             },
             {
               "word": "sound",
-              "score": 984.867
+              "score": 989.156
             },
             {
               "word": "telegraph",
-              "score": 952.386
+              "score": 953.149
             },
             {
               "word": "alternating",
-              "score": 947.62
+              "score": 948.197
             },
             {
               "word": "fast",
-              "score": 947.62
+              "score": 948.197
             },
             {
               "word": "grid",
-              "score": 947.62
+              "score": 948.197
             }
           ]
         }
@@ -12241,7 +12246,7 @@
             "triggered",
             "mirror",
             "sound",
-            "block"
+            "zone"
           ],
           "chainDigest": "patrolsoundtriggered -> patrol -> sound -> triggered -> swarm -> mirror -> zone -> block"
         },
@@ -12254,8 +12259,8 @@
             "triggered",
             "mirror",
             "corrupt",
-            "block",
-            "light"
+            "zone",
+            "block"
           ],
           "chainDigest": "patrollighttriggered -> patrol -> light -> triggered -> mirror -> zone -> block -> corrupt"
         },
@@ -12267,9 +12272,9 @@
             "patrol",
             "triggered",
             "corrupt",
+            "zone",
             "block",
-            "combo",
-            "zone"
+            "combo"
           ],
           "chainDigest": "patrolcombotriggered -> patrol -> combo -> triggered -> zone -> block -> corrupt -> surround"
         },
@@ -12394,8 +12399,8 @@
             "swarm",
             "triggered",
             "mirror",
-            "block",
-            "light"
+            "zone",
+            "block"
           ],
           "chainDigest": "ambushlighttriggered -> ambush -> light -> triggered -> swarm -> mirror -> zone -> block"
         },
@@ -12408,8 +12413,8 @@
             "swarm",
             "triggered",
             "mirror",
-            "block",
-            "combo"
+            "zone",
+            "block"
           ],
           "chainDigest": "ambushcombotriggered -> ambush -> combo -> triggered -> swarm -> mirror -> zone -> block"
         },
@@ -12421,8 +12426,8 @@
             "ambush",
             "mirror",
             "corrupt",
-            "block",
             "zone",
+            "block",
             "phase"
           ],
           "chainDigest": "ambushphaseshifted -> ambush -> phase -> shifted -> mirror -> zone -> block -> corrupt"
@@ -12436,8 +12441,8 @@
             "swarm",
             "slow",
             "corrupt",
-            "block",
-            "zone"
+            "zone",
+            "block"
           ],
           "chainDigest": "swarmslowpattern -> swarm -> slow -> pattern -> zone -> block -> corrupt -> surround"
         },
@@ -12549,7 +12554,7 @@
             "patrol",
             "triggered",
             "mirror",
-            "combo"
+            "zone"
           ],
           "chainDigest": "swarmcombotriggered -> swarm -> combo -> triggered -> patrol -> ambush -> mirror -> zone"
         },
@@ -12561,8 +12566,8 @@
             "ambush",
             "swarm",
             "mirror",
-            "block",
             "zone",
+            "block",
             "phase"
           ],
           "chainDigest": "swarmphaseshifted -> swarm -> phase -> shifted -> ambush -> mirror -> zone -> block"
@@ -12576,8 +12581,8 @@
             "swarm",
             "mirror",
             "slow",
-            "block",
-            "zone"
+            "zone",
+            "block"
           ],
           "chainDigest": "mirrorplayerslowpattern -> mirror -> player -> slow -> pattern -> swarm -> zone -> block"
         },
@@ -12590,8 +12595,8 @@
             "mirror",
             "fast",
             "corrupt",
-            "block",
-            "zone"
+            "zone",
+            "block"
           ],
           "chainDigest": "mirrorplayerfastpattern -> mirror -> player -> fast -> pattern -> zone -> block -> corrupt"
         },
@@ -12604,8 +12609,8 @@
             "mirror",
             "alternating",
             "corrupt",
-            "block",
-            "zone"
+            "zone",
+            "block"
           ],
           "chainDigest": "mirrorplayeralternatingpattern -> mirror -> player -> alternating -> pattern -> zone -> block -> corrupt"
         },
@@ -12757,8 +12762,8 @@
             "pattern",
             "mirror",
             "spiral",
-            "block",
             "zone",
+            "block",
             "zones"
           ],
           "chainDigest": "guardzonesspiralpattern -> guard -> zones -> spiral -> pattern -> mirror -> zone -> block"
@@ -12771,8 +12776,8 @@
             "pattern",
             "lane",
             "corrupt",
-            "block",
             "zone",
+            "block",
             "zones"
           ],
           "chainDigest": "guardzoneslanepattern -> guard -> zones -> lane -> pattern -> zone -> block -> corrupt"
@@ -12938,8 +12943,8 @@
           "focusWords": [
             "triggered",
             "sound",
-            "block",
             "zone",
+            "block",
             "sight",
             "chase"
           ],
@@ -13080,8 +13085,8 @@
             "triggered",
             "mirror",
             "sound",
-            "block",
-            "zone"
+            "zone",
+            "block"
           ],
           "chainDigest": "blockroutessoundtriggered -> block -> routes -> sound -> triggered -> swarm -> mirror -> zone"
         },
@@ -13093,9 +13098,9 @@
             "triggered",
             "mirror",
             "corrupt",
+            "zone",
             "block",
-            "light",
-            "zone"
+            "light"
           ],
           "chainDigest": "blockrouteslighttriggered -> block -> routes -> light -> triggered -> mirror -> zone -> corrupt"
         },
@@ -13106,9 +13111,9 @@
           "focusWords": [
             "triggered",
             "corrupt",
+            "zone",
             "block",
             "combo",
-            "zone",
             "surround"
           ],
           "chainDigest": "blockroutescombotriggered -> block -> routes -> combo -> triggered -> zone -> corrupt -> surround"
@@ -13247,8 +13252,8 @@
             "swarm",
             "triggered",
             "mirror",
-            "combo",
             "zone",
+            "combo",
             "items"
           ],
           "chainDigest": "stealitemscombotriggered -> steal -> items -> combo -> triggered -> swarm -> mirror -> zone"
@@ -13259,8 +13264,8 @@
           "rowLength": 8,
           "focusWords": [
             "mirror",
-            "block",
             "zone",
+            "block",
             "phase",
             "shifted",
             "items"
@@ -13275,8 +13280,8 @@
             "pattern",
             "slow",
             "corrupt",
-            "block",
             "zone",
+            "block",
             "surround"
           ],
           "chainDigest": "corrupttilesslowpattern -> corrupt -> tiles -> slow -> pattern -> zone -> block -> surround"
@@ -13429,8 +13434,8 @@
             "pattern",
             "mirror",
             "fast",
-            "block",
             "zone",
+            "block",
             "hazards"
           ],
           "chainDigest": "summonhazardsfastpattern -> summon -> hazards -> fast -> pattern -> mirror -> zone -> block"
@@ -13443,8 +13448,8 @@
             "pattern",
             "alternating",
             "corrupt",
-            "block",
             "zone",
+            "block",
             "hazards"
           ],
           "chainDigest": "summonhazardsalternatingpattern -> summon -> hazards -> alternating -> pattern -> zone -> block -> corrupt"
@@ -13629,24 +13634,23 @@
         },
         {
           "category": "Enemy Behavior Seeds",
-          "seed": "sweeping",
-          "rowLength": 6,
+          "seed": "spiralzonepattern",
+          "rowLength": 5,
           "focusWords": [
-            "sweeping",
-            "zigzagging",
-            "flickering",
-            "flashing",
-            "looping",
-            "reacting"
+            "zone",
+            "chase",
+            "timer",
+            "obstacle",
+            "spiralzonepattern"
           ],
-          "chainDigest": "sweeping -> zigzagging -> flickering -> flashing -> looping -> reacting"
+          "chainDigest": "spiralzonepattern -> obstacle -> chase -> zone -> timer"
         }
       ]
     },
     {
       "category": "Objective Structure Seeds",
       "rowCount": 107,
-      "itemCount": 835,
+      "itemCount": 829,
       "topWords": [
         "exit",
         "route",
@@ -13685,12 +13689,12 @@
         "tails": [
           "collectexitactivatepressurereward",
           "route",
-          "artifact"
+          "collect"
         ],
         "focus": [
-          "repairnetworkacrossthreerooms",
           "alarm",
-          "while"
+          "while",
+          "defusecoreinoneroom"
         ]
       },
       "smoothedWords": [
@@ -13722,11 +13726,11 @@
           "topRankings": [
             {
               "word": "exit",
-              "score": 479.36
+              "score": 478.58
             },
             {
               "word": "route",
-              "score": 426.06
+              "score": 424.62
             },
             {
               "word": "hold",
@@ -13738,23 +13742,23 @@
             },
             {
               "word": "repair",
-              "score": 408.32
+              "score": 407.54
             },
             {
               "word": "escort",
-              "score": 408.04
+              "score": 407.26
             },
             {
               "word": "collect",
-              "score": 407.82
+              "score": 406.14
             },
             {
               "word": "activate",
-              "score": 401.92
+              "score": 401.14
             },
             {
               "word": "survive",
-              "score": 384.62
+              "score": 383.84
             },
             {
               "word": "in",
@@ -13762,11 +13766,11 @@
             },
             {
               "word": "objective",
-              "score": 266.42
+              "score": 265.64
             },
             {
               "word": "across",
-              "score": 261.1
+              "score": 260.5
             }
           ]
         },
@@ -13777,8 +13781,8 @@
             "route",
             "hold",
             "steal",
-            "collect",
             "escort",
+            "collect",
             "repair",
             "activate",
             "survive",
@@ -13789,51 +13793,51 @@
           "topRankings": [
             {
               "word": "exit",
-              "score": 770.194
+              "score": 767.506
             },
             {
               "word": "route",
-              "score": 677.06
+              "score": 672.831
             },
             {
               "word": "hold",
-              "score": 610.511
+              "score": 609.827
             },
             {
               "word": "steal",
-              "score": 598.562
-            },
-            {
-              "word": "collect",
-              "score": 597.593
+              "score": 597.986
             },
             {
               "word": "escort",
-              "score": 597.55
+              "score": 595.182
+            },
+            {
+              "word": "collect",
+              "score": 593.215
             },
             {
               "word": "repair",
-              "score": 583.087
+              "score": 580.634
             },
             {
               "word": "activate",
-              "score": 575.115
+              "score": 572.598
             },
             {
               "word": "survive",
-              "score": 547.635
+              "score": 545.329
             },
             {
               "word": "in",
-              "score": 529.706
+              "score": 529.44
             },
             {
               "word": "after",
-              "score": 422.334
+              "score": 422.068
             },
             {
               "word": "while",
-              "score": 422.334
+              "score": 422.068
             }
           ]
         },
@@ -13856,51 +13860,51 @@
           "topRankings": [
             {
               "word": "exit",
-              "score": 1045.537
+              "score": 1040.217
             },
             {
               "word": "route",
-              "score": 910.666
+              "score": 902.051
             },
             {
               "word": "hold",
-              "score": 789.154
+              "score": 786.95
             },
             {
               "word": "escort",
-              "score": 774.191
+              "score": 769.716
             },
             {
               "word": "collect",
-              "score": 772.455
+              "score": 764.06
             },
             {
               "word": "steal",
-              "score": 756.659
+              "score": 754.705
             },
             {
               "word": "repair",
-              "score": 744.413
+              "score": 739.803
             },
             {
               "word": "in",
-              "score": 732.156
+              "score": 731.205
             },
             {
               "word": "activate",
-              "score": 731.961
+              "score": 727.192
             },
             {
               "word": "survive",
-              "score": 688.925
+              "score": 684.682
             },
             {
               "word": "after",
-              "score": 628.076
+              "score": 627.094
             },
             {
               "word": "while",
-              "score": 628.076
+              "score": 627.094
             }
           ]
         }
@@ -14349,8 +14353,8 @@
             "repair",
             "activate",
             "across",
-            "rooms",
-            "target"
+            "target",
+            "rooms"
           ],
           "chainDigest": "escorttargetacrossthreerooms -> escort -> target -> across -> three -> rooms -> activate -> repair"
         },
@@ -14432,8 +14436,8 @@
             "escort",
             "through",
             "target",
-            "completion",
             "nodes",
+            "completion",
             "goal"
           ],
           "chainDigest": "escorttargetthroughrelaynodes -> escort -> target -> through -> relay -> nodes -> goal -> completion"
@@ -14489,8 +14493,8 @@
             "hold",
             "activate",
             "across",
-            "rooms",
-            "sequence"
+            "sequence",
+            "rooms"
           ],
           "chainDigest": "activatesequenceacrossthreerooms -> activate -> sequence -> across -> three -> rooms -> exit -> hold"
         },
@@ -14629,8 +14633,8 @@
             "collect",
             "repair",
             "across",
-            "rooms",
-            "network"
+            "network",
+            "rooms"
           ],
           "chainDigest": "repairnetworkacrossthreerooms -> repair -> network -> across -> three -> rooms -> route -> collect"
         },
@@ -14908,8 +14912,8 @@
             "survive",
             "across",
             "objective",
-            "rooms",
             "waves",
+            "rooms",
             "goal"
           ],
           "chainDigest": "survivewavesacrossthreerooms -> survive -> waves -> across -> three -> rooms -> objective -> goal"
@@ -14922,8 +14926,8 @@
             "survive",
             "before",
             "objective",
-            "completion",
             "waves",
+            "completion",
             "goal"
           ],
           "chainDigest": "survivewavesbeforetimer -> survive -> waves -> before -> timer -> objective -> goal -> completion"
@@ -14936,8 +14940,8 @@
             "route",
             "survive",
             "without",
-            "completion",
             "waves",
+            "completion",
             "goal"
           ],
           "chainDigest": "survivewaveswithoutalarm -> survive -> waves -> without -> alarm -> goal -> completion -> route"
@@ -14950,8 +14954,8 @@
             "route",
             "survive",
             "with",
-            "completion",
             "waves",
+            "completion",
             "resource"
           ],
           "chainDigest": "survivewaveswithlimitedresource -> survive -> waves -> with -> limited -> resource -> completion -> route"
@@ -15190,7 +15194,7 @@
             "across",
             "rooms",
             "core",
-            "three"
+            "defuse"
           ],
           "chainDigest": "defusecoreacrossthreerooms -> defuse -> core -> across -> three -> rooms -> escort -> activate"
         },
@@ -15270,9 +15274,9 @@
           "rowLength": 8,
           "focusWords": [
             "through",
-            "completion",
             "nodes",
             "core",
+            "completion",
             "goal",
             "defuse"
           ],
@@ -15285,8 +15289,8 @@
           "focusWords": [
             "route",
             "during",
-            "completion",
             "core",
+            "completion",
             "cycle",
             "defuse"
           ],
@@ -15381,24 +15385,19 @@
         },
         {
           "category": "Objective Structure Seeds",
-          "seed": "resetpathforwardobjectivecheckpoints",
-          "rowLength": 7,
+          "seed": "triggerchainafterminibosssequence",
+          "rowLength": 1,
           "focusWords": [
-            "rooms",
-            "completion",
-            "three",
-            "collectsetacrossthreerooms",
-            "newzone",
-            "resetpathforwardobjectivecheckpoints"
+            "triggerchainafterminibosssequence"
           ],
-          "chainDigest": "resetpathforwardobjectivecheckpoints -> checkinnewarea -> newzone -> collectsetacrossthreerooms -> three -> rooms -> completion"
+          "chainDigest": "triggerchainafterminibosssequence"
         }
       ]
     },
     {
       "category": "Resource System Seeds",
       "rowCount": 107,
-      "itemCount": 840,
+      "itemCount": 841,
       "topWords": [
         "signal",
         "heat",
@@ -15409,9 +15408,9 @@
         "oxygen",
         "zone",
         "cargo",
-        "combo",
         "slow",
-        "checkpoint"
+        "drain",
+        "burst"
       ],
       "sampledWords": [
         "cargoweightriskoverflow",
@@ -15469,56 +15468,56 @@
             "meter",
             "drain",
             "zone",
-            "combo"
+            "resource"
           ],
           "topRankings": [
             {
               "word": "signal",
-              "score": 707.18
+              "score": 708.48
             },
             {
               "word": "battery",
-              "score": 647.36
+              "score": 647.52
             },
             {
               "word": "heat",
-              "score": 644.32
+              "score": 643.72
             },
             {
               "word": "light",
-              "score": 623.64
+              "score": 623.04
             },
             {
               "word": "noise",
-              "score": 616.98
+              "score": 618.36
             },
             {
               "word": "cargo",
-              "score": 589.98
+              "score": 591.12
             },
             {
               "word": "stamina",
-              "score": 578.44
+              "score": 578.98
             },
             {
               "word": "oxygen",
-              "score": 563.72
+              "score": 563.96
             },
             {
               "word": "meter",
-              "score": 493.78
+              "score": 506.94
             },
             {
               "word": "drain",
-              "score": 479.44
+              "score": 493.34
             },
             {
               "word": "zone",
-              "score": 469.98
+              "score": 471.0
             },
             {
-              "word": "combo",
-              "score": 449.22
+              "word": "resource",
+              "score": 453.1
             }
           ]
         },
@@ -15534,58 +15533,58 @@
             "oxygen",
             "cargo",
             "meter",
-            "zone",
             "drain",
-            "combo"
+            "zone",
+            "recharge"
           ],
           "topRankings": [
             {
               "word": "signal",
-              "score": 1331.166
+              "score": 1335.014
             },
             {
               "word": "heat",
-              "score": 1183.307
+              "score": 1184.238
             },
             {
               "word": "battery",
-              "score": 1182.354
+              "score": 1183.643
             },
             {
               "word": "light",
-              "score": 1147.751
+              "score": 1148.281
             },
             {
               "word": "noise",
-              "score": 1132.965
+              "score": 1136.114
             },
             {
               "word": "stamina",
-              "score": 1071.89
+              "score": 1074.06
             },
             {
               "word": "oxygen",
-              "score": 1022.857
+              "score": 1024.081
             },
             {
               "word": "cargo",
-              "score": 911.76
+              "score": 914.371
             },
             {
               "word": "meter",
-              "score": 818.542
-            },
-            {
-              "word": "zone",
-              "score": 806.712
+              "score": 835.526
             },
             {
               "word": "drain",
-              "score": 806.0
+              "score": 822.91
             },
             {
-              "word": "combo",
-              "score": 752.666
+              "word": "zone",
+              "score": 808.708
+            },
+            {
+              "word": "recharge",
+              "score": 748.463
             }
           ]
         },
@@ -15601,58 +15600,58 @@
             "oxygen",
             "zone",
             "cargo",
-            "combo",
             "slow",
-            "checkpoint"
+            "drain",
+            "burst"
           ],
           "topRankings": [
             {
               "word": "signal",
-              "score": 2023.286
+              "score": 2029.94
             },
             {
               "word": "heat",
-              "score": 1776.942
+              "score": 1779.507
             },
             {
               "word": "battery",
-              "score": 1773.695
+              "score": 1776.708
             },
             {
               "word": "light",
-              "score": 1726.872
+              "score": 1728.972
             },
             {
               "word": "noise",
-              "score": 1688.177
+              "score": 1693.669
             },
             {
               "word": "stamina",
-              "score": 1580.314
+              "score": 1584.414
             },
             {
               "word": "oxygen",
-              "score": 1515.877
+              "score": 1518.642
             },
             {
               "word": "zone",
-              "score": 1414.15
+              "score": 1418.172
             },
             {
               "word": "cargo",
-              "score": 1332.496
-            },
-            {
-              "word": "combo",
-              "score": 1316.9
+              "score": 1336.925
             },
             {
               "word": "slow",
-              "score": 1314.583
+              "score": 1317.365
             },
             {
-              "word": "checkpoint",
-              "score": 1298.762
+              "word": "drain",
+              "score": 1314.397
+            },
+            {
+              "word": "burst",
+              "score": 1301.433
             }
           ]
         }
@@ -17142,33 +17141,33 @@
         },
         {
           "category": "Resource System Seeds",
-          "seed": "combo",
-          "rowLength": 6,
+          "seed": "fresh",
+          "rowLength": 7,
           "focusWords": [
-            "combo",
-            "speed",
-            "rates",
-            "logics",
-            "economy",
-            "trade"
+            "drain",
+            "burst",
+            "meter",
+            "resource",
+            "budget",
+            "recover"
           ],
-          "chainDigest": "combo -> speed -> rates -> logics -> economy -> trade"
+          "chainDigest": "fresh -> resource -> drain -> meter -> budget -> recover -> burst"
         }
       ]
     },
     {
       "category": "Progression Seeds",
       "rowCount": 10,
-      "itemCount": 64,
+      "itemCount": 68,
       "topWords": [
-        "surge",
         "evolve",
-        "unveil",
+        "surge",
         "unlock",
         "ascend",
+        "unveil",
+        "reveal",
         "expand",
         "pulse",
-        "reveal",
         "uncover",
         "upgrade",
         "advance",
@@ -17180,102 +17179,102 @@
         "pulse"
       ],
       "rankedSample": [
-        "unlock",
         "ascend",
-        "surge"
+        "unveil",
+        "evolve"
       ],
       "piecemealSamples": {
         "heads": [
           "upgrade",
           "reveal",
-          "unlock"
+          "unveil"
         ],
         "middles": [
           "gain",
-          "expand",
-          "trace"
+          "ascend",
+          "expand"
         ],
         "tails": [
+          "ascende",
           "surge",
-          "rhythm",
-          "ascende"
+          "rhythm"
         ],
         "focus": [
-          "unveil",
-          "evolve",
-          "unlock"
+          "broken",
+          "pulse",
+          "unveil"
         ]
       },
       "smoothedWords": [
         "expand",
         "upgrade",
         "pulse",
-        "unlock",
         "ascend",
-        "surge",
+        "unveil",
+        "evolve",
         "reveal"
       ],
       "rankedPasses": [
         {
           "pass": 1,
           "topWords": [
-            "surge",
-            "unveil",
             "evolve",
+            "surge",
             "unlock",
             "ascend",
-            "expand",
+            "unveil",
             "reveal",
+            "expand",
             "pulse",
-            "upgrade",
             "uncover",
+            "upgrade",
             "advance",
             "enhance"
           ],
           "topRankings": [
             {
-              "word": "surge",
-              "score": 71.78
-            },
-            {
-              "word": "unveil",
-              "score": 67.88
-            },
-            {
               "word": "evolve",
-              "score": 66.24
+              "score": 74.86
+            },
+            {
+              "word": "surge",
+              "score": 66.44
             },
             {
               "word": "unlock",
-              "score": 53.56
+              "score": 64.34
             },
             {
               "word": "ascend",
-              "score": 50.18
+              "score": 61.32
             },
             {
-              "word": "expand",
-              "score": 40.2
+              "word": "unveil",
+              "score": 55.84
             },
             {
               "word": "reveal",
-              "score": 38.5
+              "score": 44.78
+            },
+            {
+              "word": "expand",
+              "score": 41.22
             },
             {
               "word": "pulse",
-              "score": 37.62
+              "score": 37.4
+            },
+            {
+              "word": "uncover",
+              "score": 32.84
             },
             {
               "word": "upgrade",
               "score": 32.36
             },
             {
-              "word": "uncover",
-              "score": 32.24
-            },
-            {
               "word": "advance",
-              "score": 27.38
+              "score": 28.52
             },
             {
               "word": "enhance",
@@ -17286,14 +17285,14 @@
         {
           "pass": 2,
           "topWords": [
-            "surge",
             "evolve",
-            "unveil",
+            "surge",
             "unlock",
             "ascend",
+            "unveil",
+            "reveal",
             "expand",
             "pulse",
-            "reveal",
             "uncover",
             "upgrade",
             "advance",
@@ -17301,40 +17300,40 @@
           ],
           "topRankings": [
             {
-              "word": "surge",
-              "score": 79.905
-            },
-            {
               "word": "evolve",
-              "score": 76.41
+              "score": 85.841
             },
             {
-              "word": "unveil",
-              "score": 72.062
+              "word": "surge",
+              "score": 74.535
             },
             {
               "word": "unlock",
-              "score": 60.594
+              "score": 72.365
             },
             {
               "word": "ascend",
-              "score": 56.891
+              "score": 68.49
             },
             {
-              "word": "expand",
-              "score": 45.249
-            },
-            {
-              "word": "pulse",
-              "score": 41.761
+              "word": "unveil",
+              "score": 59.21
             },
             {
               "word": "reveal",
-              "score": 41.597
+              "score": 48.117
+            },
+            {
+              "word": "expand",
+              "score": 46.804
+            },
+            {
+              "word": "pulse",
+              "score": 41.581
             },
             {
               "word": "uncover",
-              "score": 36.368
+              "score": 37.18
             },
             {
               "word": "upgrade",
@@ -17342,25 +17341,25 @@
             },
             {
               "word": "advance",
-              "score": 30.606
+              "score": 31.961
             },
             {
               "word": "refine",
-              "score": 30.422
+              "score": 30.636
             }
           ]
         },
         {
           "pass": 3,
           "topWords": [
-            "surge",
             "evolve",
-            "unveil",
+            "surge",
             "unlock",
             "ascend",
+            "unveil",
+            "reveal",
             "expand",
             "pulse",
-            "reveal",
             "uncover",
             "upgrade",
             "advance",
@@ -17368,52 +17367,52 @@
           ],
           "topRankings": [
             {
-              "word": "surge",
-              "score": 83.974
-            },
-            {
               "word": "evolve",
-              "score": 80.322
+              "score": 89.891
             },
             {
-              "word": "unveil",
-              "score": 73.087
+              "word": "surge",
+              "score": 78.626
             },
             {
               "word": "unlock",
-              "score": 62.934
+              "score": 74.967
             },
             {
               "word": "ascend",
-              "score": 60.173
+              "score": 72.096
             },
             {
-              "word": "expand",
-              "score": 47.245
-            },
-            {
-              "word": "pulse",
-              "score": 43.292
+              "word": "unveil",
+              "score": 60.129
             },
             {
               "word": "reveal",
-              "score": 42.699
+              "score": 49.263
+            },
+            {
+              "word": "expand",
+              "score": 48.949
+            },
+            {
+              "word": "pulse",
+              "score": 43.115
             },
             {
               "word": "uncover",
-              "score": 38.117
+              "score": 39.063
             },
             {
               "word": "upgrade",
-              "score": 33.703
+              "score": 33.707
             },
             {
               "word": "advance",
-              "score": 32.145
+              "score": 33.669
             },
             {
               "word": "refine",
-              "score": 31.835
+              "score": 32.139
             }
           ]
         }
@@ -17427,8 +17426,8 @@
             "evolve",
             "unlock",
             "ascend",
-            "expand",
             "reveal",
+            "expand",
             "uncover"
           ],
           "chainDigest": "unlock -> ascend -> evolve -> discover -> reveal -> unify -> expand -> uncover"
@@ -17453,9 +17452,9 @@
           "rowLength": 8,
           "focusWords": [
             "evolve",
-            "unveil",
             "unlock",
             "ascend",
+            "unveil",
             "reveal",
             "trace"
           ],
@@ -17466,8 +17465,8 @@
           "seed": "unleash",
           "rowLength": 4,
           "focusWords": [
-            "surge",
             "evolve",
+            "surge",
             "unleash",
             "ascende"
           ],
@@ -17478,9 +17477,9 @@
           "seed": "upgrade",
           "rowLength": 8,
           "focusWords": [
+            "reveal",
             "expand",
             "pulse",
-            "reveal",
             "uncover",
             "upgrade",
             "unify"
@@ -17492,10 +17491,10 @@
           "seed": "unveil",
           "rowLength": 8,
           "focusWords": [
-            "surge",
             "evolve",
-            "unveil",
+            "surge",
             "unlock",
+            "unveil",
             "expand",
             "uncover"
           ],
@@ -17506,10 +17505,10 @@
           "seed": "unveil",
           "rowLength": 8,
           "focusWords": [
-            "surge",
             "evolve",
-            "unveil",
+            "surge",
             "ascend",
+            "unveil",
             "expand",
             "uncover"
           ],
@@ -17522,8 +17521,8 @@
           "focusWords": [
             "surge",
             "pulse",
-            "burst",
-            "rhythm"
+            "rhythm",
+            "burst"
           ],
           "chainDigest": "pulse -> rhythm -> burst -> surge"
         },
@@ -17541,22 +17540,24 @@
         },
         {
           "category": "Progression Seeds",
-          "seed": "unveil",
-          "rowLength": 4,
+          "seed": "repair",
+          "rowLength": 8,
           "focusWords": [
-            "surge",
-            "unveil",
-            "burst",
-            "track"
+            "evolve",
+            "unlock",
+            "ascend",
+            "reveal",
+            "discover",
+            "machinery"
           ],
-          "chainDigest": "unveil -> track -> burst -> surge"
+          "chainDigest": "repair -> broken -> machinery -> unlock -> ascend -> evolve -> discover -> reveal"
         }
       ]
     },
     {
       "category": "Level Progression Seeds",
       "rowCount": 107,
-      "itemCount": 841,
+      "itemCount": 842,
       "topWords": [
         "with",
         "route",
@@ -17565,8 +17566,8 @@
         "gates",
         "waves",
         "memory",
-        "checkpoints",
         "unlock",
+        "checkpoints",
         "single",
         "progression",
         "rerolls"
@@ -17594,8 +17595,8 @@
         ],
         "tails": [
           "branching",
-          "soft",
-          "waves"
+          "score",
+          "stage"
         ],
         "focus": [
           "contract",
@@ -17619,8 +17620,8 @@
             "with",
             "route",
             "finale",
-            "branching",
             "waves",
+            "branching",
             "gates",
             "checkpoints",
             "memory",
@@ -17632,31 +17633,31 @@
           "topRankings": [
             {
               "word": "with",
-              "score": 1185.86
+              "score": 1184.9
             },
             {
               "word": "route",
-              "score": 536.16
+              "score": 536.04
             },
             {
               "word": "finale",
-              "score": 407.54
-            },
-            {
-              "word": "branching",
-              "score": 393.04
+              "score": 407.42
             },
             {
               "word": "waves",
-              "score": 392.04
+              "score": 393.06
+            },
+            {
+              "word": "branching",
+              "score": 392.92
             },
             {
               "word": "gates",
-              "score": 354.66
+              "score": 351.52
             },
             {
               "word": "checkpoints",
-              "score": 306.46
+              "score": 305.86
             },
             {
               "word": "memory",
@@ -17664,7 +17665,7 @@
             },
             {
               "word": "single",
-              "score": 303.84
+              "score": 303.72
             },
             {
               "word": "rerolls",
@@ -17672,11 +17673,11 @@
             },
             {
               "word": "unlock",
-              "score": 259.96
+              "score": 259.84
             },
             {
               "word": "progression",
-              "score": 255.36
+              "score": 255.24
             }
           ]
         },
@@ -17699,51 +17700,51 @@
           "topRankings": [
             {
               "word": "with",
-              "score": 1490.503
+              "score": 1489.557
             },
             {
               "word": "route",
-              "score": 706.631
+              "score": 706.038
             },
             {
               "word": "finale",
-              "score": 608.729
+              "score": 608.302
             },
             {
               "word": "branching",
-              "score": 599.682
+              "score": 599.271
             },
             {
               "word": "gates",
-              "score": 546.193
+              "score": 545.044
             },
             {
               "word": "waves",
-              "score": 540.406
+              "score": 541.251
             },
             {
               "word": "single",
-              "score": 456.402
+              "score": 456.002
             },
             {
               "word": "memory",
-              "score": 447.721
+              "score": 447.524
             },
             {
               "word": "checkpoints",
-              "score": 436.894
+              "score": 434.53
             },
             {
               "word": "unlock",
-              "score": 428.691
+              "score": 428.214
             },
             {
               "word": "rerolls",
-              "score": 416.305
+              "score": 416.122
             },
             {
               "word": "progression",
-              "score": 406.374
+              "score": 405.95
             }
           ]
         },
@@ -17757,8 +17758,8 @@
             "gates",
             "waves",
             "memory",
-            "checkpoints",
             "unlock",
+            "checkpoints",
             "single",
             "progression",
             "rerolls"
@@ -17766,51 +17767,51 @@
           "topRankings": [
             {
               "word": "with",
-              "score": 1645.554
+              "score": 1644.08
             },
             {
               "word": "route",
-              "score": 872.36
+              "score": 871.885
             },
             {
               "word": "finale",
-              "score": 782.507
+              "score": 781.962
             },
             {
               "word": "branching",
-              "score": 768.651
+              "score": 768.074
             },
             {
               "word": "gates",
-              "score": 721.236
+              "score": 719.234
             },
             {
               "word": "waves",
-              "score": 693.119
+              "score": 694.445
             },
             {
               "word": "memory",
-              "score": 600.846
-            },
-            {
-              "word": "checkpoints",
-              "score": 582.992
+              "score": 600.419
             },
             {
               "word": "unlock",
-              "score": 580.601
+              "score": 580.012
+            },
+            {
+              "word": "checkpoints",
+              "score": 578.554
             },
             {
               "word": "single",
-              "score": 572.77
+              "score": 572.454
             },
             {
               "word": "progression",
-              "score": 550.576
+              "score": 550.196
             },
             {
               "word": "rerolls",
-              "score": 550.344
+              "score": 549.974
             }
           ]
         }
@@ -17836,8 +17837,8 @@
           "rowLength": 8,
           "focusWords": [
             "with",
-            "checkpoints",
             "unlock",
+            "checkpoints",
             "single",
             "path",
             "stage"
@@ -18677,8 +18678,8 @@
           "focusWords": [
             "with",
             "finale",
-            "checkpoints",
             "unlock",
+            "checkpoints",
             "stage",
             "phase"
           ],
@@ -19222,8 +19223,8 @@
           "rowLength": 8,
           "focusWords": [
             "checkpoints",
-            "loops",
             "stages",
+            "loops",
             "speedrunners",
             "combochainlevels",
             "timers"
@@ -19248,8 +19249,8 @@
           "rowLength": 4,
           "focusWords": [
             "branching",
-            "checkpoints",
             "unlock",
+            "checkpoints",
             "level"
           ],
           "chainDigest": "branching -> unlock -> checkpoints -> level"
@@ -19260,8 +19261,8 @@
           "rowLength": 6,
           "focusWords": [
             "branching",
-            "loops",
             "stages",
+            "loops",
             "tension",
             "rewards",
             "flow"
@@ -19298,23 +19299,24 @@
         },
         {
           "category": "Level Progression Seeds",
-          "seed": "hard",
-          "rowLength": 5,
+          "seed": "wave",
+          "rowLength": 6,
           "focusWords": [
             "gates",
-            "hard",
-            "loops",
-            "momentum",
-            "points"
+            "escalating",
+            "hidden",
+            "timer",
+            "wave",
+            "score"
           ],
-          "chainDigest": "hard -> gates -> loops -> momentum -> points"
+          "chainDigest": "wave -> escalating -> hidden -> gates -> timer -> score"
         }
       ]
     },
     {
       "category": "Twist Constraint Seeds",
       "rowCount": 107,
-      "itemCount": 846,
+      "itemCount": 848,
       "topWords": [
         "vision",
         "zone",
@@ -19375,10 +19377,10 @@
           "pass": 1,
           "topWords": [
             "vision",
-            "echo",
             "zone",
-            "after",
+            "echo",
             "twist",
+            "after",
             "room",
             "moving",
             "shared",
@@ -19390,27 +19392,27 @@
           "topRankings": [
             {
               "word": "vision",
-              "score": 476.04
-            },
-            {
-              "word": "echo",
-              "score": 397.0
+              "score": 476.7
             },
             {
               "word": "zone",
-              "score": 392.08
+              "score": 403.96
             },
             {
-              "word": "after",
-              "score": 385.84
+              "word": "echo",
+              "score": 397.66
             },
             {
               "word": "twist",
-              "score": 383.84
+              "score": 389.1
+            },
+            {
+              "word": "after",
+              "score": 386.36
             },
             {
               "word": "room",
-              "score": 345.74
+              "score": 345.62
             },
             {
               "word": "moving",
@@ -19422,19 +19424,19 @@
             },
             {
               "word": "decay",
-              "score": 290.46
+              "score": 291.24
             },
             {
               "word": "constraint",
-              "score": 279.98
+              "score": 288.9
             },
             {
               "word": "near",
-              "score": 276.14
+              "score": 276.92
             },
             {
               "word": "variant",
-              "score": 273.42
+              "score": 274.44
             }
           ]
         },
@@ -19457,51 +19459,51 @@
           "topRankings": [
             {
               "word": "vision",
-              "score": 756.717
+              "score": 761.622
             },
             {
               "word": "zone",
-              "score": 620.323
+              "score": 646.571
             },
             {
               "word": "echo",
-              "score": 567.105
+              "score": 570.37
             },
             {
               "word": "after",
-              "score": 559.86
+              "score": 563.358
             },
             {
               "word": "twist",
-              "score": 555.321
+              "score": 562.853
             },
             {
               "word": "room",
-              "score": 552.167
+              "score": 552.942
             },
             {
               "word": "moving",
-              "score": 475.722
+              "score": 475.959
             },
             {
               "word": "near",
-              "score": 456.161
+              "score": 460.389
             },
             {
               "word": "decay",
-              "score": 442.468
+              "score": 446.862
             },
             {
               "word": "for",
-              "score": 431.045
+              "score": 432.609
             },
             {
               "word": "shared",
-              "score": 426.714
+              "score": 426.903
             },
             {
               "word": "during",
-              "score": 422.054
+              "score": 423.55
             }
           ]
         },
@@ -19524,51 +19526,51 @@
           "topRankings": [
             {
               "word": "vision",
-              "score": 1038.636
+              "score": 1050.346
             },
             {
               "word": "zone",
-              "score": 847.044
+              "score": 891.49
             },
             {
               "word": "after",
-              "score": 770.854
+              "score": 778.869
             },
             {
               "word": "room",
-              "score": 756.192
+              "score": 759.635
             },
             {
               "word": "twist",
-              "score": 736.664
+              "score": 746.117
             },
             {
               "word": "echo",
-              "score": 716.406
+              "score": 721.958
             },
             {
               "word": "near",
-              "score": 672.235
+              "score": 681.326
             },
             {
               "word": "for",
-              "score": 633.327
+              "score": 637.498
             },
             {
               "word": "during",
-              "score": 623.023
+              "score": 626.806
             },
             {
               "word": "while",
-              "score": 621.164
+              "score": 624.942
             },
             {
               "word": "inside",
-              "score": 613.958
+              "score": 617.961
             },
             {
               "word": "every",
-              "score": 613.661
+              "score": 617.588
             }
           ]
         }
@@ -19584,7 +19586,7 @@
             "for",
             "constraint",
             "finale",
-            "controls"
+            "reversed"
           ],
           "chainDigest": "reversedcontrolszoneforfinale -> reversed -> controls -> zone -> for -> finale -> twist -> constraint"
         },
@@ -19598,7 +19600,7 @@
             "variant",
             "constraint",
             "alarms",
-            "controls"
+            "reversed"
           ],
           "chainDigest": "reversedcontrolszoneduringalarms -> reversed -> controls -> zone -> during -> alarms -> constraint -> variant"
         },
@@ -19612,7 +19614,7 @@
             "variant",
             "pickup",
             "challenge",
-            "controls"
+            "reversed"
           ],
           "chainDigest": "reversedcontrolszoneafterpickup -> reversed -> controls -> zone -> after -> pickup -> variant -> challenge"
         },
@@ -19624,9 +19626,9 @@
             "zone",
             "near",
             "reverse",
-            "challenge",
             "treasure",
-            "controls"
+            "challenge",
+            "reversed"
           ],
           "chainDigest": "reversedcontrolszoneneartreasure -> reversed -> controls -> zone -> near -> treasure -> challenge -> reverse"
         },
@@ -19639,8 +19641,8 @@
             "inside",
             "reverse",
             "onebutton",
-            "controls",
-            "safe"
+            "reversed",
+            "controls"
           ],
           "chainDigest": "reversedcontrolszoneinsidesafezone -> reversed -> controls -> zone -> inside -> safe -> reverse -> onebutton"
         },
@@ -19653,8 +19655,8 @@
             "on",
             "onebutton",
             "break",
-            "controls",
-            "reversed"
+            "reversed",
+            "controls"
           ],
           "chainDigest": "reversedcontrolszoneoncombobreak -> reversed -> controls -> zone -> on -> combo -> break -> onebutton"
         },
@@ -19667,8 +19669,8 @@
             "room",
             "every",
             "nostop",
-            "controls",
-            "third"
+            "reversed",
+            "controls"
           ],
           "chainDigest": "reversedcontrolszoneeverythirdroom -> reversed -> controls -> zone -> every -> third -> room -> nostop"
         },
@@ -19682,7 +19684,7 @@
             "decay",
             "shared",
             "carrying",
-            "controls"
+            "reversed"
           ],
           "chainDigest": "reversedcontrolszonewhilecarrying -> reversed -> controls -> zone -> while -> carrying -> shared -> decay"
         },
@@ -19695,8 +19697,8 @@
             "under",
             "decay",
             "battery",
-            "controls",
-            "reversed"
+            "reversed",
+            "controls"
           ],
           "chainDigest": "reversedcontrolszoneunderlowbattery -> reversed -> controls -> zone -> under -> low -> battery -> decay"
         },
@@ -19709,8 +19711,8 @@
             "after",
             "moving",
             "split",
-            "controls",
-            "reversed"
+            "reversed",
+            "controls"
           ],
           "chainDigest": "reversedcontrolszoneafterroutesplit -> reversed -> controls -> zone -> after -> route -> split -> moving"
         },
@@ -19749,8 +19751,8 @@
           "focusWords": [
             "after",
             "twist",
-            "constraint",
             "pickup",
+            "constraint",
             "input",
             "one"
           ],
@@ -19790,8 +19792,8 @@
           "rowLength": 8,
           "focusWords": [
             "on",
-            "challenge",
             "input",
+            "challenge",
             "break",
             "one",
             "combo"
@@ -19946,8 +19948,8 @@
             "room",
             "every",
             "variant",
-            "challenge",
             "stopping",
+            "challenge",
             "third"
           ],
           "chainDigest": "nostoppingeverythirdroom -> no -> stopping -> every -> third -> room -> variant -> challenge"
@@ -19959,8 +19961,8 @@
           "focusWords": [
             "while",
             "reverse",
-            "challenge",
             "stopping",
+            "challenge",
             "onebutton",
             "carrying"
           ],
@@ -20031,8 +20033,8 @@
             "after",
             "decay",
             "moving",
-            "shared",
-            "health"
+            "pickup",
+            "shared"
           ],
           "chainDigest": "sharedhealthafterpickup -> shared -> health -> after -> pickup -> decay -> moving -> vision"
         },
@@ -20170,9 +20172,9 @@
             "after",
             "decay",
             "moving",
+            "pickup",
             "shared",
-            "goal",
-            "pickup"
+            "goal"
           ],
           "chainDigest": "movinggoalafterpickup -> moving -> goal -> after -> pickup -> nostop -> shared -> decay"
         },
@@ -20282,9 +20284,9 @@
             "for",
             "variant",
             "reverse",
-            "challenge",
             "floor",
-            "finale"
+            "finale",
+            "challenge"
           ],
           "chainDigest": "decayingfloorforfinale -> decaying -> floor -> for -> finale -> variant -> challenge -> reverse"
         },
@@ -20295,9 +20297,9 @@
           "focusWords": [
             "during",
             "reverse",
-            "challenge",
             "floor",
             "alarms",
+            "challenge",
             "onebutton"
           ],
           "chainDigest": "decayingfloorduringalarms -> decaying -> floor -> during -> alarms -> challenge -> reverse -> onebutton"
@@ -20308,8 +20310,8 @@
           "rowLength": 8,
           "focusWords": [
             "after",
-            "reverse",
             "pickup",
+            "reverse",
             "nostop",
             "floor",
             "onebutton"
@@ -20436,9 +20438,9 @@
             "during",
             "variant",
             "constraint",
-            "challenge",
             "patrols",
-            "alarms"
+            "alarms",
+            "challenge"
           ],
           "chainDigest": "invisiblepatrolsduringalarms -> invisible -> patrols -> during -> alarms -> constraint -> variant -> challenge"
         },
@@ -20449,10 +20451,10 @@
           "focusWords": [
             "after",
             "variant",
-            "reverse",
             "pickup",
-            "challenge",
-            "patrols"
+            "reverse",
+            "patrols",
+            "challenge"
           ],
           "chainDigest": "invisiblepatrolsafterpickup -> invisible -> patrols -> after -> pickup -> variant -> challenge -> reverse"
         },
@@ -20463,9 +20465,9 @@
           "focusWords": [
             "near",
             "reverse",
-            "challenge",
             "patrols",
             "treasure",
+            "challenge",
             "onebutton"
           ],
           "chainDigest": "invisiblepatrolsneartreasure -> invisible -> patrols -> near -> treasure -> challenge -> reverse -> onebutton"
@@ -20591,8 +20593,8 @@
             "room",
             "twist",
             "variant",
-            "constraint",
-            "pickup"
+            "pickup",
+            "constraint"
           ],
           "chainDigest": "rotatingroomafterpickup -> rotating -> room -> after -> pickup -> twist -> constraint -> variant"
         },
@@ -20605,8 +20607,8 @@
             "near",
             "variant",
             "constraint",
-            "challenge",
-            "treasure"
+            "treasure",
+            "challenge"
           ],
           "chainDigest": "rotatingroomneartreasure -> rotating -> room -> near -> treasure -> constraint -> variant -> challenge"
         },
@@ -20731,8 +20733,8 @@
             "after",
             "twist",
             "echo",
-            "constraint",
-            "pickup"
+            "pickup",
+            "constraint"
           ],
           "chainDigest": "limitedvisionafterpickup -> limited -> vision -> after -> pickup -> echo -> twist -> constraint"
         },
@@ -20872,7 +20874,7 @@
             "echo",
             "decay",
             "moving",
-            "clone"
+            "pickup"
           ],
           "chainDigest": "echocloneafterpickup -> echo -> clone -> after -> pickup -> decay -> moving -> vision"
         },
@@ -21025,7 +21027,7 @@
             "after",
             "twist",
             "near",
-            "reverse",
+            "pickup",
             "constraint"
           ],
           "chainDigest": "twist -> constraint -> zone -> after -> pickup -> near -> treasure -> reverse"
@@ -21058,15 +21060,17 @@
         },
         {
           "category": "Twist Constraint Seeds",
-          "seed": "twist",
-          "rowLength": 4,
+          "seed": "reversed",
+          "rowLength": 6,
           "focusWords": [
             "zone",
             "twist",
-            "challenge",
-            "reversal"
+            "pickup",
+            "constraint",
+            "reversed",
+            "alarm"
           ],
-          "chainDigest": "twist -> challenge -> reversal -> zone"
+          "chainDigest": "reversed -> twist -> constraint -> alarm -> pickup -> zone"
         }
       ]
     }

@@ -15,6 +15,13 @@
       "metadataPath": "Pages/arcade/aurora-beacon-run/aurora-beacon-run.json"
     },
     {
+      "slug": "auto-arcade-20260502-072241",
+      "title": "Aurora Rift: Quantum Surge",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-072241/",
+      "metadataPath": "Pages/auto-arcade-20260502-072241/auto-arcade-20260502-072241.json"
+    },
+    {
       "slug": "harbor-auto-sprint",
       "title": "Aurora Run",
       "section": "prototypes",
@@ -29,11 +36,123 @@
       "metadataPath": "Pages/arcade/beacon-breaker/beacon-breaker.json"
     },
     {
+      "slug": "auto-arcade-20260502-100125",
+      "title": "Chrono Bloom: Resonance Cascade",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-100125/",
+      "metadataPath": "Pages/auto-arcade-20260502-100125/auto-arcade-20260502-100125.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-100533",
+      "title": "Chrono Bloom: Resonance Cascade",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-100533/",
+      "metadataPath": "Pages/auto-arcade-20260502-100533/auto-arcade-20260502-100533.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-100755",
+      "title": "Chrono Bloom: Resonance Cascade",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-100755/",
+      "metadataPath": "Pages/auto-arcade-20260502-100755/auto-arcade-20260502-100755.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-102625",
+      "title": "Chrono Bloom: Resonance Cascade",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-102625/",
+      "metadataPath": "Pages/auto-arcade-20260502-102625/auto-arcade-20260502-102625.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-065521",
+      "title": "Chrono Drift: Echo Cascade",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-065521/",
+      "metadataPath": "Pages/auto-arcade-20260502-065521/auto-arcade-20260502-065521.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-090407",
+      "title": "Chrono Lens: Ember Shift",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-090407/",
+      "metadataPath": "Pages/auto-arcade-20260502-090407/auto-arcade-20260502-090407.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-103312",
+      "title": "Chrono Shift: Ember Relay",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-103312/",
+      "metadataPath": "Pages/auto-arcade-20260502-103312/auto-arcade-20260502-103312.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-075351",
+      "title": "Circuit Surge: Neon Conduit",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-075351/",
+      "metadataPath": "Pages/auto-arcade-20260502-075351/auto-arcade-20260502-075351.json"
+    },
+    {
       "slug": "clocktower-pieces-guard-break",
       "title": "Clocktower Pieces: Guard Break",
       "section": "prototypes",
       "pagePath": "Pages/clocktower-pieces-guard-break/",
       "metadataPath": "Pages/clocktower-pieces-guard-break/clocktower-pieces-guard-break.json"
+    },
+    {
+      "slug": "dock-spin-swarm-break",
+      "title": "Dock Spin: Swarm Break",
+      "section": "prototypes",
+      "pagePath": "Pages/dock-spin-swarm-break/",
+      "metadataPath": "Pages/dock-spin-swarm-break/dock-spin-swarm-break.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-075113",
+      "title": "Echo Drift: Resonance Cascade",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-075113/",
+      "metadataPath": "Pages/auto-arcade-20260502-075113/auto-arcade-20260502-075113.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-073953",
+      "title": "Echo Grid: Resonance Run",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-073953/",
+      "metadataPath": "Pages/auto-arcade-20260502-073953/auto-arcade-20260502-073953.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-080822",
+      "title": "Echo Lattice: Resonance Drift",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-080822/",
+      "metadataPath": "Pages/auto-arcade-20260502-080822/auto-arcade-20260502-080822.json"
+    },
+    {
+      "slug": "ember-shift-void-relay",
+      "title": "Ember Shift: Void Relay",
+      "section": "prototypes",
+      "pagePath": "Pages/ember-shift-void-relay/",
+      "metadataPath": "Pages/ember-shift-void-relay/ember-shift-void-relay.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-081520",
+      "title": "Ember Shift: Void Relay",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-081520/",
+      "metadataPath": "Pages/auto-arcade-20260502-081520/auto-arcade-20260502-081520.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-083732",
+      "title": "Ember Shift: Void Relay",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-083732/",
+      "metadataPath": "Pages/auto-arcade-20260502-083732/auto-arcade-20260502-083732.json"
+    },
+    {
+      "slug": "error-calling-nvidia-api-urlopen-error-errno-8-nodename-nor-servname-provided-or-not-known",
+      "title": "Error calling NVIDIA API: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+      "section": "prototypes",
+      "pagePath": "Pages/error-calling-nvidia-api-urlopen-error-errno-8-nodename-nor-servname-provided-or-not-known/",
+      "metadataPath": "Pages/error-calling-nvidia-api-urlopen-error-errno-8-nodename-nor-servname-provided-or-not-known/error-calling-nvidia-api-urlopen-error-errno-8-nodename-nor-servname-provided-or-not-known.json"
     },
     {
       "slug": "flooded-artifacts-guard-break",
@@ -48,6 +167,13 @@
       "section": "prototypes",
       "pagePath": "Pages/flooded-while-guard-break/",
       "metadataPath": "Pages/flooded-while-guard-break/flooded-while-guard-break.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-082202",
+      "title": "Gravity Lens: Orbit Fracture",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-082202/",
+      "metadataPath": "Pages/auto-arcade-20260502-082202/auto-arcade-20260502-082202.json"
     },
     {
       "slug": "riftbound-saga",
@@ -71,11 +197,179 @@
       "metadataPath": "Pages/arcade/lantern-rift-lab/lantern-rift-lab.json"
     },
     {
+      "slug": "auto-arcade-20260502-080354",
+      "title": "Molten Core: Ember Ascent",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-080354/",
+      "metadataPath": "Pages/auto-arcade-20260502-080354/auto-arcade-20260502-080354.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-080621",
+      "title": "Neon Convergence: Phase Shift",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-080621/",
+      "metadataPath": "Pages/auto-arcade-20260502-080621/auto-arcade-20260502-080621.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-083013",
+      "title": "Neon Convergence: Resonance Drift",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-083013/",
+      "metadataPath": "Pages/auto-arcade-20260502-083013/auto-arcade-20260502-083013.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-091521",
+      "title": "Neon Convergence: Resonance Drift",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-091521/",
+      "metadataPath": "Pages/auto-arcade-20260502-091521/auto-arcade-20260502-091521.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-092849",
+      "title": "Neon Convergence: Resonance Drift",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-092849/",
+      "metadataPath": "Pages/auto-arcade-20260502-092849/auto-arcade-20260502-092849.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-093746",
+      "title": "Neon Convergence: Resonance Drift",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-093746/",
+      "metadataPath": "Pages/auto-arcade-20260502-093746/auto-arcade-20260502-093746.json"
+    },
+    {
+      "slug": "invent-an-original-arcade-game",
+      "title": "Neon Drift: Resonance Run",
+      "section": "prototypes",
+      "pagePath": "Pages/invent-an-original-arcade-game/",
+      "metadataPath": "Pages/invent-an-original-arcade-game/invent-an-original-arcade-game.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-070503",
+      "title": "Neon Drift: Resonance Run",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-070503/",
+      "metadataPath": "Pages/auto-arcade-20260502-070503/auto-arcade-20260502-070503.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-060622",
+      "title": "Neon Fracture: Pulse Relay",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-060622/",
+      "metadataPath": "Pages/auto-arcade-20260502-060622/auto-arcade-20260502-060622.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-064831",
+      "title": "Neon Fracture: Pulse Relay",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-064831/",
+      "metadataPath": "Pages/auto-arcade-20260502-064831/auto-arcade-20260502-064831.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-071014",
+      "title": "Neon Fracture: Pulse Relay",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-071014/",
+      "metadataPath": "Pages/auto-arcade-20260502-071014/auto-arcade-20260502-071014.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-073040",
+      "title": "Neon Fracture: Pulse Relay",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-073040/",
+      "metadataPath": "Pages/auto-arcade-20260502-073040/auto-arcade-20260502-073040.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-073426",
+      "title": "Neon Fracture: Pulse Relay",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-073426/",
+      "metadataPath": "Pages/auto-arcade-20260502-073426/auto-arcade-20260502-073426.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-092310",
+      "title": "Neon Fracture: Pulse Relay",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-092310/",
+      "metadataPath": "Pages/auto-arcade-20260502-092310/auto-arcade-20260502-092310.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-094115",
+      "title": "Neon Fracture: Pulse Relay",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-094115/",
+      "metadataPath": "Pages/auto-arcade-20260502-094115/auto-arcade-20260502-094115.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-095127",
+      "title": "Neon Fracture: Pulse Relay",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-095127/",
+      "metadataPath": "Pages/auto-arcade-20260502-095127/auto-arcade-20260502-095127.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-082632",
+      "title": "Neon Pulse: Chrono Break",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-082632/",
+      "metadataPath": "Pages/auto-arcade-20260502-082632/auto-arcade-20260502-082632.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-071355",
+      "title": "Neon Shift: Resonance Run",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-071355/",
+      "metadataPath": "Pages/auto-arcade-20260502-071355/auto-arcade-20260502-071355.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-075607",
+      "title": "Neon Shift: Resonance Run",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-075607/",
+      "metadataPath": "Pages/auto-arcade-20260502-075607/auto-arcade-20260502-075607.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-103953",
+      "title": "Neon Strata: Resonance Runner",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-103953/",
+      "metadataPath": "Pages/auto-arcade-20260502-103953/auto-arcade-20260502-103953.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-090853",
+      "title": "Neon Synapse: Pulse Cascade",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-090853/",
+      "metadataPath": "Pages/auto-arcade-20260502-090853/auto-arcade-20260502-090853.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-092534",
+      "title": "Neon Veil: Resonance Drift",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-092534/",
+      "metadataPath": "Pages/auto-arcade-20260502-092534/auto-arcade-20260502-092534.json"
+    },
+    {
       "slug": "overgrown-artifacts-guard-break",
       "title": "Overgrown Artifacts: Guard Break",
       "section": "prototypes",
       "pagePath": "Pages/overgrown-artifacts-guard-break/",
       "metadataPath": "Pages/overgrown-artifacts-guard-break/overgrown-artifacts-guard-break.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-074439",
+      "title": "Phase Cascade: Resonance Drift",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-074439/",
+      "metadataPath": "Pages/auto-arcade-20260502-074439/auto-arcade-20260502-074439.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-084904",
+      "title": "Pier Drift: Shock Circuit",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-084904/",
+      "metadataPath": "Pages/auto-arcade-20260502-084904/auto-arcade-20260502-084904.json"
     },
     {
       "slug": "pier-spin-swarm-break",
@@ -92,6 +386,13 @@
       "metadataPath": "Pages/arcade/pulse-relay-forge/pulse-relay-forge.json"
     },
     {
+      "slug": "auto-arcade-20260502-072627",
+      "title": "Quantum Spin: Resonance Drift",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-072627/",
+      "metadataPath": "Pages/auto-arcade-20260502-072627/auto-arcade-20260502-072627.json"
+    },
+    {
       "slug": "clockwork-courier",
       "title": "Relay Fusion",
       "section": "prototypes",
@@ -99,11 +400,39 @@
       "metadataPath": "Pages/arcade/relay-fusion/clockwork-courier.json"
     },
     {
+      "slug": "auto-arcade-20260502-091900",
+      "title": "Resonance Relay: Ember Shift",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-091900/",
+      "metadataPath": "Pages/auto-arcade-20260502-091900/auto-arcade-20260502-091900.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-103011",
+      "title": "Resonance Relay: Ember Shift",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-103011/",
+      "metadataPath": "Pages/auto-arcade-20260502-103011/auto-arcade-20260502-103011.json"
+    },
+    {
       "slug": "rooftop-while-guard-break",
       "title": "Rooftop While: Guard Break",
       "section": "prototypes",
       "pagePath": "Pages/rooftop-while-guard-break/",
       "metadataPath": "Pages/rooftop-while-guard-break/rooftop-while-guard-break.json"
+    },
+    {
+      "slug": "auto-arcade-manual-test-02",
+      "title": "Silt-Runner: Tide Breach",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-manual-test-02/",
+      "metadataPath": "Pages/auto-arcade-manual-test-02/auto-arcade-manual-test-02.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-084130",
+      "title": "Starlight Rift: Aurora Ascent",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-084130/",
+      "metadataPath": "Pages/auto-arcade-20260502-084130/auto-arcade-20260502-084130.json"
     },
     {
       "slug": "subterranean-artifacts-guard-break",
@@ -132,6 +461,76 @@
       "section": "prototypes",
       "pagePath": "Pages/arcade/tideforge-arena/",
       "metadataPath": "Pages/arcade/tideforge-arena/tideforge-arena.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-094535",
+      "title": "Void Bloom: Resonance Cascade",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-094535/",
+      "metadataPath": "Pages/auto-arcade-20260502-094535/auto-arcade-20260502-094535.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-075816",
+      "title": "Void Cascade: Resonance Shift",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-075816/",
+      "metadataPath": "Pages/auto-arcade-20260502-075816/auto-arcade-20260502-075816.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-081826",
+      "title": "Void Current: Phase Shift",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-081826/",
+      "metadataPath": "Pages/auto-arcade-20260502-081826/auto-arcade-20260502-081826.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-095347",
+      "title": "Void Drift: Ember Shift",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-095347/",
+      "metadataPath": "Pages/auto-arcade-20260502-095347/auto-arcade-20260502-095347.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-065222",
+      "title": "Void Drift: Phase Cascade",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-065222/",
+      "metadataPath": "Pages/auto-arcade-20260502-065222/auto-arcade-20260502-065222.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-085320",
+      "title": "Void Drift: Phase Cascade",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-085320/",
+      "metadataPath": "Pages/auto-arcade-20260502-085320/auto-arcade-20260502-085320.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-071643",
+      "title": "Void Echo: Resonance Drift",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-071643/",
+      "metadataPath": "Pages/auto-arcade-20260502-071643/auto-arcade-20260502-071643.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-083443",
+      "title": "Void Echo: Resonance Drift",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-083443/",
+      "metadataPath": "Pages/auto-arcade-20260502-083443/auto-arcade-20260502-083443.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-093147",
+      "title": "Void Maelstrom: Phase Runner",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-093147/",
+      "metadataPath": "Pages/auto-arcade-20260502-093147/auto-arcade-20260502-093147.json"
+    },
+    {
+      "slug": "auto-arcade-20260502-085756",
+      "title": "Void Resonance: Phase Runner",
+      "section": "prototypes",
+      "pagePath": "Pages/auto-arcade-20260502-085756/",
+      "metadataPath": "Pages/auto-arcade-20260502-085756/auto-arcade-20260502-085756.json"
     }
   ]
 }
