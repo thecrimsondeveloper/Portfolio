@@ -1,0 +1,90 @@
+name: ChatHub Harness
+
+on:
+  push:
+    branches:
+      - development
+      - ChatHub-Output
+    paths:
+      - "ChatHub-Harness/chathub_runner.py"
+      - "ChatHub-Harness/directions/**"
+      - "ChatHub-Harness/workflows/**"
+      - "ChatHub-Harness/lessons/**"
+      - ".github/workflows/chathub-harness.yml"
+  workflow_dispatch:
+    inputs:
+      workflow:
+        description: "Workflow JSON file in ChatHub-Harness/workflows"
+        required: false
+        default: "game-build.workflow.json"
+      output_branch:
+        description: "Branch to receive review output"
+        required: false
+        default: "ChatHub-Output"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: chathub-harness-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  run-harness:
+    runs-on: ubuntu-latest
+    env:
+      WORKFLOW_FILE: ${{ github.event.inputs.workflow || 'game-build.workflow.json' }}
+      OUTPUT_BRANCH: ${{ github.event.inputs.output_branch || 'ChatHub-Output' }}
+      NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+      NVIDIA_API_BASE_URL: ${{ vars.NVIDIA_API_BASE_URL }}
+      NVIDIA_MODEL: ${{ vars.NVIDIA_MODEL }}
+    steps:
+      - name: Checkout source branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run ChatHub Harness
+        run: |
+          python3 ChatHub-Harness/chathub_runner.py \
+            --workflow "ChatHub-Harness/workflows/${WORKFLOW_FILE}" \
+            --direction "ChatHub-Harness/directions/current-direction.md" \
+            --out "ChatHub-Harness/outbox/latest-result.md" \
+            --lessons "ChatHub-Harness/lessons/harness-lessons.md"
+
+      - name: Prepare output branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          mkdir -p /tmp/chathub-output
+          cp ChatHub-Harness/outbox/latest-result.md /tmp/chathub-output/latest-result.md
+          git fetch origin "${OUTPUT_BRANCH}" || true
+          if git show-ref --verify --quiet "refs/remotes/origin/${OUTPUT_BRANCH}"; then
+            git checkout "${OUTPUT_BRANCH}"
+          else
+            git checkout --orphan "${OUTPUT_BRANCH}"
+            git rm -rf . || true
+            mkdir -p ChatHub-Harness/outbox
+            touch ChatHub-Harness/outbox/.gitkeep
+          fi
+          mkdir -p ChatHub-Harness/outbox
+          cp /tmp/chathub-output/latest-result.md ChatHub-Harness/outbox/latest-result.md
+          git add ChatHub-Harness/outbox/latest-result.md ChatHub-Harness/outbox/.gitkeep || true
+          if git diff --cached --quiet; then
+            echo "No ChatHub output changes to commit."
+          else
+            git commit -m "Update ChatHub Harness output"
+            git push origin "HEAD:${OUTPUT_BRANCH}"
+          fi
+
+      - name: Upload harness result
+        uses: actions/upload-artifact@v4
+        with:
+          name: chathub-harness-result
+          path: ChatHub-Harness/outbox/latest-result.md
+          if-no-files-found: error
