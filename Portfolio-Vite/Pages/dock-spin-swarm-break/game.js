@@ -7,40 +7,34 @@ const dampFactor = (delta, sharpness) => 1 - Math.exp(-delta * sharpness);
 class InputManager {
   constructor() {
 	this.keys = { forward: false, backward: false, left: false, right: false };
-	this.dashRequested = false;
-	this.pulseRequested = false;
+	this.surgeRequested = false;
 	window.addEventListener('keydown', (event) => this.onKeyDown(event));
 	window.addEventListener('keyup', (event) => this.onKeyUp(event));
   }
 
   onKeyDown(event) {
-	if (['w', 'ArrowUp'].includes(event.key)) this.keys.forward = true;
-	if (['s', 'ArrowDown'].includes(event.key)) this.keys.backward = true;
-	if (['a', 'ArrowLeft'].includes(event.key)) this.keys.left = true;
-	if (['d', 'ArrowRight'].includes(event.key)) this.keys.right = true;
-	if (event.key === 'Shift' && !event.repeat) this.dashRequested = true;
-	if (event.key === ' ' && !event.repeat) {
-	  this.pulseRequested = true;
+	const key = event.key.toLowerCase();
+	if (['w', 'arrowup'].includes(key)) this.keys.forward = true;
+	if (['s', 'arrowdown'].includes(key)) this.keys.backward = true;
+	if (['a', 'arrowleft'].includes(key)) this.keys.left = true;
+	if (['d', 'arrowright'].includes(key)) this.keys.right = true;
+	if (key === ' ' && !event.repeat) {
+	  this.surgeRequested = true;
 	  event.preventDefault();
 	}
   }
 
   onKeyUp(event) {
-	if (['w', 'ArrowUp'].includes(event.key)) this.keys.forward = false;
-	if (['s', 'ArrowDown'].includes(event.key)) this.keys.backward = false;
-	if (['a', 'ArrowLeft'].includes(event.key)) this.keys.left = false;
-	if (['d', 'ArrowRight'].includes(event.key)) this.keys.right = false;
+	const key = event.key.toLowerCase();
+	if (['w', 'arrowup'].includes(key)) this.keys.forward = false;
+	if (['s', 'arrowdown'].includes(key)) this.keys.backward = false;
+	if (['a', 'arrowleft'].includes(key)) this.keys.left = false;
+	if (['d', 'arrowright'].includes(key)) this.keys.right = false;
   }
 
-  consumeDash() {
-	const requested = this.dashRequested;
-	this.dashRequested = false;
-	return requested;
-  }
-
-  consumePulse() {
-	const requested = this.pulseRequested;
-	this.pulseRequested = false;
+  consumeSurge() {
+	const requested = this.surgeRequested;
+	this.surgeRequested = false;
 	return requested;
   }
 }
@@ -70,18 +64,22 @@ class ArenaGame {
 	this.state = 'loading';
 	this.player = null;
 	this.goal = null;
+	this.disks = [];
+	this.activeDiskIndex = 0;
 	this.relics = [];
 	this.enemies = [];
 	this.hazards = [];
 	this.rain = null;
 	this.timeRemaining = 0;
 	this.relicCount = 0;
-		this.goalUnlocked = false;
-		this.eventMessage = '';
-		this.eventTimer = 0;
-		this.template = 'arena_survival';
-		this.score = 0;
-	  }
+	this.goalUnlocked = false;
+	this.eventMessage = '';
+	this.eventTimer = 0;
+	this.template = 'boss_rush';
+	this.score = 0;
+	this.airborne = false;
+	this.jumpVelocity = 0;
+  }
 
   async init() {
 	await this.loadStory();
@@ -90,7 +88,6 @@ class ArenaGame {
 	this.createPlayer();
 	this.createGoal();
 	this.createRelics();
-	this.createHazards();
 	this.createEnemies();
 	this.createRain();
 	this.resetRun();
@@ -124,7 +121,7 @@ class ArenaGame {
 	this.storyText.textContent = [pitch, '', ...coreLoop.slice(0, 3)].join('\n');
 	this.objective.textContent = this.story.objective || pitch;
 	if (this.overlayHint) {
-	  this.overlayHint.textContent = 'Press Enter to deploy. Use WASD or Arrow keys to move, Shift to dash, Space to pulse. Press R to restart after a wipe.';
+	  this.overlayHint.textContent = 'Press Enter to deploy. WASD to move, Space to Surge (dash + pulse). Reach the final beacon to extract. Press R to restart.';
 	}
   }
 
@@ -136,7 +133,7 @@ class ArenaGame {
   startRun() {
 	this.overlay.classList.remove('visible');
 	this.state = 'running';
-	this.setStatus(this.config.rules.statusMessage || 'Collect relics and unlock the exit.', 2.2);
+	this.setStatus('Boss Rush Mode — Reach the Beacon.', 2.2);
   }
 
   applyVisualTheme() {
@@ -152,41 +149,62 @@ class ArenaGame {
 	keyLight.castShadow = true;
 	keyLight.shadow.mapSize.set(2048, 2048);
 	this.scene.add(keyLight);
-
-	const rimLight = new THREE.PointLight(0x7df9ff, 7, 70, 2.1);
-	rimLight.position.set(-18, 14, -8);
-	this.scene.add(rimLight);
   }
 
   createArena() {
-	const arena = this.config.arena;
-	const floor = new THREE.Mesh(
-	  new THREE.PlaneGeometry(arena.width, arena.depth),
-	  new THREE.MeshStandardMaterial({ color: arena.groundColor, metalness: 0.15, roughness: 0.88 })
-	);
-	floor.rotation.x = -Math.PI / 2;
-	floor.receiveShadow = true;
-	this.scene.add(floor);
+	const diskCount = 8;
+	const diskRadius = 14;
+	const gap = 12;
+	
+	for (let i = 0; i < diskCount; i++) {
+	  const diskGroup = new THREE.Group();
+	  const posZ = i * -(diskRadius * 2 + gap);
+	  diskGroup.position.set(0, 0, posZ);
+	  
+	  // Create wedges for the disk
+	  const wedgeCount = 12;
+	  const wedges = [];
+	  for (let j = 0; j < wedgeCount; j++) {
+		const startAngle = (j / wedgeCount) * Math.PI * 2;
+		const endAngle = ((j + 1) / wedgeCount) * Math.PI * 2;
+		const wedgeGeo = new THREE.Shape();
+		wedgeGeo.moveTo(0, 0);
+		wedgeGeo.absarc(0, 0, diskRadius, startAngle, endAngle, false);
+		wedgeGeo.lineTo(0, 0);
+		
+		const geometry = new THREE.ShapeGeometry(wedgeGeo);
+		const material = new THREE.MeshStandardMaterial({ 
+		  color: i % 3 === 0 ? 0x1a2a3a : 0x0a1a2a,
+		  emissive: 0x00ffff,
+		  emissiveIntensity: 0.05,
+		  metalness: 0.8,
+		  roughness: 0.2,
+		  side: THREE.DoubleSide
+		});
+		
+		const mesh = new THREE.Mesh(geometry, material);
+		mesh.rotation.x = -Math.PI / 2;
+		mesh.receiveShadow = true;
+		diskGroup.add(mesh);
+		wedges.push({ 
+		  mesh, 
+		  state: 'idle', 
+		  timer: 0,
+		  originalColor: material.color.clone() 
+		});
+	  }
+	  
+	  this.scene.add(diskGroup);
+	  this.disks.push({ group: diskGroup, wedges, radius: diskRadius, index: i });
+	}
 
-	const water = new THREE.Mesh(
-	  new THREE.CircleGeometry(Math.max(arena.width, arena.depth) * 0.72, 64),
-	  new THREE.MeshBasicMaterial({ color: 0x06101d, transparent: true, opacity: 0.85 })
-	);
-	water.rotation.x = -Math.PI / 2;
-	water.position.y = -0.03;
-	this.scene.add(water);
+	// Skybox and Fog
+	this.scene.background = new THREE.Color(0x020408);
+	this.scene.fog = new THREE.FogExp2(0x050810, 0.012);
 
-	const grid = new THREE.GridHelper(arena.width, 18, arena.accentColor, arena.laneColor);
-	grid.position.y = 0.02;
-	this.scene.add(grid);
-
-	const boundary = new THREE.Mesh(
-	  new THREE.RingGeometry(arena.width * 0.46, arena.width * 0.49, 64),
-	  new THREE.MeshBasicMaterial({ color: arena.accentColor, transparent: true, opacity: 0.16, side: THREE.DoubleSide })
-	);
-	boundary.rotation.x = -Math.PI / 2;
-	boundary.position.y = 0.03;
-	this.scene.add(boundary);
+	const coreLight = new THREE.PointLight(0x00ffff, 500, 300);
+	coreLight.position.set(0, 50, -100);
+	this.scene.add(coreLight);
   }
 
   createPlayer() {
@@ -215,47 +233,55 @@ class ArenaGame {
 	  ring,
 	  radius: playerConfig.radius,
 	  velocity: new THREE.Vector3(),
-	  dashCooldown: 0,
-	  pulseCooldown: 0,
+	  surgeCooldown: 0,
 	  invulnerability: 0,
 	  maxHealth: playerConfig.maxHealth,
 	  health: playerConfig.maxHealth,
+	  verticalVelocity: 0,
+	  isJumping: false
 	};
   }
 
   createGoal() {
-	const goalConfig = this.config.goal;
+	const lastDisk = this.disks[this.disks.length - 1];
 	const group = new THREE.Group();
 	const ring = new THREE.Mesh(
-	  new THREE.TorusGeometry(goalConfig.radius, 0.18, 16, 40),
-	  new THREE.MeshStandardMaterial({ color: 0x24415f, emissive: 0x112235, emissiveIntensity: 0.45 })
+	  new THREE.TorusGeometry(3.5, 0.4, 16, 40),
+	  new THREE.MeshStandardMaterial({ color: 0x00ffff, emissive: 0x004444, emissiveIntensity: 1.0 })
 	);
 	ring.rotation.x = Math.PI / 2;
 	group.add(ring);
 
 	const beacon = new THREE.Mesh(
-	  new THREE.CylinderGeometry(0.38, 0.38, 4.5, 12),
-	  new THREE.MeshStandardMaterial({ color: goalConfig.color, emissive: 0x1a3840, emissiveIntensity: 0.8 })
+	  new THREE.CylinderGeometry(0.5, 0.5, 12, 12),
+	  new THREE.MeshStandardMaterial({ color: 0x00ffff, emissive: 0x00ffff, emissiveIntensity: 2.0, transparent: true, opacity: 0.6 })
 	);
-	beacon.position.y = 2.2;
-	beacon.castShadow = true;
+	beacon.position.y = 6;
 	group.add(beacon);
 
-	group.position.set(goalConfig.position.x, goalConfig.position.y, goalConfig.position.z);
+	group.position.copy(lastDisk.group.position);
+	group.position.y = 0.1;
 	this.scene.add(group);
-	this.goal = { mesh: group, ring, beacon, radius: goalConfig.radius, unlockRelics: goalConfig.unlockRelics };
+	this.goal = { mesh: group, ring, beacon, radius: 4 };
   }
 
   createRelics() {
-	this.relics = this.config.relics.map((config, index) => {
-	  const mesh = new THREE.Mesh(
-		new THREE.OctahedronGeometry(0.7 + (index % 2) * 0.1, 0),
-		new THREE.MeshStandardMaterial({ color: config.color, emissive: 0x19304a, emissiveIntensity: 0.75, roughness: 0.2 })
-	  );
-	  mesh.position.set(config.position.x, config.position.y, config.position.z);
-	  mesh.castShadow = true;
-	  this.scene.add(mesh);
-	  return { mesh, label: config.label, baseY: config.position.y, collected: false };
+	this.relics = [];
+	this.disks.forEach((disk, dIdx) => {
+	  if (dIdx === 0) return;
+	  for (let i = 0; i < 2; i++) {
+		const angle = Math.random() * Math.PI * 2;
+		const r = Math.random() * disk.radius * 0.7;
+		const mesh = new THREE.Mesh(
+		  new THREE.OctahedronGeometry(0.8, 0),
+		  new THREE.MeshStandardMaterial({ color: 0x00ffff, emissive: 0x008888, emissiveIntensity: 0.8, roughness: 0.1 })
+		);
+		const pos = new THREE.Vector3(Math.cos(angle) * r, 1.2, Math.sin(angle) * r).add(disk.group.position);
+		mesh.position.copy(pos);
+		mesh.castShadow = true;
+		this.scene.add(mesh);
+		this.relics.push({ mesh, baseY: 1.2, collected: false, diskIndex: dIdx });
+	  }
 	});
   }
 
@@ -280,36 +306,39 @@ class ArenaGame {
   }
 
   createEnemies() {
-	this.enemies = this.config.enemies.map((config, index) => {
-	  const group = new THREE.Group();
-	  const body = new THREE.Mesh(
-		new THREE.DodecahedronGeometry(config.radius, 0),
-		new THREE.MeshStandardMaterial({ color: config.color, emissive: 0x21111b, emissiveIntensity: 0.4, roughness: 0.35 })
-	  );
-	  body.castShadow = true;
-	  group.add(body);
-	  const fin = new THREE.Mesh(
-		new THREE.ConeGeometry(config.radius * 0.55, config.radius * 1.45, 8),
-		new THREE.MeshStandardMaterial({ color: 0xfff2d8, emissive: 0x281a12, emissiveIntensity: 0.22 })
-	  );
-	  fin.rotation.x = Math.PI;
-	  fin.position.y = config.radius * 0.95;
-	  group.add(fin);
-	  group.position.set(config.position.x, config.position.y, config.position.z);
-	  this.scene.add(group);
-	  return {
-		mesh: group,
-		name: config.name,
-		role: config.role,
-		speed: config.speed,
-		radius: config.radius,
-		pursuitRange: config.pursuitRange,
-		anchor: new THREE.Vector3(config.position.x, config.position.y, config.position.z),
-		velocity: new THREE.Vector3(),
-		stun: 0,
-		hitCooldown: 0,
-		phase: index * 0.7,
-	  };
+	this.enemies = [];
+	this.disks.forEach((disk, dIdx) => {
+	  if (dIdx === 0) return;
+	  const enemyCount = dIdx % 3 === 0 ? 3 : 1;
+	  for (let i = 0; i < enemyCount; i++) {
+		const group = new THREE.Group();
+		const body = new THREE.Mesh(
+		  new THREE.DodecahedronGeometry(0.9, 0),
+		  new THREE.MeshStandardMaterial({ color: 0xff0055, emissive: 0x440000, emissiveIntensity: 0.5, roughness: 0.3 })
+		);
+		body.castShadow = true;
+		group.add(body);
+		
+		const angle = Math.random() * Math.PI * 2;
+		const r = disk.radius * 0.5;
+		const pos = new THREE.Vector3(Math.cos(angle) * r, 0.9, Math.sin(angle) * r).add(disk.group.position);
+		group.position.copy(pos);
+		this.scene.add(group);
+		
+		this.enemies.push({
+		  mesh: group,
+		  name: 'Swarm Unit',
+		  speed: 1.2 + dIdx * 0.1,
+		  radius: 0.9,
+		  pursuitRange: 18,
+		  diskIndex: dIdx,
+		  anchor: pos.clone(),
+		  velocity: new THREE.Vector3(),
+		  stun: 0,
+		  hitCooldown: 0,
+		  phase: Math.random() * 10
+		});
+	  }
 	});
   }
 
@@ -335,22 +364,23 @@ class ArenaGame {
   }
 
   resetRun() {
-	const playerConfig = this.config.player;
-	this.player.mesh.position.set(playerConfig.start.x, playerConfig.start.y, playerConfig.start.z);
+	this.player.mesh.position.set(0, 0, 0);
 	this.player.velocity.set(0, 0, 0);
+	this.player.verticalVelocity = 0;
+	this.player.isJumping = false;
 	this.player.health = this.player.maxHealth;
-	this.player.dashCooldown = 0;
-	this.player.pulseCooldown = 0;
+	this.player.surgeCooldown = 0;
 	this.player.invulnerability = 0;
-		this.goalUnlocked = false;
-		this.relicCount = 0;
-		this.score = 0;
-		this.timeRemaining = this.config.rules.timeLimitSeconds;
+	this.activeDiskIndex = 0;
+	this.goalUnlocked = false;
+	this.relicCount = 0;
+	this.score = 0;
+	this.timeRemaining = 120;
 	this.state = 'running';
 	this.elapsed = 0;
 	this.overlay.classList.remove('visible');
-	this.setStatus(this.config.rules.statusMessage || 'Collect relics and unlock the exit.', 2.2);
-
+	this.setStatus('Rush initiated. Reach the beacon.', 2.2);
+	
 	this.relics.forEach((relic) => {
 	  relic.collected = false;
 	  relic.mesh.visible = true;
@@ -391,9 +421,7 @@ class ArenaGame {
   }
 
   triggerPulse() {
-	if (this.player.pulseCooldown > 0 || this.state !== 'running') return;
-	const radius = this.config.player.pulseRadius;
-	this.player.pulseCooldown = this.config.player.pulseCooldown;
+	const radius = this.config.player.pulseRadius || 8;
 	this.player.ring.scale.setScalar(1.7);
 	this.enemies.forEach((enemy) => {
 	  const offset = enemy.mesh.position.clone().sub(this.player.mesh.position);
@@ -405,7 +433,7 @@ class ArenaGame {
 		enemy.stun = 1.3;
 	  }
 	});
-	this.setStatus('Pulse burst cleared breathing room.', 1.0);
+	this.setStatus('Pulse burst!', 1.0);
   }
 
   updatePlayer(delta) {
@@ -416,37 +444,72 @@ class ArenaGame {
 	);
 	if (move.lengthSq() > 0) move.normalize();
 
-	if (this.input.consumeDash() && this.player.dashCooldown <= 0) {
-	  const dashDirection = move.lengthSq() > 0 ? move.clone() : new THREE.Vector3(0, 0, -1);
-	  this.player.velocity.add(dashDirection.multiplyScalar(this.config.player.dashSpeed));
-	  this.player.dashCooldown = this.config.player.dashCooldown;
-	  this.player.mesh.rotation.y += 20; // Instant spin start
-	  this.setStatus('Spin dash engaged.', 0.8);
+	const activeDisk = this.disks[this.activeDiskIndex];
+	const distToCenter = new THREE.Vector3(this.player.mesh.position.x, 0, this.player.mesh.position.z)
+	  .sub(new THREE.Vector3(activeDisk.group.position.x, 0, activeDisk.group.position.z))
+	  .length();
+
+	const isOffDisk = distToCenter > activeDisk.radius;
+
+	if (this.input.consumeSurge() && this.player.surgeCooldown <= 0) {
+	  if (isOffDisk) {
+		const jumpDir = move.lengthSq() > 0 ? move.clone() : new THREE.Vector3(0, 0, -1);
+		this.player.velocity.add(jumpDir.multiplyScalar(22));
+		this.player.verticalVelocity = 12;
+		this.player.isJumping = true;
+		this.setStatus('Vaulting the Void!', 0.8);
+	  } else {
+		const dashDirection = move.lengthSq() > 0 ? move.clone() : new THREE.Vector3(0, 0, -1);
+		this.player.velocity.add(dashDirection.multiplyScalar(28));
+		this.triggerPulse();
+		this.setStatus('Surge Burst!', 0.8);
+	  }
+	  this.player.surgeCooldown = 1.2;
+	  this.player.invulnerability = 0.6;
 	}
 
-	if (this.input.consumePulse()) {
-	  this.triggerPulse();
-	}
-
-		const desiredVelocity = move.multiplyScalar(this.config.player.speed);
-		this.player.velocity.lerp(desiredVelocity, dampFactor(delta, 12));
-		if (this.template === 'route_runner' && this.state === 'running') {
-		  this.player.velocity.z -= 1.6;
+	if (this.player.isJumping || isOffDisk) {
+	  this.player.verticalVelocity -= delta * 30;
+	  this.player.mesh.position.y += this.player.verticalVelocity * delta;
+	  
+	  if (this.player.mesh.position.y < -20) {
+		this.applyDamage(100, 'Fell into the Void.');
+	  }
+	  
+	  const nextDiskIndex = this.activeDiskIndex + 1;
+	  const nextDisk = this.disks[nextDiskIndex];
+	  if (nextDisk) {
+		const distToNext = new THREE.Vector3(this.player.mesh.position.x, 0, this.player.mesh.position.z)
+		  .sub(new THREE.Vector3(nextDisk.group.position.x, 0, nextDisk.group.position.z))
+		  .length();
+		if (distToNext < nextDisk.radius && this.player.mesh.position.y <= 0 && this.player.mesh.position.y > -2) {
+		  this.player.mesh.position.y = 0;
+		  this.player.verticalVelocity = 0;
+		  this.player.isJumping = false;
+		  this.activeDiskIndex = nextDiskIndex;
+		  this.setStatus(`Disk ${nextDiskIndex + 1} Secured.`, 1.0);
 		}
-		this.player.mesh.position.addScaledVector(this.player.velocity, delta);
-		this.player.mesh.rotation.y += delta * this.player.velocity.length() * 2;
-	this.player.velocity.multiplyScalar(0.92);
+	  }
+	} else {
+	  this.player.mesh.position.y = 0;
+	}
 
-	const halfWidth = this.config.arena.width * 0.5 - 1.8;
-	const halfDepth = this.config.arena.depth * 0.5 - 1.8;
-	this.player.mesh.position.x = clamp(this.player.mesh.position.x, -halfWidth, halfWidth);
-	this.player.mesh.position.z = clamp(this.player.mesh.position.z, -halfDepth, halfDepth);
-	this.player.mesh.rotation.y = Math.atan2(this.player.velocity.x || move.x, this.player.velocity.z || move.z);
+	const desiredVelocity = move.multiplyScalar(15);
+	this.player.velocity.lerp(desiredVelocity, dampFactor(delta, 10));
+	this.player.mesh.position.addScaledVector(this.player.velocity, delta);
+	this.player.velocity.multiplyScalar(0.95);
+
+	if (move.lengthSq() > 0) {
+	  const targetRot = Math.atan2(move.x, move.z);
+	  this.player.mesh.rotation.y = targetRot;
+	}
   }
 
   updateEnemies(delta) {
 	this.enemies.forEach((enemy) => {
 	  enemy.hitCooldown = Math.max(0, enemy.hitCooldown - delta);
+	  const disk = this.disks[enemy.diskIndex];
+	  
 	  if (enemy.stun > 0) {
 		enemy.stun = Math.max(0, enemy.stun - delta);
 		enemy.mesh.rotation.y += delta * 6;
@@ -454,35 +517,32 @@ class ArenaGame {
 	  } else {
 		const chase = this.player.mesh.position.clone().sub(enemy.mesh.position);
 		chase.y = 0;
-		const distance = chase.length();
+		const distanceToPlayer = chase.length();
+		
 		let desiredVelocity = new THREE.Vector3();
-			if (this.template === 'stealth_patrol') {
-			  const patrol = new THREE.Vector3(Math.sin(this.elapsed * 0.8 + enemy.phase), 0, Math.cos(this.elapsed * 0.6 + enemy.phase));
-			  desiredVelocity = distance < enemy.pursuitRange ? chase.normalize().multiplyScalar(enemy.speed * 3.2) : patrol.multiplyScalar(enemy.speed * 1.45);
-			} else if (this.template === 'route_runner') {
-			  desiredVelocity.set(Math.sin(this.elapsed * 1.6 + enemy.phase), 0, Math.cos(this.elapsed * 0.4 + enemy.phase) * 0.35).multiplyScalar(enemy.speed * 2.4);
-			  if (distance < enemy.pursuitRange) desiredVelocity.add(chase.normalize().multiplyScalar(enemy.speed * 1.7));
-			} else if (this.template === 'relay_chain') {
-			  desiredVelocity = distance < enemy.pursuitRange ? chase.normalize().multiplyScalar(enemy.speed * 3.5) : enemy.anchor.clone().sub(enemy.mesh.position).setY(0).multiplyScalar(0.25);
-			} else {
-			  if (distance < enemy.pursuitRange) {
-				desiredVelocity = chase.normalize().multiplyScalar(enemy.speed * 4.3);
-			  } else {
-				desiredVelocity.set(Math.sin(this.elapsed + enemy.phase), 0, Math.cos(this.elapsed * 0.8 + enemy.phase)).multiplyScalar(enemy.speed * 1.8);
-			  }
-			}
-		enemy.velocity.lerp(desiredVelocity, dampFactor(delta, 4.8));
+		if (this.activeDiskIndex === enemy.diskIndex && distanceToPlayer < enemy.pursuitRange) {
+		  desiredVelocity = chase.normalize().multiplyScalar(enemy.speed * 4.0);
+		} else {
+		  const patrolPos = new THREE.Vector3(Math.sin(this.elapsed + enemy.phase) * 5, 0, Math.cos(this.elapsed * 0.8 + enemy.phase) * 5).add(disk.group.position);
+		  desiredVelocity = patrolPos.sub(enemy.mesh.position).normalize().multiplyScalar(enemy.speed * 1.5);
+		}
+		enemy.velocity.lerp(desiredVelocity, dampFactor(delta, 4.0));
 	  }
 
 	  enemy.mesh.position.addScaledVector(enemy.velocity, delta);
-	  enemy.mesh.position.x = clamp(enemy.mesh.position.x, -24, 24);
-	  enemy.mesh.position.z = clamp(enemy.mesh.position.z, -24, 24);
+	  
+	  const localPos = enemy.mesh.position.clone().sub(disk.group.position);
+	  if (localPos.length() > disk.radius - 1) {
+		localPos.setLength(disk.radius - 1);
+		enemy.mesh.position.copy(localPos.add(disk.group.position));
+	  }
+	  
 	  enemy.mesh.lookAt(this.player.mesh.position.x, enemy.mesh.position.y, this.player.mesh.position.z);
 
-	  const distanceToPlayer = enemy.mesh.position.clone().sub(this.player.mesh.position).setY(0).length();
-	  if (distanceToPlayer < enemy.radius + this.player.radius && enemy.hitCooldown <= 0) {
+	  const distToPlayer = enemy.mesh.position.clone().sub(this.player.mesh.position).setY(0).length();
+	  if (distToPlayer < enemy.radius + this.player.radius && enemy.hitCooldown <= 0) {
 		enemy.hitCooldown = 1.1;
-		this.applyDamage(12, `${enemy.name} broke through the route.`);
+		this.applyDamage(15, `Swarm Unit collision.`);
 	  }
 	});
   }
@@ -493,21 +553,12 @@ class ArenaGame {
 	  relic.mesh.rotation.y += delta * (1.5 + index * 0.15);
 	  relic.mesh.position.y = relic.baseY + Math.sin(this.elapsed * 2 + index) * 0.18;
 	  const distance = relic.mesh.position.clone().sub(this.player.mesh.position).setY(0).length();
-		  if (distance < 1.65) {
-			relic.collected = true;
-			relic.mesh.visible = false;
-			this.relicCount += 1;
-			const scoreGain = this.template === 'relay_chain' ? 150 : this.template === 'stealth_patrol' ? 125 : 100;
-			this.score += scoreGain;
-			const scoreLabel = this.config.rules.scoreLabel || 'Relic';
-			this.setStatus(`${scoreLabel} ${relic.label} secured. Exit charge increased.`, 1.0);
-		if (!this.goalUnlocked && this.relicCount >= this.goal.unlockRelics) {
-		  this.goalUnlocked = true;
-		  this.goal.ring.material.color.set(0x7df9ff);
-		  this.goal.ring.material.emissive?.set?.(0x0f3340);
-		  this.goal.beacon.material.emissiveIntensity = 1.35;
-		  this.setStatus('Exit gate unlocked. Reach the beacon.', 1.4);
-		}
+	  if (distance < 1.65) {
+		relic.collected = true;
+		relic.mesh.visible = false;
+		this.relicCount += 1;
+		this.score += 100;
+		this.setStatus(`Relic secured.`, 1.0);
 	  }
 	});
   }
@@ -518,7 +569,7 @@ class ArenaGame {
 	  hazard.outline.scale.setScalar(pulse);
 	  const distance = hazard.mesh.position.clone().sub(this.player.mesh.position).setY(0).length();
 	  if (distance < hazard.radius) {
-		this.applyDamage(hazard.damagePerSecond * delta, `${hazard.name} chewed through the route.`);
+		this.applyDamage(5 * delta, `Hazard hit.`);
 	  }
 	});
   }
@@ -527,18 +578,10 @@ class ArenaGame {
 	const bob = Math.sin(this.elapsed * 2.8) * 0.16;
 	this.goal.beacon.position.y = 2.2 + bob;
 	this.goal.ring.rotation.z += 0.01;
-	if (!this.goalUnlocked) return;
-		const distance = this.goal.mesh.position.clone().sub(this.player.mesh.position).setY(0).length();
-		if (distance < this.goal.radius) {
-		  const winCopy = {
-			arena_survival: ['Route Cleared', 'The exit gate is live and the relic chain is stable. Press R to run it again.'],
-			route_runner: ['Finish Lane Cleared', 'The route gates are behind you and the sprint line is open. Press R to run it again.'],
-			stealth_patrol: ['Extraction Quiet', 'The patrol grid never fully locked on and the intel is secure. Press R to run it again.'],
-			relay_chain: ['Signal Chain Live', 'Every relay is linked and the final beacon is transmitting. Press R to run it again.'],
-			extraction_maze: ['Maze Extracted', 'The artifact route is mapped and the exit is open. Press R to run it again.'],
-		  }[this.template] || ['Route Cleared', 'The exit gate is live. Press R to run it again.'];
-		  this.finishRun(winCopy[0], winCopy[1]);
-		}
+	const distance = this.goal.mesh.position.clone().sub(this.player.mesh.position).setY(0).length();
+	if (distance < this.goal.radius) {
+	  this.finishRun('Extraction Complete', 'The final beacon was reached.');
+	}
   }
 
   updateRain(delta) {
@@ -557,52 +600,78 @@ class ArenaGame {
   }
 
   updateCamera(delta) {
-	const offset = this.config.camera.offset;
-	const targetPosition = new THREE.Vector3(
-	  this.player.mesh.position.x + offset.x,
-	  offset.y,
-	  this.player.mesh.position.z + offset.z
-	);
-	this.camera.position.lerp(targetPosition, dampFactor(delta, 3.5));
-	this.camera.lookAt(this.player.mesh.position.x, 0.8, this.player.mesh.position.z - 2);
+	const activeDisk = this.disks[this.activeDiskIndex];
+	const targetPosition = activeDisk.group.position.clone().add(new THREE.Vector3(0, 22, 28));
+	targetPosition.x += this.player.mesh.position.x * 0.3;
+	this.camera.position.lerp(targetPosition, dampFactor(delta, 2.5));
+	this.camera.lookAt(activeDisk.group.position);
   }
 
   updateHud(delta) {
 	this.timeRemaining = Math.max(0, this.timeRemaining - delta);
-	this.player.dashCooldown = Math.max(0, this.player.dashCooldown - delta);
-	this.player.pulseCooldown = Math.max(0, this.player.pulseCooldown - delta);
+	this.player.surgeCooldown = Math.max(0, this.player.surgeCooldown - delta);
 	this.player.invulnerability = Math.max(0, this.player.invulnerability - delta);
 	this.player.ring.scale.lerp(new THREE.Vector3(1, 1, 1), dampFactor(delta, 6));
 
 	if (this.timeRemaining <= 0 && this.state === 'running') {
-	  this.finishRun('Window Closed', 'The storm sealed the route before extraction. Press R to try again.');
+	  this.finishRun('Run Expired', 'The void consumed the route. Press R to restart.');
 	}
 
 	if (this.eventTimer > 0) {
 	  this.eventTimer = Math.max(0, this.eventTimer - delta);
-		}
-		const activeMessage = this.eventTimer > 0 ? this.eventMessage : this.config.rules.statusMessage;
-		this.status.textContent = activeMessage;
-		const templateLabel = (this.config.rules.mechanicFamily || this.template).replace(/_/g, ' ');
-		const scoreLabel = this.config.rules.scoreLabel || 'Relics';
-		this.metrics.textContent = `${templateLabel} | Health ${Math.ceil(this.player.health)} | ${scoreLabel} ${this.relicCount}/${this.goal.unlockRelics} | Score ${this.score} | Time ${Math.ceil(this.timeRemaining)}s | Dash ${this.player.dashCooldown > 0 ? this.player.dashCooldown.toFixed(1) + 's' : 'ready'} | Pulse ${this.player.pulseCooldown > 0 ? this.player.pulseCooldown.toFixed(1) + 's' : 'ready'}`;
-	  }
+	}
+	const activeMessage = this.eventTimer > 0 ? this.eventMessage : 'Boss Rush Mode';
+	this.status.textContent = activeMessage;
+	this.metrics.textContent = `Disk ${this.activeDiskIndex + 1}/${this.disks.length} | Health ${Math.ceil(this.player.health)} | Score ${this.score} | Time ${Math.ceil(this.timeRemaining)}s | Surge ${this.player.surgeCooldown > 0 ? this.player.surgeCooldown.toFixed(1) + 's' : 'READY'}`;
+  }
 
   update(delta) {
 	if (this.state !== 'running') {
-	  this.updateRain(delta);
 	  this.updateCamera(delta);
 	  return;
 	}
 	this.elapsed += delta;
 	this.updatePlayer(delta);
+	this.updateSlices(delta);
 	this.updateEnemies(delta);
 	this.updateRelics(delta);
-	this.updateHazards(delta);
 	this.updateGoal();
-	this.updateRain(delta);
 	this.updateCamera(delta);
 	this.updateHud(delta);
+  }
+
+  updateSlices(delta) {
+	this.disks.forEach((disk, dIdx) => {
+	  disk.wedges.forEach((wedge, wIdx) => {
+		if (wedge.state === 'hazardous') {
+		  wedge.timer -= delta;
+		  const flash = Math.sin(this.elapsed * 15) * 0.5 + 0.5;
+		  wedge.mesh.material.emissive.setRGB(1, 0, 0);
+		  wedge.mesh.material.emissiveIntensity = 0.2 + flash * 0.8;
+		  
+		  // Damage check
+		  if (dIdx === this.activeDiskIndex) {
+			const playerPos = this.player.mesh.position.clone().sub(disk.group.position);
+			const angle = Math.atan2(playerPos.x, playerPos.z);
+			const normalizedAngle = (angle + Math.PI) / (Math.PI * 2);
+			const wedgeAngleIdx = Math.floor(normalizedAngle * disk.wedges.length);
+			if (wedgeAngleIdx === wIdx) {
+			  this.applyDamage(20 * delta, 'Slice electrified!');
+			}
+		  }
+
+		  if (wedge.timer <= 0) {
+			wedge.state = 'idle';
+			wedge.mesh.material.emissive.setHex(0x00ffff);
+			wedge.mesh.material.emissiveIntensity = 0.05;
+		  }
+		} else if (Math.random() < 0.001) {
+		  // Random hazard trigger
+		  wedge.state = 'hazardous';
+		  wedge.timer = 3.0;
+		}
+	  });
+	});
   }
 
   animate() {
