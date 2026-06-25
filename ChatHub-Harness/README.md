@@ -10,7 +10,7 @@ user direction
 → workflow JSON
 → Python runner
 → NVIDIA/OpenAI-compatible endpoint when configured
-→ outbox result
+→ outbox result on ChatHub-Output
 → human/agent review
 → lesson update
 → next direction
@@ -43,6 +43,26 @@ ChatHub-Harness
     └── .gitkeep
 ```
 
+## Branch model
+
+```text
+development
+└── source harness, workflows, directions, lessons, app code
+
+ChatHub-Output
+└── review branch for generated harness results
+```
+
+The workflow runs from pushes to either `development` or `ChatHub-Output` when harness source, direction, workflow, lesson, or workflow-yml files change.
+
+Generated result commits are pushed to:
+
+```text
+ChatHub-Output:ChatHub-Harness/outbox/latest-result.md
+```
+
+The action path filter intentionally avoids rerunning from generated `outbox` changes alone. This keeps the output branch reviewable without creating an infinite workflow loop.
+
 ## Local run
 
 ```bash
@@ -74,4 +94,14 @@ The workflow file is:
 .github/workflows/chathub-harness.yml
 ```
 
-It runs on pushes to `development` that touch `ChatHub-Harness/**`, and it can also be run manually with `workflow_dispatch`.
+Default behavior:
+
+```text
+push to development or ChatHub-Output
+→ run ChatHub-Harness/chathub_runner.py
+→ write latest-result.md
+→ commit review result to ChatHub-Output
+→ upload latest-result.md as an Actions artifact
+```
+
+Manual runs can choose the workflow JSON and output branch through `workflow_dispatch`.
