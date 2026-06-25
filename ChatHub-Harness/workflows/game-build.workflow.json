@@ -1,0 +1,70 @@
+{
+  "id": "game-build",
+  "title": "Linear Game Build Harness",
+  "version": 1,
+  "provider": "nvidia-openai-compatible",
+  "endpoint": {
+    "baseUrlEnv": "NVIDIA_API_BASE_URL",
+    "defaultBaseUrl": "https://integrate.api.nvidia.com/v1",
+    "apiKeyEnv": "NVIDIA_API_KEY",
+    "modelEnv": "NVIDIA_MODEL",
+    "defaultModel": "mistralai/mixtral-8x7b-instruct-v0.1"
+  },
+  "intent": "Turn a committed user direction into a bounded, reviewable game-building plan or Arcade implementation packet.",
+  "linearSteps": [
+    {
+      "id": "01-read-direction",
+      "goal": "Restate the committed direction and identify the intended game or harness improvement."
+    },
+    {
+      "id": "02-map-repo-boundary",
+      "goal": "Choose the correct repo boundary: ChatHub-Harness, Portfolio-Vite app, Arcade Pages, Arcade runtime, CLI harness, docs, or lessons."
+    },
+    {
+      "id": "03-select-output-mode",
+      "goal": "Decide whether this pass should produce a plan, a game JSON packet, a validation checklist, or a lesson update."
+    },
+    {
+      "id": "04-plan-game-loop",
+      "goal": "If game-building is requested, define the core loop, player action, scoring, failure state, and replay hook."
+    },
+    {
+      "id": "05-plan-runtime-fit",
+      "goal": "Fit the idea to an existing Arcade runtime mode before proposing new runtime code."
+    },
+    {
+      "id": "06-plan-json-contract",
+      "goal": "Define the JSON/schema fields, assets, labels, and constraints required for a safe build."
+    },
+    {
+      "id": "07-plan-validation",
+      "goal": "List the exact validation commands or checks needed before a push or review."
+    },
+    {
+      "id": "08-record-lessons",
+      "goal": "Extract any durable harness lesson, blocker, or rule that should be written into lessons."
+    },
+    {
+      "id": "09-next-direction",
+      "goal": "Produce the smallest useful next direction for the next harness run."
+    }
+  ],
+  "outputContract": [
+    "# ChatHub Result",
+    "## Direction Understood",
+    "## Boundary Decision",
+    "## Linear Workflow Pass",
+    "## Proposed Game/Build Packet",
+    "## Validation Checklist",
+    "## Lessons To Record",
+    "## Next Direction"
+  ],
+  "constraints": [
+    "Stay linear.",
+    "Do not claim files were edited unless the runner or user actually edits them.",
+    "Prefer reviewable artifacts over hidden autonomous changes.",
+    "Keep Arcade builds schema-first and shared-runtime-safe.",
+    "Do not invent external assets unless the direction explicitly allows them.",
+    "Use lessons as operating memory, not as final truth."
+  ]
+}
