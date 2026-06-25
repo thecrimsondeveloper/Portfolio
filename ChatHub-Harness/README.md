@@ -53,7 +53,7 @@ ChatHub-Output
 └── review branch for generated harness results
 ```
 
-The workflow runs from pushes to either `development` or `ChatHub-Output` when harness source, direction, workflow, lesson, or workflow-yml files change.
+The workflow runs from pushes to either `development` or `ChatHub-Output`. Generated result commits include `[skip chathub]` so the workflow does not rerun from its own output commit.
 
 Generated result commits are pushed to:
 
@@ -61,7 +61,7 @@ Generated result commits are pushed to:
 ChatHub-Output:ChatHub-Harness/outbox/latest-result.md
 ```
 
-The action path filter intentionally avoids rerunning from generated `outbox` changes alone. This keeps the output branch reviewable without creating an infinite workflow loop.
+This keeps the output branch reviewable while preventing an infinite workflow loop.
 
 ## Local run
 
