@@ -1,0 +1,50 @@
+{
+  "id": "nvidia-endpoint-test",
+  "title": "NVIDIA Endpoint Harness Test",
+  "version": 1,
+  "provider": "nvidia-openai-compatible",
+  "endpoint": {
+    "baseUrlEnv": "NVIDIA_API_BASE_URL",
+    "defaultBaseUrl": "https://integrate.api.nvidia.com/v1",
+    "apiKeyEnv": "NVIDIA_API_KEY",
+    "modelEnv": "NVIDIA_MODEL",
+    "defaultModel": "mistralai/mixtral-8x7b-instruct-v0.1"
+  },
+  "intent": "Confirm the ChatHub-Harness can call a NVIDIA/OpenAI-compatible chat completion endpoint and write a reviewable result.",
+  "linearSteps": [
+    {
+      "id": "01-load-direction",
+      "goal": "Read the committed direction and identify what endpoint behavior should be tested."
+    },
+    {
+      "id": "02-compose-minimal-call",
+      "goal": "Compose one minimal model call using the selected endpoint and model."
+    },
+    {
+      "id": "03-check-response-shape",
+      "goal": "Verify whether the response contains assistant text in an OpenAI-compatible response shape."
+    },
+    {
+      "id": "04-report-blockers",
+      "goal": "Report missing secrets, endpoint failures, model failures, or parse failures clearly."
+    },
+    {
+      "id": "05-next-fix",
+      "goal": "Recommend the next smallest harness fix."
+    }
+  ],
+  "outputContract": [
+    "# ChatHub NVIDIA Endpoint Test",
+    "## Direction Understood",
+    "## Endpoint Config",
+    "## Result",
+    "## Blockers",
+    "## Next Fix"
+  ],
+  "constraints": [
+    "Do exactly one endpoint pass.",
+    "Do not edit app files.",
+    "Do not expose secret values.",
+    "Write a reviewable result even when blocked."
+  ]
+}
