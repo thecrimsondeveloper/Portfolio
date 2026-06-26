@@ -4,7 +4,8 @@ on:
   push:
     branches:
       - development
-      - ChatHub-Output
+    paths:
+      - "ChatHub-Harness/ideas/**"
   workflow_dispatch:
     inputs:
       workflow:
@@ -30,6 +31,7 @@ jobs:
     env:
       WORKFLOW_FILE: ${{ github.event.inputs.workflow || 'game-build.workflow.json' }}
       OUTPUT_BRANCH: ${{ github.event.inputs.output_branch || 'ChatHub-Output' }}
+      ACTIVE_PROMPT: ChatHub-Harness/ideas/active.prompt.md
       NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
       NVIDIA_API_BASE_URL: ${{ vars.NVIDIA_API_BASE_URL }}
       NVIDIA_MODEL: ${{ vars.NVIDIA_MODEL }}
@@ -50,6 +52,7 @@ jobs:
         run: |
           python3 ChatHub-Harness/chathub_runner.py \
             --workflow "ChatHub-Harness/workflows/${WORKFLOW_FILE}" \
+            --prompt "${ACTIVE_PROMPT}" \
             --direction "ChatHub-Harness/directions/current-direction.md" \
             --out "ChatHub-Harness/outbox/latest-result.md" \
             --lessons "ChatHub-Harness/lessons/harness-lessons.md"
@@ -61,6 +64,10 @@ jobs:
           rm -rf /tmp/chathub-output
           mkdir -p /tmp/chathub-output
           cp -R ChatHub-Harness/outbox/. /tmp/chathub-output/
+          if [ -f /tmp/chathub-output/.chathub-noop ]; then
+            echo "No active prompt found. Skipping ChatHub-Output publish."
+            exit 0
+          fi
           rm -rf ChatHub-Harness/outbox
           git fetch origin "${OUTPUT_BRANCH}" || true
           if git show-ref --verify --quiet "refs/remotes/origin/${OUTPUT_BRANCH}"; then
@@ -72,6 +79,7 @@ jobs:
           rm -rf ChatHub-Harness/outbox
           mkdir -p ChatHub-Harness/outbox
           cp -R /tmp/chathub-output/. ChatHub-Harness/outbox/
+          rm -f ChatHub-Harness/outbox/.chathub-noop
           touch ChatHub-Harness/outbox/.gitkeep
           touch .nojekyll
           if [ -f ChatHub-Harness/outbox/latest-game.html ]; then
