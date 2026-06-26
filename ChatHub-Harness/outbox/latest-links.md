@@ -1,23 +1,18 @@
 # ChatHub Play Links
 
-status: completed
-time: 2026-06-26T05:21:36+00:00
-slug: current-direction
+status: direct-validation-output
+game: Neon Relic Sprint
+slug: neon-relic-sprint
 
-## Play / Review
-
-- GitHub file: https://github.com/thecrimsondeveloper/Portfolio/blob/ChatHub-Output/ChatHub-Harness/outbox/latest-game.html
-- HTML preview: https://htmlpreview.github.io/?https://github.com/thecrimsondeveloper/Portfolio/blob/ChatHub-Output/ChatHub-Harness/outbox/latest-game.html
-
-## Output Files
-
-```text
-ChatHub-Harness/outbox/latest-result.md
-ChatHub-Harness/outbox/latest-game.html
-ChatHub-Harness/outbox/latest-links.md
-```
-
-## GitHub Pages
+## Public Pages
 
 - Public root: https://thecrimsondeveloper.github.io/Portfolio/
 - Direct game: https://thecrimsondeveloper.github.io/Portfolio/ChatHub-Harness/outbox/latest-game.html
+
+## GitHub Review
+
+- Latest game source: https://github.com/thecrimsondeveloper/Portfolio/blob/ChatHub-Output/ChatHub-Harness/outbox/latest-game.html
+
+## Note
+
+The harness runner now generates playable games from a model-authored JSON spec. This compact output was committed directly as a validation target while waiting for the Actions run to surface.
