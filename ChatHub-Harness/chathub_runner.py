@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Run one ChatHub-Harness workflow from committed direction files.
+"""Run one ChatHub-Harness workflow from committed prompt files.
 
 Dependency-free on purpose: GitHub Actions can run this with plain Python.
-The runner always emits reviewable outbox files, even when the model call is
-blocked or unavailable.
+The runner is prompt-gated: without a real active prompt it exits successfully
+without calling any model endpoint or publishing new generated output.
 """
 
 from __future__ import annotations
@@ -22,11 +22,13 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parent
 DEFAULT_WORKFLOW = ROOT / "workflows" / "game-build.workflow.json"
+DEFAULT_PROMPT = ROOT / "ideas" / "active.prompt.md"
 DEFAULT_DIRECTION = ROOT / "directions" / "current-direction.md"
 DEFAULT_OUT = ROOT / "outbox" / "latest-result.md"
 DEFAULT_LESSONS = ROOT / "lessons" / "harness-lessons.md"
 DEFAULT_BASE_URL = "https://integrate.api.nvidia.com/v1"
 DEFAULT_MODEL = "mistralai/mixtral-8x7b-instruct-v0.1"
+NOOP_SENTINEL = ".chathub-noop"
 DEFAULT_FREE_MODEL_ALLOWLIST = {
     DEFAULT_MODEL,
     "nvidia/nemotron-3-ultra-550b-a55b",
@@ -61,6 +63,49 @@ def load_workflow(path: Path) -> dict[str, Any]:
     if not isinstance(data, dict):
         raise SystemExit(f"workflow root must be an object: {path}")
     return data
+
+
+def remove_html_comments(text: str) -> str:
+    return re.sub(r"<!--.*?-->", "", text, flags=re.DOTALL)
+
+
+def prompt_body(raw_prompt: str) -> str:
+    """Return content under ## Prompt. Missing marker means no active prompt."""
+    match = re.search(r"(?im)^##\s+Prompt\s*$", raw_prompt)
+    if not match:
+        return ""
+    body = raw_prompt[match.end():]
+    next_heading = re.search(r"(?m)^##\s+", body)
+    if next_heading:
+        body = body[: next_heading.start()]
+    return remove_html_comments(body).strip()
+
+
+def is_placeholder_prompt(body: str) -> bool:
+    normalized = re.sub(r"[\s#`*_>\-:]+", " ", body.lower()).strip()
+    placeholders = {
+        "",
+        "todo",
+        "tbd",
+        "none",
+        "no prompt",
+        "no active prompt",
+        "placeholder",
+        "add prompt here",
+        "write prompt here",
+        "empty",
+    }
+    return normalized in placeholders or len(normalized) < 12
+
+
+def active_prompt_or_none(prompt_path: Path) -> tuple[str | None, str]:
+    if not prompt_path.exists():
+        return None, f"active prompt file missing: {prompt_path}"
+    raw_prompt = read_text(prompt_path)
+    body = prompt_body(raw_prompt)
+    if is_placeholder_prompt(body):
+        return None, "no real content under ## Prompt"
+    return raw_prompt.strip(), ""
 
 
 def endpoint_config(workflow: dict[str, Any]) -> dict[str, Any]:
@@ -105,7 +150,7 @@ def list_items(workflow: dict[str, Any], key: str, fallback: str) -> str:
     return "\n".join(f"- {item}" for item in items) or f"- {fallback}"
 
 
-def build_prompt(workflow: dict[str, Any], direction: str, lessons: str) -> list[dict[str, str]]:
+def build_prompt(workflow: dict[str, Any], active_prompt: str, direction: str, lessons: str) -> list[dict[str, str]]:
     system = textwrap.dedent(
         """
         You are ChatHub-Harness, a linear workflow runner for a portfolio and game-building repository.
@@ -127,7 +172,10 @@ Output contract:
 Constraints:
 {list_items(workflow, 'constraints', 'stay bounded')}
 
-Committed direction:
+Active idea prompt:
+{active_prompt.strip()}
+
+Standing direction:
 {direction.strip() or '(empty direction file)'}
 
 Existing lessons:
@@ -176,12 +224,34 @@ def slugify(text: str) -> str:
     return re.sub(r"[^a-zA-Z0-9]+", "-", text.lower()).strip("-")[:44] or "chathub-playtest"
 
 
-def direction_title(direction: str, workflow: dict[str, Any]) -> str:
-    for line in direction.splitlines():
+def direction_title(active_prompt: str, workflow: dict[str, Any]) -> str:
+    for line in active_prompt.splitlines():
         clean = line.strip("# -\t ")
-        if clean:
+        if clean and not clean.lower().startswith(("workflow:", "mode:", "output:")):
             return clean[:80]
     return str(workflow.get("title") or "ChatHub Playtest")
+
+
+def no_op_result(workflow: dict[str, Any], prompt_path: Path, reason: str) -> str:
+    return f"""# ChatHub No-Op
+
+status: skipped
+time: {now_stamp()}
+workflow: {workflow.get('id', 'unknown')}
+active_prompt: {prompt_path}
+endpoint_called: false
+output_published: false
+
+## Reason
+
+{reason}
+
+## Behavior
+
+No model endpoint was called.
+No playable output was generated.
+The output branch should not be changed by this run.
+"""
 
 
 def blocked_result(workflow: dict[str, Any], config: dict[str, Any], reason: str) -> str:
@@ -247,16 +317,16 @@ function end(){running=false;panel.style.display='block';panel.querySelector('p'
 """
 
 
-def write_playable_outputs(out_path: Path, workflow: dict[str, Any], direction: str, model_result: str, config: dict[str, Any], status: str) -> None:
+def write_playable_outputs(out_path: Path, workflow: dict[str, Any], active_prompt: str, model_result: str, config: dict[str, Any], status: str) -> None:
     out_dir = out_path.parent
     out_dir.mkdir(parents=True, exist_ok=True)
-    title = direction_title(direction, workflow)
+    title = direction_title(active_prompt, workflow)
     slug = slugify(title)
     safe = {
         "__TITLE__": html.escape(title),
         "__MODEL__": html.escape(config.get("model", "unknown")),
         "__STATUS__": html.escape(status),
-        "__SUMMARY__": html.escape((model_result or direction or "ChatHub generated playtest")[:900]),
+        "__SUMMARY__": html.escape((model_result or active_prompt or "ChatHub generated playtest")[:900]),
     }
     page = HTML_TEMPLATE
     for key, value in safe.items():
@@ -275,6 +345,11 @@ slug: {slug}
 - GitHub file: https://github.com/thecrimsondeveloper/Portfolio/blob/ChatHub-Output/{repo_path}
 - HTML preview: https://htmlpreview.github.io/?https://github.com/thecrimsondeveloper/Portfolio/blob/ChatHub-Output/{repo_path}
 
+## Public Pages
+
+- Public root: https://thecrimsondeveloper.github.io/Portfolio/
+- Direct game: https://thecrimsondeveloper.github.io/Portfolio/{repo_path}
+
 ## Output Files
 
 ```text
@@ -292,9 +367,21 @@ def write_result(path: Path, content: str) -> None:
     path.write_text(content.rstrip() + "\n", encoding="utf-8")
 
 
+def clear_noop_sentinel(out_dir: Path) -> None:
+    sentinel = out_dir / NOOP_SENTINEL
+    if sentinel.exists():
+        sentinel.unlink()
+
+
+def mark_noop(out_dir: Path) -> None:
+    out_dir.mkdir(parents=True, exist_ok=True)
+    (out_dir / NOOP_SENTINEL).write_text("skip output branch publish\n", encoding="utf-8")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Run one ChatHub-Harness workflow")
     parser.add_argument("--workflow", type=Path, default=DEFAULT_WORKFLOW)
+    parser.add_argument("--prompt", type=Path, default=DEFAULT_PROMPT)
     parser.add_argument("--direction", type=Path, default=DEFAULT_DIRECTION)
     parser.add_argument("--out", type=Path, default=DEFAULT_OUT)
     parser.add_argument("--lessons", type=Path, default=DEFAULT_LESSONS)
@@ -303,27 +390,36 @@ def main() -> int:
     args = parser.parse_args()
 
     workflow = load_workflow(args.workflow)
-    direction = read_text(args.direction)
     lessons = read_text(args.lessons)
-    config = endpoint_config(workflow)
+    direction = read_text(args.direction)
+    clear_noop_sentinel(args.out.parent)
 
+    active_prompt, no_prompt_reason = active_prompt_or_none(args.prompt)
+    if active_prompt is None:
+        result = no_op_result(workflow, args.prompt, no_prompt_reason)
+        write_result(args.out, result)
+        mark_noop(args.out.parent)
+        print(f"ChatHub-Harness skipped: {no_prompt_reason}")
+        return 0
+
+    config = endpoint_config(workflow)
     blocker = free_endpoint_blocker(config)
     if blocker:
         result = blocked_result(workflow, config, blocker)
         write_result(args.out, result)
-        write_playable_outputs(args.out, workflow, direction, result, config, "blocked-free-endpoint-guard")
+        write_playable_outputs(args.out, workflow, active_prompt, result, config, "blocked-free-endpoint-guard")
         print(f"ChatHub-Harness blocked: {blocker}")
         return 1 if args.require_key else 0
 
     if not config["api_key"]:
         result = blocked_result(workflow, config, f"Missing `{config['api_key_env']}`.")
         write_result(args.out, result)
-        write_playable_outputs(args.out, workflow, direction, result, config, "blocked-missing-key")
+        write_playable_outputs(args.out, workflow, active_prompt, result, config, "blocked-missing-key")
         print(f"ChatHub-Harness blocked: missing {config['api_key_env']}")
         return 1 if args.require_key else 0
 
     try:
-        content = call_nvidia_chat(config, build_prompt(workflow, direction, lessons), args.timeout)
+        content = call_nvidia_chat(config, build_prompt(workflow, active_prompt, direction, lessons), args.timeout)
         result = f"""<!-- generated by ChatHub-Harness at {now_stamp()} -->
 <!-- workflow: {workflow.get('id', 'unknown')} -->
 <!-- model: {config.get('model', '')} -->
@@ -338,7 +434,7 @@ def main() -> int:
         print(f"ChatHub-Harness blocked: {error}")
 
     write_result(args.out, result)
-    write_playable_outputs(args.out, workflow, direction, result, config, status)
+    write_playable_outputs(args.out, workflow, active_prompt, result, config, status)
     print(f"ChatHub-Harness wrote outbox: {args.out.parent}")
     return 0
 
