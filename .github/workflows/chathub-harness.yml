@@ -61,6 +61,7 @@ jobs:
           rm -rf /tmp/chathub-output
           mkdir -p /tmp/chathub-output
           cp -R ChatHub-Harness/outbox/. /tmp/chathub-output/
+          rm -rf ChatHub-Harness/outbox
           git fetch origin "${OUTPUT_BRANCH}" || true
           if git show-ref --verify --quiet "refs/remotes/origin/${OUTPUT_BRANCH}"; then
             git checkout "${OUTPUT_BRANCH}"
