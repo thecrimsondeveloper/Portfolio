@@ -1,14 +1,15 @@
 # Current Direction
 
-Run the ChatHub-Harness game-build workflow now.
+Run the ChatHub-Harness game-build workflow on every development push while keeping the portfolio deployed as the primary static GitHub Pages site.
 
 Goal:
 
+- Always deploy the Portfolio-Vite static site from `development`.
+- Always run ChatHub-Harness on `development` pushes.
+- Keep the active prompt gate inside the runner so blank prompts still no-op safely.
+- Publish generated harness output to `ChatHub-Output`.
+- Include the latest ChatHub output inside the static portfolio Pages artifact when available.
 - Use only free NVIDIA/build.nvidia.com compatible endpoints.
-- Produce a reviewable game-building result.
-- Emit a self-contained playable browser game output in the outbox.
-- Keep the run linear and bounded.
-- Do not modify the public Portfolio-Vite app or Arcade runtime during this run.
 
 Playable output target:
 
@@ -21,16 +22,16 @@ Review output target:
 ```text
 ChatHub-Harness/outbox/latest-result.md
 ChatHub-Harness/outbox/latest-links.md
+ChatHub-Harness/outbox/generated-game-spec.json
 ```
 
 Game direction:
 
-Create a small arcade prototype called Signal Salvage. The player pilots a bright signal core through a dark grid, collects blue data cores, avoids red corruption fields, and tries to survive a short timer. It should feel like a clean first proof that the harness can generate and publish playable game output.
+Use the active prompt in `ChatHub-Harness/ideas/active.prompt.md` as the source of game intent. Generate a playable, self-contained browser game directly from the prompt/spec and make it available through the portfolio static site after deploy.
 
-The result should include:
+Validation expectation:
 
-- what workflow ran
-- what free endpoint/model was used or what blocked it
-- links to play/review the generated output
-- lessons learned for improving the harness
-- the next exact direction for the next run
+- Portfolio root remains the Vite portfolio.
+- ChatHub game remains available at `/Portfolio/ChatHub-Harness/outbox/latest-game.html`.
+- ChatHub-Output receives the generated review files.
+- A later ChatHub-Output push triggers the static portfolio deploy so the latest game is included in the Pages artifact.
