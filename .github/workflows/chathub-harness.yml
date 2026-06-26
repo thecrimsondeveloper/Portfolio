@@ -73,7 +73,53 @@ jobs:
           mkdir -p ChatHub-Harness/outbox
           cp -R /tmp/chathub-output/. ChatHub-Harness/outbox/
           touch ChatHub-Harness/outbox/.gitkeep
-          git add ChatHub-Harness/outbox
+          touch .nojekyll
+          if [ -f ChatHub-Harness/outbox/latest-game.html ]; then
+            cp ChatHub-Harness/outbox/latest-game.html ChatHub-Harness/outbox/index.html
+            cat > index.html <<'HTML'
+          <!doctype html>
+          <html lang="en">
+          <head>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <meta http-equiv="refresh" content="0; url=ChatHub-Harness/outbox/latest-game.html" />
+            <title>ChatHub Output</title>
+            <style>
+              html, body { margin: 0; height: 100%; background: #090b10; color: #eef2ff; font-family: system-ui, sans-serif; }
+              main { min-height: 100%; display: grid; place-items: center; padding: 24px; text-align: center; }
+              a { color: #8bd3ff; }
+            </style>
+          </head>
+          <body>
+            <main>
+              <div>
+                <h1>ChatHub Output</h1>
+                <p>Opening the latest playable harness output…</p>
+                <p><a href="ChatHub-Harness/outbox/latest-game.html">Open latest game</a></p>
+              </div>
+            </main>
+          </body>
+          </html>
+          HTML
+            cat > ChatHub-Harness/outbox/latest-public-link.md <<'EOF'
+          # ChatHub Public Link
+
+          - Public root: https://thecrimsondeveloper.github.io/Portfolio/
+          - Direct game: https://thecrimsondeveloper.github.io/Portfolio/ChatHub-Harness/outbox/latest-game.html
+          - Result: https://thecrimsondeveloper.github.io/Portfolio/ChatHub-Harness/outbox/latest-result.md
+          - Links: https://thecrimsondeveloper.github.io/Portfolio/ChatHub-Harness/outbox/latest-links.md
+          EOF
+            if [ -f ChatHub-Harness/outbox/latest-links.md ]; then
+              cat >> ChatHub-Harness/outbox/latest-links.md <<'EOF'
+
+          ## GitHub Pages
+
+          - Public root: https://thecrimsondeveloper.github.io/Portfolio/
+          - Direct game: https://thecrimsondeveloper.github.io/Portfolio/ChatHub-Harness/outbox/latest-game.html
+          EOF
+            fi
+          fi
+          git add .nojekyll index.html ChatHub-Harness/outbox
           if git diff --cached --quiet; then
             echo "No ChatHub output changes to commit."
           else
