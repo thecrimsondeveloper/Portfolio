@@ -1,27 +1,36 @@
 # Current Direction
 
-Build ChatHub-Harness into a workflow-accessible, linear agent harness for the Portfolio repo.
+Run the ChatHub-Harness game-build workflow now.
 
-Primary goal:
+Goal:
 
-- Use committed directions as the input.
-- Run one bounded workflow at a time.
-- Use NVIDIA/build.nvidia.com compatible endpoints when configured.
-- Produce reviewable outbox artifacts.
-- Record lessons when a run teaches something useful.
-- Improve toward the best harness for building portfolio games and Arcade entries.
+- Use only free NVIDIA/build.nvidia.com compatible endpoints.
+- Produce a reviewable game-building result.
+- Emit a self-contained playable browser game output in the outbox.
+- Keep the run linear and bounded.
+- Do not modify the public Portfolio-Vite app or Arcade runtime during this run.
 
-Current preferred lane:
+Playable output target:
 
-- game-building harness
-- shared Arcade runtime safe
-- JSON/schema-first where possible
-- no external assets unless explicitly allowed
-- no broad repo rewrites during a harness pass
+```text
+ChatHub-Harness/outbox/latest-game.html
+```
 
-Next useful run:
+Review output target:
 
-- Read this direction.
-- Read the selected workflow JSON.
-- Read existing lessons.
-- Produce a clear next game-building plan and validation checklist.
+```text
+ChatHub-Harness/outbox/latest-result.md
+ChatHub-Harness/outbox/latest-links.md
+```
+
+Game direction:
+
+Create a small arcade prototype called Signal Salvage. The player pilots a bright signal core through a dark grid, collects blue data cores, avoids red corruption fields, and tries to survive a short timer. It should feel like a clean first proof that the harness can generate and publish playable game output.
+
+The result should include:
+
+- what workflow ran
+- what free endpoint/model was used or what blocked it
+- links to play/review the generated output
+- lessons learned for improving the harness
+- the next exact direction for the next run
