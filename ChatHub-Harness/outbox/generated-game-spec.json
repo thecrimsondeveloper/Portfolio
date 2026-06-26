@@ -1,0 +1,26 @@
+{
+  "title": "Neon Relic Sprint",
+  "slug": "neon-relic-sprint",
+  "tagline": "Dash through a neon ruin, recover relic sparks, and evade glitch sentries.",
+  "objective": "Collect relic sparks, dodge glitch sentries, and reach 120 points before the timer ends.",
+  "playerName": "luminous relic runner",
+  "collectibleName": "relic sparks",
+  "hazardName": "glitch sentries",
+  "timerSeconds": 45,
+  "goalScore": 120,
+  "collectibleCount": 10,
+  "hazardCount": 6,
+  "playerSpeed": 900,
+  "hazardSpeed": 90,
+  "scorePerCollectible": 10,
+  "backgroundPattern": "rings",
+  "winText": "Relic signal restored.",
+  "loseText": "The ruin swallowed the signal.",
+  "palette": {
+    "background": "#070711",
+    "player": "#f5f1ff",
+    "collectible": "#7dffea",
+    "hazard": "#ff4d7d",
+    "accent": "#9c7cff"
+  }
+}
