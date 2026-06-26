@@ -2,18 +2,16 @@ name: Deploy Portfolio Vite to Pages
 
 on:
   push:
-    branches: ["main"]
-
+    branches:
+      - development
+      - ChatHub-Output
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -25,26 +23,51 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout development source
         uses: actions/checkout@v4
+        with:
+          ref: development
+          fetch-depth: 0
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
           cache-dependency-path: Portfolio-Vite/package-lock.json
+
       - name: Install dependencies
         working-directory: Portfolio-Vite
         run: npm ci
+
       - name: Build Vite portfolio
         working-directory: Portfolio-Vite
         run: npm run build
+
+      - name: Include latest ChatHub output
+        run: |
+          git fetch origin ChatHub-Output --depth=1 || true
+          if git show-ref --verify --quiet refs/remotes/origin/ChatHub-Output; then
+            rm -rf /tmp/chathub-output
+            git worktree add --detach /tmp/chathub-output refs/remotes/origin/ChatHub-Output
+            if [ -d /tmp/chathub-output/ChatHub-Harness/outbox ]; then
+              mkdir -p Portfolio-Vite/dist/ChatHub-Harness
+              rm -rf Portfolio-Vite/dist/ChatHub-Harness/outbox
+              cp -R /tmp/chathub-output/ChatHub-Harness/outbox Portfolio-Vite/dist/ChatHub-Harness/outbox
+            fi
+            git worktree remove /tmp/chathub-output --force || true
+          else
+            echo "No ChatHub-Output branch found; deploying portfolio only."
+          fi
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: Portfolio-Vite/dist
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
