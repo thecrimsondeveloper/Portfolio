@@ -8,7 +8,8 @@ const pageEntries = Object.fromEntries(
     .map((file) => [file.replace(/\.html$/, ""), resolve(__dirname, "Pages", file)])
 );
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
+  base: mode === "production" ? "/Portfolio/" : "/",
   plugins: [
     {
       name: "copy-arcade-pages",
@@ -29,4 +30,4 @@ export default defineConfig({
       },
     },
   },
-});
+}));
