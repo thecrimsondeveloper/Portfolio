@@ -1,7 +1,7 @@
 # ChatHub Play Links
 
 status: completed
-time: 2026-06-26T03:30:27+00:00
+time: 2026-06-26T05:21:36+00:00
 slug: current-direction
 
 ## Play / Review
@@ -16,3 +16,8 @@ ChatHub-Harness/outbox/latest-result.md
 ChatHub-Harness/outbox/latest-game.html
 ChatHub-Harness/outbox/latest-links.md
 ```
+
+## GitHub Pages
+
+- Public root: https://thecrimsondeveloper.github.io/Portfolio/
+- Direct game: https://thecrimsondeveloper.github.io/Portfolio/ChatHub-Harness/outbox/latest-game.html
