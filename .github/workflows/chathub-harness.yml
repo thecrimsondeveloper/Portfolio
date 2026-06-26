@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - development
-    paths:
-      - "ChatHub-Harness/ideas/**"
   workflow_dispatch:
     inputs:
       workflow:
@@ -26,7 +24,6 @@ concurrency:
 
 jobs:
   run-harness:
-    if: ${{ github.event_name == 'workflow_dispatch' || !contains(github.event.head_commit.message, '[skip chathub]') }}
     runs-on: ubuntu-latest
     env:
       WORKFLOW_FILE: ${{ github.event.inputs.workflow || 'game-build.workflow.json' }}
@@ -112,7 +109,7 @@ jobs:
             cat > ChatHub-Harness/outbox/latest-public-link.md <<'EOF'
           # ChatHub Public Link
 
-          - Public root: https://thecrimsondeveloper.github.io/Portfolio/
+          - Portfolio root: https://thecrimsondeveloper.github.io/Portfolio/
           - Direct game: https://thecrimsondeveloper.github.io/Portfolio/ChatHub-Harness/outbox/latest-game.html
           - Result: https://thecrimsondeveloper.github.io/Portfolio/ChatHub-Harness/outbox/latest-result.md
           - Links: https://thecrimsondeveloper.github.io/Portfolio/ChatHub-Harness/outbox/latest-links.md
@@ -122,7 +119,7 @@ jobs:
 
           ## GitHub Pages
 
-          - Public root: https://thecrimsondeveloper.github.io/Portfolio/
+          - Portfolio root: https://thecrimsondeveloper.github.io/Portfolio/
           - Direct game: https://thecrimsondeveloper.github.io/Portfolio/ChatHub-Harness/outbox/latest-game.html
           EOF
             fi
