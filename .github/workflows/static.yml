@@ -60,6 +60,21 @@ jobs:
             echo "No ChatHub-Output branch found; deploying portfolio only."
           fi
 
+      - name: Write deploy debug manifest
+        run: |
+          cat > Portfolio-Vite/dist/deploy-debug.json <<EOF
+          {
+            "workflow": "Deploy Portfolio Vite to Pages",
+            "source_branch": "development",
+            "built_app": "Portfolio-Vite",
+            "vite_base": "/Portfolio/",
+            "commit": "${GITHUB_SHA}",
+            "generated_at": "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          }
+          EOF
+          echo "Built index asset references:"
+          grep -o 'src="[^"]*\|href="[^"]*' Portfolio-Vite/dist/index.html || true
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
