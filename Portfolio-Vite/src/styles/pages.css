@@ -297,6 +297,10 @@
   grid-template-columns: minmax(0, 1.25fr) minmax(220px, 0.62fr);
 }
 
+.project-hero--video {
+  grid-template-columns: minmax(0, 1fr);
+}
+
 .project-copy {
   display: grid;
   gap: 0.55rem;
@@ -319,6 +323,12 @@
   min-height: 320px;
   object-fit: cover;
   box-shadow: none;
+}
+
+.project-art.project-video-media {
+  min-height: 320px;
+  aspect-ratio: 16 / 9;
+  border-top: 1px solid var(--content-shell-border);
 }
 
 .project-art.no-image {

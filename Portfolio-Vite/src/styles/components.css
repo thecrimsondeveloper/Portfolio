@@ -244,6 +244,20 @@
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.028);
 }
 
+.project-card--video {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto 1fr auto;
+  width: min(100%, 58rem);
+}
+
+.project-card--video .project-card-media {
+  grid-row: auto;
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+  border-right: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.065);
+}
+
 .project-card-media {
   grid-row: 1 / span 2;
   aspect-ratio: 4 / 5;
@@ -263,6 +277,52 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.project-video-media {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  isolation: isolate;
+}
+
+.project-video-poster,
+.project-video-element {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-video-poster {
+  z-index: 1;
+}
+
+.project-video-element {
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.project-video-media.video-ready .project-video-element {
+  opacity: 1;
+}
+
+.project-video-media.video-unavailable .project-video-element {
+  display: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .project-card-accent {
@@ -524,6 +584,12 @@
       background 180ms ease,
       box-shadow 180ms ease,
       opacity 180ms ease;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-video-element {
+    display: none;
   }
 }
 

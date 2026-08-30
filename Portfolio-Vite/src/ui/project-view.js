@@ -1,4 +1,5 @@
 import { buildPageHref } from "../app/router.js";
+import { hydrateProjectVideos, renderProjectMedia } from "./project-media.js";
 
 export function renderProjectView(host, project, page, profileName) {
   const actions = [
@@ -11,8 +12,9 @@ export function renderProjectView(host, project, page, profileName) {
     .join("");
 
   const features = project.features.map((feature) => `<li>${feature}</li>`).join("");
+  const heroClass = project.media ? "project-hero project-hero--video" : "project-hero";
 
-  const projectArt = project.image
+  const projectArt = renderProjectMedia(project, "project-art") || (project.image
     ? `<div class="project-art"><img src="${project.image}" alt="${project.title}" /></div>`
     : `
       <div class="project-art no-image">
@@ -21,12 +23,12 @@ export function renderProjectView(host, project, page, profileName) {
           <p>${project.shortDescription}</p>
         </div>
       </div>
-    `;
+    `);
 
   document.title = `${project.title} | ${profileName}`;
   host.innerHTML = `
     <article class="project-shell">
-      <div class="project-hero">
+      <div class="${heroClass}">
         <div class="project-copy">
           <div class="project-breadcrumb">${page.title}</div>
           <h1 class="project-title">${project.title}</h1>
@@ -54,6 +56,7 @@ export function renderProjectView(host, project, page, profileName) {
       </div>
     </article>
   `;
+  hydrateProjectVideos(host);
 }
 
 export function renderProjectMissing(host, profileName) {

@@ -1,55 +1,44 @@
-# Arcade Wing
+# Gameplay Presentation Boundary
 
-`Portfolio-Vite/Pages` is the portfolio Arcade wing. Treat it like a Kongregate-style games section that belongs to the portfolio but remains separate from the Vite source tree.
+The public portfolio presents browser-game work through reviewed 15-second
+videos, poster images, captions, descriptions, and project-detail pages. It no
+longer depends on an embedded Arcade player or the stale Arcade registry for
+the visitor journey.
 
-```text
-Portfolio-Vite/Pages
-├── arcade-library.json
-├── arcade-assets.json
-├── arcade-runtime.js
-├── arcade-bootstrap.js
-├── arcade-shell.css
-├── story-chapter.js
-├── arcade
-│   ├── docs
-│   └── archive
-├── lab-rift
-├── phase-drop
-├── glow-drift
-└── other playable game folders
-```
+## Public presentation
 
-## Rules
+- Project identity and clean display titles live in
+  `Portfolio-Vite/src/data/portfolio/presentation.js`.
+- Media is loaded from `VITE_PORTFOLIO_MEDIA_BASE_URL`.
+- GitHub Pages reads that value from the `PORTFOLIO_MEDIA_BASE_URL` repository
+  variable during the build.
+- Every media folder contains `gameplay-15s.webm`, `gameplay-15s.mp4`, and
+  `poster.webp`.
+- Videos are muted, play only near the viewport, and are limited to two
+  simultaneous players.
+- Reduced-motion and unavailable-media states show the poster or existing
+  project artwork.
+- Broken `Pages/...` launch links are removed from presented project data.
 
-- Do not move existing Arcade game folders.
-- Do not rename game folders without explicit approval.
-- Do not move Arcade games into `src`.
-- Keep public URLs stable.
-- Use `arcade-library.json` as the discoverability manifest.
-- Use each game folder's JSON as its metadata/config source.
-- Use shared assets from `Portfolio-Vite/assets/arcade` or `Portfolio-Vite/Pages/arcade-assets.json`.
+## Retained software
 
-## Game Folder Shape
+`Portfolio-Vite/Pages` and the Arcade tooling remain temporarily in this
+repository only because extraction has not yet been completed. Do not delete a
+game until its source and playable destination have been copied elsewhere and
+verified against the capture manifest.
 
-```text
-Pages/<game-folder>
-├── index.html
-└── <game-slug>.json
-```
-
-Some older generated pages may have historical shapes. Preserve paths first, then document or repair wiring without relocating folders.
+The retained registry is historical implementation data, not the source of
+truth for the public gallery.
 
 ## Validation
 
 ```bash
-cd /Users/crimsonwheeler/Documents/GitHub/Portfolio/Portfolio-Vite
+cd Portfolio-Vite
 npm run build
-npm run start -- --host 127.0.0.1 --port 4174
+VITE_PORTFOLIO_MEDIA_BASE_URL=https://media.example.com/portfolio-games \
+  npm run start -- --host 127.0.0.1 --port 4174
 ```
 
-Check:
-
-- Arcade Library loads.
-- Each visible card has a title and image/metadata.
-- Launch links resolve under `Pages/...`.
-- Arcade player still feels like a standalone game portal.
+Check that the gallery contains the approved capture count, has no local
+playable links, never plays more than two videos, preserves project-detail
+navigation, and shows posters when reduced motion is enabled.

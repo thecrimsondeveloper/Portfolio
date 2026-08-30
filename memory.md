@@ -2,6 +2,12 @@
 Portfolio is a Vite-first portfolio workspace: `Portfolio-Vite` is the canonical public app, `Portfolio-Vite/Pages` is the stable Kongregate-style Arcade wing, `Portfolio-Vite/cli` owns deterministic generation/orchestration tooling, `legacy/old-root-site` archives the old root site, and root-level docs explain architecture, arcade boundaries, tooling, and small-model edit lanes.
 
 ## #SELF REMINDERS
+- Keep the public Arcade experience presentation-only: reviewed gameplay video, poster, caption, project description, and verified external links.
+- `VITE_PORTFOLIO_MEDIA_BASE_URL` owns the external media origin; video binaries do not belong in Portfolio Git history.
+- `Portfolio-Vite/Pages` and Arcade tooling are temporarily retained software, not the visitor-facing gallery.
+- Do not delete retained games until each external source/playable destination is verified against the capture manifest.
+
+## #SELF REMINDERS
 - Keep replies short, direct, and action-oriented.
 - Main goals: keep Arcade Builder verbose, keep 30-second local autostart active, and quarantine failed generated folders before they pollute Pages.
 - Implemented proof: `.ARCADE-AUTOMATIONS/arcade_automations.py` now emits callback events plus 4-second run heartbeats and supervisor events.

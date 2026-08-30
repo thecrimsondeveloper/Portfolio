@@ -42,6 +42,8 @@ jobs:
 
       - name: Build Vite portfolio
         working-directory: Portfolio-Vite
+        env:
+          VITE_PORTFOLIO_MEDIA_BASE_URL: ${{ vars.PORTFOLIO_MEDIA_BASE_URL }}
         run: npm run build
 
       - name: Include latest ChatHub output

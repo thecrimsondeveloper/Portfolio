@@ -105,7 +105,7 @@ async function renderApp(hosts, state) {
   }
 
   if (page.id === "prototypes") {
-    await renderPrototypeBookView(hosts.main, page, state.schema);
+    renderPrototypeBookView(hosts.main, page, state.schema);
     return;
   }
 
@@ -145,6 +145,7 @@ function bindInteractions(hosts, state) {
   window.addEventListener("popstate", () => {
     updateRoute(state, resolveRoute(new URLSearchParams(window.location.search), state.schema));
     setMenuOpen(state, false);
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
     renderApp(hosts, state);
   });
 }
@@ -154,5 +155,6 @@ function navigateTo(href, hosts, state) {
   window.history.pushState({}, "", href);
   updateRoute(state, resolveRoute(new URLSearchParams(window.location.search), state.schema));
   setMenuOpen(state, false);
+  window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   renderApp(hosts, state);
 }

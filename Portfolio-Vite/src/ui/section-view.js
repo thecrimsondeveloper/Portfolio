@@ -1,5 +1,7 @@
 import { buildPageHref } from "../app/router.js";
 import { renderIntroList } from "./intro-list.js";
+import { renderProjectCard } from "./project-card.js";
+import { hydrateProjectVideos } from "./project-media.js";
 
 const SECTION_PROJECT_LIMIT = 6;
 const WORK_IDEAS = ["automation", "research", "game-dev", "agentic-engineering"];
@@ -41,6 +43,7 @@ export function renderSectionView(host, page, schema) {
       )}
     </div>
   `;
+  hydrateProjectVideos(host);
 }
 
 export function renderEmptySectionView(host, page) {
@@ -64,42 +67,6 @@ export function renderEmptySectionView(host, page) {
       </section>
     </div>
   `;
-}
-
-function renderProjectCard(project) {
-  const linkButtons = [
-    `<a class="button-link primary" href="${buildProjectHref(project.slug)}" data-route-link data-wobble>Project Details</a>`,
-    ...project.links.map((link) => renderActionLink(link)),
-  ].join("");
-
-  const media = project.image
-    ? `<div class="project-card-media"><img src="${project.image}" alt="${project.title}" loading="lazy" /></div>`
-    : `
-      <div class="project-card-accent">
-        <span class="project-card-kind">${project.kind}</span>
-      </div>
-    `;
-
-  return `
-    <article class="project-card">
-      ${media}
-      <div class="project-card-body">
-        <div>
-          <span class="project-card-kind">${project.kind}</span>
-          <h3>${project.title}</h3>
-        </div>
-        <p>${project.shortDescription}</p>
-      </div>
-      <div class="project-card-footer">
-        <div class="project-card-links">${linkButtons}</div>
-      </div>
-    </article>
-  `;
-}
-
-function renderActionLink(link) {
-  const rel = link.external ? ' target="_blank" rel="noreferrer"' : "";
-  return `<a class="button-link ${link.style || "ghost"}" href="${link.href}"${rel} data-wobble>${link.label}</a>`;
 }
 
 function renderWorkIdeas(page, schema) {
