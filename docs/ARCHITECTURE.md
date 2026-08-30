@@ -1,6 +1,6 @@
 # Portfolio Architecture
 
-Portfolio is a Vite website with a standalone Arcade wing.
+Portfolio is a Vite presentation website with externally hosted gameplay media.
 
 ```text
 Portfolio
@@ -9,7 +9,7 @@ Portfolio
 ├── legacy/old-root-site
 ├── Portfolio-Vite
 │   ├── src
-│   ├── Pages
+│   ├── Pages (temporary retained software)
 │   ├── public/images/projects
 │   ├── assets/arcade
 │   ├── cli
@@ -60,4 +60,9 @@ push main
 - Keep visual identity in `Portfolio-Vite/src/styles` stable unless the task is explicitly visual.
 - Keep route behavior in `Portfolio-Vite/src/app`.
 - Edit portfolio content through `Portfolio-Vite/src/data/portfolio`.
-- Keep Arcade public files in `Portfolio-Vite/Pages`; do not move existing game folders.
+- Keep project descriptions, titles, captions, and media URLs in the Vite
+  presentation layer.
+- Keep gameplay videos outside repository history and configure their public
+  origin with `VITE_PORTFOLIO_MEDIA_BASE_URL`.
+- Treat `Portfolio-Vite/Pages` as temporary retained software until every game
+  has a verified external destination; remove it only in the extraction phase.

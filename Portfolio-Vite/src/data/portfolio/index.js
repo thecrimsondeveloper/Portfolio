@@ -4,6 +4,9 @@ import { nav } from "./nav.js";
 import { pages } from "./pages.js";
 import { profile } from "./profile.js";
 import { projects } from "./projects.js";
+import { applyProjectPresentation } from "./presentation.js";
+
+const presentedProjects = applyProjectPresentation(projects);
 
 export const portfolioSchema = {
   profile,
@@ -11,5 +14,5 @@ export const portfolioSchema = {
   themes,
   nav,
   pages,
-  projects,
+  projects: presentedProjects,
 };
